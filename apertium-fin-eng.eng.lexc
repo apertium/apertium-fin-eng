@@ -11,6 +11,8 @@ Multichar_Symbols
 %<cnjcoo%> ! Co-ordinating conjunction
 %<cnjsub%> ! Sub-ordinating conjunction 
 %<sent%> ! Sentqste-ending punctuation   e.g. full stop, question mark
+%<ind%> ! Indefinite
+%<def%> ! Definite
 
 %<sg%> ! Singular       
 %<pl%> ! Plural
@@ -102,7 +104,7 @@ child%<n%>:child N_CHILDREN ; ! ""
 chair%<n%>:chair N ; ! ""
 boy%<n%>:boy N ; ! ""
 bird%<n%>:bird N ; ! ""
-anything%<n%>:anything N ; ! ""
+anything%<n%>:anything N ; ! ""!! Pronoun
 animal%<n%>:animal N ; ! ""
 
 LEXICON V
@@ -263,53 +265,54 @@ LEXICON V_FIND
 
 LEXICON Verbs
 
-be%<v%>:0 V_BE ; ! ""
-look%<v%>:look V ; ! ""
-have%<v%>:0 V_HAVE ; ! ""
-play%<v%>:play V ; ! ""
-do%<v%>:0 V_DO ; ! ""
-see%<v%>:0 V_SEE ; ! ""
-tell%<v%>:0 V_TELL ; ! ""
-think%<v%>:think V ; ! ""
-must%<vbaux%>:must # ; ! ""
-sleep%<v%>:sleep V ; ! ""
-sit%<v%>:0 V_SIT ; ! ""
-know%<v%>:0 V_KNOW ; ! ""
-seen%<v%>:seen V ; ! ""
-search%<v%>:search V_SEARCH ; ! ""
-run%<v%>:0 V_RUN ; ! ""
-reply%<v%>:repl V_REPLY ; ! ""
-play%<v%>:play V ; ! ""
-hide%<v%>:0 V_HIDE ; ! ""
-hear%<v%>:hear V_HEAR ; ! ""
-find%<v%>:0 V_FIND ; ! ""
-finish%<v%>:finish V ; ! ""
-love%<v%>:lov V_LOVE ; ! ""
-listen%<v%>:listen V ; ! ""
-like%<v%>:lik V_LOVE ; ! ""
-laugh%<v%>:laugh V ; ! ""
-get%<v%>:0 V_GET ; ! ""
-eat%<v%>:0 V_EAT ; ! ""
-drink%<v%>:0 V_DRINK ; ! ""
-ask%<v%>:ask V ; ! ""
-could%<vbaux%>:could # ; ! ""
-come%<v%>:0 V_COME ; ! ""
-try%<v%>:tr V_TRY ; ! ""
-can%<vbaux%>:can # ; ! ""
-want%<v%>:want V ; ! ""
-walk%<v%>:walk V ; ! ""
-speak%<v%>:0 V_SPEAK ; ! ""
-sound%<v%>:sound V ; ! ""
-say%<v%>:sa V_SAY  ; ! ""
-go%<v%>:0 V_GO ; ! ""
-find%<v%>:0 V_FIND ; ! ""
-count%<v%>:count V ; ! ""
-can't%<v%>:can't # ; ! ""
+be%<vblex%>:0 V_BE ; ! ""
+look%<vblex%>:look V ; ! ""
+have%<vblex%>:0 V_HAVE ; ! ""
+play%<vblex%>:play V ; ! ""
+do%<vblex%>:0 V_DO ; ! ""
+see%<vblex%>:0 V_SEE ; ! ""
+tell%<vblex%>:0 V_TELL ; ! ""
+think%<vblex%>:think V ; ! ""
+must%<vaux%>:must # ; ! ""
+sleep%<vblex%>:sleep V ; ! ""
+sit%<vblex%>:0 V_SIT ; ! ""
+know%<vblex%>:0 V_KNOW ; ! ""
+seen%<vblex%>:seen V ; ! ""
+search%<vblex%>:search V_SEARCH ; ! ""
+run%<vblex%>:0 V_RUN ; ! ""
+reply%<vblex%>:repl V_REPLY ; ! ""
+play%<vblex%>:play V ; ! ""
+hide%<vblex%>:0 V_HIDE ; ! ""
+hear%<vblex%>:hear V_HEAR ; ! ""
+find%<vblex%>:0 V_FIND ; ! ""
+finish%<vblex%>:finish V ; ! ""
+love%<vblex%>:lov V_LOVE ; ! ""
+listen%<vblex%>:listen V ; ! ""
+like%<vblex%>:lik V_LOVE ; ! ""
+laugh%<vblex%>:laugh V ; ! ""
+get%<vblex%>:0 V_GET ; ! ""
+eat%<vblex%>:0 V_EAT ; ! ""
+drink%<vblex%>:0 V_DRINK ; ! ""
+ask%<vblex%>:ask V ; ! ""
+could%<vaux%>:could # ; ! ""
+come%<vblex%>:0 V_COME ; ! ""
+try%<vblex%>:tr V_TRY ; ! ""
+can%<vaux%>:can # ; ! ""
+want%<vblex%>:want V ; ! ""
+walk%<vblex%>:walk V ; ! ""
+speak%<vblex%>:0 V_SPEAK ; ! ""
+sound%<vblex%>:sound V ; ! ""
+say%<vblex%>:sa V_SAY  ; ! ""
+go%<vblex%>:0 V_GO ; ! ""
+find%<vblex%>:0 V_FIND ; ! ""
+count%<vblex%>:count V ; ! ""
+can't%<vblex%>:can't # ; ! ""
 
 LEXICON Determiners
-the%<det%>:the # ; ! ""
-a%<det%>:a # ; ! ""
-an%<det%>:an # ; ! ""
+the%<det%>%<def%>:the # ; ! ""
+a%<det%>%<ind%>:a # ; ! "" ! Dir/LR
+an%<det%>%<ind%>:an # ; ! "" ! Dir/LR
+a%<det%>%<ind%>:%~a # ; ! "" ! Dir/RL
 
 LEXICON Pronouns
 she%<prn%>%<nom%>:she # ; ! ""
@@ -361,71 +364,69 @@ for%<pr%>:for # ; ! ""
 at%<pr%>:at # ; ! ""
 
 LEXICON Adverbs
+
+where%<adv%>%<itg%>:where # ; ! ""
+when%<adv%>%<itg%>:when # ; ! ""
+why%<adv%>%<itg%>:why # ; ! ""
+what%<adv%>:what # ; ! ""
+
 not%<adv%>:not # ; ! ""
-where%<adv%>:where # ; ! ""
 also%<adv%>:also # ; ! ""
 very%<adv%>:very # ; ! ""
-when%<adv%>:when # ; ! ""
-Then%<adv%>:Then # ; ! ""
-No%<adv%>:No # ; ! ""
+then%<adv%>:then # ; ! ""
+no%<adv%>:no # ; ! ""
 yesterday%<adv%>:yesterday # ; ! ""
-Why%<adv%>:Why # ; ! ""
-why%<adv%>:why # ; ! ""
 always%<adv%>:always # ; ! ""
-Although%<adv%>:Although # ; ! ""
-WHERE%<adv%>:WHERE # ; ! ""
-When%<adv%>:When # ; ! ""
-what%<adv%>:what # ; ! ""
+although%<adv%>:although # ; ! ""
 well%<adv%>:well # ; ! ""
 together%<adv%>:together # ; ! ""
 today%<adv%>:today # ; ! ""
-There%<adv%>:There # ; ! ""
 there%<adv%>:there # ; ! ""
 then%<adv%>:then # ; ! ""
 still%<adv%>:still # ; ! ""
-So%<adv%>:So # ; ! ""
+so%<adv%>:so # ; ! ""
 again%<adv%>:again # ; ! ""
 slowly%<adv%>:slowly # ; ! ""
 quickly%<adv%>:quickly # ; ! ""
-some%<adv%>:some # ; ! ""
 probably%<adv%>:probably # ; ! ""
-no%<adv%>:no # ; ! ""
 everywhere%<adv%>:everywhere # ; ! ""
 never%<adv%>:never # ; ! ""
 closer%<adv%>:closer # ; ! ""
 carefully%<adv%>:carefully # ; ! ""
-another%<adv%>:another # ; ! ""
-near%<adv%>:near # ; ! ""
+near%<adv%>:near # ; ! "" 
+
+another%<adv%>:another # ; ! "" ! Determiner/Pronoun
+some%<adv%>:some # ; ! "" ! Determiner/Pronoun
 
 LEXICON A_OLD
 0 # ;
-%<cmp%>:er # ;
+%<comp%>:er # ;
 %<sup%>:est # ;
 
 LEXICON A_BIG
 0 # ;
-%<cmp%>:ger # ;
+%<comp%>:ger # ;
 %<sup%>:gest # ;
 
 LEXICON A_HAPPY
 0:y # ;
-%<cmp%>:ier # ;
+%<comp%>:ier # ;
 %<sup%>:iest # ;
 
 LEXICON A_NICE
 0:e # ;
-%<cmp%>:er # ;
+%<comp%>:er # ;
 %<sup%>:est # ;
 
 LEXICON Adjectives
-cold%<a%>:cold A_OLD ; ! ""
-little%<a%>:little # ; ! ""
-big%<a%>:big A_BIG ; ! ""
-old%<a%>:old A_OLD ; ! ""
-happy%<a%>:happ A_HAPPY ; ! ""
-warm%<a%>:warm A_OLD ; ! ""
-small%<a%>:small A_OLD ; ! ""
-nice%<a%>:nic A_NICE ; ! ""
+cold%<adj%>:cold A_OLD ; ! ""
+little%<adj%>:little # ; ! ""
+big%<adj%>:big A_BIG ; ! ""
+old%<adj%>:old A_OLD ; ! ""
+happy%<adj%>:happ A_HAPPY ; ! ""
+warm%<adj%>:warm A_OLD ; ! ""
+small%<adj%>:small A_OLD ; ! ""
+nice%<adj%>:nic A_NICE ; ! ""
 
 LEXICON Numerals
 two%<num%>:two # ; ! ""
