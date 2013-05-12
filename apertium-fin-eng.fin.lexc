@@ -52,6 +52,7 @@ Multichar_Symbols
 %<comp%> ! Comparative	wikipedia
 %<sup%> ! Sup
 
+%+
 
 ^AÄ
 ^OÖ
@@ -484,16 +485,16 @@ LEXICON N_CLITS?
 
 LEXICON N_CLITS
 
-%<qst%>:k^OÖ # ;
+%+ko%<qst%>:k^OÖ # ;
 
 
 LEXICON V_NEG
-ei%<vblex%>%<neg%>%<sg%>%<p1%>:en # ;
-ei%<vblex%>%<neg%>%<sg%>%<p2%>:et # ;
-ei%<vblex%>%<neg%>%<sg%>%<p3%>:ei # ;
-ei%<vblex%>%<neg%>%<pl%>%<p1%>:emme # ;
-ei%<vblex%>%<neg%>%<pl%>%<p2%>:ette # ;
-ei%<vblex%>%<neg%>%<pl%>%<p3%>:eivät # ;
+ei%<vblex%>%<neg%>%<p1%>%<sg%>:en # ;
+ei%<vblex%>%<neg%>%<p2%>%<sg%>:et # ;
+ei%<vblex%>%<neg%>%<p3%>%<sg%>:ei # ;
+ei%<vblex%>%<neg%>%<p1%>%<pl%>:emme # ;
+ei%<vblex%>%<neg%>%<p2%>%<pl%>:ette # ;
+ei%<vblex%>%<neg%>%<p3%>%<pl%>:eivät # ;
 
 LEXICON V_VOIDA
 
@@ -742,51 +743,51 @@ LEXICON V_OLLA
 %<pasv%>%<pres%>:ol V_PASSIVE_L ;
 %<actv%>%<past%>:ol V_PAST_WEAK ;
 %<actv%>%<past%>:ol V_PAST_STRONG ;
-%<actv%>%<pres%>%<sg%>%<p3%>:on V_CLITS? ;
+%<actv%>%<pres%>%<p3%>%<sg%>:on V_CLITS? ;
 %<actv%>%<pres%>%<conneg%>:ole V_CLITS? ;
 
 LEXICON V_PRESENT_WEAK
 
-%<sg%>%<p1%>:n   V_CLITS? ;
-%<sg%>%<p2%>:t   V_CLITS? ;
-%<pl%>%<p1%>:mme V_CLITS? ;
-%<pl%>%<p2%>:tte V_CLITS? ;
+%<p1%>%<sg%>:n   V_CLITS? ;
+%<p2%>%<sg%>:t   V_CLITS? ;
+%<p1%>%<pl%>:mme V_CLITS? ;
+%<p2%>%<pl%>:tte V_CLITS? ;
 
 LEXICON V_PRESENT_STRONG
 
-%<pl%>%<p3%>:v^AÄt V_CLITS? ;
+%<p3%>%<pl%>:v^AÄt V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_A
 
-%<sg%>%<p3%>:^AÄ V_CLITS? ;
+%<p3%>%<sg%>:^AÄ V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_E
 
-%<sg%>%<p3%>:e V_CLITS? ;
+%<p3%>%<sg%>:e V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_I
 
-%<sg%>%<p3%>:i V_CLITS? ;
+%<p3%>%<sg%>:i V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_O
 
-%<sg%>%<p3%>:^OÖ V_CLITS? ;
+%<p3%>%<sg%>:^OÖ V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_U
 
-%<sg%>%<p3%>:^UÜ V_CLITS? ;
+%<p3%>%<sg%>:^UÜ V_CLITS? ;
 
 LEXICON V_PAST_WEAK
 
-%<sg%>%<p1%>:in   V_CLITS? ;
-%<sg%>%<p2%>:it   V_CLITS? ;
-%<pl%>%<p1%>:imme V_CLITS? ;
-%<pl%>%<p2%>:itte V_CLITS? ;
+%<p1%>%<sg%>:in   V_CLITS? ;
+%<p2%>%<sg%>:it   V_CLITS? ;
+%<p1%>%<pl%>:imme V_CLITS? ;
+%<p2%>%<pl%>:itte V_CLITS? ;
 
 LEXICON V_PAST_STRONG
 
-%<sg%>%<p3%>:i V_CLITS? ;
-%<pl%>%<p3%>:iv^AÄt V_CLITS? ;
+%<p3%>%<sg%>:i V_CLITS? ;
+%<p3%>%<pl%>:iv^AÄt V_CLITS? ;
 
 LEXICON V_PASSIVE_L
 
@@ -809,7 +810,7 @@ LEXICON V_CLITS?
 0 V_CLITS ;
 
 LEXICON V_CLITS
-%<qst%>:k^OÖ # ;
+%+ko%<qst%>:k^OÖ # ;
 
 LEXICON A_VANHA
 
