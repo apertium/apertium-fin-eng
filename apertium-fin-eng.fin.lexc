@@ -52,6 +52,17 @@ Multichar_Symbols
 %<comp%> ! Comparative	wikipedia
 %<sup%> ! Sup
 
+! Punctuation
+%<sent%>      ! Sentence marker
+%<guio%>      ! Hyphen
+%<cm%>        ! Comma
+%<apos%>      ! Apostrophe
+%<rquot%>     ! Quote marker (right hand side)
+%<lquot%>     ! Quote marker (left hand side)
+%<rpar%>      ! Parenthetical marker (right hand side)
+%<lpar%>      ! Parenthetical marker (left hand side)
+
+
 %+
 
 ^AÄ
@@ -69,6 +80,7 @@ LEXICON Root
 0   Conjunctions    ;
 0   Propers ;
 0   Numerals ;
+0   Punctuation;
 
 LEXICON PROPN_MARI
 
@@ -1166,3 +1178,33 @@ kuusi%<num%>:kuu NUM_KUUSI ;
 23%<num%>%<sg%>%<nom%>:23 # ;
 24%<num%>%<sg%>%<nom%>:24 # ;
 25%<num%>%<sg%>%<nom%>:25 # ;
+
+!===================!
+ LEXICON Punctuation
+!===================!
+
+
+%.%<sent%>:%. # ;
+%.%.%<sent%>:%.%. # ;
+%.%.%.%<sent%>:%.%.%. # ;
+%;%<sent%>:%; # ;
+%:%<sent%>:%: # ;
+%!%<sent%>:%! # ;
+%-%<guio%>:%- # ;
+%—%<guio%>:%— # ;
+,%<cm%>:, # ;
+%?%<sent%>:%? # ;
+%'%<apos%>:%' # ;
+%"%<sent%>:%" # ;
+%«%<lquot%>:%« # ;
+%»%<rquot%>:%» # ;
+%”%<rquot%>:%” # ;
+%“%<lquot%>:%“ # ;
+%(%<lpar%>:%( # ;
+%]%<rpar%>:%] # ;
+%[%<lpar%>:%[ # ;
+%)%<rpar%>:%) # ;
+%\%<sent%>:%\ # ;
+%/%<sent%>:%/ # ;
+
+
