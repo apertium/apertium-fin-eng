@@ -17,6 +17,8 @@ Multichar_Symbols
 %<sg%> ! Singular       
 %<pl%> ! Plural
 
+%<sint%>  ! Synthetic
+
 %<nom%>  !Nominative    
 %<acc%>  !Accusative    
 
@@ -265,6 +267,9 @@ LEXICON V_FIND
 
 LEXICON Verbs
 
+can%<vaux%>%<pres%>:can # ; ! ""
+can%<vaux%>%<pres%>%+not%<adv%>:can't # ; ! ""
+can%<vaux%>%<past%>:could # ; ! ""
 be%<vblex%>:0 V_BE ; ! ""
 look%<vblex%>:look V ; ! ""
 have%<vblex%>:0 V_HAVE ; ! ""
@@ -294,10 +299,8 @@ get%<vblex%>:0 V_GET ; ! ""
 eat%<vblex%>:0 V_EAT ; ! ""
 drink%<vblex%>:0 V_DRINK ; ! ""
 ask%<vblex%>:ask V ; ! ""
-could%<vaux%>:could # ; ! ""
 come%<vblex%>:0 V_COME ; ! ""
 try%<vblex%>:tr V_TRY ; ! ""
-can%<vaux%>:can # ; ! ""
 want%<vblex%>:want V ; ! ""
 walk%<vblex%>:walk V ; ! ""
 speak%<vblex%>:0 V_SPEAK ; ! ""
@@ -306,7 +309,6 @@ say%<vblex%>:sa V_SAY  ; ! ""
 go%<vblex%>:0 V_GO ; ! ""
 find%<vblex%>:0 V_FIND ; ! ""
 count%<vblex%>:count V ; ! ""
-can't%<vblex%>:can't # ; ! ""
 
 LEXICON Determiners
 the%<det%>%<def%>:the # ; ! ""
@@ -314,20 +316,30 @@ a%<det%>%<ind%>:a # ; ! "" ! Dir/LR
 an%<det%>%<ind%>:an # ; ! "" ! Dir/LR
 a%<det%>%<ind%>:%~a # ; ! "" ! Dir/RL
 
+her%<det%>%<pos%>%<sp%>:her # ; ! ""
+his%<det%>%<pos%>%<sp%>:his # ; ! ""
+their%<det%>%<pos%>%<sp%>:their # ; ! ""
+
 LEXICON Pronouns
-she%<prn%>%<nom%>:she # ; ! ""
-her%<prn%>%<acc%>:her # ; ! ""
-you%<prn%>%<nom%>:you # ; ! ""
-it%<prn%>:it # ; ! ""
-he%<prn%>%<nom%>:he # ; ! ""
-Their%<prn%>%<gen%>:Their # ; ! ""
-They%<prn%>%<nom%>:They # ; ! ""
-both%<prn%>:both # ; ! ""
-they%<prn%>%<nom%>:they # ; ! ""
-I%<prn%>%<nom%>:I # ; ! ""
-his%<prn%>%<gen%>:his # ; ! ""
-him%<prn%>%<acc%>:him # ; ! ""
-me%<prn%>%<nom%>:me # ; ! ""
+
+I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<nom%>:I # ; ! ""
+me%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:me # ; ! ""
+you%<prn%>%<pers%>%<p2%>%<mf%>%<sp%>%<nom%>:you # ; ! ""
+you%<prn%>%<pers%>%<p2%>%<mf%>%<sp%>%<acc%>:you # ; ! ""
+she%<prn%>%<pers%>%<p3%>%<f%>%<sg%>%<nom%>:she # ; ! ""
+her%<prn%>%<pers%>%<p3%>%<f%>%<sg%>%<acc%>:her # ; ! ""
+it%<prn%>%<pers%>%<p3%>%<nt%>%<sg%>%<nom%>:it # ; ! ""
+it%<prn%>%<pers%>%<p3%>%<nt%>%<sg%>%<acc%>:it # ; ! ""
+he%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<nom%>:he # ; ! ""
+him%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<acc%>:him # ; ! ""
+they%<prn%>%<pers%>%<p3%>%<mf%>%<pl%>%<nom%>:they # ; ! ""
+them%<prn%>%<pers%>%<p3%>%<mf%>%<pl%>%<acc%>:them # ; ! ""
+
+theirs%<prn%>%<pos%>%<mf%>%<sp%>:theirs # ; ! ""
+his%<prn%>%<pos%>%<mf%>%<sp%>:his # ; ! ""
+
+
+both%<prn%>%<ind%>%<mf%>%<pl%>:both # ; ! ""
 
 LEXICON PROPN_JAMES
 
@@ -335,15 +347,13 @@ LEXICON PROPN_JAMES
 %<sg%>%<gen%>:'s # ;
 
 LEXICON Propers
-James%<np%>:James PROPN_JAMES ; ! ""
-Mary%<np%>:Mary N ; ! ""
+James%<np%>%<ant%>%<m%>:James PROPN_JAMES ; ! ""
+Mary%<np%>%<ant%>%<f%>:Mary N ; ! ""
 
 LEXICON Conjunctions
-And%<cnj%>:And # ; ! ""
-and%<cnj%>:and # ; ! ""
-But%<cnj%>:But # ; ! ""
-but%<cnj%>:but # ; ! ""
-or%<cnj%>:or # ; ! ""
+and%<cnjcoo%>:and # ; ! ""
+but%<cnjcoo%>:but # ; ! ""
+or%<cnjcoo%>:or # ; ! ""
 
 LEXICON Prepositions
 to%<pr%>:to # ; ! ""
@@ -368,7 +378,6 @@ LEXICON Adverbs
 where%<adv%>%<itg%>:where # ; ! ""
 when%<adv%>%<itg%>:when # ; ! ""
 why%<adv%>%<itg%>:why # ; ! ""
-what%<adv%>:what # ; ! ""
 
 not%<adv%>:not # ; ! ""
 also%<adv%>:also # ; ! ""
@@ -397,6 +406,7 @@ near%<adv%>:near # ; ! ""
 
 another%<adv%>:another # ; ! "" ! Determiner/Pronoun
 some%<adv%>:some # ; ! "" ! Determiner/Pronoun
+what%<adv%>%<itg%>:what # ; ! "" ! Pronoun
 
 LEXICON A_OLD
 0 # ;
@@ -419,14 +429,14 @@ LEXICON A_NICE
 %<sup%>:est # ;
 
 LEXICON Adjectives
-cold%<adj%>:cold A_OLD ; ! ""
+cold%<adj%>%<sint%>:cold A_OLD ; ! ""
 little%<adj%>:little # ; ! ""
-big%<adj%>:big A_BIG ; ! ""
-old%<adj%>:old A_OLD ; ! ""
-happy%<adj%>:happ A_HAPPY ; ! ""
-warm%<adj%>:warm A_OLD ; ! ""
-small%<adj%>:small A_OLD ; ! ""
-nice%<adj%>:nic A_NICE ; ! ""
+big%<adj%>%<sint%>:big A_BIG ; ! ""
+old%<adj%>%<sint%>:old A_OLD ; ! ""
+happy%<adj%>%<sint%>:happ A_HAPPY ; ! ""
+warm%<adj%>%<sint%>:warm A_OLD ; ! ""
+small%<adj%>%<sint%>:small A_OLD ; ! ""
+nice%<adj%>%<sint%>:nic A_NICE ; ! ""
 
 LEXICON Numerals
 two%<num%>:two # ; ! ""
