@@ -10,7 +10,6 @@ Multichar_Symbols
 %<ij%> ! Interjection
 %<cnjcoo%> ! Co-ordinating conjunction
 %<cnjsub%> ! Sub-ordinating conjunction 
-%<sent%> ! Sentqste-ending punctuation   e.g. full stop, question mark
 %<ind%> ! Indefinite
 %<def%> ! Definite
 
@@ -46,6 +45,9 @@ Multichar_Symbols
 %<rpar%>      ! Parenthetical marker (right hand side)
 %<lpar%>      ! Parenthetical marker (left hand side)
 
+%.
+%,
+
 
 %+
 
@@ -61,6 +63,7 @@ LEXICON Root
 0 Pronouns ; 
 0 Determiners ; 
 0 Numerals ;
+0 Punctuation ;
 
 LEXICON N
 
