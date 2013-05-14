@@ -2,11 +2,39 @@
   <alphabet/>
   <sdefs>
     <sdef n="n"  c="Имя существительное"/>
+    <sdef n="cnjcoo"  c="Союз"/>
+    <sdef n="prn"  c="Местоимение"/>
+    <sdef n="a"  c="Прилагательное"/>
+    <sdef n="vblex"  c="Глагол"/>
+    <sdef n="adv"  c="Наречие"/>
+    <sdef n="sint"  c="-ø -er -est"/>
+    <sdef n="vbser"  c="Глагол 'быть'"/>
   </sdefs>
   <section id="main" type="standard">
+    <e><p><l>ja<s n="cnjcoo"/></l><r>and<s n="cnjcoo"/></r></p></e>
+
+    <e><p><l>hän<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
+    <e><p><l>hän<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
+    <e><p><l>hän<s n="prn"/></l><r>she<s n="prn"/></r></p></e>
+
     <!-- Раздел: Имя Существительное -->
 
     <e><p><l>koira<s n="n"/></l><r>dog<s n="n"/></r></p></e>
+    <e><p><l>kissa<s n="n"/></l><r>cat<s n="n"/></r></p></e>
+    <e><p><l>talo<s n="n"/></l><r>house<s n="n"/></r></p></e>
+    <e><p><l>puutarha<s n="n"/></l><r>garden<s n="n"/></r></p></e>
+    <e><p><l>äiti<s n="n"/></l><r>mother<s n="n"/></r></p></e>
+    <e><p><l>puu<s n="n"/></l><r>tree<s n="n"/></r></p></e>
+    <e><p><l>puu<s n="n"/></l><r>wood<s n="n"/></r></p></e>
+
+    <e><p><l>iso<s n="a"/></l><r>big<s n="a"/><s n="sint"/></r></p></e>
+    <e><p><l>iso<s n="a"/></l><r>large<s n="a"/><s n="sint"/></r></p></e>
+    <e><p><l>iso<s n="a"/></l><r>great<s n="a"/><s n="sint"/></r></p></e>
+
+    <e><p><l>sitten<s n="adv"/></l><r>then<s n="adv"/></r></p></e>
+
+    <e><p><l>olla<s n="vblex"/></l><r>be<s n="vbser"/></r></p></e>
+
 
   </section>
 </dictionary>

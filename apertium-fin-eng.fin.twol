@@ -3,7 +3,7 @@ Alphabet
 a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö 
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Å Ä Ö
 
-%^AÄ:a %^AÄ:ä %^OÖ:o %^OÖ:ö %^UÜ:u %^UÜ:y
+%{A%}:a %{A%}:ä %{O%}:o %{O%}:ö %{U%}:u %{U%}:y
 
 %>:0
 
@@ -18,7 +18,8 @@ NEUT = i e ;
 Rules
 
 "Vowel harmony stuffs"
-Vh:Vb <=> [:a | :o | :u] \[:ä | :ö | :y]* _ ; where Vh in (%^AÄ %^OÖ %^UÜ)
-                                                    Vb in (  a    o    u) matched ;
+Vh:Vb <=> [:a | :o | :u] \[:ä | :ö | :y]* _ ; 
+      where Vh in (%{A%} %{O%} %{U%})
+            Vb in (  a     o     u  ) matched ;
 
 

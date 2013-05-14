@@ -65,9 +65,9 @@ Multichar_Symbols
 
 %+
 
-^AÄ
-^OÖ
-^UÜ
+%{A%}
+%{O%}
+%{U%}
 
 LEXICON Root
 
@@ -85,7 +85,7 @@ LEXICON Root
 LEXICON PROPN_MARI
 
 %<sg%>%<nom%>:i  N_POSSES? ;
-%<sg%>%<par%>:^AÄ N_POSSES? ;
+%<sg%>%<par%>:%{A%} N_POSSES? ;
 0:i N_SINGULARS_WEAK ;
 0:i N_SINGULARS_STRONG ;
 0:i N_SINGULAR_ILLATIVE_IN ;
@@ -98,7 +98,7 @@ LEXICON PROPN_MARI
 LEXICON PROPN_JAAKKO
 
 %<sg%>%<nom%>:ko  N_POSSES? ;
-%<sg%>%<par%>:ko^AÄ N_POSSES? ;
+%<sg%>%<par%>:ko%{A%} N_POSSES? ;
 0:o N_SINGULARS_WEAK ;
 0:ko N_SINGULARS_STRONG ;
 0:ko N_SINGULAR_ILLATIVE_ON ;
@@ -123,7 +123,7 @@ LEXICON N_LEIKKIMINEN
 LEXICON N_SÄÄ
 
 %<sg%>%<nom%>:ä  N_POSSES? ;
-%<sg%>%<par%>:t^AÄ N_POSSES? ;
+%<sg%>%<par%>:t%{A%} N_POSSES? ;
 0:ä N_SINGULARS_WEAK ;
 0:ä N_SINGULARS_STRONG ;
 0:ä N_SINGULAR_ILLATIVE_HAN ;
@@ -136,7 +136,7 @@ LEXICON N_SÄÄ
 LEXICON N_TUOLI
 
 %<sg%>%<nom%>:i  N_POSSES? ;
-%<sg%>%<par%>:i^AÄ N_POSSES? ;
+%<sg%>%<par%>:i%{A%} N_POSSES? ;
 0:i N_SINGULARS_WEAK ;
 0:i N_SINGULARS_STRONG ;
 0:i N_SINGULAR_ILLATIVE_IN ;
@@ -149,7 +149,7 @@ LEXICON N_TUOLI
 LEXICON N_ÄÄNI
 
 %<sg%>%<nom%>:i  N_POSSES? ;
-%<sg%>%<par%>:t^AÄ N_POSSES? ;
+%<sg%>%<par%>:t%{A%} N_POSSES? ;
 0:e N_SINGULARS_WEAK ;
 0:e N_SINGULARS_STRONG ;
 0:e N_SINGULAR_ILLATIVE_EN ;
@@ -162,8 +162,8 @@ LEXICON N_ÄÄNI
 LEXICON N_ÄITI
 
 %<sg%>%<nom%>:ti  N_POSSES? ;
-%<sg%>%<par%>:^AÄ N_POSSES? ;
-%<sg%>%<par%>%<px3sp%>:^AÄ^AÄn N_CLITS? ;
+%<sg%>%<par%>:%{A%} N_POSSES? ;
+%<sg%>%<par%>%<px3sp%>:%{A%}%{A%}n N_CLITS? ;
 0:di N_SINGULARS_WEAK ;
 0:ti N_SINGULARS_STRONG ;
 0:ti N_SINGULAR_ILLATIVE_EN ;
@@ -178,7 +178,7 @@ LEXICON N_ÄITI
 LEXICON N_VUOSI
 
 %<sg%>%<nom%>:si  N_POSSES? ;
-%<sg%>%<par%>:tt^AÄ N_POSSES? ;
+%<sg%>%<par%>:tt%{A%} N_POSSES? ;
 0:de N_SINGULARS_WEAK ;
 0:te N_SINGULARS_STRONG ;
 0:te N_SINGULAR_ILLATIVE_EN ;
@@ -191,7 +191,7 @@ LEXICON N_VUOSI
 LEXICON N_TYTTÖ
 
 %<sg%>%<nom%>:tö  N_POSSES? ;
-%<sg%>%<par%>:tö^AÄ N_POSSES? ;
+%<sg%>%<par%>:tö%{A%} N_POSSES? ;
 0:ö N_SINGULARS_WEAK ;
 0:tö N_SINGULARS_STRONG ;
 0:tö N_SINGULAR_ILLATIVE_ON ;
@@ -216,7 +216,7 @@ LEXICON N_PUU
 LEXICON N_POIKA
 
 %<sg%>%<nom%>:ika  N_POSSES? ;
-%<sg%>%<par%>:ika^AÄ N_POSSES? ;
+%<sg%>%<par%>:ika%{A%} N_POSSES? ;
 0:ja N_SINGULARS_WEAK ;
 0:ika N_SINGULARS_STRONG ;
 0:ika N_SINGULAR_ILLATIVE_EN ;
@@ -277,7 +277,7 @@ LEXICON N_LAPSI
 LEXICON N_KÄSI
 
 %<sg%>%<nom%>:si  N_POSSES? ;
-%<sg%>%<nom%>:tt^AÄ  N_POSSES? ;
+%<sg%>%<nom%>:tt%{A%}  N_POSSES? ;
 0:de N_SINGULARS_WEAK ;
 0:te N_SINGULARS_STRONG ;
 0:te N_SINGULAR_ILLATIVE_EN ;
@@ -290,7 +290,7 @@ LEXICON N_KÄSI
 LEXICON N_VASTAUS
 
 %<sg%>%<nom%>:s  N_POSSES? ;
-%<sg%>%<nom%>:st^AÄ  N_POSSES? ;
+%<sg%>%<nom%>:st%{A%}  N_POSSES? ;
 0:kse N_SINGULARS_WEAK ;
 0:kse N_SINGULARS_STRONG ;
 0:kse N_SINGULAR_ILLATIVE_EN ;
@@ -350,11 +350,11 @@ LEXICON N_AIKA
 
 LEXICON N_PÖYTÄ
 
-%<sg%>%<nom%>:t^AÄ  N_POSSES? ;
-%<sg%>%<par%>:t^AÄ^AÄ  N_POSSES? ;
-0:d^AÄ N_SINGULARS_WEAK ;
-0:t^AÄ N_SINGULARS_STRONG ;
-0:t^AÄ N_SINGULAR_ILLATIVE_AN ;
+%<sg%>%<nom%>:t%{A%}  N_POSSES? ;
+%<sg%>%<par%>:t%{A%}%{A%}  N_POSSES? ;
+0:d%{A%} N_SINGULARS_WEAK ;
+0:t%{A%} N_SINGULARS_STRONG ;
+0:t%{A%} N_SINGULAR_ILLATIVE_AN ;
 0:d N_PLURALS_WEAK ;
 0:t N_PLURALS_STRONG ;
 0:t N_PLURAL_PARTITIVE_IA ;
@@ -363,11 +363,11 @@ LEXICON N_PÖYTÄ
 
 LEXICON N_KOIRA
 
-%<sg%>%<nom%>:^AÄ  N_POSSES? ;
-%<sg%>%<par%>:^AÄ^AÄ  N_POSSES? ;
-0:^AÄ N_SINGULARS_WEAK ;
-0:^AÄ N_SINGULARS_STRONG ;
-0:^AÄ N_SINGULAR_ILLATIVE_AN ;
+%<sg%>%<nom%>:%{A%}  N_POSSES? ;
+%<sg%>%<par%>:%{A%}%{A%}  N_POSSES? ;
+0:%{A%} N_SINGULARS_WEAK ;
+0:%{A%} N_SINGULARS_STRONG ;
+0:%{A%} N_SINGULAR_ILLATIVE_AN ;
 0 N_PLURALS_WEAK ;
 0 N_PLURALS_STRONG ;
 0 N_PLURAL_PARTITIVE_IA ;
@@ -378,18 +378,18 @@ LEXICON N_SINGULARS_WEAK
 
 %<pl%>%<nom%>:t N_POSSES? ;
 %<sg%>%<gen%>:n N_CLITS? ;
-%<sg%>%<ine%>:ss^AÄ N_POSSES? ;
-%<sg%>%<ela%>:st^AÄ N_POSSES? ;
-%<sg%>%<ade%>:ll^AÄ N_POSSES? ;
-%<sg%>%<abl%>:lt^AÄ N_POSSES? ;
+%<sg%>%<ine%>:ss%{A%} N_POSSES? ;
+%<sg%>%<ela%>:st%{A%} N_POSSES? ;
+%<sg%>%<ade%>:ll%{A%} N_POSSES? ;
+%<sg%>%<abl%>:lt%{A%} N_POSSES? ;
 %<sg%>%<all%>:lle N_POSSES? ;
 %<sg%>%<tra%>:ksi N_CLITS? ;
 %<sg%>%<tra%>:kse N_POSSES ;
-%<sg%>%<abe%>:tt^AÄ N_POSSES? ;
+%<sg%>%<abe%>:tt%{A%} N_POSSES? ;
 
 LEXICON N_SINGULAR_ILLATIVE_AN
-%<sg%>%<ill%>:^AÄ N_POSSES ;
-%<sg%>%<ill%>:^AÄn N_CLITS? ;
+%<sg%>%<ill%>:%{A%} N_POSSES ;
+%<sg%>%<ill%>:%{A%}n N_CLITS? ;
 
 LEXICON N_SINGULAR_ILLATIVE_EN
 %<sg%>%<ill%>:e N_POSSES ;
@@ -400,20 +400,20 @@ LEXICON N_SINGULAR_ILLATIVE_IN
 %<sg%>%<ill%>:^in N_CLITS? ;
 
 LEXICON N_SINGULAR_ILLATIVE_ON
-%<sg%>%<ill%>:^OÖ N_POSSES ;
-%<sg%>%<ill%>:^OÖn N_CLITS? ;
+%<sg%>%<ill%>:%{O%} N_POSSES ;
+%<sg%>%<ill%>:%{O%}n N_CLITS? ;
 
 LEXICON N_SINGULAR_ILLATIVE_UN
-%<sg%>%<ill%>:^UÜ N_POSSES ;
-%<sg%>%<ill%>:^UÜn N_CLITS? ;
+%<sg%>%<ill%>:%{U%} N_POSSES ;
+%<sg%>%<ill%>:%{U%}n N_CLITS? ;
 
 LEXICON N_SINGULAR_ILLATIVE_HUN
-%<sg%>%<ill%>:h^UÜ N_POSSES ;
-%<sg%>%<ill%>:h^UÜn N_CLITS? ;
+%<sg%>%<ill%>:h%{U%} N_POSSES ;
+%<sg%>%<ill%>:h%{U%}n N_CLITS? ;
 
 LEXICON N_SINGULAR_ILLATIVE_HAN
-%<sg%>%<ill%>:h^AÄ N_POSSES ;
-%<sg%>%<ill%>:h^AÄn N_CLITS? ;
+%<sg%>%<ill%>:h%{A%} N_POSSES ;
+%<sg%>%<ill%>:h%{A%}n N_CLITS? ;
 
 LEXICON N_SINGULAR_ILLATIVE_SEEN
 %<sg%>%<ill%>:see N_POSSES ;
@@ -424,31 +424,31 @@ LEXICON N_SINGULARS_STRONG
 %<sg%>%<nom%>:0 N_POSSES ;
 %<pl%>%<nom%>:0 N_POSSES ;
 %<sg%>%<gen%>:0 N_POSSES ;
-%<sg%>%<ess%>:n^AÄ N_POSSES? ;
+%<sg%>%<ess%>:n%{A%} N_POSSES? ;
 
 LEXICON N_PLURALS_WEAK
 
-%<pl%>%<ine%>:iss^AÄ N_POSSES? ;
-%<pl%>%<ela%>:ist^AÄ N_POSSES? ;
-%<pl%>%<ade%>:ill^AÄ N_POSSES? ;
-%<pl%>%<abl%>:ill^AÄ N_POSSES? ;
+%<pl%>%<ine%>:iss%{A%} N_POSSES? ;
+%<pl%>%<ela%>:ist%{A%} N_POSSES? ;
+%<pl%>%<ade%>:ill%{A%} N_POSSES? ;
+%<pl%>%<abl%>:ill%{A%} N_POSSES? ;
 %<pl%>%<all%>:ille N_POSSES? ;
 %<pl%>%<tra%>:iksi N_CLITS? ;
 %<pl%>%<tra%>:ikse N_POSSES ;
-%<pl%>%<abe%>:itt^AÄ N_POSSES? ;
+%<pl%>%<abe%>:itt%{A%} N_POSSES? ;
 %<pl%>%<ins%>:in N_POSSES? ;
 
 LEXICON N_PLURAL_PARTITIVE_JA
 
-%<pl%>%<par%>:j^AÄ N_POSSES? ;
+%<pl%>%<par%>:j%{A%} N_POSSES? ;
 
 LEXICON N_PLURAL_PARTITIVE_ITA
 
-%<pl%>%<par%>:it^AÄ N_POSSES? ;
+%<pl%>%<par%>:it%{A%} N_POSSES? ;
 
 LEXICON N_PLURAL_PARTITIVE_IA
 
-%<pl%>%<par%>:i^AÄ N_POSSES? ;
+%<pl%>%<par%>:i%{A%} N_POSSES? ;
 
 LEXICON N_PLURAL_GENITIVE_JEN
 
@@ -478,7 +478,7 @@ LEXICON N_PLURAL_ILLATIVE_IIN
 LEXICON N_PLURALS_STRONG
 
 %<pl%>%<com%>:ine N_POSSES? ;
-%<pl%>%<ess%>:in^AÄ N_POSSES? ;
+%<pl%>%<ess%>:in%{A%} N_POSSES? ;
 
 LEXICON N_POSSES?
 0   N_CLITS?    ;
@@ -487,7 +487,7 @@ LEXICON N_POSSES?
 LEXICON N_POSSES
 %<px1sg%>:ni N_CLITS? ;
 %<px2sg%>:si N_CLITS? ;
-%<px3sp%>:ns^AÄ N_CLITS? ;
+%<px3sp%>:ns%{A%} N_CLITS? ;
 %<px1pl%>:mme N_CLITS? ;
 %<px2pl%>:nne N_CLITS? ;
 
@@ -497,7 +497,7 @@ LEXICON N_CLITS?
 
 LEXICON N_CLITS
 
-%+ko%<qst%>:k^OÖ # ;
+%+ko%<qst%>:k%{O%} # ;
 
 
 LEXICON V_NEG
@@ -531,9 +531,9 @@ LEXICON V_TÄYTYÄ
 LEXICON V_TIETÄÄ
 
 %<inf%>:tää # ;
-%<actv%>%<pres%>:d^AÄ V_PRESENT_WEAK ;
-%<actv%>%<pres%>:t^AÄ V_PRESENT_STRONG ;
-%<actv%>%<pres%>:t^AÄ V_PRESENT_SG3_A ;
+%<actv%>%<pres%>:d%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_SG3_A ;
 %<pasv%>%<pres%>:de V_PASSIVE_T ;
 %<actv%>%<past%>:s V_PAST_WEAK ;
 %<actv%>%<past%>:s V_PAST_STRONG ;
@@ -584,12 +584,12 @@ LEXICON V_NÄHDÄ
 LEXICON V_NAURAA
 
 %<inf%>:aa  # ;
-%<actv%>%<pres%>:^AÄ V_PRESENT_WEAK ;
-%<actv%>%<pres%>:^AÄ V_PRESENT_STRONG ;
-%<actv%>%<pres%>:^AÄ V_PRESENT_SG3_A ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_SG3_A ;
 %<pasv%>%<pres%>:e V_PASSIVE_T ;
-%<actv%>%<past%>:^OÖ V_PAST_WEAK ;
-%<actv%>%<past%>:^OÖ V_PAST_STRONG ;
+%<actv%>%<past%>:%{O%} V_PAST_WEAK ;
+%<actv%>%<past%>:%{O%} V_PAST_STRONG ;
 
 LEXICON V_MENNÄ
 
@@ -604,9 +604,9 @@ LEXICON V_MENNÄ
 LEXICON V_LÖYTÄÄ
 
 %<inf%>:tää # ;
-%<actv%>%<pres%>:d^AÄ V_PRESENT_WEAK ;
-%<actv%>%<pres%>:t^AÄ V_PRESENT_STRONG ;
-%<actv%>%<pres%>:t^AÄ V_PRESENT_SG3_A ;
+%<actv%>%<pres%>:d%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_SG3_A ;
 %<pasv%>%<pres%>:det V_PASSIVE_T ;
 %<actv%>%<past%>:s V_PAST_WEAK ;
 %<actv%>%<past%>:s V_PAST_STRONG ;
@@ -616,9 +616,9 @@ LEXICON V_LÖYTÄÄ
 LEXICON V_LOPETTAA
 
 %<inf%>:taa # ;
-%<actv%>%<pres%>:^AÄ V_PRESENT_WEAK ;
-%<actv%>%<pres%>:t^AÄ V_PRESENT_STRONG ;
-%<actv%>%<pres%>:t^AÄ V_PRESENT_SG3_A ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_SG3_A ;
 %<pasv%>%<pres%>:e V_PASSIVE_T ;
 %<actv%>%<past%>:0 V_PAST_WEAK ;
 %<actv%>%<past%>:t V_PAST_STRONG ;
@@ -686,7 +686,7 @@ LEXICON V_LASKEA
 
 LEXICON V_ISTUA
 
-%<inf%>:%^AÄ # ;
+%<inf%>:%{A%} # ;
 %<actv%>%<pres%>:0 V_PRESENT_WEAK ;
 %<actv%>%<pres%>:0 V_PRESENT_STRONG ;
 %<actv%>%<pres%>:0 V_PRESENT_SG3_U ;
@@ -767,11 +767,11 @@ LEXICON V_PRESENT_WEAK
 
 LEXICON V_PRESENT_STRONG
 
-%<p3%>%<pl%>:v^AÄt V_CLITS? ;
+%<p3%>%<pl%>:v%{A%}t V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_A
 
-%<p3%>%<sg%>:^AÄ V_CLITS? ;
+%<p3%>%<sg%>:%{A%} V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_E
 
@@ -783,11 +783,11 @@ LEXICON V_PRESENT_SG3_I
 
 LEXICON V_PRESENT_SG3_O
 
-%<p3%>%<sg%>:^OÖ V_CLITS? ;
+%<p3%>%<sg%>:%{O%} V_CLITS? ;
 
 LEXICON V_PRESENT_SG3_U
 
-%<p3%>%<sg%>:^UÜ V_CLITS? ;
+%<p3%>%<sg%>:%{U%} V_CLITS? ;
 
 LEXICON V_PAST_WEAK
 
@@ -799,43 +799,43 @@ LEXICON V_PAST_WEAK
 LEXICON V_PAST_STRONG
 
 %<p3%>%<sg%>:i V_CLITS? ;
-%<p3%>%<pl%>:iv^AÄt V_CLITS? ;
+%<p3%>%<pl%>:iv%{A%}t V_CLITS? ;
 
 LEXICON V_PASSIVE_L
 
-%<impers%>:l^AÄ^AÄn V_CLITS? ;
+%<impers%>:l%{A%}%{A%}n V_CLITS? ;
 
 LEXICON V_PASSIVE_T
 
-%<impers%>:t^AÄ^AÄn V_CLITS? ;
+%<impers%>:t%{A%}%{A%}n V_CLITS? ;
 
 LEXICON V_PASSIVE_N
 
-%<impers%>:n^AÄ^AÄn V_CLITS? ;
+%<impers%>:n%{A%}%{A%}n V_CLITS? ;
 
 LEXICON V_PASSIVE_D
 
-%<impers%>:d^AÄ^AÄn V_CLITS? ;
+%<impers%>:d%{A%}%{A%}n V_CLITS? ;
 
 LEXICON V_CLITS?
 0   # ;
 0 V_CLITS ;
 
 LEXICON V_CLITS
-%+ko%<qst%>:k^OÖ # ;
+%+ko%<qst%>:k%{O%} # ;
 
 LEXICON A_VANHA
 
-%<sg%>%<nom%>:%^AÄ N_POSSES? ;
-%<sg%>%<par%>:%^AÄ%^AÄ N_POSSES? ;
-0:%^AÄ N_SINGULARS_WEAK ;
-0:%^AÄ N_SINGULARS_STRONG ;
-0:%^AÄ N_SINGULAR_ILLATIVE_AN ;
-0:%^OÖ N_PLURALS_WEAK ;
-0:%^OÖ N_PLURALS_STRONG ;
-0:%^OÖ N_PLURAL_PARTITIVE_JA ;
-0:%^OÖ N_PLURAL_GENITIVE_JEN ;
-0:%^OÖ N_PLURAL_ILLATIVE_IHIN ;
+%<sg%>%<nom%>:%{A%} N_POSSES? ;
+%<sg%>%<par%>:%{A%}%{A%} N_POSSES? ;
+0:%{A%} N_SINGULARS_WEAK ;
+0:%{A%} N_SINGULARS_STRONG ;
+0:%{A%} N_SINGULAR_ILLATIVE_AN ;
+0:%{O%} N_PLURALS_WEAK ;
+0:%{O%} N_PLURALS_STRONG ;
+0:%{O%} N_PLURAL_PARTITIVE_JA ;
+0:%{O%} N_PLURAL_GENITIVE_JEN ;
+0:%{O%} N_PLURAL_ILLATIVE_IHIN ;
 
 LEXICON A_HYVÄ
 
@@ -875,7 +875,7 @@ LEXICON A_ISO
 
 LEXICON A_LOPETTANUT
 
-%<sg%>%<nom%>:%^UÜt N_POSSES? ;
+%<sg%>%<nom%>:%{U%}t N_POSSES? ;
 0:ee N_SINGULARS_WEAK ;
 0:ee N_SINGULARS_STRONG ;
 0:ee N_SINGULAR_ILLATIVE_SEEN ;
@@ -933,8 +933,8 @@ LEXICON PRON_ME
 0 N_PLURALS_STRONG ;
 0 N_PLURAL_PARTITIVE_ITA ;
 0 N_PLURAL_ILLATIVE_IHIN ;
-%<pl%>%<gen%>:id^AÄn  N_POSSES? ;
-%<pl%>%<acc%>:id^AÄt  N_POSSES? ;
+%<pl%>%<gen%>:id%{A%}n  N_POSSES? ;
+%<pl%>%<acc%>:id%{A%}t  N_POSSES? ;
 
 LEXICON PRON_TÄMÄ
 
@@ -973,7 +973,7 @@ LEXICON PRON_NUO
 LEXICON NUM_KUUSI
 
 %<sg%>%<nom%>:si  N_POSSES? ;
-%<sg%>%<par%>:tt^AÄ N_POSSES? ;
+%<sg%>%<par%>:tt%{A%} N_POSSES? ;
 0:de N_SINGULARS_WEAK ;
 0:te N_SINGULARS_STRONG ;
 0:te N_SINGULAR_ILLATIVE_EN ;
