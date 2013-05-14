@@ -162,8 +162,8 @@ LEXICON N_ÄÄNI
 LEXICON N_ÄITI
 
 %<sg%>%<nom%>:ti  N_POSSES? ;
-%<sg%>%<par%>:%{A%} N_POSSES? ;
-%<sg%>%<par%>%<px3sp%>:%{A%}%{A%}n N_CLITS? ;
+%<sg%>%<par%>:ti%{A%} N_POSSES? ;
+%<sg%>%<par%>%<px3sp%>:ti%{A%}%{A%}n N_CLITS? ;
 0:di N_SINGULARS_WEAK ;
 0:ti N_SINGULARS_STRONG ;
 0:ti N_SINGULAR_ILLATIVE_EN ;
@@ -517,6 +517,18 @@ LEXICON V_VOIDA
 %<pasv%>%<pres%>:i V_PASSIVE_D ;
 %<actv%>%<past%>:0 V_PAST_WEAK ;
 %<actv%>%<past%>:0 V_PAST_STRONG ;
+%<actv%>%<past%>:0 V_COND ;
+%<actv%>:i  V_NUT ;
+
+LEXICON V_NUKKUA
+
+%<inf%>:kua # ;
+%<actv%>%<pres%>:u V_PRESENT_WEAK ;
+%<actv%>%<pres%>:ku V_PRESENT_STRONG ;
+%<actv%>%<pres%>:ku V_PRESENT_SG3_U ;
+%<pasv%>%<pres%>:u V_PASSIVE_T ;
+%<actv%>%<past%>:u V_PAST_WEAK ;
+%<actv%>%<past%>:ku V_PAST_STRONG ;
 
 LEXICON V_TÄYTYÄ
 
@@ -526,7 +538,7 @@ LEXICON V_TÄYTYÄ
 %<actv%>%<pres%>:ty V_PRESENT_SG3_U ;
 %<pasv%>%<pres%>:dy V_PASSIVE_T ;
 %<actv%>%<past%>:dy V_PAST_WEAK ;
-%<actv%>%<past%>_ty V_PAST_STRONG ;
+%<actv%>%<past%>:ty V_PAST_STRONG ;
 
 LEXICON V_TIETÄÄ
 
@@ -768,6 +780,11 @@ LEXICON V_PRESENT_WEAK
 LEXICON V_PRESENT_STRONG
 
 %<p3%>%<pl%>:v%{A%}t V_CLITS? ;
+%<actv%>%<inf%>%<sg%>%<abe%>:m%{A%}tt%{A%}   N_POSSES?      ;
+%<actv%>%<inf%>%<sg%>%<ade%>:m%{A%}ll%{A%}   N_CLITS?     ;
+%<actv%>%<inf%>%<sg%>%<ela%>:m%{A%}st%{A%}   N_CLITS?     ;
+%<actv%>%<inf%>%<sg%>%<ill%>:m%{A%}%{A%}n    N_CLITS?     ;
+%<actv%>%<inf%>%<sg%>%<ine%>:m%{A%}ss%{A%}   N_CLITS?     ;
 
 LEXICON V_PRESENT_SG3_A
 
@@ -816,6 +833,22 @@ LEXICON V_PASSIVE_N
 LEXICON V_PASSIVE_D
 
 %<impers%>:d%{A%}%{A%}n V_CLITS? ;
+
+LEXICON V_NUT
+
+%<pp%>%<sg%>%<nom%>:n%{U%}t N_CLITS? ;
+%<pp%>:nee N_SINGULARS_WEAK ;
+%<pp%>:nee N_SINGULARS_STRONG ;
+
+LEXICON V_COND
+
+%<p1%>%<sg%>:isin   V_CLITS? ;
+%<p2%>%<sg%>:isit   V_CLITS? ;
+%<p3%>%<sg%>:isi   V_CLITS? ;
+%<p1%>%<pl%>:isimme V_CLITS? ;
+%<p2%>%<pl%>:isitte V_CLITS? ;
+%<p3%>%<pl%>:isiv%{A%} V_CLITS? ;
+
 
 LEXICON V_CLITS?
 0   # ;
@@ -1041,6 +1074,7 @@ leikkiä%<vblex%>:leik V_LEIKKIÄ ; ! "play"
 lopettaa%<vblex%>:lopet V_LOPETTAA ; ! "finish"
 löytää%<vblex%>:löy V_LÖYTÄÄ ; ! "find"
 mennä%<vblex%>:men V_MENNÄ ; ! "go"
+nukkua%<vblex%>:nuk V_NUKKUA ; ! "sleep"
 nauraa%<vblex%>:naur V_NAURAA ; ! "laugh"
 nähdä%<vblex%>:nä V_NÄHDÄ ; ! "see"
 olla%<vblex%>:0  V_OLLA ; ! "be / have"
