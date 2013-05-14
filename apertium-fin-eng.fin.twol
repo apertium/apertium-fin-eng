@@ -17,5 +17,8 @@ NEUT = i e ;
 
 Rules
 
-"dummy rule"
-%>:0 <=> _ ;
+"Vowel harmony stuffs"
+Vh:Vb <=> [:a | :o | :u] \[:ä | :ö | :y]* _ ; where Vh in (%^AÄ %^OÖ %^UÜ)
+                                                    Vb in (  a    o    u) matched ;
+
+
