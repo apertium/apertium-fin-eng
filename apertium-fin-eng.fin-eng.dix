@@ -79,11 +79,14 @@
     <e><p><l>kissa<s n="n"/></l><r>cat<s n="n"/></r></p></e>
     <e><p><l>koira<s n="n"/></l><r>dog<s n="n"/></r></p></e>
     <e><p><l>koskaan<s n="adv"/></l><r>never<s n="adv"/></r></p></e>
+    <e><p><l>entä<s n="adv"/></l><r>what<b/>about<s n="adv"/></r></p></e>
     <e><p><l>ko<s n="qst"/></l><r></r></p></e>
     <e><p><l>kovasti<s n="adv"/></l><r>hardly<s n="adv"/></r></p></e>
     <e><p><l>kun<s n="cnjsub"/></l><r>when<s n="cnjsub"/></r></p></e>
     <e><p><l>kuulla<s n="vblex"/></l><r>hear<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>belong<s n="vblex"/></r></p></e>
+    <e><p><l>kuulua<s n="vblex"/></l><r>concern<s n="vblex"/></r></p></e>
+    <e><p><l>kuulua<s n="vblex"/></l><r>be<g><b/>said</g><s n="vblex"/></r></p></e>
     <e><p><l>kuunnella<s n="vblex"/></l><r>listen<s n="vblex"/></r></p></e>
     <e><p><l>kuusi<s n="num"/></l><r>six<s n="num"/></r></p></e>
     <e><p><l>kylmä<s n="a"/></l><r>cold<s n="a"/></r></p></e>
@@ -130,6 +133,7 @@
     <e><p><l>osata<s n="vblex"/></l><r>can<s n="vblex"/></r></p></e>
     <e><p><l>pieni<s n="a"/></l><r>small<s n="a"/></r></p></e>
     <e><p><l>piilo<s n="n"/></l><r>hide<s n="n"/></r></p></e>
+    <e><p><l>ikkuna<s n="n"/></l><r>window<s n="n"/></r></p></e>
     <e><p><l>pitää<s n="vblex"/></l><r>love<s n="vblex"/></r></p></e>
     <e><p><l>poika<s n="n"/></l><r>boy<s n="n"/></r></p></e>
     <e><p><l>puhua<s n="vblex"/></l><r>talk<s n="vblex"/></r></p></e>
@@ -158,7 +162,8 @@
     <e><p><l>tehdä<s n="vblex"/></l><r>do<s n="vblex"/></r></p></e>
     <e><p><l>tietenkään<s n="adv"/></l><r>obvioysly<s n="adv"/></r></p></e>
     <e><p><l>tietää<s n="vblex"/></l><r>know<s n="vblex"/></r></p></e>
-    <e><p><l>todennäköisesti<s n="adv"/></l><r>blech<s n="adv"/></r></p></e>
+    <e><p><l>todennäköisesti<s n="adv"/></l><r>probably<s n="adv"/></r></p></e>
+    <e><p><l>todennäköisesti<s n="adv"/></l><r>likely<s n="adv"/></r></p></e>
     <e><p><l>tulla<s n="vblex"/></l><r>come<s n="vblex"/></r></p></e>
     <e><p><l>tuoli<s n="n"/></l><r>chair<s n="n"/></r></p></e>
     <e><p><l>tyttö<s n="n"/></l><r>girl<s n="n"/></r></p></e>
