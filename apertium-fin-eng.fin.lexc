@@ -5,14 +5,14 @@ Multichar_Symbols
 %<vblex%> ! lexical verb
 %<adj%> ! adjective
 %<adv%> ! adverb
-%<prn%> ! pronoun 
+%<prn%> ! pronoun
 %<pr%> ! adposition
 %<ij%> ! Interjection
 %<cnjcoo%> ! Co-ordinating conjunction
-%<cnjsub%> ! Sub-ordinating conjunction	
-%<sent%> ! Sentqste-ending punctuation	 e.g. full stop, question mark
+%<cnjsub%> ! Sub-ordinating conjunction
+%<sent%> ! Sentence-ending punctuation	 e.g. full stop, question mark
 
-%<sg%> ! Singular	
+%<sg%> ! Singular
 %<pl%> ! Plural
 
 %<ant%> ! Anthroponym
@@ -22,26 +22,26 @@ Multichar_Symbols
 %<f%> ! Feminin
 %<nt%> ! Neuter
 
-%<nom%>	 !Nominative	
-%<acc%>	 !Accusative	
-%<par%>	 !Partitive	
-%<gen%>	 !Genitive	
+%<nom%>	 !Nominative
+%<acc%>	 !Accusative
+%<par%>	 !Partitive
+%<gen%>	 !Genitive
 %<ine%> !inessive
 %<ela%> ! elative
 %<ill%> ! illative
 %<ade%> ! adessive
-%<abl%>	 !Ablative	
+%<abl%>	 !Ablative
 %<all%> ! allative
 %<ins%>	 !Instructiv
 %<tra%>	 ! Translative
 %<abe%> ! abessive
 %<com%> ! comitative
-%<actv%> ! Active voice	
+%<actv%> ! Active voice
 %<pasv%> ! Passive voice
-%<pres%> !Present	
-%<past%> !Past	
-%<imp%> !Imperative	
-%<inf%> !Infinitive	
+%<pres%> !Present
+%<past%> !Past
+%<imp%> !Imperative
+%<inf%> !Infinitive
 %<pp%>  !Past participle
 %<pprs%> ! present pcp
 %<cni%> !Conditional
@@ -51,11 +51,11 @@ Multichar_Symbols
 %<px1pl%> !First person plural possessive
 %<px2pl%> !Second person plural possessive
 %<px3sp%> ! Third person possessive
-%<p1%> ! First person	
-%<p2%> ! Second person	
-%<p3%> ! Third person	
+%<p1%> ! First person
+%<p2%> ! Second person
+%<p3%> ! Third person
 %<impers%> ! Impersonal
-%<pst%> ! Positive	
+%<pst%> ! Positive
 %<comp%> ! Comparative	wikipedia
 %<sup%> ! Sup
 
@@ -78,7 +78,7 @@ Multichar_Symbols
 
 LEXICON Root
 
-0 Nouns   ; 
+0 Nouns   ;
 0 Verbs   ;
 0 Pron  ;
 0   Adjectives  ;
@@ -1064,10 +1064,12 @@ vuosi%<n%>:vuo N_VUOSI ; ! "year"
 äiti%<n%>:äi N_ÄITI ; ! "mother"
 ääni%<n%>:ään N_ÄÄNI ; ! "voice"
 vesi%<n%>:ve N_KÄSI ; ! "water"
+vaari%<n%>:vaar N_TUOLI ; ! "grandpa"
+matka%<n%>:matk N_TARHA ; ! "distance, travel"
 
 LEXICON Propers
 
-Mari%<np%>%<ant%>%<f%>:Mar PROPN_MARI ; 
+Mari%<np%>%<ant%>%<f%>:Mar PROPN_MARI ;
 Jaakko%<np%>%<ant%>%<m%>:Jaak PROPN_JAAKKO ;
 
 LEXICON Verbs
