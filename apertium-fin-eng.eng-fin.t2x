@@ -20,7 +20,7 @@
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
-      <attr-item tags="dat"/>
+      <attr-item tags="ine"/>
       <attr-item tags="gen"/>
       <attr-item tags="ins"/>
       <attr-item tags="loc"/>

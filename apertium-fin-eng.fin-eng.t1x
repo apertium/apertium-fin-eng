@@ -2,25 +2,46 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="adj">
+      <cat-item tags="adj.*"/>
+    </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
+    <def-cat n="vbolla">
+        <cat-item lemma="olla" tags="vblex.*"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
+    <def-attr n="a_adj">
+      <attr-item tags="adj"/>
+      <attr-item tags="adj.sint"/>
+    </def-attr>
+    <def-attr n="a_nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
+    <def-attr n="a_gen">
+      <attr-item tags="m"/>
+      <attr-item tags="nt"/>
+      <attr-item tags="f"/>
+    </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
-      <attr-item tags="dat"/>
+      <attr-item tags="abl"/>
       <attr-item tags="gen"/>
-      <attr-item tags="loc"/>
+      <attr-item tags="ine"/>
       <attr-item tags="ins"/>
       <attr-item tags="abl"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="gen"/>
     </def-attr>
 
   </section-def-attrs>
@@ -29,14 +50,67 @@
     <def-var n="current_verb"/>
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
+    <def-macro n="case-handler1" npar="1">
+          <choose>
+            <when>
+              <test><or> <!-- Nom/Acc and locative cases -->
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ela"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abl"/></equal></or></test>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit v=""/></let>
+            </when>
+          </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="REGLA: NOM">
+      <pattern>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="case-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="sl" part="a_cas"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_cas"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: adj">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="j" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_adj"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: SENT">
       <pattern>
@@ -55,6 +129,7 @@
         </out>
       </action>
     </rule>
+
 
   </section-rules>
 </transfer>

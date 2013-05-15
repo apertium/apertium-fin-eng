@@ -20,23 +20,62 @@
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
-      <attr-item tags="dat"/>
-      <attr-item tags="gen"/>
-      <attr-item tags="ins"/>
-      <attr-item tags="loc"/>
+      <attr-item tags="ine"/>
+      <attr-item tags="ela"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="ade"/>
       <attr-item tags="abl"/>
+      <attr-item tags="all"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
-    <def-var n="POST"/>
+    <def-var n="PREP"/>
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test1" npar="1">
+    <def-macro n="insert-prep1" npar="1">
       <let>
-        <var n="POST"/>
+        <var n="PREP"/>
         <lit v=""/>
       </let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="ine"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^in"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="ela"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^from"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="ill"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^to"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="ade"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^in"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="abl"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^from"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="all"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^to"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+      </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
@@ -45,7 +84,11 @@
         <pattern-item n="SN"/>
       </pattern>
       <action>
+        <call-macro n="insert-prep1">
+          <with-param pos="1"/>
+        </call-macro> 
         <out>
+          <var n="PREP"/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
@@ -56,4 +99,3 @@
     </rule>
   </section-rules>
 </interchunk>
-

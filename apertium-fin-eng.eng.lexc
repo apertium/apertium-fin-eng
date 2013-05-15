@@ -114,157 +114,161 @@ animal%<n%>:animal N ; ! ""
 
 LEXICON V
 %<actv%>%<pres%>:0 # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:s # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
 %<actv%>%<past%>:ed # ;
 %<ger%>:ing # ;
 
 LEXICON V_BE
 %<infv%>:be # ;
-%<actv%>%<pres%>%<sg%>%<p1%>:am # ;
-%<actv%>%<pres%>%<sg%>%<p2%>:are # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:is # ;
-%<actv%>%<pres%>%<pl%>%<p1%>:are # ;
-%<actv%>%<pres%>%<pl%>%<p2%>:are # ;
-%<actv%>%<pres%>%<pl%>%<p3%>:are # ;
-%<actv%>%<past%>:was # ;
-%<actv%>%<past%>:were # ;
+%<actv%>%<pres%>%<p1%>%<sg%>:am # ;
+%<actv%>%<pres%>%<p2%>%<sg%>:are # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:is # ;
+%<actv%>%<pres%>%<p1%>%<pl%>:are # ;
+%<actv%>%<pres%>%<p2%>%<pl%>:are # ;
+%<actv%>%<pres%>%<p3%>%<pl%>:are # ;
+%<actv%>%<past%>%<p1%>%<sg%>:was # ;
+%<actv%>%<past%>%<p3%>%<sg%>:was # ;
+%<actv%>%<past%>%<p2%>%<sg%>:were # ;
+%<actv%>%<past%>%<p1%>%<pl%>:was # ;
+%<actv%>%<past%>%<p3%>%<pl%>:was # ;
+%<actv%>%<past%>%<p2%>%<pl%>:were # ;
 %<ger%>:being # ;
 
 LEXICON V_HAVE
 %<actv%>%<pres%>:have # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:has # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:has # ;
 %<actv%>%<past%>:had # ;
 %<ger%>:having # ;
 
 LEXICON V_DO
 %<actv%>%<pres%>:do # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:does # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:does # ;
 %<actv%>%<past%>:did # ;
 %<ger%>:doing # ;
 
 LEXICON V_SEE
 %<actv%>%<pres%>:see # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:sees # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:sees # ;
 %<actv%>%<past%>:saw # ;
 %<ger%>:seeing # ;
 
 LEXICON V_TELL
 %<actv%>%<pres%>:tell # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:tells # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:tells # ;
 %<actv%>%<past%>:told # ;
 %<ger%>:telling # ;
 
 LEXICON V_SIT
 %<actv%>%<pres%>:sit # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:sits # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:sits # ;
 %<actv%>%<past%>:sat # ;
 %<ger%>:sitting # ;
 
 LEXICON V_KNOW
 %<actv%>%<pres%>:know # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:knows # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:knows # ;
 %<actv%>%<past%>:knew # ;
 %<ger%>:knowing # ;
 
 LEXICON V_SEARCH
 %<actv%>%<pres%>:0 # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:es # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:es # ;
 %<actv%>%<past%>:ed # ;
 %<ger%>:ing # ;
 
 LEXICON V_RUN
 %<actv%>%<pres%>:run # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:runs # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:runs # ;
 %<actv%>%<past%>:ran # ;
 %<ger%>:running # ;
 
 LEXICON V_REPLY
 %<actv%>%<pres%>:y # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:ies # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:ies # ;
 %<actv%>%<past%>:ied # ;
 %<ger%>:ying # ;
 
 LEXICON V_HIDE
 %<actv%>%<pres%>:hide # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:hides # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:hides # ;
 %<actv%>%<past%>:hid # ;
 %<ger%>:hiding # ;
 
 LEXICON V_HEAR
 %<actv%>%<pres%>:0 # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:s # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
 %<actv%>%<past%>:d # ;
 %<ger%>:ing # ;
 
 LEXICON V_FIND
 %<actv%>%<pres%>:find # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:finds # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:finds # ;
 %<actv%>%<past%>:found # ;
 %<ger%>:finding # ;
 
 LEXICON V_LOVE
 %<actv%>%<pres%>:e # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:es # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:es # ;
 %<actv%>%<past%>:ed # ;
 %<ger%>:ing # ;
 
 LEXICON V_GET
 %<actv%>%<pres%>:get # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:gets # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:gets # ;
 %<actv%>%<past%>:got # ;
 %<ger%>:getting # ;
 
 LEXICON V_EAT
 %<actv%>%<pres%>:eat # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:eats # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:eats # ;
 %<actv%>%<past%>:ate # ;
 %<ger%>:eatting # ;
 
 LEXICON V_DRINK
 %<actv%>%<pres%>:drink # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:drinks # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:drinks # ;
 %<actv%>%<past%>:drank # ;
 %<ger%>:drinking # ;
 
 LEXICON V_COME
 %<actv%>%<pres%>:come # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:comes # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:comes # ;
 %<actv%>%<past%>:came # ;
 %<ger%>:coming # ;
 
 LEXICON V_SIT
 %<actv%>%<pres%>:sit # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:sits # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:sits # ;
 %<actv%>%<past%>:sat # ;
 %<ger%>:sitting # ;
 
 LEXICON V_TRY
 %<actv%>%<pres%>:y # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:ies # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:ies # ;
 %<actv%>%<past%>:ied # ;
 %<ger%>:ying # ;
 
 LEXICON V_SPEAK
 %<actv%>%<pres%>:speak # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:speaks # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:speaks # ;
 %<actv%>%<past%>:spoke # ;
 %<ger%>:speaking # ;
 
 LEXICON V_SAY
 %<actv%>%<pres%>:y # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:ys # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:ys # ;
 %<actv%>%<past%>:id # ;
 %<ger%>:ying # ;
 
 LEXICON V_GO
 %<actv%>%<pres%>:go # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:goes # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:goes # ;
 %<actv%>%<past%>:went # ;
 %<ger%>:going # ;
 
 LEXICON V_FIND
 %<actv%>%<pres%>:find # ;
-%<actv%>%<pres%>%<sg%>%<p3%>:finds # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:finds # ;
 %<actv%>%<past%>:found # ;
 %<ger%>:finding # ;
 

@@ -130,14 +130,14 @@
     <e><p><l>ne<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
     <e><p><l>niinpä<s n="adv"/></l><r>so<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>fast<s n="adv"/></r></p></e>
-    <e><p><l>nukkua<s n="vblex"/></l><r>sleep<s n="vbser"/></r></p></e>
+    <e><p><l>nukkua<s n="vblex"/></l><r>sleep<s n="vblex"/></r></p></e>
     <e><p><l>nyt<s n="adv"/></l><r>now<s n="adv"/></r></p></e>
     <e><p><l>nähdä<s n="vblex"/></l><r>see<s n="vblex"/></r></p></e>
     <e><p><l>nähdä<s n="vblex"/></l><r>look<s n="vblex"/></r></p></e>
     <e><p><l>nämä<s n="prn"/></l><r>these<s n="prn"/></r></p></e>
-    <e><p><l>olla<s n="vblex"/></l><r>be<s n="vbser"/></r></p></e>
+    <e><p><l>olla<s n="vblex"/></l><r>be<s n="vblex"/></r></p></e>
     <e><p><l>osata<s n="vblex"/></l><r>can<s n="vblex"/></r></p></e>
-    <e><p><l>pieni<s n="adj"/></l><r>small<s n="adj"/></r></p></e>
+    <e><p><l>pieni<s n="adj"/></l><r>small<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>piilo<s n="n"/></l><r>hide<s n="n"/></r></p></e>
     <e><p><l>ikkuna<s n="n"/></l><r>window<s n="n"/></r></p></e>
     <e><p><l>pitää<s n="vblex"/></l><r>love<s n="vblex"/></r></p></e>
