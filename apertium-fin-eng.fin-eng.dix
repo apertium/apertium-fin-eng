@@ -42,7 +42,7 @@
     <e><p><l>aina<s n="adv"/></l><r>always<s n="adv"/></r></p></e>
     <e><p><l>ajatella<s n="vblex"/></l><r>think<s n="vblex"/></r></p></e>
     <e><p><l>alle<s n="pr"/></l><r>under<s n="pr"/></r></p></e>
-    <e><p><l>edessä<s n="pr"/></l><r>front<s n="pr"/></r></p></e>
+    <e><p><l>edessä<s n="pr"/></l><r>in<b/>front<s n="pr"/></r></p></e>
     <e><p><l>eilen<s n="adv"/></l><r>yesterday<s n="adv"/></r></p></e>
     <e><p><l>ei<s n="vblex"/></l><r>no<s n="vblex"/></r></p></e>
     <e><p><l>eläin<s n="n"/></l><r>animal<s n="n"/></r></p></e>
@@ -82,7 +82,7 @@
     <e><p><l>koskaan<s n="adv"/></l><r>never<s n="adv"/></r></p></e>
     <e><p><l>entä<s n="adv"/></l><r>what<b/>about<s n="adv"/></r></p></e>
     <e><p><l>ko<s n="qst"/></l><r></r></p></e>
-    <e><p><l>kovasti<s n="adv"/></l><r>hardly<s n="adv"/></r></p></e>
+    <e><p><l>kovasti<s n="adv"/></l><r>really<s n="adv"/></r></p></e>
     <e><p><l>kun<s n="cnjsub"/></l><r>when<s n="cnjsub"/></r></p></e>
     <e><p><l>kuulla<s n="vblex"/></l><r>hear<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>belong<s n="vblex"/></r></p></e>
@@ -121,7 +121,7 @@
     <e><p><l>mitä<s n="prn"/></l><r>what<s n="prn"/></r></p></e>
     <e><p><l>mitään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
     <e><p><l>molemmat<s n="prn"/></l><r>both<s n="prn"/></r></p></e>
-    <e><p><l>mutta<s n="cnjsub"/></l><r>but<s n="cnjsub"/></r></p></e>
+    <e><p><l>mutta<s n="cnjsub"/></l><r>but<s n="cnjcoo"/></r></p></e>
     <e><p><l>muu<s n="prn"/></l><r>another<s n="prn"/></r></p></e>
     <e><p><l>muu<s n="prn"/></l><r>other<s n="prn"/></r></p></e>
     <e><p><l>myös<s n="adv"/></l><r>also<s n="adv"/></r></p></e>

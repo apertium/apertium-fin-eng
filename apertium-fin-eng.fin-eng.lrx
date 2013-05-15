@@ -15,9 +15,11 @@
   <rule>
     <match lemma="ääni" tags="n.*"><select lemma="sound" tags="n.*"/></match>
   </rule>
+<!--
   <rule>
     <match lemma="ääni" tags="n.*"><select lemma="voice" tags="n.*"/></match>
   </rule>
+-->
   <rule>
     <match lemma="laskea" tags="vblex.*"><select lemma="count" tags="vblex.*"/></match>
   </rule>

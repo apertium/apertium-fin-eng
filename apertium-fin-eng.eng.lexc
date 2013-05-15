@@ -47,7 +47,7 @@ Multichar_Symbols
 
 %.
 %,
-
+%  
 
 %+
 
@@ -372,7 +372,7 @@ with%<pr%>:with # ; ! ""
 inside%<pr%>:inside # ; ! ""
 under%<pr%>:under # ; ! ""
 through%<pr%>:through # ; ! ""
-front%<pr%>:front # ; ! ""
+in% front%<pr%>:in% front # ; ! ""
 from%<pr%>:from # ; ! ""
 behind%<pr%>:behind # ; ! ""
 around%<pr%>:around # ; ! ""
@@ -389,6 +389,7 @@ why%<adv%>%<itg%>:why # ; ! ""
 not%<adv%>:not # ; ! ""
 also%<adv%>:also # ; ! ""
 very%<adv%>:very # ; ! ""
+really%<adv%>:really # ; ! ""
 then%<adv%>:then # ; ! ""
 no%<adv%>:no # ; ! ""
 yesterday%<adv%>:yesterday # ; ! ""
