@@ -1,5 +1,11 @@
 <rules>
   <rule>
-    <match lemma="dog" tags="n.*"><select lemma="koira" tags="n.*"/></match>
+    <match lemma="pitää" tags="v.*"><select lemma="hold" tags="v.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="pitää" tags="v.*">
+      <select lemma="love" tags="v.*"/>
+    </match>
+    <match tags="*.ela"/>
   </rule>
 </rules>

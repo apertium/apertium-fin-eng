@@ -5,7 +5,7 @@
     <sdef n="cnjcoo"  c="Союз"/>
     <sdef n="cnjsub"  c="toisenlainen Союз"/>
     <sdef n="prn"  c="Местоимение"/>
-    <sdef n="a"  c="Прилагательное"/>
+    <sdef n="adj"  c="Прилагательное"/>
     <sdef n="vblex"  c="Глагол"/>
     <sdef n="adv"  c="Наречие"/>
     <sdef n="sint"  c="-ø -er -est"/>
@@ -15,7 +15,7 @@
     <sdef n="pr"  c="Propositio"/>
     <sdef n="num"  c="Lukusana"/>
     <sdef n="np" c="Properatiivi"/>
-    <sdef n="vbaux" c="apuverbi"/>
+    <sdef n="vaux" c="apuverbi"/>
     <sdef n="qst" c="Kyselmä"/>
     <sdef n="guio" 	c=""/> 
     <sdef n="lpar" 	c=""/> 
@@ -48,33 +48,34 @@
     <e><p><l>eläin<s n="n"/></l><r>animal<s n="n"/></r></p></e>
     <e><p><l>erittäin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
     <e><p><l>etsiä<s n="vblex"/></l><r>search<s n="vblex"/></r></p></e>
-    <e><p><l>etsiä<s n="vblex"/></l><r>find<s n="vblex"/></r></p></e>
     <e><p><l>että<s n="cnjsub"/></l><r>that<s n="cnjsub"/></r></p></e>
     <e><p><l>haluta<s n="vblex"/></l><r>want<s n="vblex"/></r></p></e>
-    <e><p><l>hauska<s n="a"/></l><r>funny<s n="a"/></r></p></e>
+    <e><p><l>hauska<s n="adj"/></l><r>funny<s n="adj"/></r></p></e>
     <e><p><l>he<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
     <e><p><l>hitaasti<s n="adv"/></l><r>slowly<s n="adv"/></r></p></e>
     <e><p><l>huolellisesti<s n="adv"/></l><r>carefully<s n="adv"/></r></p></e>
     <e><p><l>hyvin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
-    <e><p><l>hyvä<s n="a"/></l><r>nice<s n="a"/></r></p></e>
+    <e><p><l>hyvä<s n="adj"/></l><r>nice<s n="adj"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>she<s n="prn"/></r></p></e>
-    <e><p><l>Ihminen<s n="n"/></l><r>human<s n="n"/></r></p></e>
-    <e><p><l>iloinen<s n="a"/></l><r>happy<s n="a"/></r></p></e>
-    <e><p><l>iso<s n="a"/></l><r>big<s n="a"/><s n="sint"/></r></p></e>
-    <e><p><l>iso<s n="a"/></l><r>great<s n="a"/><s n="sint"/></r></p></e>
-    <e><p><l>iso<s n="a"/></l><r>large<s n="a"/><s n="sint"/></r></p></e>
+    <e><p><l>ihminen<s n="n"/></l><r>human<s n="n"/></r></p></e>
+    <e><p><l>iloinen<s n="adj"/></l><r>happy<s n="adj"/></r></p></e>
+    <e><p><l>iso<s n="adj"/></l><r>big<s n="adj"/><s n="sint"/></r></p></e>
+    <e><p><l>iso<s n="adj"/></l><r>great<s n="adj"/><s n="sint"/></r></p></e>
+    <e><p><l>iso<s n="adj"/></l><r>large<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>istua<s n="vblex"/></l><r>sit<s n="vblex"/></r></p></e>
     <e><p><l>Jaakko<s n="np"/></l><r>Jack<s n="np"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>and<s n="cnjcoo"/></r></p></e>
     <e><p><l>jotain<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
     <e><p><l>juoda<s n="vblex"/></l><r>drink<s n="vblex"/></r></p></e>
     <e><p><l>juosta<s n="vblex"/></l><r>run<s n="vblex"/></r></p></e>
+    <e><p><l>kaksi<s n="num"/></l><r>two<s n="num"/></r></p></e>
     <e><p><l>kahden<s n="adv"/></l><r>together<s n="adv"/></r></p></e>
     <e><p><l>kaikkialle<s n="adv"/></l><r>everywhere<s n="adv"/></r></p></e>
     <e><p><l>kanssa<s n="adv"/></l><r>with<s n="adv"/></r></p></e>
     <e><p><l>katsoa<s n="vblex"/></l><r>look<s n="vblex"/></r></p></e>
+    <e><p><l>katsoa<s n="vblex"/></l><r>watch<s n="vblex"/></r></p></e>
     <e><p><l>kertoa<s n="vblex"/></l><r>tell<s n="vblex"/></r></p></e>
     <e><p><l>kissa<s n="n"/></l><r>cat<s n="n"/></r></p></e>
     <e><p><l>koira<s n="n"/></l><r>dog<s n="n"/></r></p></e>
@@ -89,23 +90,24 @@
     <e><p><l>kuulua<s n="vblex"/></l><r>be<g><b/>said</g><s n="vblex"/></r></p></e>
     <e><p><l>kuunnella<s n="vblex"/></l><r>listen<s n="vblex"/></r></p></e>
     <e><p><l>kuusi<s n="num"/></l><r>six<s n="num"/></r></p></e>
-    <e><p><l>kylmä<s n="a"/></l><r>cold<s n="a"/></r></p></e>
+    <e><p><l>kylmä<s n="adj"/></l><r>cold<s n="adj"/></r></p></e>
     <e><p><l>kysymys<s n="n"/></l><r>question<s n="n"/></r></p></e>
     <e><p><l>kysyä<s n="vblex"/></l><r>ask<s n="vblex"/></r></p></e>
     <e><p><l>käsi<s n="n"/></l><r>hand<s n="n"/></r></p></e>
     <e><p><l>kävellä<s n="vblex"/></l><r>walk<s n="vblex"/></r></p></e>
     <e><p><l>lapsi<s n="n"/></l><r>child<s n="n"/></r></p></e>
     <e><p><l>laskea<s n="vblex"/></l><r>count<s n="vblex"/></r></p></e>
+    <e><p><l>laskea<s n="vblex"/></l><r>slide<b/>down<s n="vblex"/></r></p></e>
     <e><p><l>laskeminen<s n="n"/></l><r>count<s n="vblex"/></r></p></e>
     <e><p><l>leikkiminen<s n="n"/></l><r>play<s n="vblex"/></r></p></e>
     <e><p><l>leikki<s n="n"/></l><r>play<s n="n"/></r></p></e>
     <e><p><l>leikkiä<s n="vblex"/></l><r>play<s n="vblex"/></r></p></e>
     <e><p><l>lintu<s n="n"/></l><r>bird<s n="n"/></r></p></e>
-    <e><p><l>lopettanut<s n="a"/></l><r>finished<s n="a"/></r></p></e>
+    <e><p><l>lopettanut<s n="adj"/></l><r>finished<s n="adj"/></r></p></e>
     <e><p><l>luokse<s n="pr"/></l><r>toward<s n="pr"/></r></p></e>
     <e><p><l>lähellä<s n="pr"/></l><r>close<s n="pr"/></r></p></e>
     <e><p><l>lähemmäksi<s n="pr"/></l><r>closer<s n="pr"/></r></p></e>
-    <e><p><l>lämmin<s n="a"/></l><r>warm<s n="a"/></r></p></e>
+    <e><p><l>lämmin<s n="adj"/></l><r>warm<s n="adj"/></r></p></e>
     <e><p><l>läpi<s n="pr"/></l><r>through<s n="pr"/></r></p></e>
     <e><p><l>löytää<s n="vblex"/></l><r>find<s n="vblex"/></r></p></e>
     <e><p><l>Mari<s n="np"/></l><r>Mary<s n="np"/></r></p></e>
@@ -121,7 +123,9 @@
     <e><p><l>molemmat<s n="prn"/></l><r>both<s n="prn"/></r></p></e>
     <e><p><l>mutta<s n="cnjsub"/></l><r>but<s n="cnjsub"/></r></p></e>
     <e><p><l>muu<s n="prn"/></l><r>another<s n="prn"/></r></p></e>
+    <e><p><l>muu<s n="prn"/></l><r>other<s n="prn"/></r></p></e>
     <e><p><l>myös<s n="adv"/></l><r>also<s n="adv"/></r></p></e>
+    <e><p><l>myös<s n="adv"/></l><r>too<s n="adv"/></r></p></e>
     <e><p><l>nauraa<s n="vblex"/></l><r>laugh<s n="vblex"/></r></p></e>
     <e><p><l>ne<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
     <e><p><l>niinpä<s n="adv"/></l><r>so<s n="adv"/></r></p></e>
@@ -129,13 +133,16 @@
     <e><p><l>nukkua<s n="vblex"/></l><r>sleep<s n="vbser"/></r></p></e>
     <e><p><l>nyt<s n="adv"/></l><r>now<s n="adv"/></r></p></e>
     <e><p><l>nähdä<s n="vblex"/></l><r>see<s n="vblex"/></r></p></e>
+    <e><p><l>nähdä<s n="vblex"/></l><r>look<s n="vblex"/></r></p></e>
     <e><p><l>nämä<s n="prn"/></l><r>these<s n="prn"/></r></p></e>
     <e><p><l>olla<s n="vblex"/></l><r>be<s n="vbser"/></r></p></e>
     <e><p><l>osata<s n="vblex"/></l><r>can<s n="vblex"/></r></p></e>
-    <e><p><l>pieni<s n="a"/></l><r>small<s n="a"/></r></p></e>
+    <e><p><l>pieni<s n="adj"/></l><r>small<s n="adj"/></r></p></e>
     <e><p><l>piilo<s n="n"/></l><r>hide<s n="n"/></r></p></e>
     <e><p><l>ikkuna<s n="n"/></l><r>window<s n="n"/></r></p></e>
     <e><p><l>pitää<s n="vblex"/></l><r>love<s n="vblex"/></r></p></e>
+    <e><p><l>pitää<s n="vblex"/></l><r>hold<s n="vblex"/></r></p></e>
+    <e><p><l>pitää<s n="vaux"/></l><r>must<s n="vblex"/></r></p></e>
     <e><p><l>poika<s n="n"/></l><r>boy<s n="n"/></r></p></e>
     <e><p><l>puhua<s n="vblex"/></l><r>talk<s n="vblex"/></r></p></e>
     <e><p><l>puu<s n="n"/></l><r>tree<s n="n"/></r></p></e>
@@ -145,6 +152,7 @@
     <e><p><l>pää<s n="n"/></l><r>head<s n="n"/></r></p></e>
     <e><p><l>pöytä<s n="n"/></l><r>table<s n="n"/></r></p></e>
     <e><p><l>saada<s n="vblex"/></l><r>can<s n="vblex"/></r></p></e>
+    <e><p><l>saada<s n="vblex"/></l><r>get<s n="vblex"/></r></p></e>
     <e><p><l>sanoa<s n="vblex"/></l><r>say<s n="vblex"/></r></p></e>
     <e><p><l>se<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
     <e><p><l>siellä<s n="adv"/></l><r>there<s n="adv"/></r></p></e>
@@ -161,7 +169,7 @@
     <e><p><l>takaa<s n="pr"/></l><r>behind<s n="pr"/></r></p></e>
     <e><p><l>talo<s n="n"/></l><r>house<s n="n"/></r></p></e>
     <e><p><l>tehdä<s n="vblex"/></l><r>do<s n="vblex"/></r></p></e>
-    <e><p><l>tietenkään<s n="adv"/></l><r>obvioysly<s n="adv"/></r></p></e>
+    <e><p><l>tietenkään<s n="adv"/></l><r>obviously<s n="adv"/></r></p></e>
     <e><p><l>tietää<s n="vblex"/></l><r>know<s n="vblex"/></r></p></e>
     <e><p><l>todennäköisesti<s n="adv"/></l><r>probably<s n="adv"/></r></p></e>
     <e><p><l>todennäköisesti<s n="adv"/></l><r>likely<s n="adv"/></r></p></e>
@@ -169,16 +177,16 @@
     <e><p><l>tuoli<s n="n"/></l><r>chair<s n="n"/></r></p></e>
     <e><p><l>tyttö<s n="n"/></l><r>girl<s n="n"/></r></p></e>
     <e><p><l>tänään<s n="adv"/></l><r>today<s n="adv"/></r></p></e>
-    <e><p><l>täytyä<s n="vbaux"/></l><r>need<s n="vbaux"/></r></p></e>
+    <e><p><l>täytyä<s n="vaux"/></l><r>need<s n="vaux"/></r></p></e>
     <e><p><l>ulkona<s n="adv"/></l><r>outside<s n="adv"/></r></p></e>
     <e><p><l>ulos<s n="pr"/></l><r>out<s n="pr"/></r></p></e>
-    <e><p><l>Vaikka<s n="cnjsub"/></l><r>when<s n="cnjsub"/></r></p></e>
-    <e><p><l>vanha<s n="a"/></l><r>old<s n="a"/></r></p></e>
+    <e><p><l>vaikka<s n="cnjsub"/></l><r>when<s n="cnjsub"/></r></p></e>
+    <e><p><l>vanha<s n="adj"/></l><r>old<s n="adj"/></r></p></e>
     <e><p><l>vastata<s n="vblex"/></l><r>answer<s n="vblex"/></r></p></e>
     <e><p><l>vastaus<s n="n"/></l><r>answer<s n="n"/></r></p></e>
     <e><p><l>vesi<s n="n"/></l><r>water<s n="n"/></r></p></e>
     <e><p><l>viisi<s n="num"/></l><r>five<s n="num"/></r></p></e>
-    <e><p><l>voida<s n="vbaux"/></l><r>can<s n="vbaux"/></r></p></e>
+    <e><p><l>voida<s n="vaux"/></l><r>can<s n="vaux"/></r></p></e>
     <e><p><l>vuosi<s n="n"/></l><r>year<s n="n"/></r></p></e>
     <e><p><l>vähän<s n="pr"/></l><r>little<s n="pr"/></r></p></e>
     <e><p><l>yhdessä<s n="adv"/></l><r>together<s n="adv"/></r></p></e>

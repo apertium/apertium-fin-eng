@@ -1006,6 +1006,19 @@ LEXICON PRON_NUO
 0:o N_PLURALS_WEAK ;
 0:o N_PLURALS_STRONG ;
 
+LEXICON NUM_YKSI
+
+%<sg%>%<nom%>:ksi  N_POSSES? ;
+%<sg%>%<par%>:ht%{A%} N_POSSES? ;
+0:hde N_SINGULARS_WEAK ;
+0:hte N_SINGULARS_STRONG ;
+0:hte N_SINGULAR_ILLATIVE_EN ;
+0:ks N_PLURALS_WEAK ;
+0:ks N_PLURALS_STRONG ;
+0:ks N_PLURAL_PARTITIVE_IA ;
+0:ks N_PLURAL_GENITIVE_IEN ;
+0:ks N_PLURAL_ILLATIVE_IIN ;
+
 LEXICON NUM_KUUSI
 
 %<sg%>%<nom%>:si  N_POSSES? ;
@@ -1188,6 +1201,8 @@ niinpä%<adv%>:niinpä # ;
 yhä%<adv%>:yhä # ;
 
 LEXICON Numerals
+yksi%<num%>:y NUM_YKSI ;
+kaksi%<num%>:ka NUM_YKSI ;
 viisi%<num%>:vii NUM_KUUSI ;
 kuusi%<num%>:kuu NUM_KUUSI ;
 
