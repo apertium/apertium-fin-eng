@@ -187,6 +187,9 @@
     <e><p><l>yrittää<s n="vblex"/></l><r>try<s n="vblex"/></r></p></e>
     <e><p><l>äiti<s n="n"/></l><r>mother<s n="n"/></r></p></e>
     <e><p><l>ääni<s n="n"/></l><r>voice<s n="n"/></r></p></e>
+    <e><p><l>ääni<s n="n"/></l><r>sound<s n="n"/></r></p></e>
+    <e><p><l>ääni<s n="n"/></l><r>vote<s n="n"/></r></p></e>
+
     <!-- Раздел: Имя Существительное -->
 
 <e>       <p><l>,<s n="cm"/></l>                  <r>,<s n="cm"/></r></p></e>

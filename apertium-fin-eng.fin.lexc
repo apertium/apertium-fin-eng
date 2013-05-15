@@ -15,6 +15,13 @@ Multichar_Symbols
 %<sg%> ! Singular	
 %<pl%> ! Plural
 
+%<ant%> ! Anthroponym
+%<pers%> ! Personal
+%<mf%> ! Masc/Fem
+%<m%> ! Masculin
+%<f%> ! Feminin
+%<nt%> ! Neuter
+
 %<nom%>	 !Nominative	
 %<acc%>	 !Accusative	
 %<par%>	 !Partitive	
@@ -1051,8 +1058,8 @@ vesi%<n%>:ve N_KÄSI ; ! "water"
 
 LEXICON Propers
 
-Mari%<np%>:Mar PROPN_MARI ; 
-Jaakko%<np%>:Jaak PROPN_JAAKKO ;
+Mari%<np%>%<ant%>%<f%>:Mar PROPN_MARI ; 
+Jaakko%<np%>%<ant%>%<m%>:Jaak PROPN_JAAKKO ;
 
 LEXICON Verbs
 
@@ -1089,34 +1096,34 @@ tehdä%<vblex%>:te V_NÄHDÄ ; ! "do"
 tietää%<vblex%>:tie V_TIETÄÄ ; ! "know"
 kuulla%<vblex%>:kuul V_TULLA ; ! "come"
 tulla%<vblex%>:tul V_TULLA ; ! "come"
-täytyä%<vbaux%>:täy V_TÄYTYÄ ; ! "must"
+täytyä%<vaux%>:täy V_TÄYTYÄ ; ! "must"
 vastata%<vblex%>:vasta V_HALUTA ; ! "answer"
-voida%<vbaux%>:vo V_VOIDA ; ! "can"
+voida%<vaux%>:vo V_VOIDA ; ! "can"
 yrittää%<vblex%>:yrit V_LOPETTAA ; ! "try"
 
 LEXICON Adjectives
 
-hauska%<a%>:hausk A_VANHA ; ! "fun"
-hyvä%<a%>:0 A_HYVÄ ; ! "good"
-iloinen%<a%>:iloi A_ILOINEN ; ! "happy"
-iso%<a%>:iso A_ISO ; ! "big"
-kylmä%<a%>:kylm A_VANHA ; ! "cold"
-lopettanut%<a%>:lopettan A_LOPETTANUT ; ! "finished"
-lämmin%<a%>:läm A_LÄMMIN ; ! "warm"
-pieni%<a%>:pien A_PIENI ; ! "small"
-vanha%<a%>:vanh A_VANHA ; ! "0ld"
+hauska%<adj%>:hausk A_VANHA ; ! "fun"
+hyvä%<adj%>:0 A_HYVÄ ; ! "good"
+iloinen%<adj%>:iloi A_ILOINEN ; ! "happy"
+iso%<adj%>:iso A_ISO ; ! "big"
+kylmä%<adj%>:kylm A_VANHA ; ! "cold"
+lopettanut%<adj%>:lopettan A_LOPETTANUT ; ! "finished"
+lämmin%<adj%>:läm A_LÄMMIN ; ! "warm"
+pieni%<adj%>:pien A_PIENI ; ! "small"
+vanha%<adj%>:vanh A_VANHA ; ! "0ld"
 
 LEXICON Pron
 
-minä%<prn%>:min PRON_MINÄ ;
-sinä%<prn%>:sin PRON_MINÄ ; ! "you"
-hän%<prn%>:hän PRON_HÄN ; ! "he"
-me%<prn%>:me PRON_ME ;
-te%<prn%>:te PRON_ME ;
-he%<prn%>:he PRON_ME ;
-se%<prn%>:s PRON_SE ; ! "it"
+minä%<prn%>%<pers%>%<p1%>:min PRON_MINÄ ;
+sinä%<prn%>%<pers%>%<p2%>:sin PRON_MINÄ ; ! "you"
+hän%<prn%>%<pers%>%<p3%>:hän PRON_HÄN ; ! "he"
+me%<prn%>%<pers%>%<p1%>:me PRON_ME ;
+te%<prn%>%<pers%>%<p2%>:te PRON_ME ;
+he%<prn%>%<pers%>%<p3%>:he PRON_ME ;
+se%<prn%>%<pers%>%<p3%>%<nt%>:s PRON_SE ; ! "it"
 ne%<prn%>:n PRON_NE ;
-nämä%<prn%>:nä PRON_NÄMÄ ;
+nämä%<prn%>%<dem%>:nä PRON_NÄMÄ ;
 nuo%<prn%>:n PRON_NUO ;
 tämä%<prn%>:tä PRON_TÄMÄ ;
 tuo%<prn%>:t PRON_TUO ;
