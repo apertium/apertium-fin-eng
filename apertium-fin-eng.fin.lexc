@@ -87,7 +87,7 @@ LEXICON Root
 0   Conjunctions    ;
 0   Propers ;
 0   Numerals ;
-0   Punctuation;
+0   Punctuation ;
 
 LEXICON PROPN_MARI
 
@@ -717,14 +717,14 @@ LEXICON V_ISTUA
 
 LEXICON V_HALUTA
 
-%<inf%>:ta # ;
-%<actv%>%<pres%>:a V_PRESENT_WEAK ;
-%<actv%>%<pres%>:a V_PRESENT_STRONG ;
+%<inf%>:t%{A%}# ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_STRONG ;
 %<actv%>%<pres%>:0 V_PRESENT_SG3_A ;
 %<pasv%>%<pres%>:0 V_PASSIVE_T ;
 %<actv%>%<past%>:s V_PAST_WEAK ;
 %<actv%>%<past%>:s V_PAST_STRONG ;
-%<actv%>%<conneg%>:a V_CLITS? ;
+%<actv%>%<conneg%>:%{A%} V_CLITS? ;
 
 LEXICON V_ETSIÄ
 
@@ -784,6 +784,8 @@ LEXICON V_PRESENT_WEAK
 %<p2%>%<sg%>:t   V_CLITS? ;
 %<p1%>%<pl%>:mme V_CLITS? ;
 %<p2%>%<pl%>:tte V_CLITS? ;
+%<actv%>%<pres%>%<conneg%>:0 V_CLITS? ;
+%<actv%>%<imp%>%<p2%>%<sg%>:0 V_CLITS? ;
 
 LEXICON V_PRESENT_STRONG
 
@@ -1076,6 +1078,7 @@ kertoa%<vblex%>:ker V_KERTOA ; ! "tell"
 kuulua%<vblex%>:kuulu V_ISTUA ; ! "belong hear"
 kuunnella%<vblex%>:kuun V_AJATELLA ; ! "listen"
 kävellä%<vblex%>:kävel V_KÄVELLÄ ; ! "walk"
+kylmätä%<vblex%>:kylmä V_HALUTA ; ! "cold"
 kysyä%<vblex%>:kysy V_ISTUA ; ! "aks"
 laskea%<vblex%>:lask V_LASKEA ; ! "count"
 leikkiä%<vblex%>:leik V_LEIKKIÄ ; ! "play"
