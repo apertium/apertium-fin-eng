@@ -1,5 +1,38 @@
 <rules>
   <rule>
-    <match lemma="koira" tags="n.*"><select lemma="dog" tags="n.*"/></match>
+    <match lemma="pitää" tags="vblex.*"><select lemma="hold" tags="vblex.*"/></match>
   </rule>
+  <rule>
+    <match lemma="pitää" tags="vblex.*">
+      <select lemma="love" tags="vblex.*"/>
+    </match>
+    <match/>
+    <match tags="*.*.ela"/>
+  </rule>
+  <rule>
+    <match lemma="ääni" tags="n.*.ins"><select lemma="vote" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="ääni" tags="n.*"><select lemma="sound" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="ääni" tags="n.*"><select lemma="voice" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="laskea" tags="vblex.*"><select lemma="count" tags="vblex.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="laskea" tags="vblex.*">
+      <select lemma="slide" tags="vblex.*"/>
+    </match>
+    <match lemma="mäki" tags="n.*"/>
+  </rule>
+  <rule>
+    <match lemma="laskea" tags="vblex.*">
+      <select lemma="decrease" tags="vblex.*"/>
+    </match>
+    <match/>
+    <match tags="*.*.ill"/>
+  </rule>
+
 </rules>
