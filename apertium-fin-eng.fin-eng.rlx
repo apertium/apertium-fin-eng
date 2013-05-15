@@ -12,6 +12,8 @@ LIST PRES-ADV = "nyt" ;
 LIST NON-PAST-ADV = "huomenna" ;
 LIST V-FIN = past pres ;
 LIST PAST = past ;
+LIST NOM = nom ; 
+LIST GEN = gen ;
 LIST PRES = pres ;
 LIST SENT = sent ;
 LIST CONNEG = conneg ;
@@ -22,6 +24,8 @@ LIST PL = pl ;
 LIST P3 = p3 ;
 LIST IMP = imp ;
 LIST EXCLAIM = "!" ;
+LIST NES = "pitää" "täytyä" "täytyy" "tulla" "pakko" ; 
+LIST NBR = sg pl ;
 
 SET CLB = V-FIN OR SENT ;
 
@@ -43,3 +47,6 @@ SELECT P3 IF (0 V) (-1* P3 BARRIER CLB) ;
 
 SELECT IMP IF (1* EXCLAIM) ;
  
+SELECT NOM IF (NOT -1* NOM BARRIER CLB) (NOT 1 NES) (0C NOM OR GEN);
+
+SELECT $$NBR IF (0C N + NOM) ((1* V-FIN + $$NBR BARRIER CLB) OR (-1* V-FIN + $$NBR BARRIER CLB));
