@@ -948,48 +948,48 @@ LEXICON A_LÄMMIN
 
 LEXICON PRON_MINÄ
 
-%<sg%>%<nom%>:ä  N_POSSES? ;
-%<sg%>%<acc%>:ut N_POSSES? ;
+%<sg%>%<nom%>:ä  N_CLITS? ;
+%<sg%>%<acc%>:ut N_CLITS? ;
 0:u N_SINGULARS_WEAK ;
 0:u N_SINGULARS_STRONG ;
 0:u N_SINGULAR_ILLATIVE_EN ;
 
 LEXICON PRON_HÄN
 
-%<sg%>%<nom%>:0  N_POSSES? ;
-%<sg%>%<acc%>:et N_POSSES? ;
+%<sg%>%<nom%>:0  N_CLITS? ;
+%<sg%>%<acc%>:et N_CLITS? ;
 0:e N_SINGULARS_WEAK ;
 0:e N_SINGULARS_STRONG ;
 0:e N_SINGULAR_ILLATIVE_EN ;
 
 LEXICON PRON_ME
 
-%<pl%>%<nom%>:0  N_POSSES? ;
+%<pl%>%<nom%>:0  N_CLITS? ;
 0 N_PLURALS_WEAK ;
 0 N_PLURALS_STRONG ;
 0 N_PLURAL_PARTITIVE_ITA ;
 0 N_PLURAL_ILLATIVE_IHIN ;
-%<pl%>%<gen%>:id%{A%}n  N_POSSES? ;
-%<pl%>%<acc%>:id%{A%}t  N_POSSES? ;
+%<pl%>%<gen%>:id%{A%}n  N_CLITS? ;
+%<pl%>%<acc%>:id%{A%}t  N_CLITS? ;
 
 LEXICON PRON_TÄMÄ
 
-%<sg%>%<nom%>:mä N_POSSES? ;
+%<sg%>%<nom%>:mä N_CLITS? ;
 0 N_SINGULARS_WEAK ;
 0 N_SINGULARS_STRONG ;
 
 LEXICON PRON_NÄMÄ
 
-%<sg%>%<nom%>:mä N_POSSES? ;
+%<sg%>%<nom%>:mä N_CLITS? ;
 0 N_PLURALS_WEAK ;
 0 N_PLURALS_STRONG ;
-%<pl%>%<gen%>:iden N_POSSES? ;
+%<pl%>%<gen%>:iden N_CLITS? ;
 
 LEXICON PRON_SE
 
-%<sg%>%<nom%>:e N_POSSES? ;
-%<sg%>%<gen%>:en N_POSSES? ;
-%<sg%>%<par%>:itä N_POSSES? ;
+%<sg%>%<nom%>:e N_CLITS? ;
+%<sg%>%<gen%>:en N_CLITS? ;
+%<sg%>%<par%>:itä N_CLITS? ;
 
 
 LEXICON PRON_NE
