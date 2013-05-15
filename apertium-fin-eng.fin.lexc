@@ -512,10 +512,11 @@ LEXICON V_NEG
 ei%<vblex%>%<neg%>%<p1%>%<sg%>:en # ;
 ei%<vblex%>%<neg%>%<p2%>%<sg%>:et # ;
 ei%<vblex%>%<neg%>%<p3%>%<sg%>:ei # ;
+ja%<cnjcoo%>+ei%<vblex%>%<neg%>%<p3%>%<sg%>:eikä # ;
 ei%<vblex%>%<neg%>%<p1%>%<pl%>:emme # ;
 ei%<vblex%>%<neg%>%<p2%>%<pl%>:ette # ;
 ei%<vblex%>%<neg%>%<p3%>%<pl%>:eivät # ;
-
+ei%<vblex%>%<neg%>%<p3%>%<sg%>:älä # ;
 LEXICON V_VOIDA
 
 %<inf%>:ida # ;
@@ -950,6 +951,7 @@ LEXICON PRON_MINÄ
 
 %<sg%>%<nom%>:ä  N_CLITS? ;
 %<sg%>%<acc%>:ut N_CLITS? ;
+%<sg%>%<acc%>:ua N_CLITS? ;
 0:u N_SINGULARS_WEAK ;
 0:u N_SINGULARS_STRONG ;
 0:u N_SINGULAR_ILLATIVE_EN ;
@@ -994,6 +996,7 @@ LEXICON PRON_SE
 
 LEXICON PRON_NE
 
+%<sg%>%<nom%>:e N_CLITS? ;
 0:i N_PLURALS_WEAK ;
 0:i N_PLURALS_STRONG ;
 
@@ -1092,6 +1095,9 @@ laskea%<vblex%>:lask V_LASKEA ; ! "count"
 leikkiä%<vblex%>:leik V_LEIKKIÄ ; ! "play"
 lopettaa%<vblex%>:lopet V_LOPETTAA ; ! "finish"
 löytää%<vblex%>:löy V_LÖYTÄÄ ; ! "find"
+lähteä%<vblex%>:lä V_LäHTEÄ ; ! "go"
+huomata%<vblex%>:huoma V_HALUTA ; ! "notice"
+tuoda%<vblex%>:t V_JUODA ; ! "bring"
 mennä%<vblex%>:men V_MENNÄ ; ! "go"
 nukkua%<vblex%>:nuk V_NUKKUA ; ! "sleep"
 nauraa%<vblex%>:naur V_NAURAA ; ! "laugh"
@@ -1159,22 +1165,27 @@ vaikka%<cnjsub%>:vaikka # ;
 
 LEXICON Adpositions
 
+alta%<pr%>:alta # ; ! "under"
 alle%<pr%>:alle # ; ! "under"
+alas%<pr%>:alas # ; ! ""
 edessä%<pr%>:edessä # ; ! "front"
 takaa%<pr%>:takaa # ; ! "behind"
 sisällä%<pr%>:sisällä # ; ! "inside"
 lähemmäksi%<pr%>:lähemmäksi # ; ! "closer"
 lähellä%<pr%>:lähellä # ; ! "close"
-luokse%<pr%>:luokse # ; ! "towards"
+luokse%<pr%>:luokse N_CLITS? ; ! "towards"
 ulos%<pr%>:ulos # ; ! "out"
 läpi%<pr%>:läpi # ; ! "through"
 vähän%<pr%>:vähän # ;
+pois%<pr%>:pois # ; ! "away"
 
 LEXICON Adverbs
 
 
 aina%<adv%>:aina # ; ! ""
 eilen%<adv%>:eilen # ; ! ""
+ensin%<adv%>:ensin # ; ! ""
+huomenna%<adv%>:huomenna # ; ! ""
 entä%<adv%>:entä # ; ! ""
 erittäin%<adv%>:erittäin # ; ! "very"
 hitaasti%<adv%>:hitaasti # ; ! ""
@@ -1205,6 +1216,7 @@ yhä%<adv%>:yhä # ;
 LEXICON Numerals
 yksi%<num%>:y NUM_YKSI ;
 kaksi%<num%>:ka NUM_YKSI ;
+neljä%<num%>:nelj NUM_NELJÄ ;
 viisi%<num%>:vii NUM_KUUSI ;
 kuusi%<num%>:kuu NUM_KUUSI ;
 
@@ -1233,6 +1245,42 @@ kuusi%<num%>:kuu NUM_KUUSI ;
 23%<num%>%<sg%>%<nom%>:23 # ;
 24%<num%>%<sg%>%<nom%>:24 # ;
 25%<num%>%<sg%>%<nom%>:25 # ;
+26%<num%>%<sg%>%<nom%>:26 # ;
+27%<num%>%<sg%>%<nom%>:27 # ;
+28%<num%>%<sg%>%<nom%>:28 # ;
+29%<num%>%<sg%>%<nom%>:29 # ;
+3%0%<num%>%<sg%>%<nom%>:3%0 # ;
+31%<num%>%<sg%>%<nom%>:31 # ;
+32%<num%>%<sg%>%<nom%>:32 # ;
+33%<num%>%<sg%>%<nom%>:33 # ;
+34%<num%>%<sg%>%<nom%>:34 # ;
+35%<num%>%<sg%>%<nom%>:35 # ;
+36%<num%>%<sg%>%<nom%>:36 # ;
+37%<num%>%<sg%>%<nom%>:37 # ;
+38%<num%>%<sg%>%<nom%>:38 # ;
+39%<num%>%<sg%>%<nom%>:39 # ;
+4%0%<num%>%<sg%>%<nom%>:4%0 # ;
+41%<num%>%<sg%>%<nom%>:41 # ;
+42%<num%>%<sg%>%<nom%>:42 # ;
+43%<num%>%<sg%>%<nom%>:43 # ;
+44%<num%>%<sg%>%<nom%>:44 # ;
+45%<num%>%<sg%>%<nom%>:45 # ;
+46%<num%>%<sg%>%<nom%>:46 # ;
+47%<num%>%<sg%>%<nom%>:47 # ;
+48%<num%>%<sg%>%<nom%>:48 # ;
+49%<num%>%<sg%>%<nom%>:49 # ;
+5%0%<num%>%<sg%>%<nom%>:5%0 # ;
+51%<num%>%<sg%>%<nom%>:51 # ;
+52%<num%>%<sg%>%<nom%>:52 # ;
+53%<num%>%<sg%>%<nom%>:53 # ;
+54%<num%>%<sg%>%<nom%>:54 # ;
+55%<num%>%<sg%>%<nom%>:55 # ;
+56%<num%>%<sg%>%<nom%>:56 # ;
+57%<num%>%<sg%>%<nom%>:57 # ;
+58%<num%>%<sg%>%<nom%>:58 # ;
+59%<num%>%<sg%>%<nom%>:59 # ;
+6%0%<num%>%<sg%>%<nom%>:6%0 # ;
+61%<num%>%<sg%>%<nom%>:61 # ;
 
 !===================!
  LEXICON Punctuation
@@ -1266,3 +1314,263 @@ kuusi%<num%>:kuu NUM_KUUSI ;
 %/%<sent%>:%/ # ;
 
 
+LEXICON Missings
+Kettu%<%>:Kettu # ;
+kettu%<%>:kettu # ;
+ketun%<%>:ketun # ;
+tien%<%>:tien # ;
+siili%<%>:siili # ;
+pentua%<%>:pentua # ;
+otti%<%>:otti # ;
+nousi%<%>:nousi # ;
+maahan%<%>:maahan # ;
+kiven%<%>:kiven # ;
+jalat%<%>:jalat # ;
+jalan%<%>:jalan # ;
+Hiiri%<%>:Hiiri # ;
+yö%<%>:yö # ;
+Ymmärsin%<%>:Ymmärsin # ;
+voita%<%>:voita # ;
+viskasi%<%>:viskasi # ;
+vilkaisi%<%>:vilkaisi # ;
+vieressä%<%>:vieressä # ;
+viereensä%<%>:viereensä # ;
+vieraita%<%>:vieraita # ;
+vienolla%<%>:vienolla # ;
+verineni%<%>:verineni # ;
+verille%<%>:verille # ;
+vei%<%>:vei # ;
+vatsan%<%>:vatsan # ;
+vasta%<%>:vasta # ;
+varrella%<%>:varrella # ;
+varpaat%<%>:varpaat # ;
+variksen%<%>:variksen # ;
+varasi%<%>:varasi # ;
+valkoinen%<%>:valkoinen # ;
+vain%<%>:vain # ;
+vaahteran%<%>:vaahteran # ;
+uutta%<%>:uutta # ;
+ui%<%>:ui # ;
+täältä%<%>:täältä # ;
+täyden%<%>:täyden # ;
+tähtiä%<%>:tähtiä # ;
+tuomisia%<%>:tuomisia # ;
+tuo%<%>:tuo # ;
+Tulisinhan%<%>:Tulisinhan # ;
+toi%<%>:toi # ;
+tietä%<%>:tietä # ;
+Tien%<%>:Tien # ;
+teroitti%<%>:teroitti # ;
+tammien%<%>:tammien # ;
+talveksi%<%>:talveksi # ;
+takana%<%>:takana # ;
+tajuntansa%<%>:tajuntansa # ;
+taivas%<%>:taivas # ;
+Taivaalle%<%>:Taivaalle # ;
+syötti%<%>:syötti # ;
+syönyt%<%>:syönyt # ;
+syttyi%<%>:syttyi # ;
+syrjään%<%>:syrjään # ;
+syntynyt%<%>:syntynyt # ;
+syntyi%<%>:syntyi # ;
+sydämessään%<%>:sydämessään # ;
+suuhunsa%<%>:suuhunsa # ;
+suolineni%<%>:suolineni # ;
+suipot%<%>:suipot # ;
+sinne%<%>:sinne # ;
+sininen%<%>:sininen # ;
+siltä%<%>:siltä # ;
+sille%<%>:sille # ;
+sieniä%<%>:sieniä # ;
+sienet%<%>:sienet # ;
+Sieltä%<%>:Sieltä # ;
+seuraavat%<%>:seuraavat # ;
+Seuraavana%<%>:Seuraavana # ;
+sekä%<%>:sekä # ;
+seisoi%<%>:seisoi # ;
+seisahtui%<%>:seisahtui # ;
+Sammakko%<%>:Sammakko # ;
+Samassa%<%>:Samassa # ;
+saanutkaan%<%>:saanutkaan # ;
+rupesivat%<%>:rupesivat # ;
+REPOSATU%<%>:REPOSATU # ;
+repolainen%<%>:repolainen # ;
+rannalle%<%>:rannalle # ;
+pörröisiä%<%>:pörröisiä # ;
+päätti%<%>:päätti # ;
+pääse%<%>:pääse # ;
+päälaelta%<%>:päälaelta # ;
+päivänä%<%>:päivänä # ;
+pytyn%<%>:pytyn # ;
+pysähtyi%<%>:pysähtyi # ;
+puraisi%<%>:puraisi # ;
+poskessa%<%>:poskessa # ;
+poikiaan%<%>:poikiaan # ;
+poikastaan%<%>:poikastaan # ;
+pitkän%<%>:pitkän # ;
+pistävät%<%>:pistävät # ;
+pistät%<%>:pistät # ;
+pisti%<%>:pisti # ;
+pistelen%<%>:pistelen # ;
+pimeä%<%>:pimeä # ;
+pimetä%<%>:pimetä # ;
+pilvet%<%>:pilvet # ;
+piikit%<%>:piikit # ;
+pihlajanmarjaa%<%>:pihlajanmarjaa # ;
+pihlajanmarja%<%>:pihlajanmarja # ;
+pihlaja%<%>:pihlaja # ;
+Pian%<%>:Pian # ;
+pesäänsä%<%>:pesäänsä # ;
+pesästä%<%>:pesästä # ;
+pesän%<%>:pesän # ;
+pentunsa%<%>:pentunsa # ;
+pentujaan%<%>:pentujaan # ;
+pentuja%<%>:pentuja # ;
+pennut%<%>:pennut # ;
+pelästyi%<%>:pelästyi # ;
+peltojen%<%>:peltojen # ;
+pelottelet%<%>:pelottelet # ;
+pelotellut%<%>:pelotellut # ;
+pellolle%<%>:pellolle # ;
+pelkää%<%>:pelkää # ;
+paneutui%<%>:paneutui # ;
+paljon%<%>:paljon # ;
+paikallaan%<%>:paikallaan # ;
+Otti%<%>:Otti # ;
+osui%<%>:osui # ;
+oravan%<%>:oravan # ;
+Orava%<%>:Orava # ;
+orava%<%>:orava # ;
+onton%<%>:onton # ;
+olisit%<%>:olisit # ;
+olisi%<%>:olisi # ;
+Olenpas%<%>:Olenpas # ;
+oksiin%<%>:oksiin # ;
+ohuet%<%>:ohuet # ;
+ohuella%<%>:ohuella # ;
+näyttää%<%>:näyttää # ;
+näkyi%<%>:näkyi # ;
+nuolaisi%<%>:nuolaisi # ;
+nukahtivat%<%>:nukahtivat # ;
+noutamaan%<%>:noutamaan # ;
+nouset%<%>:nouset # ;
+nimet%<%>:nimet # ;
+niitä%<%>:niitä # ;
+nielaistuksi%<%>:nielaistuksi # ;
+neljää%<%>:neljää # ;
+Neljä%<%>:Neljä # ;
+Ne%<%>:Ne # ;
+myöten%<%>:myöten # ;
+mytyn%<%>:mytyn # ;
+mytty%<%>:mytty # ;
+mustat%<%>:mustat # ;
+milloin%<%>:milloin # ;
+millaisia%<%>:millaisia # ;
+metsässä%<%>:metsässä # ;
+metsien%<%>:metsien # ;
+mennyt%<%>:mennyt # ;
+menetti%<%>:menetti # ;
+mehiläiset%<%>:mehiläiset # ;
+makuulle%<%>:makuulle # ;
+maksoineni%<%>:maksoineni # ;
+maidollaan%<%>:maidollaan # ;
+Lähetän%<%>:Lähetän # ;
+lyhyempää%<%>:lyhyempää # ;
+luu%<%>:luu # ;
+luona%<%>:luona # ;
+luo%<%>:luo # ;
+lumivalkoiset%<%>:lumivalkoiset # ;
+lujasti%<%>:lujasti # ;
+Loput%<%>:Loput # ;
+loikkasi%<%>:loikkasi # ;
+levittämään%<%>:levittämään # ;
+letuilleen%<%>:letuilleen # ;
+lettuja%<%>:lettuja # ;
+lehmuksia%<%>:lehmuksia # ;
+latvassa%<%>:latvassa # ;
+Käyt%<%>:Käyt # ;
+käymään%<%>:käymään # ;
+käpälällään%<%>:käpälällään # ;
+kynnet%<%>:kynnet # ;
+kylään%<%>:kylään # ;
+kuusen%<%>:kuusen # ;
+kuu%<%>:kuu # ;
+kutsumaan%<%>:kutsumaan # ;
+kuopan%<%>:kuopan # ;
+kuonon%<%>:kuonon # ;
+kulki%<%>:kulki # ;
+kuljeskellut%<%>:kuljeskellut # ;
+kuin%<%>:kuin # ;
+Kotinsa%<%>:Kotinsa # ;
+kotiin%<%>:kotiin # ;
+Kosketti%<%>:Kosketti # ;
+korvat%<%>:korvat # ;
+kortta%<%>:kortta # ;
+korkean%<%>:korkean # ;
+koloonsa%<%>:koloonsa # ;
+kolon%<%>:kolon # ;
+Kolme%<%>:Kolme # ;
+kokonaan%<%>:kokonaan # ;
+koivuja%<%>:koivuja # ;
+Kohta%<%>:Kohta # ;
+kodin%<%>:kodin # ;
+kirsu%<%>:kirsu # ;
+kiireesti%<%>:kiireesti # ;
+kielellään%<%>:kielellään # ;
+ketunpoikia%<%>:ketunpoikia # ;
+ketunpennuille%<%>:ketunpennuille # ;
+kesäpäivänä%<%>:kesäpäivänä # ;
+keskellä%<%>:keskellä # ;
+kerääntyi%<%>:kerääntyi # ;
+kera%<%>:kera # ;
+keltaiset%<%>:keltaiset # ;
+kehumaan%<%>:kehumaan # ;
+kauniita%<%>:kauniita # ;
+kauan%<%>:kauan # ;
+kasvoi%<%>:kasvoi # ;
+karvoineni%<%>:karvoineni # ;
+Karhu%<%>:Karhu # ;
+kala%<%>:kala # ;
+kaivoi%<%>:kaivoi # ;
+Kaikki%<%>:Kaikki # ;
+kaikki%<%>:kaikki # ;
+kaikille%<%>:kaikille # ;
+järvi%<%>:järvi # ;
+järven%<%>:järven # ;
+jyrsi%<%>:jyrsi # ;
+juoksi%<%>:juoksi # ;
+Jos%<%>:Jos # ;
+jopa%<%>:jopa # ;
+jonkinlaisen%<%>:jonkinlaisen # ;
+joka%<%>:joka # ;
+jalkoineni%<%>:jalkoineni # ;
+itselleen%<%>:itselleen # ;
+inisivät%<%>:inisivät # ;
+imetti%<%>:imetti # ;
+iloitsee%<%>:iloitsee # ;
+hännät%<%>:hännät # ;
+hännänpää%<%>:hännänpää # ;
+häikäisi%<%>:häikäisi # ;
+huulet%<%>:huulet # ;
+huominen%<%>:huominen # ;
+huohotti%<%>:huohotti # ;
+hunajan%<%>:hunajan # ;
+hunajaa%<%>:hunajaa # ;
+hiirulainen%<%>:hiirulainen # ;
+hiiri%<%>:hiiri # ;
+hiiren%<%>:hiiren # ;
+heräsin%<%>:heräsin # ;
+hapan%<%>:hapan # ;
+hampaitaan%<%>:hampaitaan # ;
+hampaisiinsa%<%>:hampaisiinsa # ;
+haapoja%<%>:haapoja # ;
+haalea%<%>:haalea # ;
+eteen%<%>:eteen # ;
+Emo%<%>:Emo # ;
+eläjille%<%>:eläjille # ;
+Aurinkoisena%<%>:Aurinkoisena # ;
+Auringonvalo%<%>:Auringonvalo # ;
+auringonlaskun%<%>:auringonlaskun # ;
+aukesi%<%>:aukesi # ;
+annettiin%<%>:annettiin # ;
+Alkoi%<%>:Alkoi # ;
