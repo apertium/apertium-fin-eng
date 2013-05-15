@@ -737,8 +737,8 @@ LEXICON V_TULLA
 %<actv%>%<pres%>:e V_PRESENT_STRONG ;
 %<actv%>%<pres%>:e V_PRESENT_SG3_E ;
 %<pasv%>%<pres%>:0 V_PASSIVE_L ;
-%<actv%>%<past%>:l V_PAST_WEAK ;
-%<actv%>%<past%>el V_PAST_STRONG ;
+%<actv%>%<past%>:0 V_PAST_WEAK ;
+%<actv%>%<past%>:0 V_PAST_STRONG ;
 
 LEXICON V_AJATELLA
 
