@@ -717,7 +717,7 @@ LEXICON V_ISTUA
 
 LEXICON V_HALUTA
 
-%<inf%>:t%{A%}# ;
+%<inf%>:t%{A%} # ;
 %<actv%>%<pres%>:%{A%} V_PRESENT_WEAK ;
 %<actv%>%<pres%>:%{A%} V_PRESENT_STRONG ;
 %<actv%>%<pres%>:0 V_PRESENT_SG3_A ;
@@ -784,17 +784,17 @@ LEXICON V_PRESENT_WEAK
 %<p2%>%<sg%>:t   V_CLITS? ;
 %<p1%>%<pl%>:mme V_CLITS? ;
 %<p2%>%<pl%>:tte V_CLITS? ;
-%<actv%>%<pres%>%<conneg%>:0 V_CLITS? ;
-%<actv%>%<imp%>%<p2%>%<sg%>:0 V_CLITS? ;
+%<conneg%>:0 V_CLITS? ;
+%<imp%>%<p2%>%<sg%>:0 V_CLITS? ;
 
 LEXICON V_PRESENT_STRONG
 
 %<p3%>%<pl%>:v%{A%}t V_CLITS? ;
-%<actv%>%<inf%>%<sg%>%<abe%>:m%{A%}tt%{A%}   N_POSSES?      ;
-%<actv%>%<inf%>%<sg%>%<ade%>:m%{A%}ll%{A%}   N_CLITS?     ;
-%<actv%>%<inf%>%<sg%>%<ela%>:m%{A%}st%{A%}   N_CLITS?     ;
-%<actv%>%<inf%>%<sg%>%<ill%>:m%{A%}%{A%}n    N_CLITS?     ;
-%<actv%>%<inf%>%<sg%>%<ine%>:m%{A%}ss%{A%}   N_CLITS?     ;
+%<inf%>%<sg%>%<abe%>:m%{A%}tt%{A%}   N_POSSES?      ;
+%<inf%>%<sg%>%<ade%>:m%{A%}ll%{A%}   N_CLITS?     ;
+%<inf%>%<sg%>%<ela%>:m%{A%}st%{A%}   N_CLITS?     ;
+%<inf%>%<sg%>%<ill%>:m%{A%}%{A%}n    N_CLITS?     ;
+%<inf%>%<sg%>%<ine%>:m%{A%}ss%{A%}   N_CLITS?     ;
 
 LEXICON V_PRESENT_SG3_A
 
