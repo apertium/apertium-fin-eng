@@ -50,17 +50,17 @@
     <e><p><l>etsiä<s n="vblex"/></l><r>search<s n="vblex"/></r></p></e>
     <e><p><l>että<s n="cnjsub"/></l><r>that<s n="cnjsub"/></r></p></e>
     <e><p><l>haluta<s n="vblex"/></l><r>want<s n="vblex"/></r></p></e>
-    <e><p><l>hauska<s n="adj"/></l><r>funny<s n="adj"/></r></p></e>
+    <e><p><l>hauska<s n="adj"/></l><r>funny<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>he<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
     <e><p><l>hitaasti<s n="adv"/></l><r>slowly<s n="adv"/></r></p></e>
     <e><p><l>huolellisesti<s n="adv"/></l><r>carefully<s n="adv"/></r></p></e>
     <e><p><l>hyvin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
-    <e><p><l>hyvä<s n="adj"/></l><r>nice<s n="adj"/></r></p></e>
+    <e><p><l>hyvä<s n="adj"/></l><r>nice<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>she<s n="prn"/></r></p></e>
     <e><p><l>ihminen<s n="n"/></l><r>human<s n="n"/></r></p></e>
-    <e><p><l>iloinen<s n="adj"/></l><r>happy<s n="adj"/></r></p></e>
+    <e><p><l>iloinen<s n="adj"/></l><r>happy<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>big<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>great<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>large<s n="adj"/><s n="sint"/></r></p></e>
@@ -90,7 +90,7 @@
     <e><p><l>kuulua<s n="vblex"/></l><r>be<g><b/>said</g><s n="vblex"/></r></p></e>
     <e><p><l>kuunnella<s n="vblex"/></l><r>listen<s n="vblex"/></r></p></e>
     <e><p><l>kuusi<s n="num"/></l><r>six<s n="num"/></r></p></e>
-    <e><p><l>kylmä<s n="adj"/></l><r>cold<s n="adj"/></r></p></e>
+    <e><p><l>kylmä<s n="adj"/></l><r>cold<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>kysymys<s n="n"/></l><r>question<s n="n"/></r></p></e>
     <e><p><l>kysyä<s n="vblex"/></l><r>ask<s n="vblex"/></r></p></e>
     <e><p><l>käsi<s n="n"/></l><r>hand<s n="n"/></r></p></e>
@@ -107,7 +107,7 @@
     <e><p><l>luokse<s n="pr"/></l><r>toward<s n="pr"/></r></p></e>
     <e><p><l>lähellä<s n="pr"/></l><r>close<s n="pr"/></r></p></e>
     <e><p><l>lähemmäksi<s n="pr"/></l><r>closer<s n="pr"/></r></p></e>
-    <e><p><l>lämmin<s n="adj"/></l><r>warm<s n="adj"/></r></p></e>
+    <e><p><l>lämmin<s n="adj"/></l><r>warm<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>läpi<s n="pr"/></l><r>through<s n="pr"/></r></p></e>
     <e><p><l>löytää<s n="vblex"/></l><r>find<s n="vblex"/></r></p></e>
     <e><p><l>Mari<s n="np"/></l><r>Mary<s n="np"/></r></p></e>
@@ -181,7 +181,7 @@
     <e><p><l>ulkona<s n="adv"/></l><r>outside<s n="adv"/></r></p></e>
     <e><p><l>ulos<s n="pr"/></l><r>out<s n="pr"/></r></p></e>
     <e><p><l>vaikka<s n="cnjsub"/></l><r>when<s n="cnjsub"/></r></p></e>
-    <e><p><l>vanha<s n="adj"/></l><r>old<s n="adj"/></r></p></e>
+    <e><p><l>vanha<s n="adj"/></l><r>old<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>vastata<s n="vblex"/></l><r>answer<s n="vblex"/></r></p></e>
     <e><p><l>vastaus<s n="n"/></l><r>answer<s n="n"/></r></p></e>
     <e><p><l>vesi<s n="n"/></l><r>water<s n="n"/></r></p></e>
