@@ -260,6 +260,7 @@ LEXICON N_LINTU
 LEXICON N_LEIKKI
 
 %<sg%>%<nom%>:ki  N_POSSES? ;
+%<sg%>%<par%>:ki%{A%}  N_POSSES? ;
 0:i N_SINGULARS_WEAK ;
 0:ki N_SINGULARS_STRONG ;
 0:ki N_SINGULAR_ILLATIVE_IN ;
