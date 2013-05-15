@@ -4,8 +4,24 @@ SOFT-DELIMITERS = "<,>" ;
 SETS
 
 LIST N = n ; 
+LIST PAST-ADV = "eilen" ; 
+LIST PRES-ADV = "nyt" ; 
+LIST NON-PAST-ADV = "huomenna" ; 
+LIST V-FIN = past pres ; 
+LIST PAST = past ; 
+LIST PRES = pres ; 
+LIST SENT = sent ; 
+LIST CONNEG = conneg ; 
+LIST V-NEG = (vblex neg); 
+
+SET CLB = V-FIN OR SENT ;
 
 SECTION
 
-SELECT N ;
-  ## 
+SELECT PRES IF ((-1* PRES-ADV BARRIER CLB) OR (1* PRES-ADV BARRIER CLB));
+
+SELECT CONNEG IF (-1 V-NEG) ; 
+
+SELECT CONNEG IF (-2 V-NEG) ;  
+
+
