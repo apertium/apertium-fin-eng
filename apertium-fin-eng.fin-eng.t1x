@@ -56,6 +56,9 @@
       <attr-item tags="vblex"/>
       <attr-item tags="vblex.actv"/>
       <attr-item tags="vblex.pasv"/>
+      <attr-item tags="vaux"/>
+      <attr-item tags="vaux.actv"/>
+      <attr-item tags="vaux.pasv"/>
     </def-attr>
     <def-attr n="person">
       <attr-item tags="p1"/>
@@ -274,13 +277,67 @@
       </action>
   </rule>
 
+    <rule comment="REGLA: neg-verb conneg just-inf">
+      <pattern>
+         <pattern-item n="neg-verb"/>
+         <pattern-item n="conneg_nottable"/>
+         <pattern-item n="just-inf"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
+     
+        <out> 
+          <chunk name="notted" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+          <lu>
+            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          <b pos="1"/> <!-- space character between words -->
+          <lu>
+            <lit v="not"/> <!-- not -->
+            <lit-tag v="adv"/> <!-- adv -->
+          </lu>
+          <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: neg-verb conneg">
       <pattern>
          <pattern-item n="neg-verb"/>
          <pattern-item n="conneg_nottable"/>
       </pattern>
       <action>
-        <out>      
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
+     
+        <out> 
           <chunk name="notted" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>

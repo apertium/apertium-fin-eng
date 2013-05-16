@@ -3,6 +3,7 @@ Multichar_Symbols
 
 %<n%>   ! Имя существительное · Noun
 %<vblex%> ! lexical verb
+%<vaux%> ! lexical verb
 %<adj%> ! adjective
 %<num%> ! numeral
 %<adv%> ! adverb
@@ -127,13 +128,14 @@ bird%<n%>:bird N ; ! ""
 animal%<n%>:animal N ; ! ""
 
 LEXICON V
+%<inf%>:0 # ;
 %<actv%>%<pres%>:0 # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:s # ;
 %<actv%>%<past%>:ed # ;
 %<actv%>%<ger%>:ing # ;
 
 LEXICON V_BE
-%<infv%>:be # ;
+%<inf%>:be # ;
 %<actv%>%<pres%>%<p1%>%<sg%>:am # ;
 %<actv%>%<pres%>%<p2%>%<sg%>:are # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:is # ;
@@ -288,9 +290,9 @@ LEXICON V_FIND
 
 LEXICON Verbs
 
-can%<vaux%>%<pres%>:can # ; ! ""
-can%<vaux%>%<pres%>%+not%<adv%>:can't # ; ! ""
-can%<vaux%>%<past%>:could # ; ! ""
+can%<vaux%>%<actv%>%<pres%>:can # ; ! ""
+can%<vaux%>%<actv%>%<pres%>%+not%<adv%>:can't # ; ! ""
+can%<vaux%>%<actv%>%<past%>:could # ; ! ""
 be%<vblex%>:0 V_BE ; ! ""
 look%<vblex%>:look V ; ! ""
 have%<vblex%>:0 V_HAVE ; ! ""
