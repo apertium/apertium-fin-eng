@@ -13,6 +13,7 @@ Multichar_Symbols
 %<cnjsub%> ! Sub-ordinating conjunction 
 %<ind%> ! Indefinite
 %<def%> ! Definite
+%<num%> ! Definite
 
 %<sg%> ! Singular       
 %<pl%> ! Plural
@@ -47,6 +48,7 @@ Multichar_Symbols
 %<det%> ! interrog
 %<pos%> ! interrog
 %<sp%> ! interrog
+%<mf%> ! interrog
 
 ! Punctuation
 %<sent%>      ! Sentence marker
@@ -407,6 +409,7 @@ why%<adv%>%<itg%>:why # ; ! ""
 
 not%<adv%>:not # ; ! ""
 also%<adv%>:also # ; ! ""
+too%<adv%>:too # ; ! ""
 very%<adv%>:very # ; ! ""
 really%<adv%>:really # ; ! ""
 obviously%<adv%>:obviously # ; ! ""

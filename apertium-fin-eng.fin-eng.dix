@@ -30,6 +30,7 @@
     <sdef n="pers" 	c="e"/> 
     <sdef n="m" 	c="pojista"/> 
     <sdef n="f" 	c="tytöille"/> 
+    <sdef n="mf" 	c="ei oo nin väliks"/> 
 
   </sdefs>
   <section id="main" type="standard">
@@ -60,7 +61,8 @@
     <e><p><l>että<s n="cnjsub"/></l><r>that<s n="cnjsub"/></r></p></e>
     <e><p><l>haluta<s n="vblex"/></l><r>want<s n="vblex"/></r></p></e>
     <e><p><l>hauska<s n="adj"/></l><r>funny<s n="adj"/><s n="sint"/></r></p></e>
-    <e><p><l>he<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
+    <e><p><l>he<s n="prn"/><s n="pers"/><s n="p3"/></l>
+            <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
     <e><p><l>hitaasti<s n="adv"/></l><r>slowly<s n="adv"/></r></p></e>
     <e><p><l>huolellisesti<s n="adv"/></l><r>carefully<s n="adv"/></r></p></e>
     <e><p><l>hyvin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
@@ -93,7 +95,7 @@
     <e><p><l>entä<s n="adv"/></l><r>what<b/>about<s n="adv"/></r></p></e>
     <e><p><l>ko<s n="qst"/></l><r></r></p></e>
     <e><p><l>kovasti<s n="adv"/></l><r>really<s n="adv"/></r></p></e>
-    <e><p><l>kun<s n="cnjsub"/></l><r>when<s n="cnjsub"/></r></p></e>
+    <e><p><l>kun<s n="cnjsub"/></l><r>when<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>kuulla<s n="vblex"/></l><r>hear<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>belong<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>concern<s n="vblex"/></r></p></e>

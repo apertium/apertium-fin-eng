@@ -18,6 +18,9 @@
     <def-cat n="inf-ine">
       <cat-item tags="vblex.*.pres.inf.*.ine"/>
     </def-cat>
+    <def-cat n="just-inf">
+      <cat-item tags="vblex.inf"/>
+    </def-cat>
     <def-cat n="vbneg">
         <cat-item tags="vblex.neg.*.*.*"/>
     </def-cat>
@@ -230,6 +233,29 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: just inf">
+      <pattern>
+        <pattern-item n="just-inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="to-do" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+                <lit v="to"/>
+                <lit-tag v="pr"/>
+            </lu>
+            <b pos="0"/>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+  </rule>
 
     <rule comment="REGLA: neg-verb conneg">
       <pattern>
