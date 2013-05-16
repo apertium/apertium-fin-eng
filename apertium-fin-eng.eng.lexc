@@ -110,7 +110,6 @@ weather%<n%>:weather N ; ! ""
 water%<n%>:water N ; ! ""
 time%<n%>:time N ; ! ""
 table%<n%>:table N ; ! ""
-something%<n%>:something N ; ! ""
 sister%<n%>:sister N ; ! ""
 question%<n%>:question N ; ! ""
 people%<n%>:people N ; ! ""
@@ -125,7 +124,6 @@ child%<n%>:child N_CHILDREN ; ! ""
 chair%<n%>:chair N ; ! ""
 boy%<n%>:boy N ; ! ""
 bird%<n%>:bird N ; ! ""
-anything%<n%>:anything N ; ! ""!! Pronoun
 animal%<n%>:animal N ; ! ""
 
 LEXICON V
@@ -344,6 +342,9 @@ his%<det%>%<pos%>%<sp%>:his # ; ! ""
 their%<det%>%<pos%>%<sp%>:their # ; ! ""
 
 LEXICON Pronouns
+
+something%<prn%>:something N ; ! ""
+anything%<prn%>:anything N ; ! ""!! Pronoun
 
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<nom%>:I # ; ! ""
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:me # ; ! ""
