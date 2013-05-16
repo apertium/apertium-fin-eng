@@ -56,6 +56,10 @@
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
+
+    <def-cat n="verb-past">
+        <cat-item tags="vblex.*.past.*"/>
+    </def-cat>
     <def-cat n="verb-pres">
         <cat-item tags="vblex.*.pres.*"/>
     </def-cat>
@@ -513,6 +517,30 @@
       </action>
     </rule>
 
+
+    <rule comment="REGLA: verb-past">
+      <pattern>
+         <pattern-item n="verb-past"/>
+      </pattern>
+      <action>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+        <out> 
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+          <lu>
+            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="1" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
 
     <rule comment="REGLA: verb-pres">
       <pattern>
