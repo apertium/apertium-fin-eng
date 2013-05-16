@@ -79,6 +79,7 @@ LEXICON Root
 0 Determiners ; 
 0 Numerals ;
 0 Punctuation ;
+0 Interjections ;
 
 LEXICON N
 
@@ -468,6 +469,10 @@ happy%<adj%>%<sint%>:happ A_HAPPY ; ! ""
 warm%<adj%>%<sint%>:warm A_OLD ; ! ""
 small%<adj%>%<sint%>:small A_OLD ; ! ""
 nice%<adj%>%<sint%>:nic A_NICE ; ! ""
+
+LEXICON Interjections
+
+no%<ij%>:no # ; 
 
 LEXICON Numerals
 two%<num%>:two # ; ! ""
