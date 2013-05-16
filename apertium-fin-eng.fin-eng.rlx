@@ -17,6 +17,8 @@ LIST GEN = gen ;
 LIST PRES = pres ;
 LIST SENT = sent ;
 LIST CONNEG = conneg ;
+LIST VAUX = vaux ;
+LIST INF = inf ;
 LIST V-NEG = (vblex neg) ;
 LIST ADA = "erittäin" "tosi" "todella" ;
 LIST SGPRS = "minä" "sinä" "hän" ;
@@ -52,8 +54,10 @@ SELECT IMP IF (1* EXCLAIM) ;
  
 SELECT NOM IF (NOT -1* NOM BARRIER CLB) (NOT 1 NES) (0C NOM OR GEN);
 
-SELECT POSTP IF (-1* NOM + GEN BARRIER CLB)
+SELECT POSTP IF (-1* NOM + GEN BARRIER CLB) ;
 
-SELECT PREP IF (1* NOM + GEN BARRIER CLB)
+SELECT PREP IF (1* NOM + GEN BARRIER CLB) ; 
 
 SELECT $$NBR IF (0C N + NOM) ((1* V-FIN + $$NBR BARRIER CLB) OR (-1* V-FIN + $$NBR BARRIER CLB));
+
+REMOVE VAUX IF (NOT 1 INF) ;
