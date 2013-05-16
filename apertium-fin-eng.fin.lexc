@@ -91,6 +91,7 @@ LEXICON Root
 0   Propers ;
 0   Numerals ;
 0   Punctuation ;
+0   Interjections ;
 
 LEXICON PROPN_MARI
 
@@ -1474,6 +1475,10 @@ kiireesti%<adv%>:kiireesti # ;
 keskellä%<adv%>:keskellä # ;
 kera%<adv%>:kera # ;
 vain%<adv%>:vain # ;
+
+LEXICON Interjections
+
+ei%<ij%>:ei # ;
 
 LEXICON Numerals
 yksi%<num%>:y NUM_YKSI ;
