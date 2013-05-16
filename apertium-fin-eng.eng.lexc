@@ -50,6 +50,7 @@ Multichar_Symbols
 %<pos%> ! interrog
 %<sp%> ! interrog
 %<mf%> ! interrog
+%<nt%> ! interrog
 
 ! Punctuation
 %<sent%>      ! Sentence marker
