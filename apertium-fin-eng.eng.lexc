@@ -35,6 +35,12 @@ Multichar_Symbols
 %<comp%> ! Comparative  wikipedia
 %<sup%> ! Sup
 
+%<itg%> ! interrog
+%<ant%> ! interrog
+%<m%> ! interrog
+%<f%> ! interrog
+%<np%> ! interrog
+
 ! Punctuation
 %<sent%>      ! Sentence marker
 %<guio%>      ! Hyphen
