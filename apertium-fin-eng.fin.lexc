@@ -211,10 +211,11 @@ LEXICON N_TYTTÖ
 
 LEXICON N_PUU
 
-%<sg%>%<nom%>:u  N_POSSES? ;
-0:u N_SINGULARS_WEAK ;
-0:u N_SINGULARS_STRONG ;
-0:u N_SINGULAR_ILLATIVE_HUN ;
+%<sg%>%<nom%>:%{U%}  N_POSSES? ;
+%<sg%>%<par%>:%{U%}t%{A%}  N_POSSES? ;
+0:%{U%} N_SINGULARS_WEAK ;
+0:%{U%} N_SINGULARS_STRONG ;
+0:%{U%} N_SINGULAR_ILLATIVE_HUN ;
 0 N_PLURALS_WEAK ;
 0 N_PLURALS_STRONG ;
 0 N_PLURAL_PARTITIVE_ITA ;
@@ -983,10 +984,10 @@ LEXICON PRON_TÄMÄ
 
 LEXICON PRON_NÄMÄ
 
-%<sg%>%<nom%>:mä N_CLITS? ;
+%<pl%>%<nom%>:mä N_CLITS? ;
+%<pl%>%<gen%>:iden N_CLITS? ;
 0 N_PLURALS_WEAK ;
 0 N_PLURALS_STRONG ;
-%<pl%>%<gen%>:iden N_CLITS? ;
 
 LEXICON PRON_SE
 
@@ -1040,36 +1041,41 @@ LEXICON Nouns
 
 aika%<n%>:a N_AIKA ; ! "time"
 eläin%<n%>:eläi N_ELÄIN ; ! "animal"
+hilla%<n%>:hill N_TARHA ; ! "cloudberry"
 ihminen%<n%>:ihmi N_LEIKKIMINEN ; ! "hyman"
 ikkuna%<n%>:ikkun N_IKKUNA ; ! "window"
 kissa%<n%>:kiss N_TARHA ; ! "cat"
 koira%<n%>:koir N_KOIRA ; ! "dog"
 kysymys%<n%>:kysymy N_VASTAUS ; ! "question"
+kesä%<n%>:kes N_KOIRA ; ! "summer"
 käsi%<n%>:kä N_KÄSI ; ! "hand"
 lapsi%<n%>:la N_LAPSI ; ! "child"
 laskeminen%<n%>:laskemi N_LEIKKIMINEN ; ! "counting"
 leikki%<n%>:leik N_LEIKKI ; ! "play"
 leikkiminen%<n%>:leikkimi N_LEIKKIMINEN ; ! "play"
 lintu%<n%>:lin N_LINTU ; ! "bird"
+marja%<n%>:marj N_TARHA ; ! "berry"
+matka%<n%>:matk N_TARHA ; ! "distance, travel"
 piilo%<n%>:piilo N_TALO ; ! "house"
 poika%<n%>:po N_POIKA ; ! "boy"
 puu%<n%>:pu N_PUU ; ! "tree"
-pää%<n%>:pä N_SÄÄ ; ! "tree"
 puutarha%<n%>:puutarh N_TARHA ; ! "garden"
+pää%<n%>:pä N_SÄÄ ; ! "tree"
 pöytä%<n%>:pöy N_PÖYTÄ ; ! "table"
 silmä%<n%>:silm N_KOIRA ; ! "eye"
 sisko%<n%>:sisko N_TALO ; ! "sister"
+syy%<n%>:sy N_PUU ; ! "tree"
 sää%<n%>:sä N_SÄÄ ; ! "weather"
 talo%<n%>:talo N_TALO ; ! "house"
-tyttö%<n%>:tyt N_TYTTÖ ; ! "girl"
 tuoli%<n%>:tuol N_TUOLI ; ! "chair
+tyttö%<n%>:tyt N_TYTTÖ ; ! "girl"
+vaari%<n%>:vaar N_TUOLI ; ! "grandpa"
 vastaus%<n%>:vastau N_VASTAUS ; ! "answer"
+vesi%<n%>:ve N_KÄSI ; ! "water"
 vuosi%<n%>:vuo N_VUOSI ; ! "year"
 äiti%<n%>:äi N_ÄITI ; ! "mother"
 ääni%<n%>:ään N_ÄÄNI ; ! "voice"
-vesi%<n%>:ve N_KÄSI ; ! "water"
-vaari%<n%>:vaar N_TUOLI ; ! "grandpa"
-matka%<n%>:matk N_TARHA ; ! "distance, travel"
+saari%<n%>:saar N_ÄÄNI ; ! "island"
 kettu%<n%>:kettu N_KETTU ; ! "fox news"
 tie%<%>:t N_TIE ;
 siili%<%>:siil N_SIILI ;
@@ -1150,6 +1156,8 @@ syödä%<vblex%>:s V_SYÖDÄ ; ! "eat"
 tehdä%<vblex%>:te V_NÄHDÄ ; ! "do"
 tietää%<vblex%>:tie V_TIETÄÄ ; ! "know"
 kuulla%<vblex%>:kuul V_TULLA ; ! "come"
+luulla%<vblex%>:luul V_TULLA ; ! "knowthink"
+tuulla%<vblex%>:tuul V_TULLA ; ! "(wind) blow"
 tulla%<vblex%>:tul V_TULLA ; ! "come"
 täytyä%<vaux%>:täy V_TÄYTYÄ ; ! "must"
 vastata%<vblex%>:vasta V_HALUTA ; ! "answer"
