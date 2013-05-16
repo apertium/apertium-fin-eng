@@ -323,8 +323,8 @@ LEXICON N_VASTAUS
 
 LEXICON N_TARHA
 
-%<sg%>%<nom%>:%{A%} N_POSSES? ;
-%<sg%>%<par%>:%{A%}%{A%} N_POSSES? ;
+%<sg%>%<nom%>:a N_POSSES? ;
+%<sg%>%<par%>:a N_POSSES? ;
 0:a N_SINGULARS_WEAK ;
 0:a N_SINGULARS_STRONG ;
 0:a N_SINGULAR_ILLATIVE_AN ;
@@ -1424,7 +1424,7 @@ luokse%<post%>:luokse N_CLITS? ; ! "towards"
 lähellä%<post%>:lähellä # ; ! "close"
 lähemmäksi%<post%>:lähemmäksi # ; ! "closer"
 läpi%<post%>:läpi # ; ! "through"
-mukaan%<post%>:mukaan # ; "according to"
+mukaan%<post%>:mukaan # ; ! "according to"
 pois%<post%>:pois # ; ! "away"
 sisällä%<post%>:sisällä # ; ! "inside"
 takaa%<post%>:takaa # ; ! "behind"
