@@ -3,6 +3,14 @@
 <transfer default="chunk">
   <section-def-cats>
 
+    <def-cat n="neg-verb"> <!-- ei vblex.neg.p3.sg -->
+      <cat-item lemma="ei" tags="vblex.neg.*"/>
+    </def-cat>
+
+    <def-cat n="conneg"> <!-- tietää vblex.actv.pres.conneg -->
+      <cat-item tags="vblex.*.*.conneg"/>
+    </def-cat>
+
     <def-cat n="inf-ine">
       <cat-item tags="vblex.*.pres.inf.*.ine"/>
     </def-cat>
@@ -22,6 +30,17 @@
   <section-def-attrs>
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
+      <attr-item tags="vblex.actv"/>
+      <attr-item tags="vblex.pasv"/>
+    </def-attr>
+    <def-attr n="person">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="tense">
+      <attr-item tags="past"/>
+      <attr-item tags="pres"/>
     </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
@@ -72,6 +91,48 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+
+    <rule comment="REGLA: neg-verb conneg">
+      <pattern>
+         <pattern-item n="neg-verb"/>
+         <pattern-item n="conneg"/>
+      </pattern>
+      <action>
+        <out>      
+          <chunk name="be-ger" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+          <lu>
+            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          <b pos="1"/> <!-- space character between words -->
+          <lu>
+            <lit v="not"/> <!-- not -->
+            <lit-tag v="adv"/> <!-- adv -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <rule comment="REGLA: NOM">
       <pattern>
