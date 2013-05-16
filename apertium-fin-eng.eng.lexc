@@ -21,6 +21,7 @@ Multichar_Symbols
 
 %<sint%>  ! Synthetic
 %<ger%>  ! Gerund
+%<subst%>  ! Substantive
 
 %<nom%>  !Nominative    
 %<acc%>  !Accusative    
@@ -135,6 +136,7 @@ LEXICON V
 %<actv%>%<pres%>%<p3%>%<sg%>:s # ;
 %<actv%>%<past%>:ed # ;
 %<actv%>%<ger%>:ing # ;
+%<subst%>%<sg%>%<nom%>:ing # ;
 
 LEXICON V_BE
 %<inf%>:be # ;

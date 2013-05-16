@@ -83,6 +83,7 @@
     </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
+      <attr-item tags="vblex.subst"/>
       <attr-item tags="np.ant"/>
       <attr-item tags="np.ant.f"/>
       <attr-item tags="np.ant.m"/>

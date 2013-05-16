@@ -23,6 +23,9 @@
     <sdef n="lpar" 	c=""/> 
     <sdef n="p2" 	c=""/> 
     <sdef n="ger" 	c=""/> 
+    <sdef n="subst" 	c=""/> 
+    <sdef n="nom" 	c=""/> 
+    <sdef n="sg" 	c=""/> 
     <sdef n="rpar" 	c=""/> 
     <sdef n="lquot" 	c=""/> 
     <sdef n="rquot" 	c=""/> 
@@ -117,7 +120,7 @@
     <e><p><l>laskea<s n="vblex"/></l><r>count<s n="vblex"/></r></p></e>
     <e><p><l>laskea<s n="vblex"/></l><r>slide<b/>down<s n="vblex"/></r></p></e>
     <e><p><l>laskeminen<s n="n"/></l><r>count<s n="vblex"/></r></p></e>
-    <e><p><l>leikkiminen<s n="n"/></l><r>play<s n="vblex"/></r></p></e>
+    <e><p><l>leikkiminen<s n="n"/></l><r>play<s n="vblex"/><s n="subst"/></r></p></e>
     <e><p><l>leikki<s n="n"/></l><r>game<s n="n"/></r></p></e>
     <e><p><l>leikkiä<s n="vblex"/></l><r>play<s n="vblex"/></r></p></e>
     <e><p><l>lintu<s n="n"/></l><r>bird<s n="n"/></r></p></e>
