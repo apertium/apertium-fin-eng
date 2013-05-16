@@ -87,7 +87,7 @@
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
       <attr-item tags="abl"/>
-      <attr-item tags="gen"/>
+      <attr-item tags="par"/>
       <attr-item tags="ine"/>
       <attr-item tags="ins"/>
       <attr-item tags="abl"/>
@@ -108,6 +108,7 @@
                 <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>-->
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ela"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="par"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abl"/></equal></or></test>
               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
             </when>
@@ -339,6 +340,45 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: num nom">
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="case-handler1"> 
+          <with-param pos="2"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test><not>
+              <equal><clip pos="1" side="tl" part="lem"/><lit v="one"/></equal></not>
+            </test>
+            <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="num" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NUM"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_num"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_nom"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <clip pos="2" side="tl" part="a_cas"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
     <rule comment="REGLA: SENT">
