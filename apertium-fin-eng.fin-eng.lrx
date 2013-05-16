@@ -21,6 +21,9 @@
   </rule>
 -->
   <rule>
+    <match lemma="todennäköisesti" tags="adv"><select lemma="probably" tags="adv"/></match>
+  </rule>
+  <rule>
     <match lemma="laskea" tags="vblex.*"><select lemma="count" tags="vblex.*"/></match>
   </rule>
   <rule>

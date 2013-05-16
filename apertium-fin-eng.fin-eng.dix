@@ -21,6 +21,7 @@
     <sdef n="qst" c="Kyselmä"/>
     <sdef n="guio" 	c=""/> 
     <sdef n="lpar" 	c=""/> 
+    <sdef n="p2" 	c=""/> 
     <sdef n="rpar" 	c=""/> 
     <sdef n="lquot" 	c=""/> 
     <sdef n="rquot" 	c=""/> 
@@ -177,7 +178,7 @@
     <e><p><l>siellä<s n="adv"/></l><r>there<s n="adv"/></r></p></e>
     <e><p><l>silloin<s n="adv"/></l><r>then<s n="adv"/></r></p></e>
     <e><p><l>silmä<s n="n"/></l><r>eye<s n="n"/></r></p></e>
-    <e><p><l>sinä<s n="prn"/></l><r>you<s n="prn"/></r></p></e>
+    <e><p><l>sinä<s n="prn"/><s n="pers"/><s n="p2"/></l><r>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
     <e><p><l>sisko<s n="n"/></l><r>sister<s n="n"/></r></p></e>
     <e><p><l>sisällä<s n="pr"/></l><r>inside<s n="pr"/></r></p></e>
     <e><p><l>sisällä<s n="post"/></l><r>inside<s n="pr"/></r></p></e>
