@@ -151,7 +151,7 @@
       <program name="lrx-proc">
         <file name="fin-eng.autolex.bin"/>
       </program>
-      <program name="apertium-transfer -b">
+      <program name="apertium-transfer -t -b">
         <file name="apertium-fin-eng.fin-eng.t1x"/>
         <file name="fin-eng.t1x.bin"/>
       </program>
