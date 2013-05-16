@@ -21,6 +21,9 @@
   </rule>
 -->
   <rule>
+    <match lemma="myös" tags="adv"><select lemma="also" tags="adv"/></match>
+  </rule>
+  <rule>
     <match lemma="todennäköisesti" tags="adv"><select lemma="probably" tags="adv"/></match>
   </rule>
   <rule>
