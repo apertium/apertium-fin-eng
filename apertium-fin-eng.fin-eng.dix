@@ -22,6 +22,7 @@
     <sdef n="guio" 	c=""/> 
     <sdef n="lpar" 	c=""/> 
     <sdef n="p2" 	c=""/> 
+    <sdef n="ger" 	c=""/> 
     <sdef n="rpar" 	c=""/> 
     <sdef n="lquot" 	c=""/> 
     <sdef n="rquot" 	c=""/> 
@@ -133,7 +134,7 @@
     <e><p><l>löytää<s n="vblex"/></l><r>find<s n="vblex"/></r></p></e>
     <e><p><l>Mari<s n="np"/><s n="ant"/><s n="f"/></l><r>Mary<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>mennä<s n="vblex"/></l><r>go<s n="vblex"/></r></p></e>
-    <e><p><l>menossa<s n="adv"/></l><r>go<s n="adv"/></r></p></e>
+    <e><p><l>menossa<s n="adv"/></l><r>go<s n="vblex"/><s n="ger"/></r></p></e>
     <e><p><l>me<s n="prn"/></l><r>we<s n="prn"/></r></p></e>
     <e><p><l>miksi<s n="prn"/></l><r>why<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>minne<s n="prn"/></l><r>where<s n="adv"/><s n="itg"/></r></p></e>
@@ -200,7 +201,7 @@
     <e><p><l>tuoli<s n="n"/></l><r>chair<s n="n"/></r></p></e>
     <e><p><l>tyttö<s n="n"/></l><r>girl<s n="n"/></r></p></e>
     <e><p><l>tänään<s n="adv"/></l><r>today<s n="adv"/></r></p></e>
-    <e><p><l>täytyä<s n="vaux"/></l><r>need<s n="vaux"/></r></p></e>
+    <e><p><l>täytyä<s n="vaux"/></l><r>must<s n="vaux"/></r></p></e>
     <e><p><l>ulkona<s n="adv"/></l><r>outside<s n="pr"/></r></p></e>
     <e><p><l>ulos<s n="pr"/></l><r>out<s n="pr"/></r></p></e>
     <e><p><l>ulos<s n="post"/></l><r>out<s n="pr"/></r></p></e>

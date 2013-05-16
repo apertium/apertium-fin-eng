@@ -312,6 +312,8 @@ LEXICON V_FIND
 
 LEXICON Verbs
 
+must%<vaux%>%<actv%>%<pres%>:must # ; ! ""
+must%<vaux%>%<actv%>%<pres%>%+not%<adv%>:mustn't # ; ! ""
 can%<vaux%>%<actv%>%<pres%>:can # ; ! ""
 can%<vaux%>%<actv%>%<pres%>%+not%<adv%>:can't # ; ! ""
 can%<vaux%>%<actv%>%<past%>:could # ; ! ""
