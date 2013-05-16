@@ -176,14 +176,12 @@ LEXICON N_ÄITI
 %<sg%>%<par%>%<px3sp%>:ti%{A%}%{A%}n N_CLITS? ;
 0:di N_SINGULARS_WEAK ;
 0:ti N_SINGULARS_STRONG ;
-0:ti N_SINGULAR_ILLATIVE_EN ;
+0:ti N_SINGULAR_ILLATIVE_IN ;
 0:de N_PLURALS_WEAK ;
 0:te N_PLURALS_STRONG ;
 0:te N_PLURAL_PARTITIVE_JA ;
 0:t N_PLURAL_GENITIVE_IEN ;
 0:te N_PLURAL_ILLATIVE_IHIN ;
-
-
 
 LEXICON N_VUOSI
 
@@ -260,6 +258,17 @@ LEXICON N_LINTU
 0:tu N_PLURAL_PARTITIVE_JA ;
 0:tu N_PLURAL_GENITIVE_JEN ;
 0:tu N_PLURAL_ILLATIVE_IHIN ;
+
+LEXICON N_RANTA
+%<sg%>%<nom%>:ta  N_POSSES? ;
+0:na N_SINGULARS_WEAK ;
+0:ta N_SINGULARS_STRONG ;
+0:ta N_SINGULAR_ILLATIVE_AN ;
+0:na N_PLURALS_WEAK ;
+0:ta N_PLURALS_STRONG ;
+0:to N_PLURAL_PARTITIVE_JA ;
+0:to N_PLURAL_GENITIVE_JEN ;
+0:to N_PLURAL_ILLATIVE_IHIN ;
 
 LEXICON N_LEIKKI
 
@@ -446,6 +455,18 @@ LEXICON N_VERI
 0 N_PLURAL_PARTITIVE_IA ;
 0 N_PLURAL_GENITIVE_IEN ;
 0 N_PLURAL_ILLATIVE_IIN ;
+
+LEXICON N_ILTA
+%<sg%>%<nom%>:ta N_POSSES? ;
+%<sg%>%<par%>:taa N_POSSES? ;
+0:la N_SINGULARS_WEAK ;
+0:ta N_SINGULARS_STRONG ;
+0:ta N_SINGULAR_ILLATIVE_AN ;
+0:lo N_PLURALS_WEAK ;
+0:to N_PLURALS_STRONG ;
+0:to N_PLURAL_PARTITIVE_JA ;
+0:to N_PLURAL_GENITIVE_JEN ;
+0:to N_PLURAL_ILLATIVE_IHIN ;
 
 LEXICON N_SINGULARS_WEAK
 
@@ -668,6 +689,7 @@ LEXICON V_NÄHDÄ
 %<pasv%>%<pres%>:h V_PASSIVE_D ;
 %<actv%>%<past%>:0 V_PAST_WEAK ;
 %<actv%>%<past%>:k V_PAST_STRONG ;
+%<actv%>:h  V_NUT ;
 
 LEXICON V_NAURAA
 
@@ -842,6 +864,8 @@ LEXICON V_OLLA
 %<actv%>%<past%>:ol V_PAST_STRONG ;
 %<actv%>%<pres%>%<p3%>%<sg%>:on V_CLITS? ;
 %<actv%>%<pp%>%<sg%>%<nom%>:ollut V_CLITS? ;
+%<actv%>%<past%>%<sg%>%<conneg%>:ollut # ;
+%<actv%>%<past%>%<pl%>%<conneg%>:olleet # ;
 
 LEXICON V_TAPAHTUA
 %<inf%>:tua # ;
@@ -851,6 +875,39 @@ LEXICON V_TAPAHTUA
 %<pasv%>%<pres%>:du V_PASSIVE_T ;
 %<actv%>%<past%>:du V_PAST_WEAK ;
 %<actv%>%<past%>:tu V_PAST_STRONG ;
+
+LEXICON V_ALKAA
+%<inf%>:k%{A%}%{A%}  # ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:k%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:%{A%} V_PRESENT_SG3_A ;
+%<pasv%>%<pres%>:e V_PASSIVE_T ;
+%<actv%>%<past%>:%{O%} V_PAST_WEAK ;
+%<actv%>%<past%>:k%{O%} V_PAST_STRONG ;
+
+LEXICON V_SATAA
+%<inf%>:t%{A%}%{A%}  # ;
+%<actv%>%<pres%>:d%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_SG3_A ;
+%<actv%>%<past%>:d%{O%} V_PAST_WEAK ;
+%<actv%>%<past%>:t%{O%} V_PAST_STRONG ;
+
+LEXICON V_YMMÄRTÄÄ
+%<inf%>:t%{A%}%{A%}  # ;
+%<actv%>%<pres%>:r%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:t%{A%} V_PRESENT_SG3_A ;
+%<actv%>%<past%>:s V_PAST_WEAK ;
+%<actv%>%<past%>:s V_PAST_STRONG ;
+
+LEXICON V_PELÄTÄ
+%<inf%>:%{A%}t%{A%}  # ;
+%<actv%>%<pres%>:k%{A%}%{A%} V_PRESENT_WEAK ;
+%<actv%>%<pres%>:k%{A%}%{A%} V_PRESENT_STRONG ;
+%<actv%>%<pres%>:k%{A%} V_PRESENT_SG3_A ;
+%<actv%>%<past%>:k%{A%}s V_PAST_WEAK ;
+%<actv%>%<past%>:k%{A%}s V_PAST_STRONG ;
 
 LEXICON V_PRESENT_WEAK
 
@@ -1126,8 +1183,10 @@ eläin%<n%>:eläi N_ELÄIN ; ! "animal"
 hilla%<n%>:hill N_TARHA ; ! "cloudberry"
 ihminen%<n%>:ihmi N_LEIKKIMINEN ; ! "hyman"
 ikkuna%<n%>:ikkun N_IKKUNA ; ! "window"
+ilta%<n%>:il N_ILTA ; ! "evening"
 kissa%<n%>:kiss N_TARHA ; ! "cat"
 koira%<n%>:koir N_KOIRA ; ! "dog"
+koti%<n%>:ko N_ÄITI ; ! "home"
 kysymys%<n%>:kysymy N_VASTAUS ; ! "question"
 kesä%<n%>:kes N_KOIRA ; ! "summer"
 käsi%<n%>:kä N_KÄSI ; ! "hand"
@@ -1146,6 +1205,7 @@ puu%<n%>:pu N_PUU ; ! "tree"
 puutarha%<n%>:puutarh N_TARHA ; ! "garden"
 pää%<n%>:pä N_SÄÄ ; ! "tree"
 pöytä%<n%>:pöy N_PÖYTÄ ; ! "table"
+ranta%<n%>:ran N_RANTA ; ! "coast"
 silmä%<n%>:silm N_KOIRA ; ! "eye"
 sisko%<n%>:sisko N_TALO ; ! "sister"
 syy%<n%>:sy N_PUU ; ! "tree"
@@ -1209,6 +1269,7 @@ Jaakko%<np%>%<ant%>%<m%>:Jaak PROPN_JAAKKO ;
 LEXICON Verbs
 
 ajatella%<vblex%>:ajat V_AJATELLA ; ! "think"
+alkaa%<vblex%>:al V_ALKAA ; ! "think"
 0 V_NEG ; ! "no"
 etsiä%<vblex%>:ets V_ETSIÄ ; ! "search"
 haluta%<vblex%>:halu V_HALUTA ; ! "want"
@@ -1237,9 +1298,11 @@ olla%<vblex%>:0  V_OLLA ; ! "be / have"
 osata%<vblex%>:osa V_HALUTA ; ! "know"
 puhua%<vblex%>:puhu V_ISTUA ; ! "speak"
 pystyä%<vblex%>:pysty V_ISTUA ; ! "can"
+pelätä%<vblex%>:pel V_PELÄTÄ ; ! "be afraid"
 pitää%<vblex%>:pi V_LÖYTÄÄ ; ! "like"
 saada%<vblex%>:sa V_SAADA ; ! "get"
 sanoa%<vblex%>:sano V_KATSOA ; ! "say"
+sataa%<vblex%>:sa V_SATAA ; ! "rain"
 syödä%<vblex%>:s V_SYÖDÄ ; ! "eat"
 tehdä%<vblex%>:te V_NÄHDÄ ; ! "do"
 tietää%<vblex%>:tie V_TIETÄÄ ; ! "know"
@@ -1254,7 +1317,7 @@ voida%<vaux%>:vo V_VOIDA ; ! "can"
 yrittää%<vblex%>:yrit V_LOPETTAA ; ! "try"
 ottaa%<vblex%>:ot V_LOPETTAA ; ! "take"
 nousta%<vblex%>:nous  V_NOUSTA ;
-ymmärtää%<%>:ymmär V_YMMÄRTÄÄ ;
+ymmärtää%<vblex%>:ymmär V_YMMÄRTÄÄ ;
 voittaa%<%>:voit V_LOPETTAA ;
 viskata%<%>:viskasi V_HALUTA ;
 vilkaista%<%>:vilkais V_VILKAISTA ;
@@ -1361,6 +1424,7 @@ luokse%<post%>:luokse N_CLITS? ; ! "towards"
 lähellä%<post%>:lähellä # ; ! "close"
 lähemmäksi%<post%>:lähemmäksi # ; ! "closer"
 läpi%<post%>:läpi # ; ! "through"
+mukaan%<post%>:mukaan # ; "according to"
 pois%<post%>:pois # ; ! "away"
 sisällä%<post%>:sisällä # ; ! "inside"
 takaa%<post%>:takaa # ; ! "behind"
