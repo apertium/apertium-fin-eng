@@ -12,6 +12,7 @@ Multichar_Symbols
 %<cnjcoo%> ! Co-ordinating conjunction
 %<cnjsub%> ! Sub-ordinating conjunction
 %<sent%> ! Sentence-ending punctuation	 e.g. full stop, question mark
+%<num%> ! Numeral
 
 %<sg%> ! Singular
 %<pl%> ! Plural
@@ -313,7 +314,8 @@ LEXICON N_VASTAUS
 
 LEXICON N_TARHA
 
-%<sg%>%<nom%>:a  N_POSSES? ;
+%<sg%>%<nom%>:%{A%} N_POSSES? ;
+%<sg%>%<par%>:%{A%}%{A%} N_POSSES? ;
 0:a N_SINGULARS_WEAK ;
 0:a N_SINGULARS_STRONG ;
 0:a N_SINGULAR_ILLATIVE_AN ;
@@ -379,6 +381,66 @@ LEXICON N_KOIRA
 0:%{A%} N_SINGULARS_WEAK ;
 0:%{A%} N_SINGULARS_STRONG ;
 0:%{A%} N_SINGULAR_ILLATIVE_AN ;
+0 N_PLURALS_WEAK ;
+0 N_PLURALS_STRONG ;
+0 N_PLURAL_PARTITIVE_IA ;
+0 N_PLURAL_GENITIVE_IEN ;
+0 N_PLURAL_ILLATIVE_IIN ;
+
+LEXICON N_AALTO
+%<sg%>%<nom%>:to N_POSSES? ;
+%<sg%>%<par%>:toa N_POSSES? ;
+0:lo N_SINGULARS_WEAK ;
+0:to N_SINGULARS_STRONG ;
+0:to N_SINGULAR_ILLATIVE_ON ;
+0:lo N_PLURALS_WEAK ;
+0:to N_PLURALS_STRONG ;
+0:to N_PLURAL_PARTITIVE_JA ;
+0:to N_PLURAL_GENITIVE_JEN ;
+0:to N_PLURAL_ILLATIVE_IHIN ;
+
+LEXICON N_VENE
+%<sg%>%<nom%>:0 N_POSSES? ;
+%<sg%>%<par%>:tt%{A%} N_POSSES? ;
+0:e N_SINGULARS_WEAK ;
+0:e N_SINGULARS_STRONG ;
+0:e N_SINGULAR_ILLATIVE_SEEN ;
+0:e N_PLURALS_WEAK ;
+0:e N_PLURALS_STRONG ;
+0:e N_PLURAL_PARTITIVE_ITA ;
+0:e N_PLURAL_GENITIVE_IDEN ;
+0:eis N_PLURAL_ILLATIVE_IIN ;
+
+LEXICON N_TUPA
+%<sg%>%<nom%>:pa N_POSSES? ;
+%<sg%>%<par%>:paa N_POSSES? ;
+0:va N_SINGULARS_WEAK ;
+0:pa N_SINGULARS_STRONG ;
+0:pa N_SINGULAR_ILLATIVE_AN ;
+0:v N_PLURALS_WEAK ;
+0:p N_PLURALS_STRONG ;
+0:p N_PLURAL_PARTITIVE_IA ;
+0:p N_PLURAL_GENITIVE_IEN ;
+0:p N_PLURAL_ILLATIVE_IIN ;
+
+LEXICON N_MAAKRAPU
+%<sg%>%<nom%>:pu N_POSSES? ;
+%<sg%>%<par%>:pua N_POSSES? ;
+0:vu N_SINGULARS_WEAK ;
+0:pu N_SINGULARS_STRONG ;
+0:pu N_SINGULAR_ILLATIVE_UN ;
+0:vu N_PLURALS_WEAK ;
+0:pu N_PLURALS_STRONG ;
+0:pu N_PLURAL_PARTITIVE_JA ;
+0:pu N_PLURAL_GENITIVE_JEN ;
+0:pu N_PLURAL_ILLATIVE_IHIN ;
+
+LEXICON N_VERI
+%<sg%>%<nom%>:i N_POSSES? ;
+%<sg%>%<par%>:ta N_POSSES? ;
+0:e N_SINGULARS_WEAK ;
+0:e N_SINGULARS_STRONG ;
+0:e N_SINGULAR_ILLATIVE_EN ;
 0 N_PLURALS_WEAK ;
 0 N_PLURALS_STRONG ;
 0 N_PLURAL_PARTITIVE_IA ;
@@ -475,6 +537,11 @@ LEXICON N_PLURAL_GENITIVE_IEN
 
 %<pl%>%<gen%>:ie N_POSSES ;
 %<pl%>%<gen%>:ien N_CLITS? ;
+
+LEXICON N_PLURAL_GENITIVE_IDEN
+
+%<pl%>%<gen%>:ide N_POSSES ;
+%<pl%>%<gen%>:iden N_CLITS? ;
 
 LEXICON N_PLURAL_ILLATIVE_IHIN
 
@@ -776,6 +843,15 @@ LEXICON V_OLLA
 %<actv%>%<pres%>%<p3%>%<sg%>:on V_CLITS? ;
 %<actv%>%<pp%>%<sg%>%<nom%>:ollut V_CLITS? ;
 
+LEXICON V_TAPAHTUA
+%<inf%>:tua # ;
+%<actv%>%<pres%>:tu V_PRESENT_WEAK ;
+%<actv%>%<pres%>:tu V_PRESENT_STRONG ;
+%<actv%>%<pres%>:tu V_PRESENT_SG3_U ;
+%<pasv%>%<pres%>:du V_PASSIVE_T ;
+%<actv%>%<past%>:du V_PAST_WEAK ;
+%<actv%>%<past%>:tu V_PAST_STRONG ;
+
 LEXICON V_PRESENT_WEAK
 
 %<p1%>%<sg%>:n   V_CLITS? ;
@@ -849,6 +925,7 @@ LEXICON V_NUT
 %<pp%>:nee N_SINGULARS_STRONG ;
 %<past%>%<sg%>%<conneg%>:n%{U%}t # ;
 %<past%>%<pl%>%<conneg%>:neet    # ;
+
 
 LEXICON V_COND
 
@@ -1043,6 +1120,7 @@ LEXICON NUM_KUUSI
 
 LEXICON Nouns
 
+aalto%<n%>:aal N_AALTO ; ! "wave"
 aika%<n%>:a N_AIKA ; ! "time"
 eläin%<n%>:eläi N_ELÄIN ; ! "animal"
 hilla%<n%>:hill N_TARHA ; ! "cloudberry"
@@ -1058,6 +1136,8 @@ laskeminen%<n%>:laskemi N_LEIKKIMINEN ; ! "counting"
 leikki%<n%>:leik N_LEIKKI ; ! "play"
 leikkiminen%<n%>:leikkimi N_LEIKKIMINEN ; ! "play"
 lintu%<n%>:lin N_LINTU ; ! "bird"
+maakrapu%<n%>:maakra N_MAAKRAPU ; ! "landlubber"
+maili%<n%>:mail N_TUOLI ; ! "mile"
 marja%<n%>:marj N_TARHA ; ! "berry"
 matka%<n%>:matk N_TARHA ; ! "distance, travel"
 piilo%<n%>:piilo N_TALO ; ! "house"
@@ -1071,6 +1151,7 @@ sisko%<n%>:sisko N_TALO ; ! "sister"
 syy%<n%>:sy N_PUU ; ! "tree"
 sää%<n%>:sä N_SÄÄ ; ! "weather"
 talo%<n%>:talo N_TALO ; ! "house"
+tupa%<n%>:tu N_TUPA ; ! "cottage/room"
 tuoli%<n%>:tuol N_TUOLI ; ! "chair
 tyttö%<n%>:tyt N_TYTTÖ ; ! "girl"
 vaari%<n%>:vaar N_TUOLI ; ! "grandpa"
@@ -1083,15 +1164,18 @@ saari%<n%>:saar N_ÄÄNI ; ! "island"
 kettu%<n%>:kettu N_KETTU ; ! "fox news"
 tie%<%>:t N_TIE ;
 siili%<%>:siil N_SIILI ;
-pentua%<%>:pentua N_PENTU ;
+pentu%<%>:pentu N_PENTU ;
 maa%<%>:ma N_SÄÄ ;
 kivi%<%>:kiv N_ÄÄNI ;
 jalka%<%>:jal N_JALKA ;
-hiiri%<%>:Hiiri N_SIILI ;
+hiiri%<%>:hiiri N_SIILI ;
 yö%<%>:0 N_YÖ ;
 vieras%<%>:viera N_VIERAS ;
-veri%<%>:ver N_VERI ;
-vatsan%<%>:vats N_TARHA ;
+meri%<n%>:mer N_VERI ; ! "sea"
+vaimo%<n%>:vaimo N_TALO ; ! "wife"
+veri%<n%>:ver N_VERI ; ! "blood"
+vene%<n%>:vene N_VENE ; ! "boat"
+vatsa%<%>:vats N_TARHA ;
 varvas%<%>:var N_VARVAS ;
 varis%<%>:vari N_VASTAUS ;
 Emo%<%>:Emo # ;
@@ -1161,6 +1245,7 @@ tehdä%<vblex%>:te V_NÄHDÄ ; ! "do"
 tietää%<vblex%>:tie V_TIETÄÄ ; ! "know"
 kuulla%<vblex%>:kuul V_TULLA ; ! "come"
 luulla%<vblex%>:luul V_TULLA ; ! "knowthink"
+tapahtua%<vblex%>:tapah V_TAPAHTUA ; ! "happen/occur"
 tuulla%<vblex%>:tuul V_TULLA ; ! "(wind) blow"
 tulla%<vblex%>:tul V_TULLA ; ! "come"
 täytyä%<vaux%>:täy V_TÄYTYÄ ; ! "must"
@@ -1254,6 +1339,7 @@ alta%<pr%>:alta # ; ! "under"
 edessä%<pr%>:edessä # ; ! "front"
 eteen%<po%>:eteen # ;
 luokse%<pr%>:luokse N_CLITS? ; ! "towards"
+luona%<pr%>:luona N_CLITS? ; ! "next to/by"
 lähellä%<pr%>:lähellä # ; ! "close"
 lähemmäksi%<pr%>:lähemmäksi # ; ! "closer"
 läpi%<pr%>:läpi # ; ! "through"
@@ -1264,6 +1350,7 @@ ulos%<pr%>:ulos # ; ! "out"
 varrella%<pr%>:varrella # ;
 viereensä%<pr%>:viereensä # ;
 vieressä%<pr%>:vieressä # ;
+yli%<pr%>:yli # ;
 
 alas%<post%>:alas # ; ! ""
 alle%<post%>:alle # ; ! "under"
