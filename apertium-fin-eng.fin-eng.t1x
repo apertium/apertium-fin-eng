@@ -122,7 +122,7 @@
           <choose>
             <when>
               <test><or> <!-- Nom/Acc and locative cases -->
-                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>
+                <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>-->
                 <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>-->
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ela"/></equal>
