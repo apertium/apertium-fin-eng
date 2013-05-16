@@ -98,14 +98,6 @@
             <clip pos="2" part="tags"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
-          <b/>
-          <chunk>
-            <lit v="^of"/>
-            <lit-tag v="PREP"/>
-            <lit v="{^of"/>
-            <lit-tag v="pr"/>
-            <lit v="$}"/>
-          </chunk>
           <b pos="1"/>
           <chunk>
             <clip pos="1" part="lem"/>
