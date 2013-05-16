@@ -490,6 +490,29 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: vbolla">
+      <pattern>
+         <pattern-item n="vbolla"/>
+      </pattern>
+      <action>
+        <out> 
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+          <lu>
+            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="1" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: verb-pres">
       <pattern>
          <pattern-item n="verb-pres"/>
