@@ -382,11 +382,11 @@ LEXICON Conjunctions
 and%<cnjcoo%>:and # ; ! ""
 but%<cnjcoo%>:but # ; ! ""
 or%<cnjcoo%>:or # ; ! ""
+that%<cnjsub%>:that # ; ! ""
 
 LEXICON Prepositions
 to%<pr%>:to # ; ! ""
 in%<pr%>:in # ; ! ""
-that%<pr%>:that # ; ! ""
 now%<pr%>:now # ; ! ""
 of%<pr%>:of # ; ! ""
 with%<pr%>:with # ; ! ""
