@@ -1301,6 +1301,7 @@ puhua%<vblex%>:puhu V_ISTUA ; ! "speak"
 pystyä%<vblex%>:pysty V_ISTUA ; ! "can"
 pelätä%<vblex%>:pel V_PELÄTÄ ; ! "be afraid"
 pitää%<vblex%>:pi V_LÖYTÄÄ ; ! "like"
+saada%<vaux%>:sa V_SAADA ; ! "can"
 saada%<vblex%>:sa V_SAADA ; ! "get"
 sanoa%<vblex%>:sano V_KATSOA ; ! "say"
 sataa%<vblex%>:sa V_SATAA ; ! "rain"
@@ -1374,10 +1375,10 @@ missä%<prn%>:missä # ; ! "where"
 minne%<prn%>:minne # ; ! "where"
 miksi%<prn%>:miksi # ; ! "where"
 mitä%<prn%>:mitä # ; ! " "
-mitään%<prn%>:mitään # ; ! " "
-jotain%<prn%>:jotain # ;
+mitään%<prn%>%<sg%>%<par%>:mitään # ; ! " "
+jotain%<prn%>%<sg%>%<par%>:jotain # ;
 muu%<prn%>:muu # ;
-molemmat%<prn%>:molemmat # ;
+molemmat%<prn%>%<pl%>%<nom%>:molemmat # ;
 itselleen%<%>:itselleen # ;
 jonkinlaisen%<%>:jonkinlaisen # ;
 joka%<%>:joka # ;

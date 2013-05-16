@@ -171,7 +171,7 @@
     <e><p><l>pystyä<s n="vblex"/></l><r>can<s n="vblex"/></r></p></e>
     <e><p><l>pää<s n="n"/></l><r>head<s n="n"/></r></p></e>
     <e><p><l>pöytä<s n="n"/></l><r>table<s n="n"/></r></p></e>
-    <e><p><l>saada<s n="vblex"/></l><r>can<s n="vblex"/></r></p></e>
+    <e><p><l>saada<s n="vaux"/></l><r>can<s n="vaux"/></r></p></e>
     <e><p><l>saada<s n="vblex"/></l><r>get<s n="vblex"/></r></p></e>
     <e><p><l>sanoa<s n="vblex"/></l><r>say<s n="vblex"/></r></p></e>
     <e><p><l>se<s n="prn"/></l><r>it<s n="prn"/></r></p></e>

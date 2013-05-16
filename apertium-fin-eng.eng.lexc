@@ -127,6 +127,7 @@ chair%<n%>:chair N ; ! ""
 boy%<n%>:boy N ; ! ""
 bird%<n%>:bird N ; ! ""
 animal%<n%>:animal N ; ! ""
+human%<n%>:human N ; ! 
 
 LEXICON V
 %<inf%>:0 # ;
