@@ -299,9 +299,7 @@
             </tags>
             <lu>
                 <lit v="do"/>
-                <lit-tag v="vblex"/>
-                <lit-tag v="actv"/>
-                <lit-tag v="pres"/>
+                <lit-tag v="vblex.actv.pres"/>
                 <clip pos="1" side="tl" part="a_pers"/>
                 <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
@@ -314,7 +312,6 @@
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_verb"/>
-              <lit-tag v="actv"/>
               <lit-tag v="pres"/>
             </lu>
           </chunk>
