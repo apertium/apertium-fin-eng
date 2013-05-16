@@ -4,6 +4,7 @@ Multichar_Symbols
 %<n%>   ! Имя существительное · Noun
 %<vblex%> ! lexical verb
 %<adj%> ! adjective
+%<num%> ! numeral
 %<adv%> ! adverb
 %<prn%> ! pronoun 
 %<pr%> ! adposition
@@ -408,6 +409,7 @@ not%<adv%>:not # ; ! ""
 also%<adv%>:also # ; ! ""
 very%<adv%>:very # ; ! ""
 really%<adv%>:really # ; ! ""
+obviously%<adv%>:obviously # ; ! ""
 then%<adv%>:then # ; ! ""
 no%<adv%>:no # ; ! ""
 yesterday%<adv%>:yesterday # ; ! ""
