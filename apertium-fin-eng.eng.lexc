@@ -416,6 +416,7 @@ that%<cnjsub%>:that # ; ! ""
 LEXICON Prepositions
 to%<pr%>:to # ; ! ""
 in%<pr%>:in # ; ! ""
+near%<pr%>:near # ; ! ""
 of%<pr%>:of # ; ! ""
 with%<pr%>:with # ; ! ""
 inside%<pr%>:inside # ; ! ""
@@ -463,6 +464,7 @@ never%<adv%>:never # ; ! ""
 closer%<adv%>:closer # ; ! ""
 carefully%<adv%>:carefully # ; ! ""
 near%<adv%>:near # ; ! "" 
+around%<adv%>:around # ; ! "" 
 
 another%<adv%>:another # ; ! "" ! Determiner/Pronoun
 some%<adv%>:some # ; ! "" ! Determiner/Pronoun
@@ -491,9 +493,12 @@ LEXICON A_NICE
 LEXICON Adjectives
 cold%<adj%>%<sint%>:cold A_OLD ; ! ""
 little%<adj%>:little # ; ! ""
+fun%<adj%>:fun # ; ! ""
+finished%<adj%>:finished # ; ! ""
 big%<adj%>%<sint%>:big A_BIG ; ! ""
 old%<adj%>%<sint%>:old A_OLD ; ! ""
 happy%<adj%>%<sint%>:happ A_HAPPY ; ! ""
+funny%<adj%>%<sint%>:funn A_HAPPY ; ! ""
 warm%<adj%>%<sint%>:warm A_OLD ; ! ""
 small%<adj%>%<sint%>:small A_OLD ; ! ""
 nice%<adj%>%<sint%>:nic A_NICE ; ! ""
