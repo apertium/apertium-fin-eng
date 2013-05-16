@@ -14,6 +14,9 @@
       <cat-item lemma="voida" tags="*.*.*.conneg"/>
       <cat-item lemma="olla" tags="*.*.*.conneg"/>
     </def-cat>
+    <def-cat n="adneg">
+        <cat-item lemma="koskaan" tags="adv"/>
+    </def-cat>
 
     <def-cat n="pron-pers">
         <cat-item tags="prn.pers.*"/>
@@ -358,6 +361,44 @@
     </rule>
 
 
+    <rule comment="REGLA: neg-verb nega conneg">
+      <pattern>
+          <pattern-item n="neg-verb"/>
+          <pattern-item n="adneg"/>
+         <pattern-item n="conneg_nottable"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
+     
+        <out> 
+          <chunk name="notted" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+          <lu>
+            <clip pos="3" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="3" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="3" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          <b pos="1"/> <!-- space character between words -->
+          <lu>
+            <lit v="not"/> <!-- not -->
+            <lit-tag v="adv"/> <!-- adv -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
     <rule comment="REGLA: neg-verb conneg">
       <pattern>
          <pattern-item n="neg-verb"/>
