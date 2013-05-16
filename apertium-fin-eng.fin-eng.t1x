@@ -37,6 +37,9 @@
     <def-cat n="vbneg">
         <cat-item tags="vblex.neg.*.*.*"/>
     </def-cat>
+    <def-cat n="post">
+      <cat-item tags="post"/>
+    </def-cat>
     <def-cat n="num">
       <cat-item tags="num.*"/>
     </def-cat>
@@ -115,6 +118,7 @@
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="sntype"/>
     <def-var n="current_verb"/>
   </section-def-vars>
   <section-def-macros>
@@ -134,6 +138,12 @@
         </or></test>
 
               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
+              <let><var n="sntype"/><lit-tag v="SN"/></let>
+            </when>
+            <when>
+              <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></equal></test>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
+              <let><var n="sntype"/><lit-tag v="SN.GEN"/></let>
             </when>
           </choose>
     </def-macro>
@@ -187,7 +197,7 @@
         <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="sntype"/></tag>
               <tag><clip pos="1" side="sl" part="a_cas"/></tag>
             </tags>
             <lu>
@@ -234,7 +244,7 @@
         <out>
           <chunk name="j_n" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="sntype"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -529,6 +539,24 @@
       </action>
     </rule>
 
+
+    <rule comment="REGLA: POST">
+      <pattern>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="post" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="POST"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: SENT">
       <pattern>

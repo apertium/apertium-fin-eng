@@ -2,9 +2,16 @@
 <!-- -*- nxml -*- -->
 <interchunk>
   <section-def-cats>
+    <def-cat n="SN-GEN">
+      <cat-item tags="SN.GEN"/>
+      <cat-item tags="SN.GEN.*"/>
+    </def-cat>
     <def-cat n="SN">
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
+    </def-cat>
+    <def-cat n="POST">
+      <cat-item tags="POST"/>
     </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
@@ -79,6 +86,37 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+    <rule comment="REGLA: SN-GEN POST">
+      <pattern>
+        <pattern-item n="SN-GEN"/>
+        <pattern-item n="POST"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b/>
+          <chunk>
+            <lit v="^of"/>
+            <lit-tag v="PREP"/>
+            <lit v="{^of"/>
+            <lit-tag v="pr"/>
+            <lit v="$}"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: SN">
       <pattern>
         <pattern-item n="SN"/>
