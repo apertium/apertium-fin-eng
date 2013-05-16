@@ -1415,6 +1415,7 @@ varrella%<pr%>:varrella # ;
 viereensä%<pr%>:viereensä # ;
 vieressä%<pr%>:vieressä # ;
 yli%<pr%>:yli # ;
+kanssa%<pr%>:kanssa # ; ! "with"
 
 alas%<post%>:alas # ; ! ""
 alle%<post%>:alle # ; ! "under"
@@ -1433,6 +1434,7 @@ ulos%<post%>:ulos # ; ! "out"
 varrella%<post%>:varrella # ;
 viereensä%<post%>:viereensä # ;
 vieressä%<post%>:vieressä # ;
+kanssa%<post%>:kanssa # ; ! "with"
 
 LEXICON Adverbs
 
@@ -1464,7 +1466,6 @@ tietenkään%<adv%>:tietenkään # ;  ! ""
 tänään%<adv%>:tänään # ; ! "today"
 ulkona%<adv%>:ulkona # ; ! "outside"
 yhdessä%<adv%>:yhdessä # ; ! "together"
-kanssa%<adv%>:kanssa # ; ! "with"
 ympärilleen%<adv%>:ympärilleen # ;
 niinpä%<adv%>:niinpä # ;
 yhä%<adv%>:yhä # ;

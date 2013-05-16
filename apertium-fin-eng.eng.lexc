@@ -389,7 +389,6 @@ that%<cnjsub%>:that # ; ! ""
 LEXICON Prepositions
 to%<pr%>:to # ; ! ""
 in%<pr%>:in # ; ! ""
-now%<pr%>:now # ; ! ""
 of%<pr%>:of # ; ! ""
 with%<pr%>:with # ; ! ""
 inside%<pr%>:inside # ; ! ""
@@ -408,6 +407,7 @@ LEXICON Adverbs
 where%<adv%>%<itg%>:where # ; ! ""
 when%<adv%>%<itg%>:when # ; ! ""
 why%<adv%>%<itg%>:why # ; ! ""
+now%<adv%>:now # ; ! ""
 
 not%<adv%>:not # ; ! ""
 also%<adv%>:also # ; ! ""

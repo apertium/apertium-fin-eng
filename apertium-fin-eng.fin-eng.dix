@@ -87,7 +87,8 @@
     <e><p><l>kaksi<s n="num"/></l><r>two<s n="num"/></r></p></e>
     <e><p><l>kahden<s n="adv"/></l><r>together<s n="adv"/></r></p></e>
     <e><p><l>kaikkialle<s n="adv"/></l><r>everywhere<s n="adv"/></r></p></e>
-    <e><p><l>kanssa<s n="adv"/></l><r>with<s n="adv"/></r></p></e>
+    <e><p><l>kanssa<s n="pr"/></l><r>with<s n="pr"/></r></p></e>
+    <e><p><l>kanssa<s n="post"/></l><r>with<s n="pr"/></r></p></e>
     <e><p><l>katsoa<s n="vblex"/></l><r>look<s n="vblex"/></r></p></e>
     <e><p><l>katsoa<s n="vblex"/></l><r>watch<s n="vblex"/></r></p></e>
     <e><p><l>kertoa<s n="vblex"/></l><r>tell<s n="vblex"/></r></p></e>
