@@ -151,54 +151,63 @@ LEXICON V_BE
 %<ger%>:being # ;
 
 LEXICON V_HAVE
+%<inf%>:have # ;
 %<actv%>%<pres%>:have # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:has # ;
 %<actv%>%<past%>:had # ;
 %<ger%>:having # ;
 
 LEXICON V_DO
+%<inf%>:do # ;
 %<actv%>%<pres%>:do # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:does # ;
 %<actv%>%<past%>:did # ;
 %<ger%>:doing # ;
 
 LEXICON V_SEE
+%<inf%>:see # ;
 %<actv%>%<pres%>:see # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sees # ;
 %<actv%>%<past%>:saw # ;
 %<ger%>:seeing # ;
 
 LEXICON V_TELL
+%<inf%>:tell # ;
 %<actv%>%<pres%>:tell # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:tells # ;
 %<actv%>%<past%>:told # ;
-%<ger%>:telling # ;
+%<actv%>%<ger%>:telling # ;
 
 LEXICON V_SIT
+%<inf%>:sit # ;
 %<actv%>%<pres%>:sit # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sits # ;
 %<actv%>%<past%>:sat # ;
 %<ger%>:sitting # ;
 
 LEXICON V_KNOW
+%<inf%>:know # ;
 %<actv%>%<pres%>:know # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:knows # ;
 %<actv%>%<past%>:knew # ;
 %<ger%>:knowing # ;
 
 LEXICON V_SEARCH
+%<inf%>:0 # ;
 %<actv%>%<pres%>:0 # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:es # ;
 %<actv%>%<past%>:ed # ;
 %<ger%>:ing # ;
 
 LEXICON V_RUN
+%<inf%>:run # ;
 %<actv%>%<pres%>:run # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:runs # ;
 %<actv%>%<past%>:ran # ;
 %<ger%>:running # ;
 
 LEXICON V_REPLY
+%<inf%>:y # ;
 %<actv%>%<pres%>:y # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:ies # ;
 %<actv%>%<past%>:ied # ;
