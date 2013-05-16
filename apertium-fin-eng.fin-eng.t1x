@@ -267,6 +267,44 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: neg-verb nega conneg">
+      <pattern>
+         <pattern-item n="neg-verb"/>
+         <pattern-item n="adneg"/>
+         <pattern-item n="conneg"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
+     
+        <out> 
+          <chunk name="notted" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+          <lu>
+              <clip pos="2" side="tl" part="whole"/>
+          </lu>
+          <b pos="1"/> <!-- space character between words -->
+          <lu>
+            <clip pos="3" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="3" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
     <rule comment="REGLA: vbolla inf-ine">
       <pattern>
         <pattern-item n="vbolla"/>
@@ -360,45 +398,6 @@
       </action>
     </rule>
 
-
-    <rule comment="REGLA: neg-verb nega conneg">
-      <pattern>
-          <pattern-item n="neg-verb"/>
-          <pattern-item n="adneg"/>
-         <pattern-item n="conneg_nottable"/>
-      </pattern>
-      <action>
-        <choose>
-          <when>
-            <test>
-              <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
-            </test>
-            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
-          </when>
-        </choose>
-     
-        <out> 
-          <chunk name="notted" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-            </tags>
-          <lu>
-            <clip pos="3" side="tl" part="lem"/> <!-- know --> 
-            <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="3" side="tl" part="tense"/> <!-- pres -->
-            <clip pos="3" side="tl" part="person"/> <!-- p3 --> 
-            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
-          </lu>
-          <b pos="1"/> <!-- space character between words -->
-          <lu>
-            <lit v="not"/> <!-- not -->
-            <lit-tag v="adv"/> <!-- adv -->
-          </lu>
-          </chunk>
-        </out>      
-      </action>
-    </rule>
     <rule comment="REGLA: neg-verb conneg">
       <pattern>
          <pattern-item n="neg-verb"/>
