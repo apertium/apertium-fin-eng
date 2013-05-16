@@ -72,7 +72,7 @@
     <e><p><l>iso<s n="adj"/></l><r>great<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>large<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>istua<s n="vblex"/></l><r>sit<s n="vblex"/></r></p></e>
-    <e><p><l>Jaakko<s n="np"/></l><r>James<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+    <e><p><l>Jaakko<s n="np"/><s n="ant"/><s n="m"/></l><r>James<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>and<s n="cnjcoo"/></r></p></e>
     <e><p><l>jotain<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
     <e><p><l>juoda<s n="vblex"/></l><r>drink<s n="vblex"/></r></p></e>
@@ -121,7 +121,7 @@
     <e><p><l>läpi<s n="pr"/></l><r>through<s n="pr"/></r></p></e>
     <e><p><l>läpi<s n="post"/></l><r>through<s n="pr"/></r></p></e>
     <e><p><l>löytää<s n="vblex"/></l><r>find<s n="vblex"/></r></p></e>
-    <e><p><l>Mari<s n="np"/></l><r>Mary<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+    <e><p><l>Mari<s n="np"/><s n="ant"/><s n="f"/></l><r>Mary<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>mennä<s n="vblex"/></l><r>go<s n="vblex"/></r></p></e>
     <e><p><l>menossa<s n="adv"/></l><r>go<s n="adv"/></r></p></e>
     <e><p><l>me<s n="prn"/></l><r>we<s n="prn"/></r></p></e>

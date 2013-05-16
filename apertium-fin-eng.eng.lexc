@@ -17,6 +17,7 @@ Multichar_Symbols
 %<pl%> ! Plural
 
 %<sint%>  ! Synthetic
+%<ger%>  ! Gerund
 
 %<nom%>  !Nominative    
 %<acc%>  !Accusative    
@@ -73,16 +74,16 @@ LEXICON Root
 
 LEXICON N
 
-%<sg%>:0 # ;
+%<sg%>%<nom%>:0 # ;
 %<sg%>%<gen%>:'s # ;
-%<pl%>:s # ;
+%<pl%>%<nom%>:s # ;
 %<pl%>%<gen%>:s' # ;
 
 LEXICON N_CHILDREN
 
-%<sg%>:0 # ;
+%<sg%>%<nom%>:0 # ;
 %<sg%>%<gen%>:'s # ;
-%<pl%>:ren # ;
+%<pl%>%<nom%>:ren # ;
 %<pl%>%<gen%>:ren's # ;
 
 LEXICON Nouns

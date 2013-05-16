@@ -14,7 +14,7 @@
       <program name="lt-proc -b">
         <file name="fin-eng.autobil.bin"/>
       </program>
-      <program name="lrx-proc -t">
+      <program name="lrx-proc">
         <file name="fin-eng.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">

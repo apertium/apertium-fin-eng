@@ -2,6 +2,10 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+
+    <def-cat n="inf-ine">
+      <cat-item tags="vblex.*.pres.inf.*.ine"/>
+    </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
     </def-cat>
@@ -16,6 +20,9 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_verb">
+      <attr-item tags="vblex"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
@@ -55,11 +62,11 @@
             <when>
               <test><or> <!-- Nom/Acc and locative cases -->
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>
-                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>
+                <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>-->
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ela"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abl"/></equal></or></test>
-              <let><clip pos="1" side="tl" part="a_cas"/><lit v=""/></let>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
             </when>
           </choose>
     </def-macro>
@@ -137,6 +144,32 @@
               <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="a_nbr"/>
               <clip pos="2" side="tl" part="a_cas"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: vbolla inf-ine">
+      <pattern>
+        <pattern-item n="vbolla"/>
+        <pattern-item n="inf-ine"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="be-ger" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_verb"/>
+              <lit-tag v="ger"/>
               <clip pos="2" side="tl" part="lemq"/>
             </lu>
           </chunk>
