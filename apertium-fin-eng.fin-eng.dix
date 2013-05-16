@@ -51,7 +51,7 @@
     <e><p><l>alle<s n="post"/></l><r>under<s n="pr"/></r></p></e>
     <e><p><l>edessä<s n="post"/></l><r>in<b/>front<s n="pr"/></r></p></e>
     <e><p><l>eilen<s n="adv"/></l><r>yesterday<s n="adv"/></r></p></e>
-    <e><p><l>ei<s n="vblex"/></l><r>no<s n="vblex"/></r></p></e>
+    <e><p><l>ei<s n="vblex"/></l><r>no<s n="adv"/></r></p></e>
     <e><p><l>eläin<s n="n"/></l><r>animal<s n="n"/></r></p></e>
     <e><p><l>erittäin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
     <e><p><l>etsiä<s n="vblex"/></l><r>search<s n="vblex"/></r></p></e>
@@ -194,7 +194,7 @@
     <e><p><l>ulkona<s n="adv"/></l><r>outside<s n="pr"/></r></p></e>
     <e><p><l>ulos<s n="pr"/></l><r>out<s n="pr"/></r></p></e>
     <e><p><l>ulos<s n="post"/></l><r>out<s n="pr"/></r></p></e>
-    <e><p><l>vaikka<s n="cnjsub"/></l><r>when<s n="cnjsub"/></r></p></e>
+    <e><p><l>vaikka<s n="cnjsub"/></l><r>although<s n="cnjsub"/></r></p></e>
     <e><p><l>vanha<s n="adj"/></l><r>old<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>vastata<s n="vblex"/></l><r>answer<s n="vblex"/></r></p></e>
     <e><p><l>vastaus<s n="n"/></l><r>answer<s n="n"/></r></p></e>
@@ -202,8 +202,7 @@
     <e><p><l>viisi<s n="num"/></l><r>five<s n="num"/></r></p></e>
     <e><p><l>voida<s n="vaux"/></l><r>can<s n="vaux"/></r></p></e>
     <e><p><l>vuosi<s n="n"/></l><r>year<s n="n"/></r></p></e>
-    <e><p><l>vähän<s n="pr"/></l><r>little<s n="pr"/></r></p></e>
-    <e><p><l>vähän<s n="post"/></l><r>little<s n="pr"/></r></p></e>
+    <e><p><l>vähän<s n="adv"/></l><r>little<s n="adj"/></r></p></e>
     <e><p><l>yhdessä<s n="adv"/></l><r>together<s n="adv"/></r></p></e>
     <e><p><l>yhä<s n="adv"/></l><r>still<s n="adv"/></r></p></e>
     <e><p><l>ympärilleen<s n="adv"/></l><r>around<s n="adv"/></r></p></e>

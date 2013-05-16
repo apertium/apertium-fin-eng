@@ -10,15 +10,23 @@
     <def-cat n="conneg"> <!-- tietää vblex.actv.pres.conneg -->
       <cat-item tags="vblex.*.*.conneg"/>
     </def-cat>
+    <def-cat n="conneg_nottable"> 
+      <cat-item lemma="voida" tags="*.*.*.conneg"/>
+      <cat-item lemma="olla" tags="*.*.*.conneg"/>
+    </def-cat>
 
     <def-cat n="inf-ine">
       <cat-item tags="vblex.*.pres.inf.*.ine"/>
+    </def-cat>
+    <def-cat n="vbneg">
+        <cat-item tags="vblex.neg.*.*.*"/>
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
@@ -44,6 +52,9 @@
     </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
+      <attr-item tags="np.ant"/>
+      <attr-item tags="np.ant.f"/>
+      <attr-item tags="np.ant.m"/>
     </def-attr>
     <def-attr n="a_adj">
       <attr-item tags="adj"/>
@@ -52,6 +63,11 @@
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
+    </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
     </def-attr>
     <def-attr n="a_gen">
       <attr-item tags="m"/>
@@ -69,7 +85,6 @@
       <attr-item tags="ill"/>
       <attr-item tags="gen"/>
     </def-attr>
-
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
@@ -92,34 +107,6 @@
   </section-def-macros>
   <section-rules>
 
-
-    <rule comment="REGLA: neg-verb conneg">
-      <pattern>
-         <pattern-item n="neg-verb"/>
-         <pattern-item n="conneg"/>
-      </pattern>
-      <action>
-        <out>      
-          <chunk name="be-ger" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-            </tags>
-          <lu>
-            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
-            <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
-            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
-          </lu>
-          <b pos="1"/> <!-- space character between words -->
-          <lu>
-            <lit v="not"/> <!-- not -->
-            <lit-tag v="adv"/> <!-- adv -->
-          </lu>
-          </chunk>
-        </out>      
-      </action>
-    </rule>
 
 
 
@@ -238,6 +225,69 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: neg-verb conneg">
+      <pattern>
+         <pattern-item n="neg-verb"/>
+         <pattern-item n="conneg_nottable"/>
+      </pattern>
+      <action>
+        <out>      
+          <chunk name="notted" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+          <lu>
+            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          <b pos="1"/> <!-- space character between words -->
+          <lu>
+            <lit v="not"/> <!-- not -->
+            <lit-tag v="adv"/> <!-- adv -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
+    <rule comment="REGLA: neg conneg">
+      <pattern>
+        <pattern-item n="vbneg"/>
+        <pattern-item n="conneg"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="negation" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+                <lit v="do"/>
+                <lit-tag v="vblex"/>
+                <lit-tag v="actv"/>
+                <lit-tag v="pres"/>
+                <clip pos="1" side="tl" part="a_pers"/>
+                <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+                <lit v="not"/>
+                <lit-tag v="adv"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_verb"/>
+              <lit-tag v="actv"/>
+              <lit-tag v="pres"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
