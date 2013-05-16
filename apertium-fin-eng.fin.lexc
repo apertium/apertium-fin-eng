@@ -47,6 +47,7 @@ Multichar_Symbols
 %<pprs%> ! present pcp
 %<cni%> !Conditional
 %<neg%> !Negative
+%<conneg%> !...
 %<px1sg%> !First person singular possessive
 %<px2sg%> !Second person singular possessive
 %<px1pl%> !First person plural possessive
@@ -519,8 +520,8 @@ ei%<vblex%>%<neg%>%<p1%>%<pl%>:emme # ;
 ei%<vblex%>%<neg%>%<p2%>%<pl%>:ette # ;
 ei%<vblex%>%<neg%>%<p3%>%<pl%>:eivät # ;
 ei%<vblex%>%<neg%>%<p3%>%<sg%>:älä # ;
-LEXICON V_VOIDA
 
+LEXICON V_VOIDA
 %<inf%>:ida # ;
 %<actv%>%<pres%>:i V_PRESENT_WEAK ;
 %<actv%>%<pres%>:i V_PRESENT_STRONG ;
@@ -773,6 +774,7 @@ LEXICON V_OLLA
 %<actv%>%<past%>:ol V_PAST_WEAK ;
 %<actv%>%<past%>:ol V_PAST_STRONG ;
 %<actv%>%<pres%>%<p3%>%<sg%>:on V_CLITS? ;
+%<actv%>%<pp%>%<sg%>%<nom%>:ollut V_CLITS? ;
 
 LEXICON V_PRESENT_WEAK
 
@@ -1163,7 +1165,7 @@ täytyä%<vaux%>:täy V_TÄYTYÄ ; ! "must"
 vastata%<vblex%>:vasta V_HALUTA ; ! "answer"
 voida%<vaux%>:vo V_VOIDA ; ! "can"
 yrittää%<vblex%>:yrit V_LOPETTAA ; ! "try"
-ottaa%<vblex%>:ottaa V_LOPETTAA ; ! "take"
+ottaa%<vblex%>:ot V_LOPETTAA ; ! "take"
 nousta%<vblex%>:nous  V_NOUSTA ;
 ymmärtää%<%>:ymmär V_YMMÄRTÄÄ ;
 voittaa%<%>:voit V_LOPETTAA ;
