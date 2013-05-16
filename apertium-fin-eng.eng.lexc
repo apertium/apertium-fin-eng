@@ -130,7 +130,7 @@ LEXICON V
 %<actv%>%<pres%>:0 # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:s # ;
 %<actv%>%<past%>:ed # ;
-%<ger%>:ing # ;
+%<actv%>%<ger%>:ing # ;
 
 LEXICON V_BE
 %<infv%>:be # ;

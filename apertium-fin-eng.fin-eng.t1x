@@ -94,15 +94,15 @@
       <attr-item tags="f"/>
     </def-attr>
     <def-attr n="a_cas">
-      <attr-item tags="nom"/>
-      <attr-item tags="acc"/>
       <attr-item tags="abl"/>
-      <attr-item tags="par"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="ela"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="ill"/>
       <attr-item tags="ine"/>
       <attr-item tags="ins"/>
-      <attr-item tags="abl"/>
-      <attr-item tags="ill"/>
-      <attr-item tags="gen"/>
+      <attr-item tags="nom"/>
+      <attr-item tags="par"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
