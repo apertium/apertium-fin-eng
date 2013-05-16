@@ -41,6 +41,11 @@ Multichar_Symbols
 %<m%> ! interrog
 %<f%> ! interrog
 %<np%> ! interrog
+%<pers%> ! interrog
+%<gen%> ! interrog
+%<det%> ! interrog
+%<pos%> ! interrog
+%<sp%> ! interrog
 
 ! Punctuation
 %<sent%>      ! Sentence marker
@@ -337,17 +342,23 @@ their%<det%>%<pos%>%<sp%>:their # ; ! ""
 LEXICON Pronouns
 
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<nom%>:I # ; ! ""
-me%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:me # ; ! ""
+I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:me # ; ! ""
+I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:mine # ; ! ""
 you%<prn%>%<pers%>%<p2%>%<mf%>%<sp%>%<nom%>:you # ; ! ""
 you%<prn%>%<pers%>%<p2%>%<mf%>%<sp%>%<acc%>:you # ; ! ""
+you%<prn%>%<pers%>%<p2%>%<mf%>%<sp%>%<gen%>:your # ; ! ""
 she%<prn%>%<pers%>%<p3%>%<f%>%<sg%>%<nom%>:she # ; ! ""
-her%<prn%>%<pers%>%<p3%>%<f%>%<sg%>%<acc%>:her # ; ! ""
+she%<prn%>%<pers%>%<p3%>%<f%>%<sg%>%<acc%>:her # ; ! ""
+she%<prn%>%<pers%>%<p3%>%<f%>%<sg%>%<gen%>:hers # ; ! ""
 it%<prn%>%<pers%>%<p3%>%<nt%>%<sg%>%<nom%>:it # ; ! ""
 it%<prn%>%<pers%>%<p3%>%<nt%>%<sg%>%<acc%>:it # ; ! ""
+it%<prn%>%<pers%>%<p3%>%<nt%>%<sg%>%<gen%>:its # ; ! ""
 he%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<nom%>:he # ; ! ""
-him%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<acc%>:him # ; ! ""
+he%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<acc%>:him # ; ! ""
+he%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<gen%>:his # ; ! ""
 they%<prn%>%<pers%>%<p3%>%<mf%>%<pl%>%<nom%>:they # ; ! ""
-them%<prn%>%<pers%>%<p3%>%<mf%>%<pl%>%<acc%>:them # ; ! ""
+they%<prn%>%<pers%>%<p3%>%<mf%>%<pl%>%<acc%>:them # ; ! ""
+they%<prn%>%<pers%>%<p3%>%<mf%>%<pl%>%<gen%>:their # ; ! ""
 
 theirs%<prn%>%<pos%>%<mf%>%<sp%>:theirs # ; ! ""
 his%<prn%>%<pos%>%<mf%>%<sp%>:his # ; ! ""

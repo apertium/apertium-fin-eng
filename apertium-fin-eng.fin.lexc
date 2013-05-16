@@ -847,6 +847,8 @@ LEXICON V_NUT
 %<pp%>%<sg%>%<nom%>:n%{U%}t N_CLITS? ;
 %<pp%>:nee N_SINGULARS_WEAK ;
 %<pp%>:nee N_SINGULARS_STRONG ;
+%<past%>%<sg%>%<conneg%>:n%{U%}t # ;
+%<past%>%<pl%>%<conneg%>:neet    # ;
 
 LEXICON V_COND
 

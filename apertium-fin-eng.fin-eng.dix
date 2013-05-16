@@ -26,6 +26,8 @@
     <sdef n="apos" 	c=""/> 
     <sdef n="itg" 	c="kysymys"/> 
     <sdef n="ant" 	c="muurahainen"/> 
+    <sdef n="p3" 	c="charmed"/> 
+    <sdef n="pers" 	c="e"/> 
     <sdef n="m" 	c="pojista"/> 
     <sdef n="f" 	c="tytöille"/> 
 
@@ -63,9 +65,10 @@
     <e><p><l>huolellisesti<s n="adv"/></l><r>carefully<s n="adv"/></r></p></e>
     <e><p><l>hyvin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
     <e><p><l>hyvä<s n="adj"/></l><r>nice<s n="adj"/><s n="sint"/></r></p></e>
-    <e><p><l>hän<s n="prn"/></l><r>he<s n="prn"/></r></p></e>
-    <e><p><l>hän<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
-    <e><p><l>hän<s n="prn"/></l><r>she<s n="prn"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
+            <r>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
+            <r>she<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/></r></p></e>
     <e><p><l>ihminen<s n="n"/></l><r>human<s n="n"/></r></p></e>
     <e><p><l>iloinen<s n="adj"/></l><r>happy<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>big<s n="adj"/><s n="sint"/></r></p></e>
@@ -107,7 +110,7 @@
     <e><p><l>laskea<s n="vblex"/></l><r>slide<b/>down<s n="vblex"/></r></p></e>
     <e><p><l>laskeminen<s n="n"/></l><r>count<s n="vblex"/></r></p></e>
     <e><p><l>leikkiminen<s n="n"/></l><r>play<s n="vblex"/></r></p></e>
-    <e><p><l>leikki<s n="n"/></l><r>play<s n="n"/></r></p></e>
+    <e><p><l>leikki<s n="n"/></l><r>game<s n="n"/></r></p></e>
     <e><p><l>leikkiä<s n="vblex"/></l><r>play<s n="vblex"/></r></p></e>
     <e><p><l>lintu<s n="n"/></l><r>bird<s n="n"/></r></p></e>
     <e><p><l>lopettanut<s n="adj"/></l><r>finished<s n="adj"/></r></p></e>
@@ -231,3 +234,4 @@
 
   </section>
 </dictionary>
+<!-- vim: set ft=xml : -->
