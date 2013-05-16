@@ -420,6 +420,8 @@ LEXICON Prepositions
 to%<pr%>:to # ; ! ""
 in%<pr%>:in # ; ! ""
 near%<pr%>:near # ; ! ""
+towards%<pr%>:towards # ; ! ""
+toward%<pr%>:toward # ; ! ""
 of%<pr%>:of # ; ! ""
 with%<pr%>:with # ; ! ""
 inside%<pr%>:inside # ; ! ""
