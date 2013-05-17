@@ -23,6 +23,9 @@
       <cat-item tags="SV.COP"/>
       <cat-item tags="SV.COP.*"/>
     </def-cat>
+    <def-cat n="ADV">
+      <cat-item tags="ADV"/>
+    </def-cat>
     <def-cat n="POST">
       <cat-item tags="POST"/>
     </def-cat>
@@ -99,6 +102,77 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="REGLA: V-COP ADV SN-ADE SN-NOM">
+      <pattern>
+        <pattern-item n="V-COP"/>
+        <pattern-item n="ADV"/>
+        <pattern-item n="SN-ADE"/>
+        <pattern-item n="SN-NOM"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <lit v="have"/>
+            <lit-tag v="V.HAB"/>
+            <lit v="{^have"/>
+            <lit-tag v="vblex.actv.pres"/>
+            <lit v="$}"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: V-COP SN-ADE SN-NOM">
+      <pattern>
+        <pattern-item n="V-COP"/>
+        <pattern-item n="SN-ADE"/>
+        <pattern-item n="SN-NOM"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <lit v="have"/>
+            <lit-tag v="V.HAB"/>
+            <lit v="{^have"/>
+            <lit-tag v="vblex.actv.pres"/>
+            <lit v="$}"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: SN-ADE V-COP SN-NOM">
       <pattern>

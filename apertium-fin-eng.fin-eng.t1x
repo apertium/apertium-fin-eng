@@ -17,6 +17,9 @@
     <def-cat n="adneg">
         <cat-item lemma="koskaan" tags="adv"/>
     </def-cat>
+    <def-cat n="adv">
+        <cat-item tags="adv"/>
+    </def-cat>
 
     <def-cat n="pron-misc">
         <cat-item tags="prn.*"/>
@@ -295,6 +298,7 @@
           <chunk name="j_j_n" case="caseFirstWord">
             <tags>
               <tag><var n="sntype"/></tag>
+              <tag><clip pos="4" side="sl" part="a_cas"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -336,6 +340,7 @@
           <chunk name="j_n" case="caseFirstWord">
             <tags>
               <tag><var n="sntype"/></tag>
+              <tag><clip pos="2" side="sl" part="a_cas"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
@@ -819,6 +824,24 @@
           <chunk name="post" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="POST"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: ADV">
+      <pattern>
+        <pattern-item n="adv"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
