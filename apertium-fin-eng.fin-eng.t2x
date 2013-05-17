@@ -11,9 +11,11 @@
       <cat-item tags="SN.ade"/>
       <cat-item tags="SN.ade.*"/>
     </def-cat>
-    <def-cat n="SN-NOM">
+    <def-cat n="SN-NOM-PAR">
       <cat-item tags="SN.nom"/>
       <cat-item tags="SN.nom.*"/>
+      <cat-item tags="SN.par"/>
+      <cat-item tags="SN.par.*"/>
     </def-cat>
     <def-cat n="SN">
       <cat-item tags="SN"/>
@@ -54,6 +56,7 @@
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="PREP"/>
+    <def-var n="NOT"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="insert-prep1" npar="1">
@@ -103,14 +106,21 @@
   </section-def-macros>
   <section-rules>
 
-    <rule comment="REGLA: V-COP ADV SN-ADE SN-NOM">
+    <rule comment="REGLA: V-COP ADV SN-ADE SN-NOM-PAR">
       <pattern>
         <pattern-item n="V-COP"/>
         <pattern-item n="ADV"/>
         <pattern-item n="SN-ADE"/>
-        <pattern-item n="SN-NOM"/>
+        <pattern-item n="SN-NOM-PAR"/>
       </pattern>
       <action>
+        <choose><when><test><equal><clip pos="1" part="lem"/><lit v="neg-cop"/></equal></test>
+           <let><var n="NOT"/><concat>            <lit v=" ^not"/>
+            <lit-tag v="ADV.NEG"/>
+            <lit v="{^not"/>
+            <lit-tag v="adv"/>
+            <lit v="$}$"/>
+</concat></let></when></choose>
         <out>
           <chunk>
             <lit v="have"/>
@@ -119,6 +129,7 @@
             <lit-tag v="vblex.actv.pres"/>
             <lit v="$}"/>
           </chunk>
+          <var n="NOT"/>
           <b pos="1"/>
           <chunk>
             <clip pos="3" part="lem"/>
@@ -138,17 +149,26 @@
             <clip pos="4" part="chcontent"/>
           </chunk>
         </out>
+        <let><var n="NOT"/><lit v=""/></let>
       </action>
     </rule>
 
 
-    <rule comment="REGLA: V-COP SN-ADE SN-NOM">
+    <rule comment="REGLA: V-COP SN-ADE SN-NOM-PAR">
       <pattern>
         <pattern-item n="V-COP"/>
         <pattern-item n="SN-ADE"/>
-        <pattern-item n="SN-NOM"/>
+        <pattern-item n="SN-NOM-PAR"/>
       </pattern>
       <action>
+        <choose><when><test><equal><clip pos="2" part="lem"/><lit v="neg-cop"/></equal></test>
+           <let><var n="NOT"/><concat>            <lit v=" ^not"/>
+            <lit-tag v="ADV.NEG"/>
+            <lit v="{^not"/>
+            <lit-tag v="adv"/>
+            <lit v="$}$"/>
+</concat></let></when></choose>
+
         <out>
           <chunk>
             <lit v="have"/>
@@ -157,6 +177,7 @@
             <lit-tag v="vblex.actv.pres"/>
             <lit v="$}"/>
           </chunk>
+          <var n="NOT"/>
           <b pos="1"/>
           <chunk>
             <clip pos="2" part="lem"/>
@@ -170,17 +191,26 @@
             <clip pos="3" part="chcontent"/>
           </chunk>
         </out>
+        <let><var n="NOT"/><lit v=""/></let>
       </action>
     </rule>
 
 
-    <rule comment="REGLA: SN-ADE V-COP SN-NOM">
+    <rule comment="REGLA: SN-ADE V-COP SN-NOM-PAR">
       <pattern>
         <pattern-item n="SN-ADE"/>
         <pattern-item n="V-COP"/>
-        <pattern-item n="SN-NOM"/>
+        <pattern-item n="SN-NOM-PAR"/>
       </pattern>
       <action>
+        <choose><when><test><equal><clip pos="2" part="lem"/><lit v="neg-cop"/></equal></test>
+           <let><var n="NOT"/><concat>            <lit v=" ^not"/>
+            <lit-tag v="ADV.NEG"/>
+            <lit v="{^not"/>
+            <lit-tag v="adv"/>
+            <lit v="$}$"/>
+</concat></let></when></choose>
+
         <out>
           <chunk>
             <clip pos="1" part="lem"/>
@@ -195,6 +225,7 @@
             <lit-tag v="vblex.actv.pres"/>
             <lit v="$}"/>
           </chunk>
+          <var n="NOT"/>
           <b pos="2"/>
           <chunk>
             <clip pos="3" part="lem"/>
@@ -202,6 +233,7 @@
             <clip pos="3" part="chcontent"/>
           </chunk>
         </out>
+        <let><var n="NOT"/><lit v=""/></let>
       </action>
     </rule>
 

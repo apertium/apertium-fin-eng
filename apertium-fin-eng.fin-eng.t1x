@@ -10,9 +10,11 @@
     <def-cat n="conneg"> <!-- tietää vblex.actv.pres.conneg -->
       <cat-item tags="vblex.*.*.conneg"/>
     </def-cat>
+    <def-cat n="cop-conneg">
+      <cat-item lemma="olla" tags="*.*.*.conneg"/>
+    </def-cat>
     <def-cat n="conneg_nottable"> 
       <cat-item lemma="voida" tags="*.*.*.conneg"/>
-      <cat-item lemma="olla" tags="*.*.*.conneg"/>
     </def-cat>
     <def-cat n="adneg">
         <cat-item lemma="koskaan" tags="adv"/>
@@ -503,6 +505,51 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: neg-verb cop-conneg">
+      <pattern>
+         <pattern-item n="neg-verb"/>
+         <pattern-item n="cop-conneg"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <or>
+                <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+                <not><and>
+                   <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                </and></not>
+              </or>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
+     
+        <out> 
+          <chunk name="neg-cop" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.COP"/></tag>
+            </tags>
+          <lu>
+            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          <b pos="1"/> <!-- space character between words -->
+          <lu>
+            <lit v="not"/> <!-- not -->
+            <lit-tag v="adv"/> <!-- adv -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: neg-verb nega conneg">
       <pattern>
           <pattern-item n="neg-verb"/>
@@ -541,6 +588,8 @@
         </out>      
       </action>
     </rule>
+
+
     <rule comment="REGLA: neg-verb conneg">
       <pattern>
          <pattern-item n="neg-verb"/>
