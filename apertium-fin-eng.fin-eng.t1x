@@ -53,7 +53,7 @@
       <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="cm">
-      <cat-item tags="cm.*"/>
+      <cat-item tags="cm"/>
     </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
@@ -289,10 +289,10 @@
       </pattern>
       <action>
         <call-macro n="case-handler1"> 
-          <with-param pos="3"/>
+          <with-param pos="4"/>
         </call-macro>
         <out>
-          <chunk name="j_n" case="caseFirstWord">
+          <chunk name="j_j_n" case="caseFirstWord">
             <tags>
               <tag><var n="sntype"/></tag>
             </tags>
@@ -303,17 +303,21 @@
             </lu>
             <b pos="1"/>
             <lu>
-              <clip pos="2" side="tl" part="lemh"/>
-              <clip pos="2" side="tl" part="a_adj"/>
-              <clip pos="2" side="tl" part="lemq"/>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
             <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="lemh"/>
-              <clip pos="3" side="tl" part="a_nom"/>
-              <clip pos="3" side="tl" part="a_nbr"/>
-              <clip pos="3" side="tl" part="a_cas"/>
+              <clip pos="3" side="tl" part="a_adj"/>
               <clip pos="3" side="tl" part="lemq"/>
+            </lu>
+            <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="lemh"/>
+              <clip pos="4" side="tl" part="a_nom"/>
+              <clip pos="4" side="tl" part="a_nbr"/>
+              <clip pos="4" side="tl" part="a_cas"/>
+              <clip pos="4" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
