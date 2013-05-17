@@ -22,7 +22,13 @@
     <def-cat n="adv">
         <cat-item tags="adv"/>
     </def-cat>
-
+    <def-cat n="necessive">
+        <cat-item lemma="täytyä" tags="vaux.*"/>
+    </def-cat>
+    <def-cat n="gen-subj">
+        <cat-item tags="*.*.gen"/>
+        <cat-item tags="*.*.*.*.*.gen"/>
+    </def-cat>
     <def-cat n="pron-misc">
         <cat-item tags="prn.*"/>
     </def-cat>
@@ -900,6 +906,31 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: Necessrary">
+      <pattern>
+        <pattern-item n="gen-subj"/>
+        <pattern-item n="necessive"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="NECESSIVE" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP-NEC"/></tag>
+            </tags>
+            <lu>
+                <clip pos="1" side="tl" part="whole"/>
+                <!-- should be s/gen/nom/ -->
+          </lu>
+          <b pos="1"/>
+            <lu>
+                <lit v="must"/>
+                <lit-tag v="vaux"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
