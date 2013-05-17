@@ -32,6 +32,7 @@ LIST NP = np ;
 LIST SG = sg ;
 LIST PREP = pr ;
 LIST POSTP = post ;
+LIST OBJ-CASE = gen par nom ; 
 
 SET CLB = V-FIN OR SENT ;
 
@@ -62,3 +63,5 @@ SELECT PREP IF (1* NOM + GEN BARRIER CLB) ;
 SELECT $$NBR IF (0C N + NOM) ((1* V-FIN + $$NBR BARRIER CLB) OR (-1* V-FIN + $$NBR BARRIER CLB));
 
 REMOVE VAUX IF (NOT 1 INF) ;
+
+REMOVE ("<kuulua>") IF (0 ("<kuulua>") OR ("<kulla>")) (1 OBJ-CASE);

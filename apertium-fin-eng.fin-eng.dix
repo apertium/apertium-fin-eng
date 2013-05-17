@@ -110,6 +110,7 @@
     <e><p><l>kun<s n="cnjsub"/></l><r>when<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>kuulla<s n="vblex"/></l><r>hear<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>belong<s n="vblex"/></r></p></e>
+    <e><p><l>kuulua<s n="vblex"/></l><r>hear<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>concern<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>be<g><b/>said</g><s n="vblex"/></r></p></e>
     <e><p><l>kuunnella<s n="vblex"/></l><r>listen<s n="vblex"/></r></p></e>
@@ -197,8 +198,8 @@
     <e><p><l>sää<s n="n"/></l><r>weather<s n="n"/></r></p></e>
     <e><p><l>taas<s n="adv"/></l><r>again<s n="adv"/></r></p></e>
     <e><p><l>tai<s n="cnjcoo"/></l><r>or<s n="cnjcoo"/></r></p></e>
-    <e><p><l>takaa<s n="pr"/></l><r>behind<s n="pr"/></r></p></e>
-    <e><p><l>takaa<s n="post"/></l><r>behind<s n="pr"/></r></p></e>
+    <e><p><l>takaa<s n="pr"/></l><r>from<b/>behind<s n="pr"/></r></p></e>
+    <e><p><l>takaa<s n="post"/></l><r>from<b/>behind<s n="pr"/></r></p></e>
     <e><p><l>talo<s n="n"/></l><r>house<s n="n"/></r></p></e>
     <e><p><l>tehdä<s n="vblex"/></l><r>do<s n="vblex"/></r></p></e>
     <e><p><l>tietenkään<s n="adv"/></l><r>obviously<s n="adv"/></r></p></e>

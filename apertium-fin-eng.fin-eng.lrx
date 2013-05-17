@@ -1,5 +1,21 @@
 <rules>
   <rule>
+    <match lemma="kuulua" tags="vblex.*"><select lemma="hear" tags="vblex.*"/></match>
+    <match lemma="ääni" tags="n.*"><select lemma="sound" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="kuulua" tags="vblex.*"><select lemma="hear" tags="vblex.*"/></match>
+    <or>
+      <match tags="n.*.par"/>
+      <match tags="n.*.nom"/>
+      <match tags="n.*.gen"/>
+    </or>
+  </rule>
+  <rule>
+    <match lemma="kuulua" tags="vblex.*"><select lemma="belong" tags="vblex.*"/></match>
+    <match tags="n.*.ill"/>
+  </rule>
+  <rule>
     <match lemma="pitää" tags="vblex.*"><select lemma="hold" tags="vblex.*"/></match>
   </rule>
   <rule>
