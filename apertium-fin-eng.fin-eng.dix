@@ -1,6 +1,7 @@
 <dictionary>
   <alphabet/>
   <sdefs>
+    <sdef n="ind"  c="Имя существительное"/>
     <sdef n="n"  c="Имя существительное"/>
     <sdef n="cnjcoo"  c="Союз"/>
     <sdef n="cnjsub"  c="toisenlainen Союз"/>
@@ -144,16 +145,17 @@
     <e><p><l>miksi<s n="prn"/></l><r>why<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>minne<s n="prn"/></l><r>where<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>missä<s n="prn"/></l><r>where<s n="adv"/><s n="itg"/></r></p></e>
-    <e><p><l>mitä<s n="prn"/></l><r>what<s n="prn"/></r></p></e>
+    <e><p><l>mitä<s n="prn"/></l><r>what<s n="prn"/><s n="itg"/></r></p></e>
     <e><p><l>mitään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
-    <e><p><l>molemmat<s n="prn"/></l><r>both<s n="prn"/></r></p></e>
+    <e><p><l>molemmat<s n="prn"/></l><r>both<s n="prn"/><s n="ind"/><s n="mf"/></r></p></e>
     <e><p><l>mutta<s n="cnjsub"/></l><r>but<s n="cnjcoo"/></r></p></e>
-    <e><p><l>muu<s n="prn"/></l><r>another<s n="prn"/></r></p></e>
-    <e><p><l>muu<s n="prn"/></l><r>other<s n="prn"/></r></p></e>
+    <e><p><l>muu<s n="prn"/></l><r>another<s n="prn"/><s n="sg"/><s n="nom"/></r></p></e>
+    <e><p><l>muu<s n="prn"/></l><r>other<s n="prn"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>myös<s n="adv"/></l><r>also<s n="adv"/></r></p></e>
     <e><p><l>myös<s n="adv"/></l><r>too<s n="adv"/></r></p></e>
     <e><p><l>nauraa<s n="vblex"/></l><r>laugh<s n="vblex"/></r></p></e>
     <e><p><l>ne<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
+    <e><p><l>niin<s n="adv"/></l><r>so<s n="adv"/></r></p></e>
     <e><p><l>niinpä<s n="adv"/></l><r>so<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>fast<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>quickly<s n="adv"/></r></p></e>
