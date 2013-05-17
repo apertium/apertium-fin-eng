@@ -26,4 +26,5 @@
 /fin-eng.prob -text svneol=unset#unset
 /modes.xml -text
 texts/story.eng.txt -text
+texts/story.fin-eng.google.txt -text
 texts/story.fin.txt -text
