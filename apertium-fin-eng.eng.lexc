@@ -375,6 +375,7 @@ their%<det%>%<pos%>%<sp%>:their # ; ! ""
 LEXICON Pronouns
 
 something%<prn%>:something N ; ! ""
+nothing%<prn%>:nothing N ; ! ""
 anything%<prn%>:anything N ; ! ""!! Pronoun
 
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<nom%>:I # ; ! ""

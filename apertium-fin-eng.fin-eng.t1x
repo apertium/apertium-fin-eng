@@ -18,6 +18,9 @@
         <cat-item lemma="koskaan" tags="adv"/>
     </def-cat>
 
+    <def-cat n="pron-misc">
+        <cat-item tags="prn.*"/>
+    </def-cat>
     <def-cat n="pron-pers">
         <cat-item tags="prn.pers.*"/>
     </def-cat>
@@ -170,6 +173,31 @@
   </section-def-macros>
   <section-rules>
 
+
+
+
+
+    <rule comment="REGLA: pron-misc">
+      <pattern>
+        <pattern-item n="pron-misc"/>
+      </pattern>
+      <action>
+        <call-macro n="case-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="pron" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="sl" part="a_cas"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
 
