@@ -123,7 +123,7 @@
     <e><p><l>lapsi<s n="n"/></l><r>child<s n="n"/></r></p></e>
     <e><p><l>laskea<s n="vblex"/></l><r>count<s n="vblex"/></r></p></e>
     <e><p><l>laskea<s n="vblex"/></l><r>slide<b/>down<s n="vblex"/></r></p></e>
-    <e><p><l>laskeminen<s n="n"/></l><r>count<s n="vblex"/></r></p></e>
+    <e><p><l>laskeminen<s n="n"/></l><r>count<s n="vblex"/><s n="subst"/></r></p></e>
     <e><p><l>leikkiminen<s n="n"/></l><r>play<s n="vblex"/><s n="subst"/></r></p></e>
     <e><p><l>leikki<s n="n"/></l><r>game<s n="n"/></r></p></e>
     <e><p><l>leikkiä<s n="vblex"/></l><r>play<s n="vblex"/></r></p></e>
