@@ -33,6 +33,10 @@
       <match lemma="nähdä" tags="vblex.*"><select lemma="see" tags="vblex.*"/></match>
   </rule>
   <rule>
+    <match lemma="vähän" tags="adj.*"><select lemma="some" tags="adj.*"/></match>
+    <match lemma="vesi" tags="n.*"/>
+  </rule>
+  <rule>
     <match lemma="laskea" tags="vblex.*"><select lemma="count" tags="vblex.*"/></match>
   </rule>
   <rule>

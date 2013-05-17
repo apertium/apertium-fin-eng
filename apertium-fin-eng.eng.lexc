@@ -502,6 +502,7 @@ LEXICON A_NICE
 LEXICON Adjectives
 cold%<adj%>%<sint%>:cold A_OLD ; ! ""
 little%<adj%>:little # ; ! ""
+some%<adj%>:some # ; ! "" ! Det(?)
 fun%<adj%>:fun # ; ! ""
 finished%<adj%>:finished # ; ! ""
 big%<adj%>%<sint%>:big A_BIG ; ! ""

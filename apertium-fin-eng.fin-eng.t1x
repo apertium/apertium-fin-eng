@@ -99,6 +99,9 @@
       <attr-item tags="adj"/>
       <attr-item tags="adj.sint"/>
     </def-attr>
+    <def-attr n="a_prn">
+      <attr-item tags="prn.pers"/>
+    </def-attr>
     <def-attr n="a_num">
       <attr-item tags="num"/>
     </def-attr>
@@ -155,7 +158,10 @@
               <let><var n="sntype"/><lit-tag v="SN"/></let>
             </when>
             <when>
-              <test><equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></equal></test>
+              <test><and>
+                 <equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></equal>
+                 <not><equal><clip pos="1" side="tl" part="a_prn"/><lit-tag v="prn.pers"/></equal></not>
+              </and></test>
               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
               <let><var n="sntype"/><lit-tag v="SN.GEN"/></let>
             </when>
