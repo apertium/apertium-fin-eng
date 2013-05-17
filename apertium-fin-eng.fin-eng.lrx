@@ -53,6 +53,45 @@
     <match tags="*.*.ill"/>
   </rule>
   <rule>
+    <match tags="np.ant.f.*"/>
+    <match/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="he" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match tags="np.ant.f.*"/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="he" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match tags="np.ant.m.*"/>
+    <match/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="he" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match tags="np.ant.m.*"/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="he" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="poika" tags="n.*"/>
+    <match/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="he" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="poika" tags="n.*"/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="he" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="sisko" tags="n.*"/>
     <match/>
     <match lemma="hän" tags="prn.*">
