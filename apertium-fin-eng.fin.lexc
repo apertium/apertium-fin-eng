@@ -1138,7 +1138,6 @@ LEXICON PRON_SE
 LEXICON PRON_NE
 
 %<sg%>%<nom%>:e N_CLITS? ;
-0:i N_PLURALS_WEAK ;
 0:i N_PLURALS_STRONG ;
 
 LEXICON PRON_TUO
@@ -1440,6 +1439,7 @@ kanssa%<post%>:kanssa # ; ! "with"
 LEXICON Adverbs
 
 
+niin%<adv%>:niin # ; ! ""
 vähän%<adv%>:vähän # ;
 aina%<adv%>:aina # ; ! ""
 eilen%<adv%>:eilen # ; ! ""
