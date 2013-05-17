@@ -52,5 +52,24 @@
     <match/>
     <match tags="*.*.ill"/>
   </rule>
+  <rule>
+    <match lemma="sisko" tags="n.*"/>
+    <match/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="she" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="sisko" tags="n.*"/>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="she" tags="prn.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="they" tags="prn.*"/>
+    </match>
+  </rule>
+
 
 </rules>

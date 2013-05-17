@@ -79,6 +79,8 @@
             <r>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/></r></p></e>
     <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
             <r>she<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
+            <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
     <e><p><l>ihminen<s n="n"/></l><r>human<s n="n"/></r></p></e>
     <e><p><l>iloinen<s n="adj"/></l><r>happy<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>big<s n="adj"/><s n="sint"/></r></p></e>

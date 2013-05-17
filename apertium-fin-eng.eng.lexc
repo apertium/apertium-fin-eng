@@ -101,6 +101,7 @@ LEXICON N_CHILDREN
 LEXICON Nouns
 
 dog%<n%>:dog N ; ! ""
+sound%<n%>:sound N ; ! ""
 mother%<n%>:mother N ; ! ""
 house%<n%>:house N ; ! ""
 garden%<n%>:garden N ; ! ""
