@@ -446,10 +446,10 @@
                 <lit v="to"/>
                 <lit-tag v="pr"/>
             </lu>
-            <b pos="0"/>
+            <b/>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-                <lit-tag v="vblex.actv.pres"/>
+                <lit-tag v="vblex.inf"/>
             </lu>
           </chunk>
         </out>
