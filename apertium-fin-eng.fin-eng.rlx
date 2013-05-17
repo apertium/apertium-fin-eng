@@ -33,6 +33,7 @@ LIST SG = sg ;
 LIST PREP = pr ;
 LIST POSTP = post ;
 LIST FEM = "sisko" f ;
+LIST PRN = prn ;
 
 SET CLB = V-FIN OR SENT ;
 
@@ -64,4 +65,4 @@ SELECT $$NBR IF (0C N + NOM) ((1* V-FIN + $$NBR BARRIER CLB) OR (-1* V-FIN + $$N
 
 REMOVE VAUX IF (NOT 1 INF) ;
 
-SELECT F IF (0 PRN) (-1* F) ;
+SELECT FEM IF (0 PRN) (-1* FEM) ;
