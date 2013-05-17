@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
 <interchunk>
+
   <section-def-cats>
     <def-cat n="SN-GEN">
       <cat-item tags="SN.GEN"/>
       <cat-item tags="SN.GEN.*"/>
     </def-cat>
+    <def-cat n="SN-ADE">
+      <cat-item tags="SN.ade"/>
+      <cat-item tags="SN.ade.*"/>
+    </def-cat>
+    <def-cat n="SN-NOM">
+      <cat-item tags="SN.nom"/>
+      <cat-item tags="SN.nom.*"/>
+    </def-cat>
     <def-cat n="SN">
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
+    </def-cat>
+    <def-cat n="V-COP">
+      <cat-item tags="SV.COP"/>
+      <cat-item tags="SV.COP.*"/>
     </def-cat>
     <def-cat n="POST">
       <cat-item tags="POST"/>
@@ -86,6 +99,39 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="REGLA: SN-ADE V-COP SN-NOM">
+      <pattern>
+        <pattern-item n="SN-ADE"/>
+        <pattern-item n="V-COP"/>
+        <pattern-item n="SN-NOM"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <lit v="have"/>
+            <lit-tag v="V.HAB"/>
+            <lit v="{^have"/>
+            <lit-tag v="vblex.actv.pres"/>
+            <lit v="$}"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: SN-GEN POST">
       <pattern>
         <pattern-item n="SN-GEN"/>

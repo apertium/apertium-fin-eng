@@ -25,7 +25,7 @@
         <cat-item tags="prn.pers.*"/>
     </def-cat>
     <def-cat n="habitive">
-        <cat-item tags="*.*.ade"/>
+        <cat-item tags="n.*.ade"/>
     </def-cat>
     <def-cat n="possessional">
         <cat-item lemma="olla" tags="vblex.actv.*.p3.sg"/>
@@ -619,9 +619,9 @@
       </pattern>
       <action>
         <out> 
-          <chunk name="v" case="caseFirstWord">
+          <chunk name="cop" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV"/></tag>
+              <tag><lit-tag v="SV.COP"/></tag>
             </tags>
           <lu>
             <clip pos="1" side="tl" part="lem"/> <!-- know --> 
@@ -762,16 +762,17 @@
       </pattern>
       <action>
         <out>
-          <chunk name="verb phrase" case="caseFirstWord">
+          <chunk name="p-v" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
             </tags>
             <lu>
                 <lit v="prpers"/>
+                <lit-tag v="prn.pers"/>
                 <clip pos="1" side="tl" part="person"/>
                 <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
-            <b pos="0"/>
+            <b pos="1"/>
             <lu>
                 <clip pos="1" side="tl" part="lem"/>
                 <clip pos="1" side="tl" part="a_verb"/>
@@ -799,7 +800,7 @@
                 <clip pos="1" side="tl" part="a_nbr"/>
                 <lit-tag v="gen"/>
             </lu>
-            <b pos="0"/>
+            <b pos="1"/>
             <lu>
                 <clip pos="2" side="tl" part="whole"/>
             </lu>
