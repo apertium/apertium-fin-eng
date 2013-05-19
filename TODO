@@ -1,0 +1,50 @@
+==Multicharacter symbols==
+
+
+
+%<adj%> %<v%> %<n%> %<adv%>
+
+Should be one per line and with a comment
+
+==Clitics analysed as separate words==
+
+; Before
+
+%<enc%>%<enc%>:%>hankaan  #        ;
+%<enc%>%<qst%>:%>hanko #        ;
+
+; After
+
+%+han%<enc%>%+kaan%<enc%>:%>hankaan  #        ;
+%+han%<enc%>%+ko%<qst%>:%>hanko #        ;
+
+==Symbol changes==
+
+* Compound symbol '+' instead of '#'
+
+==Conversion errors==
+
+%<act%>%<indv%>[TENSE=PRESENT%<p1%>%<sg%>:n V_FRONT_CLIT_OPT     ;
+%<pass%>[DRV=TU%<pp%>:tu            A_VALKAISTU        ;
+%<pass%>[DRV=VA%<pprs%>:täv    A_TYÖLLISTETTÄVÄ ;
+
+%<pxsp3%>%<pxsp3%>:%>nsä N_FRONT_CLIT_OPT        ;
+
+-- Two px. tags ?
+
+
+==Tag changes==
+
+%<pxsp3%>	%<px3sp%>
+%<pxsg1%>	%<px1sg%>
+%<pxsg2%>	%<px2sg%>
+%<pxpl1%>	%<px1pl%>
+%<pxpl2%>	%<px2pl%>
+%<act%>		%<actv%>
+%<pass%>	%<pasv%>
+%<pron%>	%<prn%>
+%<pcle%>	%<part%> !! Argh!
+%<interr%>	%<itg%>
+%<reflex%>	%<refl%>
+%<pp%>		%<pr%>
+%<n%>%<pn%>	%<np%>
