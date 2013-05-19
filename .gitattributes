@@ -22,6 +22,7 @@
 /apertium-fin-eng.fin.twol -text
 /autogen.sh -text
 /configure.ac -text
+dev/nouns.wikt.txt -text
 /eng-fin.prob -text svneol=unset#unset
 /fin-eng.prob -text svneol=unset#unset
 /modes.xml -text
