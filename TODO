@@ -48,3 +48,28 @@ Should be one per line and with a comment
 %<reflex%>	%<refl%>
 %<pp%>		%<pr%>
 %<n%>%<pn%>	%<np%>
+
+==Subcategorisation of proper names==
+
+Nolpunlahti%<np%>:Nolpunlah     N_LAHTI ;
+Köyrinmäki%<np%>:Köyrinmä       N_KÄKI  ;
+Lazy%<np%>:Lazy N_KÄRRY ;
+Fosnavåg%<np%>:Fosnavåg N_PUNK  ;
+
+==Alphabetical ordering==
+
+==Moving POS tags to separate lexicon==
+
+Kivilamminpuro%<np%>:Kivilamminpuro     N_TALO  ;
+
+to
+
+LEXICON PROP_TALO
+
+%<np%>:0 N_TALO ;
+
+Kivilamminpuro:Kivilamminpuro     PROP_TALO  ;
+
+==twol rules==
+
+* Most are missing... 
