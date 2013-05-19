@@ -27,6 +27,16 @@ Should be one per line and with a comment
 %<act%>%<indv%>[TENSE=PRESENT%<p1%>%<sg%>:n V_FRONT_CLIT_OPT     ;
 %<pass%>[DRV=TU%<pp%>:tu            A_VALKAISTU        ;
 %<pass%>[DRV=VA%<pprs%>:täv    A_TYÖLLISTETTÄVÄ ;
+niitten%<pron%>[SUBCAT=DEMONSTRATIVE]%<pl%>%<gen%>:0niitten     #       ;
+[DRV=S]:s    N_COMPOUND     ;
+[DRV=IN%<sup%>:i  A_BACK_SUPERLATIVE_STEMS ;
+[DRV=MPI%<comp%>:m     A_BACK_COMPARATIVE_STEMS ;
+%<act%>[DRV=NUT%<pp%>:n   A_KULUNUT       ;
+%<pass%>[DRV=VA%<pprs%>:tav    N_SOITTAJA   ;
+%<pass%>[DRV=TU%<pp%>:tu            A_VALKAISTU        ;
+[DRV=MA][PCP=AGENT]:m       A_AALTOILEVA        ;
+[DRV=MATON%<pneg%>:mat     A_VIATON      ;
+
 
 %<pxsp3%>%<pxsp3%>:%>nsä N_FRONT_CLIT_OPT        ;
 
@@ -48,6 +58,8 @@ Should be one per line and with a comment
 %<reflex%>	%<refl%>
 %<pp%>		%<pr%>
 %<n%>%<pn%>	%<np%>
+%<v%>		%<vblex%>
+
 
 ==Subcategorisation of proper names==
 
@@ -73,3 +85,40 @@ Kivilamminpuro:Kivilamminpuro     PROP_TALO  ;
 ==twol rules==
 
 * Most are missing... 
+
+==Punctuation==
+
+!===================!
+ LEXICON Punctuation
+!===================!
+
+
+%.%<sent%>:%. # ;
+%.%.%<sent%>:%.%. # ;
+%.%.%.%<sent%>:%.%.%. # ;
+%;%<sent%>:%; # ;
+%:%<sent%>:%: # ;
+%!%<sent%>:%! # ;
+%-%<guio%>:%- # ;
+%—%<guio%>:%— # ;
+,%<cm%>:, # ;
+%?%<sent%>:%? # ;
+%'%<apos%>:%' # ;
+%"%<sent%>:%" # ;
+%«%<lquot%>:%« # ;
+%»%<rquot%>:%» # ;
+%”%<rquot%>:%” # ;
+%“%<lquot%>:%“ # ;
+%(%<lpar%>:%( # ;
+%]%<rpar%>:%] # ;
+%[%<lpar%>:%[ # ;
+%)%<rpar%>:%) # ;
+%\%<sent%>:%\ # ;
+%/%<sent%>:%/ # ;
+
+
+==Remove derivations==
+
+From the lexc file 
+
+
