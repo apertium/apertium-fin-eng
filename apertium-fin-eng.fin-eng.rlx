@@ -162,14 +162,14 @@ LIST NEGV = "ei" ;
 LIST ConNeg = conneg ; 
 
 LIST Prs = pres ; 
-LIST Prt = pret ; 
+LIST Prt = past ; 
 LIST AgPcp = AgPcp ; # ma 
 LIST PrfPrc = PrfPcp ; # nut / PrfPcp
 LIST PrsPrc = PrsPrc ; # va / PrsPrc
 LIST PCP = AgPcp PrfPrc PrsPrc ; 
 SET PCPs = AgPcp OR PrfPrc OR PrsPrc ; 
 
-LIST Prs/Prt = Prs Prt ; 
+LIST Prs/Prt = pres past ; 
 LIST PrsPrc/Inf3/Inf2/REF/TEMP = PrsPrc Inf3 Inf2 REF TEMP ; 
 LIST Imprt = Imprt imp imprt ;
 LIST Imp = Imp Imprt imp imprt ; 
@@ -185,10 +185,10 @@ LIST InfV = Inf1 Inf2 Inf3 ; # Not sure I should count PrfPrc PrsPrc as
 LIST InfV-PCPs = Inf1 Inf2 Inf3 PrfPrc PrsPrc ; 
 
 LIST Abbr = Abbr ; 
-LIST Abe = Abe ; 
-LIST Abl = Abl ; 
-LIST Act = Act ;
-LIST ACT = Act ;
+LIST Abe = abe ; 
+LIST Abl = abl ; 
+LIST Act = actv ;
+LIST ACT = actv ;
 LIST AD = AD ; 
 
 
