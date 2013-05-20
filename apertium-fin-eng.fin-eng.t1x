@@ -5,22 +5,30 @@
 
     <def-cat n="neg-verb"> <!-- ei vblex.neg.p3.sg -->
       <cat-item lemma="ei" tags="vblex.neg.*"/>
+      <cat-item lemma="ei" tags="vblex.neg.actv.p3.sg.@\+FAUXV"/>
     </def-cat>
 
     <def-cat n="conneg"> <!-- tietää vblex.actv.pres.conneg -->
       <cat-item tags="vblex.*.*.conneg"/>
+      <cat-item tags="vblex.*.*.conneg.*"/>
     </def-cat>
     <def-cat n="cop-conneg">
       <cat-item lemma="olla" tags="*.*.*.conneg"/>
+      <cat-item lemma="olla" tags="*.*.*.conneg.*"/>
     </def-cat>
     <def-cat n="conneg_nottable"> 
       <cat-item lemma="voida" tags="*.*.*.conneg"/>
+      <cat-item lemma="voida" tags="*.*.*.conneg.*"/>
     </def-cat>
     <def-cat n="adneg">
         <cat-item lemma="koskaan" tags="adv"/>
     </def-cat>
     <def-cat n="adv">
         <cat-item tags="adv"/>
+    </def-cat>
+    <def-cat n="cnjcoo">
+        <cat-item tags="cnjcoo"/>
+        <cat-item tags="cnjcoo.*"/>
     </def-cat>
     <def-cat n="necessive">
         <cat-item lemma="täytyä" tags="vaux.*"/>
@@ -146,6 +154,60 @@
       <attr-item tags="nom"/>
       <attr-item tags="par"/>
     </def-attr>
+
+    <def-attr n="synfunc">
+      <attr-item tags="@\+FAUXV"/>
+      <attr-item tags="@\+FMAINV"/>
+      <attr-item tags="@-FADVL"/>
+      <attr-item tags="@-FAUXV"/>
+      <attr-item tags="@-FMAINV"/>
+      <attr-item tags="@-FOBJ→"/>
+      <attr-item tags="@-FSUBJ→"/>
+      <attr-item tags="@-F←OBJ"/>
+      <attr-item tags="@ADVL"/>
+      <attr-item tags="@ADVL←"/>
+      <attr-item tags="@ADVL→"/>
+      <attr-item tags="@COMP-CS←"/>
+      <attr-item tags="@HAB"/>
+      <attr-item tags="@CNP"/>
+      <attr-item tags="@CVP"/>
+      <attr-item tags="@HNOUN"/>
+      <attr-item tags="@INTERJ"/>
+      <attr-item tags="@NEC-S"/>
+      <attr-item tags="@NF-S"/>
+      <attr-item tags="@Num←"/>
+      <attr-item tags="@N←"/>
+      <attr-item tags="@OBJ"/>
+      <attr-item tags="@OBJ"/>
+      <attr-item tags="@OBJ→"/>
+      <attr-item tags="@OPRED"/>
+      <attr-item tags="@OPRED→"/>
+      <attr-item tags="@PC"/>
+      <attr-item tags="@PCLE"/>
+      <attr-item tags="@Pron←"/>
+      <attr-item tags="@P←"/>
+      <attr-item tags="@P→"/>
+      <attr-item tags="@SPRED"/>
+      <attr-item tags="@SPRED←OBJ"/>
+      <attr-item tags="@SPRED→"/>
+      <attr-item tags="@SUBJ"/>
+      <attr-item tags="@SUBJ"/>
+      <attr-item tags="@SUBJ→"/>
+      <attr-item tags="@←ADVL"/>
+      <attr-item tags="@←OBJ"/>
+      <attr-item tags="@←OPRED"/>
+      <attr-item tags="@←P"/>
+      <attr-item tags="@←SPRED"/>
+      <attr-item tags="@←SUBJ"/>
+      <attr-item tags="@→A"/>
+      <attr-item tags="@→ADVL"/>
+      <attr-item tags="@→N"/>
+      <attr-item tags="@→Num"/>
+      <attr-item tags="@→P"/>
+      <attr-item tags="@→Pron"/>
+    </def-attr>
+
+
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
@@ -153,7 +215,13 @@
     <def-var n="current_verb"/>
   </section-def-vars>
   <section-def-macros>
+ 
+    <def-macro n="proc-synlabel1" npar="1">
+          <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
+    </def-macro>
+
     <def-macro n="case-handler1" npar="1">
+          <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
           <choose>
             <when>
               <test><or> <!-- Nom/Acc and locative cases -->
@@ -196,6 +264,9 @@
         <call-macro n="case-handler1"> 
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="pron" case="caseFirstWord">
             <tags>
@@ -219,6 +290,9 @@
       </pattern>
       <action>
         <call-macro n="case-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="proc-synlabel1"> 
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -253,6 +327,9 @@
         <call-macro n="case-handler1"> 
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
@@ -276,6 +353,9 @@
         <pattern-item n="adj"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="j" case="caseFirstWord">
             <tags>
@@ -300,6 +380,9 @@
       </pattern>
       <action>
         <call-macro n="case-handler1"> 
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="proc-synlabel1"> 
           <with-param pos="4"/>
         </call-macro>
         <out>
@@ -344,6 +427,9 @@
         <call-macro n="case-handler1"> 
           <with-param pos="2"/>
         </call-macro>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="2"/>
+        </call-macro>
         <out>
           <chunk name="j_n" case="caseFirstWord">
             <tags>
@@ -375,6 +461,9 @@
          <pattern-item n="conneg"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="2"/>
+        </call-macro>
         <choose>
           <when>
             <test>
@@ -418,6 +507,9 @@
         <pattern-item n="inf-ine"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="be-ger" case="caseFirstWord">
             <tags>
@@ -469,6 +561,10 @@
          <pattern-item n="just-inf"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="3"/>
+        </call-macro>
+      
         <choose>
           <when>
             <test>
@@ -832,7 +928,7 @@
                 <clip pos="1" side="tl" part="person"/>
                 <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
-            <b pos="1"/>
+            <b/>
             <lu>
                 <clip pos="1" side="tl" part="lem"/>
                 <clip pos="1" side="tl" part="a_verb"/>
@@ -849,6 +945,9 @@
           <pattern-item n="possessional"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="2"/>
+        </call-macro>
         <out>
           <chunk name="verb phrase" case="caseFirstWord">
             <tags>
@@ -875,6 +974,9 @@
         <pattern-item n="post"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="post" case="caseFirstWord">
             <tags>
@@ -893,6 +995,9 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -931,11 +1036,36 @@
       </action>
     </rule>
     
+    <rule comment="REGLA: cnjcoo">
+      <pattern>
+        <pattern-item n="cnjcoo"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="cc" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="CC"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+ 
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
       </pattern>
       <action>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="sent" case="caseFirstWord">
             <tags>

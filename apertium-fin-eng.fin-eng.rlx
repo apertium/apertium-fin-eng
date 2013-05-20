@@ -2584,609 +2584,609 @@ REMOVE (AD "vähän") (NOT 1C CMP-ENNEN) (NOT 2 JALKEEN)# 4.2.2001 !!->! cf.belo
 # Cannot have @OBJ on minua here.
 
 
-SECTION
-# Need better clause boundaries
-
-SET CCC = CC - ("sekä") ;
-SET CC-CS = CC OR CS ;
-
-# LIST MO-MANge = "goas" "gokko" "gos" "gosa" "govt" "makkár" "man" "manne" "mo" "mot" "mov" "movt" ("nugo" @CVP) (V Qst);
- 
-# SET MO = MO-MANge - ("man" Foc/ge) ; 
-
-SET CP = (Pron Interr) OR (Pron Rel) OR QWords OR JOS/KUN/KOSKA/VAIKKA;
-
-# MIKA-KUKA
-
-# Boundaries
-# ----------
-
-SET V-MAIN = V - COPULAS - Neg - MOD-ASP OR ("orrut") ;
-
-SET S-BOUNDARY  = (Pron Interr) OR (Pron Rel) OR ("mutta") OR ("sitten" CC) OR QWords OR ("\;") OR (":") OR ("-") OR ("–") OR CS ;
-SET S-BOUNDARY1  = (Pron Interr) OR (Pron Rel) OR ("mutta") OR ("sitten" CC) OR QWords OR ("\;") OR (":") OR ("-") OR ("–") ;
-SET S-BOUNDARY2 = (Pron Interr) OR (Pron Rel) OR ("mutta") OR ("sitten" CC) OR QWords OR ("\;") OR (":") OR ("-") OR ("–") OR (@CVP) ;
-
-# OR Sup
-SET SV-BOUNDARY = S-BOUNDARY OR InfV OR V-MAIN - PrsPrc ;
-
-
-SET BOC = S-BOUNDARY OR BOS ;
-SET BOC2 = S-BOUNDARY2 OR BOS ;
-SET BOC-PUNCT = BOC - ("-") - ("–") ; 
-SET EOC = S-BOUNDARY OR EOS ;
-SET EOC2 = S-BOUNDARY2 OR EOS ;
-
-
-SET NP-BOUNDARY = BOS OR EOS OR REALCLB OR VFIN OR (Inf) OR (Actio Ess) OR ConNeg OR PCP OR PPRON-NOT-GEN OR Po OR Pr OR Pcle OR CS OR CP ; # Removed VGen, Recipr, "jed", Interj
-
-
-# NP boundary xxx*
-# ----------- 
-
-SET NP = N OR A ;                      # anything that can take except numerals
-SET NP-HEAD        = Pron OR HNOUN - ("hyvä") ;
-SET NP-HEAD-SG     = SGPRON OR (N Sg) OR (A Sg) - Cmpnd  - Dem - ("hyvä");
-SET NP-HEAD-PL     = PLPRON OR (N Pl) OR (A Pl) - Cmpnd  - Dem - ("hyvä");
-SET NP-HEAD-SG-NOM = SGPRON + Nom OR (N Sg Nom) OR (A Sg Nom) - ("hyvä") - Cmpnd ;
-SET NP-HEAD-PL-NOM = PLPRON + Nom OR (N Pl Nom) OR (A Pl Nom) - Cmpnd  - ("hyvä");
-SET NP-HEAD-NOM    = NP-HEAD-SG-NOM OR NP-HEAD-PL-NOM ;
-SET NP-HEAD-ACC    = (Pron Acc) OR (N Acc) OR (A Acc) - Cmpnd - Dem - ("hyvä");
-SET NP-HEAD-GEN    = (Pron Gen) OR (N Gen) OR (A Gen) - Cmpnd - Dem - ("hyvä");
-
-# why gen?
-SET PRE-NP-HEAD = (Prop Attr) OR (Prop @→N) OR (A Attr) OR (Abbr Attr) OR ("hyvä") OR (Pron Pers Gen) OR (N Gen) OR 
-         Num OR Cmpnd OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR 
-         (PrfPrc @→N) OR PrsPrc OR (A Ord) OR PCP ;
-         # The strict version of items that can only be premodifiers, not parts of the predicate
- 
-
-SET NPNH     = WORD - PRE-NP-HEAD OR Abbr ; 
-
-
-
-# Complementizers 
-# ---------------
-
-# Simple for now.
-
-MAP (@CVP) TARGET ("kun") ;
-MAP (@CNP) TARGET ("ja" CC) ;
-
-# NP-internal things @→N, @N←
-# ------------------
-
-
-SET NAttrs = PCP OR (A Pos) OR Pron OR (Num Ord) OR (N Gen) or (Num Card) OR UNDECL_ADJ ; 
-
-
-# MAP (@→N) TARGET (A Pos) IF (0 WORD LINK *1 N BARRIER N) (0 WORD LINK *1 N BARRIER (CLB));
-# MAP (@→N) TARGET (Pron) IF (0 WORD LINK *1 N BARRIER N) (0 WORD LINK *1 N BARRIER (CLB));
-
-MAP (@→N) TARGET (Pron Indef "kaikki") IF (2 (N)) (2 $$ALLCASES) (1 (Pron Pers Gen)) ;
-    # Kaikki sinun ystävät ovat täällä.
-    # Täällä on kaikki sinun ystävät.
-
-
-
-MAP (@→N) TARGET (Pron Indef "kaikki") IF (3 (N)) (3 $$ALLCASES) (2 $$ALLCASES) (2 A) (1 (Pron Pers Gen)) ;
-    # Kaikki sinun vanhat ystävät ovat täällä.
-
-    # This also checks that cases agree... Can add this to other N attrs 
-MAP (@→N) TARGET (Pron Dem) IF (1 (N)) (1 $$ALLCASES) (0 $$ALLCASES) ;
-    # Hän rakentaa siihen alttarin.
-    # Hän heitti sen siihen taloon.
-
-MAP (@→N) TARGET (Pron Gen) IF (1 (N)) ;
-MAP (@→N) TARGET (Pron Gen) IF (2 (N)) (2 $$ALLCASES) (1 $$ALLCASES);
-
-MAP (@→N) TARGET NAttrs IF (0 WORD LINK *1 N BARRIER NP-BOUNDARY) (NEGATE 0 (V PrfPrc) LINK -1 (V "olla")) (0 $$ALLCASES LINK *1 $$ALLCASES BARRIER (CLB)) ; # (0 WORD LINK *1 N BARRIER (CLB))
-
-    # TODO: Need to include conjunctions
-    # Saapuneet ja käsitellyt asiat vuonna 2009.
-
-    # Iso punainen talo on siellä 
-    # Se sama ongelma häiritsi häntä.
-    # Se sama iso punainen talo ... 
-
-    # Fail: Minä@→N tulen kello kolme
-    # Do not mark on Hän ei ole lähettänyt kirjettä.
-
-MAP (@→N) TARGET PCPs IF (0 WORD LINK *1 N BARRIER NP-BOUNDARY) ;
-
-MAP (@→N) TARGET (N Nom) IF (1 (N)) ;
-    # Fail: Ja Herra Talonmies tulee myös.
-
-MAP (@→N) TARGET Acro IF (0 Acro LINK *1 Prop BARRIER Prop); 
-    # Fail: Ja Mr. J. Tiainen tulee ... 
-    
-
-MAP (@N←) TARGET Num IF (-1 N) ;
-MAP (@N←) TARGET ("itse") IF (-1 Pron) (0 $$ALLCASES) (-1 $$ALLCASES) ;
-
-
-
-# Mapping subjects and objects
-# ----------------------------
-
-# Subj to the left of verb
-# MAP (@SUBJ) Target Nom IF ((*1 (V Act)) OR (*-1 (V Act)))
-# MAP (@SUBJ) Target Nom (0 WORD LINK *1 (V Act))
-
-# Jukan isä ja äiti menivät kotiin koska heidän oli pakko ostaa auto.
-# Removed @NEC-SUBJ; two tags = bad
-MAP (@SUBJ→) TARGET Gen IF (0 WORD LINK *1 (@NES) BARRIER (CLB))
-MAP (@←OBJ) TARGET (N Nom) IF (0 WORD LINK *-1 (Gen)) (*-1 NES)
-
-# Me ostettiin kirja.
-MAP (@SUBJ→) TARGET ME (0 Pron LINK *1 (Pe4) BARRIER (CLB)) ;
-MAP (@←OBJ) TARGET (N Nom) IF (0 WORD LINK *-1 Pass) (*-1 Nom)
-    # Needs barriers
-
-MAP (@N→) TARGET (N Sg Nom) IF (1 PROP) ;
-
-# LIST Cases = Ill Ine ; 
-# MAP (@N→) (Pron Dem) IF (1 (N)) (1 $$Cases) (0 $$Cases) ;
-
-# MAP (@N→) TARGET (Pron Dem) IF (1 (N)) ;
-MAP (@N→) TARGET (Pron Dem) IF (1 (A Pos)) (2 (N));
-
-# Jukka osti kirjan.
-
-SET N_Pron_Nom = (N Nom) OR (Pron Nom) ;
-
-# MAP (@SUBJ→) TARGET Nom (0 WORD LINK *1 (Act) BARRIER (CLB))
-MAP (@SUBJ→) TARGET Ade IF (0 WORD LINK *1 AUXs BARRIER (CLB)) ;
-    # Kaikki sinun ystävillä@SUBJ-> on kissoja.
-
-MAP (@SUBJ→) TARGET N_Pron_Nom IF (NEGATE *-1 VFIN BARRIER (CLB)) (*1 VFIN BARRIER S-BOUNDARY2 OR @SUBJ→) (NEGATE 0 ("kaikki") LINK *1 (N Nom) BARRIER V) (NEGATE 0 ("kaikki") LINK *1 (N Nom) BARRIER V) ;
-
-
-    # Kaikki sinun ystävät@SUBJ→ ovat täällä.
-    # Kaikki@SUBJ→ on täällä.
-
-
-MAP (@SUBJ→) TARGET N_Pron_Nom IF (*-1 CC BARRIER NPNH LINK -1 Nom) ;
-MAP (@SUBJ→) TARGET (Rel Nom) IF (*1 VFIN BARRIER S-BOUNDARY2) ;
-
-# Subject partitive mapping 
-MAP (@SUBJ→) TARGET (N Par) IF (NEGATE *-1 Nom BARRIER (CLB)) (NEGATE *1 Nom BARRIER (CLB)) (0 WORD LINK *1 REALCOPULAS BARRIER (CLB));
-    
-    # Mutta tällaisia tietosanakirjoja ei suomeksi ole.
-    # Asukkaita Tromssassa on 60 000.
-
-
-MAP (@SUBJ→) TARGET (N Par) IF (NEGATE *-1 Nom BARRIER (CLB)) (NEGATE *1 Nom BARRIER (CLB)) (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
-
-MAP (@SUBJ→) TARGET (N Pl Par) IF (NOT -1 WORD) (0 WORD LINK *1 REALCOPULAS BARRIER (V)) (*1 (Num Card))  ;
-
-# MAP (@SUBJ→) TARGET (N Par) IF (NEGATE *-1 Nom BARRIER (CLB)) (NEGATE *1 Nom BARRIER (CLB)) (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) (NOT -1 WORD) (1 REALCOPULAS) (0 WORD LINK *1 (Num Card Nom)) ;
-
-# Necessitive subjects
-# --------------------
-
-SET NECESSITIVE_SUBJS = (N Gen) OR (Pron Gen) ; 
-
-MAP (@SUBJ→) TARGET NECESSITIVE_SUBJS IF (1 (V Act Sg3)) (1 REAL_AUX) (2 (V Pass PrsPrc));
-    # Minun on mentävä.
-
-MAP (@SUBJ→) TARGET NECESSITIVE_SUBJS IF (1 (V Act Sg3)) (2 NES) ;
-    # Minun on pakko mennä.
-    
-MAP (@SUBJ→) TARGET NECESSITIVE_SUBJS IF (1 NES) (2 (V Inf1)) ;
-    # Minun pitää mennä.
-
-
-# MAP (@SUBJ→) TARGET (Pron Gen) IF (1 (V Act Sg3)) (1 REAL_AUX) (2 (V Inf1)) ;
-
-
-# Siellä sataa lunta.
-MAP (@←SUBJ) TARGET Par (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) (NEGATE 0 WORD LINK *-1 Pr BARRIER Pr) (NEGATE 0 WORD LINK 1 Par) (0 WORD LINK *-1 PART-SUBJ) ;
-
-# Ihmisiä tungeksi torilla. 
-
-MAP (@←OBJ) TARGET Gen IF (0 WORD LINK *-1 (Act) BARRIER (CLB)) (NEGATE 0 WORD LINK 1 (Gen)) (NEGATE 0 WORD LINK *1 @←OBJ BARRIER (CLB)) (NEGATE 0 WORD LINK *1 Par BARRIER (CLB)) (NEGATE 0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) (NEGATE 0 WORD LINK 1 Po) (NEGATE 0 WORD LINK *-1 Neg BARRIER V);
-
-    # Hän käski minun tehdä sen.
-
-MAP (@←OBJ) TARGET Gen IF (0 WORD LINK -1 (Act)) (NEGATE 0 WORD LINK *1 Po BARRIER Po) (NEGATE 0 WORD LINK *-1 Neg BARRIER V) ;
-
-    # Luin sen ennen uutisia.
-    # Istuin pöydän alla. -- Do not mark @OBJ in this instance.
-    # No Gen if negative precedes.
-    # Ettei minun äidin ystävä ole tullut.
-
-# Lounas syötiin
-MAP (@OBJ→) TARGET Nom (0 WORD LINK *1 (Pass)) (NOT 0 NES) ; 
-    # Needs barriers
-    # Removed NES.
-
-MAP (@←SPRED) TARGET ("pakko") IF (-1 REAL_AUX) ;
-    # pakko - @SPRED
-
-
-# Syötiin lounas
-MAP (@←OBJ) TARGET Nom IF (0 WORD LINK *-1 Pass)
-MAP (@←OBJ) TARGET Par IF (0 WORD LINK *-1 Neg) #) (NOT 0 WORD LINK *-1 (Punct) *-2 (Neg))
-    # Needs barriers 
-    
-
-# Hän katsoi sitä ja otti sen pois. 
-
-# MAP (@←OBJ) TARGET Par IF (NEGATE 0 WORD LINK *-1 PP BARRIER PP) (NEGATE 0 WORD LINK 1 Par) (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) ;
-
-MAP (@←OBJ) TARGET OBJ-CASEs IF (NEGATE 0 WORD LINK *-1 PP BARRIER PP) (NEGATE 0 WORD LINK 1 Par) (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) (NOT 0 (Pron Nom));
-
-# Need to not map obj in this case, rather subject or @<SPRED.
-
-MAP (@←OBJ) TARGET Par IF (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) (NEGATE 0 WORD LINK *-1 Pr BARRIER Pr) (NEGATE 0 WORD LINK 1 Par) (NEGATE 0 WORD LINK *-1 PART-SUBJ) ;
-
-
-    # Minä aion lukea kirjaa ennen näitä erikoisen tyhmiä uutisia.
-    
-
-# ??? Löytyi aika paljon materiaaleja ihan kaduilta.
-# OBJ marking
-
-# Hän huomasi minut.
-MAP (@←OBJ) TARGET Acc IF (0 WORD LINK *-1 V BARRIER S-BOUNDARY2) ;
-
-# Minut huomattiin.
-MAP (@OBJ→) TARGET Acc IF (0 WORD LINK *1 V BARRIER S-BOUNDARY2) ;
-
-# Possible object issues fixed by:
-#1. checking if there is anything that the Gen modifies to the right
-#2. possibly time expressions that are in Genitive that presupposes that they are TIME-words you can make a set TIME = year, month, august, tuesday etc.
-#I don't know in which other ways Gen is used in fin
-
-# IV and TV tags?
-
-
-    # Numeral and numeral complement mappings
-    # ---------------------------------------
-
-LIST @NUM← = @NUM← ;
-LIST @→NUM = @→NUM ;
-
-LIST NUMS = "yksi" Num;
-
-# Simple for now... 
-MAP (@NUM←) TARGET N IF (0 WORD LINK -1 NUMS) ;
-MAP (@NUM←) TARGET N IF (-1 NUMS) ;
-
-
-# Verb mappings
-# ------------- 
-
-# Mostly same as sme rule, but removed (0 ("orrut")); is it worth including copulas here? Finnish doesn't quite have quite the same here
-MAP (@+FMAINV) TARGET VFIN IF (NEGATE *0 VERB BARRIER S-BOUNDARY2 OR CC) ;
-
-MAP (@+FAUXV) TARGET Inf1-VERB IF (*1 Inf1 BARRIER V) ; 
-MAP (@+FAUXV) TARGET Inf3-VERB IF (*1 Inf3 BARRIER V) ; 
-    # Äidin vanha ystävä voisi kyllä yrittää.
-    # Äidin vanha ystävä voisi yrittää.
-    
-    # Äidin vanha ystävä voisi kyllä tulla käymään ensi vuonna.
-    #                  @+FAUXV      @-FMAINV @-FMAINV
-
-
-MAP (@+FMAINV) TARGET VFIN IF (0 AUX-OR-MAIN) (NEGATE *1 InfV BARRIER S-BOUNDARY2) ;
-
-MAP (@+FMAINV) TARGET PCP IF (0 WORD LINK *-1 REAL_AUX BARRIER (CLB)) ;
-
-
-MAP (@-FMAINV) TARGET InfV IF (0 InfV) ;
-MAP (@-FMAINV) TARGET VFIN IF (0 InfV) (NEGATE *1 PrfPrc OR (V Inf3) BARRIER SV-BOUNDARY) ;
-
-
-MAP (@-FAUXV) TARGET ConNeg (0 WORD LINK -1 Neg) ;
-MAP (@-FAUXV) TARGET ConNeg (0 WORD LINK -1 Neg LINK -1 Nom) ;  # (*1 (N Nom) BARRIER NPNH LINK *-1 Neg LINK -1 Nom) ; 
-
-
-MAP (@+FAUXV) TARGET REAL_AUX IF (NOT 0 ConNeg) ;
-MAP (@+FAUXV) TARGET REAL_AUX ;
-
-
-
-# Minä en ole (koskaan) soittanut Jukalle.
-MAP (@-FAUXV) TARGET PrfPrc IF (*-1 REALCOPULAS BARRIER (CLB)) ;
-MAP (@-FAUXV) TARGET InfV IF (*-1 REALCOPULAS BARRIER (CLB)) ;
-
-# minun pitää ostaa kirja
-MAP (@NES) TARGET NES IF (*-1 Gen BARRIER (CLB))
-
-# Predicates
-# ----------
-
-MAP (@←SPRED) TARGET (A Pos) IF (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
-
-MAP (@SPRED) TARGET ("pakko") IF (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
-    # pakko - @SPRED
-
-MAP (@←SPRED) TARGET (N Nom) IF (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
-
-    # TODO: Spred on wrong thing, obj assigment in weird places:
-    # Onko mikään kansa kuullut Jumalan äänen puhuvan tulen keskeltä.
-    
-
-# Adverbials
-# ----------
-
-# @ADVL - to do
-
-SET Adp+Poss = Po + ALL_PERSON OR 
-               Pr + ALL_PERSON OR 
-               Adv + ALL_PERSON;
-
-MAP (@ADVL) TARGET (Adv) ;
-MAP (@ADVL) TARGET Adp+Poss ;
-# MAP (@ADVL) TARGET (Po) ; ?
-
-
-
-
-MAP (@PCLE) TARGET Pcle ;
-
-MAP (@Num←) TARGET (N Sg Par) (0 WORD LINK -1 (Num Card)) ; # kaksi kirjaa
-
-MAP (@Num←) TARGET (N Sg Nom) (0 WORD LINK -1 (Num Card)) ; # yksi kirja
-
-SELECT (Num Card) (0 WORD LINK 1 (@Num←)) ; # make sure number is selected
-
-
-# Habitive mappings 
-# -----------------
-
-# I do not yet have the sanity to implement an animacy hierarchy ;) 
-# hän ei saa tietää, että minulla on kaksi kissaa.
-MAP (@HAB) TARGET Ade IF (0 (Pron Pers)) (1 REALCOPULAS) ;
-
-
-# Prepositions and Postpositions
-# ------------------------------
-
-# So far I'm only tagging the heads of NPs, apparently. E.g., lähellä tätä vanhaa metsää(@P).
-
-# Move these up 
-
-LIST TERMINATIVEPO =    "asti" 
-                        "saakka" ;
-
-LIST NPron =    N 
-                Pron ;
-
-LIST PrCase =  Par 
-                Gen ;
-
-# Moved up, but here for reference
-# LIST PoCase =   Ela Abl Par Gen ;
-
-SET PRON_PO_CASE = NPron + PoCase ; 
-SET PRON_PR_CASE = NPron + PrCase ;
-
-
-   # Postposition Complements
-   # ------------------------
-   
-MAP (@→P) TARGET PRON_PO_CASE IF (1 Po) ;
-
-
-    # Preposition Complements
-    # -----------------------
-
-MAP (@←P) TARGET PRON_PR_CASE IF (0 WORD LINK *-1 Pr BARRIER Pr) ; 
-MAP (@←P) TARGET PRON_PR_CASE IF (0 WORD LINK *-1 Pr BARRIER Pr) ; 
-
-# Ennen näitä erikoisen tyhmiä uutisia.
-# ^----------------------------^
-
-# Lähellä tätä vanhaa metsää nukkuu suuri hämähäkki.
-# Tämän vanhan metsän lähellä nukkuu suuri hämähäkki.
-# Suuri hämähäkki nukkuu tämän vanhan metsän lähellä.
-# Etc.
-
-
-
-# Existential Sentences
-# ---------------------
-# ***
-# REMOVE (V Inf1) IF (0 WORD LINK *-1 (@SUBJ→))
-
-# Ihmisiä tungeksi kadulla.
-# This is not solved yet.
-MAP (@←ADVL @LOC) TARGET LOC-CASE (0 WORD LINK -1 (V Act Ind Prt Sg3))
-MAP (@SUBJ→) TARGET (Par) (0 WORD LINK 1 (V Sg3)) (0 WORD LINK *1 @←ADVL)
-
-# Currently this is tied to a subject and adverbial
-# Ideally it should be more about nonagreeing subjects
-# Also @EXIST(ENTIAL) is arguably more semantic than anything.
-# MAP (@EXIST) TARGET (V Sg3) (0 WORD LINK *1 @←ADVL) (0 WORD LINK *-1 @SUBJ→)
-
-# It seems like it would be a good idea to mark whether the subject
-# is not agreeing with the verb for person or number to better target existentials
-
-# MAP (@NONAGR) TARGET (V Sg3) (0 WORD LINK *-1 (N Pl @SUBJ→))
-# SYNTACTIC-CONSTRAINTS
-
-
-SECTION
-
-#HEURISTIC-SYNTACTIC-CONSTRAINTS
-#not available at present!!!
-# (IF INVOKE-H-RULES? (INVOKE-HEUR-SYNT-RULES))  eliminated July 9, 2000
-
-#MORPHOLOGICAL-HEURISTICS
-#numerals like ("<16\:ta>")# "<16\:ta>"%n%t(<Digit> Num Sg Par)#         2 0 0 0 5 1
-#are dealt with in ftwpost.bta, 23.1.2001, and in cgp, cf "dummy" for base
-
-#$# Lines commented out with #$# due to regex compilation problems. Have a look.
-
-#$# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (Abbr Sg Gen) (1 ("<(.*):in>"r)) (2 ("<(.*):in>"r))
-#$# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (Abbr Sg Gen) (1 ("<(.*)'in>"r)) (2 ("<(.*)'in>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):tta>"r)) (2 ("<(.*):tta>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ta>"r)) (2 ("<(.*):ta>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ttä>"r)) (2 ("<(.*):ttä>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):tä>"r)) (2 ("<(.*):tä>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):aa>"r)) (2 ("<(.*):aa>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):a>"r)) (2 ("<(.*):a>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ää>"r)) (2 ("<(.*):ää>"r))
-#$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ä>"r)) (2 ("<(.*):ä>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ine) (1 ("<(.*):ssa>"r)) (2 ("<(.*):ssa>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ine) (1 ("<(.*):ssä>"r)) (2 ("<(.*):ssä>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ela) (1 ("<(.*):sta>"r)) (2 ("<(.*):sta>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ela) (1 ("<(.*):stä>"r)) (2 ("<(.*):stä>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ill) (1 ("<(.*):aan>"r)) (2 ("<(.*):aan>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ill) (1 ("<(.*):ään>"r)) (2 ("<(.*):ään>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ade) (1 ("<(.*):lla>"r)) (2 ("<(.*):lla>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Ade) (1 ("<(.*):llä>"r)) (2 ("<(.*):llä>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Abl) (1 ("<(.*):lta>"r)) (2 ("<(.*):lta>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg Abl) (1 ("<(.*):ltä>"r)) (2 ("<(.*):ltä>"r))
-#$# MAP (@ADVL) TARGET (Abbr Sg All) (1 ("<(.*):lle>"r)) (2 ("<(.*):lle>"r))
-#$# ##MAP ((DASH) (@1 (^ ("->"r)) ($ ("->"r)) (@2 NIL) # XXXX
-#$# ##MAP ((Abbr Sg Nom (@SUBJ @OBJ @PC)) (@1 (NOT * ("i>"r)) (NOT * ("e>"r)) (NOT * ("ä>"r)) (NOT * ("y>"r)) (NOT * ("ö>"r)) (NOT * ("u>"r)) (NOT * ("o>"r)) (NOT * ("a>"r)) (NOT * ("I>"r)) (NOT * ("E>"r)) (NOT * ("[>"r)) (NOT * ("Y>"r)) (NOT * ("/>"r)) (NOT * ("U>"r)) (NOT * ("O>"r)) (NOT * ("A>"r)) (NOT * (":>"r)) (@2 NIL)
-#$# MAP (@SUBJ @OBJ @PC) TARGET (Abbr Sg Nom) (@1 (* (":kin>"r)) (2 ("<(.*)x:kin>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)uksessa>"r)) (2 ("<(.*)uksessa" ("us>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)yksessä>"r)) (2 ("<(.*)yksessä" ("ys>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ssa>"r)) (2 ("<(.*)ssa>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ssä>"r)) (2 ("<(.*)ssä>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ela) (1 ("<(.*)sta>"r)) (2 ("<(.*)sta>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ela) (1 ("<(.*)stä>"r)) (2 ("<(.*)stä>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)uksella>"r)) (2 ("<(.*)uksella" ("us>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)yksellä>"r)) (2 ("<(.*)yksellä" ("ys>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ade) (1 ("<(.*)lla>"r)) (2 ("<(.*)lla>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ade) (1 ("<(.*)llä>"r)) (2 ("<(.*)llä>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ukselta>"r)) (2 ("<(.*)ukselta" ("us>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ykseltä>"r)) (2 ("<(.*)ykseltä" ("ys>"r))
-#$# MAP (@ADVL) TARGET (N Sg Abl) (1 ("<(.*)lta>"r)) (2 ("<(.*)lta>"r))
-#$# MAP (@ADVL) TARGET (N Sg Abl) (1 ("<(.*)ltä>"r)) (2 ("<(.*)ltä>"r))
-#$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ukselle>"r)) (2 ("<(.*)ukselle" ("us>"r))
-#$# MAP (@ADVL) TARGET (N Sg All) (1 ("<(.*)lle>"r)) (2 ("<(.*)lle>"r))
-### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)man>"r)) (@2 NIL)
-### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)nen>"r)) (@2 NIL)
-### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)sson>"r)) (@2 NIL)
-### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)stein>"r)) (@2 NIL)
-MAP (@ADVL) TARGET (A Pl Ill) (1 ("<(.*)isiin>"r)) (2 ("<(.*)isiin"r) + ("<(.*)inen>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)uksiin>"r)) (2 ("<(.*)uksiin"r) + ("<(.*)us>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)yksiin>"r)) (2 ("<(.*)yksiin"r) + ("<(.*)ys>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)eihin>"r)) (2 ("<(.*)eihin"r) + ("<(.*)i>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)aihin>"r)) (2 ("<(.*)aihin"r) + ("<(.*)as>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)äihin>"r)) (2 ("<(.*)äihin"r) + ("<(.*)äs>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)oihin>"r)) (2 ("<(.*)ihin>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)uihin>"r)) (2 ("<(.*)ihin>"r))
-MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)yihin>"r)) (2 ("<(.*)ihin>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ukseen>"r)) (2 ("<(.*)ukseen"r) + ("<(.*)us>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ykseen>"r)) (2 ("<(.*)ykseen"r) + ("<(.*)ys>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ihin>"r)) (2 ("<(.*)hin>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ismiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ointiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)iittiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)eettiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)aattiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)äättiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)uuttiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)oottiin>"r)) (2 ("<(.*)in>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)iinkin>"r)) (2 ("<(.*)inkin>"r))
-MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)iin>"r)) (2 ("<(.*)iin>"r))
-MAP (@ADVL) TARGET (N Sg Ess) (1 ("<(.*)uksena>"r)) (2 ("<(.*)uksena"r) + ("<(.*)us>"r))
-MAP (@ADVL) TARGET (N Sg Ess) (1 ("<(.*)yksenä>"r)) (2 ("<(.*)yksenä"r) + ("<(.*)ys>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)usta>"r)) (2 ("<(.*)usta"r) + ("<(.*)us>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ystä>"r)) (2 ("<(.*)ystä"r) + ("<(.*)ys>"r))
-MAP (@SUBJ @OBJ @PC) TARGET (N Pl Nom) (1 ("<(.*)kset>"r)) (2 ("<(.*)kset"r) + ("<(.*)s>"r))
-# GenITIVES
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ksen>"r)) (2 ("<(.*)ksen"r) + ("<(.*)s>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)sen>"r)) (2 ("<(.*)sen"r) + ("<(.*)nen>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)sonin>"r)) (2 ("<(.*)sonin"r) + ("<(.*)son>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)anin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)enin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)inin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)nkin>"r)) (2 ("<(.*)nkin>"r))     # SUDBURYNKIN
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)onin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)oinnin>"r)) (2 ("<(.*)oinnin"r) + ("<(.*)ointi>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)öinnin>"r)) (2 ("<(.*)öinnin"r) + ("<(.*)öinti>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)unin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ynin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)otin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)elin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)antin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)dtin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ftin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)esin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)asin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)chtin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)bin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)cin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)din>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)fin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)gin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)min>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)manin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)mannin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)rin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ttin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ngin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)vin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)win>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)zin>"r)) (2 ("<(.*)in>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)aatin>"r)) (2 ("<(.*)aatin"r) + ("<(.*)aatti>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)eetin>"r)) (2 ("<(.*)eetin"r) + ("<(.*)eetti>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)iitin>"r)) (2 ("<(.*)iitin"r) + ("<(.*)iitti>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ootin>"r)) (2 ("<(.*)ootin"r) + ("<(.*)ootti>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)uutin>"r)) (2 ("<(.*)uutin"r) + ("<(.*)uutti>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)yytin>"r)) (2 ("<(.*)yytin"r) + ("<(.*)yytti>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)uuden>"r)) (2 ("<(.*)uuden"r) + ("<(.*)uus>"r))
-MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)yyden>"r)) (2 ("<(.*)yyden"r) + ("<(.*)yys>"r))
-# Isn't this too general?
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)in>"r)) (2 ("<(.*)in>"r))
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)en>"r)) (2 ("<(.*)n>"r))
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)än>"r)) (2 ("<(.*)n>"r))
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)yn>"r)) (2 ("<(.*)n>"r))
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ön>"r)) (2 ("<(.*)n>"r))
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)un>"r)) (2 ("<(.*)n>"r))
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)on>"r)) (2 ("<(.*)n>"r))
-# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)an>"r)) (2 ("<(.*)n>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)aa>"r)) (2 ("<(.*)a>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ea>"r)) (2 ("<(.*)a>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)oa>"r)) (2 ("<(.*)a>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ua>"r)) (2 ("<(.*)a>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ia>"r)) (2 ("<(.*)a>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ää>"r)) (2 ("<(.*)ä>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)eä>"r)) (2 ("<(.*)ä>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)yä>"r)) (2 ("<(.*)ä>"r))
-MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)iä>"r)) (2 ("<(.*)ä>"r))
-
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ade) (1 ("<(.*):nnella>"r)) (2 ("<(.*):nnella>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Abl) (1 ("<(.*):nnelta>"r)) (2 ("<(.*):nnelta>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg All) (1 ("<(.*):nnelle>"r)) (2 ("<(.*):nnelle>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ine) (1 ("<(.*):nnessa>"r)) (2 ("<(.*):nnessa>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ela) (1 ("<(.*):nnesta>"r)) (2 ("<(.*):nnesta>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ill) (1 ("<(.*):nteen>"r)) (2 ("<(.*):nteen>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ess) (1 ("<(.*):ntena>"r)) (2 ("<(.*):ntena>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Tra) (1 ("<(.*):nneksi>"r)) (2 ("<(.*):nneksi>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Tra) (1 ("<(.*)nneksi>"r)) (2 ("<(.*)nneksi>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ade) (1 ("<(.*):nnellä>"r)) (2 ("<(.*):nnellä>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Abl) (1 ("<(.*):nneltä>"r)) (2 ("<(.*):nneltä>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ine) (1 ("<(.*):nnessä>"r)) (2 ("<(.*):nnessä>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ela) (1 ("<(.*):nnestä>"r)) (2 ("<(.*):nnestä>"r))
-MAP (@ADVL @N→) TARGET (ORD Num Sg Ess) (1 ("<(.*):ntenä>"r)) (2 ("<(.*):ntenä>"r))
-
-
-# Post-tagging disambiguation
-SECTION
-
-SELECT @←SPRED ;
-
-
-
-#MAP (@X) TARGET WORD ;
-# SUBSTITUTE (@X) (*) TARGET WORD ;
-
-# REMOVE (@X) ;
-
- #GENERIC Sg Nom FOR All OTHER InsTANCES
- 
-#h# =h ((N Sg Nom (@SUBJ @OBJ @PC @N→)) (@1 NIL) (@2 NI
-
-AFTER-SECTIONS
-
-#SUBSTITUTE (+ei V Neg Act Sg3) (+ei V Neg Act Sg3 @+FAUXV) ;
-SUBSTITUTE (Cmpnd @+FAUXV) (Cmpnd) (CS Cmpnd @+FAUXV) ;
+##%#SECTION
+##%## Need better clause boundaries
+##%#
+##%#SET CCC = CC - ("sekä") ;
+##%#SET CC-CS = CC OR CS ;
+##%#
+##%## LIST MO-MANge = "goas" "gokko" "gos" "gosa" "govt" "makkár" "man" "manne" "mo" "mot" "mov" "movt" ("nugo" @CVP) (V Qst);
+##%# 
+##%## SET MO = MO-MANge - ("man" Foc/ge) ; 
+##%#
+##%#SET CP = (Pron Interr) OR (Pron Rel) OR QWords OR JOS/KUN/KOSKA/VAIKKA;
+##%#
+##%## MIKA-KUKA
+##%#
+##%## Boundaries
+##%## ----------
+##%#
+##%#SET V-MAIN = V - COPULAS - Neg - MOD-ASP OR ("orrut") ;
+##%#
+##%#SET S-BOUNDARY  = (prn itg) OR (prn rel) OR ("mutta") OR ("sitten" cnjcoo) OR QWords OR ("\;") OR (":") OR ("-") OR ("–") OR CS ;
+##%#SET S-BOUNDARY1  = (prn itg) OR (prn rel) OR ("mutta") OR ("sitten" cnjcoo) OR QWords OR ("\;") OR (":") OR ("-") OR ("–") ;
+##%#SET S-BOUNDARY2 = (prn itg) OR (prn rel) OR ("mutta") OR ("sitten" cnjcoo) OR QWords OR ("\;") OR (":") OR ("-") OR ("–") OR (@CVP) ;
+##%#
+##%## OR Sup
+##%#SET SV-BOUNDARY = S-BOUNDARY OR InfV OR V-MAIN - PrsPrc ;
+##%#
+##%#
+##%#SET BOC = S-BOUNDARY OR BOS ;
+##%#SET BOC2 = S-BOUNDARY2 OR BOS ;
+##%#SET BOC-PUNCT = BOC - ("-") - ("–") ; 
+##%#SET EOC = S-BOUNDARY OR EOS ;
+##%#SET EOC2 = S-BOUNDARY2 OR EOS ;
+##%#
+##%#
+##%#SET NP-BOUNDARY = BOS OR EOS OR REALCLB OR VFIN OR (inf) OR (actio ess) OR ConNeg OR PCP OR PPRON-NOT-GEN OR Po OR Pr OR Pcle OR CS OR CP ; # Removed VGen, Recipr, "jed", Interj
+##%#
+##%#
+##%## NP boundary xxx*
+##%## ----------- 
+##%#
+##%#SET NP = N OR A ;                      # anything that can take except numerals
+##%#SET NP-HEAD        = Pron OR HNOUN - ("hyvä") ;
+##%#SET NP-HEAD-SG     = SGPRON OR (N Sg) OR (A Sg) - Cmpnd  - Dem - ("hyvä");
+##%#SET NP-HEAD-PL     = PLPRON OR (N Pl) OR (A Pl) - Cmpnd  - Dem - ("hyvä");
+##%#SET NP-HEAD-SG-NOM = SGPRON + Nom OR (N Sg Nom) OR (A Sg Nom) - ("hyvä") - Cmpnd ;
+##%#SET NP-HEAD-PL-NOM = PLPRON + Nom OR (N Pl Nom) OR (A Pl Nom) - Cmpnd  - ("hyvä");
+##%#SET NP-HEAD-NOM    = NP-HEAD-SG-NOM OR NP-HEAD-PL-NOM ;
+##%#SET NP-HEAD-ACC    = (Pron Acc) OR (N Acc) OR (A Acc) - Cmpnd - Dem - ("hyvä");
+##%#SET NP-HEAD-GEN    = (Pron Gen) OR (N Gen) OR (A Gen) - Cmpnd - Dem - ("hyvä");
+##%#
+##%## why gen?
+##%#SET PRE-NP-HEAD = (Prop Attr) OR (Prop @→N) OR (A Attr) OR (Abbr Attr) OR ("hyvä") OR (prn pers gen) OR (n gen) OR 
+##%#         Num OR Cmpnd OR CC OR (prn dem) OR (prn ref gen) OR (prn ind) OR 
+##%#         (PrfPrc @→N) OR PrsPrc OR (adj ord) OR PCP ;
+##%#         # The strict version of items that can only be premodifiers, not parts of the predicate
+##%# 
+##%#
+##%#SET NPNH     = WORD - PRE-NP-HEAD OR Abbr ; 
+##%#
+##%#
+##%#
+##%## Complementizers 
+##%## ---------------
+##%#
+##%## Simple for now.
+##%#
+##%#MAP (@CVP) TARGET ("kun") ;
+##%#MAP (@CNP) TARGET ("ja" cnjcoo) ;
+##%#
+##%## NP-internal things @→N, @N←
+##%## ------------------
+##%#
+##%#
+##%#SET NAttrs = PCP OR (a pos) OR Pron OR (num ord) OR (n gen) or (num card) OR UNDECL_ADJ ; 
+##%#
+##%#
+##%## MAP (@→N) TARGET (A Pos) IF (0 WORD LINK *1 N BARRIER N) (0 WORD LINK *1 N BARRIER (CLB));
+##%## MAP (@→N) TARGET (Pron) IF (0 WORD LINK *1 N BARRIER N) (0 WORD LINK *1 N BARRIER (CLB));
+##%#
+##%#MAP (@→N) TARGET (Pron Indef "kaikki") IF (2 (N)) (2 $$ALLCASES) (1 (prn pers gen)) ;
+##%#    # Kaikki sinun ystävät ovat täällä.
+##%#    # Täällä on kaikki sinun ystävät.
+##%#
+##%#
+##%#
+##%#MAP (@→N) TARGET (Pron Indef "kaikki") IF (3 (N)) (3 $$ALLCASES) (2 $$ALLCASES) (2 A) (1 (Pron Pers Gen)) ;
+##%#    # Kaikki sinun vanhat ystävät ovat täällä.
+##%#
+##%#    # This also checks that cases agree... Can add this to other N attrs 
+##%#MAP (@→N) TARGET (Pron Dem) IF (1 (N)) (1 $$ALLCASES) (0 $$ALLCASES) ;
+##%#    # Hän rakentaa siihen alttarin.
+##%#    # Hän heitti sen siihen taloon.
+##%#
+##%#MAP (@→N) TARGET (Pron Gen) IF (1 (N)) ;
+##%#MAP (@→N) TARGET (Pron Gen) IF (2 (N)) (2 $$ALLCASES) (1 $$ALLCASES);
+##%#
+##%#MAP (@→N) TARGET NAttrs IF (0 WORD LINK *1 N BARRIER NP-BOUNDARY) (NEGATE 0 (V PrfPrc) LINK -1 (V "olla")) (0 $$ALLCASES LINK *1 $$ALLCASES BARRIER (CLB)) ; # (0 WORD LINK *1 N BARRIER (CLB))
+##%#
+##%#    # TODO: Need to include conjunctions
+##%#    # Saapuneet ja käsitellyt asiat vuonna 2009.
+##%#
+##%#    # Iso punainen talo on siellä 
+##%#    # Se sama ongelma häiritsi häntä.
+##%#    # Se sama iso punainen talo ... 
+##%#
+##%#    # Fail: Minä@→N tulen kello kolme
+##%#    # Do not mark on Hän ei ole lähettänyt kirjettä.
+##%#
+##%#MAP (@→N) TARGET PCPs IF (0 WORD LINK *1 N BARRIER NP-BOUNDARY) ;
+##%#
+##%#MAP (@→N) TARGET (N Nom) IF (1 (N)) ;
+##%#    # Fail: Ja Herra Talonmies tulee myös.
+##%#
+##%#MAP (@→N) TARGET Acro IF (0 Acro LINK *1 Prop BARRIER Prop); 
+##%#    # Fail: Ja Mr. J. Tiainen tulee ... 
+##%#    
+##%#
+##%#MAP (@N←) TARGET Num IF (-1 N) ;
+##%#MAP (@N←) TARGET ("itse") IF (-1 Pron) (0 $$ALLCASES) (-1 $$ALLCASES) ;
+##%#
+##%#
+##%#
+##%## Mapping subjects and objects
+##%## ----------------------------
+##%#
+##%## Subj to the left of verb
+##%## MAP (@SUBJ) Target Nom IF ((*1 (V Act)) OR (*-1 (V Act)))
+##%## MAP (@SUBJ) Target Nom (0 WORD LINK *1 (V Act))
+##%#
+##%## Jukan isä ja äiti menivät kotiin koska heidän oli pakko ostaa auto.
+##%## Removed @NEC-SUBJ; two tags = bad
+##%#MAP (@SUBJ→) TARGET Gen IF (0 WORD LINK *1 (@NES) BARRIER (CLB))
+##%#MAP (@←OBJ) TARGET (N Nom) IF (0 WORD LINK *-1 (Gen)) (*-1 NES)
+##%#
+##%## Me ostettiin kirja.
+##%#MAP (@SUBJ→) TARGET ME (0 Pron LINK *1 (Pe4) BARRIER (CLB)) ;
+##%#MAP (@←OBJ) TARGET (N Nom) IF (0 WORD LINK *-1 Pass) (*-1 Nom)
+##%#    # Needs barriers
+##%#
+##%#MAP (@N→) TARGET (N Sg Nom) IF (1 PROP) ;
+##%#
+##%## LIST Cases = Ill Ine ; 
+##%## MAP (@N→) (Pron Dem) IF (1 (N)) (1 $$Cases) (0 $$Cases) ;
+##%#
+##%## MAP (@N→) TARGET (Pron Dem) IF (1 (N)) ;
+##%#MAP (@N→) TARGET (Pron Dem) IF (1 (A Pos)) (2 (N));
+##%#
+##%## Jukka osti kirjan.
+##%#
+##%#SET N_Pron_Nom = (N Nom) OR (Pron Nom) ;
+##%#
+##%## MAP (@SUBJ→) TARGET Nom (0 WORD LINK *1 (Act) BARRIER (CLB))
+##%#MAP (@SUBJ→) TARGET Ade IF (0 WORD LINK *1 AUXs BARRIER (CLB)) ;
+##%#    # Kaikki sinun ystävillä@SUBJ-> on kissoja.
+##%#
+##%#MAP (@SUBJ→) TARGET N_Pron_Nom IF (NEGATE *-1 VFIN BARRIER (CLB)) (*1 VFIN BARRIER S-BOUNDARY2 OR @SUBJ→) (NEGATE 0 ("kaikki") LINK *1 (N Nom) BARRIER V) (NEGATE 0 ("kaikki") LINK *1 (N Nom) BARRIER V) ;
+##%#
+##%#
+##%#    # Kaikki sinun ystävät@SUBJ→ ovat täällä.
+##%#    # Kaikki@SUBJ→ on täällä.
+##%#
+##%#
+##%#MAP (@SUBJ→) TARGET N_Pron_Nom IF (*-1 CC BARRIER NPNH LINK -1 Nom) ;
+##%#MAP (@SUBJ→) TARGET (Rel Nom) IF (*1 VFIN BARRIER S-BOUNDARY2) ;
+##%#
+##%## Subject partitive mapping 
+##%#MAP (@SUBJ→) TARGET (N Par) IF (NEGATE *-1 Nom BARRIER (CLB)) (NEGATE *1 Nom BARRIER (CLB)) (0 WORD LINK *1 REALCOPULAS BARRIER (CLB));
+##%#    
+##%#    # Mutta tällaisia tietosanakirjoja ei suomeksi ole.
+##%#    # Asukkaita Tromssassa on 60 000.
+##%#
+##%#
+##%#MAP (@SUBJ→) TARGET (N Par) IF (NEGATE *-1 Nom BARRIER (CLB)) (NEGATE *1 Nom BARRIER (CLB)) (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
+##%#
+##%#MAP (@SUBJ→) TARGET (N Pl Par) IF (NOT -1 WORD) (0 WORD LINK *1 REALCOPULAS BARRIER (V)) (*1 (Num Card))  ;
+##%#
+##%## MAP (@SUBJ→) TARGET (N Par) IF (NEGATE *-1 Nom BARRIER (CLB)) (NEGATE *1 Nom BARRIER (CLB)) (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) (NOT -1 WORD) (1 REALCOPULAS) (0 WORD LINK *1 (Num Card Nom)) ;
+##%#
+##%## Necessitive subjects
+##%## --------------------
+##%#
+##%#SET NECESSITIVE_SUBJS = (N Gen) OR (Pron Gen) ; 
+##%#
+##%#MAP (@SUBJ→) TARGET NECESSITIVE_SUBJS IF (1 (V Act Sg3)) (1 REAL_AUX) (2 (V Pass PrsPrc));
+##%#    # Minun on mentävä.
+##%#
+##%#MAP (@SUBJ→) TARGET NECESSITIVE_SUBJS IF (1 (V Act Sg3)) (2 NES) ;
+##%#    # Minun on pakko mennä.
+##%#    
+##%#MAP (@SUBJ→) TARGET NECESSITIVE_SUBJS IF (1 NES) (2 (V Inf1)) ;
+##%#    # Minun pitää mennä.
+##%#
+##%#
+##%## MAP (@SUBJ→) TARGET (Pron Gen) IF (1 (V Act Sg3)) (1 REAL_AUX) (2 (V Inf1)) ;
+##%#
+##%#
+##%## Siellä sataa lunta.
+##%#MAP (@←SUBJ) TARGET Par (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) (NEGATE 0 WORD LINK *-1 Pr BARRIER Pr) (NEGATE 0 WORD LINK 1 Par) (0 WORD LINK *-1 PART-SUBJ) ;
+##%#
+##%## Ihmisiä tungeksi torilla. 
+##%#
+##%#MAP (@←OBJ) TARGET Gen IF (0 WORD LINK *-1 (Act) BARRIER (CLB)) (NEGATE 0 WORD LINK 1 (Gen)) (NEGATE 0 WORD LINK *1 @←OBJ BARRIER (CLB)) (NEGATE 0 WORD LINK *1 Par BARRIER (CLB)) (NEGATE 0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) (NEGATE 0 WORD LINK 1 Po) (NEGATE 0 WORD LINK *-1 Neg BARRIER V);
+##%#
+##%#    # Hän käski minun tehdä sen.
+##%#
+##%#MAP (@←OBJ) TARGET Gen IF (0 WORD LINK -1 (Act)) (NEGATE 0 WORD LINK *1 Po BARRIER Po) (NEGATE 0 WORD LINK *-1 Neg BARRIER V) ;
+##%#
+##%#    # Luin sen ennen uutisia.
+##%#    # Istuin pöydän alla. -- Do not mark @OBJ in this instance.
+##%#    # No Gen if negative precedes.
+##%#    # Ettei minun äidin ystävä ole tullut.
+##%#
+##%## Lounas syötiin
+##%#MAP (@OBJ→) TARGET Nom (0 WORD LINK *1 (Pass)) (NOT 0 NES) ; 
+##%#    # Needs barriers
+##%#    # Removed NES.
+##%#
+##%#MAP (@←SPRED) TARGET ("pakko") IF (-1 REAL_AUX) ;
+##%#    # pakko - @SPRED
+##%#
+##%#
+##%## Syötiin lounas
+##%#MAP (@←OBJ) TARGET Nom IF (0 WORD LINK *-1 Pass)
+##%#MAP (@←OBJ) TARGET Par IF (0 WORD LINK *-1 Neg) #) (NOT 0 WORD LINK *-1 (Punct) *-2 (Neg))
+##%#    # Needs barriers 
+##%#    
+##%#
+##%## Hän katsoi sitä ja otti sen pois. 
+##%#
+##%## MAP (@←OBJ) TARGET Par IF (NEGATE 0 WORD LINK *-1 PP BARRIER PP) (NEGATE 0 WORD LINK 1 Par) (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) ;
+##%#
+##%#MAP (@←OBJ) TARGET OBJ-CASEs IF (NEGATE 0 WORD LINK *-1 PP BARRIER PP) (NEGATE 0 WORD LINK 1 Par) (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) (NOT 0 (Pron Nom));
+##%#
+##%## Need to not map obj in this case, rather subject or @<SPRED.
+##%#
+##%#MAP (@←OBJ) TARGET Par IF (0 WORD LINK *-1 V-NOT-COPULAS BARRIER S-BOUNDARY2) (NEGATE 0 WORD LINK *-1 Pr BARRIER Pr) (NEGATE 0 WORD LINK 1 Par) (NEGATE 0 WORD LINK *-1 PART-SUBJ) ;
+##%#
+##%#
+##%#    # Minä aion lukea kirjaa ennen näitä erikoisen tyhmiä uutisia.
+##%#    
+##%#
+##%## ??? Löytyi aika paljon materiaaleja ihan kaduilta.
+##%## OBJ marking
+##%#
+##%## Hän huomasi minut.
+##%#MAP (@←OBJ) TARGET Acc IF (0 WORD LINK *-1 V BARRIER S-BOUNDARY2) ;
+##%#
+##%## Minut huomattiin.
+##%#MAP (@OBJ→) TARGET Acc IF (0 WORD LINK *1 V BARRIER S-BOUNDARY2) ;
+##%#
+##%## Possible object issues fixed by:
+##%##1. checking if there is anything that the Gen modifies to the right
+##%##2. possibly time expressions that are in Genitive that presupposes that they are TIME-words you can make a set TIME = year, month, august, tuesday etc.
+##%##I don't know in which other ways Gen is used in fin
+##%#
+##%## IV and TV tags?
+##%#
+##%#
+##%#    # Numeral and numeral complement mappings
+##%#    # ---------------------------------------
+##%#
+##%#LIST @NUM← = @NUM← ;
+##%#LIST @→NUM = @→NUM ;
+##%#
+##%#LIST NUMS = "yksi" Num;
+##%#
+##%## Simple for now... 
+##%#MAP (@NUM←) TARGET N IF (0 WORD LINK -1 NUMS) ;
+##%#MAP (@NUM←) TARGET N IF (-1 NUMS) ;
+##%#
+##%#
+##%## Verb mappings
+##%## ------------- 
+##%#
+##%## Mostly same as sme rule, but removed (0 ("orrut")); is it worth including copulas here? Finnish doesn't quite have quite the same here
+##%#MAP (@+FMAINV) TARGET VFIN IF (NEGATE *0 VERB BARRIER S-BOUNDARY2 OR CC) ;
+##%#
+##%#MAP (@+FAUXV) TARGET Inf1-VERB IF (*1 Inf1 BARRIER V) ; 
+##%#MAP (@+FAUXV) TARGET Inf3-VERB IF (*1 Inf3 BARRIER V) ; 
+##%#    # Äidin vanha ystävä voisi kyllä yrittää.
+##%#    # Äidin vanha ystävä voisi yrittää.
+##%#    
+##%#    # Äidin vanha ystävä voisi kyllä tulla käymään ensi vuonna.
+##%#    #                  @+FAUXV      @-FMAINV @-FMAINV
+##%#
+##%#
+##%#MAP (@+FMAINV) TARGET VFIN IF (0 AUX-OR-MAIN) (NEGATE *1 InfV BARRIER S-BOUNDARY2) ;
+##%#
+##%#MAP (@+FMAINV) TARGET PCP IF (0 WORD LINK *-1 REAL_AUX BARRIER (CLB)) ;
+##%#
+##%#
+##%#MAP (@-FMAINV) TARGET InfV IF (0 InfV) ;
+##%#MAP (@-FMAINV) TARGET VFIN IF (0 InfV) (NEGATE *1 PrfPrc OR (V Inf3) BARRIER SV-BOUNDARY) ;
+##%#
+##%#
+##%#MAP (@-FAUXV) TARGET ConNeg (0 WORD LINK -1 Neg) ;
+##%#MAP (@-FAUXV) TARGET ConNeg (0 WORD LINK -1 Neg LINK -1 Nom) ;  # (*1 (N Nom) BARRIER NPNH LINK *-1 Neg LINK -1 Nom) ; 
+##%#
+##%#
+##%#MAP (@+FAUXV) TARGET REAL_AUX IF (NOT 0 ConNeg) ;
+##%#MAP (@+FAUXV) TARGET REAL_AUX ;
+##%#
+##%#
+##%#
+##%## Minä en ole (koskaan) soittanut Jukalle.
+##%#MAP (@-FAUXV) TARGET PrfPrc IF (*-1 REALCOPULAS BARRIER (CLB)) ;
+##%#MAP (@-FAUXV) TARGET InfV IF (*-1 REALCOPULAS BARRIER (CLB)) ;
+##%#
+##%## minun pitää ostaa kirja
+##%#MAP (@NES) TARGET NES IF (*-1 Gen BARRIER (CLB))
+##%#
+##%## Predicates
+##%## ----------
+##%#
+##%#MAP (@←SPRED) TARGET (A Pos) IF (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
+##%#
+##%#MAP (@SPRED) TARGET ("pakko") IF (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
+##%#    # pakko - @SPRED
+##%#
+##%#MAP (@←SPRED) TARGET (N Nom) IF (0 WORD LINK *-1 REALCOPULAS BARRIER (CLB)) ;
+##%#
+##%#    # TODO: Spred on wrong thing, obj assigment in weird places:
+##%#    # Onko mikään kansa kuullut Jumalan äänen puhuvan tulen keskeltä.
+##%#    
+##%#
+##%## Adverbials
+##%## ----------
+##%#
+##%## @ADVL - to do
+##%#
+##%#SET Adp+Poss = Po + ALL_PERSON OR 
+##%#               Pr + ALL_PERSON OR 
+##%#               Adv + ALL_PERSON;
+##%#
+##%#MAP (@ADVL) TARGET (Adv) ;
+##%#MAP (@ADVL) TARGET Adp+Poss ;
+##%## MAP (@ADVL) TARGET (Po) ; ?
+##%#
+##%#
+##%#
+##%#
+##%#MAP (@PCLE) TARGET Pcle ;
+##%#
+##%#MAP (@Num←) TARGET (N Sg Par) (0 WORD LINK -1 (Num Card)) ; # kaksi kirjaa
+##%#
+##%#MAP (@Num←) TARGET (N Sg Nom) (0 WORD LINK -1 (Num Card)) ; # yksi kirja
+##%#
+##%#SELECT (Num Card) (0 WORD LINK 1 (@Num←)) ; # make sure number is selected
+##%#
+##%#
+##%## Habitive mappings 
+##%## -----------------
+##%#
+##%## I do not yet have the sanity to implement an animacy hierarchy ;) 
+##%## hän ei saa tietää, että minulla on kaksi kissaa.
+##%#MAP (@HAB) TARGET Ade IF (0 (Pron Pers)) (1 REALCOPULAS) ;
+##%#
+##%#
+##%## Prepositions and Postpositions
+##%## ------------------------------
+##%#
+##%## So far I'm only tagging the heads of NPs, apparently. E.g., lähellä tätä vanhaa metsää(@P).
+##%#
+##%## Move these up 
+##%#
+##%#LIST TERMINATIVEPO =    "asti" 
+##%#                        "saakka" ;
+##%#
+##%#LIST NPron =    N 
+##%#                Pron ;
+##%#
+##%#LIST PrCase =  Par 
+##%#                Gen ;
+##%#
+##%## Moved up, but here for reference
+##%## LIST PoCase =   Ela Abl Par Gen ;
+##%#
+##%#SET PRON_PO_CASE = NPron + PoCase ; 
+##%#SET PRON_PR_CASE = NPron + PrCase ;
+##%#
+##%#
+##%#   # Postposition Complements
+##%#   # ------------------------
+##%#   
+##%#MAP (@→P) TARGET PRON_PO_CASE IF (1 Po) ;
+##%#
+##%#
+##%#    # Preposition Complements
+##%#    # -----------------------
+##%#
+##%#MAP (@←P) TARGET PRON_PR_CASE IF (0 WORD LINK *-1 Pr BARRIER Pr) ; 
+##%#MAP (@←P) TARGET PRON_PR_CASE IF (0 WORD LINK *-1 Pr BARRIER Pr) ; 
+##%#
+##%## Ennen näitä erikoisen tyhmiä uutisia.
+##%## ^----------------------------^
+##%#
+##%## Lähellä tätä vanhaa metsää nukkuu suuri hämähäkki.
+##%## Tämän vanhan metsän lähellä nukkuu suuri hämähäkki.
+##%## Suuri hämähäkki nukkuu tämän vanhan metsän lähellä.
+##%## Etc.
+##%#
+##%#
+##%#
+##%## Existential Sentences
+##%## ---------------------
+##%## ***
+##%## REMOVE (V Inf1) IF (0 WORD LINK *-1 (@SUBJ→))
+##%#
+##%## Ihmisiä tungeksi kadulla.
+##%## This is not solved yet.
+##%#MAP (@←ADVL @LOC) TARGET LOC-CASE (0 WORD LINK -1 (V Act Ind Prt Sg3))
+##%#MAP (@SUBJ→) TARGET (Par) (0 WORD LINK 1 (V Sg3)) (0 WORD LINK *1 @←ADVL)
+##%#
+##%## Currently this is tied to a subject and adverbial
+##%## Ideally it should be more about nonagreeing subjects
+##%## Also @EXIST(ENTIAL) is arguably more semantic than anything.
+##%## MAP (@EXIST) TARGET (V Sg3) (0 WORD LINK *1 @←ADVL) (0 WORD LINK *-1 @SUBJ→)
+##%#
+##%## It seems like it would be a good idea to mark whether the subject
+##%## is not agreeing with the verb for person or number to better target existentials
+##%#
+##%## MAP (@NONAGR) TARGET (V Sg3) (0 WORD LINK *-1 (N Pl @SUBJ→))
+##%## SYNTACTIC-CONSTRAINTS
+##%#
+##%#
+##%#SECTION
+##%#
+##%##HEURISTIC-SYNTACTIC-CONSTRAINTS
+##%##not available at present!!!
+##%## (IF INVOKE-H-RULES? (INVOKE-HEUR-SYNT-RULES))  eliminated July 9, 2000
+##%#
+##%##MORPHOLOGICAL-HEURISTICS
+##%##numerals like ("<16\:ta>")# "<16\:ta>"%n%t(<Digit> Num Sg Par)#         2 0 0 0 5 1
+##%##are dealt with in ftwpost.bta, 23.1.2001, and in cgp, cf "dummy" for base
+##%#
+##%##$# Lines commented out with #$# due to regex compilation problems. Have a look.
+##%#
+##%##$# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (Abbr Sg Gen) (1 ("<(.*):in>"r)) (2 ("<(.*):in>"r))
+##%##$# MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (Abbr Sg Gen) (1 ("<(.*)'in>"r)) (2 ("<(.*)'in>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):tta>"r)) (2 ("<(.*):tta>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ta>"r)) (2 ("<(.*):ta>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ttä>"r)) (2 ("<(.*):ttä>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):tä>"r)) (2 ("<(.*):tä>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):aa>"r)) (2 ("<(.*):aa>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):a>"r)) (2 ("<(.*):a>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ää>"r)) (2 ("<(.*):ää>"r))
+##%##$# MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (Abbr Sg Par) (1 ("<(.*):ä>"r)) (2 ("<(.*):ä>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ine) (1 ("<(.*):ssa>"r)) (2 ("<(.*):ssa>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ine) (1 ("<(.*):ssä>"r)) (2 ("<(.*):ssä>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ela) (1 ("<(.*):sta>"r)) (2 ("<(.*):sta>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ela) (1 ("<(.*):stä>"r)) (2 ("<(.*):stä>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ill) (1 ("<(.*):aan>"r)) (2 ("<(.*):aan>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ill) (1 ("<(.*):ään>"r)) (2 ("<(.*):ään>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ade) (1 ("<(.*):lla>"r)) (2 ("<(.*):lla>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Ade) (1 ("<(.*):llä>"r)) (2 ("<(.*):llä>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Abl) (1 ("<(.*):lta>"r)) (2 ("<(.*):lta>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg Abl) (1 ("<(.*):ltä>"r)) (2 ("<(.*):ltä>"r))
+##%##$# MAP (@ADVL) TARGET (Abbr Sg All) (1 ("<(.*):lle>"r)) (2 ("<(.*):lle>"r))
+##%##$# ##MAP ((DASH) (@1 (^ ("->"r)) ($ ("->"r)) (@2 NIL) # XXXX
+##%##$# ##MAP ((Abbr Sg Nom (@SUBJ @OBJ @PC)) (@1 (NOT * ("i>"r)) (NOT * ("e>"r)) (NOT * ("ä>"r)) (NOT * ("y>"r)) (NOT * ("ö>"r)) (NOT * ("u>"r)) (NOT * ("o>"r)) (NOT * ("a>"r)) (NOT * ("I>"r)) (NOT * ("E>"r)) (NOT * ("[>"r)) (NOT * ("Y>"r)) (NOT * ("/>"r)) (NOT * ("U>"r)) (NOT * ("O>"r)) (NOT * ("A>"r)) (NOT * (":>"r)) (@2 NIL)
+##%##$# MAP (@SUBJ @OBJ @PC) TARGET (Abbr Sg Nom) (@1 (* (":kin>"r)) (2 ("<(.*)x:kin>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)uksessa>"r)) (2 ("<(.*)uksessa" ("us>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)yksessä>"r)) (2 ("<(.*)yksessä" ("ys>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ssa>"r)) (2 ("<(.*)ssa>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ssä>"r)) (2 ("<(.*)ssä>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ela) (1 ("<(.*)sta>"r)) (2 ("<(.*)sta>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ela) (1 ("<(.*)stä>"r)) (2 ("<(.*)stä>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)uksella>"r)) (2 ("<(.*)uksella" ("us>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)yksellä>"r)) (2 ("<(.*)yksellä" ("ys>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ade) (1 ("<(.*)lla>"r)) (2 ("<(.*)lla>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ade) (1 ("<(.*)llä>"r)) (2 ("<(.*)llä>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ukselta>"r)) (2 ("<(.*)ukselta" ("us>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ykseltä>"r)) (2 ("<(.*)ykseltä" ("ys>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Abl) (1 ("<(.*)lta>"r)) (2 ("<(.*)lta>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Abl) (1 ("<(.*)ltä>"r)) (2 ("<(.*)ltä>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg Ine) (1 ("<(.*)ukselle>"r)) (2 ("<(.*)ukselle" ("us>"r))
+##%##$# MAP (@ADVL) TARGET (N Sg All) (1 ("<(.*)lle>"r)) (2 ("<(.*)lle>"r))
+##%#### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)man>"r)) (@2 NIL)
+##%#### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)nen>"r)) (@2 NIL)
+##%#### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)sson>"r)) (@2 NIL)
+##%#### MAP (@SUBJ @OBJ @PC) TARGET (N Sg Nom) (1 ("<(.*)stein>"r)) (@2 NIL)
+##%#MAP (@ADVL) TARGET (A Pl Ill) (1 ("<(.*)isiin>"r)) (2 ("<(.*)isiin"r) + ("<(.*)inen>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)uksiin>"r)) (2 ("<(.*)uksiin"r) + ("<(.*)us>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)yksiin>"r)) (2 ("<(.*)yksiin"r) + ("<(.*)ys>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)eihin>"r)) (2 ("<(.*)eihin"r) + ("<(.*)i>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)aihin>"r)) (2 ("<(.*)aihin"r) + ("<(.*)as>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)äihin>"r)) (2 ("<(.*)äihin"r) + ("<(.*)äs>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)oihin>"r)) (2 ("<(.*)ihin>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)uihin>"r)) (2 ("<(.*)ihin>"r))
+##%#MAP (@ADVL) TARGET (N Pl Ill) (1 ("<(.*)yihin>"r)) (2 ("<(.*)ihin>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ukseen>"r)) (2 ("<(.*)ukseen"r) + ("<(.*)us>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ykseen>"r)) (2 ("<(.*)ykseen"r) + ("<(.*)ys>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ihin>"r)) (2 ("<(.*)hin>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ismiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)ointiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)iittiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)eettiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)aattiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)äättiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)uuttiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)oottiin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)iinkin>"r)) (2 ("<(.*)inkin>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ill) (1 ("<(.*)iin>"r)) (2 ("<(.*)iin>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ess) (1 ("<(.*)uksena>"r)) (2 ("<(.*)uksena"r) + ("<(.*)us>"r))
+##%#MAP (@ADVL) TARGET (N Sg Ess) (1 ("<(.*)yksenä>"r)) (2 ("<(.*)yksenä"r) + ("<(.*)ys>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)usta>"r)) (2 ("<(.*)usta"r) + ("<(.*)us>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ystä>"r)) (2 ("<(.*)ystä"r) + ("<(.*)ys>"r))
+##%#MAP (@SUBJ @OBJ @PC) TARGET (N Pl Nom) (1 ("<(.*)kset>"r)) (2 ("<(.*)kset"r) + ("<(.*)s>"r))
+##%## GenITIVES
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ksen>"r)) (2 ("<(.*)ksen"r) + ("<(.*)s>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)sen>"r)) (2 ("<(.*)sen"r) + ("<(.*)nen>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)sonin>"r)) (2 ("<(.*)sonin"r) + ("<(.*)son>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)anin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)enin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)inin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)nkin>"r)) (2 ("<(.*)nkin>"r))     # SUDBURYNKIN
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)onin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)oinnin>"r)) (2 ("<(.*)oinnin"r) + ("<(.*)ointi>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)öinnin>"r)) (2 ("<(.*)öinnin"r) + ("<(.*)öinti>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)unin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ynin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)otin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)elin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)antin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)dtin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ftin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)esin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)asin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)chtin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)bin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)cin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)din>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)fin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)gin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)min>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)manin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)mannin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)rin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ttin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ngin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)vin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)win>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)zin>"r)) (2 ("<(.*)in>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)aatin>"r)) (2 ("<(.*)aatin"r) + ("<(.*)aatti>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)eetin>"r)) (2 ("<(.*)eetin"r) + ("<(.*)eetti>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)iitin>"r)) (2 ("<(.*)iitin"r) + ("<(.*)iitti>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ootin>"r)) (2 ("<(.*)ootin"r) + ("<(.*)ootti>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)uutin>"r)) (2 ("<(.*)uutin"r) + ("<(.*)uutti>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)yytin>"r)) (2 ("<(.*)yytin"r) + ("<(.*)yytti>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)uuden>"r)) (2 ("<(.*)uuden"r) + ("<(.*)uus>"r))
+##%#MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)yyden>"r)) (2 ("<(.*)yyden"r) + ("<(.*)yys>"r))
+##%## Isn't this too general?
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)in>"r)) (2 ("<(.*)in>"r))
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)en>"r)) (2 ("<(.*)n>"r))
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)än>"r)) (2 ("<(.*)n>"r))
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)yn>"r)) (2 ("<(.*)n>"r))
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)ön>"r)) (2 ("<(.*)n>"r))
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)un>"r)) (2 ("<(.*)n>"r))
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)on>"r)) (2 ("<(.*)n>"r))
+##%## MAP (@SUBJ @NEC-S @NF-S @OBJ @PC @←P @P→ @N→) TARGET (N Sg Gen) (1 ("<(.*)an>"r)) (2 ("<(.*)n>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)aa>"r)) (2 ("<(.*)a>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ea>"r)) (2 ("<(.*)a>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)oa>"r)) (2 ("<(.*)a>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ua>"r)) (2 ("<(.*)a>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ia>"r)) (2 ("<(.*)a>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)ää>"r)) (2 ("<(.*)ä>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)eä>"r)) (2 ("<(.*)ä>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)yä>"r)) (2 ("<(.*)ä>"r))
+##%#MAP (@SUBJ @OBJ @PC @←P @P→ @←PN @N→) TARGET (N Sg Par) (1 ("<(.*)iä>"r)) (2 ("<(.*)ä>"r))
+##%#
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ade) (1 ("<(.*):nnella>"r)) (2 ("<(.*):nnella>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Abl) (1 ("<(.*):nnelta>"r)) (2 ("<(.*):nnelta>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg All) (1 ("<(.*):nnelle>"r)) (2 ("<(.*):nnelle>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ine) (1 ("<(.*):nnessa>"r)) (2 ("<(.*):nnessa>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ela) (1 ("<(.*):nnesta>"r)) (2 ("<(.*):nnesta>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ill) (1 ("<(.*):nteen>"r)) (2 ("<(.*):nteen>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ess) (1 ("<(.*):ntena>"r)) (2 ("<(.*):ntena>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Tra) (1 ("<(.*):nneksi>"r)) (2 ("<(.*):nneksi>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Tra) (1 ("<(.*)nneksi>"r)) (2 ("<(.*)nneksi>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ade) (1 ("<(.*):nnellä>"r)) (2 ("<(.*):nnellä>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Abl) (1 ("<(.*):nneltä>"r)) (2 ("<(.*):nneltä>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ine) (1 ("<(.*):nnessä>"r)) (2 ("<(.*):nnessä>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ela) (1 ("<(.*):nnestä>"r)) (2 ("<(.*):nnestä>"r))
+##%#MAP (@ADVL @N→) TARGET (ORD Num Sg Ess) (1 ("<(.*):ntenä>"r)) (2 ("<(.*):ntenä>"r))
+##%#
+##%#
+##%## Post-tagging disambiguation
+##%#SECTION
+##%#
+##%#SELECT @←SPRED ;
+##%#
+##%#
+##%#
+##%##MAP (@X) TARGET WORD ;
+##%## SUBSTITUTE (@X) (*) TARGET WORD ;
+##%#
+##%## REMOVE (@X) ;
+##%#
+##%# #GENERIC Sg Nom FOR All OTHER InsTANCES
+##%# 
+##%##h# =h ((N Sg Nom (@SUBJ @OBJ @PC @N→)) (@1 NIL) (@2 NI
+##%#
+##%#AFTER-SECTIONS
+##%#
+##%##SUBSTITUTE (+ei V Neg Act Sg3) (+ei V Neg Act Sg3 @+FAUXV) ;
+##%#SUBSTITUTE (Cmpnd @+FAUXV) (Cmpnd) (CS Cmpnd @+FAUXV) ;
