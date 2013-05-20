@@ -61,7 +61,8 @@ LIST Det = det ;
 
 # Clitics
 LIST Qst = qst ; # -ko/-kö
-LIST Foc/ka = foc ; # 
+LIST Foc/ka = enc ; # 
+LIST CLIT = enc qst ;
 
 # POS sub-categories
 # ------------------
@@ -805,6 +806,9 @@ ADD (CLB) (Adv) IF (0 KUINKA-MITEN-MIllOIN) (NOT 0 (CLB)) ;
 ADD (CLB) (Conj) IF (NOT 0 (CC)) (NOT 0 (CLB)) ; 
 
 # Including (NOT 0 (CLB)) because it adds multiple times otherwise - Ryan
+
+# prefer no clits over clits:
+REMOVE CLIT ;
 
 SELECT Conj IF (-1 (Pcle "samoin")) ;
     # samoin kuin.
