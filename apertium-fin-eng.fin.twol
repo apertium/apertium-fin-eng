@@ -5,16 +5,19 @@ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Å Ä Ö
 
 %>:0
 
+%+:0 %+:%-
+
 ;
 
 Sets
 
+VOWEL = a e i o u y ä ö ;
 FRONT = ä ö y ;
 BACK = a o u ;
 NEUT = i e ;
 
 Rules
 
-"Dummy killer rule"
-%>:0 <=> _ ;
+"Compound"
+%+:%- <= V _ V ; where V in VOWEL ;
 
