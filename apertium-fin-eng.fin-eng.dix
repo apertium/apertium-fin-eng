@@ -76,11 +76,11 @@
     <e><p><l>huolellisesti<s n="adv"/></l><r>carefully<s n="adv"/></r></p></e>
     <e><p><l>hyvin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
     <e><p><l>hyvä<s n="adj"/></l><r>nice<s n="adj"/><s n="sint"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
+    <e><p><l>hän<s n="prn"/><s n="pers"/></l>
             <r>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
+    <e><p><l>hän<s n="prn"/><s n="pers"/></l>
             <r>she<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
+    <e><p><l>hän<s n="prn"/><s n="pers"/></l>
             <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
     <e><p><l>ihminen<s n="n"/></l><r>human<s n="n"/></r></p></e>
     <e><p><l>iloinen<s n="adj"/></l><r>happy<s n="adj"/><s n="sint"/></r></p></e>
@@ -88,7 +88,7 @@
     <e><p><l>iso<s n="adj"/></l><r>great<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>large<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>istua<s n="vblex"/></l><r>sit<s n="vblex"/></r></p></e>
-    <e><p><l>Jaakko<s n="np"/><s n="ant"/><s n="m"/></l><r>James<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+    <e><p><l>Jaakko<s n="np"/></l><r>James<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>and<s n="cnjcoo"/></r></p></e>
     <e><p><l>jotain<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
     <e><p><l>juoda<s n="vblex"/></l><r>drink<s n="vblex"/></r></p></e>
