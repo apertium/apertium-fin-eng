@@ -57,7 +57,8 @@
       <cat-item tags="vblex.*.pres.inf.*.ine"/>
     </def-cat>
     <def-cat n="just-inf">
-      <cat-item tags="vblex.inf"/>
+      <cat-item tags="vblex.infa.sg"/>
+      <cat-item tags="vblex.infma.sg.ill"/>
     </def-cat>
     <def-cat n="vbneg">
         <cat-item tags="vblex.neg.*.*.*"/>

@@ -569,7 +569,7 @@ LIST Cond = Cond ;
 
 
 LIST INTG = INTG ; 
-LIST INTJ = Interj ;  # FMT: INTJ → Interj 
+LIST INTJ = ij ;  # FMT: INTJ → Interj 
 LIST MAINV = Prs Prt Imprt imp ; 
 LIST MAINV/CLB? = Prs Prt Imprt imp BOS EOS "<$\:>" "<$\#>" "<$\(>" "<$\>" "<$\'>" "<$\">" "<$\,>" c ; 
 LIST MAN = MAN ; 
@@ -807,8 +807,14 @@ ADD (CLB) (Conj) IF (NOT 0 (CC)) (NOT 0 (CLB)) ;
 
 # Including (NOT 0 (CLB)) because it adds multiple times otherwise - Ryan
 
+## Flammie: 
+#
 # prefer no clits over clits:
 REMOVE CLIT ;
+
+# interjections rarely if not stuff
+#REMOVE INTJ IF NOT (1* EXCL BARRIER (CLB)) ;
+
 
 SELECT Conj IF (-1 (Pcle "samoin")) ;
     # samoin kuin.
