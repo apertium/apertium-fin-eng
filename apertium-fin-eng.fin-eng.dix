@@ -2197,7 +2197,7 @@
     <e><p><l>jiddiš<s n="n"/></l><r>Yiddish<s n="n"/></r></p></e>
     <e><p><l>jodidi<s n="n"/></l><r>iodide<s n="n"/></r></p></e>
     <e><p><l>joriini<s n="n"/></l><r>dahlia<s n="n"/></r></p></e>
-    <e><p><l>jotain<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
+    <e><p><l>jokin<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
     <e><p><l>journalistiikka<s n="n"/></l><r>journalism<s n="n"/></r></p></e>
     <e><p><l>joutilaisuus<s n="n"/></l><r>idleness<s n="n"/></r></p></e>
     <e><p><l>jukka<s n="n"/></l><r>yucca<s n="n"/></r></p></e>
@@ -2362,7 +2362,9 @@
     <e><p><l>koeffisientti<s n="n"/></l><r>coefficient<s n="n"/></r></p></e>
     <e><p><l>kohtalotar<s n="n"/></l><r>Fate<s n="n"/></r></p></e>
     <e><p><l>kohtio<s n="n"/></l><r>target<s n="n"/></r></p></e>
+    <e><p><l>koi<s n="n"/></l><r>common<b/>clothes<b/>moth<s n="n"/></r></p></e>
     <e><p><l>koira<s n="n"/></l><r>dog<s n="n"/></r></p></e>
+    <e><p><l>koiranen<s n="n"/></l><r>dogling<s n="n"/></r></p></e>
     <e><p><l>koitto<s n="n"/></l><r>dawning<s n="n"/></r></p></e>
     <e><p><l>koktaili<s n="n"/></l><r>cocktail<s n="n"/></r></p></e>
     <e><p><l>koliikki<s n="n"/></l><r>baby colic<s n="n"/></r></p></e>
@@ -2677,6 +2679,7 @@
     <e><p><l>lähellä<s n="pr"/></l><r>near<s n="pr"/></r></p></e>
     <e><p><l>lähemmäksi<s n="post"/></l><r>closer<s n="adv"/></r></p></e>
     <e><p><l>lähemmäksi<s n="pr"/></l><r>closer<s n="adv"/></r></p></e>
+    <e><p><l>lähemmäksi<s n="adv"/></l><r>closer<s n="adv"/></r></p></e>
     <e><p><l>lähtö<s n="n"/></l><r>departure<s n="n"/></r></p></e>
     <e><p><l>lähtö<s n="n"/></l><r>launch<s n="n"/></r></p></e>
     <e><p><l>lähtö<s n="n"/></l><r>start<s n="n"/></r></p></e>
@@ -2925,7 +2928,7 @@
     <e><p><l>ministeriö<s n="n"/></l><r>ministry<s n="n"/></r></p></e>
     <e><p><l>miniä<s n="n"/></l><r>daughter-in-law<s n="n"/></r></p></e>
     <e><p><l>minkki<s n="n"/></l><r>mink<s n="n"/></r></p></e>
-    <e><p><l>minne<s n="prn"/></l><r>where<s n="adv"/><s n="itg"/></r></p></e>
+    <e><p><l>minne<s n="adv"/></l><r>where<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>minoksidiili<s n="n"/></l><r>minoxidil<s n="n"/></r></p></e>
     <e><p><l>minttu<s n="n"/></l><r>mint<s n="n"/></r></p></e>
     <e><p><l>minuus<s n="n"/></l><r>selfhood<s n="n"/></r></p></e>
@@ -5035,6 +5038,7 @@
     <e><p><l>pitää<s n="vaux"/></l><r>must<s n="vaux"/></r></p></e>
     <e><p><l>pitää<s n="vblex"/></l><r>hold<s n="vblex"/></r></p></e>
     <e><p><l>pitää<s n="vblex"/></l><r>love<s n="vblex"/></r></p></e>
+    <e><p><l>pitävä<s n="adj"/></l><r>loving<s n="adj"/></r></p></e>
     <e><p><l>piuha<s n="n"/></l><r>cord<s n="n"/></r></p></e>
     <e><p><l>pivo<s n="n"/></l><r>hand<s n="n"/></r></p></e>
     <e><p><l>pivo<s n="n"/></l><r>palm<s n="n"/></r></p></e>
@@ -5922,6 +5926,7 @@
     <e><p><l>raskaus<s n="n"/></l><r>gravity<s n="n"/></r></p></e>
     <e><p><l>raskaus<s n="n"/></l><r>weight<s n="n"/></r></p></e>
     <e><p><l>raspi<s n="n"/></l><r>rasp<s n="n"/></r></p></e>
+    <e><p><l>rasta<s n="n"/></l><r>dreadlock<s n="n"/></r></p></e>
     <e><p><l>rasti<s n="n"/></l><r>checkpoint<s n="n"/></r></p></e>
     <e><p><l>rasti<s n="n"/></l><r>cross<s n="n"/></r></p></e>
     <e><p><l>rasvari<s n="n"/></l><r>grease gun<s n="n"/></r></p></e>
@@ -7177,6 +7182,7 @@
     <e><p><l>sintti<s n="n"/></l><r>minnow<s n="n"/></r></p></e>
     <e><p><l>sinuiitti<s n="n"/></l><r>sinusitis<s n="n"/></r></p></e>
     <e><p><l>sinus<s n="n"/></l><r>sine<s n="n"/></r></p></e>
+    <e><p><l>sinut<s n="adv"/></l><r>even<s n="adv"/></r></p></e>
     <e><p><l>sinä<s n="prn"/><s n="pers"/><s n="p2"/></l><r>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
     <e><p><l>sionismi<s n="n"/></l><r>Zionism<s n="n"/></r></p></e>
     <e><p><l>sionisti<s n="n"/></l><r>Zionist<s n="n"/></r></p></e>
@@ -9477,8 +9483,6 @@
     <e><p><l>vaskitsa<s n="n"/></l><r>slowworm<s n="n"/></r></p></e>
     <e><p><l>vaskooli<s n="n"/></l><r>pan<s n="n"/></r></p></e>
     <e><p><l>vaskuliitti<s n="n"/></l><r>vasculitis<s n="n"/></r></p></e>
-    <e><p><l>vasta-<s n="n"/></l><r>even<s n="adv"/></r></p></e>
-    <e><p><l>vasta<s n="n"/></l><r>sauna<s n="n"/></r></p></e>
     <e><p><l>vasta<s n="n"/></l><r>twig<s n="n"/></r></p></e>
     <e><p><l>vasta<s n="n"/></l><r>whip<s n="n"/></r></p></e>
     <e><p><l>vastata<s n="vblex"/></l><r>answer<s n="vblex"/></r></p></e>
@@ -9710,6 +9714,7 @@
     <e><p><l>viisari<s n="n"/></l><r>pointer<s n="n"/></r></p></e>
     <e><p><l>viisikko<s n="n"/></l><r>five<s n="n"/></r></p></e>
     <e><p><l>viisi<s n="num"/></l><r>five<s n="num"/></r></p></e>
+    <e><p><l>viisi<s n="adv"/></l><r>not<b/>a<b/>bit<s n="num"/></r></p></e>
     <e><p><l>viiste<s n="n"/></l><r>bevel<s n="n"/></r></p></e>
     <e><p><l>viiste<s n="n"/></l><r>chamfer<s n="n"/></r></p></e>
     <e><p><l>viisumi<s n="n"/></l><r>visa<s n="n"/></r></p></e>
@@ -9943,7 +9948,7 @@
     <e><p><l>vähemmistö<s n="n"/></l><r>minority<s n="n"/></r></p></e>
     <e><p><l>vähän<s n="adv"/></l><r>little<s n="adj"/></r></p></e>
     <e><p><l>vähän<s n="adv"/></l><r>some<s n="adj"/></r></p></e>
-    <e><p><l>vähä<s n="n"/></l><r>little<s n="n"/></r></p></e>
+    <e><p><l>vähä<s n="adj"/></l><r>little<s n="adj"/></r></p></e>
     <e><p><l>väijytys<s n="n"/></l><r>ambush<s n="n"/></r></p></e>
     <e><p><l>väite<s n="n"/></l><r>argument<s n="n"/></r></p></e>
     <e><p><l>väite<s n="n"/></l><r>claim<s n="n"/></r></p></e>
@@ -10045,6 +10050,7 @@
     <e><p><l>ymmärrys<s n="n"/></l><r>understanding<s n="n"/></r></p></e>
     <e><p><l>ymmärtämys<s n="n"/></l><r>sympathy<s n="n"/></r></p></e>
     <e><p><l>ympyrä<s n="n"/></l><r>circle<s n="n"/></r></p></e>
+    <e><p><l>ympärille<s n="pr"/></l><r>around<s n="adv"/></r></p></e>
     <e><p><l>ympärilleen<s n="adv"/></l><r>around<s n="adv"/></r></p></e>
     <e><p><l>ympäristö<s n="n"/></l><r>environment<s n="n"/></r></p></e>
     <e><p><l>ympärys<s n="n"/></l><r>circumference<s n="n"/></r></p></e>
