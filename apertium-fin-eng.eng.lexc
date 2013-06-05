@@ -440,11 +440,13 @@ LEXICON PROPN_JAMES
 %<sg%>%<nom%>:0 # ;
 %<sg%>%<gen%>:'s # ;
 
+
 LEXICON Propers
 Jaakko%<np%>%<ant%>%<m%>:Jaakko N ; ! ""
 Mari%<np%>%<ant%>%<f%>:Mari N ; ! ""
 James%<np%>%<ant%>%<m%>:James PROPN_JAMES ; ! ""
-Mary%<np%>%<ant%>%<f%>:Mary N ; ! ""
+Mary%<np%>%<ant%>%<f%>:Mary PROPN_JAMES ; ! ""
+Mari%<np%>%<ant%>%<f%>:Mari PROPN_JAMES ; ! ""
 
 LEXICON Conjunctions
 and%<cnjcoo%>:and # ; ! ""

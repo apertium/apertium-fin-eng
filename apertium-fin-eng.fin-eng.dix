@@ -1285,7 +1285,7 @@
     <e><p><l>hiilari<s n="n"/></l><r>carbohydrate<s n="n"/></r></p></e>
     <e><p><l>hiilari<s n="n"/></l><r>carb<s n="n"/></r></p></e>
     <e><p><l>hiillos<s n="n"/></l><r>embers<s n="n"/></r></p></e>
-    <e><p><l>hiilto<s n="n"/></l><r>carbonization<s n="n"/></r></p></e>
+    <e><p><l>hiilto<s n="n"/></l><r>carbonisation<s n="n"/></r></p></e>
     <e><p><l>hiilto<s n="n"/></l><r>charring<s n="n"/></r></p></e>
     <e><p><l>hiippari<s n="n"/></l><r>sneak<s n="n"/></r></p></e>
     <e><p><l>hiippa<s n="n"/></l><r>mitre<s n="n"/></r></p></e>
@@ -1868,7 +1868,7 @@
     <e><p><l>imitaattori<s n="n"/></l><r>mimicker<s n="n"/></r></p></e>
     <e><p><l>imitaattori<s n="n"/></l><r>mimic<s n="n"/></r></p></e>
     <e><p><l>immunisaatio<s n="n"/></l><r>immunisation<s n="n"/></r></p></e>
-    <e><p><l>immunisaatio<s n="n"/></l><r>immunization<s n="n"/></r></p></e>
+    <e><p><l>immunisaatio<s n="n"/></l><r>immunisation<s n="n"/></r></p></e>
     <e><p><l>immuniteetti<s n="n"/></l><r>immunity<s n="n"/></r></p></e>
     <e><p><l>immunologia<s n="n"/></l><r>immunology<s n="n"/></r></p></e>
     <e><p><l>immunologi<s n="n"/></l><r>immunologist<s n="n"/></r></p></e>
@@ -2003,7 +2003,7 @@
     <e><p><l>invarianssi<s n="n"/></l><r>invariance<s n="n"/></r></p></e>
     <e><p><l>inventaario<s n="n"/></l><r>inventory<s n="n"/></r></p></e>
     <e><p><l>inversio<s n="n"/></l><r>inversion<s n="n"/></r></p></e>
-    <e><p><l>ionisaatio<s n="n"/></l><r>ionization<s n="n"/></r></p></e>
+    <e><p><l>ionisaatio<s n="n"/></l><r>ionisation<s n="n"/></r></p></e>
     <e><p><l>ionisaattori<s n="n"/></l><r>ionizer<s n="n"/></r></p></e>
     <e><p><l>ioni<s n="n"/></l><r>ion<s n="n"/></r></p></e>
     <e><p><l>ipana<s n="n"/></l><r>child<s n="n"/></r></p></e>
@@ -2096,6 +2096,7 @@
     <e><p><l>iva<s n="n"/></l><r>sarcasm<s n="n"/></r></p></e>
     <e><p><l>iäisyys<s n="n"/></l><r>eternity<s n="n"/></r></p></e>
     <e><p><l>Jaakko<s n="np"/></l><r>Jaakko<s n="np"/></r></p></e>
+    <e><p><l>Mari<s n="np"/></l><r>Mari<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>jaala<s n="n"/></l><r>boat<s n="n"/></r></p></e>
     <e><p><l>jaardi<s n="n"/></l><r>yard<s n="n"/></r></p></e>
     <e><p><l>jaaritus<s n="n"/></l><r>rambling<s n="n"/></r></p></e>
@@ -2375,7 +2376,7 @@
     <e><p><l>kollokvio<s n="n"/></l><r>colloquium<s n="n"/></r></p></e>
     <e><p><l>kolminaisuus<s n="n"/></l><r>Trinity<s n="n"/></r></p></e>
     <e><p><l>kolonialisti<s n="n"/></l><r>colonialist<s n="n"/></r></p></e>
-    <e><p><l>kolonisaatio<s n="n"/></l><r>colonization<s n="n"/></r></p></e>
+    <e><p><l>kolonisaatio<s n="n"/></l><r>colonisation<s n="n"/></r></p></e>
     <e><p><l>kolonni<s n="n"/></l><r>column<s n="n"/></r></p></e>
     <e><p><l>koloratuuri<s n="n"/></l><r>coloratura<s n="n"/></r></p></e>
     <e><p><l>kolumnisti<s n="n"/></l><r>columnist<s n="n"/></r></p></e>
@@ -2738,7 +2739,6 @@
     <e><p><l>maoismi<s n="n"/></l><r>Maoism<s n="n"/></r></p></e>
     <e><p><l>marakatti<s n="n"/></l><r>guenon<s n="n"/></r></p></e>
     <e><p><l>marihuana<s n="n"/></l><r>marijuana<s n="n"/></r></p></e>
-    <e><p><l>Mari<s n="np"/></l><r>Mari<s n="np"/></r></p></e>
     <e><p><l>markiisitar<s n="n"/></l><r>marchioness<s n="n"/></r></p></e>
     <e><p><l>marttyyrius<s n="n"/></l><r>martyrdom<s n="n"/></r></p></e>
     <e><p><l>marttyyriys<s n="n"/></l><r>martyrdom<s n="n"/></r></p></e>
@@ -2749,7 +2749,7 @@
     <e><p><l>matroona<s n="n"/></l><r>matron<s n="n"/></r></p></e>
     <e><p><l>matsi<s n="n"/></l><r>match<s n="n"/></r></p></e>
     <e><p><l>mauriainen<s n="n"/></l><r>black garden ant<s n="n"/></r></p></e>
-    <e><p><l>medikalisaatio<s n="n"/></l><r>medicalization<s n="n"/></r></p></e>
+    <e><p><l>medikalisaatio<s n="n"/></l><r>medicalisation<s n="n"/></r></p></e>
     <e><p><l>medulla<s n="n"/></l><r>marrow<s n="n"/></r></p></e>
     <e><p><l>meemi<s n="n"/></l><r>meme<s n="n"/></r></p></e>
     <e><p><l>megaliitti<s n="n"/></l><r>megalith<s n="n"/></r></p></e>
@@ -2955,11 +2955,11 @@
     <e><p><l>mittelö<s n="n"/></l><r>fight<s n="n"/></r></p></e>
     <e><p><l>mittumaari<s n="n"/></l><r>Midsummer Day<s n="n"/></r></p></e>
     <e><p><l>moa<s n="n"/></l><r>eel<s n="n"/></r></p></e>
-    <e><p><l>mobilisaatio<s n="n"/></l><r>mobilization<s n="n"/></r></p></e>
+    <e><p><l>mobilisaatio<s n="n"/></l><r>mobilisation<s n="n"/></r></p></e>
     <e><p><l>modaliteetti<s n="n"/></l><r>modality<s n="n"/></r></p></e>
     <e><p><l>modeemi<s n="n"/></l><r>modem<s n="n"/></r></p></e>
     <e><p><l>moderaattori<s n="n"/></l><r>moderator<s n="n"/></r></p></e>
-    <e><p><l>modernisaatio<s n="n"/></l><r>modernization<s n="n"/></r></p></e>
+    <e><p><l>modernisaatio<s n="n"/></l><r>modernisation<s n="n"/></r></p></e>
     <e><p><l>modernismi<s n="n"/></l><r>modernism<s n="n"/></r></p></e>
     <e><p><l>modernisti<s n="n"/></l><r>modernist<s n="n"/></r></p></e>
     <e><p><l>modernisuus<s n="n"/></l><r>modernity<s n="n"/></r></p></e>
@@ -3577,7 +3577,7 @@
     <e><p><l>neuroosi<s n="n"/></l><r>neurosis<s n="n"/></r></p></e>
     <e><p><l>neurootikko<s n="n"/></l><r>neurotic<s n="n"/></r></p></e>
     <e><p><l>neuropatia<s n="n"/></l><r>neuropathy<s n="n"/></r></p></e>
-    <e><p><l>neutralisaatio<s n="n"/></l><r>neutralization<s n="n"/></r></p></e>
+    <e><p><l>neutralisaatio<s n="n"/></l><r>neutralisation<s n="n"/></r></p></e>
     <e><p><l>neutriino<s n="n"/></l><r>neutrino<s n="n"/></r></p></e>
     <e><p><l>neutri<s n="n"/></l><r>neuter<s n="n"/></r></p></e>
     <e><p><l>neutroni<s n="n"/></l><r>neutron<s n="n"/></r></p></e>
@@ -3689,7 +3689,7 @@
     <e><p><l>normanni<s n="n"/></l><r>Norman<s n="n"/></r></p></e>
     <e><p><l>normi<s n="n"/></l><r>norm<s n="n"/></r></p></e>
     <e><p><l>normisto<s n="n"/></l><r>norm<s n="n"/></r></p></e>
-    <e><p><l>normitus<s n="n"/></l><r>normalization<s n="n"/></r></p></e>
+    <e><p><l>normitus<s n="n"/></l><r>normalisation<s n="n"/></r></p></e>
     <e><p><l>noro<s n="n"/></l><r>rivulet<s n="n"/></r></p></e>
     <e><p><l>noro<s n="n"/></l><r>trickle<s n="n"/></r></p></e>
     <e><p><l>norppa<s n="n"/></l><r>ringed seal<s n="n"/></r></p></e>
@@ -4086,7 +4086,7 @@
     <e><p><l>ordinaatta<s n="n"/></l><r>ordinate<s n="n"/></r></p></e>
     <e><p><l>oregano<s n="n"/></l><r>Origanum vulgare<s n="n"/></r></p></e>
     <e><p><l>orgaani<s n="n"/></l><r>organ<s n="n"/></r></p></e>
-    <e><p><l>organisaatio<s n="n"/></l><r>organization<s n="n"/></r></p></e>
+    <e><p><l>organisaatio<s n="n"/></l><r>organisation<s n="n"/></r></p></e>
     <e><p><l>organisaattori<s n="n"/></l><r>organizer<s n="n"/></r></p></e>
     <e><p><l>organismi<s n="n"/></l><r>organism<s n="n"/></r></p></e>
     <e><p><l>orgasmi<s n="n"/></l><r>orgasm<s n="n"/></r></p></e>
@@ -5100,7 +5100,7 @@
     <e><p><l>pokka<s n="n"/></l><r>poker<s n="n"/></r></p></e>
     <e><p><l>polakka<s n="n"/></l><r>wheat bread<s n="n"/></r></p></e>
     <e><p><l>polanne<s n="n"/></l><r>snow<s n="n"/></r></p></e>
-    <e><p><l>polarisaatio<s n="n"/></l><r>polarization<s n="n"/></r></p></e>
+    <e><p><l>polarisaatio<s n="n"/></l><r>polarisation<s n="n"/></r></p></e>
     <e><p><l>poletti<s n="n"/></l><r>token<s n="n"/></r></p></e>
     <e><p><l>poliisi<s n="n"/></l><r>policeman<s n="n"/></r></p></e>
     <e><p><l>poliisi<s n="n"/></l><r>police<s n="n"/></r></p></e>
@@ -5139,7 +5139,7 @@
     <e><p><l>polygoni<s n="n"/></l><r>polygon<s n="n"/></r></p></e>
     <e><p><l>polymeeri<s n="n"/></l><r>polymer<s n="n"/></r></p></e>
     <e><p><l>polymeraasi<s n="n"/></l><r>polymerase<s n="n"/></r></p></e>
-    <e><p><l>polymerisaatio<s n="n"/></l><r>polymerization<s n="n"/></r></p></e>
+    <e><p><l>polymerisaatio<s n="n"/></l><r>polymerisation<s n="n"/></r></p></e>
     <e><p><l>polynomi<s n="n"/></l><r>polynomial<s n="n"/></r></p></e>
     <e><p><l>polyyppi<s n="n"/></l><r>polyp<s n="n"/></r></p></e>
     <e><p><l>pomelo<s n="n"/></l><r>grapefruit<s n="n"/></r></p></e>
@@ -5962,7 +5962,7 @@
     <e><p><l>reaktanssi<s n="n"/></l><r>reactance<s n="n"/></r></p></e>
     <e><p><l>reaktio<s n="n"/></l><r>reaction<s n="n"/></r></p></e>
     <e><p><l>reaktori<s n="n"/></l><r>reactor<s n="n"/></r></p></e>
-    <e><p><l>realisaatio<s n="n"/></l><r>realization<s n="n"/></r></p></e>
+    <e><p><l>realisaatio<s n="n"/></l><r>realisation<s n="n"/></r></p></e>
     <e><p><l>realismi<s n="n"/></l><r>realism<s n="n"/></r></p></e>
     <e><p><l>realisti<s n="n"/></l><r>realist<s n="n"/></r></p></e>
     <e><p><l>realiteetti<s n="n"/></l><r>reality<s n="n"/></r></p></e>
@@ -6722,7 +6722,7 @@
     <e><p><l>sankari<s n="n"/></l><r>hero<s n="n"/></r></p></e>
     <e><p><l>sankaritar<s n="n"/></l><r>heroine<s n="n"/></r></p></e>
     <e><p><l>sankaruus<s n="n"/></l><r>heroism<s n="n"/></r></p></e>
-    <e><p><l>sankaruus<s n="n"/></l><r>heroization<s n="n"/></r></p></e>
+    <e><p><l>sankaruus<s n="n"/></l><r>heroisation<s n="n"/></r></p></e>
     <e><p><l>sanka<s n="n"/></l><r>arm<s n="n"/></r></p></e>
     <e><p><l>sanka<s n="n"/></l><r>handle<s n="n"/></r></p></e>
     <e><p><l>sankkeri<s n="n"/></l><r>chancre<s n="n"/></r></p></e>
@@ -6891,7 +6891,7 @@
     <e><p><l>sektio<s n="n"/></l><r>division<s n="n"/></r></p></e>
     <e><p><l>sektio<s n="n"/></l><r>section<s n="n"/></r></p></e>
     <e><p><l>sektori<s n="n"/></l><r>sector<s n="n"/></r></p></e>
-    <e><p><l>sekularisaatio<s n="n"/></l><r>secularization<s n="n"/></r></p></e>
+    <e><p><l>sekularisaatio<s n="n"/></l><r>secularisation<s n="n"/></r></p></e>
     <e><p><l>sekundantti<s n="n"/></l><r>second<s n="n"/></r></p></e>
     <e><p><l>sekunda<s n="n"/></l><r>second-rate<s n="n"/></r></p></e>
     <e><p><l>sekunti<s n="n"/></l><r>second<s n="n"/></r></p></e>
@@ -6950,7 +6950,7 @@
     <e><p><l>sensaatio<s n="n"/></l><r>sensation<s n="n"/></r></p></e>
     <e><p><l>sensuuri<s n="n"/></l><r>censorial<s n="n"/></r></p></e>
     <e><p><l>sensuuri<s n="n"/></l><r>censorship<s n="n"/></r></p></e>
-    <e><p><l>sentralisaatio<s n="n"/></l><r>centralization<s n="n"/></r></p></e>
+    <e><p><l>sentralisaatio<s n="n"/></l><r>centralisation<s n="n"/></r></p></e>
     <e><p><l>sentrifugi<s n="n"/></l><r>centrifuge<s n="n"/></r></p></e>
     <e><p><l>sentteri<s n="n"/></l><r>centre<s n="n"/></r></p></e>
     <e><p><l>sentteri<s n="n"/></l><r>forward<s n="n"/></r></p></e>
@@ -7228,7 +7228,7 @@
     <e><p><l>sivari<s n="n"/></l><r>non-military service<s n="n"/></r></p></e>
     <e><p><l>sivellin<s n="n"/></l><r>paintbrush<s n="n"/></r></p></e>
     <e><p><l>siviili<s n="n"/></l><r>civilian<s n="n"/></r></p></e>
-    <e><p><l>sivilisaatio<s n="n"/></l><r>civilization<s n="n"/></r></p></e>
+    <e><p><l>sivilisaatio<s n="n"/></l><r>civilisation<s n="n"/></r></p></e>
     <e><p><l>sivistyneistö<s n="n"/></l><r>intelligentsia<s n="n"/></r></p></e>
     <e><p><l>sivu<s n="n"/></l><r>flank<s n="n"/></r></p></e>
     <e><p><l>sivu<s n="n"/></l><r>page<s n="n"/></r></p></e>
@@ -7324,7 +7324,7 @@
     <e><p><l>solttu<s n="n"/></l><r>soldier<s n="n"/></r></p></e>
     <e><p><l>solukko<s n="n"/></l><r>tissue<s n="n"/></r></p></e>
     <e><p><l>somali<s n="n"/></l><r>Somali<s n="n"/></r></p></e>
-    <e><p><l>somatisaatio<s n="n"/></l><r>somatization<s n="n"/></r></p></e>
+    <e><p><l>somatisaatio<s n="n"/></l><r>somatisation<s n="n"/></r></p></e>
     <e><p><l>somerikko<s n="n"/></l><r>gravel<s n="n"/></r></p></e>
     <e><p><l>somiste<s n="n"/></l><r>decoration<s n="n"/></r></p></e>
     <e><p><l>somiste<s n="n"/></l><r>embellishment<s n="n"/></r></p></e>
@@ -7378,7 +7378,7 @@
     <e><p><l>sose<s n="n"/></l><r>chutney<s n="n"/></r></p></e>
     <e><p><l>sose<s n="n"/></l><r>dip<s n="n"/></r></p></e>
     <e><p><l>sose<s n="n"/></l><r>mash<s n="n"/></r></p></e>
-    <e><p><l>sosialisaatio<s n="n"/></l><r>socialization<s n="n"/></r></p></e>
+    <e><p><l>sosialisaatio<s n="n"/></l><r>socialisation<s n="n"/></r></p></e>
     <e><p><l>sosialismi<s n="n"/></l><r>socialism<s n="n"/></r></p></e>
     <e><p><l>sosialisti<s n="n"/></l><r>socialist<s n="n"/></r></p></e>
     <e><p><l>sosiologia<s n="n"/></l><r>sociology<s n="n"/></r></p></e>
@@ -7462,7 +7462,7 @@
     <e><p><l>statistiikka<s n="n"/></l><r>statistics<s n="n"/></r></p></e>
     <e><p><l>steariini<s n="n"/></l><r>stearin<s n="n"/></r></p></e>
     <e><p><l>stepperi<s n="n"/></l><r>stepper<s n="n"/></r></p></e>
-    <e><p><l>sterilisaatio<s n="n"/></l><r>sterilization<s n="n"/></r></p></e>
+    <e><p><l>sterilisaatio<s n="n"/></l><r>sterilisation<s n="n"/></r></p></e>
     <e><p><l>sterilisaattori<s n="n"/></l><r>sterilizer<s n="n"/></r></p></e>
     <e><p><l>steriliteetti<s n="n"/></l><r>sterility<s n="n"/></r></p></e>
     <e><p><l>steroidi<s n="n"/></l><r>steroid<s n="n"/></r></p></e>
@@ -9152,7 +9152,7 @@
     <e><p><l>urakka<s n="n"/></l><r>contract<s n="n"/></r></p></e>
     <e><p><l>urakka<s n="n"/></l><r>work<s n="n"/></r></p></e>
     <e><p><l>urasiili<s n="n"/></l><r>uracil<s n="n"/></r></p></e>
-    <e><p><l>urbanisaatio<s n="n"/></l><r>urbanization<s n="n"/></r></p></e>
+    <e><p><l>urbanisaatio<s n="n"/></l><r>urbanisation<s n="n"/></r></p></e>
     <e><p><l>urdu<s n="n"/></l><r>Urdu<s n="n"/></r></p></e>
     <e><p><l>uretaani<s n="n"/></l><r>urethane<s n="n"/></r></p></e>
     <e><p><l>urho<s n="n"/></l><r>hero<s n="n"/></r></p></e>
@@ -9350,10 +9350,10 @@
     <e><p><l>valtio<s n="n"/></l><r>state<s n="n"/></r></p></e>
     <e><p><l>valtti<s n="n"/></l><r>advantage<s n="n"/></r></p></e>
     <e><p><l>valtti<s n="n"/></l><r>trump<s n="n"/></r></p></e>
-    <e><p><l>valtuus<s n="n"/></l><r>authorization<s n="n"/></r></p></e>
+    <e><p><l>valtuus<s n="n"/></l><r>authorisation<s n="n"/></r></p></e>
     <e><p><l>valtuusto<s n="n"/></l><r>council<s n="n"/></r></p></e>
     <e><p><l>valtuusto<s n="n"/></l><r>delegation<s n="n"/></r></p></e>
-    <e><p><l>valtuutus<s n="n"/></l><r>authorization<s n="n"/></r></p></e>
+    <e><p><l>valtuutus<s n="n"/></l><r>authorisation<s n="n"/></r></p></e>
     <e><p><l>valtuutus<s n="n"/></l><r>empowerment<s n="n"/></r></p></e>
     <e><p><l>valtuutus<s n="n"/></l><r>mandate<s n="n"/></r></p></e>
     <e><p><l>valtuutus<s n="n"/></l><r>power of attorney<s n="n"/></r></p></e>
