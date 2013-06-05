@@ -60,8 +60,8 @@
       <cat-item tags="vblex.*.pres.infma.*.ine"/>
     </def-cat>
     <def-cat n="just-inf">
-      <cat-item tags="vblex.infa.sg"/>
-      <cat-item tags="vblex.infma.sg.ill"/>
+      <cat-item tags="vblex.actv.infa.sg"/>
+      <cat-item tags="vblex.actv.infma.sg.ill"/>
     </def-cat>
     <def-cat n="vbneg">
         <cat-item tags="vblex.neg.*.*.*"/>
@@ -156,6 +156,8 @@
       <attr-item tags="ine"/>
       <attr-item tags="ins"/>
       <attr-item tags="nom"/>
+      <attr-item tags="abe"/>
+      <attr-item tags="com"/>
       <attr-item tags="par"/>
     </def-attr>
 
@@ -238,6 +240,9 @@
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ade"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abl"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="all"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abe"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ins"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="com"/></equal>
         </or></test>
 
               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
@@ -564,7 +569,7 @@
         <out>
           <chunk name="to-do" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="SV"/></tag>
             </tags>
             <lu>
                 <lit v="to"/>
