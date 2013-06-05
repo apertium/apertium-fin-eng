@@ -2584,7 +2584,9 @@ REMOVE (N "osanen") (NOT 1 Par) #osa/osanen (osasta)
 SELECT (AD "vähän") (1 Gen) (2 JALKEEN) # 4.2.2001 !!->! cf.below
 REMOVE (AD "vähän") (NOT 1C CMP-ENNEN) (NOT 2 JALKEEN)# 4.2.2001 !!->! cf.below
 
+##Apertium
 SELECT Po IF (-1C Gen) (OC Po OR Pr);
+REMOVE SUB:1 (ine) IF (0/1 (cmp));
 
 # Syntactic Tags
 # --------------
