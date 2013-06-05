@@ -2197,7 +2197,6 @@
     <e><p><l>jiddiš<s n="n"/></l><r>Yiddish<s n="n"/></r></p></e>
     <e><p><l>jodidi<s n="n"/></l><r>iodide<s n="n"/></r></p></e>
     <e><p><l>joriini<s n="n"/></l><r>dahlia<s n="n"/></r></p></e>
-    <e><p><l>jokin<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
     <e><p><l>journalistiikka<s n="n"/></l><r>journalism<s n="n"/></r></p></e>
     <e><p><l>joutilaisuus<s n="n"/></l><r>idleness<s n="n"/></r></p></e>
     <e><p><l>jukka<s n="n"/></l><r>yucca<s n="n"/></r></p></e>
@@ -2810,7 +2809,6 @@
     <e><p><l>merta<s n="n"/></l><r>pot<s n="n"/></r></p></e>
     <e><p><l>mesenaatti<s n="n"/></l><r>patron<s n="n"/></r></p></e>
     <e><p><l>mesi<s n="n"/></l><r>nectar<s n="n"/></r></p></e>
-    <e><p><l>me<s n="prn"/></l><r>we<s n="prn"/></r></p></e>
     <e><p><l>mesoni<s n="n"/></l><r>meson<s n="n"/></r></p></e>
     <e><p><l>messinki<s n="n"/></l><r>brass<s n="n"/></r></p></e>
     <e><p><l>messi<s n="n"/></l><r>mess<s n="n"/></r></p></e>
@@ -2899,10 +2897,7 @@
     <e><p><l>mikrofoni<s n="n"/></l><r>microphone<s n="n"/></r></p></e>
     <e><p><l>mikro<s n="n"/></l><r>microcomputer<s n="n"/></r></p></e>
     <e><p><l>mikseri<s n="n"/></l><r>mixer<s n="n"/></r></p></e>
-    <e><p><l>miksi<s n="prn"/></l><r>why<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>mikstuura<s n="n"/></l><r>mixture<s n="n"/></r></p></e>
-    <e><p><l>mikä<s n="prn"/></l><r>what<s n="adv"/><s n="itg"/></r></p></e>
-    <e><p><l>mikään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
     <e><p><l>militantti<s n="n"/></l><r>militant<s n="n"/></r></p></e>
     <e><p><l>militarismi<s n="n"/></l><r>militarism<s n="n"/></r></p></e>
     <e><p><l>militaristi<s n="n"/></l><r>militarist<s n="n"/></r></p></e>
@@ -2935,7 +2930,6 @@
     <e><p><l>minuus<s n="n"/></l><r>self<s n="n"/></r></p></e>
     <e><p><l>minuutti<s n="n"/></l><r>minute<s n="n"/></r></p></e>
     <e><p><l>minä<s n="n"/></l><r>ego<s n="n"/></r></p></e>
-    <e><p><l>minä<s n="prn"/><s n="pers"/><s n="p1"/></l><r>I<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/></r></p></e>
     <e><p><l>mioseeni<s n="n"/></l><r>Miocene<s n="n"/></r></p></e>
     <e><p><l>miraakkeli<s n="n"/></l><r>miracle<s n="n"/></r></p></e>
     <e><p><l>mirhami<s n="n"/></l><r>chrism<s n="n"/></r></p></e>
@@ -2945,7 +2939,6 @@
     <e><p><l>missiologia<s n="n"/></l><r>missiology<s n="n"/></r></p></e>
     <e><p><l>missio<s n="n"/></l><r>mission<s n="n"/></r></p></e>
     <e><p><l>missi<s n="n"/></l><r>miss<s n="n"/></r></p></e>
-    <e><p><l>missä<s n="prn"/></l><r>where<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>misteli<s n="n"/></l><r>mistletoe<s n="n"/></r></p></e>
     <e><p><l>misu<s n="n"/></l><r>chick<s n="n"/></r></p></e>
     <e><p><l>misu<s n="n"/></l><r>honey<s n="n"/></r></p></e>
@@ -2961,8 +2954,6 @@
     <e><p><l>mittelö<s n="n"/></l><r>battle<s n="n"/></r></p></e>
     <e><p><l>mittelö<s n="n"/></l><r>fight<s n="n"/></r></p></e>
     <e><p><l>mittumaari<s n="n"/></l><r>Midsummer Day<s n="n"/></r></p></e>
-    <e><p><l>mitä<s n="prn"/></l><r>what<s n="prn"/><s n="itg"/></r></p></e>
-    <e><p><l>mitään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
     <e><p><l>moa<s n="n"/></l><r>eel<s n="n"/></r></p></e>
     <e><p><l>mobilisaatio<s n="n"/></l><r>mobilization<s n="n"/></r></p></e>
     <e><p><l>modaliteetti<s n="n"/></l><r>modality<s n="n"/></r></p></e>
@@ -2995,7 +2986,6 @@
     <e><p><l>mokoma<s n="n"/></l><r>son of a bitch<s n="n"/></r></p></e>
     <e><p><l>molari<s n="n"/></l><r>goalie<s n="n"/></r></p></e>
     <e><p><l>molekyyli<s n="n"/></l><r>molecule<s n="n"/></r></p></e>
-    <e><p><l>molemmat<s n="prn"/></l><r>both<s n="prn"/><s n="ind"/><s n="mf"/></r></p></e>
     <e><p><l>molluska<s n="n"/></l><r>molluscum contagiosum<s n="n"/></r></p></e>
     <e><p><l>molybdeeni<s n="n"/></l><r>molybdenum<s n="n"/></r></p></e>
     <e><p><l>momentti<s n="n"/></l><r>clause<s n="n"/></r></p></e>
@@ -3242,8 +3232,6 @@
     <e><p><l>muusikko<s n="n"/></l><r>musician<s n="n"/></r></p></e>
     <e><p><l>muusi<s n="n"/></l><r>mashed potatoes<s n="n"/></r></p></e>
     <e><p><l>muusi<s n="n"/></l><r>mash<s n="n"/></r></p></e>
-    <e><p><l>muu<s n="prn"/></l><r>another<s n="prn"/><s n="sg"/><s n="nom"/></r></p></e>
-    <e><p><l>muu<s n="prn"/></l><r>other<s n="prn"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>muutos<s n="n"/></l><r>change<s n="n"/></r></p></e>
     <e><p><l>muutos<s n="n"/></l><r>modification<s n="n"/></r></p></e>
     <e><p><l>muutto<s n="n"/></l><r>migration<s n="n"/></r></p></e>
@@ -3561,7 +3549,6 @@
     <e><p><l>neppari<s n="n"/></l><r>snap fastener<s n="n"/></r></p></e>
     <e><p><l>neppari<s n="n"/></l><r>snap<s n="n"/></r></p></e>
     <e><p><l>nero<s n="n"/></l><r>genius<s n="n"/></r></p></e>
-    <e><p><l>ne<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
     <e><p><l>neste<s n="n"/></l><r>fluid<s n="n"/></r></p></e>
     <e><p><l>neste<s n="n"/></l><r>liquid<s n="n"/></r></p></e>
     <e><p><l>nesteytin<s n="n"/></l><r>agent<s n="n"/></r></p></e>
@@ -3852,7 +3839,6 @@
     <e><p><l>näkö<s n="n"/></l><r>sight<s n="n"/></r></p></e>
     <e><p><l>nälkä<s n="n"/></l><r>hunger<s n="n"/></r></p></e>
     <e><p><l>nälkä<s n="n"/></l><r>hungry<s n="n"/></r></p></e>
-    <e><p><l>nämä<s n="prn"/></l><r>these<s n="prn"/></r></p></e>
     <e><p><l>nänni<s n="n"/></l><r>nipple<s n="n"/></r></p></e>
     <e><p><l>nänni<s n="n"/></l><r>pin<s n="n"/></r></p></e>
     <e><p><l>näppi<s n="n"/></l><r>finger<s n="n"/></r></p></e>
@@ -7000,7 +6986,6 @@
     <e><p><l>sertifikaatti<s n="n"/></l><r>certificate<s n="n"/></r></p></e>
     <e><p><l>serveri<s n="n"/></l><r>server<s n="n"/></r></p></e>
     <e><p><l>serviisi<s n="n"/></l><r>service<s n="n"/></r></p></e>
-    <e><p><l>se<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
     <e><p><l>sesonki<s n="n"/></l><r>season<s n="n"/></r></p></e>
     <e><p><l>sessio<s n="n"/></l><r>session<s n="n"/></r></p></e>
     <e><p><l>seteli<s n="n"/></l><r>banknote<s n="n"/></r></p></e>
@@ -7183,7 +7168,6 @@
     <e><p><l>sinuiitti<s n="n"/></l><r>sinusitis<s n="n"/></r></p></e>
     <e><p><l>sinus<s n="n"/></l><r>sine<s n="n"/></r></p></e>
     <e><p><l>sinut<s n="adv"/></l><r>even<s n="adv"/></r></p></e>
-    <e><p><l>sinä<s n="prn"/><s n="pers"/><s n="p2"/></l><r>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
     <e><p><l>sionismi<s n="n"/></l><r>Zionism<s n="n"/></r></p></e>
     <e><p><l>sionisti<s n="n"/></l><r>Zionist<s n="n"/></r></p></e>
     <e><p><l>sioux<s n="n"/></l><r>Sioux<s n="n"/></r></p></e>
@@ -10161,6 +10145,29 @@
     <e><p><l>öylätti<s n="n"/></l><r>wafer<s n="n"/></r></p></e>
     <e><p><l>ööli<s n="n"/></l><r>beer<s n="n"/></r></p></e>
 
+    <!-- adverbs -->
+    <e><p><l>missä<s n="adv"/></l><r>where<s n="adv"/></r></p></e>
+    <e><p><l>miksi<s n="adv"/></l><r>why<s n="adv"/></r></p></e>
+
+    <!-- pronouns -->
+    <!-- all sorts of stuff -->
+    <e><p><l>jokin<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
+    <e><p><l>molemmat<s n="prn"/></l>
+            <r>both<s n="prn"/><s n="ind"/><s n="mf"/></r></p></e>
+    <e><p><l>muu<s n="prn"/></l><r>another<s n="prn"/></r></p></e>
+    <e><p><l>muu<s n="prn"/></l><r>other<s n="prn"/></r></p></e>
+    <!-- interr -->
+    <e><p><l>missä<s n="prn"/></l><r>where<s n="adv"/></r></p></e>
+    <e><p><l>miksi<s n="prn"/></l><r>why<s n="adv"/></r></p></e>
+    <e><p><l>mikä<s n="prn"/></l><r>what<s n="adv"/></r></p></e>
+    <e><p><l>mikään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
+    <e><p><l>mitä<s n="prn"/></l><r>what<s n="prn"/></r></p></e>
+    <e><p><l>mitään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
+    <!-- pers -->
+    <e><p><l>minä<s n="prn"/><s n="pers"/><s n="p1"/></l>
+            <r>I<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/></r></p></e>
+    <e><p><l>sinä<s n="prn"/><s n="pers"/><s n="p2"/></l>
+            <r>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
     <e><p><l>hän<s n="prn"/><s n="pers"/></l>
             <r>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/></r></p></e>
     <e><p><l>hän<s n="prn"/><s n="pers"/></l>
@@ -10169,6 +10176,11 @@
             <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
     <e><p><l>he<s n="prn"/><s n="pers"/><s n="p3"/></l>
             <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
+    <e><p><l>me<s n="prn"/></l><r>we<s n="prn"/></r></p></e>
+    <!-- demon -->
+    <e><p><l>se<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
+    <e><p><l>nämä<s n="prn"/></l><r>these<s n="prn"/></r></p></e>
+    <e><p><l>ne<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
 
     <!-- Раздел: Имя Существительное -->
 

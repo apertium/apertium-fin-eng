@@ -51,6 +51,9 @@
       <attr-item tags="ade"/>
       <attr-item tags="abl"/>
       <attr-item tags="all"/>
+      <attr-item tags="abe"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="com"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
@@ -99,6 +102,24 @@
           <test><equal><clip pos="1" part="a_cas"/><lit-tag v="all"/></equal></test>
           <let><var n="PREP"/>
                <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^to"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="abe"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^without"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="ins"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^with"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_cas"/><lit-tag v="ins"/></equal></test>
+          <let><var n="PREP"/>
+               <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^alongside"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>

@@ -53,8 +53,8 @@
         <cat-item tags="vblex.*.*.p1.*"/>
         <cat-item tags="vblex.*.*.p2.*"/>
     </def-cat>
-    <def-cat n="inf-ine">
-      <cat-item tags="vblex.*.pres.inf.*.ine"/>
+    <def-cat n="infma-ine">
+      <cat-item tags="vblex.*.pres.infma.*.ine"/>
     </def-cat>
     <def-cat n="just-inf">
       <cat-item tags="vblex.infa.sg"/>
@@ -502,10 +502,10 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: vbolla inf-ine">
+    <rule comment="REGLA: vbolla infma-ine">
       <pattern>
         <pattern-item n="vbolla"/>
-        <pattern-item n="inf-ine"/>
+        <pattern-item n="infma-ine"/>
       </pattern>
       <action>
         <call-macro n="proc-synlabel1"> 
