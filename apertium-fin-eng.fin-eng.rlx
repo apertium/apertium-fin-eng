@@ -1889,11 +1889,11 @@ REMOVE (INTJ) (NOT -1 CLB?) (NOT 0 VOI)
 SELECT (Act Sg3) (NOT *-1 NEGV BARRIER (CLB)) (-1C Nom) (-1 N/Pron/Q) (NOT -1 DV-US) (NOT -1 DA-US) (NOT 0 TUO) (NOT -1 Num) (NOT 1C VFIN) (NOT 2C VFIN) (NOT *-1 VFIN BARRIER (CLB)) (NOT 0 PIENIA/ELAA) (NOT -1 NOUN+Inf1) (NOT 0 Cond) (NOT 0 Prt)
 
 ## *** IMPERATIVES ***
-SELECT (imp) (-1 BOS) (NOT *1C VFIN) (NOT 0 VOI) (NOT 0 KO)
+SELECT (Imp) (-1 BOS) (NOT *1C VFIN) (NOT 0 VOI) (NOT 0 KO)
 # NB "kysy voiko..."
-SELECT (imp) (1 DUMMY)  # (-2 CLB?) (-1 C) (*1 CLB? LINK NOT *-1 VFIN)
-REMOVE (imp) (*1C VFIN LINK NOT *-1 CLB?) (NOT 1 CLB?)
-REMOVE (imp) (*-1C VFIN LINK NOT *1 CLB?) (NOT -1 CLB?)
+SELECT (Imprt) (1 DUMMY)  (-2 CLB?) (-1 C) (*1 CLB? LINK NOT *-1 VFIN)
+REMOVE (Imprt) (*1C VFIN LINK NOT *-1 CLB?) (NOT 1 CLB?)
+REMOVE (Imprt) (*-1C VFIN LINK NOT *1 CLB?) (NOT -1 CLB?)
 REMOVE Imprt (0 ("myös"));
 #REMOVE (Imprt) (0 ("myös"));
 #REMOVE (Imprt) (0 ("myös"));
@@ -2572,8 +2572,9 @@ SELECT (Prs/Imprt Act Neg) (-1C NEGV)# emme tunne
 
 REMOVE (imp p2 sg) (NOT -1 BOS) (NOT -2 BOS) (NOT -1 C) (NOT -2 C) (-1 WORD) ;
 SELECT (imp p2 sg) (NEGATE -1 WORD) (0 WORD LINK *1 (N Nom) BARRIER N) ;
-    # Heitä mulle tuo kirja!
-SELECT (imp p2 sg) (0 ConNeg) (NEGATE 0 WORD LINK *-1 Neg BARRIER V) (NEGATE 0 WORD LINK 1 Neg BARRIER V) ;
+    # € Heitä mulle tuo kirja!
+    # $ Hän on sisällä talossa.
+#SELECT (imp p2 sg) (0 ConNeg) (NEGATE 0 WORD LINK *-1 Neg BARRIER V) (NEGATE 0 WORD LINK 1 Neg BARRIER V) ;
     # Laula minulle! 
 
 SELECT (PP "ennen") (1 KELLO) (2 Par)
