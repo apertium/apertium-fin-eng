@@ -7209,6 +7209,7 @@
     <e><p><l>sisusta<s n="n"/></l><r>inside<s n="n"/></r></p></e>
     <e><p><l>sisusta<s n="n"/></l><r>interior<s n="n"/></r></p></e>
     <e><p><l>sisäkkö<s n="n"/></l><r>housemaid<s n="n"/></r></p></e>
+    <e><p><l>sisällä<s n="adv"/></l><r>inside<s n="pr"/></r></p></e>
     <e><p><l>sisällä<s n="post"/></l><r>inside<s n="pr"/></r></p></e>
     <e><p><l>sisällä<s n="pr"/></l><r>inside<s n="pr"/></r></p></e>
     <e><p><l>sisältää<s n="vblex"/></l><r>contain<s n="vblex"/></r></p></e>
@@ -10169,11 +10170,11 @@
             <r>I<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/></r></p></e>
     <e><p><l>sinä<s n="prn"/><s n="pers"/><s n="p2"/></l>
             <r>you<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/></l>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
             <r>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="m"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/></l>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
             <r>she<s n="prn"/><s n="pers"/><s n="p3"/><s n="f"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/></l>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/></l>
             <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
     <e><p><l>he<s n="prn"/><s n="pers"/><s n="p3"/></l>
             <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
