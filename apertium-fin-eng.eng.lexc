@@ -397,7 +397,7 @@ another%<prn%>:another N ; ! "" ! Determiner/Pronoun
 some%<prn%>:some # ; ! "" ! Determiner/Pronoun
 what%<prn%>%<itg%>:what # ; ! "" ! Pronoun
 
-something%<prn%>%<qua%>:something N ; ! ""
+something%<prn%>:something N ; ! ""
 nothing%<prn%>:nothing N ; ! ""
 anything%<prn%>:anything N ; ! ""!! Pronoun
 
@@ -433,7 +433,7 @@ theirs%<prn%>%<pos%>%<mf%>%<sp%>:theirs # ; ! ""
 his%<prn%>%<pos%>%<mf%>%<sp%>:his # ; ! ""
 
 
-both%<prn%>%<ind%>%<mf%>%<qua%>%<pl%>%<nom%>:both # ; ! ""
+both%<prn%>%<ind%>%<mf%>%<pl%>%<nom%>:both # ; ! ""
 
 LEXICON PROPN_JAMES
 
