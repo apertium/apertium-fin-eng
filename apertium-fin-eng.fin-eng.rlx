@@ -173,6 +173,8 @@ LIST Prs/Prt = pres past ;
 LIST PrsPrc/Inf3/Inf2/REF/TEMP = PrsPrc Inf3 Inf2 REF TEMP ; 
 LIST Imprt = Imprt imp imprt ;
 LIST Imp = Imp Imprt imp imprt ; 
+LIST Cond = cond ;
+LIST POTN = pot ;
 
 LIST Inf1 = Inf1 IInf; 
 LIST Inf2 = IIInf Inf2 ;
@@ -265,13 +267,15 @@ LIST NomINAL-FORM = Inf1 Inf2 Inf3 PrfPrc PrsPrc ;
 
 LIST V-Pl = Pl1 Pl2 Pl3 ; 
 LIST V-Sg = Sg1 Sg2 Sg3 ; 
-LIST VFIN = Prs Prt Cond POTN NEGV Imprt imp ; 
+#LIST VFIN = Prs Prt Cond POTN NEGV Imprt imp past indv; 
 LIST VFIN-C = Prs Prt Cond POTN NEGV Imprt C imp ; 
 LIST VFIN-C-MYOS = Prs Prt Cond POTN NEGV Imprt C "myös" imp ; 
 LIST VFIN-PCP = Prs Prt Cond POTN NEGV Imprt PrfPrc PrsPrc imp ; 
 LIST VFIN/PrsPrc = Prt Prs Cond POTN PrsPrc ; 
 LIST VFIN/PrsPrc/Inf = Prt Prs Cond POTN PrsPrc Inf1 Inf2 Inf3 REF TEMP ; 
 LIST VFIN-SgPl12 = Sg1 Sg2 Pl1 Pl2 ; 
+
+SET VFIN = Prs or Prt or Cond or POTN or Imprt ;
 
 # Word lists
 # ----------
@@ -565,7 +569,6 @@ LIST CLB?-C = BOS EOS "<$\:>" "<$\#>" "<$\(>" "<$\>" "<$\'>" "<$\">" "<$\,>"  "<
 LIST CLB?/Neg = BOS EOS "<$\:>" "<$\#>" "<$\(>" "<$\>" "<$\'>" "<$\">" "<$\,>"  C Neg ; 
 LIST CMP-ENNEN = CMP "ennen" ; 
 LIST CMP/SUP = CMP SUP ; 
-LIST Cond = Cond ; 
 
 
 LIST INTG = INTG ; 
@@ -581,7 +584,6 @@ LIST Num-PUOLET-KOLMANNES = Num "puoli" "kolmannes" "neljännes" "viidennes" "ku
 LIST Num-Q-Ill = Num Q Ill ; 
 LIST ORD = ORD ; 
 LIST P-3 = P-3 ; 
-LIST POTN = POTN ;
 LIST Prop/HEUR = Prop <MORPH-HEUR!> ; 
 LIST PSP = PSP ; 
 LIST PSP-CASE = Gen Par Ela Ill Abl All ; 
@@ -806,14 +808,6 @@ ADD (CLB) (Adv) IF (0 KUINKA-MITEN-MIllOIN) (NOT 0 (CLB)) ;
 ADD (CLB) (Conj) IF (NOT 0 (CC)) (NOT 0 (CLB)) ; 
 
 # Including (NOT 0 (CLB)) because it adds multiple times otherwise - Ryan
-
-## Flammie: 
-#
-# prefer no clits over clits:
-REMOVE CLIT ;
-
-# interjections rarely if not stuff
-#REMOVE INTJ IF NOT (1* EXCL BARRIER (CLB)) ;
 
 
 SELECT Conj IF (-1 (Pcle "samoin")) ;
@@ -1090,7 +1084,7 @@ SELECT (AD) (NOT 0 NIIN-YHA) (1C A/AD-A/Q) (1 Par) (NOT 2 CMP)
 REMOVE (AD) (NOT 0 NIIN-YHA) (1C A/AD-A/Q) (1 Par) (2 CMP)
 # HIEMAN(Adv) ENTISTÄ SUPPEAMPI
 SELECT (AD) (NOT 0 NIIN-YHA) (1C Num-PUOLET-KOLMANNES) (NOT 0 VAllAN) (NOT 0 INTERR)  (NOT 0 YLI/AllE) #lastcondadded9.10.2000
-REMOVE (AD) (NOT 1 A/AD-A/Q) (NOT 1 Num-PUOLET-KOLMANNES) (NOT 1 Adv) (NOT 1 PCP) (NOT 0 AIVAN-IHAN) (NOT 1 CMP-ENNEN) (NOT 2 JALKEEN)# 4.1.2001 last2added
+REMOVE (AD) (NOT 1 A/AD-A/Q) (NOT 1 Num-PUOLET-KOLMANNES) (NOT 1 Adv) (NOT 1 PCP) (NOT 0 AIVAN-IHAN) (NOT 1 CMP-ENNEN) (NOT 2 JALKEEN) # 4.1.2001 last2added
 SELECT (AD "vähemmän") (NOT -1 ComMA) (1 A-A/N-PCP) (NOT 1 Par) (NOT 2 CMP) (NOT -1 C) (NOT -2 ENEM-VAHEM) (NOT 1 Gen)
 SELECT (AD "vähemmän") (1 A-A/N-PCP) (NOT 1 Par) (NOT 2 CMP) (NOT -1 C) (NOT -2 ENEM-VAHEM) (NOT 1 Gen)
 SELECT (AD "vähemmän") (1 A-A/N-PCP) (1 Par) (NOT 2 CMP) (NOT -1 C) (NOT -2 ENEM-VAHEM) (NOT 1 Gen)
@@ -1656,7 +1650,7 @@ REMOVE (<POSS> P-2Sg) (0 V) (0 Prt) (NOT -1 SINÄ) # TOTESI,KOHOSI
 SELECT (N Sg Nom <POSS>) (1C NEGV) (1 Sg123) (NOT 2 TARVITA) # XXX
 SELECT (N Pl Nom <POSS>) (1C NEGV) (1 Pl123) (NOT 2 TARVITA)
 
-SELECT V IF (0 N) (NEGATE 0 WORD LINK *-1 V BARRIER (CLB)) (NEGATE 0 WORD LINK *1 V BARRIER (CLB)) ; 
+#SELECT V IF (0 N) (NEGATE 0 WORD LINK *-1 V BARRIER (CLB)) (NEGATE 0 WORD LINK *1 V BARRIER (CLB)) ; 
 
 #------------------------------------------------------------
 # KOORDINAATIO: N C N
@@ -2586,8 +2580,12 @@ SELECT (AD "vähän") (1 Gen) (2 JALKEEN) # 4.2.2001 !!->! cf.below
 REMOVE (AD "vähän") (NOT 1C CMP-ENNEN) (NOT 2 JALKEEN)# 4.2.2001 !!->! cf.below
 
 ##Apertium
-SELECT Po IF (-1C Gen) (OC Po OR Pr);
-REMOVE SUB:1 (ine) IF (0/1 (cmp));
+SELECT:ape-po Po IF (-1C Gen) (OC Po OR Pr);
+REMOVE:ape-cmp SUB:1 (ine) IF (0/1 (cmp));
+# Remove multiple V's. needs finetuning
+REMOVE:ape-vfin VFIN IF (-1* VFIN BARRIER (CLB) ) ;
+# Hän on kuusi vuotta
+SELECT:ape-vuotta (N sg par "vuosi") IF (-1 Num) ;
 
 # Syntactic Tags
 # --------------
