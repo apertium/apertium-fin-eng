@@ -2586,7 +2586,7 @@ REMOVE:ape-cmp SUB:1 (ine) IF (0/1 (cmp));
 # Remove multiple V's. needs finetuning
 REMOVE:ape-vfin VFIN IF (-1* VFIN BARRIER VFINB ) ;
 # Hän on kuusi vuotta
-SELECT:ape-vuotta (N sg par "vuosi") IF (-1 Num) ;
+SELECT:ape-vuotta (n sg par "vuosi") IF (-1 Num) ;
 
 # Syntactic Tags
 # --------------
