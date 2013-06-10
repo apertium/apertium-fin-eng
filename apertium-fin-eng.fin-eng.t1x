@@ -1081,9 +1081,11 @@
               <tag><lit-tag v="CC"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+                <!-- because CG introduces CLB tag for cnjcoo -->
+                <clip pos="1" side="tl" part="lem"/>
+                <lit-tag v="cnjcoo"/>
             </lu>
-          </chunk>
+            </chunk>
         </out>
       </action>
     </rule>
