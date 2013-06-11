@@ -176,9 +176,9 @@ LIST Imp = Imp Imprt imp imprt ;
 LIST Cond = cond ;
 LIST POTN = pot ;
 
-LIST Inf1 = Inf1 IInf; 
-LIST Inf2 = IIInf Inf2 ;
-LIST Inf3 = Inf3 ; 
+LIST Inf1 = Inf1 IInf infa ; 
+LIST Inf2 = IIInf Inf2 infe ;
+LIST Inf3 = Inf3 infma ; 
 
 LIST Inf123 = Inf1 Inf2 Inf3 ; 
 LIST Inf1/3 = Inf1 Inf3 ; 
@@ -276,7 +276,7 @@ LIST VFIN/PrsPrc/Inf = Prt Prs Cond POTN PrsPrc Inf1 Inf2 Inf3 REF TEMP ;
 LIST VFIN-SgPl12 = Sg1 Sg2 Pl1 Pl2 ; 
 
 SET VFIN = Prs or Prt or Cond or POTN or Imprt ;
-LIST VFINB = "," ":" "." cnjsub cnjadv cnjcoo ;
+LIST VFINB = "," ":" "." cnjsub cnjadv cnjcoo sent cm ;
 
 # Word lists
 # ----------
@@ -1893,32 +1893,35 @@ REMOVE Imprt (0 ("myös"));
 #REMOVE (Imprt) (0 ("myös"));
 #REMOVE (Imprt) (0 ("myös"));
 ## InfINITIVES
-SELECT (Inf1) (-2C Inf1) (-1 C) (1 CLB?) (NOT 0 UUSIA)
+SELECT Inf1 (-2C Inf1) (-1 C) (1 CLB?) (NOT 0 UUSIA)
   # "...voidaan käsitellä ja ylläpitää,"
   # THIS HANDLES COORDINATION.
-SELECT (Inf1) (-2 COP) (-1 HYVA/HUONO)
+SELECT Inf1 (-2 COP) (-1 HYVA/HUONO)
   # ON VAIKEA OLLA
-SELECT (Inf1) (-3 COP) (-2 Adv) (-1 A) (NOT 0 UUSIA)
+SELECT Inf1 (-3 COP) (-2 Adv) (-1 A) (NOT 0 UUSIA)
   # ONKO SITTEN MOTIVOITUA YRITTää...
-SELECT (Inf1) (-2 COP) (-1 N) (-1 Par) (-1 Sg) (NOT 0 UUSIA)
+SELECT Inf1 (-2 COP) (-1 N) (-1 Par) (-1 Sg) (NOT 0 UUSIA)
   # ON SYYTä PALAUTTAA MIELEEN
-SELECT (Inf1) (-3 COP) (-2 Adv) (-1 N) (-1 Nom/Par) (-1 Sg) (NOT 0 UUSIA)
+SELECT Inf1 (-3 COP) (-2 Adv) (-1 N) (-1 Nom/Par) (-1 Sg) (NOT 0 UUSIA)
   # HAMPURIN KATASTROFIN JäLKEEN AINOANA PääMääRäNä OLEVAN *ESTää*...)
-SELECT (Inf1) (-1C Inf1-VERB) (NOT 0 N) (NOT 0 UUSIA)
-SELECT (Inf1) (-2C Inf1-VERB) (NOT -1 Par) (NOT 0 N) (NOT 0 UUSIA)
-SELECT (Inf1) (-3C Inf1-VERB) (NOT -1 Par) (NOT 0 N) (NOT 0 UUSIA)
-SELECT (Inf1) (-1C NOUN+Inf1) (*-1C VFIN LINK NOT *1 CLB?) (NOT 0 N)
-REMOVE (Inf1) (-1C Inf1)   # SAATTOI ALKAA OTTAA KANTAA(N)
-REMOVE (Inf2) (NOT -2 Gen) (-1 Gen-PREP)
+#SELECT Inf1 (-1C Inf1-VERB) (NOT 0 N) (NOT 0 UUSIA)
+SELECT Inf1 IF (-1C Inf1-VERB) (NOT 0 UUSIA)
+  # hän voi kuulla
+  # N.B kuu n sg ade
+SELECT Inf1 (-2C Inf1-VERB) (NOT -1 Par) (NOT 0 N) (NOT 0 UUSIA)
+SELECT Inf1 (-3C Inf1-VERB) (NOT -1 Par) (NOT 0 N) (NOT 0 UUSIA)
+SELECT Inf1 (-1C NOUN+Inf1) (*-1C VFIN LINK NOT *1 CLB?) (NOT 0 N)
+REMOVE Inf1 (-1C Inf1)   # SAATTOI ALKAA OTTAA KANTAA(N)
+REMOVE Inf2 (NOT -2 Gen) (-1 Gen-PREP)
   # "uudistushankkeiden äänestäminen yli vaalien
-SELECT (Inf2) (0 POTN)
+SELECT Inf2 (0 POTN)
 # HIUKAN LIIOITELLEN (EI POTN)
-SELECT (Inf3) (-1 V) (0 Ade) (NOT 0 N) (NOT 1 Ade)
-SELECT (Inf3) (-2 V) (0 Ade) (NOT 0 N) (NOT 1 Ade)
-SELECT (Inf3) (-3 V) (0 Ade) (NOT 0 N) (NOT 1 Ade)
-SELECT (Inf3) (-1 V) (0 Ine) (NOT 0 N) (NOT 1 Ine)
-SELECT (Inf3) (-2 V) (0 Ine) (NOT 0 N) (NOT 1 Ine)
-SELECT (Inf3) (-3 V) (0 Ine) (NOT 0 N) (NOT 1 Ine)
+SELECT Inf3 (-1 V) (0 Ade) (NOT 0 N) (NOT 1 Ade)
+SELECT Inf3 (-2 V) (0 Ade) (NOT 0 N) (NOT 1 Ade)
+SELECT Inf3 (-3 V) (0 Ade) (NOT 0 N) (NOT 1 Ade)
+SELECT Inf3 (-1 V) (0 Ine) (NOT 0 N) (NOT 1 Ine)
+SELECT Inf3 (-2 V) (0 Ine) (NOT 0 N) (NOT 1 Ine)
+SELECT Inf3 (-3 V) (0 Ine) (NOT 0 N) (NOT 1 Ine)
 SELECT (Inf3 Ela) (*-1 <Inf3-Ela> LINK NOT *1 CLB?) (NOT 0 ELAMA/KUOLEMA) (NOT -1 CLB?)
 SELECT (Inf3 Ill) (*-1 <Inf3-Ill> LINK NOT *1 CLB?) (NOT 0 ELAMA/KUOLEMA) (NOT -1 CLB?)
 SELECT (Inf3 Abe) (NOT 0 PSP) (NOT 0 Adv)
@@ -2584,7 +2587,8 @@ REMOVE (AD "vähän") (NOT 1C CMP-ENNEN) (NOT 2 JALKEEN)# 4.2.2001 !!->! cf.belo
 SELECT:ape-po Po IF (-1C Gen) (OC Po OR Pr);
 REMOVE:ape-cmp SUB:1 (ine) IF (0/1 (cmp));
 # Remove multiple V's. needs finetuning
-REMOVE:ape-vfin VFIN IF (-1* VFIN BARRIER VFINB ) ;
+REMOVE:ape-vfin2 VFIN IF (-1* VFIN BARRIER VFINB ) ;
+SELECT:ape-vfin1 VFIN IF (NOT -1* VFIN BARRIER VFINB ) (NOT 1* VFIN BARRIER VFINB ) ;
 # Hän on kuusi vuotta
 SELECT:ape-vuotta (n sg par "vuosi") IF (-1 Num) ;
 SELECT:ape-kuusi (num sg nom "kuusi") IF (1 (par)) ;
@@ -2592,6 +2596,7 @@ SELECT:ape-viisi (num sg nom "viisi") IF (1 (par)) ;
 # Last resort: Kill all marginal cases if other readings
 REMOVE:ape-lr-ins (ins) ;
 REMOVE:ape-lr-abe (abe) ;
+
 # Syntactic Tags
 # --------------
 
