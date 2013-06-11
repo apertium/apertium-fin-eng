@@ -55,10 +55,20 @@
       <attr-item tags="ins"/>
       <attr-item tags="com"/>
     </def-attr>
+    <def-attr n="a_poss">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+      <attr-item tags="px3ps"/>
+    </def-attr>
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="PREP"/>
+    <def-var n="POSS"/>
     <def-var n="NOT"/>
   </section-def-vars>
   <section-def-macros>
@@ -120,6 +130,56 @@
           <test><equal><clip pos="1" part="a_cas"/><lit-tag v="ins"/></equal></test>
           <let><var n="PREP"/>
                <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^alongside"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+      </choose>
+    </def-macro>
+    <def-macro n="insert-poss1" npar="1">
+      <let>
+        <var n="POSS"/>
+        <lit v=""/>
+      </let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px1sg"/></equal></test>
+          <let><var n="POSS"/>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^I"/><lit-tag v="prn.pers.p1.mf.sg.gen"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px2sg"/></equal></test>
+          <let><var n="POSS"/>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sg.gen"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px3sg"/></equal></test>
+          <let><var n="POSS"/>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.sg.gen"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px1pl"/></equal></test>
+          <let><var n="POSS"/>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^we"/><lit-tag v="prn.pers.p1.mg.pl.gen"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px2pl"/></equal></test>
+          <let><var n="POSS"/>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.pl.gen"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px3pl"/></equal></test>
+          <let><var n="POSS"/>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.gen"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px3sp"/></equal></test>
+          <let><var n="POSS"/>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.gen"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>
@@ -290,8 +350,12 @@
         <call-macro n="insert-prep1">
           <with-param pos="1"/>
         </call-macro> 
+        <call-macro n="insert-poss1">
+          <with-param pos="1"/>
+        </call-macro> 
         <out>
           <var n="PREP"/>
+          <var n="POSS"/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>

@@ -80,6 +80,8 @@
     </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
+      <cat-item tags="n.*.*"/>
+      <cat-item tags="n.*.*.*"/>
       <cat-item tags="np.*"/>
     </def-cat>
     <def-cat n="sent">
@@ -159,6 +161,15 @@
       <attr-item tags="abe"/>
       <attr-item tags="com"/>
       <attr-item tags="par"/>
+    </def-attr>
+    <def-attr n="a_poss">
+        <attr-item tags="px1sg"/>
+        <attr-item tags="px2sg"/>
+        <attr-item tags="px3sg"/>
+        <attr-item tags="px1pl"/>
+        <attr-item tags="px2pl"/>
+        <attr-item tags="px3pl"/>
+        <attr-item tags="px3sp"/>
     </def-attr>
 
     <def-attr n="synfunc">
@@ -254,9 +265,10 @@
                  <not><equal><clip pos="1" side="tl" part="a_prn"/><lit-tag v="prn.pers"/></equal></not>
               </and></test>
               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
               <let><var n="sntype"/><lit-tag v="SN.GEN"/></let>
             </when>
-          </choose>
+        </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
@@ -366,6 +378,7 @@
             <tags>
               <tag><var n="sntype"/></tag>
               <tag><clip pos="1" side="sl" part="a_cas"/></tag>
+              <tag><clip pos="1" side="sl" part="a_poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
