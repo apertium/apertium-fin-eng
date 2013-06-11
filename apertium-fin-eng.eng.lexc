@@ -132,6 +132,7 @@ person%<n%>:person N ; ! ""
 people%<n%>:people N ; ! ""
 question%<n%>:question N ; ! ""
 sister%<n%>:sister N ; ! ""
+son%<n%>:son N ; ! ""
 sound%<n%>:sound N ; ! ""
 table%<n%>:table N ; ! ""
 talus%<n%>%<sg%>%<nom%>:talus # ; ! ""
@@ -143,6 +144,8 @@ weather%<n%>:weather N ; ! ""
 window%<n%>:window N ; ! ""
 wood%<n%>:wood N ; ! ""
 yard%<n%>:yard N ; ! ""
+year%<n%>:year N ; ! ""
+
 
 LEXICON V
 %<inf%>:0 # ;
@@ -403,6 +406,7 @@ anything%<prn%>:anything N ; ! ""!! Pronoun
 
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<nom%>:I # ; ! ""
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:me # ; ! ""
+I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<gen%>:my # ; ! ""
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:mine # ; ! ""
 you%<prn%>%<pers%>%<p2%>%<mf%>%<sg%>%<nom%>:you # ; ! ""
 you%<prn%>%<pers%>%<p2%>%<mf%>%<sg%>%<acc%>:you # ; ! ""
@@ -435,18 +439,25 @@ his%<prn%>%<pos%>%<mf%>%<sp%>:his # ; ! ""
 
 both%<prn%>%<ind%>%<mf%>%<pl%>%<nom%>:both # ; ! ""
 
-LEXICON PROPN_JAMES
+LEXICON PROPN
 
 %<sg%>%<nom%>:0 # ;
 %<sg%>%<gen%>:'s # ;
+%<pl%>%<nom%>:s # ;
+%<pl%>%<gen%>:s' # ;
 
+LEXICON PROPN_JAMES
+
+%<sg%>%<nom%>:0 # ;
+%<sg%>%<gen%>:' # ;
+%<pl%>%<nom%>:0 # ;
+%<pl%>%<gen%>:' # ;
 
 LEXICON Propers
-Jaakko%<np%>%<ant%>%<m%>:Jaakko N ; ! ""
-Mari%<np%>%<ant%>%<f%>:Mari N ; ! ""
+Jaakko%<np%>%<ant%>%<m%>:Jaakko PROPN ; ! ""
+Mari%<np%>%<ant%>%<f%>:Mari PROPN ; ! ""
 James%<np%>%<ant%>%<m%>:James PROPN_JAMES ; ! ""
-Mary%<np%>%<ant%>%<f%>:Mary PROPN_JAMES ; ! ""
-Mari%<np%>%<ant%>%<f%>:Mari PROPN_JAMES ; ! ""
+Mary%<np%>%<ant%>%<f%>:Mary PROPN ; ! ""
 
 LEXICON Conjunctions
 and%<cnjcoo%>:and # ; ! ""

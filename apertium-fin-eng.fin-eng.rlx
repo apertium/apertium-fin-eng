@@ -2587,6 +2587,8 @@ REMOVE:ape-cmp SUB:1 (ine) IF (0/1 (cmp));
 REMOVE:ape-vfin VFIN IF (-1* VFIN BARRIER VFINB ) ;
 # Hän on kuusi vuotta
 SELECT:ape-vuotta (n sg par "vuosi") IF (-1 Num) ;
+SELECT:ape-kuusi (num sg nom "kuusi") IF (1 (par)) ;
+SELECT:ape-viisi (num sg nom "viisi") IF (1 (par)) ;
 # Last resort: Kill all marginal cases if other readings
 REMOVE:ape-lr-ins (ins) ;
 REMOVE:ape-lr-abe (abe) ;

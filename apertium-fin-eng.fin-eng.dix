@@ -36,15 +36,21 @@
     <sdef n="p3" 	c="charmed"/> 
     <sdef n="p1" 	c="charmed"/> 
     <sdef n="pers" 	c="e"/> 
+    <sdef n="dem" 	c="e"/> 
     <sdef n="m" 	c="pojista"/> 
     <sdef n="f" 	c="tytöille"/> 
     <sdef n="mf" 	c="ei oo nin väliks"/> 
+    <sdef n="nt" 	c="ei oo nin väliks"/> 
 
   </sdefs>
   <section id="main" type="standard">
 
 
-
+      <e><p><l>Jaakko<s n="np"/></l>
+              <r>Jaakko<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+      <e><p><l>Mari<s n="np"/></l>
+              <r>Mari<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+    <!-- nums -->
     <e><p><l>10<s n="num"/></l><r>10<s n="num"/></r></p></e>
     <e><p><l>11<s n="num"/></l><r>11<s n="num"/></r></p></e>
     <e><p><l>1<s n="num"/></l><r>1<s n="num"/></r></p></e>
@@ -56,6 +62,8 @@
     <e><p><l>7<s n="num"/></l><r>7<s n="num"/></r></p></e>
     <e><p><l>8<s n="num"/></l><r>8<s n="num"/></r></p></e>
     <e><p><l>9<s n="num"/></l><r>9<s n="num"/></r></p></e>
+
+    <!-- nouns -->
     <e><p><l>aakkonen<s n="n"/></l><r>alphabet<s n="n"/></r></p></e>
     <e><p><l>aakkonen<s n="n"/></l><r>letter<s n="n"/></r></p></e>
     <e><p><l>aakkosto<s n="n"/></l><r>alphabet<s n="n"/></r></p></e>
@@ -1670,7 +1678,7 @@
     <e><p><l>hyttynen<s n="n"/></l><r>mosquito<s n="n"/></r></p></e>
     <e><p><l>hyve<s n="n"/></l><r>virtue<s n="n"/></r></p></e>
     <e><p><l>hyvike<s n="n"/></l><r>compensation<s n="n"/></r></p></e>
-    <e><p><l>hyvin<s n="adv"/></l><r>very<s n="adv"/></r></p></e>
+    <e><p><l>hyvin<s n="adv"/></l><r>well<s n="adv"/></r></p></e>
     <e><p><l>hyvis<s n="n"/></l><r>good guy<s n="n"/></r></p></e>
     <e><p><l>hyvis<s n="n"/></l><r>hero<s n="n"/></r></p></e>
     <e><p><l>hyvite<s n="n"/></l><r>compensation<s n="n"/></r></p></e>
@@ -2095,8 +2103,6 @@
     <e><p><l>iva<s n="n"/></l><r>osier<s n="n"/></r></p></e>
     <e><p><l>iva<s n="n"/></l><r>sarcasm<s n="n"/></r></p></e>
     <e><p><l>iäisyys<s n="n"/></l><r>eternity<s n="n"/></r></p></e>
-    <e><p><l>Jaakko<s n="np"/></l><r>Jaakko<s n="np"/></r></p></e>
-    <e><p><l>Mari<s n="np"/></l><r>Mari<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>jaala<s n="n"/></l><r>boat<s n="n"/></r></p></e>
     <e><p><l>jaardi<s n="n"/></l><r>yard<s n="n"/></r></p></e>
     <e><p><l>jaaritus<s n="n"/></l><r>rambling<s n="n"/></r></p></e>
@@ -2309,6 +2315,7 @@
     <e><p><l>keraami<s n="n"/></l><r>ceramic<s n="n"/></r></p></e>
     <e><p><l>keraami<s n="n"/></l><r>material<s n="n"/></r></p></e>
     <e><p><l>keratiini<s n="n"/></l><r>keratin<s n="n"/></r></p></e>
+    <e><p><l>kerto<s n="n"/></l><r>multiplication<s n="n"/></r></p></e>
     <e><p><l>kertoa<s n="vblex"/></l><r>tell<s n="vblex"/></r></p></e>
     <e><p><l>kertoma<s n="n"/></l><r>factorial<s n="n"/></r></p></e>
     <e><p><l>kerttuli<s n="n"/></l><r>New World warbler<s n="n"/></r></p></e>
@@ -2697,6 +2704,7 @@
     <e><p><l>lävistin<s n="n"/></l><r>punch<s n="n"/></r></p></e>
     <e><p><l>löpö<s n="n"/></l><r>gasoline<s n="n"/></r></p></e>
     <e><p><l>löpö<s n="n"/></l><r>gas<s n="n"/></r></p></e>
+    <e><p><l>löysä<s n="adj"/></l><r>limp<s n="adj"/></r></p></e>
     <e><p><l>löytää<s n="vblex"/></l><r>find<s n="vblex"/></r></p></e>
     <e><p><l>maailma<s n="n"/></l><r>Earth<s n="n"/></r></p></e>
     <e><p><l>maailma<s n="n"/></l><r>planet<s n="n"/></r></p></e>
@@ -2954,7 +2962,7 @@
     <e><p><l>mittelö<s n="n"/></l><r>battle<s n="n"/></r></p></e>
     <e><p><l>mittelö<s n="n"/></l><r>fight<s n="n"/></r></p></e>
     <e><p><l>mittumaari<s n="n"/></l><r>Midsummer Day<s n="n"/></r></p></e>
-    <e><p><l>mitä<s n="adv"/></l><r>what<s n="prn"/></r></p></e>
+    <e><p><l>mitä<s n="adv"/></l><r>what<s n="prn"/><s n="itg"/></r></p></e>
     <e><p><l>moa<s n="n"/></l><r>eel<s n="n"/></r></p></e>
     <e><p><l>mobilisaatio<s n="n"/></l><r>mobilisation<s n="n"/></r></p></e>
     <e><p><l>modaliteetti<s n="n"/></l><r>modality<s n="n"/></r></p></e>
@@ -3606,7 +3614,7 @@
     <e><p><l>nihti<s n="n"/></l><r>soldier<s n="n"/></r></p></e>
     <e><p><l>niini<s n="n"/></l><r>bast<s n="n"/></r></p></e>
     <e><p><l>niinpä<s n="adv"/></l><r>so<s n="adv"/></r></p></e>
-    <e><p><l>niin<s n="adv"/></l><r>so<s n="adv"/></r></p></e>
+    <e><p><l>niin<s n="adv"/><s n="dem"/></l><r>so<s n="adv"/></r></p></e>
     <e><p><l>niitti<s n="n"/></l><r>staple<s n="n"/></r></p></e>
     <e><p><l>niitto<s n="n"/></l><r>cutting<s n="n"/></r></p></e>
     <e><p><l>niitto<s n="n"/></l><r>reaping<s n="n"/></r></p></e>
@@ -7988,6 +7996,7 @@
     <e><p><l>tajunta<s n="n"/></l><r>consciousness<s n="n"/></r></p></e>
     <e><p><l>taju<s n="n"/></l><r>consciousness<s n="n"/></r></p></e>
     <e><p><l>taju<s n="n"/></l><r>sense<s n="n"/></r></p></e>
+    <e><p><l>taka<s n="n"/></l><r>behind<s n="n"/></r></p></e>
     <e><p><l>takaa<s n="post"/></l><r>from<b/>behind<s n="pr"/></r></p></e>
     <e><p><l>takaa<s n="pr"/></l><r>from<b/>behind<s n="pr"/></r></p></e>
     <e><p><l>takalisto<s n="n"/></l><r>buttocks<s n="n"/></r></p></e>
@@ -8035,9 +8044,6 @@
     <e><p><l>tallium<s n="n"/></l><r>thallium<s n="n"/></r></p></e>
     <e><p><l>talo<s n="n"/></l><r>building<s n="n"/></r></p></e>
     <e><p><l>talo<s n="n"/></l><r>house<s n="n"/></r></p></e>
-    <e><p><l>talo<s n="n"/></l><r>house<s n="n"/></r></p></e>
-    <e><p><l>talo<s n="n"/></l><r>talus bone<s n="n"/></r></p></e>
-    <e><p><l>talo<s n="n"/></l><r>talus<s n="n"/></r></p></e>
     <e><p><l>talous<s n="n"/></l><r>economy<s n="n"/></r></p></e>
     <e><p><l>talous<s n="n"/></l><r>household<s n="n"/></r></p></e>
     <e><p><l>taltta<s n="n"/></l><r>chisel<s n="n"/></r></p></e>
@@ -10163,7 +10169,7 @@
     <e><p><l>miksi<s n="prn"/></l><r>why<s n="adv"/></r></p></e>
     <e><p><l>mikä<s n="prn"/></l><r>what<s n="adv"/></r></p></e>
     <e><p><l>mikään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
-    <e><p><l>mitä<s n="prn"/></l><r>what<s n="prn"/></r></p></e>
+    <e><p><l>mitä<s n="prn"/></l><r>what<s n="adv"/></r></p></e>
     <e><p><l>mitään<s n="prn"/></l><r>nothing<s n="prn"/></r></p></e>
     <!-- pers -->
     <e><p><l>minä<s n="prn"/><s n="pers"/><s n="p1"/></l>
@@ -10180,7 +10186,8 @@
             <r>they<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/></r></p></e>
     <e><p><l>me<s n="prn"/></l><r>we<s n="prn"/></r></p></e>
     <!-- demon -->
-    <e><p><l>se<s n="prn"/></l><r>it<s n="prn"/></r></p></e>
+    <e><p><l>se<s n="prn"/><s n="dem"/></l>
+            <r>it<s n="prn"/><s n="pers"/><s n="p3"/><s n="nt"/></r></p></e>
     <e><p><l>nämä<s n="prn"/></l><r>these<s n="prn"/></r></p></e>
     <e><p><l>ne<s n="prn"/></l><r>they<s n="prn"/></r></p></e>
 

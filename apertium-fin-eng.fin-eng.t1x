@@ -57,7 +57,7 @@
         <cat-item tags="vblex.*.*.p2.*"/>
     </def-cat>
     <def-cat n="infma-ine">
-      <cat-item tags="vblex.*.pres.infma.*.ine"/>
+      <cat-item tags="vblex.actv.infma.sg.ine"/>
     </def-cat>
     <def-cat n="just-inf">
       <cat-item tags="vblex.actv.infa.sg"/>
@@ -116,6 +116,10 @@
       <attr-item tags="past"/>
       <attr-item tags="pres"/>
     </def-attr>
+    <def-attr n="a_adv">
+        <attr-item tags="adv"/>
+        <attr-item tags="adv.itg"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
       <attr-item tags="vblex.subst"/>
@@ -160,6 +164,7 @@
       <attr-item tags="nom"/>
       <attr-item tags="abe"/>
       <attr-item tags="com"/>
+      <attr-item tags="ess"/>
       <attr-item tags="par"/>
     </def-attr>
     <def-attr n="a_poss">
@@ -173,6 +178,7 @@
     </def-attr>
 
     <def-attr n="synfunc">
+      <attr-item tags="CLB"/>
       <attr-item tags="@\+FAUXV"/>
       <attr-item tags="@\+FMAINV"/>
       <attr-item tags="@-FADVL"/>
@@ -254,6 +260,7 @@
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abe"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ins"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="com"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ess"/></equal>
         </or></test>
 
               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
@@ -285,6 +292,9 @@
         <call-macro n="case-handler1"> 
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -292,7 +302,8 @@
               <tag><clip pos="1" side="sl" part="a_cas"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+                <clip pos="1" side="tl" part="lem"/>
+                <clip pos="1" side="tl" part="a_adv"/> 
             </lu>
           </chunk>
         </out>
@@ -545,29 +556,20 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: vbolla infma-ine">
+    <rule comment="REGLA: infma-ine">
       <pattern>
-        <pattern-item n="vbolla"/>
         <pattern-item n="infma-ine"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
-          <with-param pos="1"/>
-        </call-macro>
         <out>
-          <chunk name="be-ger" case="caseFirstWord">
+          <chunk name="ger" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b pos="1"/>
-            <lu>
-              <clip pos="2" side="tl" part="lemh"/>
-              <clip pos="2" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_verb"/>
               <lit-tag v="ger"/>
-              <clip pos="2" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
