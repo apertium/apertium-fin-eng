@@ -20,7 +20,7 @@ Multichar_Symbols
 %<pl%> ! Plural
 
 %<sint%>  ! Synthetic
-%<ger%>  ! Gerund
+%<actv%>%<ger%>  ! Gerund
 %<subst%>  ! Substantive
 
 %<nom%>  !Nominative    
@@ -100,44 +100,72 @@ LEXICON N_CHILDREN
 %<pl%>%<nom%>:ren # ;
 %<pl%>%<gen%>:ren's # ;
 
+LEXICON N_DICTIONARY
+
+%<sg%>%<nom%>:y # ;
+%<sg%>%<gen%>:y's # ;
+%<pl%>%<nom%>:ies # ;
+%<pl%>%<gen%>:ies' # ;
+
 LEXICON Nouns
 
+addition%<n%>:addition N ; 
 animal%<n%>:animal N ; ! ""
+announcement%<n%>:announcement N ;
 answer%<n%>:answer N ; ! ""
+beta%<n%>:beta N ; !
 bird%<n%>:bird N ; ! ""
 boy%<n%>:boy N ; ! ""
 butter%<n%>:butter N ; ! ""
 cat%<n%>:cat N ; ! ""
 chair%<n%>:chair N ; ! ""
 child%<n%>:child N_CHILDREN ; ! ""
+computer%<n%>:computer N ; ! 
 course%<n%>:course N ; ! ""
+dictionary%<n%>:dictionar N_DICTIONARY ;
+dissertation%<n%>:dissertation N ; !
 dog%<n%>:dog N ; ! ""
 door%<n%>:door N ; ! ""
 dreadlock%<n%>:dreadlock N ; ! ""
+English%<n%>:English N ; 
 eye%<n%>:eye N ; ! ""
+Finnish%<n%>:Finnish N ; 
+faculty%<n%>:facult N_DICTIONARY ;
 flux%<n%>:flux N ; ! ""
+foundation%<n%>:foundation N ; !
 game%<n%>:game N ; ! ""
 garden%<n%>:garden N ; ! ""
 girl%<n%>:girl N ; ! ""
 going-on%<n%>%<sg%>%<nom%>:going-on # ; ! ""
 hand%<n%>:hand N ; ! ""
 head%<n%>:head N ; ! ""
+help%<n%>:help N ; !
 hide%<n%>:hide N ; ! ""
 house%<n%>:house N ; ! ""
 human%<n%>:human N ; ! 
+list%<n%>:list N ; !
+implementation%<n%>:implementation N ; 
+machine%<n%>:machine N ; 
 mom%<n%>:mom N ; ! ""
 moon%<n%>:moon N ; ! ""
 mother%<n%>:mother N ; ! ""
 person%<n%>:person N ; ! ""
 people%<n%>:people N ; ! ""
+quality%<n%>:qualit N_DICTIONARY ; !
 question%<n%>:question N ; ! ""
+side%<n%>:side N ; ! ""
 sister%<n%>:sister N ; ! ""
+skill%<n%>:skill N ; 
 son%<n%>:son N ; ! ""
 sound%<n%>:sound N ; ! ""
+spell-checking%<n%>:spell-checking N ; !
 table%<n%>:table N ; ! ""
-talus%<n%>%<sg%>%<nom%>:talus # ; ! ""
+test%<n%>:test N ; !
 tip%<n%>:tip N ; ! ""
 time%<n%>:time N ; ! ""
+tongue%<n%>:tongue N ; !
+translator%<n%>:translator N ;
+translation%<n%>:translation N ;
 tree%<n%>:tree N ; ! ""
 water%<n%>:water N ; ! ""
 weather%<n%>:weather N ; ! ""
@@ -169,28 +197,28 @@ LEXICON V_BE
 %<actv%>%<past%>%<p1%>%<pl%>:was # ;
 %<actv%>%<past%>%<p3%>%<pl%>:was # ;
 %<actv%>%<past%>%<p2%>%<pl%>:were # ;
-%<ger%>:being # ;
+%<actv%>%<ger%>:being # ;
 
 LEXICON V_HAVE
 %<inf%>:have # ;
 %<actv%>%<pres%>:have # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:has # ;
 %<actv%>%<past%>:had # ;
-%<ger%>:having # ;
+%<actv%>%<ger%>:having # ;
 
 LEXICON V_DO
 %<inf%>:do # ;
 %<actv%>%<pres%>:do # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:does # ;
 %<actv%>%<past%>:did # ;
-%<ger%>:doing # ;
+%<actv%>%<ger%>:doing # ;
 
 LEXICON V_SEE
 %<inf%>:see # ;
 %<actv%>%<pres%>:see # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sees # ;
 %<actv%>%<past%>:saw # ;
-%<ger%>:seeing # ;
+%<actv%>%<ger%>:seeing # ;
 
 LEXICON V_TELL
 %<inf%>:tell # ;
@@ -204,131 +232,147 @@ LEXICON V_SIT
 %<actv%>%<pres%>:sit # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sits # ;
 %<actv%>%<past%>:sat # ;
-%<ger%>:sitting # ;
+%<actv%>%<ger%>:sitting # ;
 
 LEXICON V_KNOW
 %<inf%>:know # ;
 %<actv%>%<pres%>:know # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:knows # ;
 %<actv%>%<past%>:knew # ;
-%<ger%>:knowing # ;
+%<actv%>%<ger%>:knowing # ;
 
 LEXICON V_SEARCH
 %<inf%>:0 # ;
 %<actv%>%<pres%>:0 # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:es # ;
 %<actv%>%<past%>:ed # ;
-%<ger%>:ing # ;
+%<actv%>%<ger%>:ing # ;
 
 LEXICON V_RUN
 %<inf%>:run # ;
 %<actv%>%<pres%>:run # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:runs # ;
 %<actv%>%<past%>:ran # ;
-%<ger%>:running # ;
+%<actv%>%<ger%>:running # ;
 
 LEXICON V_REPLY
 %<inf%>:y # ;
 %<actv%>%<pres%>:y # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:ies # ;
 %<actv%>%<past%>:ied # ;
-%<ger%>:ying # ;
+%<actv%>%<ger%>:ying # ;
 
 LEXICON V_HIDE
 %<actv%>%<pres%>:hide # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:hides # ;
 %<actv%>%<past%>:hid # ;
-%<ger%>:hiding # ;
+%<actv%>%<ger%>:hiding # ;
 
 LEXICON V_HEAR
 %<inf%>:0 # ;
 %<actv%>%<pres%>:0 # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:s # ;
 %<actv%>%<past%>:d # ;
-%<ger%>:ing # ;
+%<actv%>%<ger%>:ing # ;
 
 LEXICON V_FIND
 %<actv%>%<pres%>:find # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:finds # ;
 %<actv%>%<past%>:found # ;
-%<ger%>:finding # ;
+%<actv%>%<ger%>:finding # ;
 
 LEXICON V_LOVE
 %<inf%>:e # ;
 %<actv%>%<pres%>:e # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:es # ;
 %<actv%>%<past%>:ed # ;
-%<ger%>:ing # ;
+%<actv%>%<ger%>:ing # ;
 
 LEXICON V_GET
 %<inf%>:get # ;
 %<actv%>%<pres%>:get # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:gets # ;
 %<actv%>%<past%>:got # ;
-%<ger%>:getting # ;
+%<actv%>%<ger%>:getting # ;
 
 LEXICON V_EAT
 %<inf%>:eat # ;
 %<actv%>%<pres%>:eat # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:eats # ;
 %<actv%>%<past%>:ate # ;
-%<ger%>:eatting # ;
+%<actv%>%<ger%>:eatting # ;
 
 LEXICON V_DRINK
 %<inf%>:drink # ;
 %<actv%>%<pres%>:drink # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:drinks # ;
 %<actv%>%<past%>:drank # ;
-%<ger%>:drinking # ;
+%<actv%>%<ger%>:drinking # ;
 
 LEXICON V_COME
 %<inf%>:come # ;
 %<actv%>%<pres%>:come # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:comes # ;
 %<actv%>%<past%>:came # ;
-%<ger%>:coming # ;
+%<actv%>%<ger%>:coming # ;
 
 LEXICON V_SIT
 %<inf%>:sit # ;
 %<actv%>%<pres%>:sit # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sits # ;
 %<actv%>%<past%>:sat # ;
-%<ger%>:sitting # ;
+%<actv%>%<ger%>:sitting # ;
 
 LEXICON V_TRY
 %<inf%>:y # ;
 %<actv%>%<pres%>:y # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:ies # ;
 %<actv%>%<past%>:ied # ;
-%<ger%>:ying # ;
+%<actv%>%<ger%>:ying # ;
 
 LEXICON V_SPEAK
 %<inf%>:speak # ;
 %<actv%>%<pres%>:speak # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:speaks # ;
 %<actv%>%<past%>:spoke # ;
-%<ger%>:speaking # ;
+%<actv%>%<ger%>:speaking # ;
 
 LEXICON V_SAY
 %<inf%>:y # ;
 %<actv%>%<pres%>:y # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:ys # ;
 %<actv%>%<past%>:id # ;
-%<ger%>:ying # ;
+%<actv%>%<ger%>:ying # ;
 
 LEXICON V_GO
 %<inf%>:go # ;
 %<actv%>%<pres%>:go # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:goes # ;
 %<actv%>%<past%>:went # ;
-%<ger%>:going # ;
+%<actv%>%<ger%>:going # ;
 
 LEXICON V_FIND
 %<inf%>:find # ;
 %<actv%>%<pres%>:find # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:finds # ;
 %<actv%>%<past%>:found # ;
-%<ger%>:finding # ;
+%<actv%>%<ger%>:finding # ;
+
+LEXICON V_BREAK
+
+%<inf%>:break # ;
+%<actv%>%<pres%>:break # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:breaks # ;
+%<actv%>%<past%>:broke # ;
+%<actv%>%<ger%>:breaking # ;
+
+LEXICON V_BRING
+
+%<inf%>:bring # ;
+%<actv%>%<pres%>:bring # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:brings # ;
+%<actv%>%<past%>:brought # ;
+%<actv%>%<ger%>:bringing # ;
 
 LEXICON Verbs
 
@@ -339,24 +383,32 @@ can%<vaux%>%<actv%>%<pres%>%+not%<adv%>:can't # ; ! ""
 can%<vaux%>%<actv%>%<past%>:could # ; ! ""
 can%<vaux%>%<actv%>%<pres%>%<p3%>%<sg%>:can # ; ! ""
 can%<vaux%>%<actv%>%<past%>%<p3%>%<sg%>:could # ; ! ""
+can%<vaux%>%<actv%>%<past%>%<p1%>%<sg%>:could # ; ! ""
 
 answer%<vblex%>:answer V ; ! ""
 ask%<vblex%>:ask V ; ! ""
 be%<vblex%>:0 V_BE ; ! ""
+break%<vblex%>:0 V_BREAK ; ! 
+bring%<vblex%>:0 V_BRING ; !
 come%<vblex%>:0 V_COME ; ! ""
-contain%<vblex%>:contain V; ! ""
+contain%<vblex%>:contain V ; ! ""
 count%<vblex%>:count V ; ! ""
 dice%<vblex%>:0 V_LOVE ; ! ""
 do%<vblex%>:0 V_DO ; ! ""
 drink%<vblex%>:0 V_DRINK ; ! ""
 eat%<vblex%>:0 V_EAT ; ! ""
+embroider%<vblex%>:embroider V ; !
 find%<vblex%>:0 V_FIND ; ! ""
 finish%<vblex%>:finish V ; ! ""
+finalise%<vblex%>:finalis V_LOVE ; 
+fold%<vblex%>:fold V ; !
 get%<vblex%>:0 V_GET ; ! ""
 go%<vblex%>:0 V_GO ; ! ""
 have%<vblex%>:0 V_HAVE ; ! ""
 hear%<vblex%>:hear V_HEAR ; ! ""
 hide%<vblex%>:0 V_HIDE ; ! ""
+interest%<vblex%>:interest V ; ! 
+install%<vblex%>:install V ; !
 know%<vblex%>:0 V_KNOW ; ! ""
 laugh%<vblex%>:laugh V ; ! ""
 like%<vblex%>:lik V_LOVE ; ! ""
@@ -364,9 +416,12 @@ listen%<vblex%>:listen V ; ! ""
 look%<vblex%>:look V ; ! ""
 love%<vblex%>:lov V_LOVE ; ! ""
 must%<vaux%>:must # ; ! ""
+offer%<vblex%>:offer V ; ! 
 play%<vblex%>:play V ; ! ""
 play%<vblex%>:play V ; ! ""
+relate%<vblex%>:relat V_LOVE ; !
 reply%<vblex%>:repl V_REPLY ; ! ""
+require%<vblex%>:requir V_LOVE ; !
 run%<vblex%>:0 V_RUN ; ! ""
 say%<vblex%>:sa V_SAY  ; ! ""
 search%<vblex%>:search V_SEARCH ; ! ""
@@ -383,6 +438,8 @@ try%<vblex%>:tr V_TRY ; ! ""
 walk%<vblex%>:walk V ; ! ""
 want%<vblex%>:want V ; ! ""
 watch%<vblex%>:watch V_SEARCH ; ! ""
+
+
 LEXICON Determiners
 the%<det%>%<def%>:the # ; ! ""
 a%<det%>%<ind%>:a # ; ! "" ! Dir/LR
@@ -403,6 +460,10 @@ what%<prn%>%<itg%>:what # ; ! "" ! Pronoun
 something%<prn%>:something N ; ! ""
 nothing%<prn%>:nothing N ; ! ""
 anything%<prn%>:anything N ; ! ""!! Pronoun
+someone%<prn%>:someone N ; 
+all%<prn%>:all N ;
+
+this%<prn%>:this # ;
 
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<nom%>:I # ; ! ""
 I%<prn%>%<pers%>%<p1%>%<mf%>%<sg%>%<acc%>:me # ; ! ""
@@ -460,12 +521,17 @@ James%<np%>%<ant%>%<m%>:James PROPN_JAMES ; ! ""
 Mary%<np%>%<ant%>%<f%>:Mary PROPN ; ! ""
 
 LEXICON Conjunctions
+
 and%<cnjcoo%>:and # ; ! ""
 but%<cnjcoo%>:but # ; ! ""
 or%<cnjcoo%>:or # ; ! ""
 that%<cnjsub%>:that # ; ! ""
+because%<cnjsub%>:because # ; !
+therefore%<cnjcoo%>:therefore # ;
+unless%<cnjsub%>:unless # ; !
 
 LEXICON Prepositions
+
 to%<pr%>:to # ; ! ""
 in%<pr%>:in # ; ! ""
 near%<pr%>:near # ; ! ""
@@ -522,6 +588,10 @@ too%<adv%>:too # ; ! ""
 very%<adv%>:very # ; ! ""
 well%<adv%>:well # ; ! ""
 yesterday%<adv%>:yesterday # ; ! ""
+just%<adv%>:just # ;
+quite%<adv%>:quite # ;
+necessarily%<adv%>:necessarily # ;
+rather%<adv%>:rather # ;
 
 LEXICON A_OLD
 0 # ;
@@ -559,9 +629,14 @@ old%<adj%>%<sint%>:old A_OLD ; ! ""
 small%<adj%>%<sint%>:small A_OLD ; ! ""
 some%<adj%>:some # ; ! "" ! Det(?)
 warm%<adj%>%<sint%>:warm A_OLD ; ! ""
+practical%<adj%>:practical # ;
+technological%<adj%>:technological # ;
+interesting%<adj%>:interesting # ;
+qualified%<adj%>:qualified # ;
 
 LEXICON Interjections
 
+hi%<ij%>:hi # ;
 no%<ij%>:no # ; 
 
 LEXICON Numerals
