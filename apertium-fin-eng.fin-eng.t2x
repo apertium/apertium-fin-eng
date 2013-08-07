@@ -21,6 +21,11 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="SV">
+      <cat-item tags="SV"/>
+      <cat-item tags="SV.*"/>
+      <cat-item tags="SV.*.*"/>
+    </def-cat>
     <def-cat n="V-COP">
       <cat-item tags="SV.COP"/>
       <cat-item tags="SV.COP.*"/>
@@ -64,11 +69,20 @@
       <attr-item tags="px3pl"/>
       <attr-item tags="px3ps"/>
     </def-attr>
+    <def-attr n="a_prs">
+      <attr-item tags="p1.sg"/>
+      <attr-item tags="p2.sg"/>
+      <attr-item tags="p3.sg"/>
+      <attr-item tags="p1.pl"/>
+      <attr-item tags="p2.pl"/>
+      <attr-item tags="p3.pl"/>
+    </def-attr>
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="PREP"/>
     <def-var n="POSS"/>
+    <def-var n="PRS"/>
     <def-var n="NOT"/>
   </section-def-vars>
   <section-def-macros>
@@ -180,6 +194,44 @@
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px3sp"/></equal></test>
           <let><var n="POSS"/>
                <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.gen"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+      </choose>
+    </def-macro>
+    <def-macro n="insert-prs1" npar="1">
+      <let>
+        <var n="PRS"/>
+        <lit v=""/>
+      </let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p1.sg"/></equal></test>
+          <let><var n="PRS"/>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^I"/><lit-tag v="prn.pers.p1.mf.sg.nom"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p2.sg"/></equal></test>
+          <let><var n="PRS"/>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sg.nom"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p1.pl"/></equal></test>
+          <let><var n="PRS"/>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^we"/><lit-tag v="prn.pers.p1.mg.pl.nom"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p2.pl"/></equal></test>
+          <let><var n="PRS"/>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.pl.nom"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p3.pl"/></equal></test>
+          <let><var n="PRS"/>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.nom"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>
@@ -356,6 +408,24 @@
         <out>
           <var n="PREP"/>
           <var n="POSS"/>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: SV">
+      <pattern>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <call-macro n="insert-prs1">
+          <with-param pos="1"/>
+        </call-macro> 
+        <out>
+          <var n="PRS"/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
