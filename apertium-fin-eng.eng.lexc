@@ -374,6 +374,14 @@ LEXICON V_BRING
 %<actv%>%<past%>:brought # ;
 %<actv%>%<ger%>:bringing # ;
 
+LEXICON V_THINK
+
+%<inf%>:think # ;
+%<actv%>%<pres%>:think # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:thinks # ;
+%<actv%>%<past%>:thought # ;
+%<actv%>%<ger%>:thinking # ;
+
 LEXICON Verbs
 
 must%<vaux%>%<actv%>%<pres%>:must # ; ! ""
@@ -433,7 +441,7 @@ sound%<vblex%>:sound V ; ! ""
 speak%<vblex%>:0 V_SPEAK ; ! ""
 talk%<vblex%>:talk V ; ! ""
 tell%<vblex%>:0 V_TELL ; ! ""
-think%<vblex%>:think V ; ! ""
+think%<vblex%>:0 V_THINK ; ! ""
 try%<vblex%>:tr V_TRY ; ! ""
 walk%<vblex%>:walk V ; ! ""
 want%<vblex%>:want V ; ! ""
