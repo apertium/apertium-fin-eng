@@ -962,33 +962,6 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: om nom nom verbs">
-      <pattern>
-        <pattern-item n="sint-pers"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="p-v" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-            </tags>
-            <lu>
-                <lit v="prpers"/>
-                <lit-tag v="prn.pers"/>
-                <clip pos="1" side="tl" part="person"/>
-                <clip pos="1" side="tl" part="a_nbr"/>
-            </lu>
-            <b/>
-            <lu>
-                <clip pos="1" side="tl" part="lem"/>
-                <clip pos="1" side="tl" part="a_verb"/>
-                <clip pos="1" side="tl" part="tense"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
     <rule comment="REGLA: habitive stuff">
       <pattern>
           <pattern-item n="habitive"/>
