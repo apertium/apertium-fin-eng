@@ -124,15 +124,15 @@ LEXICON N_LIFE
 
 %<sg%>%<nom%>:fe # ;
 %<sg%>%<gen%>:fe's # ;
-%<sg%>%<nom%>:ves # ;
-%<sg%>%<gen%>:ves' # ;
+%<pl%>%<nom%>:ves # ;
+%<pl%>%<gen%>:ves' # ;
 
 LEXICON N_WOMAN
 
-%<sg%>%<nom%>:man # ;
-%<sg%>%<gen%>:man's # ;
-%<pl%>%<nom%>:men # ;
-%<pl%>%<gen%>:men's # ;
+%<sg%>%<nom%>:an # ;
+%<sg%>%<gen%>:an's # ;
+%<pl%>%<nom%>:en # ;
+%<pl%>%<gen%>:en's # ;
 
 LEXICON Nouns
 
@@ -269,7 +269,7 @@ loss%<n%>:loss N ;
 machine%<n%>:machine N ; 
 mail%<n%>:mail N ;
 mankind%<n%>:mankind N ;
-man%<n%>:man N ;
+man%<n%>:m N_WOMAN ;
 marriage%<n%>:marriage N ;
 meaning%<n%>:meaning N ;
 medication%<n%>:medication N ;
@@ -916,7 +916,6 @@ freely%<adv%>:freely # ;
 fully%<adv%>:fully # ;
 generally%<adv%>:generally # ;
 here%<adv%>:here # ;
-Here%<adv%>:Here # ;
 immediately%<adv%>:immediately # ;
 indeed%<adv%>:indeed # ;
 inhumanely%<adv%>:inhumanely # ;
@@ -928,7 +927,6 @@ nearby%<adv%>:nearby # ; ! ""
 necessarily%<adv%>:necessarily # ;
 needed%<adv%>:needed # ;
 neither%<adv%>:neither # ;
-Neither%<adv%>:Neither # ;
 never%<adv%>:never # ; ! ""
 no%<adv%>:no # ; ! ""
 nor%<adv%>:nor # ;
