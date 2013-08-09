@@ -53,7 +53,8 @@
     <e><p><l>Mari<s n="np"/></l>
           <r>Mari<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
 
-    <!-- nums -->
+  <!-- nums -->
+
     <e><p><l>10<s n="num"/></l><r>10<s n="num"/></r></p></e>
     <e><p><l>11<s n="num"/></l><r>11<s n="num"/></r></p></e>
     <e><p><l>1<s n="num"/></l><r>1<s n="num"/></r></p></e>
@@ -2275,8 +2276,6 @@
     <e><p><l>jodidi<s n="n"/></l><r>iodide<s n="n"/></r></p></e>
     <e><p><l>johdanto<s n="n"/></l><r>introduction<s n="n"/></r></p></e>
     <e><p><l>johtua<s n="vblex"/></l><r>cause<s n="vblex"/></r></p></e>
-    <e><p><l>jokainen<s n="prn"/></l><r>everyone<s n="prn"/></r></p></e>
-    <e><p><l>joka<s n="prn"/></l><r>which<s n="prn"/></r></p></e>
     <e><p><l>joko<s n="cnjcoo"/></l><r>either<s n="cnjcoo"/></r></p></e>
     <e><p><l>joriini<s n="n"/></l><r>dahlia<s n="n"/></r></p></e>
     <e><p><l>journalistiikka<s n="n"/></l><r>journalism<s n="n"/></r></p></e>
@@ -2584,9 +2583,6 @@
     <e><p><l>kräkki<s n="n"/></l><r>crack<s n="n"/></r></p></e>
     <e><p><l>ksenon<s n="n"/></l><r>xenon<s n="n"/></r></p></e>
     <e><p><l>kuin<s n="cnjcoo"/></l><r>than<s n="cnjcoo"/></r></p></e>
-    <e><p><l>kukaan<s n="prn"/></l><r>no<b/>one<s n="prn"/></r></p></e>
-    <e><p><l>kuka<s n="prn"/><s n="itg"/></l><r>who<s n="prn"/></r></p></e>
-    <e><p><l>kukin<s n="prn"/></l><r>eacy<s n="prn"/></r></p></e>
     <e><p><l>kukkia<s n="vblex"/></l><r>bloom<s n="vblex"/></r></p></e>
     <e><p><l>kultivaattori<s n="n"/></l><r>cultivator<s n="n"/></r></p></e>
     <e><p><l>kumariini<s n="n"/></l><r>coumarin<s n="n"/></r></p></e>
@@ -2863,7 +2859,9 @@
     <e><p><l>maalaamo<s n="n"/></l><r>shop<s n="n"/></r></p></e>
     <e><p><l>maammo<s n="n"/></l><r>mother<s n="n"/></r></p></e>
     <e><p><l>maanpako<s n="n"/></l><r>exile<s n="n"/></r></p></e>
+    <e><p><l>maa<s n="n"/></l><r>country<s n="n"/></r></p></e>
     <e><p><l>maa<s n="n"/></l><r>earth<s n="n"/></r></p></e>
+    <e><p><l>maa<s n="n"/></l><r>land<s n="n"/></r></p></e>
     <e><p><l>maatto<s n="n"/></l><r>grounding<s n="n"/></r></p></e>
     <e><p><l>Mac<s n="n"/></l><r>Mac<s n="n"/></r></p></e>
     <e><p><l>mafioso<s n="n"/></l><r>Mafioso<s n="n"/></r></p></e>
@@ -3123,7 +3121,6 @@
     <e><p><l>mittelö<s n="n"/></l><r>battle<s n="n"/></r></p></e>
     <e><p><l>mittelö<s n="n"/></l><r>fight<s n="n"/></r></p></e>
     <e><p><l>mittumaari<s n="n"/></l><r>Midsummer Day<s n="n"/></r></p></e>
-    <e><p><l>mitä<s n="adv"/></l><r>what<s n="prn"/><s n="itg"/></r></p></e>
     <e><p><l>moa<s n="n"/></l><r>eel<s n="n"/></r></p></e>
     <e><p><l>mobilisaatio<s n="n"/></l><r>mobilisation<s n="n"/></r></p></e>
     <e><p><l>modaliteetti<s n="n"/></l><r>modality<s n="n"/></r></p></e>
@@ -6929,7 +6926,6 @@
     <e><p><l>šamanismi<s n="n"/></l><r>shamanism<s n="n"/></r></p></e>
     <e><p><l>sama<s n="n"/></l><r>equal<s n="n"/></r></p></e>
     <e><p><l>sama<s n="n"/></l><r>same<s n="n"/></r></p></e>
-    <e><p><l>sama<s n="prn"/></l><r>same<s n="prn"/></r></p></e>
     <e><p><l>sametti<s n="n"/></l><r>velvet<s n="n"/></r></p></e>
     <e><p><l>sammakko<s n="n"/></l><r>frog<s n="n"/></r></p></e>
     <e><p><l>sammalikko<s n="n"/></l><r>moss<s n="n"/></r></p></e>
@@ -10552,6 +10548,7 @@
     <e><p><l>lain<s n="adv"/></l><r>at<b/>all<s n="adv"/></r></p></e>
     <e><p><l>mielivaltaisesti<s n="adv"/></l><r>arbitrarily<s n="adv"/></r></p></e>
     <e><p><l>mihin<s n="adv"/><s n="itg"/></l><r>where<s n="adv"/></r></p></e>
+    <e><p><l>mitä<s n="adv"/></l><r>what<s n="adv"/></r></p></e>
     <e><p><l>mukana<s n="adv"/></l><r>with<s n="adv"/></r></p></e>
     <e><p><l>myöskään<s n="adv"/></l><r>neither<s n="adv"/></r></p></e>
     <e><p><l>oikeudenmukaisesti<s n="adv"/></l><r>judicially<s n="adv"/></r></p></e>
@@ -10573,6 +10570,8 @@
 
     <!-- pronouns -->
     <!-- all sorts of stuff -->
+    <e><p><l>jokainen<s n="prn"/></l><r>everyone<s n="prn"/></r></p></e>
+    <e><p><l>joka<s n="prn"/></l><r>which<s n="prn"/></r></p></e>
     <e><p><l>jokin<s n="prn"/></l><r>something<s n="prn"/></r></p></e>
     <e><p><l>kaikki<s n="prn"/></l><r>all<s n="prn"/></r></p></e>
     <e><p><l>molemmat<s n="prn"/></l>
@@ -10580,7 +10579,11 @@
     <e><p><l>muu<s n="prn"/></l><r>another<s n="prn"/></r></p></e>
     <e><p><l>muu<s n="prn"/></l><r>other<s n="prn"/></r></p></e>
     <e><p><l>joku<s n="prn"/></l><r>someone<s n="prn"/></r></p></e>
+    <e><p><l>kukaan<s n="prn"/></l><r>no<b/>one<s n="prn"/></r></p></e>
+    <e><p><l>kukin<s n="prn"/></l><r>each<s n="prn"/></r></p></e>
+    <e><p><l>sama<s n="prn"/></l><r>same<s n="prn"/></r></p></e>
     <!-- interr -->
+    <e><p><l>kuka<s n="prn"/><s n="itg"/></l><r>who<s n="prn"/></r></p></e>
     <e><p><l>missä<s n="prn"/></l><r>where<s n="adv"/></r></p></e>
     <e><p><l>miksi<s n="prn"/></l><r>why<s n="adv"/></r></p></e>
     <e><p><l>mikä<s n="prn"/></l><r>what<s n="adv"/></r></p></e>

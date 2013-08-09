@@ -14,7 +14,6 @@ Multichar_Symbols
 %<cnjsub%> ! Sub-ordinating conjunction 
 %<ind%> ! Indefinite
 %<def%> ! Definite
-%<num%> ! Definite
 
 %<sg%> ! Singular       
 %<pl%> ! Plural
@@ -107,74 +106,285 @@ LEXICON N_DICTIONARY
 %<pl%>%<nom%>:ies # ;
 %<pl%>%<gen%>:ies' # ;
 
+LEXICON N_FLUSH
+
+%<sg%>%<nom%>:0 # ;
+%<sg%>%<gen%>:'s # ;
+%<pl%>%<nom%>:es # ;
+%<pl%>%<gen%>:es' # ;
+
+LEXICON N_ILLNESS
+
+%<sg%>%<nom%>:0 # ;
+%<sg%>%<gen%>:' # ;
+%<pl%>%<nom%>:es # ;
+%<pl%>%<gen%>:es' # ;
+
+LEXICON N_LIFE
+
+%<sg%>%<nom%>:fe # ;
+%<sg%>%<gen%>:fe's # ;
+%<sg%>%<nom%>:ves # ;
+%<sg%>%<gen%>:ves' # ;
+
+LEXICON N_WOMAN
+
+%<sg%>%<nom%>:man # ;
+%<sg%>%<gen%>:man's # ;
+%<pl%>%<nom%>:men # ;
+%<pl%>%<gen%>:men's # ;
+
 LEXICON Nouns
 
+
+
+ability%<n%>:abilit N_DICTIONARY ;
+accident%<n%>:accident N ;
+achievement%<n%>:achievement N ;
+action%<n%>:action N ;
+act%<n%>:act N ;
 addition%<n%>:addition N ; 
 animal%<n%>:animal N ; ! ""
 announcement%<n%>:announcement N ;
 answer%<n%>:answer N ; ! ""
+area%<n%>:area N ;
+article%<n%>:article N ;
+art%<n%>:art N ;
+asset%<n%>:asset N ;
+association%<n%>:association N ;
+asylum%<n%>:asylum N ;
+author%<n%>:author N ;
+auxiliary%<n%>:auxiliar N_DICTIONARY ;
+basis%<n%>%<sg%>%<nom%>:basis # ;
+belief%<n%>:belief N ;
+benefit%<n%>:benefit N ;
 beta%<n%>:beta N ; !
 bird%<n%>:bird N ; ! ""
+border%<n%>:border N ;
+boundary%<n%>:boundar N_DICTIONARY ;
 boy%<n%>:boy N ; ! ""
+brutality%<n%>:brutalit N_DICTIONARY ;
 butter%<n%>:butter N ; ! ""
+cast%<n%>:cast N ;
 cat%<n%>:cat N ; ! ""
 chair%<n%>:chair N ; ! ""
+charge%<n%>:charge N ;
 child%<n%>:child N_CHILDREN ; ! ""
+circle%<n%>:circle N ;
+civilisation%<n%>:civilisation N ;
+claim%<n%>:claim N ;
+clothing%<n%>:clothing N ;
+compensation%<n%>:compensation N ;
 computer%<n%>:computer N ; ! 
+conscience%<n%>:conscience N ;
+consent%<n%>:consent N ;
+constitution%<n%>:constitution N ;
+content%<n%>:content N ;
+control%<n%>:control N ;
+co-operation%<n%>:co-operation N ;
+core%<n%>:core N ;
 course%<n%>:course N ; ! ""
+court%<n%>:court N ;
+covenant%<n%>:covenant N ;
+creation%<n%>:creation N ;
+crime%<n%>:crime N ;
+data%<n%>%<pl%>%<nom%>:data # ;
+data%<n%>%<sg%>%<nom%>:data # ;
+declaration%<n%>:declaration N ;
+defence%<n%>:defence N ;
+delimitting%<n%>:delimitting N ;
+development%<n%>:development N ;
+devotion%<n%>:devotion N ;
 dictionary%<n%>:dictionar N_DICTIONARY ;
+difference%<n%>:difference N ;
+discrimination%<n%>:discrimination N ;
 dissertation%<n%>:dissertation N ; !
 dog%<n%>:dog N ; ! ""
 door%<n%>:door N ; ! ""
 dreadlock%<n%>:dreadlock N ; ! ""
+duck%<n%>:duck N ;
+duty%<n%>:duty N ;
+dwelling%<n%>:dwelling N ;
+education%<n%>:education N ;
 English%<n%>:English N ; 
+essence%<n%>:essence N ;
+event%<n%>:event N ;
+exile%<n%>:exile N ;
+exit%<n%>:exit N ;
 eye%<n%>:eye N ; ! ""
-Finnish%<n%>:Finnish N ; 
 faculty%<n%>:facult N_DICTIONARY ;
+faith%<n%>:faith N ;
+family%<n%>:famil N_DICTIONARY ;
+feeling%<n%>:feeling N ;
+fence%<n%>:fence N ;
+Finnish%<n%>:Finnish N ; 
+flow%<n%>:flow N ;
+flush%<n%>:flush N_FLUSH ;
 flux%<n%>:flux N ; ! ""
+following%<n%>:following N ;
+force%<n%>:force N ;
 foundation%<n%>:foundation N ; !
+frame%<n%>:frame N ;
+fraternity%<n%>:fraternit N_DICTIONARY ;
+freedom%<n%>:freedom N ;
+free%<n%>:free N ;
+friendship%<n%>:friendship N ;
 game%<n%>:game N ; ! ""
+gap%<n%>:gap N ;
 garden%<n%>:garden N ; ! ""
+ghost%<n%>:ghost N ;
 girl%<n%>:girl N ; ! ""
+going-on%<n%>:going-on N ;
 going-on%<n%>%<sg%>%<nom%>:going-on # ; ! ""
+government%<n%>:government N ;
+guarantee%<n%>:guarantee N ;
+guilt%<n%>:guilt N ;
+habitat%<n%>:habitat N ;
 hand%<n%>:hand N ; ! ""
 head%<n%>:head N ; ! ""
+health%<n%>:health N ;
+help%<n%>:help N ;
 help%<n%>:help N ; !
 hide%<n%>:hide N ; ! ""
+honor%<n%>:honor N ;
 house%<n%>:house N ; ! ""
 human%<n%>:human N ; ! 
-list%<n%>:list N ; !
+hut%<n%>:hut N ;
+illness%<n%>:illness N_ILLNESS ;
 implementation%<n%>:implementation N ; 
+incitement%<n%>:incitement N ;
+individual%<n%>:individual N ;
+insight%<n%>:insight N ;
+insult%<n%>:insult N ;
+introduction%<n%>:introduction N ;
+job%<n%>:job N ;
+justice%<n%>:justice N ;
+land%<n%>:land N ;
+law%<n%>:law N ;
+lesson%<n%>:lesson N ;
+life%<n%>:li N_LIFE ;
+list%<n%>:list N ; !
+livelihood%<n%>:livelihood N ;
+loss%<n%>:loss N ;
 machine%<n%>:machine N ; 
+mail%<n%>:mail N ;
+mankind%<n%>:mankind N ;
+man%<n%>:man N ;
+marriage%<n%>:marriage N ;
+meaning%<n%>:meaning N ;
+medication%<n%>:medication N ;
+medium%<n%>%<pl%>%<nom%>:media N ;
+medium%<n%>%<sg%>%<nom%>:medium N ;
+member%<n%>:member N ;
+method%<n%>:method N ;
+mind%<n%>:mind N ;
+minute%<n%>:minute N ;
 mom%<n%>:mom N ; ! ""
 moon%<n%>:moon N ; ! ""
+moral%<n%>:moral N ;
 mother%<n%>:mother N ; ! ""
-person%<n%>:person N ; ! ""
+nationality%<n%>:nationalit N_DICTIONARY ;
+nation%<n%>:nation N ;
+neglect%<n%>:neglect N ;
+nutrition%<n%>:nutrition N ;
+oldness%<n%>:oldness N_ILLNESS ;
+opinion%<n%>:opinion N ;
+oppression%<n%>:oppression N ;
+order%<n%>:order N ;
+organisation%<n%>:organisation N ;
+organ%<n%>:organ N ;
+origin%<n%>:origin N ;
+other%<n%>:other N ;
+output%<n%>:output N ;
+outside%<n%>:outside N ;
+part%<n%>:part N ;
+peace%<n%>:peace N ;
 people%<n%>:people N ; ! ""
+persecution%<n%>:persecution N ;
+personality%<n%>:personalit N_DICTIONARY ;
+person%<n%>:person N ; ! ""
+planet%<n%>:planet N ;
+point%<n%>:point N ;
+pole%<n%>:pole N ;
+position%<n%>:position N ;
+poverty%<n%>:povert N_DICTIONARY ;
+power%<n%>:power N ;
+principle%<n%>:principle N ;
+progress%<n%>:progress N_ILLNESS ;
+protection%<n%>:protection N ;
+protocol%<n%>:protocol N ;
 quality%<n%>:qualit N_DICTIONARY ; !
 question%<n%>:question N ; ! ""
+race%<n%>:race N ;
+ratio%<n%>:ratio N ;
+reason%<n%>:reason N ;
+recognition%<n%>:recognition N ;
+refuge%<n%>:refuge N ;
+relay%<n%>:relay N ;
+religion%<n%>:religion N ;
+reputation%<n%>:reputation N ;
+resource%<n%>:resource N ;
+respect%<n%>:respect N ;
+responsibility%<n%>:responsibilit N_DICTIONARY ;
+rest%<n%>:rest N ;
+right%<n%>:right N ;
+safety%<n%>:safet N_DICTIONARY ;
+science%<n%>:science N ;
+sense%<n%>:sense N ;
+sex%<n%>:sex N_FLUSH ;
+shape%<n%>:shape N ;
 side%<n%>:side N ; ! ""
 sister%<n%>:sister N ; ! ""
 skill%<n%>:skill N ; 
+slave%<n%>:slave N ;
+slavery%<n%>:slaver N_DICTIONARY ;
+society%<n%>:societ N_DICTIONARY ;
 son%<n%>:son N ; ! ""
 sound%<n%>:sound N ; ! ""
+sovereignty%<n%>:sovereignt N_DICTIONARY ;
 spell-checking%<n%>:spell-checking N ; !
+spouse%<n%>:spouse N ;
+state%<n%>:state N ;
+status%<n%>:status N_ILLNESS ;
+strengthening%<n%>:strengthening N ;
+suffrage%<n%>:suffrage N ;
+switch%<n%>:switch N_FLUSH ;
+sympathy%<n%>:sympath N_DICTIONARY ;
+system%<n%>:system N ;
 table%<n%>:table N ; ! ""
+target%<n%>%<sg%>:target N ;
+team%<n%>:team N ;
+teardown%<n%>:teardown N ;
 test%<n%>:test N ; !
-tip%<n%>:tip N ; ! ""
+thought%<n%>:thought N ;
 time%<n%>:time N ; ! ""
+tip%<n%>:tip N ; ! ""
+tolerance%<n%>:tolerance N ;
 tongue%<n%>:tongue N ; !
-translator%<n%>:translator N ;
 translation%<n%>:translation N ;
+translator%<n%>:translator N ;
 tree%<n%>:tree N ; ! ""
+twig%<n%>:twig N ;
+tyranny%<n%>:tyrann N_DICTIONARY ;
+unemployment%<n%>:unemployment N ;
+union%<n%>:union N ;
+upkeep%<n%>:upkeep N ;
+vacation%<n%>:vacation N ;
+vocational%<n%>:vocational N ;
+vote%<n%>:vote N ;
+wage%<n%>:wage N ;
 water%<n%>:water N ; ! ""
 weather%<n%>:weather N ; ! ""
+well-being%<n%>:well-being N ;
+widowness%<n%>:widowness N_ILLNESS ;
+will%<n%>:will N ;
 window%<n%>:window N ; ! ""
+woman%<n%>:wom N_WOMAN ;
 wood%<n%>:wood N ; ! ""
+word%<n%>:word N ;
+work-time%<n%>:work-time N ;
 yard%<n%>:yard N ; ! ""
 year%<n%>:year N ; ! ""
-
-
 LEXICON V
 %<inf%>:0 # ;
 %<actv%>%<pres%>:0 # ;
@@ -382,6 +592,40 @@ LEXICON V_THINK
 %<actv%>%<past%>:thought # ;
 %<actv%>%<ger%>:thinking # ;
 
+LEXICON V_TEACH
+
+%<inf%>:teach # ;
+%<actv%>%<pres%>:teach # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:teaches # ;
+%<actv%>%<past%>:taught # ;
+%<actv%>%<ger%>:teaching # ;
+
+LEXICON V_LEAVE
+
+%<inf%>:leave # ;
+%<actv%>%<pres%>:leave # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:leaves # ;
+%<actv%>%<past%>:left # ;
+%<actv%>%<ger%>:leaving # ;
+
+LEXICON V_GIVE
+
+%<inf%>:give # ;
+%<actv%>%<pres%>:give # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:gives # ;
+%<actv%>%<past%>:gave # ;
+%<actv%>%<ger%>:giving # ;
+
+LEXICON V_CHOOSE
+
+%<inf%>:choose # ;
+%<actv%>%<pres%>:choose # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:chooses # ;
+%<actv%>%<past%>:chose # ;
+%<actv%>%<ger%>:choosing # ;
+
+
+
 LEXICON Verbs
 
 must%<vaux%>%<actv%>%<pres%>:must # ; ! ""
@@ -393,60 +637,136 @@ can%<vaux%>%<actv%>%<pres%>%<p3%>%<sg%>:can # ; ! ""
 can%<vaux%>%<actv%>%<past%>%<p3%>%<sg%>:could # ; ! ""
 can%<vaux%>%<actv%>%<past%>%<p1%>%<sg%>:could # ; ! ""
 
+
+
+
+act%<vblex%>:act V ;
+admit%<vblex%>:admit V ;
+aim%<vblex%>:aim V ;
 answer%<vblex%>:answer V ; ! ""
+apply%<vblex%>:appl V_TRY ;
+arrest%<vblex%>:arrest V ;
 ask%<vblex%>:ask V ; ! ""
+aspire%<vblex%>:aspir V_LOVE ;
+base%<vblex%>:bas V_LOVE ;
 be%<vblex%>:0 V_BE ; ! ""
+bloom%<vblex%>:bloom V ;
+born%<vblex%>:born V ;
 break%<vblex%>:0 V_BREAK ; ! 
+bring%<vblex%>:0 V_BRING ;
 bring%<vblex%>:0 V_BRING ; !
+cause%<vblex%>:caus V_LOVE ;
+choose%<vblex%>:0 V_CHOOSE ;
+clear%<vblex%>:clear V ;
 come%<vblex%>:0 V_COME ; ! ""
+complement%<vblex%>:complement V ;
+consider%<vblex%>:consider V ;
 contain%<vblex%>:contain V ; ! ""
 count%<vblex%>:count V ; ! ""
+create%<vblex%>:creat V_LOVE ;
+define%<vblex%>:defin V_LOVE ;
+deny%<vblex%>:den V_TRY ;
+depend%<vblex%>:depend V ;
 dice%<vblex%>:0 V_LOVE ; ! ""
+divorce%<vblex%>:divorc V_LOVE ;
 do%<vblex%>:0 V_DO ; ! ""
 drink%<vblex%>:0 V_DRINK ; ! ""
+drive%<vblex%>:driv V_LOVE ;
 eat%<vblex%>:0 V_EAT ; ! ""
 embroider%<vblex%>:embroider V ; !
+enforce%<vblex%>:enforc V_LOVE ;
+engage%<vblex%>:engag V_LOVE ;
+enjoy%<vblex%>:enjo V_TRY ;
+enlighten%<vblex%>:enlighten V ;
+ensure%<vblex%>:ensur V_LOVE ;
+finalise%<vblex%>:finalis V_LOVE ; 
 find%<vblex%>:0 V_FIND ; ! ""
 finish%<vblex%>:finish V ; ! ""
-finalise%<vblex%>:finalis V_LOVE ; 
 fold%<vblex%>:fold V ; !
+follow%<vblex%>:follow V ;
+found%<vblex%>:found V ;
+generalise%<vblex%>:generalis V_LOVE ;
 get%<vblex%>:0 V_GET ; ! ""
+give%<vblex%>:0 V_GIVE ;
 go%<vblex%>:0 V_GO ; ! ""
+happen%<vblex%>:happen V ;
 have%<vblex%>:0 V_HAVE ; ! ""
+hear%<vblex%>:hear V_HEAR ;
 hear%<vblex%>:hear V_HEAR ; ! ""
 hide%<vblex%>:0 V_HIDE ; ! ""
-interest%<vblex%>:interest V ; ! 
+hire%<vblex%>:hir V_LOVE ;
+hold%<vblex%>:hold V ;
+impregnate%<vblex%>:impregnat V_LOVE ;
+imprison%<vblex%>:imprison V ;
+improve%<vblex%>:improv V_LOVE ;
+include%<vblex%>:includ V_LOVE ;
 install%<vblex%>:install V ; !
+insult%<vblex%>:insult V ;
+interest%<vblex%>:interest V ; ! 
+interpret%<vblex%>:interpret V ;
+invade%<vblex%>:invad V_LOVE ;
+judge%<vblex%>:judg V_LOVE ;
 know%<vblex%>:0 V_KNOW ; ! ""
 laugh%<vblex%>:laugh V ; ! ""
+leave%<vblex%>:0 V_LEAVE ;
+lift%<vblex%>:lift V ;
 like%<vblex%>:lik V_LOVE ; ! ""
 listen%<vblex%>:listen V ; ! ""
+live%<vblex%>:liv V_LOVE ;
 look%<vblex%>:look V ; ! ""
+lose%<vblex%>:los V_LOVE ;
 love%<vblex%>:lov V_LOVE ; ! ""
+mechanise%<vblex%>:mechanis V_LOVE ;
+miss%<vblex%>:miss V ;
+move%<vblex%>:mov V_LOVE ;
 must%<vaux%>:must # ; ! ""
 offer%<vblex%>:offer V ; ! 
+order%<vblex%>:order V ;
+own%<vblex%>:own V ;
+participate%<vblex%>:participat V_LOVE ;
 play%<vblex%>:play V ; ! ""
 play%<vblex%>:play V ; ! ""
+practice%<vblex%>:practic V_LOVE ;
+protect%<vblex%>:protect V ;
+punish%<vblex%>:punish V ;
+raffle%<vblex%>:raffl V_LOVE ;
+raise%<vblex%>:rais V_LOVE ;
+reach%<vblex%>:reach V ;
+receive%<vblex%>:receiv V_LOVE ;
 relate%<vblex%>:relat V_LOVE ; !
 reply%<vblex%>:repl V_REPLY ; ! ""
+represent%<vblex%>:represent V ;
+request%<vblex%>:request V ;
+require%<vblex%>:requir V_LOVE ;
 require%<vblex%>:requir V_LOVE ; !
+respect%<vblex%>:respect V ;
+return%<vblex%>:return V ;
 run%<vblex%>:0 V_RUN ; ! ""
 say%<vblex%>:sa V_SAY  ; ! ""
 search%<vblex%>:search V_SEARCH ; ! ""
-seen%<vblex%>:seen V ; ! ""
+seem%<vblex%>:seem V ; ! ""
 see%<vblex%>:0 V_SEE ; ! ""
+shock%<vblex%>:shock V ;
 sit%<vblex%>:0 V_SIT ; ! ""
 sleep%<vblex%>:sleep V ; ! ""
 sound%<vblex%>:sound V ; ! ""
 speak%<vblex%>:0 V_SPEAK ; ! ""
+spread%<vblex%>:spread V ;
+steal%<vblex%>:steal V ;
+strengthen%<vblex%>:strengthen V ;
 talk%<vblex%>:talk V ; ! ""
+target%<vblex%>:target V ;
+teach%<vblex%>:0 V_TEACH ;
 tell%<vblex%>:0 V_TELL ; ! ""
 think%<vblex%>:0 V_THINK ; ! ""
+torture%<vblex%>:tortur V_LOVE ;
+treat%<vblex%>:treat V ;
 try%<vblex%>:tr V_TRY ; ! ""
+unite%<vblex%>:unite V_LOVE ;
+use%<vblex%>:us V_LOVE ;
 walk%<vblex%>:walk V ; ! ""
 want%<vblex%>:want V ; ! ""
 watch%<vblex%>:watch V_SEARCH ; ! ""
-
 
 LEXICON Determiners
 the%<det%>%<def%>:the # ; ! ""
@@ -540,24 +860,31 @@ unless%<cnjsub%>:unless # ; !
 
 LEXICON Prepositions
 
-to%<pr%>:to # ; ! ""
-in%<pr%>:in # ; ! ""
-near%<pr%>:near # ; ! ""
-towards%<pr%>:towards # ; ! ""
-toward%<pr%>:toward # ; ! ""
-of%<pr%>:of # ; ! ""
-with%<pr%>:with # ; ! ""
-inside%<pr%>:inside # ; ! ""
-under%<pr%>:under # ; ! ""
-through%<pr%>:through # ; ! ""
-in% front% of%<pr%>:in% front% of # ; ! ""
-from%<pr%>:from # ; ! ""
-from% behind%<pr%>:from% behind # ; ! ""
+
+according%<pr%>:according # ;
+against%<pr%>:against # ;
+amongst%<pr%>:amongst # ;
 around%<pr%>:around # ; ! ""
+at%<pr%>:at # ; ! ""
+for%<pr%>:for # ; ! ""
+from% behind%<pr%>:from% behind # ; ! ""
+from%<pr%>:from # ; ! ""
+in% front% of%<pr%>:in% front% of # ; ! ""
+in%<pr%>:in # ; ! ""
+inside%<pr%>:inside # ; ! ""
+near%<pr%>:near # ; ! ""
+of%<pr%>:of # ; ! ""
 out%<pr%>:out # ; ! ""
 outside%<pr%>:outside # ; ! ""
-for%<pr%>:for # ; ! ""
-at%<pr%>:at # ; ! ""
+through%<pr%>:through # ; ! ""
+to%<pr%>:to # ; ! ""
+toward%<pr%>:toward # ; ! ""
+towards%<pr%>:towards # ; ! ""
+under%<pr%>:under # ; ! ""
+until%<pr%>:until # ;
+via%<pr%>:via # ;
+without%<pr%>:without # ;
+with%<pr%>:with # ; ! ""
 
 LEXICON Adverbs
 
@@ -566,24 +893,59 @@ when%<adv%>%<itg%>:when # ; ! ""
 why%<adv%>%<itg%>:why # ; ! ""
 
 
+
+
+after%<adv%>:after # ;
 again%<adv%>:again # ; ! ""
+alone%<adv%>:alone # ;
 also%<adv%>:also # ; ! ""
 although%<adv%>:although # ; ! ""
 always%<adv%>:always # ; ! ""
+arbitrarily%<adv%>:arbitrarily # ;
 around%<adv%>:around # ; ! "" 
+between%<adv%>:between # ;
+brutally%<adv%>:brutally # ;
 carefully%<adv%>:carefully # ; ! ""
 closer%<adv%>:closer # ; ! ""
+constantly%<adv%>:constantly # ;
+degradingly%<adv%>:degradingly # ;
+each%<adv%>:each # ;
+equally%<adv%>:equally # ;
 everywhere%<adv%>:everywhere # ; ! ""
+freely%<adv%>:freely # ;
+fully%<adv%>:fully # ;
+generally%<adv%>:generally # ;
+here%<adv%>:here # ;
+Here%<adv%>:Here # ;
+immediately%<adv%>:immediately # ;
+indeed%<adv%>:indeed # ;
+inhumanely%<adv%>:inhumanely # ;
+judicially%<adv%>:judicially # ;
+just%<adv%>:just # ;
+legally%<adv%>:legally # ;
 near%<adv%>:near # ; ! "" 
 nearby%<adv%>:nearby # ; ! "" 
+necessarily%<adv%>:necessarily # ;
+needed%<adv%>:needed # ;
+neither%<adv%>:neither # ;
+Neither%<adv%>:Neither # ;
 never%<adv%>:never # ; ! ""
 no%<adv%>:no # ; ! ""
+nor%<adv%>:nor # ;
 not%<adv%>:not # ; ! ""
 now%<adv%>:now # ; ! ""
 obviously%<adv%>:obviously # ; ! ""
+only%<adv%>:only # ;
+open%<adv%>:open # ;
+privately%<adv%>:privately # ;
 probably%<adv%>:probably # ; ! ""
+publically%<adv%>:publically # ;
 quickly%<adv%>:quickly # ; ! ""
+quite%<adv%>:quite # ;
+rather%<adv%>:rather # ;
 really%<adv%>:really # ; ! ""
+regardless%<adv%>:regardless # ;
+self%<adv%>:self # ;
 slowly%<adv%>:slowly # ; ! ""
 so%<adv%>:so # ; ! ""
 still%<adv%>:still # ; ! ""
@@ -593,13 +955,14 @@ there%<adv%>:there # ; ! ""
 today%<adv%>:today # ; ! ""
 together%<adv%>:together # ; ! ""
 too%<adv%>:too # ; ! ""
+towards%<adv%>:towards # ;
 very%<adv%>:very # ; ! ""
 well%<adv%>:well # ; ! ""
+what%<adv%>:what # ;
+whatever%<adv%>:whatever # ;
+where%<adv%>:where # ;
+with%<adv%>:with # ;
 yesterday%<adv%>:yesterday # ; ! ""
-just%<adv%>:just # ;
-quite%<adv%>:quite # ;
-necessarily%<adv%>:necessarily # ;
-rather%<adv%>:rather # ;
 
 LEXICON A_OLD
 0 # ;
@@ -623,25 +986,102 @@ LEXICON A_NICE
 
 LEXICON Adjectives
 
+
+accordant%<adj%>:accordant # ;
 active%<adj%>%<sint%>:active # ; ! ""
+adequate%<adj%>:adequate # ;
+aged%<adj%>:aged # ;
+any%<adj%>:any # ;
+apolitical%<adj%>:apolitical # ;
+artistic%<adj%>:artistic # ;
+being%<adj%>:being # ;
+belittled%<adj%>:belittled # ;
+better%<adj%>:better # ;
 big%<adj%>%<sint%>:big A_BIG ; ! ""
+born%<adj%>:born # ;
+civilised%<adj%>:civilised # ;
 cold%<adj%>%<sint%>:cold A_OLD ; ! ""
+committed%<adj%>:committed # ;
+common%<adj%>:common # ;
+constitutional%<adj%>:constitutional # ;
+continuous%<adj%>:continuous # ;
+criminal%<adj%>:criminal # ;
+cripple%<adj%>:cripple # ;
+declared%<adj%>:declared # ;
+defined%<adj%>:defined # ;
+democratic%<adj%>:democratic # ;
+effective%<adj%>:effective # ;
+enslaved%<adj%>:enslaved # ;
+entitled%<adj%>:entitled # ;
+equal%<adj%>:equal # ;
+fear%<adj%>:fear # ;
+financial%<adj%>:financial # ;
 finished%<adj%>:finished # ; ! ""
+free%<adj%>:free # ;
+friendly%<adj%>:friendly # ;
+full%<adj%>:full # ;
 fun%<adj%>:fun # ; ! ""
 funny%<adj%>%<sint%>:funn A_HAPPY ; ! ""
+future%<adj%>:future # ;
+general%<adj%>:general # ;
+given%<adj%>:given # ;
+GLOBAL%<adj%>:GLOBAL # ;
+governmental%<adj%>:governmental # ;
 happy%<adj%>%<sint%>:happ A_HAPPY ; ! ""
+high%<adj%>:high # ;
+important%<adj%>:important # ;
+independent%<adj%>:independent # ;
+innocent%<adj%>:innocent # ;
+interesting%<adj%>:interesting # ;
+international%<adj%>:international # ;
+just%<adj%>:just # ;
+last%<adj%>:last # ;
+light%<adj%>:light # ;
 little%<adj%>:little # ; ! ""
 loving%<adj%>%<sint%>:loving # ; ! ""
+marked%<adj%>:marked # ;
+material%<adj%>:material # ;
+national%<adj%>:national # ;
+natural%<adj%>:natural # ;
+necessary%<adj%>:necessary # ;
+neutral%<adj%>:neutral # ;
 nice%<adj%>%<sint%>:nic A_NICE ; ! ""
+obligatory%<adj%>:obligatory # ;
 old%<adj%>%<sint%>:old A_OLD ; ! ""
-small%<adj%>%<sint%>:small A_OLD ; ! ""
-some%<adj%>:some # ; ! "" ! Det(?)
-warm%<adj%>%<sint%>:warm A_OLD ; ! ""
+own%<adj%>:own # ;
+participant%<adj%>:participant # ;
+peaceful%<adj%>:peaceful # ;
+perfect%<adj%>:perfect # ;
+personal%<adj%>:personal # ;
+political%<adj%>:political # ;
 practical%<adj%>:practical # ;
-technological%<adj%>:technological # ;
-interesting%<adj%>:interesting # ;
+proven%<adj%>:proven # ;
+public%<adj%>:public # ;
 qualified%<adj%>:qualified # ;
-
+real%<adj%>:real # ;
+reasonable%<adj%>:reasonable # ;
+religious%<adj%>:religious # ;
+satisfactory%<adj%>:satisfactory # ;
+scientific%<adj%>:scientific # ;
+secret%<adj%>:secret # ;
+sensible%<adj%>:sensible # ;
+shown%<adj%>:shown # ;
+small%<adj%>%<sint%>:small A_OLD ; ! ""
+social%<adj%>:social # ;
+societal%<adj%>:societal # ;
+some%<adj%>:some # ; ! "" ! Det(?)
+special%<adj%>:special # ;
+spiritual%<adj%>:spiritual # ;
+stable%<adj%>:stable # ;
+starred%<adj%>:starred # ;
+such%<adj%>:such # ;
+technological%<adj%>:technological # ;
+temporary%<adj%>:temporary # ;
+underling%<adj%>:underling # ;
+unique%<adj%>:unique # ;
+united%<adj%>:united # ;
+warm%<adj%>%<sint%>:warm A_OLD ; ! ""
+written%<adj%>:written # ;
 LEXICON Interjections
 
 hi%<ij%>:hi # ;
@@ -651,9 +1091,23 @@ LEXICON Numerals
 two%<num%>:two # ; ! ""
 five%<num%>:five # ; ! ""
 six%<num%>:six # ; ! ""
+0   Digits  ;
 
+LEXICON Digits
+%0  Digits  ;
+1   Digits  ;
+2   Digits  ;
+3   Digits  ;
+4   Digits  ;
+5   Digits  ;
+6   Digits  ;
+7   Digits  ;
+8   Digits  ;
+9   Digits  ;
+0   Digits_final    ;
+.   Digits_final    ;
 
-
+LEXICON Digits_final
 1%<num%>:1 # ;
 2%<num%>:2 # ;
 3%<num%>:3 # ;
@@ -663,22 +1117,7 @@ six%<num%>:six # ; ! ""
 7%<num%>:7 # ;
 8%<num%>:8 # ;
 9%<num%>:9 # ;
-1%0%<num%>:1%0 # ;
-11%<num%>:11 # ;
-12%<num%>:12 # ;
-13%<num%>:13 # ;
-14%<num%>:14 # ;
-15%<num%>:15 # ;
-16%<num%>:16 # ;
-17%<num%>:17 # ;
-18%<num%>:18 # ;
-19%<num%>:19 # ;
-2%0%<num%>:2%0 # ;
-21%<num%>:21 # ;
-22%<num%>:22 # ;
-23%<num%>:23 # ;
-24%<num%>:24 # ;
-25%<num%>:25 # ;
+%0%<num%>:%0 # ;
 
  LEXICON Punctuation
 !===================!
