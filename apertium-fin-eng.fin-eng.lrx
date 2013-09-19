@@ -46,6 +46,9 @@
     <match lemma="todennäköisesti" tags="adv"><select lemma="probably" tags="adv"/></match>
   </rule>
   <rule>
+    <match lemma="taivas" tags="n.*"><select lemma="sky" tags="n.*"/></match>
+  </rule>
+  <rule>
       <match lemma="nähdä" tags="vblex.*"><select lemma="see" tags="vblex.*"/></match>
   </rule>
   <rule>
