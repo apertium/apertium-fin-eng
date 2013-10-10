@@ -150,6 +150,8 @@ LEXICON N_WOMAN
 
 LEXICON Nouns
 
+
+
 ability%<n%>:abilit N_DICTIONARY ;
 accident%<n%>:accident N ;
 achievement%<n%>:achievement N ;
@@ -165,6 +167,7 @@ announcement%<n%>:announcement N ;
 answer%<n%>:answer N ; ! ""
 anvil%<n%>:anvil N ;
 appearance%<n%>:appearance N ;
+applicant%<n%>:applicant N ;
 area%<n%>:area N ;
 arrival%<n%>:arrival N ;
 article%<n%>:article N ;
@@ -229,6 +232,7 @@ clump%<n%>:clump N ;
 coast%<n%>:coast N ;
 coldening%<n%>:coldening N ;
 collision%<n%>:collision N ;
+combination%<n%>:combination N ;
 coming%<n%>:coming N ;
 compensation%<n%>:compensation N ;
 computer%<n%>:computer N ; ! 
@@ -256,6 +260,7 @@ day%<n%>:day N ;
 declaration%<n%>:declaration N ;
 defence%<n%>:defence N ;
 definition%<n%>:definition N ;
+degree%<n%>:degree N ;
 delimitting%<n%>:delimitting N ;
 deposit%<n%>:deposit N ;
 development%<n%>:development N ;
@@ -273,6 +278,7 @@ doing%<n%>:doing N ;
 door%<n%>:door N ; ! ""
 dramatics%<n%>:dramatics N ;
 dreadlock%<n%>:dreadlock N ; ! ""
+driver%<n%>:driver N ;
 drop%<n%>:drop N ;
 duck%<n%>:duck N ;
 duty%<n%>:duty N ;
@@ -301,6 +307,7 @@ family%<n%>:famil N_DICTIONARY ;
 feeling%<n%>:feeling N ;
 fence%<n%>:fence N ;
 Finnish%<n%>:Finnish N ; 
+fireman%<n%>:firem N_WOMAN ;
 fire%<n%>:fire N ;
 first%<n%>:first N ;
 flood%<n%>:flood N ;
@@ -350,6 +357,7 @@ height%<n%>:height N ;
 help%<n%>:help N ;
 help%<n%>:help N ; !
 hide%<n%>:hide N ; ! ""
+history%<n%>:histor N_DICTIONARY ;
 hit%<n%>:hit N ;
 honor%<n%>:honor N ;
 hour%<n%>:hour N ;
@@ -366,8 +374,11 @@ incitement%<n%>:incitement N ;
 income%<n%>:income N ;
 individual%<n%>:individual N ;
 insight%<n%>:insight N ;
+institute%<n%>:institute N ;
 insult%<n%>:insult N ;
 introduction%<n%>:introduction N ;
+invitation%<n%>:invitation N ;
+January%<n%>:Januar N_DICTIONARY ;
 jewism%<n%>:jewism N ;
 job%<n%>:job N ;
 journey%<n%>:journey N ;
@@ -399,6 +410,7 @@ medium%<n%>%<sg%>%<nom%>:medium N ;
 member%<n%>:member N ;
 meteorology%<n%>:meteorology N ;
 method%<n%>:method N ;
+metre%<n%>:metre N ;
 middle%<n%>:middle N ;
 mind%<n%>:mind N ;
 minute%<n%>:minute N ;
@@ -427,6 +439,7 @@ organisation%<n%>:organisation N ;
 organ%<n%>:organ N ;
 origin%<n%>:origin N ;
 other%<n%>:other N ;
+out%<n%>:out N ;
 output%<n%>:output N ;
 outside%<n%>:outside N ;
 oxygen%<n%>:oxygen N ;
@@ -462,6 +475,7 @@ rain%<n%>:rain N ;
 ratio%<n%>:ratio N ;
 reason%<n%>:reason N ;
 recognition%<n%>:recognition N ;
+rector%<n%>:rector N ;
 refuge%<n%>:refuge N ;
 relay%<n%>:relay N ;
 religion%<n%>:religion N ;
@@ -479,6 +493,8 @@ rook%<n%>:rook N ;
 rush%<n%>:rush N ;
 safety%<n%>:safet N_DICTIONARY ;
 salami%<n%>:salami N ;
+salvation%<n%>:salvation N ;
+saviour%<n%>:saviour N ;
 scandinavian%<n%>:scandinavian N ;
 science%<n%>:science N ;
 sea%<n%>:sea N ;
@@ -487,6 +503,7 @@ sense%<n%>:sense N ;
 sex%<n%>:sex N_FLUSH ;
 shape%<n%>:shape N ;
 shock%<n%>:shock N ;
+sick%<n%>:sick N ;
 side%<n%>:side N ; ! ""
 sign%<n%>:sign N ;
 sister%<n%>:sister N ; ! ""
@@ -496,6 +513,7 @@ skill%<n%>:skill N ;
 skin%<n%>:skin N ;
 slave%<n%>:slave N ;
 slavery%<n%>:slaver N_DICTIONARY ;
+smokediver%<n%>:smokediver N ;
 society%<n%>:societ N_DICTIONARY ;
 son%<n%>:son N ; ! ""
 sound%<n%>:sound N ; ! ""
@@ -504,6 +522,8 @@ sovereignty%<n%>:sovereignt N_DICTIONARY ;
 spell-checking%<n%>:spell-checking N ; !
 spot%<n%>:spot N ;
 spouse%<n%>:spouse N ;
+stage%<n%>:stage N ;
+stamina%<n%>:stamina N ;
 state%<n%>:state N ;
 status%<n%>:status N_ILLNESS ;
 stem%<n%>:stem N ;
@@ -517,7 +537,9 @@ suction%<n%>:suction N ;
 suffrage%<n%>:suffrage N ;
 summer%<n%>:summer N ;
 sun%<n%>:sun N ;
+superior%<n%>:superior N ;
 super%<n%>:super N ;
+swimming%<n%>:swimming N ;
 switch%<n%>:switch N_FLUSH ;
 sympathy%<n%>:sympath N_DICTIONARY ;
 system%<n%>:system N ;
@@ -540,6 +562,7 @@ tongue%<n%>:tongue N ; !
 top%<n%>:top N ;
 tornado%<n%>:tornado N ;
 torrent%<n%>:torrent N ;
+training%<n%>:training N ;
 translation%<n%>:translation N ;
 translator%<n%>:translator N ;
 travel%<n%>:travel N ;
@@ -552,6 +575,7 @@ twist%<n%>:twist N ;
 tyranny%<n%>:tyrann N_DICTIONARY ;
 unemployment%<n%>:unemployment N ;
 union%<n%>:union N ;
+unit%<n%>:unit N ;
 upkeep%<n%>:upkeep N ;
 vacation%<n%>:vacation N ;
 valley%<n%>:valley N ;
@@ -565,6 +589,7 @@ water%<n%>:water N ; ! ""
 wave%<n%>:wave N ;
 weather%<n%>:weather N ; ! ""
 wedge%<n%>:wedge N ;
+weight%<n%>:weight N ;
 well-being%<n%>:well-being N ;
 west%<n%>:west N ;
 widowness%<n%>:widowness N_ILLNESS ;
@@ -573,10 +598,12 @@ will%<n%>:will N ;
 window%<n%>:window N ; ! ""
 wind-shield%<n%>:wind-shield N ;
 woman%<n%>:wom N_WOMAN ;
+woman%<n%>:wom N_WOMAN ;
 wood%<n%>:wood N ; ! ""
 word%<n%>:word N ;
 work-time%<n%>:work-time N ;
 yard%<n%>:yard N ; ! ""
+year%<n%>:year N ;
 year%<n%>:year N ; ! ""
 zone%<n%>:zone N ;
 
@@ -885,6 +912,15 @@ LEXICON V_FEEL
 %<actv%>%<past%>:felt # ;
 %<actv%>%<ger%>:feeling # ;
 
+LEXICON V_HOLD
+
+%<inf%>:hold # ;
+%<actv%>%<pres%>:hold # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:holds # ;
+%<actv%>%<past%>:held # ;
+%<actv%>%<ger%>:holding # ;
+
+
 LEXICON V_BURN
 
 %<inf%>:0 # ;
@@ -957,7 +993,10 @@ can%<vaux%>%<actv%>%<past%>%<p3%>%<sg%>:could # ; ! ""
 can%<vaux%>%<actv%>%<past%>%<p1%>%<sg%>:could # ; ! ""
 
 
+
+
 act%<vblex%>:act V ;
+add%<vblex%>:add V ;
 admit%<vblex%>:admit V ;
 affect%<vblex%>:affect V ;
 agree%<vblex%>:agree V ;
@@ -966,9 +1005,11 @@ answer%<vblex%>:answer V ;
 answer%<vblex%>:answer V ; ! ""
 apply%<vblex%>:appl V_TRY ;
 arrest%<vblex%>:arrest V ;
+arrive%<vblex%>:arriv V_LOVE ;
 ask%<vblex%>:ask V ; ! ""
 aspire%<vblex%>:aspir V_LOVE ;
 base%<vblex%>:bas V_LOVE ;
+begin%<vblex%>:0 V_BEGIN ;
 begin%<vblex%>:0 V_BEGIN ;
 be%<vblex%>:0 V_BE ;
 be%<vblex%>:0 V_BE ; ! ""
@@ -986,6 +1027,7 @@ cause%<vblex%>:caus V_LOVE ;
 cause%<vblex%>:caus V_LOVE ;
 change%<vblex%>:chang V_LOVE ;
 choose%<vblex%>:0 V_CHOOSE ;
+clear%<vblex%>:clear V ;
 clear%<vblex%>:clear V ;
 climb%<vblex%>:climb V ;
 collide%<vblex%>:collid V_LOVE ;
@@ -1007,6 +1049,7 @@ define%<vblex%>:defin V_LOVE ;
 define%<vblex%>:defin V_LOVE ;
 deny%<vblex%>:den V_TRY ;
 depend%<vblex%>:depend V ;
+depress%<vblex%>:depress V_SEARCH ;
 develop%<vblex%>:develop V ;
 dice%<vblex%>:0 V_LOVE ; ! ""
 discharge%<vblex%>:discharg V_LOVE ;
@@ -1026,6 +1069,7 @@ enlighten%<vblex%>:enlighten V ;
 ensure%<vblex%>:ensur V_LOVE ;
 explain%<vblex%>:explain V ;
 explode%<vblex%>:explod V_LOVE ;
+fail%<vblex%>:fail V ;
 feel%<vblex%>:0 V_FEEL ;
 finalise%<vblex%>:finalis V_LOVE ; 
 find%<vblex%>:0 V_FIND ; ! ""
@@ -1036,11 +1080,13 @@ follow%<vblex%>:follow V ;
 foretell%<vblex%>:fore V_TELL ;
 found%<vblex%>:found V ;
 freshen%<vblex%>:freshen V ;
+fuck%<vblex%>:fuck V ;
 generalise%<vblex%>:generalis V_LOVE ;
 get%<vblex%>:0 V_GET ; ! ""
 give%<vblex%>:0 V_GIVE ;
 give%<vblex%>:0 V_GIVE ;
 go%<vblex%>:0 V_GO ; ! ""
+graduate%<vblex%>:graduat V_LOVE ;
 grow%<vblex%>:0 V_GROW ;
 happen%<vblex%>:happen V ;
 happen%<vblex%>:happen V ;
@@ -1052,7 +1098,9 @@ heat%<vblex%>:heat V ;
 hide%<vblex%>:0 V_HIDE ; ! ""
 hire%<vblex%>:hir V_LOVE ;
 hit%<vblex%>:hit V_HIT ;
+hold%<vblex%>:0 V_HOLD ;
 hold%<vblex%>:hold V ;
+hope%<vblex%>:hop V_LOVE ;
 ignite%<vblex%>:ignit V_LOVE ;
 impregnate%<vblex%>:impregnat V_LOVE ;
 imprison%<vblex%>:imprison V ;
@@ -1063,6 +1111,7 @@ insult%<vblex%>:insult V ;
 interest%<vblex%>:interest V ; ! 
 interpret%<vblex%>:interpret V ;
 invade%<vblex%>:invad V_LOVE ;
+invite%<vblex%>:invit V_LOVE ;
 judge%<vblex%>:judg V_LOVE ;
 kill%<vblex%>:kill V ;
 know%<vblex%>:0 V_KNOW ; ! ""
@@ -1090,11 +1139,14 @@ offer%<vblex%>:offer V ; !
 order%<vblex%>:order V ;
 own%<vblex%>:own V ;
 participate%<vblex%>:participat V_LOVE ;
+pass%<vblex%>:pass V_SEARCH ;
+perform%<vblex%>:perform V ;
 perform%<vblex%>:perform V ;
 play%<vblex%>:play V ; ! ""
 play%<vblex%>:play V ; ! ""
 practice%<vblex%>:practic V_LOVE ;
 predict%<vblex%>:predict V ;
+prefer%<vblex%>:prefer V ;
 prefer%<vblex%>:prefer V ;
 prepare%<vblex%>:prepar V_LOVE ;
 pressure%<vblex%>:pressur V_LOVE ;
@@ -1107,6 +1159,7 @@ put%<vblex%>:put V_READ ;
 raffle%<vblex%>:raffl V_LOVE ;
 rain%<vblex%>:rain V ;
 raise%<vblex%>:rais V_LOVE ;
+reach%<vblex%>:reach V ;
 reach%<vblex%>:reach V ;
 reach%<vblex%>:reach V ;
 receive%<vblex%>:receiv V_LOVE ;
@@ -1146,11 +1199,14 @@ stop%<vblex%>:stop V_STOP ;
 strengthen%<vblex%>:strengthen V ;
 suffice%<vblex%>:suffic V_LOVE ;
 suggest%<vblex%>:suggest V ;
+survive%<vblex%>:surviv V_LOVE ;
+switch%<vblex%>:switch V_SEARCH ;
 take%<vblex%>:0 V_TAKE ;
 talk%<vblex%>:talk V ; ! ""
 target%<vblex%>:target V ;
 teach%<vblex%>:0 V_TEACH ;
 tell%<vblex%>:0 V_TELL ; ! ""
+test%<vblex%>:test V ;
 think%<vblex%>:0 V_THINK ; ! ""
 throw%<vblex%>:0 V_THROW ;
 thunder%<vblex%>:thunder V ;
@@ -1638,7 +1694,9 @@ hi%<ij%>:hi # ;
 no%<ij%>:no # ; 
 
 LEXICON Numerals
+one%<num%>:one # ;
 two%<num%>:two # ; ! ""
+three%<num%>:three # ;
 five%<num%>:five # ; ! ""
 six%<num%>:six # ; ! ""
 0   Digits  ;
@@ -1698,3 +1756,6 @@ LEXICON Digits_final
 %)%<rpar%>:%) # ;
 %\%<sent%>:%\ # ;
 %/%<sent%>:%/ # ;
+
+
+
