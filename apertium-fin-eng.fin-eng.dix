@@ -10972,6 +10972,26 @@
     <e><p><l>öylätti<s n="n"/></l><r>Holy Bread<s n="n"/></r></p></e>
     <e><p><l>öylätti<s n="n"/></l><r>wafer<s n="n"/></r></p></e>
     <e><p><l>ööli<s n="n"/></l><r>beer<s n="n"/></r></p></e>
+    <e><p><l>asioida<s n="vblex"/></l><r>shop<s n="vblex"/></r></p></e>
+    <e><p><l>eksyä<s n="vblex"/></l><r>get<b/>lost<s n="vblex"/></r></p></e>
+    <e><p><l>hullu<s n="adj"/></l><r>crazy<s n="adj"/></r></p></e>
+    <e><p><l>ilmapallo<s n="n"/></l><r>balloon<s n="n"/></r></p></e>
+    <e><p><l>kielto<s n="n"/></l><r>ban<s n="n"/></r></p></e>
+    <e><p><l>kielto<s n="n"/></l><r>prohibition<s n="n"/></r></p></e>
+    <e><p><l>myyjä<s n="n"/></l><r>salesman<s n="n"/></r></p></e>
+    <e><p><l>palautettava<s n="adj"/></l><r>returnable<s n="adj"/></r></p></e>
+    <e><p><l>piste<s n="n"/></l><r>dot<s n="n"/></r></p></e>
+    <e><p><l>piste<s n="n"/></l><r>full<b/>stop<s n="n"/></r></p></e>
+    <e><p><l>piste<s n="n"/></l><r>point<s n="n"/></r></p></e>
+    <e><p><l>pyytää<s n="vblex"/></l><r>ask<s n="vblex"/></r></p></e>
+    <e><p><l>sijaita<s n="vblex"/></l><r>situate<s n="vblex"/></r></p></e>
+    <e><p><l>sijaita<s n="vblex"/></l><r>locate<s n="vblex"/></r></p></e>
+    <e><p><l>suostua<s n="vblex"/></l><r>agree<s n="vblex"/></r></p></e>
+    <e><p><l>tavaratalo<s n="n"/></l><r>warehouse<s n="n"/></r></p></e>
+    <e><p><l>tavoittaa<s n="vblex"/></l><r>reach<s n="vblex"/></r></p></e>
+    <e><p><l>työskennellä<s n="vblex"/></l><r>work<s n="vblex"/></r></p></e>
+    <e><p><l>vasikoida<s n="vblex"/></l><r>squeal<s n="vblex"/></r></p></e>
+    <e><p><l>huolimatta<s n="post"/></l><r>regardless<s n="pr"/></r></p></e>
 
     <!-- conjunctions -->
 
@@ -11098,6 +11118,8 @@
     <e><p><l>yleensä<s n="adv"/></l><r>usually<s n="adv"/></r></p></e>
     <e><p><l>yleisesti<s n="adv"/></l><r>generally<s n="adv"/></r></p></e>
     <e><p><l>ylöspäin<s n="adv"/></l><r>upwards<s n="adv"/></r></p></e>
+    <e><p><l>kuitenkaan<s n="adv"/></l><r>nevertheless<s n="adv"/></r></p></e>
+    <e><p><l>myöhemmin<s n="adv"/></l><r>later<s n="adv"/></r></p></e>
 
     <!-- interjections -->
     <e><p><l>hei<s n="ij"/></l><r>hi<s n="ij"/></r></p></e>
