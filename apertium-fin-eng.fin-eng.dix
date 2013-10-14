@@ -893,6 +893,7 @@
     <e><p><l>eikosanoidi<s n="n"/></l><r>eicosanoid<s n="n"/></r></p></e>
     <e><p><l>eilen<s n="adv"/></l><r>yesterday<s n="adv"/></r></p></e>
     <e><p><l>ei<s n="ij"/></l><r>no<s n="ij"/></r></p></e>
+    <e><p><l>ei<s n="vaux"/></l><r>no<s n="adv"/></r></p></e>
     <e><p><l>ei<s n="vblex"/></l><r>no<s n="adv"/></r></p></e>
     <e><p><l>ejakulaatio<s n="n"/></l><r>ejaculation<s n="n"/></r></p></e>
     <e><p><l>ejektori<s n="n"/></l><r>ejector<s n="n"/></r></p></e>
@@ -10396,6 +10397,7 @@
     <e><p><l>video<s n="n"/></l><r>movie<s n="n"/></r></p></e>
     <e><p><l>video<s n="n"/></l><r>tape<s n="n"/></r></p></e>
     <e><p><l>viedä<s n="vblex"/></l><r>bring<s n="vblex"/></r></p></e>
+    <e><p><l>viedä<s n="vblex"/></l><r>take<s n="vblex"/></r></p></e>
     <e><p><l>viehe<s n="n"/></l><r>lure<s n="n"/></r></p></e>
     <e><p><l>viehtymys<s n="n"/></l><r>affinity<s n="n"/></r></p></e>
     <e><p><l>viemäri<s n="n"/></l><r>sewer<s n="n"/></r></p></e>
@@ -11204,5 +11206,5 @@
       
   </section>
 </dictionary>
-<!-- vim: set ft=xml: -->
 
+<!-- vim: set ft=xml: -->

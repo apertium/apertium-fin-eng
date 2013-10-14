@@ -2594,6 +2594,9 @@ SELECT:ape-vfin1 VFIN IF (NOT -1* VFIN BARRIER VFINB ) (NOT 1* VFIN BARRIER VFIN
 SELECT:ape-vuotta (n sg par "vuosi") IF (-1 Num) ;
 SELECT:ape-kuusi (num sg nom "kuusi") IF (1 (par)) ;
 SELECT:ape-viisi (num sg nom "viisi") IF (1 (par)) ;
+# Nainen oli myös pyytänyt miestä "vasikoimaan" pallon antaneen myyjän.
+"<Nainen>" REMOVE:ape-nainen V (NOT 1 Acc)
+
 # Last resort: Kill all marginal cases if other readings
 REMOVE:ape-lr-ins (ins) ;
 REMOVE:ape-lr-abe (abe) ;
