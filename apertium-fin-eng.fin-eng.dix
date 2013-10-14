@@ -56,6 +56,11 @@
           <r>Jaakko<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>Mari<s n="np"/></l>
           <r>Mari<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+    <e><p><l>Facebook<s n="np"/></l><r>Facebook<s n="np"/></r></p></e>
+    <e><p><l>Helsing<s n="np"/></l><r>Helsing<s n="np"/></r></p></e>
+    <e><p><l>Pia<s n="np"/></l><r>Pia<s n="np"/></r></p></e>
+    <e><p><l>Päivi<s n="np"/></l><r>Päivi<s n="np"/></r></p></e>
+    <e><p><l>Stockmann<s n="np"/></l><r>Stockmann<s n="np"/></r></p></e>
 
   <!-- nums -->
 
@@ -11054,8 +11059,10 @@
     <e><p><l>kesken<s n="adv"/></l><r>between<s n="adv"/></r></p></e>
     <e><p><l>keskimäärin<s n="adv"/></l><r>on<b/>average<s n="adv"/></r></p></e>
     <e><p><l>kohtaan<s n="adv"/></l><r>towards<s n="adv"/></r></p></e>
+    <e><p><l>kuitenkaan<s n="adv"/></l><r>nevertheless<s n="adv"/></r></p></e>
     <e><p><l>kuitenkin<s n="adv"/></l><r>however<s n="adv"/></r></p></e>
     <e><p><l>kyllin<s n="adv"/></l><r>enough<s n="adv"/></r></p></e>
+    <e><p><l>kylmähermoisesti<s n="adv"/></l><r>brutally<s n="adv"/></r></p></e>
     <e><p><l>kyse<s n="adv"/></l><r>question<s n="adv"/></r></p></e>
     <e><p><l>lailla<s n="adv"/></l><r>so<s n="adv"/></r></p></e>
     <e><p><l>laillisesti<s n="adv"/></l><r>legally<s n="adv"/></r></p></e>
@@ -11071,6 +11078,7 @@
     <e><p><l>monesti<s n="adv"/></l><r>how<b/>many<b/>times<s n="adv"/></r></p></e>
     <e><p><l>mukana<s n="adv"/></l><r>with<s n="adv"/></r></p></e>
     <e><p><l>muuten<s n="adv"/></l><r>otherwise<s n="adv"/></r></p></e>
+    <e><p><l>myöhemmin<s n="adv"/></l><r>later<s n="adv"/></r></p></e>
     <e><p><l>myöskään<s n="adv"/></l><r>neither<s n="adv"/></r></p></e>
     <e><p><l>noin<s n="adv"/></l><r>approximately<s n="adv"/></r></p></e>
     <e><p><l>noin<s n="adv"/></l><r>like<b/>so<s n="adv"/></r></p></e>
@@ -11120,8 +11128,6 @@
     <e><p><l>yleensä<s n="adv"/></l><r>usually<s n="adv"/></r></p></e>
     <e><p><l>yleisesti<s n="adv"/></l><r>generally<s n="adv"/></r></p></e>
     <e><p><l>ylöspäin<s n="adv"/></l><r>upwards<s n="adv"/></r></p></e>
-    <e><p><l>kuitenkaan<s n="adv"/></l><r>nevertheless<s n="adv"/></r></p></e>
-    <e><p><l>myöhemmin<s n="adv"/></l><r>later<s n="adv"/></r></p></e>
 
     <!-- interjections -->
     <e><p><l>hei<s n="ij"/></l><r>hi<s n="ij"/></r></p></e>

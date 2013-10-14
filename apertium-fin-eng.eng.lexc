@@ -1325,6 +1325,11 @@ Jaakko%<np%>%<ant%>%<m%>:Jaakko PROPN ; ! ""
 Mari%<np%>%<ant%>%<f%>:Mari PROPN ; ! ""
 James%<np%>%<ant%>%<m%>:James PROPN_JAMES ; ! ""
 Mary%<np%>%<ant%>%<f%>:Mary PROPN ; ! ""
+Facebook%<np%>:Facebook PROPN ;
+Helsing%<np%>:Helsing PROPN ;
+Pia%<np%>:Pia PROPN ;
+Päivi%<np%>:Päivi PROPN ;
+Stockmann%<np%>:Stockmann PROPN ;
 
 LEXICON Conjunctions
 
@@ -1366,6 +1371,7 @@ out%<pr%>:out # ; ! ""
 outside%<pr%>:outside # ; ! ""
 over%<pr%>:over # ;
 past%<pr%>:past # ;
+regardless%<pr%>:regardless # ;
 through%<pr%>:through # ; ! ""
 to%<pr%>:to # ; ! ""
 toward%<pr%>:toward # ; ! ""

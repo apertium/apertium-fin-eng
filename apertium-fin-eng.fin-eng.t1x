@@ -83,6 +83,8 @@
       <cat-item tags="n.*.*"/>
       <cat-item tags="n.*.*.*"/>
       <cat-item tags="np.*"/>
+      <cat-item tags="np.*.*"/>
+      <cat-item tags="np.*.*.*"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
@@ -123,6 +125,7 @@
     <def-attr n="a_nom">
       <attr-item tags="n"/>
       <attr-item tags="vblex.subst"/>
+      <attr-item tags="np"/>
       <attr-item tags="np.ant"/>
       <attr-item tags="np.ant.f"/>
       <attr-item tags="np.ant.m"/>
