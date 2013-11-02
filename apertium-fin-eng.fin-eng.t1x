@@ -75,6 +75,14 @@
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
     </def-cat>
+    <def-cat n="verb-mood">
+      <cat-item tags="vblex.*.cond.*"/>
+      <cat-item tags="vblex.*.imp.*"/>
+      <cat-item tags="vblex.*.pot.*"/>
+      <cat-item tags="vaux.*.cond.*"/>
+      <cat-item tags="vaux.*.imp.*"/>
+      <cat-item tags="vaux.*.pot.*"/>
+    </def-cat>
     <def-cat n="cm">
       <cat-item tags="cm"/>
     </def-cat>
@@ -114,9 +122,12 @@
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
     </def-attr>
-    <def-attr n="tense">
+    <def-attr n="moodtense">
       <attr-item tags="past"/>
       <attr-item tags="pres"/>
+      <attr-item tags="cond"/>
+      <attr-item tags="imp"/>
+      <attr-item tags="pot"/>
     </def-attr>
     <def-attr n="a_adv">
         <attr-item tags="adv"/>
@@ -246,6 +257,21 @@
           <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
     </def-macro>
 
+    <def-macro n="mood-handler1" npar="1">
+          <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
+          <choose>
+            <when>
+              <test><or> 
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="cond"/></equal>
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="imp"/></equal>
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pot"/></equal>
+        </or></test>
+
+              <let><clip pos="1" side="tl" part="moodtense"/><lit-tag v="pres"/></let>
+            </when>
+        </choose>
+    </def-macro>
+
     <def-macro n="case-handler1" npar="1">
           <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
           <choose>
@@ -280,7 +306,9 @@
             </when>
         </choose>
     </def-macro>
-  </section-def-macros>
+
+
+ </section-def-macros>
   <section-rules>
 
 
@@ -519,6 +547,9 @@
          <pattern-item n="conneg"/>
       </pattern>
       <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <call-macro n="proc-synlabel1"> 
           <with-param pos="2"/>
         </call-macro>
@@ -541,7 +572,8 @@
         <out> 
           <chunk name="notted" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV"/></tag>
+                <tag><lit-tag v="SV"/></tag>
+                <tag><clip pos="1" side="sl" part="moodtense"/></tag>
             </tags>
           <lu>
               <clip pos="2" side="tl" part="whole"/>
@@ -550,7 +582,7 @@
           <lu>
             <clip pos="3" side="tl" part="lem"/> <!-- know --> 
             <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="3" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="3" side="tl" part="moodtense"/> <!-- pres -->
             <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -613,6 +645,9 @@
         <call-macro n="proc-synlabel1"> 
           <with-param pos="3"/>
         </call-macro>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="2"/>
+        </call-macro>
       
         <choose>
           <when>
@@ -633,12 +668,13 @@
         <out> 
           <chunk name="notted" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV"/></tag>
+                <tag><lit-tag v="SV"/></tag>
+                <tag><clip pos="2" side="sl" part="moodtense"/></tag>
             </tags>
           <lu>
             <clip pos="2" side="tl" part="lem"/> <!-- know --> 
             <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="2" side="tl" part="moodtense"/> <!-- pres -->
             <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -662,6 +698,9 @@
          <pattern-item n="cop-conneg"/>
       </pattern>
       <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="2"/>
+        </call-macro>
         <choose>
           <when>
             <test>
@@ -681,12 +720,13 @@
         <out> 
           <chunk name="neg-cop" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV.COP"/></tag>
+                <tag><lit-tag v="SV.COP"/></tag>
+                <tag><clip pos="2" side="sl" part="moodtense"/></tag>
             </tags>
           <lu>
             <clip pos="2" side="tl" part="lem"/> <!-- know --> 
             <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="2" side="tl" part="moodtense"/> <!-- pres -->
             <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -708,6 +748,9 @@
          <pattern-item n="conneg_nottable"/>
       </pattern>
       <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="3"/>
+        </call-macro>
         <choose>
           <when>
             <test>
@@ -721,12 +764,13 @@
         <out> 
           <chunk name="notted" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV"/></tag>
+                <tag><lit-tag v="SV"/></tag>
+                <tag><clip pos="3" side="sl" part="moodtense"/></tag>
             </tags>
           <lu>
             <clip pos="3" side="tl" part="lem"/> <!-- know --> 
             <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="3" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="3" side="tl" part="moodtense"/> <!-- pres -->
             <clip pos="3" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -747,6 +791,10 @@
          <pattern-item n="conneg_nottable"/>
       </pattern>
       <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="2"/>
+        </call-macro>
+
         <choose>
           <when>
             <test>
@@ -766,12 +814,13 @@
         <out> 
           <chunk name="notted" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV"/></tag>
+                <tag><lit-tag v="SV"/></tag>
+                <tag><clip pos="2" side="sl" part="moodtense"/></tag>
             </tags>
           <lu>
             <clip pos="2" side="tl" part="lem"/> <!-- know --> 
             <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="2" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="2" side="tl" part="moodtense"/> <!-- pres -->
             <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -823,15 +872,19 @@
          <pattern-item n="vbolla"/>
       </pattern>
       <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out> 
           <chunk name="cop" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV.COP"/></tag>
+                <tag><lit-tag v="SV.COP"/></tag>
+                <tag><clip pos="1" part="moodtense" side="sl"/></tag>
             </tags>
           <lu>
             <clip pos="1" side="tl" part="lem"/> <!-- know --> 
             <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="1" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
             <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -858,7 +911,7 @@
           <lu>
             <clip pos="1" side="tl" part="lem"/> <!-- know --> 
             <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="1" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="moodtense"/> <!-- past -->
             <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -898,7 +951,51 @@
           <lu>
             <clip pos="1" side="tl" part="lem"/> <!-- know --> 
             <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
-            <clip pos="1" side="tl" part="tense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
+            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
+    <rule comment="REGLA: moody verb">
+      <pattern>
+         <pattern-item n="verb-mood"/>
+      </pattern>
+      <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test>
+              <or>
+                <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+                <not><and>
+                   <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                </and></not>
+              </or>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
+     
+        <out> 
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="sl" part="person"/></tag>
+              <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
+              <tag><clip pos="1" side="sl" part="moodtense"/></tag>
+            </tags>
+          <lu>
+            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
             <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
@@ -925,6 +1022,8 @@
         </out>
       </action>
     </rule>
+
+
 
     <rule comment="REGLA: num nom">
       <pattern>

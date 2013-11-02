@@ -77,6 +77,11 @@
       <attr-item tags="p2.pl"/>
       <attr-item tags="p3.pl"/>
     </def-attr>
+    <def-attr n="a_mood">
+      <attr-item tags="cond"/>
+      <attr-item tags="pot"/>
+      <attr-item tags="imp"/>
+    </def-attr>
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
@@ -84,6 +89,7 @@
     <def-var n="POSS"/>
     <def-var n="PRS"/>
     <def-var n="NOT"/>
+    <def-var n="AUX"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="insert-prep1" npar="1">
@@ -232,6 +238,32 @@
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p3.pl"/></equal></test>
           <let><var n="PRS"/>
                <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.nom"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+      </choose>
+    </def-macro>
+    <def-macro n="insert-aux1" npar="1">
+      <let>
+        <var n="AUX"/>
+        <lit v=""/>
+      </let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" part="a_mood"/><lit-tag v="cond"/></equal></test>
+          <let><var n="AUX"/>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^would"/><lit-tag v="vaux.actv.pres"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_mood"/><lit-tag v="imp"/></equal></test>
+          <let><var n="AUX"/>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^should"/><lit-tag v="vaux.actv.pres"/><lit v="$}$ "/></concat>
+          </let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="a_mood"/><lit-tag v="pot"/></equal></test>
+          <let><var n="AUX"/>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^may"/><lit-tag v="vaux.actv.pres"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>
@@ -416,6 +448,7 @@
         </out>
       </action>
     </rule>
+    
     <rule comment="REGLA: SV">
       <pattern>
         <pattern-item n="SV"/>
@@ -424,8 +457,12 @@
         <call-macro n="insert-prs1">
           <with-param pos="1"/>
         </call-macro> 
+        <call-macro n="insert-aux1">
+          <with-param pos="1"/>
+        </call-macro> 
         <out>
           <var n="PRS"/>
+          <var n="AUX"/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>

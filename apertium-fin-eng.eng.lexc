@@ -50,6 +50,7 @@ Multichar_Symbols
 %<pos%> ! interrog
 %<sp%> ! interrog
 %<mf%> ! interrog
+%<mg%> ! interrog
 %<nt%> ! interrog
 %<dem%> ! interrog
 %<ind%> ! interrog
@@ -669,6 +670,13 @@ year%<n%>:year N ;
 year%<n%>:year N ; ! ""
 zone%<n%>:zone N ;
 
+believing%<n%>:believing N ;
+bread%<n%>:bread N ;
+lei%<n%>:lei N ;
+letter%<n%>:letter N ;
+snow%<n%>:snow N ;
+tent%<n%>:tent N ;
+
 
 LEXICON V
 
@@ -691,8 +699,8 @@ LEXICON V_BE
 %<actv%>%<past%>%<p1%>%<sg%>:was # ;
 %<actv%>%<past%>%<p3%>%<sg%>:was # ;
 %<actv%>%<past%>%<p2%>%<sg%>:were # ;
-%<actv%>%<past%>%<p1%>%<pl%>:was # ;
-%<actv%>%<past%>%<p3%>%<pl%>:was # ;
+%<actv%>%<past%>%<p1%>%<pl%>:were # ;
+%<actv%>%<past%>%<p3%>%<pl%>:were # ;
 %<actv%>%<past%>%<p2%>%<pl%>:were # ;
 %<actv%>%<ger%>:being # ;
 
@@ -1343,6 +1351,10 @@ wet%<vblex%>:wet V_HIT ;
 widen%<vblex%>:widen V ;
 work%<vblex%>:work V ;
 
+exit%<vblex%>:exit V_HIT ;
+shine%<vblex%>:shin V_LOVE ;
+snow%<vblex%>:snow V ;
+
 
 LEXICON Determiners
 
@@ -1390,6 +1402,10 @@ it%<prn%>%<pers%>%<p3%>%<nt%>%<sg%>%<gen%>:its # ; ! ""
 he%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<nom%>:he # ; ! ""
 he%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<acc%>:him # ; ! ""
 he%<prn%>%<pers%>%<p3%>%<m%>%<sg%>%<gen%>:his # ; ! ""
+we%<prn%>%<pers%>%<p1%>%<mg%>%<pl%>%<nom%>:we # ; ! ""
+we%<prn%>%<pers%>%<p1%>%<mg%>%<pl%>%<acc%>:us # ; ! ""
+we%<prn%>%<pers%>%<p1%>%<mg%>%<pl%>%<gen%>:our # ; ! ""
+we%<prn%>%<pers%>%<p1%>%<mg%>%<pl%>%<acc%>:ours # ; ! ""
 they%<prn%>%<pers%>%<p3%>%<mf%>%<sg%>%<nom%>:they # ; ! ""
 they%<prn%>%<pers%>%<p3%>%<mf%>%<sg%>%<acc%>:them # ; ! ""
 they%<prn%>%<pers%>%<p3%>%<mf%>%<sg%>%<gen%>:their # ; ! ""
