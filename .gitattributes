@@ -25,6 +25,7 @@
 /configure.ac -text
 dev/debug2dixesandlexces.bash -text
 dev/fiwikt2dix.awk -text
+dev/fiwn2bidix.bash -text
 dev/nouns.wikt.txt -text
 /eng-fin.prob -text svneol=unset#unset
 /fin-eng.prob -text svneol=unset#unset
