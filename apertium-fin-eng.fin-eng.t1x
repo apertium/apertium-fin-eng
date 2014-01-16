@@ -972,7 +972,7 @@
           <when>
             <test>
               <or>
-                <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+                <equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
                    <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>

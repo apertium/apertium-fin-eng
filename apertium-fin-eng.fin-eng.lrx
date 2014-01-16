@@ -70,7 +70,11 @@
     </match>
     <match/>
     <match tags="*.*.ill"/>
-  </rule>
+</rule>
+
+  <!-- pronominal gender selection mess -->
+
+  <!-- feminine stuffs to the left -->
   <rule>
     <match tags="np.ant.f.*"/>
     <match/>
@@ -84,6 +88,8 @@
       <select lemma="he" tags="prn.*"/>
     </match>
   </rule>
+
+  <!-- masculine stuffs to the left -->
   <rule>
     <match tags="np.ant.m.*"/>
     <match/>
@@ -97,6 +103,8 @@
       <select lemma="he" tags="prn.*"/>
     </match>
   </rule>
+
+  <!-- some keywords to the left -->
   <rule>
     <match lemma="poika" tags="n.*"/>
     <match/>
@@ -123,11 +131,101 @@
       <select lemma="she" tags="prn.*"/>
     </match>
   </rule>
+
+  <!-- subject position gender neutral -->
+  <rule>
+    <match lemma="hän" tags="prn.*">
+      <select lemma="he or she" tags="prn.*"/>
+    </match>
+    <match tags="vblex.*"/>
+  </rule>
+
+  <!-- gender neutral they -->
   <rule>
     <match lemma="hän" tags="prn.*">
       <select lemma="they" tags="prn.*"/>
     </match>
   </rule>
 
+<!-- some verbs in alphabetical order -->
+  <rule>
+    <match lemma="olla" tags="vblex.*">
+      <select lemma="be" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="katsoa" tags="vblex.*">
+      <select lemma="look" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="kysyä" tags="vblex.*">
+      <select lemma="ask" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="kertoa" tags="vblex.*">
+      <select lemma="tell" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="kuunnella" tags="vblex.*">
+      <select lemma="listen" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="kävellä" tags="vblex.*">
+      <select lemma="walk" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="leikkiä" tags="vblex.*">
+      <select lemma="play" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="tietää" tags="vblex.*">
+      <select lemma="know" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="saada" tags="vblex.*">
+      <select lemma="receive" tags="vblex.*"/>
+    </match>
+  </rule>
 
+  <!-- some nouns, in alphabetical order -->
+  <rule>
+    <match lemma="koira" tags="n.*">
+      <select lemma="dog" tags="n.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="talo" tags="n.*">
+      <select lemma="house" tags="n.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="vuosi" tags="n.*">
+      <select lemma="year" tags="n.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="äiti" tags="n.*">
+      <select lemma="mother" tags="n.*"/>
+    </match>
+  </rule>
+
+  <!-- some adjectives, in alphabetical order -->
+  <rule>
+    <match lemma="iloinen" tags="adj.*">
+      <select lemma="happy" tags="adj.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="pieni" tags="adj.*">
+      <select lemma="small" tags="adj.*"/>
+    </match>
+  </rule>
 </rules>
+<!-- vim: set ft=xml: -->
