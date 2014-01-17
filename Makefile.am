@@ -10,48 +10,41 @@ PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=apertium-$(PREFIX1)
 
-TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
-	$(PREFIX1).automorf.hfst $(PREFIX1).autogen.hfst $(PREFIX1).t1x.bin  \
-	$(PREFIX2).automorf.hfst $(PREFIX2).autogen.hfst $(PREFIX2).t1x.bin  \
-        $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
-        $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
-        $(PREFIX1).rlx.bin $(PREFIX2).rlx.bin \
-        $(PREFIX1).autolex.bin $(PREFIX2).autolex.bin \
-	$(PREFIX1).mode $(PREFIX2).mode modes 
+TARGETS_MONOLING=$(PREFIX1).automorf.hfst $(PREFIX1).autogen.hfst \
+				 $(PREFIX2).automorf.hfst $(PREFIX2).autogen.hfst 
+TARGETS_TRANSFER=$(PREFIX2).t1x.bin $(PREFIX1).t1x.bin  \
+				 $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
+				 $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
+				 $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
+				 $(PREFIX1).rlx.bin $(PREFIX2).rlx.bin \
+				 $(PREFIX1).autolex.bin $(PREFIX2).autolex.bin \
+				 $(PREFIX1).mode $(PREFIX2).mode modes 
+TARGETS_COMMON=$(TARGETS_MONOLING) $(TARGETS_TRANSFER)
+
+# Use this goal for creating .deps, otherwise make -j will fail:
+.deps/.d:
+	if [ ! -d .deps ] ; then mkdir -p .deps ; fi
+	touch $@
+
+# Prevent the .d file from being removed automatically
+.PRECIOUS: .deps/.d
 
 ###############################################################################
 ## fin transducer
 ###############################################################################
 
-.deps/$(LANG1).twol.hfst: $(BASENAME).$(LANG1).twol
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc $< -o $@
- 
-.deps/$(LANG1).RL.lexc: $(BASENAME).$(LANG1).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/LR' > $@
- 
-.deps/$(LANG1).LR.lexc: $(BASENAME).$(LANG1).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/RL' > $@
+# currently we copy stuff from another dir
+$(PREFIX1).automorf.hfst: $(AP_LIB1)/$(LANG1).automorf.hfst
+	cp -v -f $< $@
 
-.deps/$(LANG1).RL.lexc.hfst: .deps/$(LANG1).RL.lexc
-	hfst-lexc --format foma $< -o $@
+$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.bin
+	cp -v -f $< $@
 
-.deps/$(LANG1).LR.lexc.hfst: .deps/$(LANG1).LR.lexc
-	hfst-lexc --format foma $< -o $@
+$(PREFIX2).autogen.bin: $(AP_LIB1)/$(LANG1).autogen.bin
+	cp -v -f $< $@
 
-.deps/$(LANG1).RL.hfst: .deps/$(LANG1).RL.lexc.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).RL.lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
-
-.deps/$(LANG1).LR.hfst: .deps/$(LANG1).LR.lexc.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
-
-$(PREFIX2).autogen.hfst: .deps/$(LANG1).RL.hfst
-	hfst-fst2fst -O $< -o $@
-
-$(PREFIX1).automorf.hfst: .deps/$(LANG1).LR.hfst
-	hfst-invert $< | hfst-fst2fst -O -o $@
+$(PREFIX2).autogen.hfst: $(AP_LIB1)/$(LANG1).autogen.hfst
+	cp -v -f $< $@
 
 ###############################################################################
 ## eng transducer
@@ -90,12 +83,6 @@ $(PREFIX2).automorf.hfst: .deps/$(LANG2).LR.hfst
 ###############################################################################
 ## Debugging transducers (for testvoc)
 ###############################################################################
-
-.deps/$(LANG1).LR-debug.hfst: $(BASENAME).$(LANG1).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/RL' | grep -v 'Use/Circ' > .deps/$(LANG1).LR-debug.lexc
-	hfst-lexc --format foma .deps/$(LANG1).LR-debug.lexc -o .deps/$(LANG1).LR-debug.lexc.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).LR-debug.lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
 
 .deps/$(LANG2).LR-debug.hfst: $(BASENAME).$(LANG2).lexc
 	if [ ! -d .deps ]; then mkdir .deps; fi
