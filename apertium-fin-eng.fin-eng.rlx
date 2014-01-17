@@ -2601,6 +2601,11 @@ SELECT:ape-viisi (num sg nom "viisi") IF (1 (par)) ;
 REMOVE:ape-lr-ins (ins) ;
 REMOVE:ape-lr-abe (abe) ;
 REMOVE:ape-sinut ("sinut" adv) IF (NOT -1* ("olla") BARRIER VFIN) ;
+
+# Tietoa salamaan liittyvästä kansanperinteestä löytyy.
+REMOVE:ape-propn (np) IF (0 N) ;
+
+
 # Syntactic Tags
 # --------------
 
