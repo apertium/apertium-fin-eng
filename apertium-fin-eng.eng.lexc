@@ -93,12 +93,40 @@ LEXICON N
 %<pl%>%<nom%>:s # ;
 %<pl%>%<gen%>:s' # ;
 
+LEXICON N_TOOTH
+
+tooth%<sg%>%<nom%>:tooth # ;
+tooth%<sg%>%<gen%>:tooth's # ;
+tooth%<pl%>%<nom%>:teeth # ;
+tooth%<pl%>%<gen%>:teeth's # ;
+
 LEXICON N_PHENOMENON
 
 %<sg%>%<nom%>:on # ;
 %<sg%>%<gen%>:on's # ;
 %<pl%>%<nom%>:a # ;
 %<pl%>%<gen%>:a's # ;
+
+LEXICON N_INDEX
+
+%<sg%>%<nom%>:ex # ;
+%<sg%>%<gen%>:ex's # ;
+%<pl%>%<nom%>:ices # ;
+%<pl%>%<gen%>:ices' # ;
+
+LEXICON N_DATUM
+
+%<sg%>%<nom%>:um # ;
+%<sg%>%<gen%>:um's # ;
+%<pl%>%<nom%>:a # ;
+%<pl%>%<gen%>:a's # ;
+
+LEXICON N_STAFF
+
+%<sg%>%<nom%>:ff # ;
+%<sg%>%<gen%>:ff's # ;
+%<pl%>%<nom%>:ves # ;
+%<pl%>%<gen%>:ves' # ;
 
 LEXICON N_HALF
 
@@ -151,323 +179,790 @@ LEXICON N_WOMAN
 
 LEXICON Nouns
 
+abbe%<n%>:abbe N ;
 ability%<n%>:abilit N_DICTIONARY ;
+ablation%<n%>:ablation N ;
+abode%<n%>:abode N ;
+acceleration%<n%>:acceleration N ;
+acceptance%<n%>:acceptance N ;
 accident%<n%>:accident N ;
 achievement%<n%>:achievement N ;
+acknowledgment%<n%>:acknowledgment N ;
 acrobat%<n%>:acrobat N ;
 action%<n%>:action N ;
 act%<n%>:act N ;
 addition%<n%>:addition N ;
 addition%<n%>:addition N ; 
+adhesion%<n%>:adhesion N ;
+adjacency%<n%>:adjacenc N_DICTIONARY ;
+advance%<n%>:advance N ;
+advert%<n%>:advert N ;
+advocacy%<n%>:advocac N_DICTIONARY ;
+aegis%<n%>:aegis N_ILLNESS ;
+afterglow%<n%>:afterglow N ;
 afternoon%<n%>:afternoon N ;
+age%<n%>:age N ;
+agent%<n%>:agent N ;
+aid%<n%>:aid N ;
+airing%<n%>:airing N ;
 air%<n%>:air N ;
 airwave%<n%>:airwave N ;
+ale%<n%>:ale N ;
+allure%<n%>:allure N ;
 anecdote%<n%>:anecdote N ;
+angle%<n%>:angle N ;
 animal%<n%>:animal N ; ! ""
 announcement%<n%>:announcement N ;
+annulment%<n%>:annulment N ;
 answer%<n%>:answer N ; ! ""
 anvil%<n%>:anvil N ;
+apparatus%<n%>:apparatus N_ILLNESS ;
 appearance%<n%>:appearance N ;
 applicant%<n%>:applicant N ;
+approval%<n%>:approval N ;
+Aquarius%<n%>:Aquarius N_ILLNESS ;
 area%<n%>:area N ;
+arm%<n%>:arm N ;
+armpit%<n%>:armpit N ;
+array%<n%>:array N ;
 arrival%<n%>:arrival N ;
 article%<n%>:article N ;
 artist%<n%>:artist N ;
 art%<n%>:art N ;
+Ascension%<n%>:Ascension N ;
+ask%<n%>:ask N ;
+aspect%<n%>:aspect N ;
+aspen%<n%>:aspen N ;
+asserter%<n%>:asserter N ;
+assertion%<n%>:assertion N ;
 asset%<n%>:asset N ;
+assets%<n%>:assets N_ILLNESS ;
 ass%<n%>:ass N_ILLNESS ;
 association%<n%>:association N ;
 asylum%<n%>:asylum N ;
 atmosphere%<n%>:atmosphere N ;
 August%<n%>:August N ;
 author%<n%>:author N ;
+automobile%<n%>:automobile N ;
 auxiliary%<n%>:auxiliar N_DICTIONARY ;
+avail%<n%>:avail N ;
 avalanche%<n%>:avalanche N ;
+awake%<n%>:awake N ;
 axe%<n%>:axe N ;
+ayu%<n%>:ayu N ;
+baccy%<n%>:baccy N ;
 balloon%<n%>:balloon N ;
 band%<n%>:band N ;
 bang%<n%>:bang N ;
 bank%<n%>:bank N ;
 ban%<n%>:ban N ;
+bard%<n%>:bard N ;
+Bard%<n%>:Bard N ;
+bar%<n%>:bar N ;
+barn%<n%>:barn N ;
+barong%<n%>:barong N ;
+barrel%<n%>:barrel N ;
 basement%<n%>:basement N ;
 basis%<n%>%<sg%>%<nom%>:basis # ;
+basket%<n%>:basket N ;
+beard%<n%>:beard N ;
+beast%<n%>:beast N ;
+becket%<n%>:becket N ;
+bed%<n%>:bed N ;
 beginning%<n%>:beginning N ;
+behavior%<n%>:behavior N ;
+behind%<n%>:behind N ;
 belief%<n%>:belief N ;
+believing%<n%>:believing N ;
+bell%<n%>:bell N ;
+bend%<n%>:bend N ;
 benefit%<n%>:benefit N ;
+besom%<n%>:besom N ;
 beta%<n%>:beta N ; !
+big%<n%>:big N ;
+bike%<n%>:bike N ;
+billhook%<n%>:billhook N ;
 bill%<n%>:bill N ;
+birch%<n%>:birch N ;
 bird%<n%>:bird N ; ! ""
 birth%<n%>:birth N ;
+birthright%<n%>:birthright N ;
+bite%<n%>:bite N ;
 black%<n%>:black N ;
+blame%<n%>:blame N ;
+bleacher%<n%>:bleacher N ;
 blind%<n%>:blind N ;
 block%<n%>:block N ;
 blow-up%<n%>:blow-up N ;
 blue%<n%>:blue N ;
+board%<n%>:board N ;
 boat%<n%>:boat N ;
+bogie%<n%>:bogie N ;
+bog%<n%>:bog N ;
 bolt%<n%>:bolt N ;
+bone%<n%>:bone N ;
+bonfire%<n%>:bonfire N ;
+boondocks%<n%>:boondocks N_ILLNESS ;
+boot%<n%>:boot N ;
 border%<n%>:border N ;
-border%<n%>:border N ;
+bosom%<n%>:bosom N ;
+both%<n%>:both N ;
+bottle%<n%>:bottle N ;
 boundary%<n%>:boundar N_DICTIONARY ;
+boxful%<n%>:boxful N ;
 boy%<n%>:boy N ; ! ""
+bread%<n%>:bread N ;
+breakfast%<n%>:breakfast N ;
+bream%<n%>:bream N ;
+breathiness%<n%>:breathiness N_ILLNESS ;
+brim%<n%>:brim N ;
+bristle%<n%>:bristle N ;
+broadcasting%<n%>:broadcasting N ;
 broiler%<n%>:broiler N ;
+brow%<n%>:brow N ;
 brush%<n%>:brush N_FLUSH ;
 brutality%<n%>:brutalit N_DICTIONARY ;
+bucket%<n%>:bucket N ;
+buddy%<n%>:budd N_DICTIONARY ;
+building%<n%>:building N ;
 burglary%<n%>:burglar N_DICTIONARY ;
+bush%<n%>:bush N_ILLNESS ;
+business%<n%>:business N_ILLNESS ;
+bus%<n%>:bus N_ILLNESS ;
+bust%<n%>:bust N ;
 butter%<n%>:butter N ; ! ""
 bystander%<n%>:bystander N ;
+cabin%<n%>:cabin N ;
+caesar%<n%>:caesar N ;
 called%<n%>:called N ;
+call%<n%>:call N ;
 candidate%<n%>:candidate N ;
 candy%<n%>:cand N_DICTIONARY ;
 canna%<n%>:canna N ;
+canopy%<n%>:canop N_DICTIONARY ;
+cape%<n%>:cape N ;
+cap%<n%>:cap N ;
+captain%<n%>:captain N ;
+carina%<n%>:carina N ;
 car%<n%>:car N ;
+cart%<n%>:cart N ;
+cartwheel%<n%>:cartwheel N ;
+casque%<n%>:casque N ;
 cast%<n%>:cast N ;
+catcall%<n%>:catcall N ;
 catch%<n%>:catch N_ILLNESS ;
 cat%<n%>:cat N ; ! ""
 cauliflower%<n%>:cauliflower N ;
 cell%<n%>:cell N ;
 center%<n%>:center N ;
 cent%<n%>:cent N ;
+chad%<n%>:chad N ;
 chair%<n%>:chair N ; ! ""
 change%<n%>:change N ;
 channel%<n%>:channel N ;
+chaperon%<n%>:chaperon N ;
 character%<n%>:character N ;
 charge%<n%>:charge N ;
+cheek%<n%>:cheek N ;
+chest%<n%>:chest N ;
 child%<n%>:child N_CHILDREN ; ! ""
+china%<n%>:china N ;
+chin%<n%>:chin N ;
+chore%<n%>:chore N ;
+church%<n%>:church N_FLUSH ;
 circle%<n%>:circle N ;
 circus%<n%>:circus N_ILLNESS ;
+citizenship%<n%>:citizenship N ;
 civilisation%<n%>:civilisation N ;
 claim%<n%>:claim N ;
+clatter%<n%>:clatter N ;
+clay%<n%>:clay N ;
+clear%<n%>:clear N ;
+clip%<n%>:clip N ;
+cloak%<n%>:cloak N ;
 clock%<n%>:clock N ;
+clog%<n%>:clog N ;
+closet%<n%>:closet N ;
 clothing%<n%>:clothing N ;
+cloth%<n%>:cloth N_FLUSH ;
 cloud%<n%>:cloud N ;
 clump%<n%>:clump N ;
+coaction%<n%>:coaction N ;
+coal%<n%>:coal N ;
 coast%<n%>:coast N ;
+coat%<n%>:coat N ;
+coca%<n%>:coca N ;
+cock%<n%>:cock N ;
+cocoon%<n%>:cocoon N ;
+cod%<n%>:cod N ;
+cog%<n%>:cog N ;
+coil%<n%>:coil N ;
 coldening%<n%>:coldening N ;
+cold%<n%>:cold N ;
+coldness%<n%>:coldness N_ILLNESS ;
+collar%<n%>:collar N ;
 collision%<n%>:collision N ;
 combination%<n%>:combination N ;
+comb%<n%>:comb N ;
+comfort%<n%>:comfort N ;
 coming%<n%>:coming N ;
+commission%<n%>:commission N ;
 compensation%<n%>:compensation N ;
 computer%<n%>:computer N ; ! 
+conductor%<n%>:conductor N ;
+cone%<n%>:cone N ;
 conscience%<n%>:conscience N ;
 consent%<n%>:consent N ;
 constitution%<n%>:constitution N ;
+container%<n%>:container N ;
 content%<n%>:content N ;
 context%<n%>:context N ;
+contract%<n%>:contract N ;
 control%<n%>:control N ;
 convection%<n%>:convection N ;
+convening%<n%>:convening N ;
 convergence%<n%>:convergence N ;
+cooky%<n%>:cook N_DICTIONARY ;
 co-operation%<n%>:co-operation N ;
+copyright%<n%>:copyright N ;
+cord%<n%>:cord N ;
 core%<n%>:core N ;
+cork%<n%>:cork N ;
+corner%<n%>:corner N ;
+cornfield%<n%>:cornfield N ;
+corn%<n%>:corn N ;
+cornu%<n%>:cornu N ;
+cough%<n%>:cough N ;
+count%<n%>:count N ;
+country%<n%>:countr N_DICTIONARY ;
+coupe%<n%>:coupe N ;
+coupling%<n%>:coupling N ;
 course%<n%>:course N ; ! ""
 court%<n%>:court N ;
 covenant%<n%>:covenant N ;
+covering%<n%>:covering N ;
 coward%<n%>:coward N ;
-coward%<n%>:coward N ;
+cow%<n%>:cow N ;
+crack%<n%>:crack N ;
 creation%<n%>:creation N ;
+Creator%<n%>:Creator N ;
+credendum%<n%>:credendum N ;
+credit%<n%>:credit N ;
+creed%<n%>:creed N ;
+crepitation%<n%>:crepitation N ;
 crime%<n%>:crime N ;
+cristal%<n%>:cristal N ;
+crony%<n%>:cron N_DICTIONARY ;
+cross%<n%>:cross N_ILLNESS ;
+crossroads%<n%>:crossroads N_ILLNESS ;
 crowd%<n%>:crowd N ;
+crown%<n%>:crown N ;
+crust%<n%>:crust N ;
+cry%<n%>:cr N_DICTIONARY ;
+cup%<n%>:cup N ;
+cupper%<n%>:cupper N ;
 current%<n%>:current N ;
 curse%<n%>:curse N ;
+curve%<n%>:curve N ;
+cusp%<n%>:cusp N ;
+cutoff%<n%>:cutoff N ;
+cutting%<n%>:cutting N ;
+dad%<n%>:dad N ;
+dale%<n%>:dale N ;
 damage%<n%>:damage N ;
+damages%<n%>:damages N_ILLNESS ;
 daredevil%<n%>:daredevil N ;
+daring%<n%>:daring N ;
 data%<n%>%<pl%>%<nom%>:data # ;
 data%<n%>%<sg%>%<nom%>:data # ;
+datum%<n%>:dat N_DATUM ;
 day%<n%>:day N ;
+dead%<n%>:dead N ;
+deal%<n%>:deal N ;
+debt%<n%>:debt N ;
+debut%<n%>:debut N ;
 declaration%<n%>:declaration N ;
+decline%<n%>:decline N ;
+decree%<n%>:decree N ;
+deed%<n%>:deed N ;
 defence%<n%>:defence N ;
 definition%<n%>:definition N ;
 degree%<n%>:degree N ;
 delimitting%<n%>:delimitting N ;
 deposit%<n%>:deposit N ;
+depot%<n%>:depot N ;
+descent%<n%>:descent N ;
+design%<n%>:design N ;
+destination%<n%>:destination N ;
+developing%<n%>:developing N ;
 development%<n%>:development N ;
 devil%<n%>:devil N ;
 devotion%<n%>:devotion N ;
+dew%<n%>:dew N ;
+dick%<n%>:dick N ;
 dictionary%<n%>:dictionar N_DICTIONARY ;
+diet%<n%>:diet N ;
 difference%<n%>:difference N ;
+digging%<n%>:digging N ;
+digit%<n%>:digit N ;
+dinner%<n%>:dinner N ;
 direction%<n%>:direction N ;
+dirtiness%<n%>:dirtiness N_ILLNESS ;
 discrimination%<n%>:discrimination N ;
+dish%<n%>:dish N_FLUSH ;
 dissertation%<n%>:dissertation N ; !
 distance%<n%>:distance N ;
 ditch%<n%>:ditch N_FLUSH ;
+divest%<n%>:divest N ;
+doer%<n%>:doer N ;
+dogface%<n%>:dogface N ;
 dog%<n%>:dog N ; ! ""
 doing%<n%>:doing N ;
+dolor%<n%>:dolor N ;
+donna%<n%>:donna N ;
 door%<n%>:door N ; ! ""
+dooryard%<n%>:dooryard N ;
+doubt%<n%>:doubt N ;
+drag%<n%>:drag N ;
 dramatics%<n%>:dramatics N ;
+drape%<n%>:drape N ;
+drawing%<n%>:drawing N ;
 dreadlock%<n%>:dreadlock N ; ! ""
+dreaming%<n%>:dreaming N ;
+drift%<n%>:drift N ;
+drinking%<n%>:drinking N ;
+drink%<n%>:drink N ;
 driver%<n%>:driver N ;
 drop%<n%>:drop N ;
 duck%<n%>:duck N ;
+dullness%<n%>:dullness N_ILLNESS ;
 duty%<n%>:duty N ;
 dwelling%<n%>:dwelling N ;
 ear%<n%>:ear N ;
+earner%<n%>:earner N ;
 east%<n%>:east N ;
+eating%<n%>:eating N ;
+eaves%<n%>:eaves N_ILLNESS ;
+ebb%<n%>:ebb N ;
+eclat%<n%>:eclat N ;
+edge%<n%>:edge N ;
+edict%<n%>:edict N ;
+edifice%<n%>:edifice N ;
+edition%<n%>:edition N ;
 education%<n%>:education N ;
 eel%<n%>:eel N ;
 effect%<n%>:effect N ;
+effort%<n%>:effort N ;
+elbow%<n%>:elbow N ;
 electricity%<n%>:electricit N_DICTIONARY ;
+ell%<n%>:ell N ;
+emcee%<n%>:emcee N ;
 emotion%<n%>:emotion N ;
 emperor%<n%>:emperor N ;
 end%<n%>:end N ;
 energy%<n%>:energ N_DICTIONARY ;
+engine%<n%>:engine N ;
 English%<n%>:English N ; 
+equine%<n%>:equine N ;
+error%<n%>:error N ;
 essence%<n%>:essence N ;
+estate%<n%>:estate N ;
 evening%<n%>:evening N ;
+even%<n%>:even N ;
 event%<n%>:event N ;
 examination%<n%>:examination N ;
 example%<n%>:example N ;
-example%<n%>:example N ;
-example%<n%>:example N ;
 exile%<n%>:exile N ;
 exit%<n%>:exit N ;
+exordium%<n%>:exordium N ;
+exponent%<n%>:exponent N ;
+exterior%<n%>:exterior N ;
+extra%<n%>:extra N ;
+eyeglasses%<n%>:eyeglasses N_ILLNESS ;
+eye%<n%>:eye N ;
 eye%<n%>:eye N ; ! ""
+face%<n%>:face N ;
 faculty%<n%>:facult N_DICTIONARY ;
 faithful%<n%>:faithful N ;
 faith%<n%>:faith N ;
 fall%<n%>:fall N ;
 family%<n%>:famil N_DICTIONARY ;
+farewell%<n%>:farewell N ;
+farmhand%<n%>:farmhand N ;
 father%<n%>:father N ;
+favoritism%<n%>:favoritism N ;
 feeling%<n%>:feeling N ;
+fell%<n%>:fell N ;
+female%<n%>:female N ;
 feminist%<n%>:feminist N ;
 fence%<n%>:fence N ;
+field%<n%>:field N ;
+fields%<n%>:fields N_ILLNESS ;
+fieriness%<n%>:fieriness N_ILLNESS ;
+fin%<n%>:fin N ;
 Finnish%<n%>:Finnish N ; 
+Finnish%<n%>:Finnish N_FLUSH ;
 fireman%<n%>:firem N_WOMAN ;
 fire%<n%>:fire N ;
+fireplace%<n%>:fireplace N ;
 first%<n%>:first N ;
+flag%<n%>:flag N ;
+flake%<n%>:flake N ;
+flame%<n%>:flame N ;
+flaw%<n%>:flaw N ;
+float%<n%>:float N ;
 flood%<n%>:flood N ;
 floor%<n%>:floor N ;
-flow%<n%>:flow N ;
+flourbag%<n%>:flourbag N ;
+flour%<n%>:flour N ;
+flower%<n%>:flower N ;
 flow%<n%>:flow N ;
 flush%<n%>:flush N_FLUSH ;
 flux%<n%>:flux N ; ! ""
+fold%<n%>:fold N ;
+folk%<n%>:folk N ;
 following%<n%>:following N ;
+fool%<n%>:fool N ;
+foot%<n%>:foot N ;
 force%<n%>:force N ;
+forest%<n%>:forest N ;
 formation%<n%>:formation N ;
+fornix%<n%>:fornix N_FLUSH ;
 foundation%<n%>:foundation N ; !
+frail%<n%>:frail N ;
 frame%<n%>:frame N ;
 fraternity%<n%>:fraternit N_DICTIONARY ;
 freedom%<n%>:freedom N ;
 free%<n%>:free N ;
+freeze%<n%>:freeze N ;
 friendship%<n%>:friendship N ;
 front%<n%>:front N ;
+fundament%<n%>:fundament N ;
 funnel%<n%>:funnel N ;
+funte%<n%>:funte N ;
+gadget%<n%>:gadget N ;
 gaffer%<n%>:gaffer N ;
+gallop%<n%>:gallop N ;
+game%<n%>:game N ;
 game%<n%>:game N ; ! ""
 gap%<n%>:gap N ;
 garden%<n%>:garden N ; ! ""
 garment%<n%>:garment N ;
+gaze%<n%>:gaze N ;
+gen%<n%>:gen N ;
+gentlefolk%<n%>:gentlefolk N ;
 ghost%<n%>:ghost N ;
+gift%<n%>:gift N ;
 girl%<n%>:girl N ; ! ""
+glacier%<n%>:glacier N ;
+glassdoor%<n%>:glassdoor N ;
+glass%<n%>:glass N ;
+glitz%<n%>:glitz N_FLUSH ;
+goat%<n%>:goat N ;
+goblet%<n%>:goblet N ;
+goby%<n%>:gob N_DICTIONARY ;
 god%<n%>:god N ;
+godparent%<n%>:godparent N ;
+going%<n%>:going N ;
 going-on%<n%>:going-on N ;
 going-on%<n%>%<sg%>%<nom%>:going-on # ; ! ""
+good%<n%>:good N ;
+goods%<n%>:goods N_ILLNESS ;
+governing%<n%>:governing N ;
 government%<n%>:government N ;
+gown%<n%>:gown N ;
+grab%<n%>:grab N ;
 grade%<n%>:grade N ;
+grasp%<n%>:grasp N ;
+grass%<n%>:grass N_ILLNESS ;
+greeting%<n%>:greeting N ;
+grinder%<n%>:grinder N ;
+groats%<n%>:groats N_ILLNESS ;
 ground%<n%>:ground N ;
+grounds%<n%>:grounds N_ILLNESS ;
+grove%<n%>:grove N ;
 growth%<n%>:growth N ;
+g-sharp%<n%>:g-sharp N ;
 guarantee%<n%>:guarantee N ;
 guard%<n%>:guard N ;
 guilt%<n%>:guilt N ;
+gun%<n%>:gun N ;
+guy%<n%>:guy N ;
 habitat%<n%>:habitat N ;
 hail%<n%>:hail N ;
+hair%<n%>:hair N ;
 half%<n%>:hal N_HALF ;
 half-time%<n%>:half-time N ;
+hall%<n%>:hall N ;
+halter%<n%>:halter N ;
+hame%<n%>:hame N ;
 hand%<n%>:hand N ; ! ""
+hangover%<n%>:hangover N ;
+hare%<n%>:hare N ;
+harness%<n%>:harness N_ILLNESS ;
+haste%<n%>:haste N ;
+hat%<n%>:hat N ;
+haymaking%<n%>:haymaking N ;
+hay%<n%>:hay N ;
 head%<n%>:head N ; ! ""
 headwind%<n%>:headwind N ;
 health%<n%>:health N ;
+heap%<n%>:heap N ;
 hearer%<n%>:hearer N ;
+hearsay%<n%>:hearsay N ;
+heartland%<n%>:heartland N ;
+heather%<n%>:heather N ;
 heating%<n%>:heating N ;
+heat%<n%>:heat N ;
 heaven%<n%>:heaven N ;
+heed%<n%>:heed N ;
+heel%<n%>:heel N ;
 height%<n%>:height N ;
 help%<n%>:help N ;
 help%<n%>:help N ; !
+hem%<n%>:hem N ;
+hero%<n%>:hero N ;
 hide%<n%>:hide N ; ! ""
+highway%<n%>:highway N ;
+hilarity%<n%>:hilarity N ;
+hill%<n%>:hill N ;
 history%<n%>:histor N_DICTIONARY ;
 hit%<n%>:hit N ;
+hoe%<n%>:hoe N ;
+holder%<n%>:holder N ;
+hold%<n%>:hold N ;
+hole%<n%>:hole N ;
+home%<n%>:home N ;
 honor%<n%>:honor N ;
+hook%<n%>:hook N ;
+hoorah%<n%>:hoorah N ;
+hope%<n%>:hope N ;
+hops%<n%>:hops N ;
+horseman%<n%>:horsem N_WOMAN ;
 horse%<n%>:horse N ;
+hostess%<n%>:hostess N_ILLNESS ;
+host%<n%>:host N ;
 hour%<n%>:hour N ;
+hours%<n%>:hours N_ILLNESS ;
 house%<n%>:house N ; ! ""
+hue%<n%>:hue N ;
+humankind%<n%>:humankind N ;
+human%<n%>:human N ;
 human%<n%>:human N ; ! 
 humidity%<n%>:humidit N_DICTIONARY ;
 humor%<n%>:humor N ;
 hundred%<n%>:hundred N ;
+hungry%<n%>:hungr N_DICTIONARY ;
+hunt%<n%>:hunt N ;
+huntsman%<n%>:huntsm N_WOMAN ;
+hush%<n%>:hush N_FLUSH ;
 hut%<n%>:hut N ;
+hypha%<n%>:hypha N ;
+icehole%<n%>:icehole N ;
 ice%<n%>:ice N ;
 illness%<n%>:illness N_ILLNESS ;
 implementation%<n%>:implementation N ; 
 impression%<n%>:impression N ;
 incitement%<n%>:incitement N ;
 income%<n%>:income N ;
+index%<n%>:ind N_INDEX ;
 individual%<n%>:individual N ;
+inertia%<n%>:inertia N ;
 information%<n%>:information N ;
+injury%<n%>:injur N_DICTIONARY ;
+input%<n%>:input N ;
+inside%<n%>:inside N ;
 insight%<n%>:insight N ;
+inspector%<n%>:inspector N ;
 institute%<n%>:institute N ;
 insult%<n%>:insult N ;
+intent%<n%>:intent N ;
 interview%<n%>:interview N ;
 introduction%<n%>:introduction N ;
 invitation%<n%>:invitation N ;
+iron%<n%>:iron N ;
+islet%<n%>:islet N ;
+issue%<n%>:issue N ;
+issuer%<n%>:issuer N ;
+item%<n%>:item N ;
+jacket%<n%>:jacket N ;
 January%<n%>:Januar N_DICTIONARY ;
+java%<n%>:java N ;
 jewism%<n%>:jewism N ;
+jinx%<n%>:jinx N_FLUSH ;
 job%<n%>:job N ;
 joke%<n%>:joke N ;
+journeyman%<n%>:journeym N_WOMAN ;
 journey%<n%>:journey N ;
+joy%<n%>:joy N ;
 July%<n%>:Jul N_DICTIONARY ;
 June%<n%>:June N ;
 justice%<n%>:justice N ;
+kaph%<n%>:kaph N ;
+keeper%<n%>:keeper N ;
+kefir%<n%>:kefir N ;
+keno%<n%>:keno N ;
+keychain%<n%>:keychain N ;
+key%<n%>:key N ;
+killing%<n%>:killing N ;
 kilometre%<n%>:kilometre N ;
+kiosk%<n%>:kiosk N ;
+kip%<n%>:kip N ;
+kitchen%<n%>:kitchen N ;
+Kitchen%<n%>:Kitchen N ;
+knee%<n%>:knee N ;
+knife%<n%>:knife N ;
+kudos%<n%>:kudos N_FLUSH ;
+kyykkä%<n%>:kyykkä N ;
+lag%<n%>:lag N ;
+lair%<n%>:lair N ;
+lake%<n%>:lake N ;
 land%<n%>:land N ;
-land%<n%>:land N ;
-land%<n%>:land N ;
+lane%<n%>:lane N ;
+lantern%<n%>:lantern N ;
+lapin%<n%>:lapin N ;
 latitude%<n%>:latitude N ;
+lato%<n%>:lato N ;
+laugher%<n%>:laugher N ;
+laugh%<n%>:laugh N ;
+lawcourt%<n%>:lawcourt N ;
 law%<n%>:law N ;
 layman%<n%>:laym N_WOMAN ;
+lay%<n%>:lay N ;
+leaf%<n%>:leaf N ;
+leaf-tree%<n%>:leaf-tree N ;
+lees%<n%>:lees N_ILLNESS ;
+leg%<n%>:leg N ;
+lei%<n%>:lei N ;
+lessen%<n%>:lessen N ;
 lesson%<n%>:lesson N ;
+letter%<n%>:letter N ;
+level%<n%>:level N ;
+lid%<n%>:lid N ;
+lie%<n%>:lie N ;
 life%<n%>:li N_LIFE ;
+lift%<n%>:lift N ;
 lightning%<n%>:lightning N ;
+limb%<n%>:limb N ;
+limiting%<n%>:limiting N ;
+line%<n%>:line N ;
+linen%<n%>:linen N ;
+liner%<n%>:liner N ;
+lip%<n%>:lip N ;
+liquorice%<n%>:liquorice N ;
 list%<n%>:list N ; !
 livelihood%<n%>:livelihood N ;
+liver%<n%>:liver N ;
+locomotive%<n%>:locomotive N ;
+lodestar%<n%>:lodestar N ;
+log%<n%>:log N ;
+loner%<n%>:loner N ;
+lookup%<n%>:lookup N ;
+loot%<n%>:loot N ;
+lope%<n%>:lope N ;
 loss%<n%>:loss N ;
+lot%<n%>:lot N ;
 love%<n%>:love N ;
+lowland%<n%>:lowland N ;
+luck%<n%>:luck N ;
+lumen%<n%>:lumen N ;
 lump%<n%>:lump N ;
+lust%<n%>:lust N ;
+löyly%<n%>:löyly N ;
 machine%<n%>:machine N ; 
+madness%<n%>:madness N_ILLNESS ;
+magazine%<n%>:magazine N ;
+magpie%<n%>:magpie N ;
+maid%<n%>:maid N ;
 mail%<n%>:mail N ;
+mane%<n%>:mane N ;
+mange%<n%>:mange N ;
 mankind%<n%>:mankind N ;
+man%<n%>:man N ;
 man%<n%>:m N_WOMAN ;
+map%<n%>:map N ;
+mare%<n%>:mare N ;
+mark%<n%>:mark N ;
 marriage%<n%>:marriage N ;
+martin%<n%>:martin N ;
+marvel%<n%>:marvel N ;
+mash%<n%>:mash N_FLUSH ;
+massager%<n%>:massager N ;
 mass%<n%>:mass N_ILLNESS ;
 mast%<n%>:mast N ;
+mat%<n%>:mat N ;
+matrimony%<n%>:matrimon N_DICTIONARY ;
+Matrimony%<n%>:Matrimon N_DICTIONARY ;
+meadow%<n%>:meadow N ;
 meaning%<n%>:meaning N ;
 medication%<n%>:medication N ;
 medium%<n%>%<pl%>%<nom%>:media N ;
 medium%<n%>%<sg%>%<nom%>:medium N ;
 member%<n%>:member N ;
+memory%<n%>:memor N_DICTIONARY ;
 meteorology%<n%>:meteorology N ;
 method%<n%>:method N ;
 metre%<n%>:metre N ;
 middle%<n%>:middle N ;
+midsummer%<n%>:midsummer N ;
+midterm%<n%>:midterm N ;
+mile%<n%>:mile N ;
+milking%<n%>:milking N ;
+milk%<n%>:milk N ;
 mind%<n%>:mind N ;
 minute%<n%>:minute N ;
-minute%<n%>:minute N ;
+mission%<n%>:mission N ;
+mitten%<n%>:mitten N ;
+mode%<n%>:mode N ;
+mold%<n%>:mold N ;
 mom%<n%>:mom N ; ! ""
+moneypouch%<n%>:moneypouch N_FLUSH ;
 mood%<n%>:mood N ;
 moon%<n%>:moon N ; ! ""
+mop%<n%>:mop N ;
 moral%<n%>:moral N ;
 morning%<n%>:morning N ;
+morn%<n%>:morn N ;
+moss%<n%>:moss N_ILLNESS ;
 mother%<n%>:mother N ; ! ""
 mountain%<n%>:mountain N ;
+mount%<n%>:mount N ;
+mouth%<n%>:mouth N ;
+move%<n%>:move N ;
 mythology%<n%>:mytholog N_DICTIONARY ;
+name%<n%>:name N ;
+nape%<n%>:nape N ;
 nationality%<n%>:nationalit N_DICTIONARY ;
 nation%<n%>:nation N ;
+navvy%<n%>:navvy N ;
+neck%<n%>:neck N ;
 needle%<n%>:needle N ;
+need%<n%>:need N ;
 neglect%<n%>:neglect N ;
+nephew%<n%>:nephew N ;
+nevus%<n%>:nevus N_ILLNESS ;
+news%<n%>:news N_ILLNESS ;
+nexus%<n%>:nexus N_ILLNESS ;
+nick%<n%>:nick N ;
 night%<n%>:night N ;
+nightplace%<n%>:nightplace N ;
+non-%<n%>:non- N ;
+nook%<n%>:nook N ;
 north-west%<n%>:north-west N ;
+nose%<n%>:nose N ;
+note%<n%>:note N ;
 nutrition%<n%>:nutrition N ;
 oath%<n%>:oath N ;
+obstacle%<n%>:obstacle N ;
 occasion%<n%>:occasion N ;
 occupation%<n%>:occupation N ;
+odor%<n%>:odor N ;
+ogre%<n%>:ogre N ;
+old-boy%<n%>:old-boy N ;
 oldness%<n%>:oldness N_ILLNESS ;
+only%<n%>:only N ;
+onus%<n%>:onus N_ILLNESS ;
+opening%<n%>:opening N ;
 opinion%<n%>:opinion N ;
 oppression%<n%>:oppression N ;
 orb%<n%>:orb N ;
@@ -475,207 +970,511 @@ order%<n%>:order N ;
 organisation%<n%>:organisation N ;
 organ%<n%>:organ N ;
 origin%<n%>:origin N ;
+os%<n%>:os N_ILLNESS ;
 other%<n%>:other N ;
+outdoors%<n%>:outdoors N_ILLNESS ;
 out%<n%>:out N ;
 output%<n%>:output N ;
 outside%<n%>:outside N ;
+outturn%<n%>:outturn N ;
+oven%<n%>:oven N ;
 oxygen%<n%>:oxygen N ;
 ozone%<n%>:ozone N ;
+pair%<n%>:pair N ;
+palm%<n%>:palm N ;
+palsy%<n%>:pals N_DICTIONARY ;
+panel%<n%>:panel N ;
 pane%<n%>:pane N ;
+pan%<n%>:pan N ;
+panorama%<n%>:panorama N ;
+pant%<n%>:pant N ;
+paper%<n%>:paper N ;
+parallelism%<n%>:parallelism N ;
+parasite%<n%>:parasite N ;
 par%<n%>:par N ;
+parr%<n%>:parr N ;
 part%<n%>:part N ;
+party%<n%>:part N_DICTIONARY ;
+pass%<n%>:pass N_ILLNESS ;
+patch%<n%>:patch N_FLUSH ;
+path%<n%>:path N ;
+pat%<n%>:pat N ;
+pay%<n%>:pay N ;
 peace%<n%>:peace N ;
+pea%<n%>:pea N ;
+pecker%<n%>:pecker N ;
+pedal%<n%>:pedal N ;
+Pentecost%<n%>:Pentecost N ;
 people%<n%>:people N ; ! ""
 perceiver%<n%>:perceiver N ;
+peril%<n%>:peril N ;
 persecution%<n%>:persecution N ;
 personality%<n%>:personalit N_DICTIONARY ;
 person%<n%>:person N ; ! ""
 phenomenon%<n%>:phenomen N_PHENOMENON ;
+piece%<n%>:piece N ;
+pig%<n%>:pig N ;
+pile%<n%>:pile N ;
+pilgrim%<n%>:pilgrim N ;
+pinch%<n%>:pinch N_FLUSH ;
+pine%<n%>:pine N ;
+pin%<n%>:pin N ;
+pipe%<n%>:pipe N ;
+pistol%<n%>:pistol N ;
+pit%<n%>:pit N ;
+pity%<n%>:pit N_DICTIONARY ;
+placebo%<n%>:placebo N ;
+place%<n%>:place N ;
 planet%<n%>:planet N ;
+plantation%<n%>:plantation N ;
+plant%<n%>:plant N ;
+plash%<n%>:plash N ;
+plea%<n%>:plea N ;
+plenty%<n%>:plenty N ;
+plumage%<n%>:plumage N ;
+pogrom%<n%>:pogrom N ;
 point%<n%>:point N ;
+poke%<n%>:poke N ;
 pole%<n%>:pole N ;
 polish%<n%>:polish N_FLUSH ;
 politics%<n%>:politics N ;
+pool%<n%>:pool N ;
+porch%<n%>:porch N_FLUSH ;
+porc%<n%>:porc N ;
+portal%<n%>:portal N ;
 position%<n%>:position N ;
 possibility%<n%>:possibilit N_DICTIONARY ;
+postmistress%<n%>:postmistress N_ILLNESS ;
 post%<n%>:post N ;
+potato%<n%>:potato N ;
+pot%<n%>:pot N ;
 poverty%<n%>:povert N_DICTIONARY ;
 power%<n%>:power N ;
+pox%<n%>:pox N_FLUSH ;
 practice%<n%>:practice N ;
+precordium%<n%>:precordium N ;
+press%<n%>:press N_ILLNESS ;
 principle%<n%>:principle N ;
+procedure%<n%>:procedure N ;
+prod%<n%>:prod N ;
 progress%<n%>:progress N_ILLNESS ;
 protection%<n%>:protection N ;
 protocol%<n%>:protocol N ;
+provost%<n%>:provost N ;
+push%<n%>:push N ;
 quality%<n%>:qualit N_DICTIONARY ; !
+quarrel%<n%>:quarrel N ;
+quarter%<n%>:quarter N ;
 question%<n%>:question N ; ! ""
+quire%<n%>:quire N ;
 race%<n%>:race N ;
+rack%<n%>:rack N ;
 raid%<n%>:raid N ;
+rail%<n%>:rail N ;
+railway%<n%>:railway N ;
 rain%<n%>:rain N ;
+rale%<n%>:rale N ;
+rank%<n%>:rank N ;
+ration%<n%>:ration N ;
 ratio%<n%>:ratio N ;
+readout%<n%>:readout N ;
 reason%<n%>:reason N ;
+rebuke%<n%>:rebuke N ;
 recognition%<n%>:recognition N ;
 rector%<n%>:rector N ;
+rectory%<n%>:rector N_DICTIONARY ;
+redundancy%<n%>:redundanc N_DICTIONARY ;
+reel%<n%>:reel N ;
 refuge%<n%>:refuge N ;
+rein%<n%>:rein N ;
+relation%<n%>:relation N ;
 relay%<n%>:relay N ;
+relief%<n%>:relief N ;
 religion%<n%>:religion N ;
 remnant%<n%>:remnant N ;
 reputation%<n%>:reputation N ;
 require%<n%>:require N ;
-require%<n%>:require N ;
+requital%<n%>:requital N ;
+reseau%<n%>:reseau N ;
+residue%<n%>:residue N ;
 resource%<n%>:resource N ;
 respect%<n%>:respect N ;
 responsibility%<n%>:responsibilit N_DICTIONARY ;
 rest%<n%>:rest N ;
+restriction%<n%>:restriction N ;
+revere%<n%>:revere N ;
+rib%<n%>:rib N ;
+ride%<n%>:ride N ;
 ridiculousness%<n%>:ridiculousness N_ILLNESS ;
+rift%<n%>:rift N ;
+rightness%<n%>:rightness N_ILLNESS ;
 right%<n%>:right N ;
+rigidity%<n%>:rigidity N ;
+rim%<n%>:rim N ;
+rink%<n%>:rink N ;
+riot%<n%>:riot N ;
 rise%<n%>:rise N ;
+rising%<n%>:rising N ;
 risk%<n%>:risk N ;
+roach%<n%>:roach N_FLUSH ;
 roar%<n%>:roar N ;
+roast%<n%>:roast N ;
+rocker%<n%>:rocker N ;
+rock%<n%>:rock N ;
+roof%<n%>:roof N ;
 rook%<n%>:rook N ;
+room%<n%>:room N ;
+roost%<n%>:roost N ;
+row%<n%>:row N ;
+rucksack%<n%>:rucksack N ;
+rule%<n%>:rule N ;
+rumble%<n%>:rumble N ;
+runner%<n%>:runner N ;
+run%<n%>:run N ;
+ruokit%<n%>:ruokit N ;
 rush%<n%>:rush N ;
+rye%<n%>:rye N ;
+sack%<n%>:sack N ;
 safety%<n%>:safet N_DICTIONARY ;
+saki%<n%>:saki N ;
 salami%<n%>:salami N ;
 salesman%<n%>:salesm N_WOMAN ;
 salvation%<n%>:salvation N ;
+sand%<n%>:sand N ;
+Saturday%<n%>:Saturday N ;
+saucer%<n%>:saucer N ;
+sauna%<n%>:sauna N ;
 saviour%<n%>:saviour N ;
+sawyer%<n%>:sawyer N ;
+scag%<n%>:scag N ;
 scandinavian%<n%>:scandinavian N ;
+scarf%<n%>:scarf N ;
+scent%<n%>:scent N ;
+school%<n%>:school N ;
 science%<n%>:science N ;
 scientist%<n%>:scientist N ;
+scrape%<n%>:scrape N ;
 scud%<n%>:scud N ;
+scythe%<n%>:scythe N ;
 sea%<n%>:sea N ;
 second%<n%>:second N ;
+secret%<n%>:secret N ;
+security%<n%>:securit N_DICTIONARY ;
+sedge%<n%>:sedge N ;
+seed%<n%>:seed N ;
+self%<n%>:sel N_HALF ;
+senior%<n%>:senior N ;
 sense%<n%>:sense N ;
+separation%<n%>:separation N ;
+sestet%<n%>:sestet N ;
 sex%<n%>:sex N_FLUSH ;
+shame%<n%>:shame N ;
 shape%<n%>:shape N ;
+shed%<n%>:shed N ;
+shelf%<n%>:shel N_HALF ;
+shielding%<n%>:shielding N ;
+shift%<n%>:shift N ;
+shine%<n%>:shine N ;
 shit%<n%>:shit N ;
+shiv%<n%>:shiv N ;
 shock%<n%>:shock N ;
+shoe%<n%>:shoe N ;
+shore%<n%>:shore N ;
+shotgun%<n%>:shotgun N ;
+shoulder%<n%>:shoulder N ;
+shrift%<n%>:shrift N ;
+shrub%<n%>:shrub N ;
 sick%<n%>:sick N ;
 side%<n%>:side N ; ! ""
+sifter%<n%>:sifter N ;
+sight%<n%>:sight N ;
 sign%<n%>:sign N ;
+sin%<n%>:sin N ;
+sire%<n%>:sire N ;
 sister%<n%>:sister N ; ! ""
+situation%<n%>:situation N ;
+six%<n%>:six N ;
 sixth%<n%>:sixth N ;
+size%<n%>:size N ;
 sizzle%<n%>:sizzle N ;
+skep%<n%>:skep N ;
+skid%<n%>:skid N ;
 skill%<n%>:skill N ; 
 skin%<n%>:skin N ;
+ski%<n%>:ski N ;
+skirt%<n%>:skirt N ;
+sky%<n%>:sk N_DICTIONARY ;
 slave%<n%>:slave N ;
 slavery%<n%>:slaver N_DICTIONARY ;
+sled%<n%>:sled N ;
+sleeping%<n%>:sleeping N ;
+slick%<n%>:slick N ;
+slob%<n%>:slob N ;
+slope%<n%>:slope N ;
+slops%<n%>:slops N_ILLNESS ;
+slot%<n%>:slot N ;
+slush%<n%>:slush N_FLUSH ;
 smokediver%<n%>:smokediver N ;
+smoke%<n%>:smoke N ;
+smokepillar%<n%>:smokepillar N ;
+snafu%<n%>:snafu N ;
+snare%<n%>:snare N ;
+sneer%<n%>:sneer N ;
+snicker%<n%>:snicker N ;
+snort%<n%>:snort N ;
+snowbank%<n%>:snowbank N ;
+snow%<n%>:snow N ;
+snuff%<n%>:snuff N ;
+snuggery%<n%>:snugger N_DICTIONARY ;
 society%<n%>:societ N_DICTIONARY ;
+softness%<n%>:softness N_ILLNESS ;
+soil%<n%>:soil N ;
+sole%<n%>:sole N ;
+someone%<n%>:someone N ;
 son%<n%>:son N ; ! ""
+soot%<n%>:soot N ;
+sort%<n%>:sort N ;
 sound%<n%>:sound N ; ! ""
 south%<n%>:south N ;
 sovereignty%<n%>:sovereignt N_DICTIONARY ;
+spade%<n%>:spade N ;
+span%<n%>:span N ;
+spark%<n%>:spark N ;
+special%<n%>:special N ;
+specter%<n%>:specter N ;
 spell-checking%<n%>:spell-checking N ; !
+spell%<n%>:spell N ;
+spindle%<n%>:spindle N ;
+spine%<n%>:spine N ;
+spinning%<n%>:spinning N ;
+spit%<n%>:spit N ;
+splinter%<n%>:splinter N ;
+splint%<n%>:splint N ;
+spoon%<n%>:spoon N ;
+sporran%<n%>:sporran N ;
 spot%<n%>:spot N ;
 spouse%<n%>:spouse N ;
+spout%<n%>:spout N ;
+sprig%<n%>:sprig N ;
+spring%<n%>:spring N ;
+spruce%<n%>:spruce N ;
+staff%<n%>:sta N_STAFF ;
 stage%<n%>:stage N ;
+stair-step%<n%>:stair-step N ;
+stake%<n%>:stake N ;
+stall%<n%>:stall N ;
 stamina%<n%>:stamina N ;
+stand%<n%>:stand N ;
+starlet%<n%>:starlet N ;
+star%<n%>:star N ;
+start%<n%>:start N ;
 state%<n%>:state N ;
 status%<n%>:status N_ILLNESS ;
+steam%<n%>:steam N ;
 stem%<n%>:stem N ;
+step%<n%>:step N ;
+steward%<n%>:steward N ;
+stick%<n%>:stick N ;
+stock%<n%>:stock N ;
+stoep%<n%>:stoep N ;
+stool%<n%>:stool N ;
 store%<n%>:store N ;
 storm%<n%>:storm N ;
+storyteller%<n%>:storyteller N ;
+stoup%<n%>:stoup N ;
+stove%<n%>:stove N ;
 straw%<n%>:straw N ;
 streak%<n%>:streak N ;
+streamer%<n%>:streamer N ;
 strengthening%<n%>:strengthening N ;
 strength%<n%>:strength N ;
+stretch%<n%>:stretch N_FLUSH ;
 strike%<n%>:strike N ;
+strip%<n%>:strip N ;
+stub%<n%>:stub N ;
 student%<n%>:student N ;
+stud%<n%>:stud N ;
+study%<n%>:stud N_DICTIONARY ;
 stuff%<n%>:stuff N ;
 suction%<n%>:suction N ;
 suffrage%<n%>:suffrage N ;
+suit%<n%>:suit N ;
 summer%<n%>:summer N ;
 sun%<n%>:sun N ;
+sunshine%<n%>:sunshine N ;
 superior%<n%>:superior N ;
 super%<n%>:super N ;
+sura%<n%>:sura N ;
+suspicion%<n%>:suspicion N ;
+swag%<n%>:swag N ;
+sward%<n%>:sward N ;
+sway%<n%>:sway N ;
+sweatdrop%<n%>:sweatdrop N ;
+sweat%<n%>:sweat N ;
+Swedish%<n%>:Swedish N_FLUSH ;
 swimming%<n%>:swimming N ;
+swing%<n%>:swing N ;
 switch%<n%>:switch N_FLUSH ;
 sympathy%<n%>:sympath N_DICTIONARY ;
 system%<n%>:system N ;
 table%<n%>:table N ; ! ""
+tab%<n%>:tab N ;
 tail%<n%>:tail N ;
+tale%<n%>:tale N ;
+talk%<n%>:talk N ;
+tambac%<n%>:tambac N ;
+tape%<n%>:tape N ;
 target%<n%>%<sg%>:target N ;
+task%<n%>:task N ;
 tatam%<n%>:tatam N ;
 tau%<n%>:tau N ;
 team%<n%>:team N ;
+teamwork%<n%>:teamwork N ;
+tea%<n%>:tea N ;
 teardown%<n%>:teardown N ;
+tear%<n%>:tear N ;
 television%<n%>:television N ;
 temperature%<n%>:temperature N ;
+temple%<n%>:temple N ;
 tendency%<n%>:tendenc N_DICTIONARY ;
+tenet%<n%>:tenet N ;
+tenor%<n%>:tenor N ;
+tent%<n%>:tent N ;
+terms%<n%>:terms N_ILLNESS ;
 test%<n%>:test N ; !
 theory%<n%>:theor N_DICTIONARY ;
+thicket%<n%>:thicket N ;
+thief%<n%>:thief N ;
 thing%<n%>:thing N ;
 thought%<n%>:thought N ;
+threshing%<n%>:threshing N ;
 thunder%<n%>:thunder N ;
 Thursday%<n%>:Thursday N ;
+ticket%<n%>:ticket N ;
 time%<n%>:time N ; ! ""
 tip%<n%>:tip N ; ! ""
+tobacco%<n%>:tobacco N ;
 tolerance%<n%>:tolerance N ;
+toll%<n%>:toll N ;
 tomfoolery%<n%>:tomfooler N_DICTIONARY ;
+tongs%<n%>:tongs N_ILLNESS ;
 tongue%<n%>:tongue N ; !
+tooth%<n%>:0 N_TOOTH ;
 top%<n%>:top N ;
+torch%<n%>:torch N_FLUSH ;
 tornado%<n%>:tornado N ;
 torrent%<n%>:torrent N ;
+torus%<n%>:torus N_ILLNESS ;
+tower%<n%>:tower N ;
+trace%<n%>:trace N ;
+trailblazer%<n%>:trailblazer N ;
 training%<n%>:training N ;
+train%<n%>:train N ;
 translation%<n%>:translation N ;
 translator%<n%>:translator N ;
+trap%<n%>:trap N ;
 travel%<n%>:travel N ;
 tree%<n%>:tree N ; ! ""
+trend%<n%>:trend N ;
 trip%<n%>:trip N ;
 troposphere%<n%>:troposphere N ;
 trouble%<n%>:trouble N ;
+trudge%<n%>:trudge N ;
+tube%<n%>:tube N ;
+tub%<n%>:tub N ;
+tuck%<n%>:tuck N ;
+tup%<n%>:tup N ;
 tuque%<n%>:tuque N ;
 twig%<n%>:twig N ;
 twine%<n%>:twine N ;
 twist%<n%>:twist N ;
 tyranny%<n%>:tyrann N_DICTIONARY ;
+undergrad%<n%>:undergrad N ;
 unemployment%<n%>:unemployment N ;
 union%<n%>:union N ;
 unit%<n%>:unit N ;
+uphill%<n%>:uphill N ;
 upkeep%<n%>:upkeep N ;
+upper%<n%>:upper N ;
 uptightness%<n%>:uptightness N_ILLNESS ;
+urge%<n%>:urge N ;
+uxor%<n%>:uxor N ;
+vacancy%<n%>:vacanc N_DICTIONARY ;
 vacation%<n%>:vacation N ;
+vac%<n%>:vac N ;
+vale%<n%>:vale N ;
+validation%<n%>:validation N ;
 valley%<n%>:valley N ;
+verge%<n%>:verge N ;
+version%<n%>:version N ;
+verst%<n%>:verst N ;
+vestry%<n%>:vestr N_DICTIONARY ;
+vesture%<n%>:vesture N ;
 vicinity%<n%>:vicinity N_DICTIONARY ;
+vigil%<n%>:vigil N ;
+village%<n%>:village N ;
+vim%<n%>:vim N ;
+visitor%<n%>:visitor N ;
+visor%<n%>:visor N ;
 vocational%<n%>:vocational N ;
 voltage%<n%>:voltage N ;
+vortex%<n%>:vortex N_FLUSH ;
 vote%<n%>:vote N ;
+vow%<n%>:vow N ;
 wage%<n%>:wage N ;
+wagon%<n%>:wagon N ;
+waistline%<n%>:waistline N ;
+wait%<n%>:wait N ;
+wall%<n%>:wall N ;
+want%<n%>:want N ;
 warehouse%<n%>:warehouse N ;
 warmth%<n%>:warmth N ;
+war%<n%>:war N ;
 water%<n%>:water N ; ! ""
+waterway%<n%>:waterway N ;
 wave%<n%>:wave N ;
 way%<n%>:way N ;
 weather%<n%>:weather N ; ! ""
+web%<n%>:web N ;
 wedge%<n%>:wedge N ;
+week%<n%>:week N ;
+weft%<n%>:weft N ;
+weigh%<n%>:weigh N ;
 weight%<n%>:weight N ;
 well-being%<n%>:well-being N ;
 west%<n%>:west N ;
+why%<n%>:why N ;
 widowness%<n%>:widowness N_ILLNESS ;
 width%<n%>:width N ;
+wife%<n%>:wi N_LIFE ;
 will%<n%>:will N ;
 window%<n%>:window N ; ! ""
 wind-shield%<n%>:wind-shield N ;
-woman%<n%>:wom N_WOMAN ;
+wintercold%<n%>:wintercold N ;
+winter%<n%>:winter N ;
+wire%<n%>:wire N ;
+witch%<n%>:witch N_FLUSH ;
+wits%<n%>:wits N_ILLNESS ;
 woman%<n%>:wom N_WOMAN ;
 wonder%<n%>:wonder N ;
 wood%<n%>:wood N ; ! ""
+woodpile%<n%>:woodpile N ;
+wool%<n%>:wool N ;
 word%<n%>:word N ;
+words%<n%>:words N_ILLNESS ;
 work%<n%>:work N ;
 work-time%<n%>:work-time N ;
+worn-out%<n%>:worn-out N ;
 worry%<n%>:worry N ;
+write-in%<n%>:write-in N ;
 writer%<n%>:writer N ;
+wrong%<n%>:wrong N ;
 yard%<n%>:yard N ; ! ""
 year%<n%>:year N ;
 year%<n%>:year N ; ! ""
+yeoman%<n%>:yeoman N ;
+Yule%<n%>:Yule N ;
 zone%<n%>:zone N ;
-
-believing%<n%>:believing N ;
-bread%<n%>:bread N ;
-lei%<n%>:lei N ;
-letter%<n%>:letter N ;
-snow%<n%>:snow N ;
-tent%<n%>:tent N ;
 
 
 LEXICON V
@@ -705,20 +1504,47 @@ LEXICON V_BE
 %<actv%>%<ger%>:being # ;
 
 LEXICON V_HAVE
+
 %<inf%>:have # ;
 %<actv%>%<pres%>:have # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:has # ;
 %<actv%>%<past%>:had # ;
 %<actv%>%<ger%>:having # ;
 
+LEXICON V_MAKE
+
+%<inf%>:make # ;
+%<actv%>%<pres%>:make # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:makes # ;
+%<actv%>%<past%>:made # ;
+%<actv%>%<ger%>:making # ;
+
 LEXICON V_DO
+
 %<inf%>:do # ;
 %<actv%>%<pres%>:do # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:does # ;
 %<actv%>%<past%>:did # ;
 %<actv%>%<ger%>:doing # ;
 
+LEXICON V_FALL
+
+%<inf%>:fall # ;
+%<actv%>%<pres%>:fall # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:falls # ;
+%<actv%>%<past%>:fell # ;
+%<actv%>%<ger%>:falling # ;
+
+LEXICON V_SLEEP
+
+%<inf%>:sleep # ;
+%<actv%>%<pres%>:sleep # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:sleeps # ;
+%<actv%>%<past%>:slept # ;
+%<actv%>%<ger%>:sleeping # ;
+
 LEXICON V_SEE
+
 %<inf%>:see # ;
 %<actv%>%<pres%>:see # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sees # ;
@@ -726,6 +1552,7 @@ LEXICON V_SEE
 %<actv%>%<ger%>:seeing # ;
 
 LEXICON V_STAND
+
 %<inf%>:stand # ;
 %<actv%>%<pres%>:stand # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:stands # ;
@@ -733,20 +1560,35 @@ LEXICON V_STAND
 %<actv%>%<ger%>:standing # ;
 
 LEXICON V_SING
+
 %<inf%>:sing # ;
 %<actv%>%<pres%>:sing # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sings # ;
 %<actv%>%<past%>:sang # ;
 %<actv%>%<ger%>:singing # ;
 
+LEXICON V_DRAW
 
+%<inf%>:draw # ;
+%<actv%>%<pres%>:draw # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:draws # ;
+%<actv%>%<past%>:drew # ;
+%<actv%>%<ger%>:drawing # ;
+
+LEXICON V_DIE
+
+%<inf%>:die # ;
+%<actv%>%<pres%>:die # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:dies # ;
+%<actv%>%<past%>:died # ;
+%<actv%>%<ger%>:dying # ;
 
 LEXICON V_TELL
-%<inf%>:tell # ;
-%<actv%>%<pres%>:tell # ;
-%<actv%>%<pres%>%<p3%>%<sg%>:tells # ;
-%<actv%>%<past%>:told # ;
-%<actv%>%<ger%>:telling # ;
+%<inf%>:ell # ;
+%<actv%>%<pres%>:ell # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:ells # ;
+%<actv%>%<past%>:old # ;
+%<actv%>%<ger%>:elling # ;
 
 LEXICON V_SIT
 %<inf%>:sit # ;
@@ -755,7 +1597,16 @@ LEXICON V_SIT
 %<actv%>%<past%>:sat # ;
 %<actv%>%<ger%>:sitting # ;
 
+LEXICON V_BLOW
+
+%<inf%>:blow # ;
+%<actv%>%<pres%>:blow # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:blows # ;
+%<actv%>%<past%>:blew # ;
+%<actv%>%<ger%>:blowing # ;
+
 LEXICON V_KNOW
+
 %<inf%>:know # ;
 %<actv%>%<pres%>:know # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:knows # ;
@@ -789,7 +1640,16 @@ LEXICON V_HIDE
 %<actv%>%<past%>:hid # ;
 %<actv%>%<ger%>:hiding # ;
 
+LEXICON V_DEAL
+
+%<inf%>:0 # ;
+%<actv%>%<pres%>:0 # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
+%<actv%>%<past%>:t # ;
+%<actv%>%<ger%>:ing # ;
+
 LEXICON V_HEAR
+
 %<inf%>:0 # ;
 %<actv%>%<pres%>:0 # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:s # ;
@@ -797,12 +1657,22 @@ LEXICON V_HEAR
 %<actv%>%<ger%>:ing # ;
 
 LEXICON V_FIND
+
 %<actv%>%<pres%>:find # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:finds # ;
 %<actv%>%<past%>:found # ;
 %<actv%>%<ger%>:finding # ;
 
+LEXICON V_BITE
+
+%<inf%>:e # ;
+%<actv%>%<pres%>:e # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:es # ;
+%<actv%>%<past%>:0 # ;
+%<actv%>%<ger%>:ing # ;
+
 LEXICON V_LOVE
+
 %<inf%>:e # ;
 %<actv%>%<pres%>:e # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:es # ;
@@ -810,6 +1680,7 @@ LEXICON V_LOVE
 %<actv%>%<ger%>:ing # ;
 
 LEXICON V_GET
+
 %<inf%>:get # ;
 %<actv%>%<pres%>:get # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:gets # ;
@@ -817,6 +1688,7 @@ LEXICON V_GET
 %<actv%>%<ger%>:getting # ;
 
 LEXICON V_EAT
+
 %<inf%>:eat # ;
 %<actv%>%<pres%>:eat # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:eats # ;
@@ -824,6 +1696,7 @@ LEXICON V_EAT
 %<actv%>%<ger%>:eatting # ;
 
 LEXICON V_DRINK
+
 %<inf%>:drink # ;
 %<actv%>%<pres%>:drink # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:drinks # ;
@@ -831,6 +1704,7 @@ LEXICON V_DRINK
 %<actv%>%<ger%>:drinking # ;
 
 LEXICON V_COME
+
 %<inf%>:come # ;
 %<actv%>%<pres%>:come # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:comes # ;
@@ -838,6 +1712,7 @@ LEXICON V_COME
 %<actv%>%<ger%>:coming # ;
 
 LEXICON V_SIT
+
 %<inf%>:sit # ;
 %<actv%>%<pres%>:sit # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:sits # ;
@@ -845,6 +1720,7 @@ LEXICON V_SIT
 %<actv%>%<ger%>:sitting # ;
 
 LEXICON V_TRY
+
 %<inf%>:y # ;
 %<actv%>%<pres%>:y # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:ies # ;
@@ -852,6 +1728,7 @@ LEXICON V_TRY
 %<actv%>%<ger%>:ying # ;
 
 LEXICON V_SPEAK
+
 %<inf%>:speak # ;
 %<actv%>%<pres%>:speak # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:speaks # ;
@@ -859,6 +1736,7 @@ LEXICON V_SPEAK
 %<actv%>%<ger%>:speaking # ;
 
 LEXICON V_SAY
+
 %<inf%>:y # ;
 %<actv%>%<pres%>:y # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:ys # ;
@@ -866,6 +1744,7 @@ LEXICON V_SAY
 %<actv%>%<ger%>:ying # ;
 
 LEXICON V_GO
+
 %<inf%>:go # ;
 %<actv%>%<pres%>:go # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:goes # ;
@@ -873,6 +1752,7 @@ LEXICON V_GO
 %<actv%>%<ger%>:going # ;
 
 LEXICON V_FIND
+
 %<inf%>:find # ;
 %<actv%>%<pres%>:find # ;
 %<actv%>%<pres%>%<p3%>%<sg%>:finds # ;
@@ -886,6 +1766,14 @@ LEXICON V_BREAK
 %<actv%>%<pres%>%<p3%>%<sg%>:breaks # ;
 %<actv%>%<past%>:broke # ;
 %<actv%>%<ger%>:breaking # ;
+
+LEXICON V_BUY
+
+%<inf%>:buy # ;
+%<actv%>%<pres%>:buy # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:buys # ;
+%<actv%>%<past%>:bought # ;
+%<actv%>%<ger%>:buying # ;
 
 LEXICON V_BRING
 
@@ -1034,6 +1922,14 @@ LEXICON V_TRAVEL
 %<actv%>%<past%>:led # ;
 %<actv%>%<ger%>:ling # ;
 
+LEXICON V_PUT
+
+%<inf%>:0 # ;
+%<actv%>%<pres%>:0 # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
+%<actv%>%<past%>:0 # ;
+%<actv%>%<ger%>:ting # ;
+
 LEXICON V_HIT
 
 %<inf%>:0 # ;
@@ -1066,6 +1962,30 @@ LEXICON V_DIG
 %<actv%>%<past%>:ged # ;
 %<actv%>%<ger%>:ging # ;
 
+LEXICON V_STUN
+
+%<inf%>:0 # ;
+%<actv%>%<pres%>:0 # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
+%<actv%>%<past%>:ned # ;
+%<actv%>%<ger%>:ning # ;
+
+LEXICON V_HUM
+
+%<inf%>:0 # ;
+%<actv%>%<pres%>:0 # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
+%<actv%>%<past%>:med # ;
+%<actv%>%<ger%>:ming # ;
+
+LEXICON V_SLUR
+
+%<inf%>:0 # ;
+%<actv%>%<pres%>:0 # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
+%<actv%>%<past%>:red # ;
+%<actv%>%<ger%>:ring # ;
+
 LEXICON V_READ
 
 %<inf%>:0 # ;
@@ -1074,6 +1994,13 @@ LEXICON V_READ
 %<actv%>%<past%>:0 # ;
 %<actv%>%<ger%>:ing # ;
 
+LEXICON V_BID
+
+%<inf%>:0 # ;
+%<actv%>%<pres%>:0 # ;
+%<actv%>%<pres%>%<p3%>%<sg%>:s # ;
+%<actv%>%<past%>:0 # ;
+%<actv%>%<ger%>:ding # ;
 
 
 LEXICON Verbs
@@ -1087,273 +2014,773 @@ can%<vaux%>%<actv%>%<pres%>%<p3%>%<sg%>:can # ; ! ""
 can%<vaux%>%<actv%>%<past%>%<p3%>%<sg%>:could # ; ! ""
 can%<vaux%>%<actv%>%<past%>%<p1%>%<sg%>:could # ; ! ""
 
-
+abide%<vblex%>:abid V_LOVE ;
+abjure%<vblex%>:abjur V_LOVE ;
+abscise%<vblex%>:abscis V_LOVE ;
+abstract%<vblex%>:abstract V ;
+accept%<vblex%>:accept V ;
+access%<vblex%>:access V_SEARCH ;
+accomplish%<vblex%>:accomplish V ;
+ache%<vblex%>:ach V_LOVE ;
+acquit%<vblex%>:acquit V ;
 act%<vblex%>:act V ;
 add%<vblex%>:add V ;
+adhere%<vblex%>:adher V_LOVE ;
+adjourn%<vblex%>:adjourn V ;
 admit%<vblex%>:admit V ;
+adopt%<vblex%>:adopt V ;
+advise%<vblex%>:advis V_LOVE ;
 affect%<vblex%>:affect V ;
+afflict%<vblex%>:afflict V ;
+age%<vblex%>:ag V_LOVE ;
+aggrieve%<vblex%>:aggriev V_LOVE ;
+agitate%<vblex%>:agitat V_LOVE ;
+agonise%<vblex%>:agonis V_LOVE ;
 agree%<vblex%>:agree V ;
 aim%<vblex%>:aim V ;
+alien%<vblex%>:alien V ;
+alternate%<vblex%>:alternat V_LOVE ;
+amerce%<vblex%>:amerc V_LOVE ;
 announce%<vblex%>:announc V_LOVE ;
+anoint%<vblex%>:anoint V ;
 answer%<vblex%>:answer V ;
 answer%<vblex%>:answer V ; ! ""
+appeal%<vblex%>:appeal V ;
+appear%<vblex%>:appear V ;
 apply%<vblex%>:appl V_TRY ;
+approach%<vblex%>:approach V ;
+arise%<vblex%>:aris V_LOVE ;
+arouse%<vblex%>:arous V_LOVE ;
+arrange%<vblex%>:arrang V_LOVE ;
 arrest%<vblex%>:arrest V ;
 arrive%<vblex%>:arriv V_LOVE ;
 ask%<vblex%>:ask V ;
 ask%<vblex%>:ask V ; ! ""
 aspire%<vblex%>:aspir V_LOVE ;
+assert%<vblex%>:assert V ;
+assuage%<vblex%>:assuag V_LOVE ;
+attain%<vblex%>:attain V ;
+attempt%<vblex%>:attempt V ;
+attend%<vblex%>:attend V ;
+aviate%<vblex%>:aviat V_LOVE ;
+avoid%<vblex%>:avoid V ;
+await%<vblex%>:await V ;
+awaken%<vblex%>:awaken V ;
+babble%<vblex%>:babbl V_LOVE ;
+bang%<vblex%>:bang V ;
 base%<vblex%>:bas V_LOVE ;
-begin%<vblex%>:0 V_BEGIN ;
+bathe%<vblex%>:bath V_LOVE ;
+bear%<vblex%>:bear V ;
 begin%<vblex%>:0 V_BEGIN ;
 be%<vblex%>:0 V_BE ;
 be%<vblex%>:0 V_BE ; ! ""
+bid%<vblex%>:bid V_BID ;
+birl%<vblex%>:birl V ;
+bite%<vblex%>:bit V_BITE ;
 blame%<vblex%>:blam V_LOVE ;
+blaze%<vblex%>:blaz V_LOVE ;
+bless%<vblex%>:bless V_SEARCH ;
+blight%<vblex%>:blight V ;
 bloom%<vblex%>:bloom V ;
+blow%<vblex%>:0 V_BLOW ;
 blow%<vblex%>:blow V ;
+blunder%<vblex%>:blunder V ;
+boil%<vblex%>:boil V ;
 born%<vblex%>:born V ;
 borrow%<vblex%>:borrow V ;
+breakfast%<vblex%>:breakfast V ;
 break%<vblex%>:0 V_BREAK ;
 break%<vblex%>:0 V_BREAK ; ! 
+breathe%<vblex%>:breath V_LOVE ;
+brim%<vblex%>:brim V ;
 bring%<vblex%>:0 V_BRING ;
 bring%<vblex%>:0 V_BRING ; !
+budge%<vblex%>:budg V_LOVE ;
 bump%<vblex%>:bump V ;
+bureaucratise%<vblex%>:bureaucratise V_LOVE ;
 burn%<vblex%>:burn V_BURN ;
+buy%<vblex%>:0 V_BUY ;
+cackel%<vblex%>:cackel V ;
+call%<vblex%>:call V ;
+calm%<vblex%>:calm V ;
+candle%<vblex%>:candl V_LOVE ;
+can%<vblex%>:0 V_STUN ;
+career%<vblex%>:career V ;
+carry%<vblex%>:carr V_BUY ;
+cart%<vblex%>:cart V ;
+cast%<vblex%>:cast V ;
+catcall%<vblex%>:catcall V ;
+catch%<vblex%>:0 V_SEARCH ;
+catch%<vblex%>:catch V_SEARCH ;
 cause%<vblex%>:caus V_LOVE ;
-cause%<vblex%>:caus V_LOVE ;
+caution%<vblex%>:caution V ;
+cave%<vblex%>:cav V_LOVE ;
 change%<vblex%>:chang V_LOVE ;
+chap%<vblex%>:chap V_STOP ;
+charge%<vblex%>:charg V_LOVE ;
+chatter%<vblex%>:chatter V ;
+chat%<vblex%>:chat V_HIT ;
+chime%<vblex%>:chim V_LOVE ;
+chirk%<vblex%>:chirk V ;
 choose%<vblex%>:0 V_CHOOSE ;
-clear%<vblex%>:clear V ;
+chug%<vblex%>:chug V_DIG ;
+chunk%<vblex%>:chunk V ;
+circle%<vblex%>:circl V_LOVE ;
+circulate%<vblex%>:circulat V_LOVE ;
+clank%<vblex%>:clank V ;
+clean%<vblex%>:clean V ;
 clear%<vblex%>:clear V ;
 climb%<vblex%>:climb V ;
+clip%<vblex%>:clip V_STOP ;
+clonk%<vblex%>:clonk V ;
+cold%<vblex%>:cold V ;
+collect%<vblex%>:collect V ;
 collide%<vblex%>:collid V_LOVE ;
 come%<vblex%>:0 V_COME ;
 come%<vblex%>:0 V_COME ; ! ""
+commemorate%<vblex%>:commemorat V_LOVE ;
+commend%<vblex%>:commend V ;
+compile%<vblex%>:compil V_LOVE ;
+complain%<vblex%>:complain V ;
 complement%<vblex%>:complement V ;
 conceive%<vblex%>:conceiv V_LOVE ;
+conciliate%<vblex%>:conciliat V_LOVE ;
 condense%<vblex%>:condens V_LOVE ;
+condition%<vblex%>:condition V ;
+condone%<vblex%>:condon V_LOVE ;
+conduce%<vblex%>:conduc V_LOVE ;
+confess%<vblex%>:confess V ;
+confirm%<vblex%>:confirm V ;
+conquer%<vblex%>:conquer V ;
 consider%<vblex%>:consider V ;
+consume%<vblex%>:consum V_LOVE ;
 contain%<vblex%>:contain V ;
 contain%<vblex%>:contain V ; ! ""
+convene%<vblex%>:conven V_LOVE ;
+convert%<vblex%>:convert V ;
+cook%<vblex%>:cook V ;
+cope%<vblex%>:cop V_LOVE ;
+corner%<vblex%>:corner V ;
+correct%<vblex%>:correct V ;
+cosset%<vblex%>:cosset V ;
+cost%<vblex%>:cost V ;
+cough%<vblex%>:cough V ;
+count%<vblex%>:count V ;
 count%<vblex%>:count V ; ! ""
+cover%<vblex%>:cover V ;
+crackle%<vblex%>:crackl V_LOVE ;
+cradle%<vblex%>:cradl V_LOVE ;
+crane%<vblex%>:cran V_LOVE ;
+crash%<vblex%>:crash V_SEARCH ;
+creak%<vblex%>:creak V ;
 create%<vblex%>:creat V_LOVE ;
-create%<vblex%>:creat V_LOVE ;
+crick%<vblex%>:crick V ;
+cringe%<vblex%>:cring V_LOVE ;
 cripple%<vblex%>:crippl V_LOVE ;
+cross%<vblex%>:cross V_SEARCH ;
+cry%<vblex%>:cr V_TRY ;
+cup%<vblex%>:cup V_STOP ;
+curl%<vblex%>:curl V ;
+curry%<vblex%>:curr V_TRY ;
+curse%<vblex%>:curs V_LOVE ;
+curtsy%<vblex%>:curts V_TRY ;
+cut%<vblex%>:cut V_READ ;
 damage%<vblex%>:damag V_LOVE ;
 dance%<vblex%>:danc V_LOVE ;
+dandle%<vblex%>:dandl V_LOVE ;
 dare%<vblex%>:dar V_LOVE ;
 dash%<vblex%>:dash V ;
+date%<vblex%>:dat V_LOVE ;
+deal%<vblex%>:deal V ;
+deal%<vblex%>:deal V_DEAL ;
+debate%<vblex%>:debat V_LOVE ;
+decay%<vblex%>:decay V ;
 decline%<vblex%>:declin V_LOVE ;
 deduce%<vblex%>:deduc V_LOVE ;
 define%<vblex%>:defin V_LOVE ;
-define%<vblex%>:defin V_LOVE ;
+deflect%<vblex%>:deflect V ;
 deny%<vblex%>:den V_TRY ;
 depend%<vblex%>:depend V ;
+deplore%<vblex%>:deplor V_LOVE ;
+deposit%<vblex%>:deposit V ;
 depress%<vblex%>:depress V_SEARCH ;
+derive%<vblex%>:deriv V_LOVE ;
+desire%<vblex%>:desir V_LOVE ;
+deter%<vblex%>:deter V ;
 develop%<vblex%>:develop V ;
 dice%<vblex%>:0 V_LOVE ; ! ""
+dicker%<vblex%>:dicker V ;
+die%<vblex%>:0 V_DIE ;
+digest%<vblex%>:digest V ;
 dig%<vblex%>:dig V_DIG ;
+dine%<vblex%>:din V_LOVE ;
+din%<vblex%>:din V ;
+disappoint%<vblex%>:disappoint V ;
+discase%<vblex%>:discas V_LOVE ;
 discharge%<vblex%>:discharg V_LOVE ;
+disgrace%<vblex%>:disgrac V_LOVE ;
+distress%<vblex%>:distress V_SEARCH ;
+divest%<vblex%>:divest V ;
 divorce%<vblex%>:divorc V_LOVE ;
+dizzy%<vblex%>:dizzy V ;
+douse%<vblex%>:dous V_LOVE ;
 do%<vblex%>:0 V_DO ;
 do%<vblex%>:0 V_DO ; ! ""
+doze%<vblex%>:doz V_LOVE ;
+drape%<vblex%>:drap V_LOVE ;
+draw%<vblex%>:0 V_DRAW ;
+dress%<vblex%>:dress V ;
 drink%<vblex%>:0 V_DRINK ; ! ""
+drink%<vblex%>:drink V ;
 drive%<vblex%>:driv V_LOVE ;
 drop%<vblex%>:drop V_STOP ;
+drum%<vblex%>:drum V_HUM ;
+dry%<vblex%>:dr V_TRY ;
+dun%<vblex%>:dun V ;
+ease%<vblex%>:eas V_LOVE ;
+eat%<vblex%>:0 V_EAT ;
 eat%<vblex%>:0 V_EAT ; ! ""
+edify%<vblex%>:edif V_TRY ;
+educate%<vblex%>:educat V_LOVE ;
+elapse%<vblex%>:elaps V_LOVE ;
 embarass%<vblex%>:embarass V_SEARCH ;
 embroider%<vblex%>:embroider V ; !
+embroil%<vblex%>:embroil V ;
+empty%<vblex%>:empt V_TRY ;
 endure%<vblex%>:endur V_LOVE ;
 enforce%<vblex%>:enforc V_LOVE ;
-enforce%<vblex%>:enforc V_LOVE ;
 engage%<vblex%>:engag V_LOVE ;
+engild%<vblex%>:engild V ;
+enjoin%<vblex%>:enjoin V ;
 enjoy%<vblex%>:enjo V_TRY ;
 enlighten%<vblex%>:enlighten V ;
+ennoble%<vblex%>:ennobl V_LOVE ;
+enrage%<vblex%>:enrag V_LOVE ;
 ensure%<vblex%>:ensur V_LOVE ;
+enter%<vblex%>:enter V ;
+equivocate%<vblex%>:equivocat V_LOVE ;
+erase%<vblex%>:eras V_LOVE ;
+escape%<vblex%>:escap V_LOVE ;
+escort%<vblex%>:escort V ;
+espy%<vblex%>:esp V_TRY ;
+exclaim%<vblex%>:exclaim V ;
+exit%<vblex%>:exit V_HIT ;
+expel%<vblex%>:expel V ;
 experience%<vblex%>:experienc V_LOVE ;
 explain%<vblex%>:explain V ;
+explicate%<vblex%>:explicat V_LOVE ;
 explode%<vblex%>:explod V_LOVE ;
+expound%<vblex%>:expound V ;
+extend%<vblex%>:extend V ;
+extort%<vblex%>:extort V ;
+exult%<vblex%>:exult V ;
+eye%<vblex%>:ey V_LOVE ;
+fade%<vblex%>:fad V_LOVE ;
 fail%<vblex%>:fail V ;
+fall%<vblex%>:0 V_FALL ;
+fan%<vblex%>:fan V_STUN ;
+fear%<vblex%>:fear V ;
 feel%<vblex%>:0 V_FEEL ;
-feel%<vblex%>:0 V_FEEL ;
+feign%<vblex%>:feign V ;
+fidget%<vblex%>:fidget V ;
 finalise%<vblex%>:finalis V_LOVE ; 
 find%<vblex%>:0 V_FIND ; ! ""
 finish%<vblex%>:finish V ; ! ""
+fit%<vblex%>:fit V_HIT ;
+flash%<vblex%>:flash V_SEARCH ;
+flatter%<vblex%>:flatter V ;
+flower%<vblex%>:flower V ;
 fold%<vblex%>:fold V ; !
 follow%<vblex%>:follow V ;
-follow%<vblex%>:follow V ;
-foretell%<vblex%>:fore V_TELL ;
+fool%<vblex%>:fool V ;
+foretell%<vblex%>:foret V_TELL ;
 found%<vblex%>:found V ;
 freshen%<vblex%>:freshen V ;
+frost%<vblex%>:frost V ;
+fry%<vblex%>:fr V_TRY ;
 fuck%<vblex%>:fuck V ;
-fuck%<vblex%>:fuck V ;
+funk%<vblex%>:funk V ;
+gain%<vblex%>:gain V ;
+gallop%<vblex%>:gallop V ;
+gather%<vblex%>:gather V ;
+gaze%<vblex%>:gaz V_LOVE ;
 generalise%<vblex%>:generalis V_LOVE ;
 get%<vblex%>:0 V_GET ; ! ""
+giggle%<vblex%>:giggl V_LOVE ;
 give%<vblex%>:0 V_GIVE ;
-give%<vblex%>:0 V_GIVE ;
-give%<vblex%>:0 V_GIVE ;
+glance%<vblex%>:glanc V_LOVE ;
+glare%<vblex%>:glar V_LOVE ;
+glimmer%<vblex%>:glimmer V ;
+glint%<vblex%>:glint V ;
+glisten%<vblex%>:glisten V ;
+gnaw%<vblex%>:gnaw V ;
+gong%<vblex%>:gong V ;
+gore%<vblex%>:gor V_LOVE ;
+gossip%<vblex%>:gossip V ;
 go%<vblex%>:0 V_GO ; ! ""
 graduate%<vblex%>:graduat V_LOVE ;
+graze%<vblex%>:graz V_LOVE ;
+greet%<vblex%>:greet V ;
+grip%<vblex%>:grip V ;
+grope%<vblex%>:grop V_LOVE ;
 grow%<vblex%>:0 V_GROW ;
+grub%<vblex%>:grub V ;
 grumble%<vblex%>:grumbl V_LOVE ;
+grump%<vblex%>:grump V ;
+grunt%<vblex%>:grunt V ;
+guess%<vblex%>:guess V ;
+gurgle%<vblex%>:gurgl V_LOVE ;
+gush%<vblex%>:gush V_SEARCH ;
+guy%<vblex%>:guy V ;
+hack%<vblex%>:hack V ;
+hale%<vblex%>:hal V_LOVE ;
+hamper%<vblex%>:hamper V ;
+handle%<vblex%>:handl V_LOVE ;
 happen%<vblex%>:happen V ;
-happen%<vblex%>:happen V ;
+harry%<vblex%>:harr V_TRY ;
+hatch%<vblex%>:hatch V ;
 have%<vblex%>:0 V_HAVE ; ! ""
-hear%<vblex%>:hear V_HEAR ;
+hawk%<vblex%>:hawk V ;
+head%<vblex%>:head V ;
 hear%<vblex%>:hear V_HEAR ;
 hear%<vblex%>:hear V_HEAR ; ! ""
 heat%<vblex%>:heat V ;
+heave%<vblex%>:heav V_LOVE ;
+hem%<vblex%>:hem V ;
 hide%<vblex%>:0 V_HIDE ; ! ""
+higgle%<vblex%>:higgl V_LOVE ;
 hire%<vblex%>:hir V_LOVE ;
 hit%<vblex%>:hit V_HIT ;
-hold%<vblex%>:0 V_HOLD ;
+hog%<vblex%>:hog V ;
 hold%<vblex%>:0 V_HOLD ;
 hold%<vblex%>:hold V ;
+holler%<vblex%>:holler V ;
+hollo%<vblex%>:hollo V ;
+hone%<vblex%>:hon V_LOVE ;
 hope%<vblex%>:hop V_LOVE ;
+hop%<vblex%>:hop V_STOP ;
+huff%<vblex%>:huff V ;
+hum%<vblex%>:hum V_HUM ;
+hunch%<vblex%>:hunch V_SEARCH ;
+hunger%<vblex%>:hunger V ;
 hunt%<vblex%>:hunt V ;
+hurr%<vblex%>:hurr V ;
+hurry%<vblex%>:hurr V_TRY ;
+hurt%<vblex%>:hurt V ;
+hustle%<vblex%>:hustl V_LOVE ;
 ignite%<vblex%>:ignit V_LOVE ;
+impel%<vblex%>:impel V ;
+implant%<vblex%>:implant V ;
+imply%<vblex%>:impl V_TRY ;
+import%<vblex%>:import V ;
+impose%<vblex%>:impos V_LOVE ;
 impregnate%<vblex%>:impregnat V_LOVE ;
 imprison%<vblex%>:imprison V ;
 improve%<vblex%>:improv V_LOVE ;
 include%<vblex%>:includ V_LOVE ;
+increase%<vblex%>:increas V_LOVE ;
+indicate%<vblex%>:indicat V_LOVE ;
+inflame%<vblex%>:inflam V_LOVE ;
+inflect%<vblex%>:inflect V ;
+inform%<vblex%>:inform V ;
+input%<vblex%>:input V_HIT ;
+insert%<vblex%>:insert V ;
+inspan%<vblex%>:inspan V ;
 install%<vblex%>:install V ; !
 insult%<vblex%>:insult V ;
+insure%<vblex%>:insur V_LOVE ;
+intend%<vblex%>:intend V ;
 interest%<vblex%>:interest V ; ! 
+interfere%<vblex%>:interfer V_LOVE ;
 interpret%<vblex%>:interpret V ;
+interview%<vblex%>:interview V ;
 invade%<vblex%>:invad V_LOVE ;
+invent%<vblex%>:invent V ;
+investigate%<vblex%>:investigat V_LOVE ;
 invite%<vblex%>:invit V_LOVE ;
+invoke%<vblex%>:invok V_LOVE ;
+ionate%<vblex%>:ionat V_LOVE ;
+iterate%<vblex%>:iterat V_LOVE ;
+jar%<vblex%>:jar V_SLUR ;
+jaw%<vblex%>:jaw V ;
+jerk%<vblex%>:jerk V ;
+jinx%<vblex%>:jinx V_SEARCH ;
+job%<vblex%>:job V ;
+jockey%<vblex%>:jockey V ;
 judge%<vblex%>:judg V_LOVE ;
 jump%<vblex%>:jump V ;
 kill%<vblex%>:kill V ;
+knock%<vblex%>:knock V ;
+know%<vblex%>:0 V_KNOW ;
 know%<vblex%>:0 V_KNOW ; ! ""
+lace%<vblex%>:lac V_LOVE ;
+lack%<vblex%>:lack V ;
+land%<vblex%>:land V ;
+lapse%<vblex%>:laps V_LOVE ;
+lap%<vblex%>:lap V_STOP ;
+larn%<vblex%>:larn V ;
+laugh%<vblex%>:laugh V ;
 laugh%<vblex%>:laugh V ; ! ""
 launch%<vblex%>:launch V ;
 lay%<vblex%>:0 V_LAY ;
 lead%<vblex%>:lead V_READ ;
+leap%<vblex%>:leap V ;
+lease%<vblex%>:leas V_LOVE ;
 leave%<vblex%>:0 V_LEAVE ;
+leave%<vblex%>:leav V_LOVE ;
+lengthen%<vblex%>:lengthen V ;
+let%<vblex%>:let V_READ ;
+lexicographise%<vblex%>:lexicographis V_LOVE ;
+lick%<vblex%>:lick V ;
+lie%<vblex%>:li V_LOVE ;
 lift%<vblex%>:lift V ;
 light%<vblex%>:light V ;
+like%<vblex%>:lik V_LOVE ;
 like%<vblex%>:lik V_LOVE ; ! ""
+line%<vblex%>:lin V_LOVE ;
 listen%<vblex%>:listen V ; ! ""
+litter%<vblex%>:litter V ;
 live%<vblex%>:liv V_LOVE ;
 lock%<vblex%>:lock V ;
+look%<vblex%>:look V ;
 look%<vblex%>:look V ; ! ""
+loom%<vblex%>:loom V ;
 lose%<vblex%>:los V_LOVE ;
+lour%<vblex%>:lour V ;
 love%<vblex%>:lov V_LOVE ; ! ""
 lower%<vblex%>:lower V ;
+luge%<vblex%>:lug V_LOVE ;
+lug%<vblex%>:lug V_DIG ;
 lure%<vblex%>:lur V_LOVE ;
+make%<vblex%>:0 V_MAKE ;
+malfunction%<vblex%>:malfunction V ;
+manage%<vblex%>:manag V_LOVE ;
 mark%<vblex%>:mark V ;
+mash%<vblex%>:mash V_SEARCH ;
+master%<vblex%>:master V ;
+meaow%<vblex%>:meaow V ;
 mechanise%<vblex%>:mechanis V_LOVE ;
+meld%<vblex%>:meld V ;
+mention%<vblex%>:mention V ;
+meter%<vblex%>:meter V ;
+mince%<vblex%>:minc V_LOVE ;
+mind%<vblex%>:mind V ;
+miniate%<vblex%>:miniat V_LOVE ;
 miss%<vblex%>:miss V ;
 mock%<vblex%>:mock V ;
+molest%<vblex%>:molest V ;
+mooch%<vblex%>:mooch V_SEARCH ;
+mope%<vblex%>:mop V_LOVE ;
+mould%<vblex%>:mould V ;
 move%<vblex%>:mov V_LOVE ;
 must%<vaux%>:must # ; ! ""
+mutate%<vblex%>:mutat V_LOVE ;
+mutter%<vblex%>:mutter V ;
+need%<vblex%>:need V ;
+nerve%<vblex%>:nerv V_LOVE ;
+nestle%<vblex%>:nestl V_LOVE ;
+nose%<vblex%>:nos V_LOVE ;
 notice%<vblex%>:notic V_LOVE ;
 offer%<vblex%>:offer V ; ! 
+ooze%<vblex%>:ooz V_LOVE ;
+open%<vblex%>:open V ;
+oppose%<vblex%>:oppos V_LOVE ;
 order%<vblex%>:order V ;
+orient%<vblex%>:orient V ;
+outcry%<vblex%>:outcr V_TRY ;
+overrun%<vblex%>:overrun V ;
 own%<vblex%>:own V ;
-participate%<vblex%>:participat V_LOVE ;
+parch%<vblex%>:parch V ;
 participate%<vblex%>:participat V_LOVE ;
 pass%<vblex%>:pass V_SEARCH ;
+paste%<vblex%>:past V_LOVE ;
+patch%<vblex%>:patch V_SEARCH ;
+pedal%<vblex%>:pedal V ;
+peep%<vblex%>:peep V ;
 perform%<vblex%>:perform V ;
-perform%<vblex%>:perform V ;
+pet%<vblex%>:pet V_HIT ;
+placard%<vblex%>:placard V ;
+plant%<vblex%>:plant V ;
 play%<vblex%>:play V ; ! ""
-play%<vblex%>:play V ; ! ""
+plump%<vblex%>:plump V ;
+plunk%<vblex%>:plunk V ;
+ply%<vblex%>:pl V_TRY ;
+point%<vblex%>:point V ;
+ponder%<vblex%>:ponder V ;
+pop%<vblex%>:pop V_STOP ;
 practice%<vblex%>:practic V_LOVE ;
+pray%<vblex%>:pray V ;
 predict%<vblex%>:predict V ;
-prefer%<vblex%>:prefer V ;
 prefer%<vblex%>:prefer V ;
 prepare%<vblex%>:prepar V_LOVE ;
 pressure%<vblex%>:pressur V_LOVE ;
+press%<vblex%>:press V_SEARCH ;
+presume%<vblex%>:presum V_LOVE ;
+pretend%<vblex%>:pretend V ;
+prickle%<vblex%>:prickl V_LOVE ;
+prick%<vblex%>:prick V ;
 produce%<vblex%>:produc V_LOVE ;
 promise%<vblex%>:promis V_LOVE ;
 protect%<vblex%>:protect V ;
+puff%<vblex%>:puff V ;
+pump%<vblex%>:pump V ;
+puncture%<vblex%>:punctur V_LOVE ;
 punish%<vblex%>:punish V ;
+punt%<vblex%>:punt V ;
 purify%<vblex%>:purif V_TRY ;
+purr%<vblex%>:purr V ;
+push%<vblex%>:push V_SEARCH ;
+put%<vblex%>:put V_PUT ;
 put%<vblex%>:put V_READ ;
+quibble%<vblex%>:quibbl V_LOVE ;
+quicken%<vblex%>:quicken V ;
 raffle%<vblex%>:raffl V_LOVE ;
+rail%<vblex%>:rail V ;
 rain%<vblex%>:rain V ;
 raise%<vblex%>:rais V_LOVE ;
+rattle%<vblex%>:rattl V_LOVE ;
+rave%<vblex%>:rav V_LOVE ;
 reach%<vblex%>:reach V ;
-reach%<vblex%>:reach V ;
-reach%<vblex%>:reach V ;
+read%<vblex%>:read V_READ ;
 realise%<vblex%>:realis V_LOVE ;
+reason%<vblex%>:reason V ;
+reassure%<vblex%>:reassur V_LOVE ;
+recede%<vblex%>:reced V_LOVE ;
 receive%<vblex%>:receiv V_LOVE ;
+reckon%<vblex%>:reckon V ;
+recoil%<vblex%>:recoil V ;
+recuperate%<vblex%>:recuperat V_LOVE ;
+redden%<vblex%>:redden V ;
 reduce%<vblex%>:reduc V_LOVE ;
+regard%<vblex%>:regard V ;
 relate%<vblex%>:relat V_LOVE ; !
+relax%<vblex%>:relax V_SEARCH ;
 remind%<vblex%>:remind V ;
+reminisce%<vblex%>:reminisc V_LOVE ;
 repeat%<vblex%>:repeat V ;
 reply%<vblex%>:repl V_REPLY ; ! ""
+report%<vblex%>:report V ;
 represent%<vblex%>:represent V ;
 request%<vblex%>:request V ;
 require%<vblex%>:requir V_LOVE ;
 require%<vblex%>:requir V_LOVE ; !
+resist%<vblex%>:resist V ;
 respect%<vblex%>:respect V ;
+rest%<vblex%>:rest V ;
+resume%<vblex%>:resum V_LOVE ;
 return%<vblex%>:return V ;
 reveal%<vblex%>:reveal V ;
+rib%<vblex%>:rib V_RUB ;
+ride%<vblex%>:rid V_LOVE ;
+right%<vblex%>:right V ;
+riot%<vblex%>:riot V ;
+rip%<vblex%>:rip V_STOP ;
 rise%<vblex%>:ris V_LOVE ;
+rock%<vblex%>:rock V ;
+roll%<vblex%>:roll V ;
 rub%<vblex%>:rub V_RUB ;
+run%<vblex%>:0 V_RUN ;
 run%<vblex%>:0 V_RUN ; ! ""
+rupture%<vblex%>:ruptur V_LOVE ;
+rush%<vblex%>:rush V_SEARCH ;
+sashay%<vblex%>:sashay V ;
+savor%<vblex%>:savor V ;
+say%<vblex%>:0 V_SAY ;
 say%<vblex%>:sa V_SAY  ; ! ""
+scan%<vblex%>:scan V_STUN ;
+scrape%<vblex%>:scrap V_LOVE ;
+scratch%<vblex%>:scratch V ;
+screen%<vblex%>:screen V ;
+scribble%<vblex%>:scribbl V_LOVE ;
+scull%<vblex%>:scull V ;
+scythe%<vblex%>:scyth V_LOVE ;
+seal%<vblex%>:seal V ;
 search%<vblex%>:search V_SEARCH ; ! ""
+seed%<vblex%>:seed V ;
+seem%<vblex%>:seem V ;
 seem%<vblex%>:seem V ; ! ""
 see%<vblex%>:0 V_SEE ; ! ""
+seize%<vblex%>:seiz V_LOVE ;
+sell%<vblex%>:s V_TELL ;
+sense%<vblex%>:sens V_LOVE ;
 separate%<vblex%>:separat V_LOVE ;
+serve%<vblex%>:serv V_LOVE ;
 settle%<vblex%>:settl V_LOVE ;
+set%<vblex%>:set V_PUT ;
+shake%<vblex%>:shak V_LOVE ;
+shine%<vblex%>:shin V_LOVE ;
+shiver%<vblex%>:shiver V ;
 shock%<vblex%>:shock V ;
+shoot%<vblex%>:shoot V ;
 shoot%<vblex%>:sho V_SHOOT ;
+shoo%<vblex%>:shoo V ;
 shop%<vblex%>:shop V_STOP ;
+shower%<vblex%>:shower V ;
+show%<vblex%>:show V ;
 show%<vblex%>:show V_SHOW ;
+shuffle%<vblex%>:shuffl V_LOVE ;
+sift%<vblex%>:sift V ;
+sigh%<vblex%>:sigh V ;
 sing%<vblex%>:0 V_SING ;
+sink%<vblex%>:sink V ;
+sire%<vblex%>:sir V_LOVE ;
 situate%<vblex%>:situat V_LOVE ;
 sit%<vblex%>:0 V_SIT ; ! ""
+ski%<vblex%>:ski V ;
+skuttle%<vblex%>:skuttl V_LOVE ;
+sleep%<vblex%>:0 V_SLEEP ;
 sleep%<vblex%>:sleep V ; ! ""
+slip%<vblex%>:slip V_STOP ;
+slosh%<vblex%>:slosh V ;
+slouch%<vblex%>:slouch V_SEARCH ;
+slur%<vblex%>:slur V_SLUR ;
+smack%<vblex%>:smack V ;
+smart%<vblex%>:smart V ;
+smatter%<vblex%>:smatter V ;
 smell%<vblex%>:smel V_SMELL ;
+smile%<vblex%>:smil V_LOVE ;
+smoke%<vblex%>:smok V_LOVE ;
+smolder%<vblex%>:smolder V ;
+snap%<vblex%>:snap V_STOP ;
+snarl%<vblex%>:snarl V ;
+sneak%<vblex%>:sneak V ;
+snore%<vblex%>:snor V_LOVE ;
+snow%<vblex%>:snow V ;
+snuggle%<vblex%>:snuggl V_LOVE ;
+soar%<vblex%>:soar V ;
+sound%<vblex%>:sound V ;
 sound%<vblex%>:sound V ; ! ""
 speak%<vblex%>:0 V_SPEAK ; ! ""
 spell%<vblex%>:spell V ;
 spend%<vblex%>:spend V ;
+spike%<vblex%>:spik V_LOVE ;
+spill%<vblex%>:spill V ;
+spin%<vblex%>:spin V_STUN;
+spiral%<vblex%>:spiral V ;
+split%<vblex%>:split V_HIT ;
 spread%<vblex%>:spread V ;
 squeal%<vblex%>:squeal V ;
+squeeze%<vblex%>:squeez V_LOVE ;
+squint%<vblex%>:squint V ;
+squish%<vblex%>:squish V_SEARCH ;
+stalk%<vblex%>:stalk V ;
+stall%<vblex%>:stall V ;
+stand%<vblex%>:0 V_STAND ;
+startle%<vblex%>:startl V_LOVE ;
+start%<vblex%>:start V ;
+starve%<vblex%>:starv V_LOVE ;
 steal%<vblex%>:steal V ;
+steamer%<vblex%>:steamer V ;
+stick%<vblex%>:stick V ;
+stir%<vblex%>:stir V_SLUR ;
+stomp%<vblex%>:stomp V ;
 stop%<vblex%>:stop V_STOP ;
+straighten%<vblex%>:straighten V ;
+strap%<vblex%>:strap V_STOP ;
+straw%<vblex%>:straw V ;
 strengthen%<vblex%>:strengthen V ;
+stretch%<vblex%>:stretch V_SEARCH ;
+string%<vblex%>:string V ;
+stroll%<vblex%>:stroll V ;
+struggle%<vblex%>:struggl V_LOVE ;
 stumble%<vblex%>:stumbl V_LOVE ;
+stun%<vblex%>:stun V_STUN ;
+submit%<vblex%>:submit V ;
+submit%<vblex%>:submit V_HIT ;
+succor%<vblex%>:succor V ;
 suffice%<vblex%>:suffic V_LOVE ;
+suffocate%<vblex%>:suffocat V_LOVE ;
 suggest%<vblex%>:suggest V ;
+surmise%<vblex%>:surmis V_LOVE ;
 survive%<vblex%>:surviv V_LOVE ;
+swallow%<vblex%>:swallow V ;
+sway%<vblex%>:swa V_SAY ;
+swear%<vblex%>:swear V ;
+swish%<vblex%>:swish V ;
 switch%<vblex%>:switch V_SEARCH ;
+swoosh%<vblex%>:swoosh V ;
+taint%<vblex%>:taint V ;
 take%<vblex%>:0 V_TAKE ;
+talk%<vblex%>:talk V ;
 talk%<vblex%>:talk V ; ! ""
 target%<vblex%>:target V ;
 teach%<vblex%>:0 V_TEACH ;
 tease%<vblex%>:teas V_LOVE ;
-tell%<vblex%>:0 V_TELL ;
-tell%<vblex%>:0 V_TELL ; ! ""
+tell%<vblex%>:t V_TELL ;
+tender%<vblex%>:tender V ;
 test%<vblex%>:test V ;
+thaw%<vblex%>:thaw V ;
+thicken%<vblex%>:thicken V ;
 think%<vblex%>:0 V_THINK ; ! ""
+thin%<vblex%>:thin V ;
+thresh%<vblex%>:thresh V_SEARCH ;
+throb%<vblex%>:throb V ;
+throne%<vblex%>:thron V_LOVE ;
 throw%<vblex%>:0 V_THROW ;
 thunder%<vblex%>:thunder V ;
+tickle%<vblex%>:tickl V_LOVE ;
+tiptoe%<vblex%>:tipto V_LOVE ;
+tip%<vblex%>:tip V_STOP ;
+titillate%<vblex%>:titillat V_LOVE ;
 torture%<vblex%>:tortur V_LOVE ;
+tout%<vblex%>:tout V ;
+train%<vblex%>:train V ;
+traipse%<vblex%>:traips V_LOVE ;
+trample%<vblex%>:trampl V_LOVE ;
 transmit%<vblex%>:transmit V_HIT ;
+trap%<vblex%>:trap V ;
+trash%<vblex%>:trash V_SEARCH ;
 travel%<vblex%>:travel V_TRAVEL ;
 treat%<vblex%>:treat V ;
+tremor%<vblex%>:tremor V ;
+trip%<vblex%>:trip V ;
+trump%<vblex%>:trump V ;
 trust%<vblex%>:trust V ;
 try%<vblex%>:tr V_TRY ; ! ""
+turn%<vblex%>:turn V ;
+turtle%<vblex%>:turtl V_LOVE ;
+tut%<vblex%>:tut V_HIT ;
+tweak%<vblex%>:tweak V ;
+twinge%<vblex%>:twing V_LOVE ;
+twinkle%<vblex%>:twinkl V_LOVE ;
 twirl%<vblex%>:twirl V ;
 understand%<vblex%>:under V_STAND ;
 unite%<vblex%>:unite V_LOVE ;
+unlearn%<vblex%>:unlearn V ;
+unsex%<vblex%>:unsex V ;
 use%<vblex%>:us V_LOVE ;
+utter%<vblex%>:utter V ;
+validate%<vblex%>:validat V_LOVE ;
+vanish%<vblex%>:vanish V ;
+vibrate%<vblex%>:vibrat V_LOVE ;
+visit%<vblex%>:visit V_HIT ;
+vouch%<vblex%>:vouch V_SEARCH ;
+wag%<vblex%>:wag V_DIG ;
+walk%<vblex%>:walk V ;
 walk%<vblex%>:walk V ; ! ""
 want%<vblex%>:want V ; ! ""
+warm%<vblex%>:warm V ;
 watch%<vblex%>:watch V_SEARCH ; ! ""
+water%<vblex%>:water V ;
+wave%<vblex%>:wav V_LOVE ;
+weigh%<vblex%>:weigh V ;
+welter%<vblex%>:welter V ;
 wet%<vblex%>:wet V_HIT ;
+whimper%<vblex%>:whimper V ;
+whirr%<vblex%>:whirr V ;
+whisper%<vblex%>:whisper V ;
+whistle%<vblex%>:whistl V_LOVE ;
+whomp%<vblex%>:whomp V ;
 widen%<vblex%>:widen V ;
+wince%<vblex%>:winc V_LOVE ;
+winkle%<vblex%>:winkl V_LOVE ;
+wisen%<vblex%>:wisen V ;
+wobble%<vblex%>:wobbl V_LOVE ;
+wonder%<vblex%>:wonder V ;
 work%<vblex%>:work V ;
-
-exit%<vblex%>:exit V_HIT ;
-shine%<vblex%>:shin V_LOVE ;
-snow%<vblex%>:snow V ;
+worry%<vblex%>:worry V ;
+yank%<vblex%>:yank V ;
+yawn%<vblex%>:yawn V ;
 
 
 LEXICON Determiners
@@ -1438,18 +2865,27 @@ LEXICON PROPN_JAMES
 
 LEXICON Propers
 
-Jaakko%<np%>%<ant%>%<m%>:Jaakko PROPN ; ! ""
-Mari%<np%>%<ant%>%<f%>:Mari PROPN ; ! ""
-James%<np%>%<ant%>%<m%>:James PROPN_JAMES ; ! ""
-Mary%<np%>%<ant%>%<f%>:Mary PROPN ; ! ""
+de%<np%>:de # ;
+Van%<np%>:Van # ;
+
+Atlantic%<np%>:Atlantic PROPN ;
+Eeva%<np%>:Eeva PROPN ;
 Facebook%<np%>:Facebook PROPN ;
+France%<np%>:France PROPN ;
 Helsing%<np%>:Helsing PROPN ;
+Helsinki%<np%>:Helsinki PROPN ;
+Jaakko%<np%>%<ant%>%<m%>:Jaakko PROPN ; ! ""
+James%<np%>%<ant%>%<m%>:James PROPN_JAMES ; ! ""
+Korea%<np%>:Korea PROPN ;
+Kuuskoski%<np%>:Kuuskoski PROPN ;
+Mari%<np%>%<ant%>%<f%>:Mari PROPN ; ! ""
+Mary%<np%>%<ant%>%<f%>:Mary PROPN ; ! ""
+Moses%<np%>:Moses PROPN ;
 Pia%<np%>:Pia PROPN ;
 Päivi%<np%>:Päivi PROPN ;
 Stockmann%<np%>:Stockmann PROPN ;
-Eeva%<np%>:Eeva PROPN ;
-Kuuskoski%<np%>:Kuuskoski PROPN ;
 Venäläinen%<np%>:Venäläinen PROPN ;
+
 
 LEXICON Conjunctions
 
@@ -1465,28 +2901,42 @@ if%<cnjsub%>:if # ;
 
 LEXICON Prepositions
 
-
-
 above%<pr%>:above # ;
 according%<pr%>:according # ;
+acoording%<pr%>:acoording # ;
+after%<pr%>:after # ;
 against%<pr%>:against # ;
+ahead%<pr%>:ahead # ;
 along%<pr%>:along # ;
+amidst%<pr%>:amidst # ;
 among%<pr%>:among # ;
 amongst%<pr%>:amongst # ;
 around%<pr%>:around # ; ! ""
+aside%<pr%>:aside # ;
 at%<pr%>:at # ; ! ""
 because%<pr%>:because # ;
 before%<pr%>:before # ;
+behalf%<pr%>:behalf # ;
+behind%<pr%>:behind # ;
 below%<pr%>:below # ;
+between%<pr%>:between # ;
+Between%<pr%>:Between # ;
 beyond%<pr%>:beyond # ;
+by%<pr%>:by # ;
+depending%<pr%>:depending # ;
+detached%<pr%>:detached # ;
 for%<pr%>:for # ; ! ""
 from% behind%<pr%>:from% behind # ; ! ""
 from%<pr%>:from # ; ! ""
+front%<pr%>:front # ;
+half%<pr%>:half # ;
 in% front% of%<pr%>:in% front% of # ; ! ""
 in%<pr%>:in # ; ! ""
 inside%<pr%>:inside # ; ! ""
+middle%<pr%>:middle # ;
 near%<pr%>:near # ; ! ""
 of%<pr%>:of # ; ! ""
+onward%<pr%>:onward # ;
 out%<pr%>:out # ; ! ""
 outside%<pr%>:outside # ; ! ""
 over%<pr%>:over # ;
@@ -1500,10 +2950,9 @@ under%<pr%>:under # ;
 under%<pr%>:under # ; ! ""
 until%<pr%>:until # ;
 via%<pr%>:via # ;
+within%<pr%>:within # ;
 without%<pr%>:without # ;
 with%<pr%>:with # ; ! ""
-
-detached%<pr%>:detached # ;
 
 
 LEXICON Adverbs
@@ -1902,6 +3351,5 @@ LEXICON Digits_final
 %)%<rpar%>:%) # ;
 %\%<sent%>:%\ # ;
 %/%<sent%>:%/ # ;
-
 
 

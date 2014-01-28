@@ -196,6 +196,11 @@
 
   <!-- some nouns, in alphabetical order -->
   <rule>
+    <match lemma="kansa" tags="n.*">
+      <select lemma="nation" tags="n.*"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="koira" tags="n.*">
       <select lemma="dog" tags="n.*"/>
     </match>
