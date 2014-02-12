@@ -1142,6 +1142,9 @@
         <pattern-item n="necessive"/>
       </pattern>
       <action>
+        <call-macro n="case-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="NECESSIVE" case="caseFirstWord">
             <tags>
@@ -1149,7 +1152,6 @@
             </tags>
             <lu>
                 <clip pos="1" side="tl" part="whole"/>
-                <!-- should be s/gen/nom/ -->
           </lu>
           <b pos="1"/>
             <lu>
@@ -1161,6 +1163,30 @@
       </action>
     </rule>
     
+    <rule comment="REGLA: gen owner">
+      <pattern>
+        <pattern-item n="gen-subj"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="case-handler1"> 
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="REALGEN" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP-NEC"/></tag>
+            </tags>
+            <lu>
+                <clip pos="1" side="tl" part="whole"/>
+                <b pos="1"/>
+                <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+  </rule>
+
     <rule comment="REGLA: cnjcoo">
       <pattern>
         <pattern-item n="cnjcoo"/>
