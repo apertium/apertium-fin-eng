@@ -22,6 +22,7 @@
 /autogen.sh -text
 /configure.ac -text
 dev/debug2dixesandlexces.bash -text
+dev/europarl-v7.fi-en.ngrams.fi-en.lrx -text
 dev/fiwikt2dix.awk -text
 dev/fiwn2bidix.bash -text
 dev/nouns.wikt.txt -text
