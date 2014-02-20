@@ -86,6 +86,9 @@
     <def-cat n="cm">
       <cat-item tags="cm"/>
     </def-cat>
+    <def-cat n="nom-cmp">
+      <cat-item tags="n.*.*.cmp"/>
+    </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
       <cat-item tags="n.*.*"/>
@@ -504,6 +507,45 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: nom-cmp nom">
+      <pattern>
+        <pattern-item n="nom-cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="case-handler1"> 
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="proc-synlabel1"> 
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="n_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="sntype"/></tag>
+              <tag><clip pos="2" side="sl" part="a_cas"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_cas"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_nom"/>
+              <clip pos="2" side="tl" part="a_nbr"/>
+              <clip pos="2" side="tl" part="a_cas"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: adj nom">
       <pattern>
         <pattern-item n="adj"/>
