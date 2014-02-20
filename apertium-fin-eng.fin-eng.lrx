@@ -19618,7 +19618,10 @@
     <match lemma="ammatinharjoittaja" tags="n.pl.tra"><select lemma="employ" tags="vblex.pp"/></match>
   </rule>
   <rule c="freq 1">
-    <match lemma="kana" tags="n.pl.gen"><select lemma="chicken" tags="n.pl"/></match>
+    <match lemma="muna" tags="n.*"><select lemma="egg" tags="n.*"/></match>
+  </rule>
+  <rule c="freq 1">
+    <match lemma="kana" tags="n.*"><select lemma="chicken" tags="n.*"/></match>
   </rule>
   <rule c="freq 1">
     <match lemma="tarpeellinen" tags="adj.comp.sg.par"><select lemma="bathe" tags="vblex.inf"/></match>
@@ -42663,9 +42666,6 @@
   <rule c="freq 1">
     <match lemma="bussi" tags="n.sg.par"><select lemma="manager" tags="n.sg"/></match>
   </rule>
-  <rule c="freq 1">
-    <match lemma="kana" tags="n.pl.par"><select lemma="chicken" tags="n.pl"/></match>
-  </rule>
   <rule c="freq 5">
     <match lemma="pieni" tags="adj.comp.sg.nom"><select lemma="small" tags="adj.sint.comp"/></match>
   </rule>
@@ -48926,9 +48926,6 @@
   </rule>
   <rule c="freq 1">
     <match lemma="liittolainen" tags="n.sg.gen"><select lemma="*allying" tags=""/></match>
-  </rule>
-  <rule c="freq 1">
-    <match lemma="kana" tags="n.sg.par"><select lemma="goose" tags="n.sg"/></match>
   </rule>
   <rule c="freq 1">
     <match lemma="vuoro" tags="n.sg.par"><select lemma="translation" tags="n.sg"/></match>
