@@ -849,6 +849,10 @@
   <rule c="freq 1">
     <match lemma="vapaa" tags="adj.pos.pl.tra"><select lemma="county" tags="n.sg"/></match>
   </rule>
+  <rule c="freq 1">
+    <match lemma="vapaa" tags="adj.*"><select lemma="free-range" tags="adj"/></match>
+    <match lemma="kana" tags="n.*"/>
+  </rule>
   <rule c="freq 3">
     <match lemma="seminaari" tags="n.sg.ill"><select lemma="seminar" tags="n.sg"/></match>
   </rule>
@@ -9343,7 +9347,7 @@
     <match lemma="kevytmielinen" tags="adj.pos.sg.tra"><select lemma="frivolous" tags="adj"/></match>
   </rule>
   <rule c="freq 3">
-    <match lemma="vapaa" tags="adj.pos.sg.ess"><select lemma="free" tags="adj.sint"/></match>
+    <match lemma="vapaa" tags="adj.*"><select lemma="free" tags="adj.*"/></match>
   </rule>
   <rule c="freq 32">
     <match lemma="yksin" tags="adv"><select lemma="alone" tags="adv"/></match>

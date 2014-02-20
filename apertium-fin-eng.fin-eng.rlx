@@ -981,11 +981,12 @@ SELECT (A Sg Nom "kulta") (1 Nom)
 SELECT (A Sg Nom "kulta") (2 Nom)
 SELECT (A Sg Nom "kulta") (*-1 Nom LINK NOT *1 CLB?) (NOT -1 CLB?)
 
-SELECT (A Sg Nom "vapaa") (1 Nom)
-SELECT (A Sg Nom "vapaa") (2 Nom)
-SELECT (A Sg Nom "vapaa") (*-1 Nom LINK NOT *1 CLB?) (NOT -1 CLB?)
-SELECT (A Sg Gen "vapaa") (1 Gen)
-SELECT (A Sg Gen "vapaa") (-1 Gen)
+SELECT (adj sg nom "vapaa") (1 Nom)
+SELECT (adj sg nom "vapaa") (2 Nom)
+SELECT (adj sg nom "vapaa") (*-1 Nom LINK NOT *1 CLB?) (NOT -1 CLB?)
+SELECT (adj sg gen "vapaa") (1 Gen)
+SELECT (adj sg gen "vapaa") (-1 Gen)
+
 SELECT (A "vieras") (1 DUMMY)
 REMOVE (A "voinen") (NOT 1 DUMMY)
 SELECT (A Gen "vähä") (1 DUMMY)#  (1 Gen) (1 N)    # VäHäN AJAN KULUTTUA
