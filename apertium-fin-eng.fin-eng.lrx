@@ -849,8 +849,8 @@
   <rule c="freq 1">
     <match lemma="vapaa" tags="adj.pos.pl.tra"><select lemma="county" tags="n.sg"/></match>
   </rule>
-  <rule c="freq 1">
-    <match lemma="vapaa" tags="adj.*"><select lemma="free-range" tags="adj"/></match>
+  <rule c="freq 1" weight="2.0">
+    <match lemma="vapaa" tags="adj.*"><select lemma="free-range" tags="adj.*"/></match>
     <match lemma="kana" tags="n.*"/>
   </rule>
   <rule c="freq 3">

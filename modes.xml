@@ -14,7 +14,7 @@
       <program name="lt-proc -b">
         <file name="fin-eng.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="fin-eng.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -47,7 +47,7 @@
       <program name="lt-proc -b">
         <file name="fin-eng.autobil.bin"/>
       </program>
-      <program name="lrx-proc -t">
+      <program name="lrx-proc -m -t">
         <file name="fin-eng.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -129,7 +129,7 @@
       <program name="lt-proc -b">
         <file name="fin-eng.autobil.bin"/>
       </program>
-      <program name="lrx-proc -t">
+      <program name="lrx-proc -m -t">
         <file name="fin-eng.autolex.bin"/>
       </program>
     </pipeline>
@@ -148,7 +148,7 @@
       <program name="lt-proc -b">
         <file name="fin-eng.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="fin-eng.autolex.bin"/>
       </program>
       <program name="apertium-transfer -t -b">
@@ -170,7 +170,7 @@
       <program name="lt-proc -b">
         <file name="fin-eng.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="fin-eng.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -196,7 +196,7 @@
       <program name="lt-proc -b">
         <file name="fin-eng.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="fin-eng.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -336,7 +336,7 @@
       <program name="lt-proc -b">
         <file name="eng-fin.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="eng-fin.autolex.bin"/>
       </program>
     </pipeline>
