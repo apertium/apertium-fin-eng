@@ -15,11 +15,65 @@ AS_IF([test x$ac_cv_path_LTPRINT = x],
 AS_IF([test x$ac_cv_path_LTPRINT = xno,],
       [AC_MSG_ERROR([You do not have lt-print installed.])])
 
+AC_PATH_PROG(HFSTLEXC, hfst-lexc, no)
+if test x$ac_cv_path_HFSTLEXC = x
+then
+  AC_MSG_ERROR([You don't have hfst-lexc installed.])
+fi
+if test x$ac_cv_path_HFSTLEXC = xno
+then
+  AC_MSG_ERROR([You don't have hfst-lexc installed.])
+fi
+
+AC_PATH_PROG(HFSTTWOLC, hfst-twolc, no)
+if test x$ac_cv_path_HFSTTWOLC = x
+then
+  AC_MSG_ERROR([You don't have hfst-twolc installed.])
+fi
+if test x$ac_cv_path_HFSTTWOLC = xno
+then
+  AC_MSG_ERROR([You don't have hfst-twolc installed.])
+fi
+
 AC_PATH_PROG(CGCOMP, cg-comp, no)
-AS_IF([test x$ac_cv_path_CGCOMP = x],
-      [AC_MSG_ERROR([You do not have cg-comp installed.])])
-AS_IF([test x$ac_cv_path_CGPROC = xno],
-      [AC_MSG_ERROR([You do not have cg-comp installed.])])
+if test x$ac_cv_path_CGCOMP = x
+then
+  AC_MSG_ERROR([You don't have cg-comp installed.])
+fi
+if test x$ac_cv_path_CGCOMP = xno
+then
+  AC_MSG_ERROR([You don't have cg-comp installed.])
+fi
+
+AC_PATH_PROG(CGPROC, cg-proc, no)
+if test x$ac_cv_path_CGPROC = x
+then
+  AC_MSG_ERROR([You don't have cg-proc installed.])
+fi
+if test x$ac_cv_path_CGPROC = xno
+then
+  AC_MSG_ERROR([You don't have cg-proc installed.])
+fi
+
+AC_PATH_PROG(LRXCOMP, lrx-comp, no)
+if test x$ac_cv_path_LRXCOMP = x
+then
+  AC_MSG_ERROR([You don't have lrx-comp installed.])
+fi
+if test x$ac_cv_path_LRXCOMP = xno
+then
+  AC_MSG_ERROR([You don't have lrx-comp installed.])
+fi
+
+AC_PATH_PROG(LRXPROC, lrx-proc, no)
+if test x$ac_cv_path_LRXPROC = x
+then
+  AC_MSG_ERROR([You don't have lrx-proc installed.])
+fi
+if test x$ac_cv_path_LRXPROC = xno
+then
+  AC_MSG_ERROR([You don't have lrx-proc installed.])
+fi
 
 AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
 AS_IF([test x$ac_cv_path_PKG_CONFIG = x],
@@ -31,6 +85,8 @@ m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertiu
 
 AP_CHECK_LING([1], [apertium-fin])
 #AP_CHECK_LING([2], [apertium-eng])
+
+AP_MKINCLUDE
 
 AC_OUTPUT([Makefile])
 
