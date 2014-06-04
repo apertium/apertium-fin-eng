@@ -5,6 +5,12 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="verb">
+      <cat-item tags="vblex.*"/>
+    </def-cat>
+    <def-cat n="prnprs">
+      <cat-item tags="prn.pers.*"/>
+    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
@@ -22,6 +28,16 @@
       <attr-item tags="ins"/>
       <attr-item tags="abl"/>
     </def-attr>
+    <!-- yes english p1.sg is split :-( -->
+    <def-attr n="a_pers1">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="a_pers2">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
@@ -37,6 +53,27 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="SäÄntö: PRN-PRS V">
+      <pattern>
+          <pattern-item n="prnprs"/> <!-- I, you, he, she, it, we, they -->
+          <pattern-item n="verb"/> <!-- do -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="subjverb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/> <!-- tehdä.vblex.actv.pres -->
+              <clip pos="1" side="tl" part="a_pers1"/> <!-- p1 -->
+              <clip pos="1" side="tl" part="a_pers2"/> <!-- sg -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: SENT">
       <pattern>
