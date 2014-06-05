@@ -11,6 +11,9 @@
     <def-cat n="noun">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="adj">
+      <cat-item tags="adj.*"/>
+    </def-cat>
     <def-cat n="prnprs">
       <cat-item tags="prn.pers.*"/>
     </def-cat>
@@ -161,6 +164,27 @@
       </action>
     </rule>
 
+    <rule comment="SäÄntö: det a n">
+      <pattern>
+          <pattern-item n="det"/> <!-- to -->
+          <pattern-item n="adj"/> <!-- do -->
+          <pattern-item n="noun"/> <!-- do -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="np" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+            </tags>
+            <lu>
+              <!-- no det in fin -->
+              <clip pos="2" side="tl" part="whole"/> <!-- tehdä -->
+              <clip pos="3" side="tl" part="whole"/> <!-- tehdä -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="SäÄntö: det n">
       <pattern>
           <pattern-item n="det"/> <!-- to -->
