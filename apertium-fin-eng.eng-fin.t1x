@@ -12,7 +12,7 @@
       <cat-item tags="n.*"/>
     </def-cat>
     <def-cat n="adj">
-      <cat-item tags="adj.*"/>
+      <cat-item tags="adj"/>
     </def-cat>
     <def-cat n="prnprs">
       <cat-item tags="prn.pers.*"/>
@@ -157,7 +157,7 @@
               <clip pos="2" side="tl" part="lem"/> <!-- tehdä -->
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="infa"/> <!-- infa -->
-              <lit-tag v="sg"/> <!-- infa -->
+              <lit-tag v="sg"/> <!-- sg -->
             </lu>
           </chunk>
         </out>
@@ -166,9 +166,9 @@
 
     <rule comment="SäÄntö: det a n">
       <pattern>
-          <pattern-item n="det"/> <!-- to -->
-          <pattern-item n="adj"/> <!-- do -->
-          <pattern-item n="noun"/> <!-- do -->
+          <pattern-item n="det"/> <!-- a, the -->
+          <pattern-item n="adj"/> <!-- little -->
+          <pattern-item n="noun"/> <!-- boy -->
       </pattern>
       <action>
         <out>
@@ -178,17 +178,19 @@
             </tags>
             <lu>
               <!-- no det in fin -->
-              <clip pos="2" side="tl" part="whole"/> <!-- tehdä -->
-              <clip pos="3" side="tl" part="whole"/> <!-- tehdä -->
+              <clip pos="2" side="tl" part="whole"/> <!-- little -->
+              <b pos="2"/>
+              <clip pos="3" side="tl" part="whole"/> <!-- boy -->
             </lu>
           </chunk>
         </out>
       </action>
     </rule>
+
     <rule comment="SäÄntö: det n">
       <pattern>
-          <pattern-item n="det"/> <!-- to -->
-          <pattern-item n="noun"/> <!-- do -->
+          <pattern-item n="det"/> <!-- a, the -->
+          <pattern-item n="noun"/> <!-- boy -->
       </pattern>
       <action>
         <out>
@@ -198,7 +200,7 @@
             </tags>
             <lu>
               <!-- no det in fin -->
-              <clip pos="2" side="tl" part="whole"/> <!-- tehdä -->
+              <clip pos="2" side="tl" part="whole"/> <!-- boy -->
             </lu>
           </chunk>
         </out>
