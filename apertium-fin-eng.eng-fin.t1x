@@ -17,6 +17,12 @@
     <def-cat n="to">
       <cat-item lemma="to" tags="pr"/>
     </def-cat>
+    <def-cat n="inf">
+      <cat-item tags="vblex.*.inf"/>
+    </def-cat>
+    <def-cat n="ger">
+      <cat-item tags="vblex.*.ger"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nom">
@@ -61,6 +67,50 @@
   </section-def-macros>
   <section-rules>
 
+    <rule comment="SäÄntö: V-inf">
+      <pattern>
+          <pattern-item n="inf"/> <!-- do -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="inf" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V-INF"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="infa"/> <!-- infa -->
+              <lit-tag v="sg"/> <!-- sg -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="SäÄntö: V-ger">
+      <pattern>
+          <pattern-item n="ger"/> <!-- do -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="ger" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V-INF"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="infma"/> <!-- infa -->
+              <lit-tag v="sg"/> <!-- sg -->
+              <lit-tag v="ine"/> <!-- ine or ill FIXME -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    
     <rule comment="SäÄntö: PRN-PRS V">
       <pattern>
           <pattern-item n="prnprs"/> <!-- I, you, he, she, it, we, they -->
@@ -103,6 +153,7 @@
         </out>
       </action>
     </rule>
+
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>

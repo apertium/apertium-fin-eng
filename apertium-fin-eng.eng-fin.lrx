@@ -38,9 +38,17 @@
   <rule>
     <match lemma="head" tags="n.*"><select lemma="pää" tags="n.*"/></match>
   </rule>
+  <rule>
+    <match lemma="house" tags="n.*"><select lemma="talo" tags="n.*"/></match>
+  </rule>
 
   <rule>
     <match lemma="play" tags="vblex.*"><select lemma="pelata" tags="vblex.*"/></match>
+  </rule>
+
+  <!-- quick hack instead of structral ransfer -->
+  <rule>
+    <match lemma="have" tags="vblex.*"><select lemma="omistaa" tags="vblex.*"/></match>
   </rule>
   
   <rule>
