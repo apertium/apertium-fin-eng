@@ -40,6 +40,10 @@
   </rule>
 
   <rule>
+    <match lemma="play" tags="vblex.*"><select lemma="pelata" tags="vblex.*"/></match>
+  </rule>
+  
+  <rule>
     <match lemma="but" tags="cnjsub.*"><select lemma="mutta" tags="cnjadv.*"/></match>
   </rule>
 </rules>
