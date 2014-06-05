@@ -123,7 +123,8 @@
               <tag><lit-tag v="VP"/></tag>
             </tags>
             <lu>
-              <clip pos="2" side="tl" part="whole"/> <!-- tehdä.vblex.actv.pres -->
+              <clip pos="2" side="tl" part="lem"/> <!-- do -->
+              <clip pos="2" side="tl" part="a_verb"/> <!-- actv.pres -->
               <clip pos="1" side="tl" part="a_pers1"/> <!-- p1 -->
               <clip pos="1" side="tl" part="a_pers2"/> <!-- sg -->
             </lu>
