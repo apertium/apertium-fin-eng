@@ -2,4 +2,45 @@
   <rule>
     <match lemma="dog" tags="n.*"><select lemma="koira" tags="n.*"/></match>
   </rule>
+  <rule>
+    <match lemma="mother" tags="n.*"><select lemma="äiti" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="garden" tags="n.*"><select lemma="puutarha" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="boy" tags="n.*"><select lemma="poika" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="girl" tags="n.*"><select lemma="tyttö" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="sister" tags="n.*"><select lemma="sisko" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="dog" tags="n.*"><select lemma="koira" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="window" tags="n.*"><select lemma="ikkuna" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="hand" tags="n.*"><select lemma="käsi" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="eye" tags="n.*"><select lemma="silmä" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="tree" tags="n.*"><select lemma="puu" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="bird" tags="n.*"><select lemma="lintu" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="head" tags="n.*"><select lemma="pää" tags="n.*"/></match>
+  </rule>
+
+  <rule>
+    <match lemma="but" tags="cnjsub.*"><select lemma="mutta" tags="cnjadv.*"/></match>
+  </rule>
 </rules>
+<!-- vim: set ft=xml: -->
