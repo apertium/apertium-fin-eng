@@ -14,6 +14,9 @@
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
+    <def-cat n="to">
+      <cat-item lemma="to" tags="pr"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nom">
@@ -27,6 +30,10 @@
       <attr-item tags="loc"/>
       <attr-item tags="ins"/>
       <attr-item tags="abl"/>
+    </def-attr>
+    <def-attr n="a_verb">
+      <attr-item tags="vblex.actv"/>
+      <attr-item tags="vblex.pass"/>
     </def-attr>
     <!-- yes english p1.sg is split :-( -->
     <def-attr n="a_pers1">
@@ -75,6 +82,27 @@
       </action>
     </rule>
 
+    <rule comment="SäÄntö: to V-inf">
+      <pattern>
+          <pattern-item n="to"/> <!-- to -->
+          <pattern-item n="verb"/> <!-- do -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="subjverb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V-INF"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="infa"/> <!-- infa -->
+              <lit-tag v="sg"/> <!-- infa -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
