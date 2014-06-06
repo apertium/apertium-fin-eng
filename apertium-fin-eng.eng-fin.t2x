@@ -40,6 +40,7 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+
     <rule comment="REGLA: SN">
       <pattern>
         <pattern-item n="SN"/>

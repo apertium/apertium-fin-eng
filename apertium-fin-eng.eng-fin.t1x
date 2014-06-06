@@ -32,6 +32,9 @@
     <def-cat n="det">
       <cat-item tags="det.*"/>
     </def-cat>
+    <def-cat n="pr">
+      <cat-item tags="pr"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nom">
@@ -65,6 +68,7 @@
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="current_verb"/>
+    <def-var n="prep-lema"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="test" npar="1">
@@ -207,6 +211,26 @@
       </action>
     </rule>
 
+    <rule comment="Säätö: pr">
+      <pattern>
+        <pattern-item n="pr"/>
+      </pattern>
+      <action>
+        <let>
+          <var n="prep-lema"/><clip pos="1" part="lem" side="sl"/>
+        </let>
+        <out>
+          <chunk name="prep-lema" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PR"/></tag>
+            </tags>
+            <lu>
+              <lit v=""/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: SENT">
       <pattern>
