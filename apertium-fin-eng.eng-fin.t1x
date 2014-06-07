@@ -60,15 +60,15 @@
       <attr-item tags="vblex.actv"/>
       <attr-item tags="vblex.pass"/>
     </def-attr>
+    <def-attr n="a_tens">
+      <attr-item tags="pres"/>
+      <attr-item tags="past"/>
+    </def-attr>
     <!-- yes english p1.sg is split :-( -->
-    <def-attr n="a_pers1">
+    <def-attr n="a_pers">
       <attr-item tags="p1"/>
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
-    </def-attr>
-    <def-attr n="a_pers2">
-      <attr-item tags="sg"/>
-      <attr-item tags="pl"/>
     </def-attr>
 
   </section-def-attrs>
@@ -76,6 +76,8 @@
     <def-var n="number"/>
     <def-var n="current_verb"/>
     <def-var n="prep-lema"/>
+    <def-var n="pers"/>
+    <def-var n="persnum"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="test" npar="1">
@@ -137,6 +139,34 @@
           <pattern-item n="verb"/> <!-- do -->
       </pattern>
       <action>
+        <let>
+          <var n="pers"/><lit-tag v="p3"/>
+        </let>
+        <let>
+          <var n="persnum"/><lit-tag v="sg"/>
+        </let>
+        <choose>
+          <when>
+            <test>
+              <not><equal><clip pos="2" side="tl" part="a_pers"/><lit v=""/></equal></not>
+            </test>
+            <let><var n="pers"/><clip pos="2" side="tl" part="a_pers"/></let>
+          </when>
+          <otherwise>
+            <let><var n="pers"/><clip pos="1" side="tl" part="a_pers"/></let>
+          </otherwise>
+        </choose>
+        <choose>
+          <when>
+            <test>
+              <not><equal><clip pos="2" side="tl" part="a_num"/><lit v=""/></equal></not>
+            </test>
+            <let><var n="persnum"/><clip pos="2" side="tl" part="a_num"/></let>
+          </when>
+          <otherwise>
+            <let><var n="persnum"/><clip pos="1" side="tl" part="a_num"/></let>
+          </otherwise>
+        </choose>
         <out>
           <chunk name="subjverb" case="caseFirstWord">
             <tags>
@@ -144,9 +174,10 @@
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- do -->
-              <clip pos="2" side="tl" part="a_verb"/> <!-- actv.pres -->
-              <clip pos="1" side="tl" part="a_pers1"/> <!-- p1 -->
-              <clip pos="1" side="tl" part="a_pers2"/> <!-- sg -->
+              <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <clip pos="2" side="tl" part="a_tens"/> <!-- pres -->
+              <var n="pers"/>
+              <var n="persnum"/>
             </lu>
           </chunk>
         </out>
