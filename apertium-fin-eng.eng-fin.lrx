@@ -46,6 +46,11 @@
     <match lemma="play" tags="vblex.*"><select lemma="pelata" tags="vblex.*"/></match>
   </rule>
 
+  <rule>
+    <match lemma="little" tags="adj"><select lemma="pieni" tags="adj"/></match>
+  </rule>
+  
+
   <!-- quick hack instead of structral ransfer -->
   <rule>
     <match lemma="have" tags="vblex.*"><select lemma="omistaa" tags="vblex.*"/></match>

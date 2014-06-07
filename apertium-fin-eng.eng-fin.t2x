@@ -46,6 +46,26 @@
           <test><equal><clip pos="1" part="lem"/><lit v="in"/></equal></test>
           <let><var n="prepcase"/><lit-tag v="ine"/></let>
         </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="of"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="ela"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="into"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="ill"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="at"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="ill"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="on"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="ade"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="from"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="abl"/></let>
+        </when>
       </choose>
     </def-macro>
   </section-def-macros>
