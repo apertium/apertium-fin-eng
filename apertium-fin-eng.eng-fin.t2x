@@ -2,9 +2,12 @@
 <!-- -*- nxml -*- -->
 <interchunk>
   <section-def-cats>
-    <def-cat n="SN">
-      <cat-item tags="SN"/>
-      <cat-item tags="SN.*"/>
+    <def-cat n="NP">
+      <cat-item tags="NP"/>
+      <cat-item tags="NP.*"/>
+    </def-cat>
+    <def-cat n="PREP">
+      <cat-item tags="PR"/>
     </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
@@ -25,25 +28,55 @@
       <attr-item tags="ins"/>
       <attr-item tags="loc"/>
       <attr-item tags="abl"/>
+      <attr-item tags="CD"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
-    <def-var n="POST"/>
+    <def-var n="prepcase"/>
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test1" npar="1">
+    <def-macro n="prep1" npar="1">
       <let>
-        <var n="POST"/>
-        <lit v=""/>
+        <var n="prepcase"/>
+        <lit-tag v="nom"/>
       </let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="in"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="ine"/></let>
+        </when>
+      </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
 
+    <rule comment="Sääntö: PR NP">
+      <pattern>
+        <pattern-item n="PREP"/>
+        <pattern-item n="NP"/>
+      </pattern>
+      <action>
+        <call-macro n="prep1">
+          <with-param pos="1"/>
+        </call-macro>
+        <let>
+          <clip pos="2" part="a_cas"/>
+          <var n="prepcase"/>
+        </let>
+        <out>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: SN">
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="NP"/>
       </pattern>
       <action>
         <out>

@@ -40,6 +40,13 @@
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
+    <def-attr n="a_adj">
+      <attr-item tags="adj"/>
+    </def-attr>
+    <def-attr n="a_num">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
@@ -179,12 +186,19 @@
           <chunk name="np" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="CD"/></tag>
             </tags>
             <lu>
               <!-- no det in fin -->
-              <clip pos="2" side="tl" part="whole"/> <!-- little -->
+              <clip pos="2" side="tl" part="lem"/> <!-- little -->
+              <clip pos="2" side="tl" part="a_adj"/> <!-- adj -->
+              <clip pos="3" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="2"/>
               <b pos="2"/>
-              <clip pos="3" side="tl" part="whole"/> <!-- boy -->
+              <clip pos="3" side="tl" part="lem"/> <!-- boy -->
+              <clip pos="3" side="tl" part="a_nom"/> <!-- n, np -->
+              <clip pos="3" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="2"/>
             </lu>
           </chunk>
         </out>
@@ -201,10 +215,14 @@
           <chunk name="np" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="CD"/></tag>
             </tags>
             <lu>
               <!-- no det in fin -->
-              <clip pos="2" side="tl" part="whole"/> <!-- boy -->
+              <clip pos="2" side="tl" part="lem"/> <!-- boy -->
+              <clip pos="2" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="2"/>
             </lu>
           </chunk>
         </out>
@@ -220,7 +238,7 @@
           <var n="prep-lema"/><clip pos="1" part="lem" side="sl"/>
         </let>
         <out>
-          <chunk name="prep-lema" case="caseFirstWord">
+          <chunk namefrom="prep-lema" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="PR"/></tag>
             </tags>
