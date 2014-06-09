@@ -28,16 +28,16 @@ TARGETS_COMMON=$(TARGETS_MONOLING) $(TARGETS_TRANSFER)
 ###############################################################################
 
 # currently we copy stuff from another dir
-$(PREFIX1).automorf.hfst: $(AP_LIB1)/$(LANG1).automorf.hfst
+$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
 	cp -v -f $< $@
 
-$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.bin
+$(PREFIX1).automorf.bin: $(AP_SRC1)/$(LANG1).automorf.bin
 	cp -v -f $< $@
 
-$(PREFIX2).autogen.bin: $(AP_LIB1)/$(LANG1).autogen.bin
+$(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 	cp -v -f $< $@
 
-$(PREFIX2).autogen.hfst: $(AP_LIB1)/$(LANG1).autogen.hfst
+$(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
 	cp -v -f $< $@
 
 ###############################################################################
