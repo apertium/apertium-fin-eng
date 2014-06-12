@@ -49,6 +49,9 @@
   <rule>
     <match lemma="little" tags="adj"><select lemma="pieni" tags="adj"/></match>
   </rule>
+  <rule>
+    <match lemma="happy" tags="adj"><select lemma="iloinen" tags="adj"/></match>
+  </rule>
   
 
   <!-- quick hack instead of structral ransfer -->

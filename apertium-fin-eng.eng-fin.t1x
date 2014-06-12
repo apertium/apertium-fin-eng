@@ -5,8 +5,12 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
-    <def-cat n="verb">
-      <cat-item tags="vblex.*"/>
+    <def-cat n="fverb">
+      <cat-item tags="vblex.actv.*"/>
+      <cat-item tags="vblex.pass.*"/>
+    </def-cat>
+    <def-cat n="infverb">
+      <cat-item tags="vblex.inf"/>
     </def-cat>
     <def-cat n="noun">
       <cat-item tags="n.*"/>
@@ -57,6 +61,7 @@
       <attr-item tags="abl"/>
     </def-attr>
     <def-attr n="a_verb">
+      <attr-item tags="vblex"/>
       <attr-item tags="vblex.actv"/>
       <attr-item tags="vblex.pass"/>
     </def-attr>
@@ -136,7 +141,7 @@
     <rule comment="SäÄntö: PRN-PRS V">
       <pattern>
           <pattern-item n="prnprs"/> <!-- I, you, he, she, it, we, they -->
-          <pattern-item n="verb"/> <!-- do -->
+          <pattern-item n="fverb"/> <!-- do -->
       </pattern>
       <action>
         <let>
@@ -187,7 +192,7 @@
     <rule comment="SäÄntö: to V-inf">
       <pattern>
           <pattern-item n="to"/> <!-- to -->
-          <pattern-item n="verb"/> <!-- do -->
+          <pattern-item n="infverb"/> <!-- do -->
       </pattern>
       <action>
         <out>
@@ -206,6 +211,49 @@
       </action>
     </rule>
 
+    <rule comment="SäÄntö:  V">
+      <pattern>
+          <pattern-item n="fverb"/> <!-- do -->
+      </pattern>
+      <action>
+        <let>
+          <var n="pers"/><lit-tag v="p3"/>
+        </let>
+        <let>
+          <var n="persnum"/><lit-tag v="sg"/>
+        </let>
+        <choose>
+          <when>
+            <test>
+              <not><equal><clip pos="1" side="tl" part="a_pers"/><lit v=""/></equal></not>
+            </test>
+            <let><var n="pers"/><clip pos="1" side="tl" part="a_pers"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when>
+            <test>
+              <not><equal><clip pos="1" side="tl" part="a_num"/><lit v=""/></equal></not>
+            </test>
+            <let><var n="persnum"/><clip pos="1" side="tl" part="a_num"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="unkv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- do -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <clip pos="1" side="tl" part="a_tens"/> <!-- pres -->
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="SäÄntö: det a n">
       <pattern>
           <pattern-item n="det"/> <!-- a, the -->
