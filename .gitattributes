@@ -19,6 +19,7 @@
 /apertium-fin-eng.fin-eng.t1x -text
 /apertium-fin-eng.fin-eng.t2x -text
 /apertium-fin-eng.fin-eng.t3x -text
+/apertium-fin-eng.pc.in -text
 /autogen.sh -text
 /configure.ac -text
 dev/debug2dixesandlexces.bash -text

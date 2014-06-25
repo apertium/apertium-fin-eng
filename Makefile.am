@@ -184,6 +184,10 @@ apertium_fin_eng_DATA=$(TARGETS_COMMON) \
 	$(BASENAME).$(PREFIX1).t3x \
 	$(BASENAME).$(PREFIX2).t3x
 
+pkgconfigdir = $(datarootdir)/pkgconfig
+pkgconfig_DATA = apertium-fin-eng.pc
+
+
 # All modes are created by the same goal, listing several will just give problems with make -j2
 noinst_DATA=modes/$(PREFIX1).mode modes/$(PREFIX2).mode
 

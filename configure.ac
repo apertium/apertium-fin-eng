@@ -88,5 +88,5 @@ AP_CHECK_LING([1], [apertium-fin])
 
 AP_MKINCLUDE
 
-AC_OUTPUT([Makefile])
+AC_OUTPUT([Makefile apertium-fin-eng.pc])
 
