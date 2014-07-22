@@ -96,11 +96,11 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 ## Disambiguation rules 
 ###############################################################################
 
-$(PREFIX1).rlx.bin: $(BASENAME).$(PREFIX1).rlx
-	cg-comp $< $@
+$(PREFIX1).rlx.bin: $(BASENAME).$(PREFIX1).rlx $(CGCOMP)
+	$(CGCOMP) $< $@
 
-$(PREFIX2).rlx.bin: $(BASENAME).$(PREFIX2).rlx
-	cg-comp $< $@
+$(PREFIX2).rlx.bin: $(BASENAME).$(PREFIX2).rlx $(CGCOMP)
+	$(CGCOMP) $< $@
 
 
 ###############################################################################
