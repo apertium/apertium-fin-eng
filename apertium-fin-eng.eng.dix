@@ -55,6 +55,7 @@
     <!-- pron -->
     <sdef n="dem" />
     <sdef n="qnt" />
+    <sdef n="pers" />
 
     <!-- gender -->
     <sdef n="nt" />
@@ -273,9 +274,9 @@
 </pardef>
 
 <pardef n="/a__det">
-  <e r="RL"><p><l><a/>a</l>     <r><s n="det"/><s n="ind"/></r></p></e>
-  <e r="LR"><p><l>a</l>         <r><s n="det"/><s n="ind"/></r></p></e>
-  <e r="LR"><p><l>an</l>        <r><s n="det"/><s n="ind"/></r></p></e>
+  <e r="RL"><p><l><a/>a</l>     <r>a<s n="det"/><s n="ind"/></r></p></e>
+  <e r="LR"><p><l>a</l>         <r>a<s n="det"/><s n="ind"/></r></p></e>
+  <e r="LR"><p><l>an</l>        <r>a<s n="det"/><s n="ind"/></r></p></e>
 </pardef>
 
 <pardef n="another__det">
@@ -365,10 +366,17 @@
   <e>       <p><l></l>          <r><s n="prn"/><s n="rel"/><s n="adv"/></r></p></e>
 </pardef>
 
-<!-- {{{{ interjections -->
+<pardef n="h/e__prn">
+  <e><p><l>e</l><r><s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
+</pardef>
+
+<!-- }}} -->
+
+<!-- {{{ interjections -->
 <pardef n="hello__ij">
   <e>       <p><l></l>          <r><s n="ij"/></r></p></e>
 </pardef>
+<!-- }}} -->
 
 <!-- {{{ nouns -->
 
@@ -715,6 +723,9 @@
   <e>       <p><l>ves</l>       <r><s n="n"/><s n="pl"/></r></p></e>
   <e>       <p><l>fe</l>        <r><s n="n"/><s n="sg"/></r></p></e>
 </pardef>
+
+<!-- }}} -->
+
 <!-- {{{ propers -->
 
 
@@ -2223,6 +2234,7 @@
 
     <e lm="and"><i>and</i><par n="and__cnjcoo"/></e>
     <e lm="but"><i>but</i><par n="and__cnjcoo"/></e>
+    <e lm="or"><i>or</i><par n="and__cnjcoo"/></e>
     <e lm="that"><i>that</i><par n="that__cnjsub"/></e>
 
     <!-- SECTION: Prepositions -->
@@ -2306,7 +2318,8 @@
 
     <e lm="this"><i>th</i><par n="th/is__prn"/></e>
     <e lm="that"><i>th</i><par n="th/at__prn"/></e>
-
+    <e lm="which"><i>which</i><par n="what__prn"/></e>
+    <e lm="he"><p><l>h</l><r>he</r></p><par n="h/e__prn"/></e>
 
   <!-- nouns -->
   
