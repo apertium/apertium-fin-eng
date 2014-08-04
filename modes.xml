@@ -29,8 +29,8 @@
         <file name="apertium-fin-eng.fin-eng.t3x"/>
         <file name="fin-eng.t3x.bin"/>
       </program>
-      <program name="hfst-proc $1">
-        <file name="fin-eng.autogen.hfst"/>
+      <program name="lt-proc $1">
+        <file name="fin-eng.autogen.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -62,8 +62,8 @@
         <file name="apertium-fin-eng.fin-eng.t3x"/>
         <file name="fin-eng.t3x.bin"/>
       </program>
-      <program name="hfst-proc -d">
-        <file name="fin-eng.autogen.hfst"/>
+      <program name="lt-proc -d">
+        <file name="fin-eng.autogen.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -218,8 +218,8 @@
 
   <mode name="eng-fin" install="yes">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>
@@ -251,8 +251,8 @@
 
   <mode name="eng-fin-debug" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>
@@ -284,16 +284,16 @@
   
   <mode name="eng-fin-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
     </pipeline>
   </mode>
 
   <mode name="eng-fin-disam" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-conv -a"/>
       <program name="vislcg3 --trace --grammar">
@@ -305,8 +305,8 @@
 
   <mode name="eng-fin-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>
@@ -317,8 +317,8 @@
 
   <mode name="eng-fin-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>
@@ -332,8 +332,8 @@
 
   <mode name="eng-fin-lextor" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>
@@ -350,8 +350,8 @@
 
   <mode name="eng-fin-transfer" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>
@@ -372,8 +372,8 @@
 
   <mode name="eng-fin-interchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>
@@ -398,8 +398,8 @@
 
   <mode name="eng-fin-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
-        <file name="eng-fin.automorf.hfst"/>
+      <program name="lt-proc -e -w">
+        <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
         <file name="eng-fin.rlx.bin"/>

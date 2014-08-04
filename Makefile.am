@@ -48,7 +48,7 @@ $(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix
 	apertium-validate-dictionary $<
 	lt-comp rl $< $@
 
-$(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix
+$(PREFIX2).automorf.bin: $(BASENAME).$(LANG2).dix
 	apertium-validate-dictionary $<
 	lt-comp lr $< $@
 
