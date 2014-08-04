@@ -10,8 +10,8 @@ PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=apertium-$(PREFIX1)
 
-TARGETS_MONOLING=$(PREFIX1).automorf.hfst $(PREFIX1).autogen.hfst \
-				 $(PREFIX2).automorf.hfst $(PREFIX2).autogen.hfst 
+TARGETS_MONOLING=$(PREFIX1).automorf.hfst $(PREFIX1).autogen.bin \
+				 $(PREFIX2).automorf.bin $(PREFIX2).autogen.hfst 
 TARGETS_TRANSFER=$(PREFIX2).t1x.bin $(PREFIX1).t1x.bin  \
 				 $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
 				 $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
@@ -44,32 +44,13 @@ $(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
 ## eng transducer
 ###############################################################################
 
-.deps/$(LANG2).twol.hfst: $(BASENAME).$(LANG2).twol .deps/.d
-	hfst-twolc $< -o $@
+$(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix
+	apertium-validate-dictionary $<
+	lt-comp rl $< $@
 
-.deps/$(LANG2).RL.lexc: $(BASENAME).$(LANG2).lexc .deps/.d
-	cat $< | grep -v 'Dir/LR' > $@
-
-.deps/$(LANG2).LR.lexc: $(BASENAME).$(LANG2).lexc .deps/.d
-	cat $< | grep -v 'Dir/RL' > $@
-
-.deps/$(LANG2).RL.lexc.hfst: .deps/$(LANG2).RL.lexc
-	hfst-lexc --format foma $< -o $@
-
-.deps/$(LANG2).LR.lexc.hfst: .deps/$(LANG2).LR.lexc
-	hfst-lexc --format foma $< -o $@
-
-.deps/$(LANG2).RL.hfst: .deps/$(LANG2).RL.lexc.hfst .deps/$(LANG2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG2).RL.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-.deps/$(LANG2).LR.hfst: .deps/$(LANG2).LR.lexc.hfst .deps/$(LANG2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG2).LR.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-$(PREFIX1).autogen.hfst: .deps/$(LANG2).RL.hfst
-	hfst-fst2fst -O $< -o $@
-
-$(PREFIX2).automorf.hfst: .deps/$(LANG2).LR.hfst
-	hfst-invert $< | hfst-fst2fst -O -o $@
+$(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix
+	apertium-validate-dictionary $<
+	lt-comp lr $< $@
 
 ###############################################################################
 ## Debugging transducers (for testvoc)
