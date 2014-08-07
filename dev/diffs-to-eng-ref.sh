@@ -13,11 +13,13 @@ done
 echo Original results are in analdiffs
 diffstat analdiffs
 
-echo -e 'Multichar_Symbols\n\n%<n%>\n\n\nLEXICON Root\n' > /tmp/tagdict.lexc
+echo -e 'Multichar_Symbols\n\n%<n%>\n\n\nLEXICON Root\n\nNUMS ; \n' > /tmp/tagdict.lexc
 cat $1/*.handtagged* | sed  's/\//\t/1'  | sed 's/\^//g' | sed 's/\$//g' |\
     sed 's/</%</g' | sed 's/>/%>/g' | awk '{print $2":"$1}' |\
     sed 's/$/ # ;/g' | sort -u | grep -v '\*' | grep -v '"' |\
     grep -P '[a-zA-Z].*:[a-zA-Z].*' >> /tmp/tagdict.lexc
+echo -e 'LEXICON NUMS\n\n<[%0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9]+>  DIGITLEX ;\n\nLEXICON DIGITLEX\n\n%<num%>%<sg%>: # ; ' >> /tmp/tagdict.lexc 
+
 
 hfst-lexc -v -d /tmp/tagdict.lexc |\
     hfst-invert |\
