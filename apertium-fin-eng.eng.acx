@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<analysis-chars>
+  <char value="'">
+    <equiv-char value="’"/>
+  </char>
+  <char value="-">
+    <equiv-char value="‐"/>
+  </char>
+</analysis-chars>

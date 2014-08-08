@@ -44,13 +44,13 @@ $(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
 ## eng transducer
 ###############################################################################
 
-$(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix
+$(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix $(BASENAME).$(LANG2).acx
 	apertium-validate-dictionary $<
-	lt-comp rl $< $@
+	lt-comp rl $< $@ $(BASENAME).$(LANG2).acx
 
-$(PREFIX2).automorf.bin: $(BASENAME).$(LANG2).dix
+$(PREFIX2).automorf.bin: $(BASENAME).$(LANG2).dix $(BASENAME).$(LANG2).acx
 	apertium-validate-dictionary $<
-	lt-comp lr $< $@
+	lt-comp lr $< $@ $(BASENAME).$(LANG2).acx
 
 ###############################################################################
 ## Debugging transducers (for testvoc)
@@ -146,9 +146,15 @@ debug: .deps/$(LANG1).LR-debug.hfst .deps/$(LANG2).LR-debug.hfst
 ###############################################################################
 
 EXTRA_DIST=$(PREFIX1).prob $(PREFIX2).prob \
-           $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(BASENAME).$(PREFIX1).t3x \
-           $(BASENAME).$(PREFIX2).t1x $(BASENAME).$(PREFIX2).t2x $(BASENAME).$(PREFIX2).t3x \
-           modes.xml
+		   $(BASENAME).$(PREFIX1).t1x \
+		   $(BASENAME).$(PREFIX1).t2x \
+		   $(BASENAME).$(PREFIX1).t3x \
+		   $(BASENAME).$(PREFIX2).t1x \
+		   $(BASENAME).$(PREFIX2).t2x \
+		   $(BASENAME).$(PREFIX2).t3x \
+		   $(BASENAME).$(LANG2).dix \
+		   $(BASENAME).$(LANG2).acx \
+		   modes.xml
 
 ###############################################################################
 ## Installation
