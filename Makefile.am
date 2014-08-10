@@ -163,13 +163,13 @@ EXTRA_DIST=$(PREFIX1).prob $(PREFIX2).prob \
 apertium_fin_engdir=$(prefix)/share/apertium/$(BASENAME)/
 
 apertium_fin_eng_DATA=$(TARGETS_COMMON) \
-                    $(PREFIX1).prob $(PREFIX2).prob \
-	$(BASENAME).$(PREFIX1).t1x \
-	$(BASENAME).$(PREFIX2).t1x \
-	$(BASENAME).$(PREFIX1).t2x \
-	$(BASENAME).$(PREFIX2).t2x \
-	$(BASENAME).$(PREFIX1).t3x \
-	$(BASENAME).$(PREFIX2).t3x
+					  $(PREFIX1).prob $(PREFIX2).prob \
+					  $(BASENAME).$(PREFIX1).t1x \
+					  $(BASENAME).$(PREFIX2).t1x \
+					  $(BASENAME).$(PREFIX1).t2x \
+					  $(BASENAME).$(PREFIX2).t2x \
+					  $(BASENAME).$(PREFIX1).t3x \
+					  $(BASENAME).$(PREFIX2).t3x
 
 pkgconfigdir = $(datarootdir)/pkgconfig
 pkgconfig_DATA = apertium-fin-eng.pc
