@@ -21301,6 +21301,10 @@
   <rule c="freq 2">
     <match lemma="tulkinta" tags="n.sg.ine"><select lemma="interpretation" tags="n.*"/></match>
   </rule>
+  <rule c="freq X">
+    <match lemma="lähteä" tags="vblex.actv.pres.p3.sg"><select lemma="cure" tags="vblex.*"/></match>
+    <match tags="vblex.actv.infma.sg.ade"/>
+  </rule>
   <rule c="freq 1">
     <match lemma="lähteä" tags="vblex.actv.pres.p3.sg.qst"><select lemma="repair" tags="n.*"/></match>
   </rule>

@@ -56,6 +56,9 @@
         <cat-item tags="vblex.*.*.p1.*"/>
         <cat-item tags="vblex.*.*.p2.*"/>
     </def-cat>
+    <def-cat n="infma-ade">
+      <cat-item tags="vblex.actv.infma.sg.ade"/>
+    </def-cat>
     <def-cat n="infma-ine">
       <cat-item tags="vblex.actv.infma.sg.ine"/>
     </def-cat>
@@ -112,6 +115,10 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_voice">
+      <attr-item tags="actv"/>
+      <attr-item tags="pasv"/>
+    </def-attr>
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
       <attr-item tags="vblex.actv"/>
@@ -127,6 +134,7 @@
     </def-attr>
     <def-attr n="moodtense">
       <attr-item tags="past"/>
+      <attr-item tags="pri"/>
       <attr-item tags="pres"/>
       <attr-item tags="cond"/>
       <attr-item tags="imp"/>
@@ -265,12 +273,13 @@
           <choose>
             <when>
               <test><or> 
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pres"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="cond"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="imp"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pot"/></equal>
         </or></test>
 
-              <let><clip pos="1" side="tl" part="moodtense"/><lit-tag v="pres"/></let>
+              <let><clip pos="1" side="tl" part="moodtense"/><lit-tag v="pri"/></let>
             </when>
         </choose>
     </def-macro>
@@ -281,7 +290,7 @@
             <when>
               <test><or> <!-- Nom/Acc and locative cases -->
                 <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>-->
-                <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>-->
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ela"/></equal>
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ill"/></equal>
@@ -295,7 +304,7 @@
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ess"/></equal>
         </or></test>
 
-              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit v=""/></let>
               <let><var n="sntype"/><lit-tag v="SN"/></let>
             </when>
             <when>
@@ -633,6 +642,33 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: infma-ade">
+      <pattern>
+        <pattern-item n="infma-ade"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+        <out>
+          <chunk name="ger" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <lit v="by"/>
+              <lit-tag v="pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <lit-tag v="ger"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: infma-ine">
       <pattern>
         <pattern-item n="infma-ine"/>
@@ -902,7 +938,7 @@
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_verb"/>
-              <lit-tag v="pres"/>
+              <lit-tag v="pri"/>
             </lu>
           </chunk>
         </out>
@@ -967,6 +1003,9 @@
          <pattern-item n="verb-pres"/>
       </pattern>
       <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
         <choose>
           <when>
             <test>
@@ -982,6 +1021,7 @@
             <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
           </when>
         </choose>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
      
         <out> 
           <chunk name="v" case="caseFirstWord">
