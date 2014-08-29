@@ -56,6 +56,9 @@
     <match lemma="vesi" tags="n.*"/>
   </rule>
   <rule>
+    <match lemma="peitto" tags="n.*"><select lemma="blanket" tags="n.*"/></match>
+  </rule>
+  <rule>
     <match lemma="laskea" tags="vblex.*"><select lemma="count" tags="vblex.*"/></match>
   </rule>
   <rule>
@@ -24921,7 +24924,7 @@
     <match lemma="kuluttaja" tags="n.pl.gen"><select lemma="consumer" tags="n.*"/></match>
   </rule>
   <rule c="freq 2">
-    <match lemma="turha" tags="adj.pos.sg.nom"><select lemma="*superfluous" tags=""/></match>
+    <match lemma="turha" tags="adj.pos.*"><select lemma="useless" tags="adj.*"/></match>
   </rule>
   <rule c="freq 1">
     <match lemma="ryöstää" tags="vblex.actv.infa.sg.tra.px2pl"><select lemma="bait" tags="n.*"/></match>
