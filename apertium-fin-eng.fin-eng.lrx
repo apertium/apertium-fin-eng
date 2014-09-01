@@ -12,11 +12,23 @@
     </or>
   </rule>
   <rule>
+    <match lemma="sitten" tags="adv"><select lemma="then" tags="adv"/></match>
+  </rule>
+  <rule>
     <match lemma="kuulua" tags="vblex.*"><select lemma="belong" tags="vblex.*"/></match>
     <match tags="n.*.ill"/>
   </rule>
   <rule>
+    <match lemma="tehdä" tags="vblex.*"><select lemma="do" tags="vblex.*"/></match>
+  </rule>
+  <rule>
     <match lemma="pitää" tags="vblex.*"><select lemma="hold" tags="vblex.*"/></match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="pitää" tags="vblex.*">
+      <select lemma="must"/>
+    </match>
+    <match tags="vblex.*.infa.*"/>
   </rule>
   <rule>
     <match lemma="pitää" tags="vblex.*">
