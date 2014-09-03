@@ -81,6 +81,9 @@ AS_IF([test x$ac_cv_path_PKG_CONFIG = x],
 AS_IF([test x$ac_cv_path_PKG_CONFIG = xno],
       [AC_MSG_ERROR([You do not have pkg-config installed.])])
 
+AC_PATH_PROG([NIST_BLEU13A], [mteval-v13a.pl], [false])
+AC_PATH_PROG([WRAP_XML], [wrap-xml.prompsit-version.sh], [false])
+
 m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertium.m4 in ACLOCAL_PATH? See: http://wiki.apertium.org/wiki/Installation_troubleshooting])])
 
 AP_CHECK_LING([1], [apertium-fin])

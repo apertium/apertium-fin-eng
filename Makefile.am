@@ -181,6 +181,38 @@ noinst_DATA=modes/$(PREFIX1).mode modes/$(PREFIX2).mode
 
 install-data-local: install-modes
 
+# Test
+
+%.eng.translated: %.fin.text
+	apertium -d . fin-eng < $< > $@
+
+%.fin.translated: %.eng.text
+	apertium -d . eng-fin < $< > $@
+
+%.eng.text.src.sgml: %.eng.text
+	$(WRAP_XML) src en fi $< | grep -v "<seg id[^>]*></seg>" > $@
+
+%.fin.text.src.sgml: %.fin.text
+	$(WRAP_XML) src fi en $< | grep -v "<seg id[^>]*></seg>" > $@
+
+%.fin.text.ref.sgml: %.fin.text
+	$(WRAP_XML) ref en fi $< | grep -v "<seg id[^>]*></seg>" > $@
+
+%.eng.text.ref.sgml: %.eng.text
+	$(WRAP_XML) ref fi en $< | grep -v "<seg id[^>]*></seg>" > $@
+
+%.fin.translated.test.sgml: %.fin.translated
+	tr -d '#@*' < $< | $(WRAP_XML) tst en fi | grep -v "<seg id[^>]*></seg>" > $@
+
+%.eng.translated.test.sgml: %.fin.translated
+	tr -d '#@*' < $< | $(WRAP_XML) tst fi en | grep -v "<seg id[^>]*></seg>" > $@
+
+%.fin-eng.nistbleu: %.eng.translated.test.sgml %.fin.text.src.sgml %.eng.text.ref.sgml
+	$(NIST_BLEU13A) -s $*.fin.text.src.sgml -r $*.eng.text.ref.sgml -t $*.eng.translated.test.sgml > $@
+
+%.eng-fin.nistbleu: %.fin.translated.test.sgml %.eng.text.src.sgml %.fin.text.ref.sgml
+	$(NIST_BLEU13A) -s $*.eng.text.src.sgml -r $*.fin.text.ref.sgml -t $*.eng.translated.test.sgml > $@
+
 ###############################################################################
 ## Cleanup
 ###############################################################################
