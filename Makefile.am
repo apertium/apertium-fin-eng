@@ -211,7 +211,7 @@ install-data-local: install-modes
 	$(NIST_BLEU13A) -s $*.fin.text.src.sgml -r $*.eng.text.ref.sgml -t $*.eng.translated.test.sgml > $@
 
 %.eng-fin.nistbleu: %.fin.translated.test.sgml %.eng.text.src.sgml %.fin.text.ref.sgml
-	$(NIST_BLEU13A) -s $*.eng.text.src.sgml -r $*.fin.text.ref.sgml -t $*.eng.translated.test.sgml > $@
+	$(NIST_BLEU13A) -s $*.eng.text.src.sgml -r $*.fin.text.ref.sgml -t $*.fin.translated.test.sgml > $@
 
 ###############################################################################
 ## Cleanup
