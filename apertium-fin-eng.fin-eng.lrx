@@ -7874,6 +7874,9 @@
     <match lemma="vastustaa" tags="vblex.actv.pprs.pos.sg.gen"><select lemma="opposition" tags="n.*"/></match>
   </rule>
   <rule c="freq 3">
+    <match lemma="voimakas" tags="adj.pos.*"><select lemma="strong" tags="adj.sint"/></match>
+  </rule>
+  <rule c="freq 3">
     <match lemma="voimakas" tags="adj.pos.pl.nom"><select lemma="strong" tags="adj.sint"/></match>
   </rule>
   <rule c="freq 1">
