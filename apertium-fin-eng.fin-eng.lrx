@@ -20285,7 +20285,7 @@
     <match lemma="ryhtyä" tags="vblex.actv.pprs.pos.sg.gen"><select lemma="coffee" tags="n.*"/></match>
   </rule>
   <rule c="freq 3">
-    <match lemma="sanoa" tags="vblex.actv.past.conneg.sg"><select lemma="say" tags="vblex.pp"/></match>
+    <match lemma="sanoa" tags="vblex.*"><select lemma="say" tags="vblex.*"/></match>
   </rule>
   <rule c="freq 1">
     <match lemma="Ministeriö" tags="n.sg.gen"><select lemma="Routine" tags="adj"/></match>
@@ -23646,7 +23646,7 @@
     <match lemma="tosiseikka" tags="n.pl.ela"><select lemma="fact" tags="n.*"/></match>
   </rule>
   <rule c="freq 27">
-    <match lemma="raha" tags="n.sg.gen"><select lemma="money" tags="n.*"/></match>
+    <match lemma="raha" tags="n.*"><select lemma="money" tags="n.*"/></match>
   </rule>
   <rule c="freq 1">
     <match lemma="äänestää" tags="vblex.actv.infma.sg.ine"><select lemma="catalogue" tags="n.*"/></match>
@@ -54343,6 +54343,10 @@
   </rule>
   <rule c="freq 1">
     <match lemma="rauhoittaa" tags="vblex.actv.pprs.pos.sg.ela"><select lemma="reassure" tags="vblex.pri.p3.sg"/></match>
+  </rule>
+  <rule c="freq 4">
+    <match lemma="suosikki"/>
+    <match lemma="liike" tags="n.*"><select lemma="shop" tags="n.*"/></match>
   </rule>
   <rule c="freq 4">
     <match lemma="liike" tags="n.sg.nom"><select lemma="movement" tags="n.*"/></match>
