@@ -12,6 +12,12 @@
     </or>
   </rule>
   <rule>
+    <match lemma="olut" tags="n.*"><select lemma="beer" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="viini" tags="n.*"><select lemma="wine" tags="n.*"/></match>
+  </rule>
+  <rule>
     <match lemma="sitten" tags="adv"><select lemma="then" tags="adv"/></match>
   </rule>
   <rule>
