@@ -105,6 +105,9 @@
       <cat-item tags="sent"/>
     </def-cat>
 
+    <def-cat n="verb-pprs">
+        <cat-item tags="vblex.*.pprs.*"/>
+    </def-cat>
     <def-cat n="verb-past">
         <cat-item tags="vblex.*.past.*"/>
     </def-cat>
@@ -646,6 +649,27 @@
           </lu>
           </chunk>
         </out>      
+      </action>
+    </rule>
+
+    <rule comment="REGLA: verb-pprs">
+      <pattern>
+        <pattern-item n="verb-pprs"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+        <out>
+          <chunk name="ger" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <lit-tag v="ger"/>
+            </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 

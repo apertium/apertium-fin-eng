@@ -11,11 +11,45 @@
       <match tags="n.*.gen"/>
     </or>
   </rule>
+  <rule weight="2.0">
+    <match lemma="ihan" tags="adv"><select lemma="totally"/></match>
+    <match lemma="vittu" tags="n.sg.gen"><select lemma="fucking" tags="n.*"/></match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="oksettaa" tags="vblex.*.pprs.*"/>
+    <match lemma="haju" tags="n.*"><select lemma="stench" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="edestakaisin" tags="adv"><select lemma="around"/></match>
+  </rule>
   <rule>
     <match lemma="pyöreä" tags="adj.*"><select lemma="round" tags="adj.*"/></match>
   </rule>
-  <rule>
+  <rule weight="2.0">
+    <match lemma="täyttää" tags="vblex.*"><select lemma="pack" tags="vblex.*"/></match>
+    <or><match lemma="auto" tags="n.*.par"/><match lemma="auto" tags="n.*.par.*"/></or>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="täyttää" tags="vblex.*"><select lemma="turn" tags="vblex.*"/></match>
+    <or><match tags="num.*"/><match tags="num"/></or>
+  </rule>
+  <rule weight="2.0">
     <match lemma="täyttää" tags="vblex.*"><select lemma="fulfil" tags="vblex.*"/></match>
+    <match/>
+    <match lemma="velvollisuus" tags="n.*"><select lemma="obligation" tags="n.*"/></match>
+  </rule>
+   <rule weight="2.0">
+    <match lemma="täyttää" tags="vblex.*"><select lemma="fulfil" tags="vblex.*"/></match>
+    <or>
+    <match lemma="pyöreä" tags="adj.*"><select lemma="round" tags="adj.*"/></match>
+    <match lemma="velvollisuus" tags="n.*"><select lemma="obligation" tags="n.*"/></match>
+    </or>
+  </rule>
+  <rule>
+    <match lemma="täyttää" tags="vblex.*"><select lemma="fill" tags="vblex.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="velvollisuus" tags="n.*"><select lemma="obligation" tags="n.*"/></match>
   </rule>
   <rule>
     <match lemma="olut" tags="n.*"><select lemma="beer" tags="n.*"/></match>
