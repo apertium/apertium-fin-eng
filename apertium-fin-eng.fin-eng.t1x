@@ -64,6 +64,7 @@
     </def-cat>
     <def-cat n="just-inf">
       <cat-item tags="vblex.actv.infa.sg"/>
+      <cat-item tags="vblex.actv.infa.lat"/>
       <cat-item tags="vblex.actv.infma.sg.ill"/>
     </def-cat>
     <def-cat n="vbneg">
