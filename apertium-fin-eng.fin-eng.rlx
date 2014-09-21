@@ -2605,7 +2605,7 @@ REMOVE:ape-lr-abe (abe) ;
 REMOVE:ape-sinut ("sinut" adv) IF (NOT -1* ("olla") BARRIER VFIN) ;
 
 # Tietoa salamaan liittyvästä kansanperinteestä löytyy.
-REMOVE:ape-propn (np) IF (0 N) ;
+REMOVE:ape-propn (np) IF (0 N) (NOT -1 ("ja") LINK -1C (np));
 
 
 # Syntactic Tags
