@@ -27,7 +27,10 @@ dev/diffs-to-eng-ref.sh -text
 dev/europarl-v7.fi-en.ngrams.fi-en.lrx -text
 dev/fiwikt2dix.awk -text
 dev/fiwn2bidix.bash -text
+dev/inconsistency-summary.sh -text
+dev/inconsistency.sh -text
 dev/nouns.wikt.txt -text
+dev/testvoc.sh -text
 /eng-fin.prob -text svneol=unset#unset
 /fin-eng.prob -text svneol=unset#unset
 /modes.xml -text
