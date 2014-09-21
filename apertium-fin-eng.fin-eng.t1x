@@ -142,6 +142,11 @@
       <attr-item tags="imp"/>
       <attr-item tags="pot"/>
     </def-attr>
+    <def-attr n="a_cnj">
+        <attr-item tags="cnjcoo"/>
+        <attr-item tags="cnjsub"/>
+        <attr-item tags="cnjadv"/>
+    </def-attr>
     <def-attr n="a_adv">
         <attr-item tags="adv"/>
         <attr-item tags="adv.itg"/>
@@ -1124,6 +1129,7 @@
               <equal><clip pos="1" side="tl" part="lem"/><lit v="one"/></equal></not>
             </test>
             <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></let>
           </when>
         </choose>
         <out>
@@ -1134,6 +1140,7 @@
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_num"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
             <b pos="0"/>
             <b pos="1"/>
@@ -1263,7 +1270,9 @@
             </tags>
             <lu>
                 <clip pos="1" side="tl" part="whole"/>
+            </lu>
                 <b pos="1"/>
+            <lu>
                 <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
@@ -1287,7 +1296,7 @@
             <lu>
                 <!-- because CG introduces CLB tag for cnjcoo -->
                 <clip pos="1" side="tl" part="lem"/>
-                <lit-tag v="cnjcoo"/>
+                <clip pos="1" side="tl" part="a_cnj"/>
             </lu>
             </chunk>
         </out>

@@ -59692,7 +59692,11 @@
     <match lemma="vuosikymmen" tags="n.sg.ill"><select lemma="in comparison" tags="adv"/></match>
   </rule>
   <rule c="freq 1">
-    <match lemma="selkä" tags="n.sg.gen"><select lemma="*forsaken" tags=""/></match>
+    <match lemma="kääntää" tags="vblex.*"><select lemma="turn" tags="vblex.*"/></match>
+    <match lemma="selkä" tags="n.*"><select lemma="back" tags="n.*"/></match>
+  </rule>
+  <rule c="freq 1">
+    <match lemma="selkä" tags="n.*"><select lemma="back" tags="n.*"/></match>
   </rule>
   <rule c="freq 1">
     <match lemma="käydä" tags="vblex.actv.infe.sg.ine.px1pl"><select lemma="hold" tags="vblex.ger"/></match>
