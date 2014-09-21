@@ -213,31 +213,31 @@
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p1.sg"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^I"/><lit-tag v="prn.pers.p1.mf.sg.nom"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^I"/><lit-tag v="prn.pers.p1.mf.sg"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p2.sg"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sg.nom"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sg"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p1.pl"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^we"/><lit-tag v="prn.pers.p1.mg.pl.nom"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^we"/><lit-tag v="prn.pers.p1.mg.pl"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p2.pl"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.pl.nom"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.pl"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p3.pl"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.nom"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>

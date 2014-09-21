@@ -109,6 +109,7 @@
     </def-cat>
     <def-cat n="verb-pres">
         <cat-item tags="vblex.*.pres.*"/>
+        <cat-item tags="vblex.*.pri.*"/>
     </def-cat>
     <def-cat n="vbolla">
         <cat-item lemma="olla" tags="vblex.*"/>

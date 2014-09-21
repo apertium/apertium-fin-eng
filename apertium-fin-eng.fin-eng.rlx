@@ -161,7 +161,7 @@ LIST Neg = neg ;
 LIST NEGV = "ei" ;
 LIST ConNeg = conneg ; 
 
-LIST Prs = pres ; 
+LIST Prs = pres pri ; 
 LIST Prt = past ; 
 LIST AgPcp = agent ; # ma 
 LIST PrfPrc = pp ; # nut / PrfPcp
@@ -276,7 +276,8 @@ LIST VFIN/PrsPrc = Prt Prs Cond POTN PrsPrc ;
 LIST VFIN/PrsPrc/Inf = Prt Prs Cond POTN PrsPrc Inf1 Inf2 Inf3 REF TEMP ; 
 LIST VFIN-SgPl12 = Sg1 Sg2 Pl1 Pl2 ; 
 
-SET VFIN = Prs or Prt or Cond or POTN or Imprt ;
+SET VFIN = Prs | Prt | Cond | POTN |  Imprt ;
+
 LIST VFINB = "," ":" "." cnjsub cnjadv cnjcoo sent cm ;
 
 # Word lists

@@ -12,6 +12,12 @@
     </or>
   </rule>
   <rule>
+    <match lemma="pyöreä" tags="adj.*"><select lemma="round" tags="adj.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="täyttää" tags="vblex.*"><select lemma="fulfil" tags="vblex.*"/></match>
+  </rule>
+  <rule>
     <match lemma="olut" tags="n.*"><select lemma="beer" tags="n.*"/></match>
   </rule>
   <rule>
