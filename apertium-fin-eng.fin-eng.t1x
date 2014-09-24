@@ -1292,7 +1292,11 @@
               <tag><lit-tag v="NP-NEC"/></tag>
             </tags>
             <lu>
-                <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <lit v="+'s"/>
+              <clip pos="1" side="tl" part="a_cas"/>
             </lu>
                 <b pos="1"/>
             <lu>
