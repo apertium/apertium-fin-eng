@@ -23,8 +23,8 @@ DELIMITERS = "<$\.>" "<$!>" "<$?>" "<$END-OF-SENTENCE>" "<$ENDDOC>" "<$ENDDOCHEA
 
 SETS
 
-LIST BOS = ">>>" "<$START-P>" "<$start-p>" ; # look at BOS/EOS
-LIST EOS = "<<<" "<$END-P>" "<$end-p>" ; 
+LIST BOS = sent (>>>) "<$START-P>" "<$start-p>" ; # look at BOS/EOS
+LIST EOS = sent (<<<) "<$END-P>" "<$end-p>" ; 
 
 
 # Parts of speech
@@ -1754,8 +1754,10 @@ SELECT Pr IF (0 Pr) (1 PoCaseNonLoc) ;
 REMOVE Adp (0 Po) ;
 REMOVE Adp (0 Pr) ;
 
-REMOVE Adv IF (0 Po) ;
+REMOVE Adv IF (0 Po) (NOT -1 BOS) ;
 REMOVE Adv IF (0 Pr) ;
+
+REMOVE Po IF (0 Po OR Adv) (-1 BOS) ;
 
     # Puolella / Puoli
     
