@@ -49,6 +49,15 @@
     <match lemma="täyttää" tags="vblex.*"><select lemma="fill" tags="vblex.*"/></match>
   </rule>
   <rule>
+    <match lemma="ilta" tags="n.*"><select lemma="evening" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="kalja" tags="n.*"><select lemma="beer" tags="n.*"/></match>
+  </rule>
+  <rule>
+    <match lemma="pussi" tags="n.*"><select lemma="bag" tags="n.*"/></match>
+  </rule>
+  <rule>
     <match lemma="velvollisuus" tags="n.*"><select lemma="obligation" tags="n.*"/></match>
   </rule>
   <rule>
