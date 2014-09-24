@@ -322,8 +322,7 @@
                  <equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></equal>
                  <not><equal><clip pos="1" side="tl" part="a_prn"/><lit-tag v="prn.pers"/></equal></not>
               </and></test>
-              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
-              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="nom"/></let>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v=""/></let>
               <let><var n="sntype"/><lit-tag v="SN.GEN"/></let>
             </when>
         </choose>

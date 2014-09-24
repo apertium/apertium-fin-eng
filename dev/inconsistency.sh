@@ -1,3 +1,4 @@
+#!/bin/bash
 TMPDIR=/tmp
 
 DIR=$1
@@ -32,8 +33,10 @@ if [[ $DIR = "eng-fin" ]]; then
             $TMPDIR/$DIR.tmp_testvoc3.txt \
             $TMPDIR/$DIR.tmp_testvoc4.txt |\
         $SED 's/\^.<sent>\$//g' 
-
+elif [[ $DIR = "fin-eng" ]] ; then
+    hfst-fst2strings 
 
 else
-	echo "bash inconsistency.sh <direction>";
+
+    echo "bash inconsistency.sh <direction>";
 fi
