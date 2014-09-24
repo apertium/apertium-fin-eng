@@ -2540,6 +2540,8 @@ SELECT (CS) IF (0 ("että")); # All other occurrences of "että" are CSs.
 SECTION
 # HEURISTIC-DISAMBIGUATION-CONSTRAINTS
 
+"<ja"> SELECT CC ;
+
 "<kautta>" SELECT (PP) (1 Gen)
 SELECT (Inf3 Ade) (0 Ade)
 #(@w REMOVE (A Pos Sg Par) (0 N)
@@ -3228,3 +3230,5 @@ REMOVE:ape-propn (np) IF (0 N) (NOT -1 ("ja") LINK -1C (np));
 ##%#
 ##%##SUBSTITUTE (+ei V Neg Act Sg3) (+ei V Neg Act Sg3 @+FAUXV) ;
 ##%#SUBSTITUTE (Cmpnd @+FAUXV) (Cmpnd) (CS Cmpnd @+FAUXV) ;
+
+
