@@ -1289,7 +1289,7 @@
         <out>
           <chunk name="REALGEN" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="NP-NEC"/></tag>
+              <tag><lit-tag v="NP-GEN"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
