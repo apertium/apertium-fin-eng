@@ -111,6 +111,10 @@
     <def-cat n="verb-past">
         <cat-item tags="vblex.*.past.*"/>
     </def-cat>
+    <def-cat n="verb-pres-impers">
+        <cat-item tags="vblex.*.pres.impers"/>
+        <cat-item tags="vblex.*.pri.impers"/>
+    </def-cat>
     <def-cat n="verb-pres">
         <cat-item tags="vblex.*.pres.*"/>
         <cat-item tags="vblex.*.pri.*"/>
@@ -1031,6 +1035,58 @@
         </out>      
       </action>
     </rule>
+
+    <rule comment="REGLA: verb-pres-impers">
+      <pattern>
+         <pattern-item n="verb-pres-impers"/>
+      </pattern>
+      <action>
+        <call-macro n="mood-handler1"> 
+          <with-param pos="1"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test>
+              <or>
+                <equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+                <not><and>
+                   <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+                   <or>
+                     <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p1"/></equal>
+                     <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                   </or>
+                </and></not>
+              </or>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+     
+        <out> 
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="sl" part="person"/></tag>
+              <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
+            </tags>
+          <lu>
+            <lit v="be"/><lit-tag v="vbser"/>
+            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
+            <lit-tag v="p3.sg"/>
+          </lu>
+          <b/>
+          <lu>
+            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
+            <lit-tag v="pp"/>
+          </lu>
+          </chunk>
+        </out>      
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: verb-pres">
       <pattern>
