@@ -23978,6 +23978,9 @@
   <rule c="freq 1">
     <match lemma="kuulua" tags="vblex.agent.pos.pl.ela"><select lemma="favour" tags="n.*"/></match>
   </rule>
+  <rule>
+    <match lemma="tulla" tags="vblex.*"><select lemma="come" tags="vblex.*"/></match>
+  </rule>
   <rule c="freq 2">
     <match lemma="tulla" tags="vblex.actv.infma.sg.ill"><select lemma="come" tags="vblex.inf"/></match>
   </rule>
