@@ -1978,6 +1978,8 @@ SELECT (AgPcp Par) IF (1C Par) (-1C Gen) (-1 N)
 # Negative Forms
 # --------------
 
+REMOVE:ape-conneg ConNeg (NOT -1* NEGV); 
+
 SELECT ConNeg (-1 NEGV) (NOT 0 NEG-AMBIGUOUS) (NOT 1 Neg) (NOT 1 Prs) (0 Prs/Prt)
 
 SELECT ConNeg (0 WORD LINK *-1 NEGV BARRIER V) (NOT 0 NEG-AMBIGUOUS) (NOT 1 Neg) (NOT 1 Prs) (0 Prs/Prt) ;
