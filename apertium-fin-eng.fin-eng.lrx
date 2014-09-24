@@ -284,6 +284,11 @@
 
   <!-- some adjectives, in alphabetical order -->
   <rule>
+    <match lemma="hyvä" tags="adj.*">
+      <select lemma="good" tags="adj.*"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="iloinen" tags="adj.*">
       <select lemma="happy" tags="adj.*"/>
     </match>
@@ -291,6 +296,15 @@
   <rule>
     <match lemma="pieni" tags="adj.*">
       <select lemma="small" tags="adj.*"/>
+    </match>
+  </rule>
+
+
+  <!-- some others -->
+
+  <rule>
+    <match lemma="erittäin" tags="adv">
+      <select lemma="very" tags="adv"/>
     </match>
   </rule>
 
