@@ -158,7 +158,7 @@ LIST ALLCASES = nom gen acc par abl ade all ela ill ine ess tra abe com ins loc 
 # -------------------
 
 LIST Neg = neg ; 
-LIST NEGV = "ei" ;
+LIST NEGV = "ei" "eikä" ;
 LIST ConNeg = conneg ; 
 
 LIST Prs = pres pri ; 
