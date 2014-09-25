@@ -67,6 +67,9 @@
     <match lemma="viini" tags="n.*"><select lemma="wine" tags="n.*"/></match>
   </rule>
   <rule>
+    <match lemma="kovasti" tags="adv"><select lemma="really" tags="adv"/></match>
+  </rule>
+  <rule>
     <match lemma="sitten" tags="adv"><select lemma="then" tags="adv"/></match>
   </rule>
   <rule>
@@ -195,6 +198,10 @@
       <select lemma="she" tags="prn.*"/>
     </match>
   </rule>
+  <rule>
+    <match lemma="sisko" tags="n.*"><select lemma="sister" tags="n.*"/></match>
+  </rule>
+
   <rule>
     <match lemma="sisko" tags="n.*"/>
     <match lemma="hän" tags="prn.*">
