@@ -35,9 +35,9 @@ dev/testvoc.sh -text
 /fin-eng.prob -text svneol=unset#unset
 /modes.xml -text
 texts/rautatie.text -text
-texts/story.eng.txt -text
 texts/story.fin-eng.google.txt -text
-texts/story.fin.txt -text
+texts/tarina.eng.text -text
+texts/tarina.fin.text -text
 texts/ukkonen.fiwiki.text -text
 texts/undhr.eng.text -text
 texts/undhr.fin.text -text
