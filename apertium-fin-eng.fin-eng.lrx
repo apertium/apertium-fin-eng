@@ -20,6 +20,9 @@
     <match lemma="haju" tags="n.*"><select lemma="stench" tags="n.*"/></match>
   </rule>
   <rule>
+    <match lemma="kirjoittaa" tags="vblex.*"><select lemma="write"/></match>
+  </rule>
+  <rule>
     <match lemma="edestakaisin" tags="adv"><select lemma="around"/></match>
   </rule>
   <rule>

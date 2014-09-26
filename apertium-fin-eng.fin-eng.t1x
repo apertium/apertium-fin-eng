@@ -305,6 +305,30 @@
     <def-macro n="case-handler1" npar="1">
           <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
           <choose>
+             
+            <when>
+              <test>
+                <and>
+                  <equal><clip pos="1" side="tl" part="a_prn"/><lit-tag v="prn.pers"/></equal>
+                  <or> <!-- Nom/Acc and locative cases -->
+                <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>-->
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ela"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ill"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="par"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ade"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abl"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="all"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abe"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ins"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="com"/></equal>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ess"/></equal>
+        </or></and></test>
+
+              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="acc"/></let>
+              <let><var n="sntype"/><lit-tag v="SN"/></let>
+            </when>
+            
             <when>
               <test><or> <!-- Nom/Acc and locative cases -->
                 <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>-->

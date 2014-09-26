@@ -2606,7 +2606,7 @@ SELECT:ape-viisi (num sg nom "viisi") IF (1 (par)) ;
 "<Nainen>" REMOVE:ape-nainen V (NOT 1 Acc)
 
 # Last resort: Kill all marginal cases if other readings
-REMOVE:ape-lr-ins (ins) ;
+REMOVE:ape-lr-ins (ins) (NOT 0 Pl);
 REMOVE:ape-lr-abe (abe) ;
 REMOVE:ape-sinut ("sinut" adv) IF (NOT -1* ("olla") BARRIER VFIN) ;
 

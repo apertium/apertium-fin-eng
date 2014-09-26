@@ -411,13 +411,15 @@
       <action>
         <out>
           <chunk>
-            <clip pos="2" part="lem"/>
+            <get-case-from pos="1">
+            <clip pos="2" part="lem"/></get-case-from>
             <clip pos="2" part="tags"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
           <b pos="1"/>
           <chunk>
-            <clip pos="1" part="lem"/>
+            <get-case-from pos="2">
+            <clip pos="1" part="lem"/></get-case-from>
             <clip pos="1" part="tags"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
