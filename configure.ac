@@ -1,7 +1,20 @@
-AC_PREREQ(2.52)
+## Process this file with autoconfigure to produce configure scripts
 
-AC_INIT([apertium-fin-eng], [0.1.0], [flammie@iki.fi])
-AM_INIT_AUTOMAKE
+## This program is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License.
+
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+
+## You should have received a copy of the GNU General Public License
+## along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+AC_INIT([apertium-fin-eng], [0.1.0], [flammie@iki.fi], [apertium-fin-eng], [http://wiki.apertium.org/wiki/apertium-fin-eng])
+AM_INIT_AUTOMAKE([-Wall -Werror -Wno-portability foreign])
+
 AC_PROG_LN_S
 AC_PROG_AWK
 

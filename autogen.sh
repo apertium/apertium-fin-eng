@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 # If the user specified a --prefix, take that, otherwise /usr/local/
 # is the default.
@@ -31,5 +31,4 @@ ACLOCAL_PATH="${ACLOCAL_PATH}:${PREFIX}/share/aclocal"
 export ACLOCAL_PATH
 
 
-# Pass on all args to configure
-autoreconf -fi && ./configure "$@"
+autoreconf -fi 

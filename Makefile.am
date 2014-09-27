@@ -1,14 +1,24 @@
-###############################################################################
-## Makefile for fin-eng
-###############################################################################
+## Process this file with automake to produce Makefile.in
 
-VERSION=0.1.0
+## This program is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License.
+
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+
+## You should have received a copy of the GNU General Public License
+## along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+VERSION=$(PACKAGE_VERSION)
 LANG1=fin
 LANG2=eng
 PREFIX1=$(LANG1)-$(LANG2)
 PREFIX2=$(LANG2)-$(LANG1)
 
-BASENAME=apertium-$(PREFIX1)
+BASENAME=$(PACKAGE_NAME)
 
 TARGETS_MONOLING=$(PREFIX1).automorf.hfst $(PREFIX1).autogen.bin \
 				 $(PREFIX2).automorf.bin $(PREFIX2).autogen.hfst 
@@ -23,9 +33,7 @@ TARGETS_COMMON=$(TARGETS_MONOLING) $(TARGETS_TRANSFER)
 # This include defines goals for install-modes, .deps/.d and .mode files:
 @ap_include@
 
-###############################################################################
 ## fin transducer
-###############################################################################
 
 # currently we copy stuff from another dir
 $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
@@ -40,9 +48,7 @@ $(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 $(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
 	cp -v -f $< $@
 
-###############################################################################
 ## eng transducer
-###############################################################################
 
 $(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix $(BASENAME).$(LANG2).acx
 	apertium-validate-dictionary $<
@@ -52,18 +58,14 @@ $(PREFIX2).automorf.bin: $(BASENAME).$(LANG2).dix $(BASENAME).$(LANG2).acx
 	apertium-validate-dictionary $<
 	lt-comp lr $< $@ $(BASENAME).$(LANG2).acx
 
-###############################################################################
 ## Debugging transducers (for testvoc)
-###############################################################################
 
 .deps/$(LANG2).LR-debug.hfst: $(BASENAME).$(LANG2).lexc .deps/.d
 	cat $< | grep -v 'Dir/RL' | grep -v 'Use/Circ' > .deps/$(LANG2).LR-debug.lexc
 	hfst-lexc --format foma .deps/$(LANG2).LR-debug.lexc -o .deps/$(LANG2).LR-debug.lexc.hfst
 	hfst-compose-intersect -1 .deps/$(LANG2).LR-debug.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
 
-###############################################################################
 ## Bilingual dictionaries
-###############################################################################
 
 $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
@@ -73,9 +75,7 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $< 
 	lt-comp rl $< $@
 
-###############################################################################
 ## Disambiguation rules 
-###############################################################################
 
 $(PREFIX1).rlx.bin: $(BASENAME).$(PREFIX1).rlx $(CGCOMP)
 	$(CGCOMP) $< $@
@@ -84,9 +84,7 @@ $(PREFIX2).rlx.bin: $(BASENAME).$(PREFIX2).rlx $(CGCOMP)
 	$(CGCOMP) $< $@
 
 
-###############################################################################
 ## Lexical selection rules
-###############################################################################
 
 $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
 	lrx-comp $< $@
@@ -94,9 +92,7 @@ $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
 $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 	lrx-comp $< $@
 
-###############################################################################
 ## Structural transfer rules
-###############################################################################
 
 $(PREFIX1).t1x.bin: $(BASENAME).$(PREFIX1).t1x
 	apertium-validate-transfer $(BASENAME).$(PREFIX1).t1x
@@ -123,9 +119,7 @@ $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
 	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t3x $@
 
 
-###############################################################################
 ## Postgeneration dictionaries
-###############################################################################
 
 #$(PREFIX1).autopgen.bin: $(BASENAME).post-$(LANG1).dix
 #	apertium-validate-dictionary $<
@@ -135,15 +129,11 @@ $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
 #	apertium-validate-dictionary $< 
 #	lt-comp lr $< $@
 
-###############################################################################
 ## Debug
-###############################################################################
 
 debug: .deps/$(LANG1).LR-debug.hfst .deps/$(LANG2).LR-debug.hfst
 
-###############################################################################
 ## Distribution
-###############################################################################
 
 EXTRA_DIST=$(PREFIX1).prob $(PREFIX2).prob \
 		   $(BASENAME).$(PREFIX1).t1x \
@@ -156,9 +146,7 @@ EXTRA_DIST=$(PREFIX1).prob $(PREFIX2).prob \
 		   $(BASENAME).$(LANG2).acx \
 		   modes.xml
 
-###############################################################################
 ## Installation
-###############################################################################
 
 apertium_fin_engdir=$(prefix)/share/apertium/$(BASENAME)/
 
@@ -175,13 +163,14 @@ pkgconfigdir = $(datarootdir)/pkgconfig
 pkgconfig_DATA = apertium-fin-eng.pc
 
 
-# All modes are created by the same goal, listing several will just give problems with make -j2
+# All modes are created by the same goal,
+# listing several will just give problems with make -j2
 noinst_DATA=modes/$(PREFIX1).mode modes/$(PREFIX2).mode
 
 
 install-data-local: install-modes
 
-# Test
+## Testing
 
 %.eng.translated: %.fin.text
 	apertium -d . fin-eng < $< > $@
@@ -213,9 +202,7 @@ install-data-local: install-modes
 %.eng-fin.nistbleu: %.fin.translated.test.sgml %.eng.text.src.sgml %.fin.text.ref.sgml
 	$(NIST_BLEU13A) -s $*.eng.text.src.sgml -r $*.fin.text.ref.sgml -t $*.fin.translated.test.sgml > $@
 
-###############################################################################
 ## Cleanup
-###############################################################################
 
 CLEANFILES = $(TARGETS_COMMON)
 clean-local: 
