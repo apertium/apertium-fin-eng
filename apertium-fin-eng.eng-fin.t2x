@@ -47,12 +47,17 @@
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="prepcase"/>
+    <def-var n="POST"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="prep1" npar="1">
       <let>
         <var n="prepcase"/>
         <lit-tag v="nom"/>
+      </let>
+      <let>
+        <var n="POST"/>
+        <lit v=""/>
       </let>
       <choose>
         <when>
@@ -79,6 +84,13 @@
           <test><equal><clip pos="1" part="lem"/><lit v="from"/></equal></test>
           <let><var n="prepcase"/><lit-tag v="abl"/></let>
         </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="with"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="gen"/></let>
+          <let><var n="POST"/>
+            <concat><lit v=" ^post"/><lit-tag v="POST"/><lit v="{^kanssa"/><lit-tag v="post"/><lit v="$}$"/></concat>
+          </let>
+        </when>
       </choose>
     </def-macro>
   </section-def-macros>
@@ -103,6 +115,7 @@
             <clip pos="2" part="tags"/>
             <clip pos="2" part="chcontent"/>
           </chunk>
+          <var n="POST"/>
         </out>
       </action>
     </rule>
@@ -112,6 +125,10 @@
         <pattern-item n="NP"/>
       </pattern>
       <action>
+        <let>
+          <clip pos="1" part="a_cas"/>
+          <lit-tag v="nom"/>
+        </let>
         <out>
           <chunk>
             <clip pos="1" part="lem"/>

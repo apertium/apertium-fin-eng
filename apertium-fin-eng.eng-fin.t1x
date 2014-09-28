@@ -19,8 +19,8 @@
       <cat-item tags="n.*"/>
     </def-cat>
     <def-cat n="fverb">
-      <cat-item tags="vblex.actv.*"/>
-      <cat-item tags="vblex.pass.*"/>
+      <cat-item tags="vblex.*"/>
+      <cat-item tags="vblex.*"/>
     </def-cat>
     <def-cat n="infverb">
       <cat-item tags="vblex.inf"/>
@@ -79,7 +79,7 @@
       <attr-item tags="vblex.pass"/>
     </def-attr>
     <def-attr n="a_tens">
-      <attr-item tags="pres"/>
+      <attr-item tags="pri"/>
       <attr-item tags="past"/>
     </def-attr>
     <!-- yes english p1.sg is split :-( -->
@@ -258,7 +258,8 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/> <!-- do -->
-              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex -->
+              <lit-tag v="actv"/>
               <clip pos="1" side="tl" part="a_tens"/> <!-- pres -->
               <var n="pers"/>
               <var n="persnum"/>
@@ -267,6 +268,7 @@
         </out>
       </action>
     </rule>
+
     <rule comment="SäÄntö: det a n">
       <pattern>
           <pattern-item n="det"/> <!-- a, the -->
@@ -314,6 +316,28 @@
               <clip pos="2" side="tl" part="lem"/> <!-- boy -->
               <clip pos="2" side="tl" part="a_nom"/> <!-- n -->
               <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="2"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="SäÄntö: n">
+      <pattern>
+          <pattern-item n="noun"/> <!-- boy -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="np" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="CD"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- boy -->
+              <clip pos="1" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="1" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
             </lu>
           </chunk>

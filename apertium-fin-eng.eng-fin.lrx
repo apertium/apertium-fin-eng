@@ -13,6 +13,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <rules>
+  <!-- nouns, hand-made -->
   <rule>
     <match lemma="dog" tags="n.*"><select lemma="koira" tags="n.*"/></match>
   </rule>
@@ -55,11 +56,11 @@
   <rule>
     <match lemma="house" tags="n.*"><select lemma="talo" tags="n.*"/></match>
   </rule>
-
   <rule>
-    <match lemma="play" tags="vblex.*"><select lemma="pelata" tags="vblex.*"/></match>
+    <match lemma="friend" tags="n.*"><select lemma="ystävä" tags="n.*"/></match>
   </rule>
 
+  <!-- adjectives -->
   <rule>
     <match lemma="little" tags="adj"><select lemma="pieni" tags="adj"/></match>
   </rule>
@@ -68,13 +69,22 @@
   </rule>
   
 
+  <!-- verbs -->
+
+  <rule>
+    <match lemma="play" tags="vblex.*"><select lemma="pelata" tags="vblex.*"/></match>
+  </rule>
+
   <!-- quick hack instead of structral ransfer -->
   <rule>
     <match lemma="have" tags="vblex.*"><select lemma="omistaa" tags="vblex.*"/></match>
   </rule>
-  
+
+  <!-- conjunctions -->
   <rule>
     <match lemma="but" tags="cnjsub.*"><select lemma="mutta" tags="cnjadv.*"/></match>
   </rule>
+
+  <!-- corpus acquired rules: -->
 </rules>
 <!-- vim: set ft=xml: -->
