@@ -20,15 +20,23 @@
     </def-cat>
     <def-cat n="fverb">
       <cat-item tags="vblex.*"/>
+      <cat-item tags="vbhaver.*"/>
     </def-cat>
     <def-cat n="notverb">
       <cat-item tags="vblex.*"/>
       <cat-item tags="vaux.*"/>
+      <cat-item tags="vbmod.*"/>
+    </def-cat>
+    <def-cat n="doverb">
       <cat-item tags="vbdo.*"/>
     </def-cat>
     <def-cat n="sg3stuff">
       <cat-item tags="np.sg"/>
+      <cat-item tags="np.*.sg"/>
       <cat-item tags="n.sg"/>
+      <cat-item tags="np.sg.*"/>
+      <cat-item tags="np.*.sg.*"/>
+      <cat-item tags="n.sg.*"/>
     </def-cat>
     <def-cat n="infverb">
       <cat-item tags="vblex.inf"/>
@@ -38,6 +46,7 @@
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj"/>
+      <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="prnprs">
       <cat-item tags="prn.pers.*"/>
@@ -63,6 +72,8 @@
     <def-cat n="not">
       <cat-item lemma="not" tags="adv"/>
       <cat-item lemma="n't" tags="adv"/>
+      <cat-item lemma="not" tags="adv.*"/>
+      <cat-item lemma="n't" tags="adv.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -165,7 +176,7 @@
     <rule comment="SäÄntö: PRN-PRS VAUX NOT V">
       <pattern>
           <pattern-item n="prnprs"/> <!-- I, you, he, she, it, we, they -->
-          <pattern-item n="notverb"/> <!-- do / can / ... -->
+          <pattern-item n="notverb"/> <!-- can / ... -->
           <pattern-item n="not"/> <!-- not / n't -->
           <pattern-item n="fverb"/> <!-- play / eat / help ... -->
       </pattern>
@@ -208,13 +219,17 @@
               <lit-tag v="vblex.neg.actv"/>
               <var n="pers"/>
               <var n="persnum"/>
+            </lu>
               <b pos="2"/>
+            <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- do -->
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <clip pos="2" side="tl" part="a_tens"/> <!-- pres -->
               <lit-tag v="conneg"/>
+            </lu>
               <b pos="3"/>
+            <lu>
               <clip pos="4" side="tl" part="lem"/>
               <clip pos="4" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv.infa.lat"/>
@@ -261,18 +276,24 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
               <b pos="1"/>
+            <lu>
               <lit v="ei"/> <!-- pos=3 ~ not -->
               <lit-tag v="vblex.neg.actv"/>
               <var n="pers"/>
               <var n="persnum"/>
+            </lu>
               <b pos="2"/>
+            <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- do -->
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <clip pos="2" side="tl" part="a_tens"/> <!-- pres -->
               <lit-tag v="conneg"/>
+            </lu>
               <b pos="3"/>
+            <lu>
               <clip pos="4" side="tl" part="lem"/>
               <clip pos="4" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv.infa.lat"/>
@@ -282,6 +303,58 @@
       </action>
     </rule>
 
+    <rule comment="SäÄntö: DO NOT V">
+      <pattern>
+          <pattern-item n="doverb"/> <!-- do  -->
+          <pattern-item n="not"/> <!-- not / n't -->
+          <pattern-item n="fverb"/> <!-- play / eat / help ... -->
+      </pattern>
+      <action>
+        <let>
+          <var n="pers"/><lit-tag v="p3"/>
+        </let>
+        <let>
+          <var n="persnum"/><lit-tag v="sg"/>
+        </let>
+        <choose>
+          <when>
+            <test>
+              <not><equal><clip pos="1" side="tl" part="a_pers"/><lit v=""/></equal></not>
+            </test>
+            <let><var n="pers"/><clip pos="1" side="tl" part="a_pers"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when>
+            <test>
+              <not><equal><clip pos="1" side="tl" part="a_num"/><lit v=""/></equal></not>
+            </test>
+            <let><var n="persnum"/><clip pos="1" side="tl" part="a_num"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="subjverb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VP"/></tag>
+            </tags>
+            <lu>
+              <lit v="ei"/> <!-- pos=3 ~ not -->
+              <lit-tag v="vblex.neg.actv"/>
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+              <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv"/>
+              <clip pos="1" side="tl" part="a_tens"/> <!-- pres -->
+              <lit-tag v="conneg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="SäÄntö: PRN-PRS V">
       <pattern>
           <pattern-item n="prnprs"/> <!-- I, you, he, she, it, we, they -->
@@ -419,7 +492,9 @@
               <clip pos="2" side="tl" part="a_adj"/> <!-- adj -->
               <clip pos="3" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
+            </lu>
               <b pos="2"/>
+            <lu>
               <clip pos="3" side="tl" part="lem"/> <!-- boy -->
               <clip pos="3" side="tl" part="a_nom"/> <!-- n, np -->
               <clip pos="3" side="tl" part="a_num"/> <!-- sg, pl -->

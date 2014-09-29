@@ -27,6 +27,10 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_adp">
+      <attr-item tags="pr"/>
+      <attr-item tags="post"/>
+    </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
@@ -91,6 +95,12 @@
             <concat><lit v=" ^post"/><lit-tag v="POST"/><lit v="{^kanssa"/><lit-tag v="post"/><lit v="$}$"/></concat>
           </let>
         </when>
+        <otherwise>
+          <let><var n="prepcase"/><lit-tag v="gen"/></let>
+          <let><var n="POST"/>
+            <concat><lit v=" ^post"/><lit-tag v="POST"/><lit v="{^"/><clip pos="1" part="lem"/><lit-tag v="post"/><lit v="$}$"/></concat>
+          </let>
+        </otherwise>
       </choose>
     </def-macro>
   </section-def-macros>
