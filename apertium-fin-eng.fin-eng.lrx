@@ -41,6 +41,9 @@
     </or>  
   </rule>
   <rule weight="1.0">
+    <match lemma="mahdollinen" tags="adj.*"><select lemma="possible" tags="adj.*"/></match>
+  </rule>
+  <rule weight="1.0">
     <match lemma="keikka" tags="n.*"><select lemma="gig"/></match>
   </rule>
   <rule weight="2.0">
