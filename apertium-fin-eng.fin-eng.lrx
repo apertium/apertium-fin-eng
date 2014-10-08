@@ -25,9 +25,34 @@
       <match tags="n.*.gen"/>
     </or>
   </rule>
+  <rule weight="1.0">
+    <match lemma="viettää" tags="vblex.*"><select lemma="celebrate"/></match>
+    <match/>
+    <or>  
+      <match lemma="joulu" tags="n.*"/><match lemma="pääsiäinen" tags="n.*"/>
+      <match lemma="syntymäpäivä" tags="n.*"/>
+    </or>  
+  </rule>
+  <rule weight="1.0">
+    <match lemma="viettää" tags="vblex.*"><select lemma="celebrate"/></match>
+    <or>  
+      <match lemma="joulu" tags="n.*"/><match lemma="pääsiäinen" tags="n.*"/>
+      <match lemma="syntymäpäivä" tags="n.*"/>
+    </or>  
+  </rule>
+  <rule weight="1.0">
+    <match lemma="keikka" tags="n.*"><select lemma="gig"/></match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="nimi" tags="n.*.*.pxsp3"><select lemma="name"/></match>
+  </rule>
   <rule weight="2.0">
     <match lemma="ihan" tags="adv"><select lemma="totally"/></match>
     <match lemma="vittu" tags="n.sg.gen"><select lemma="fucking" tags="n.*"/></match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="kiinalainen" tags="adj.*"/>
+    <match lemma="kirjain" tags="n.*"><select lemma="character" tags="n.*"/></match>
   </rule>
   <rule weight="2.0">
     <match lemma="oksettaa" tags="vblex.*.pprs.*"/>
@@ -17196,6 +17221,9 @@
   </rule>
   <rule c="freq 1">
     <match lemma="vahvistaa" tags="vblex.pasv.pp.pos.sg.ill"><select lemma="*modernised" tags=""/></match>
+  </rule>
+  <rule c="freq 6">
+    <match lemma="mennä" tags="vblex.*"><select lemma="go" tags="vblex.*"/></match>
   </rule>
   <rule c="freq 6">
     <match lemma="mennä" tags="vblex.pasv.pres.impers.conneg"><select lemma="go" tags="vblex.inf"/></match>

@@ -123,7 +123,7 @@ LIST Sg12Pl12Pass = (p1 sg) (p2 sg) (p1 pl) (p2 pl) pass pasv px1pl px2pl px3pl 
 
 LIST PxSg1 = px1sg ;
 LIST PxSg2 = px2sg ;
-LIST PxSg3 = px3sg px3sp ;
+LIST PxSg3 = px3sg px3sp pxsp3 ;
 
 
 LIST PxPl1 = px1pl ;
@@ -2624,6 +2624,9 @@ REMOVE:ape-sinut ("sinut" adv) IF (NOT -1* ("olla") BARRIER VFIN) ;
 # Tietoa salamaan liittyvästä kansanperinteestä löytyy.
 REMOVE:ape-propn-n (np) IF (0 N) (NOT -1 ("ja") LINK -1C (np));
 REMOVE:ape-propn-cc (np nom) IF (0 CC) (1 N + Nom);
+
+# Tiilitalojen keskellä hän kirjoitti minulle nimensä kiinalaisin kirjaimin.
+REMOVE:apt-gen-pl-px3 Nom (0C Pl + Nom OR Sg + Nom OR Sg + Gen) (0C PxSg3) (-1* VFIN LINK -1C* Nom);  
 
 
 # Syntactic Tags
