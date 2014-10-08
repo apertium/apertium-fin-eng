@@ -170,6 +170,7 @@
         <attr-item tags="cnjcoo"/>
         <attr-item tags="cnjsub"/>
         <attr-item tags="cnjadv"/>
+        <attr-item tags="adv"/>
     </def-attr>
     <def-attr n="a_adv">
         <attr-item tags="adv"/>
