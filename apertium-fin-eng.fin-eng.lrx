@@ -34,6 +34,9 @@
     </or>  
   </rule>
   <rule weight="1.0">
+    <match lemma="korjata" tags="vblex.*"><select lemma="correct"/></match>
+  </rule>  
+  <rule weight="1.0">
     <match lemma="viettää" tags="vblex.*"><select lemma="celebrate"/></match>
     <or>  
       <match lemma="joulu" tags="n.*"/><match lemma="pääsiäinen" tags="n.*"/>
