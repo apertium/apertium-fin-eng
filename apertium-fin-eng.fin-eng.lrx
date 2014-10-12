@@ -25,7 +25,11 @@
       <match tags="n.*.gen"/>
     </or>
   </rule>
-  <rule weight="1.0">
+  <rule weight="3.0">
+    <match lemma="paha" tags="adj.*"><select lemma="bad"/></match>
+    <match lemma="moka" tags="n.*"><select lemma="mistake" tags="n.*"/></match>
+  </rule>
+   <rule weight="1.0">
     <match lemma="viettää" tags="vblex.*"><select lemma="celebrate"/></match>
     <match/>
     <or>  
