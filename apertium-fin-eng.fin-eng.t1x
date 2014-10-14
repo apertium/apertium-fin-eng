@@ -61,6 +61,7 @@
     </def-cat>
     <def-cat n="habitive">
         <cat-item tags="n.*.ade"/>
+        <cat-item tags="vblex.v→a.pos.*.ade"/>
     </def-cat>
     <def-cat n="possessional">
         <cat-item lemma="olla" tags="vblex.actv.*.p3.sg"/>
@@ -178,7 +179,7 @@
     </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
-      <attr-item tags="vblex.subst"/>
+      <attr-item tags="vblex.subs"/>
       <attr-item tags="np"/>
       <attr-item tags="np.ant"/>
       <attr-item tags="np.ant.f"/>
@@ -1285,16 +1286,26 @@
         <call-macro n="proc-synlabel1"> 
           <with-param pos="2"/>
         </call-macro>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal></test>
+            <let><clip pos="1" side="tl" part="tags"/><concat><lit-tag v="n"/>
+                  <clip pos="1" side="tl" part="a_nbr"/><lit-tag v="gen"/></concat></let>
+          </when>
+          <when>
+            <test><equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vblex"/></equal></test>
+            <let><clip pos="1" side="tl" part="tags"/><lit-tag v="vblex.subs"/></let>
+          </when>
+        </choose>
         <out>
           <chunk name="verb phrase" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
             </tags>
             <lu>
-                <clip pos="1" side="tl" part="lem"/>
-                <clip pos="1" side="tl" part="a_nom"/>
-                <clip pos="1" side="tl" part="a_nbr"/>
-                <lit-tag v="gen"/>
+                <clip pos="1" side="tl" part="lemh"/>
+                <clip pos="1" side="tl" part="tags"/>
+                <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
             <lu>
