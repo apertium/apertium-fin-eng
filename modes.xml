@@ -218,7 +218,7 @@
 
   <mode name="eng-fin" install="yes">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -251,7 +251,7 @@
 
   <mode name="eng-fin-debug" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -284,7 +284,7 @@
   
   <mode name="eng-fin-morph" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
     </pipeline>
@@ -292,7 +292,7 @@
 
   <mode name="eng-fin-disam" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-conv -a"/>
@@ -305,7 +305,7 @@
 
   <mode name="eng-fin-tagger" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -317,7 +317,7 @@
 
   <mode name="eng-fin-biltrans" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -332,7 +332,7 @@
 
   <mode name="eng-fin-lextor" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -350,7 +350,7 @@
 
   <mode name="eng-fin-transfer" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -372,7 +372,7 @@
 
   <mode name="eng-fin-interchunk" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -398,7 +398,7 @@
 
   <mode name="eng-fin-postchunk" install="no">
     <pipeline>
-      <program name="lt-proc -e -w">
+      <program name="lt-proc -w">
         <file name="eng-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -1 -n -w">
