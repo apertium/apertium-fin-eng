@@ -2648,7 +2648,6 @@
   <rule weight="1.0"><match lemma="puhjeta" tags="vblex.*"><select lemma="break" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="pehmeä" tags="adj.*"><select lemma="soft" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="myöhäinen" tags="adj.*"><select lemma="late" tags="adj.*"/></match></rule>
-  <rule weight="1.0"><match lemma="lyödä" tags="vblex.*"><select lemma="be" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="keskitetty" tags="adj.*"><select lemma="centralised" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="hullu" tags="adj.*"><select lemma="mad" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="epätyypillinen" tags="adj.*"><select lemma="atypical" tags="adj.*"/></match></rule>
@@ -14845,7 +14844,7 @@
   <rule weight="1.0"><match lemma="merimies" tags="n.*"><select lemma="seafarer" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="maksukortti" tags="n.*"><select lemma="payment" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="mainos" tags="n.*"><select lemma="advertising" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="lyödä" tags="vblex.*"><select lemma="bet" tags="vblex.*"/></match></rule>
+  <rule weight="1.0"><match lemma="lyödä" tags="vblex.*"><select lemma="strike" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="luovutus" tags="n.*"><select lemma="donation" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="loukata" tags="vblex.*"><select lemma="insult" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="lopputuote" tags="n.*"><select lemma="product" tags="n.*"/></match></rule>
