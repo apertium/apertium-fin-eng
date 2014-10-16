@@ -13581,7 +13581,6 @@
   <rule weight="1.0"><match lemma="herkistää" tags="vblex.*"><select lemma="restrain" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="heristää" tags="vblex.*"><select lemma="up" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="herhiläispesä" tags="n.*"><select lemma="hornet" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="herätyskello" tags="n.*"><select lemma="wake-up" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="herättäjä" tags="n.*"><select lemma="bell" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="herääminen" tags="n.*"><select lemma="renewal" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="henkistää" tags="vblex.*"><select lemma="practice" tags="vblex.*"/></match></rule>
@@ -16072,7 +16071,6 @@
   <rule weight="1.0"><match lemma="maineikas" tags="adj.*"><select lemma="renowned" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="mahtailla" tags="vblex.*"><select lemma="parade" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="maharadža" tags="n.*"><select lemma="maharaja" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="maha" tags="n.*"><select lemma="guard" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="maata" tags="vblex.*"><select lemma="indicate" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="maatalousyritys" tags="n.*"><select lemma="way" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="määritetty" tags="adj.*"><select lemma="laid" tags="adj.*"/></match></rule>
@@ -16642,6 +16640,11 @@
   <rule weight="1.0"><match lemma="äänestyskoppi" tags="n.*"><select lemma="ballot" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="aallonpohja" tags="n.*"><select lemma="point" tags="n.*"/></match></rule>
 
+  <!-- Manually fixing defaults -->
+
+  <rule weight="1.0"><match lemma="herätyskello" tags="n.*"><select lemma="alarm" tags="n.*"/></match></rule>
+
+  <!-- Manual rules with context -->
 
   <rule>
     <match lemma="kuulla" tags="vblex.*"><select lemma="hear" tags="vblex.*"/></match>
