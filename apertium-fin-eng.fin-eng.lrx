@@ -16646,6 +16646,17 @@
   <!-- Manual rules with context -->
 
   <rule>
+    <match lemma="soittaa" tags="vblex.*"><select lemma="play" tags="vblex.*"/></match>
+    <match/>
+    <match lemma="kitara" tags="n.*"/>
+  </rule>
+
+  <rule>
+    <match lemma="soittaa" tags="vblex.*"><select lemma="play" tags="vblex.*"/></match>
+    <match lemma="kitara" tags="n.*"/>
+  </rule>
+
+  <rule>
     <match lemma="kuulla" tags="vblex.*"><select lemma="hear" tags="vblex.*"/></match>
     <match lemma="ääni" tags="n.*"><select lemma="sound" tags="n.*"/></match>
   </rule>
