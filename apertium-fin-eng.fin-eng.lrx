@@ -1143,7 +1143,6 @@
   <rule weight="1.0"><match lemma="lento" tags="n.*"><select lemma="flight" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="leikkaus" tags="n.*"><select lemma="cut" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="teko" tags="n.*"><select lemma="action" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="muuten" tags="adv.*"><select lemma="otherwise" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="liika" tags="adj.*"><select lemma="much" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="kokoontua" tags="vblex.*"><select lemma="meet" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="suorittaa" tags="vblex.*"><select lemma="carry" tags="vblex.*"/></match></rule>
@@ -14113,7 +14112,6 @@
   <rule weight="1.0"><match lemma="moskova" tags="np.*"><select lemma="moscow" tags="np.*"/></match></rule>
   <rule weight="1.0"><match lemma="osasto" tags="n.*"><select lemma="directorate" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="arvostaa" tags="vblex.*"><select lemma="appreciate" tags="vblex.*"/></match></rule>
-  <rule weight="1.0"><match lemma="muuten" tags="adv.*"><select lemma="otherwise" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="todeta" tags="vblex.*"><select lemma="say" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="brittiläinen" tags="adj.*"><select lemma="british" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="yleiskokous" tags="n.*"><select lemma="assembly" tags="n.*"/></match></rule>
@@ -16643,6 +16641,7 @@
   <!-- Manually fixing defaults -->
 
   <rule weight="1.0"><match lemma="herätyskello" tags="n.*"><select lemma="alarm" tags="n.*"/></match></rule>
+  <rule weight="1.0"><match lemma="muuten" tags="adv.*"><select lemma="by the way" tags="adv.*"/></match></rule>
 
   <!-- Manual rules with context -->
 
