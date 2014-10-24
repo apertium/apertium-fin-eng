@@ -409,9 +409,9 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: pron-misc">
+    <rule comment="REGLA: pron-pers">
       <pattern>
-        <pattern-item n="pron-misc"/>
+        <pattern-item n="pron-pers"/>
       </pattern>
       <action>
         <call-macro n="case-handler1"> 
@@ -423,7 +423,9 @@
         <out>
           <chunk name="pron" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN"/></tag>
+              <tag><lit-tag v="SN.pers"/></tag>
+              <tag><clip pos="1" side="sl" part="a_pers"/></tag>
+              <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
               <tag><clip pos="1" side="sl" part="a_cas"/></tag>
             </tags>
             <lu>
@@ -437,9 +439,9 @@
 
 
 
-    <rule comment="REGLA: pron-pers">
+    <rule comment="REGLA: pron-misc">
       <pattern>
-        <pattern-item n="pron-pers"/>
+        <pattern-item n="pron-misc"/>
       </pattern>
       <action>
         <call-macro n="case-handler1"> 

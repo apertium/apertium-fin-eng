@@ -58,7 +58,7 @@ LIST Conj = cnjcoo cnjsub ;
 LIST PP = adv post pr ;
 LIST Part = part ; # particle? still in use?
 
-LIST Pcle = part;
+LIST Pcle = part pcle ;
 LIST Acro = abbr ; 
 
 # LIST C = C ; 
@@ -790,6 +790,13 @@ SET N-NOT-GEN = N - (N Gen) ;
 
 
 SECTION
+
+REMOVE:ape-pcle1 Pcle ;  # FMT
+SUBSTITUTE:ape-pcle2 (pcle) (adv) (pcle)  ; # FMT
+REMOVE Prop + Pl ;  # FMT
+REMOVE Imprt IF (NOT 1* ("!")) (NOT 1 (",")) ; # FMT
+SELECT CC IF (0 ("mutta")) ; # FMT
+SELECT Pron IF (0 ("he")) ; # FMT
 
 ### TODO: 
 # CLAUSE BOUNDARY CONSTRAINTS

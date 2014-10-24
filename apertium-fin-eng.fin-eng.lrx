@@ -15,6 +15,9 @@
 
   <rules>
 
+  <rule weight="1.0"><match lemma="iso" tags="adj.*"><select lemma="big" tags="adj.sint.*"/></match></rule>
+  <rule weight="1.0"><match lemma="vanha" tags="adj.*"><select lemma="old" tags="adj.*"/></match></rule>
+
   <rule weight="1.0"><match lemma="olla" tags="vblex.*"><select lemma="be" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="tärkeä" tags="adj.*"><select lemma="important" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="maa" tags="n.*"><select lemma="country" tags="n.*"/></match></rule>
@@ -414,7 +417,6 @@
   <rule weight="1.0"><match lemma="poliitikko" tags="n.*"><select lemma="politician" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="parannus" tags="n.*"><select lemma="improvement" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="tasa-arvo" tags="n.*"><select lemma="equality" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="katsoa" tags="vblex.*"><select lemma="believe" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="aamu" tags="n.*"><select lemma="morning" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="todellisuus" tags="n.*"><select lemma="reality" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kiintiö" tags="n.*"><select lemma="quota" tags="n.*"/></match></rule>
@@ -498,7 +500,6 @@
   <rule weight="1.0"><match lemma="kaupunki" tags="n.*"><select lemma="city" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="ajoneuvo" tags="n.*"><select lemma="vehicle" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="henki" tags="n.*"><select lemma="spirit" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="vanha" tags="adj.*"><select lemma="old" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="huomautus" tags="n.*"><select lemma="comment" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="istunto" tags="n.*"><select lemma="sitting" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="potilas" tags="n.*"><select lemma="patient" tags="n.*"/></match></rule>
@@ -1001,7 +1002,6 @@
   <rule weight="1.0"><match lemma="olemassaolo" tags="n.*"><select lemma="existence" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="asukas" tags="n.*"><select lemma="inhabitant" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="turva" tags="n.*"><select lemma="security" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="yhdessä" tags="adv"><select lemma="jointly" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="samanlainen" tags="adj.*"><select lemma="similar" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="helposti" tags="adv"><select lemma="easily" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="painottaa" tags="vblex.*"><select lemma="emphasise" tags="vblex.*"/></match></rule>
@@ -1105,7 +1105,7 @@
   <rule weight="1.0"><match lemma="murha" tags="n.*"><select lemma="murder" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kannatus" tags="n.*"><select lemma="support" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="taata" tags="n.*"><select lemma="guarantee" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="turvallinen" tags="adj.*"><select lemma="safe" tags="adj.sint.*"/></match></rule>
+  <rule weight="1.0"><match lemma="turvallinen" tags="adj.*"><select lemma="safe" tags="adj.sint.*.*"/></match></rule>
   <rule weight="1.0"><match lemma="täydellinen" tags="adj.*"><select lemma="complete" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="oppi" tags="n.*"><select lemma="lesson" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="lentokone" tags="n.*"><select lemma="aircraft" tags="n.*"/></match></rule>
@@ -1988,7 +1988,6 @@
   <rule weight="1.0"><match lemma="vahvistua" tags="vblex.*"><select lemma="be" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="synteettinen" tags="adj.*"><select lemma="synthetic" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="raskas" tags="adj.*"><select lemma="pregnant" tags="adj.*"/></match></rule>
-  <rule weight="1.0"><match lemma="puu" tags="n.*"><select lemma="wood" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="havainto" tags="n.*"><select lemma="finding" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="syöpä" tags="n.*"><select lemma="cancer" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="selkä" tags="n.*"><select lemma="back" tags="n.*"/></match></rule>
@@ -2838,7 +2837,6 @@
   <rule weight="1.0"><match lemma="lukutaidottomuus" tags="n.*"><select lemma="illiteracy" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kuitu" tags="n.*"><select lemma="fibre" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kokeilla" tags="vblex.*"><select lemma="try" tags="vblex.*"/></match></rule>
-  <rule weight="1.0"><match lemma="iso" tags="adj.*"><select lemma="big" tags="adj.sint"/></match></rule>
   <rule weight="1.0"><match lemma="hymni" tags="n.*"><select lemma="anthem" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="epäluottamus" tags="n.*"><select lemma="distrust" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="bakteeri" tags="n.*"><select lemma="bacteria" tags="n.*"/></match></rule>
@@ -4189,7 +4187,7 @@
   <rule weight="1.0"><match lemma="lainmukaisuus" tags="n.*"><select lemma="legality" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="lahjoittaa" tags="vblex.*"><select lemma="donate" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="kymmenesosa" tags="n.*"><select lemma="tenth" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="kuuma" tags="adj.*"><select lemma="hot" tags="adj.sint"/></match></rule>
+  <rule weight="1.0"><match lemma="kuuma" tags="adj.*"><select lemma="hot" tags="adj.sint.*"/></match></rule>
   <rule weight="1.0"><match lemma="kutsumus" tags="n.*"><select lemma="vocation" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="koettelemus" tags="n.*"><select lemma="ordeal" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kivittäminen" tags="n.*"><select lemma="stoning" tags="n.*"/></match></rule>
@@ -7098,7 +7096,7 @@
   <rule weight="1.0"><match lemma="tahdikkuus" tags="n.*"><select lemma="tact" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="syrjäytynyt" tags="adj.*"><select lemma="marginal" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="sydänläppä" tags="n.*"><select lemma="heart" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="suurehko" tags="adj.*"><select lemma="large" tags="adj.sint.*"/></match></rule>
+  <rule weight="1.0"><match lemma="suurehko" tags="adj.*"><select lemma="large" tags="adj.sint.*.*"/></match></rule>
   <rule weight="1.0"><match lemma="surullisesti" tags="adv"><select lemma="sadly" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="suotuisasti" tags="adv"><select lemma="favourably" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="suopeus" tags="n.*"><select lemma="indulgence" tags="n.*"/></match></rule>
@@ -10428,7 +10426,7 @@
   <rule weight="1.0"><match lemma="haulikko" tags="n.*"><select lemma="shotgun" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="haukku" tags="n.*"><select lemma="stick" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="hätiköinti" tags="n.*"><select lemma="rush" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="hassu" tags="adj.*"><select lemma="funny" tags="adj.sint"/></match></rule>
+  <rule weight="1.0"><match lemma="hassu" tags="adj.*"><select lemma="funny" tags="adj.sint.*"/></match></rule>
   <rule weight="1.0"><match lemma="hartaus" tags="n.*"><select lemma="worship" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="harmaaorava" tags="n.*"><select lemma="squirrel" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="hapuileva" tags="adj.*"><select lemma="hesitant" tags="adj.*"/></match></rule>
@@ -11290,7 +11288,7 @@
   <rule weight="1.0"><match lemma="syaanivetyhappo" tags="n.*"><select lemma="hectolitre" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="suuseksi" tags="n.*"><select lemma="shenanigan" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="suursiivous" tags="n.*"><select lemma="some" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="suurentunut" tags="adj.*"><select lemma="large" tags="adj.sint.*"/></match></rule>
+  <rule weight="1.0"><match lemma="suurentunut" tags="adj.*"><select lemma="large" tags="adj.sint.*.*"/></match></rule>
   <rule weight="1.0"><match lemma="suurentua" tags="vblex.*"><select lemma="increase" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="suurenmoisuus" tags="n.*"><select lemma="greatness" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="suurenmoisesti" tags="adv"><select lemma="magnificently" tags="adv"/></match></rule>
@@ -12085,7 +12083,7 @@
   <rule weight="1.0"><match lemma="paloposti" tags="n.*"><select lemma="hydrant" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="palopommi" tags="n.*"><select lemma="synagogue" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="palopäällikkö" tags="n.*"><select lemma="out" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="paloiteltu" tags="adj.*"><select lemma="large" tags="adj.sint.*"/></match></rule>
+  <rule weight="1.0"><match lemma="paloiteltu" tags="adj.*"><select lemma="large" tags="adj.sint.*.*"/></match></rule>
   <rule weight="1.0"><match lemma="pallas" tags="n.*"><select lemma="halibut" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="palkki" tags="n.*"><select lemma="progress" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="palkkavaatimus" tags="n.*"><select lemma="wage" tags="n.*"/></match></rule>
@@ -13478,7 +13476,7 @@
   <rule weight="1.0"><match lemma="hurma" tags="n.*"><select lemma="euphoria" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="hurmaavasti" tags="adv"><select lemma="with" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="hurjasti" tags="adv"><select lemma="dramatically" tags="adv"/></match></rule>
-  <rule weight="1.0"><match lemma="hupaisa" tags="adj.*"><select lemma="funny" tags="adj.sint"/></match></rule>
+  <rule weight="1.0"><match lemma="hupaisa" tags="adj.*"><select lemma="funny" tags="adj.sint.*"/></match></rule>
   <rule weight="1.0"><match lemma="huotrakala" tags="n.*"><select lemma="swordfish" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="huoruus" tags="n.*"><select lemma="adultery" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="huora" tags="n.*"><select lemma="prostitute" tags="n.*"/></match></rule>
@@ -13543,7 +13541,7 @@
   <rule weight="1.0"><match lemma="hipaista" tags="vblex.*"><select lemma="smooth" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="hinku" tags="n.*"><select lemma="drive" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="hinaaja" tags="n.*"><select lemma="tugboat" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="hilpeä" tags="adj.*"><select lemma="funny" tags="adj.sint"/></match></rule>
+  <rule weight="1.0"><match lemma="hilpeä" tags="adj.*"><select lemma="funny" tags="adj.sint.*"/></match></rule>
   <rule weight="1.0"><match lemma="hillopurkki" tags="n.*"><select lemma="jam" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="hillitysti" tags="adv"><select lemma="carefully" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="hiljentyä" tags="vblex.*"><select lemma="quieten" tags="vblex.*"/></match></rule>
@@ -14067,7 +14065,6 @@
   <rule weight="1.0"><match lemma="demokraatti" tags="n.*"><select lemma="democrat" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kuningaskunta" tags="n.*"><select lemma="kingdom" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="luxemburg" tags="np.*"><select lemma="luxembourg" tags="np.*"/></match></rule>
-  <rule weight="1.0"><match lemma="katsoa" tags="vblex.*"><select lemma="believe" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="ministeri" tags="n.*"><select lemma="minister" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="puheenjohtaja" tags="n.*"><select lemma="presidency" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="romani" tags="n.*"><select lemma="roma" tags="n.*"/></match></rule>
@@ -15317,7 +15314,6 @@
   <rule weight="1.0"><match lemma="jakso" tags="n.*"><select lemma="period" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="jakautua" tags="vblex.*"><select lemma="divide" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="jääkarhu" tags="n.*"><select lemma="bear" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="iso" tags="adj.*"><select lemma="big" tags="adj.sint"/></match></rule>
   <rule weight="1.0"><match lemma="irrallaan" tags="adv.*"><select lemma="apart" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="innokas" tags="adj.*"><select lemma="keen" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="inflaatioaste" tags="n.*"><select lemma="inflation" tags="n.*"/></match></rule>
@@ -16095,7 +16091,7 @@
   <rule weight="1.0"><match lemma="lujuus" tags="n.*"><select lemma="steadfastness" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="luinen" tags="adj.*"><select lemma="bony" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="löytäjä" tags="n.*"><select lemma="discoverer" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="lounainen" tags="adj.*"><select lemma="north" tags="adj.sint"/></match></rule>
+  <rule weight="1.0"><match lemma="lounainen" tags="adj.*"><select lemma="north" tags="adj.sint.*"/></match></rule>
   <rule weight="1.0"><match lemma="lopullisesti" tags="adv"><select lemma="finally" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="lopuksi" tags="adv"><select lemma="finally" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="loppusanat" tags="n.*"><select lemma="formula" tags="n.*"/></match></rule>
@@ -16179,7 +16175,7 @@
   <rule weight="1.0"><match lemma="kuutonen" tags="n"><select lemma="objective" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kuutio" tags="n.*"><select lemma="cube" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kuutamo" tags="n.*"><select lemma="moonlight" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="kuuma" tags="adj.*"><select lemma="hot" tags="adj.sint.*"/></match></rule>
+  <rule weight="1.0"><match lemma="kuuma" tags="adj.*"><select lemma="hot" tags="adj.sint.*.*"/></match></rule>
   <rule weight="1.0"><match lemma="kuulovammainen" tags="adj.*"><select lemma="hearing-impaired" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="kuula" tags="n.*"><select lemma="bullet" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kutsumus" tags="n.*"><select lemma="vocation" tags="n.*"/></match></rule>
@@ -16469,7 +16465,7 @@
   <rule weight="1.0"><match lemma="havupuu" tags="n.*"><select lemma="deciduous" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="hävittäminen" tags="n"><select lemma="waste" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="havahtua" tags="vblex.*"><select lemma="found" tags="vblex.*"/></match></rule>
-  <rule weight="1.0"><match lemma="hauska" tags="adj.*"><select lemma="funny" tags="adj.sint.*"/></match></rule>
+  <rule weight="1.0"><match lemma="hauska" tags="adj.*"><select lemma="funny" tags="adj.sint.*.*"/></match></rule>
   <rule weight="1.0"><match lemma="hätkähtää" tags="vblex.*"><select lemma="object" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="hätiköity" tags="adj.*"><select lemma="overhasty" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="hätiköinti" tags="n.*"><select lemma="haste" tags="n.*"/></match></rule>
@@ -16642,6 +16638,14 @@
 
   <rule weight="1.0"><match lemma="herätyskello" tags="n.*"><select lemma="alarm" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="muuten" tags="adv.*"><select lemma="by the way" tags="adv.*"/></match></rule>
+  <rule weight="1.0"><match lemma="huolellisesti" tags="adv"><select lemma="carefully" tags="adv"/></match></rule>
+  <rule weight="1.0"><match lemma="katsoa" tags="vblex.*"><select lemma="look" tags="vblex.*"/></match></rule>
+  <rule weight="1.0"><match lemma="aina" tags="adv"><select lemma="always" tags="adv"/></match></rule>
+  <rule weight="1.0"><match lemma="yhdessä" tags="adv"><select lemma="together" tags="adv"/></match></rule>
+  <rule weight="1.0"><match lemma="erittäin" tags="adv"><select lemma="very" tags="adv"/></match></rule>
+  <rule weight="1.0"><match lemma="puu" tags="n.*"><select lemma="tree" tags="n.*"/></match></rule>
+
+  <rule weight="1.0"><match lemma="kesäinen" tags="adj.*"><select lemma="summer" tags="adj.*"/></match></rule>
 
   <!-- Manual rules with context -->
 
@@ -16656,7 +16660,7 @@
     <match lemma="kitara" tags="n.*"/>
   </rule>
 
-  <rule>
+  <rule weight="2.0">
     <match lemma="kuulla" tags="vblex.*"><select lemma="hear" tags="vblex.*"/></match>
     <match lemma="ääni" tags="n.*"><select lemma="sound" tags="n.*"/></match>
   </rule>
@@ -17080,7 +17084,7 @@
     <match lemma="yhtä" tags="adv"/>
   </rule>
   <rule c="63 262: 2" weight="2.0">
-    <match lemma="laaja" tags="adj.comp.sg.ela"><select lemma="wide" tags="adj.sint.comp"/></match>
+    <match lemma="laaja" tags="adj.comp.sg.ela"><select lemma="wide" tags="adj.sint.*.comp"/></match>
     <match lemma="näkökulma" tags="n.sg.ela"/>
   </rule>
   <rule c="64 266: 5" weight="2.5">
@@ -17114,7 +17118,7 @@
     <match lemma="oikeutettu" tags="adj.pos.pl.par"><select lemma="entitle" tags="vblex.pp"/></match>
   </rule>
   <rule c="71 296: 3" weight="1.5">
-    <match lemma="laaja" tags="adj.pos.sg.gen"><select lemma="large" tags="adj.sint"/></match>
+    <match lemma="laaja" tags="adj.pos.sg.gen"><select lemma="large" tags="adj.sint.*"/></match>
     <match lemma="enemmistö" tags="n.sg.gen"/>
   </rule>
   <rule c="72 300: 3" weight="1.5">
@@ -17145,7 +17149,7 @@
     <match lemma="yritys" tags="n.pl.gen"/>
   </rule>
   <rule c="78 327: 2" weight="2.0">
-    <match lemma="suuri" tags="adj.pos.pl.gen"><select lemma="big" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.pl.gen"><select lemma="big" tags="adj.sint.*"/></match>
     <match lemma="maa" tags="n.pl.gen"/>
   </rule>
   <rule c="79 331: 27" weight="3.0">
@@ -17578,7 +17582,7 @@
     <match lemma="voida" tags="vaux.actv.infe.sg.ine.px1sg"/>
   </rule>
   <rule c="179 755: 2" weight="2.0">
-    <match lemma="tyytyväinen" tags="adj.pos.sg.nom"><select lemma="happy" tags="adj.sint"/></match>
+    <match lemma="tyytyväinen" tags="adj.pos.sg.nom"><select lemma="happy" tags="adj.sint.*"/></match>
     <match lemma="voida" tags="vaux.actv.infe.sg.ine.px1sg"/>
   </rule>
   <rule c="180 759: 2" weight="2.0">
@@ -17780,11 +17784,11 @@
     <match lemma="mahdollisuus" tags="n.sg.par"><select lemma="chance" tags="n.*"/></match>
   </rule>
   <rule c="223 945: 3" weight="3.0">
-    <match lemma="pieni" tags="adj.pos.pl.par"><select lemma="small" tags="adj.sint.comp"/></match>
+    <match lemma="pieni" tags="adj.pos.pl.par"><select lemma="small" tags="adj.sint.*.comp"/></match>
     <match lemma="seura" tags="n.pl.par"/>
   </rule>
   <rule c="224 949: 2" weight="2.0">
-    <match lemma="pieni" tags="adj.pos.pl.par"><select lemma="small" tags="adj.sint.comp"/></match>
+    <match lemma="pieni" tags="adj.pos.pl.par"><select lemma="small" tags="adj.sint.*.comp"/></match>
     <match lemma="seura" tags="n.pl.par"/>
     <match lemma="ja" tags="cnjcoo"/>
   </rule>
@@ -17798,11 +17802,11 @@
     <match lemma="tasavalta" tags="n.sg.gen"/>
   </rule>
   <rule c="227 963: 8" weight="1.33333333333">
-    <match lemma="entinen" tags="adj.pos.sg.par"><select lemma="good" tags="adj.sint.comp"/></match>
+    <match lemma="entinen" tags="adj.pos.sg.par"><select lemma="good" tags="adj.sint.*.comp"/></match>
     <match lemma="paremmin" tags="adv"/>
   </rule>
   <rule c="228 967: 3" weight="3.0">
-    <match lemma="entinen" tags="adj.pos.sg.par"><select lemma="great" tags="adj.sint.comp"/></match>
+    <match lemma="entinen" tags="adj.pos.sg.par"><select lemma="great" tags="adj.sint.*.comp"/></match>
     <match lemma="suuri" tags="adj.comp.sg.nom"/>
   </rule>
   <rule c="229 971: 2" weight="2.0">
@@ -18239,7 +18243,7 @@
   </rule>
   <rule c="331 1400: 2" weight="2.0">
     <match lemma="vielä" tags="adv"/>
-    <match lemma="onnistunut" tags="adj.pos.pl.nom"><select lemma="able" tags="adj.sint"/></match>
+    <match lemma="onnistunut" tags="adj.pos.pl.nom"><select lemma="able" tags="adj.sint.*"/></match>
   </rule>
   <rule c="332 1404: 3" weight="3.0">
     <match lemma="ei" tags="vblex.neg.actv.p1.pl"/>
@@ -19034,7 +19038,7 @@
   </rule>
   <rule c="518 2188: 2" weight="2.0">
     <match lemma="paljo" tags="adj.pos.sg.gen"/>
-    <match lemma="suuri" tags="adj.comp.pl.par"><select lemma="high" tags="adj.sint.comp"/></match>
+    <match lemma="suuri" tags="adj.comp.pl.par"><select lemma="high" tags="adj.sint.*.comp"/></match>
   </rule>
   <rule c="519 2192: 2" weight="2.0">
     <match lemma="näyttää" tags="vblex.actv.pres.p3.pl"><select lemma="seem" tags="vblex.inf"/></match>
@@ -20718,12 +20722,12 @@
     <match lemma="ja" tags="cnjcoo"/>
   </rule>
   <rule c="914 3866: 14" weight="14.0">
-    <match lemma="korkea" tags="adj.pos.sg.gen"><select lemma="high" tags="adj.sint"/></match>
+    <match lemma="korkea" tags="adj.pos.sg.gen"><select lemma="high" tags="adj.sint.*"/></match>
     <match lemma="edustaja" tags="n.sg.gen"/>
   </rule>
   <rule c="915 3870: 3" weight="3.0">
     <match lemma="ja" tags="cnjcoo"/>
-    <match lemma="korkea" tags="adj.pos.sg.gen"><select lemma="high" tags="adj.sint"/></match>
+    <match lemma="korkea" tags="adj.pos.sg.gen"><select lemma="high" tags="adj.sint.*"/></match>
   </rule>
   <rule c="916 3874: 4" weight="4.0">
     <match lemma="yksimielisyys" tags="n.sg.nom"><select lemma="consensus" tags="n.*"/></match>
@@ -21383,7 +21387,7 @@
   </rule>
   <rule c="1073 4529: 2" weight="2.0">
     <match lemma="erittäin" tags="adv"/>
-    <match lemma="suuri" tags="adj.pos.pl.nom"><select lemma="great" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.pl.nom"><select lemma="great" tags="adj.sint.*"/></match>
   </rule>
   <rule c="1074 4533: 5" weight="2.5">
     <match lemma="olla" tags="vblex.actv.pres.p3.sg"/>
@@ -22162,7 +22166,7 @@
     <match lemma="periaate" tags="n.pl.gen"><select lemma="rule" tags="n.*"/></match>
   </rule>
   <rule c="1259 5308: 13" weight="6.5">
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint.*"/></match>
     <match lemma="enemmistö" tags="n.sg.nom"/>
   </rule>
   <rule c="1260 5312: 3" weight="3.0">
@@ -22174,7 +22178,7 @@
     <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="serious" tags="adj"/></match>
   </rule>
   <rule c="1262 5320: 3" weight="3.0">
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint.*"/></match>
     <match lemma="ja" tags="cnjcoo"/>
   </rule>
   <rule c="1263 5324: 5" weight="3.0">
@@ -22182,7 +22186,7 @@
     <match lemma="määrä" tags="n.sg.nom"/>
   </rule>
   <rule c="1264 5328: 5" weight="5.0">
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint.*"/></match>
     <match lemma="määrä" tags="n.sg.nom"/>
   </rule>
   <rule c="1265 5332: 2" weight="2.0">
@@ -22196,16 +22200,16 @@
     <match lemma="edistysaskel" tags="n.sg.nom"/>
   </rule>
   <rule c="1267 5342: 9" weight="3.0">
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint.*"/></match>
     <match lemma="osa" tags="n.sg.nom"/>
   </rule>
   <rule c="1268 5346: 4" weight="4.0">
     <match lemma="hyvin" tags="adv"/>
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint.*"/></match>
   </rule>
   <rule c="1269 5350: 4" weight="2.0">
     <match lemma="hyvin" tags="adv"/>
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="vast" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="vast" tags="adj.sint.*"/></match>
   </rule>
   <rule c="1270 5354: 4" weight="2.0">
     <match lemma="hyvin" tags="adv"/>
@@ -22213,7 +22217,7 @@
   </rule>
   <rule c="1271 5358: 3" weight="1.5">
     <match lemma="ja" tags="cnjcoo"/>
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="large" tags="adj.sint.*"/></match>
   </rule>
   <rule c="1272 5362: 9" weight="4.5">
     <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="important" tags="adj"/></match>
@@ -22226,7 +22230,7 @@
   <rule c="1274 5370: 3" weight="1.5">
     <match lemma="tämä" tags="prn.dem.sg.nom"/>
     <match lemma="olla" tags="vblex.actv.pres.p3.sg"/>
-    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="big" tags="adj.sint"/></match>
+    <match lemma="suuri" tags="adj.pos.sg.nom"><select lemma="big" tags="adj.sint.*"/></match>
   </rule>
   <rule c="1275 5375: 2" weight="2.0">
     <match lemma="joka" tags="adv"/>

@@ -22,6 +22,7 @@
     </def-cat>
     <def-cat n="SN-ADE">
       <cat-item tags="SN.ade"/>
+      <cat-item tags="SN.*.ade"/>
       <cat-item tags="SN.ade.*"/>
     </def-cat>
     <def-cat n="SN-NOM-PAR">
@@ -30,7 +31,10 @@
       <cat-item tags="SN.par"/>
       <cat-item tags="SN.par.*"/>
     </def-cat>
-    <def-cat n="SN">
+    <def-cat n="PERS">
+      <cat-item tags="SN.pers.*"/>
+    </def-cat>
+     <def-cat n="SN">
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
@@ -264,7 +268,7 @@
         <when>
           <test><equal><clip pos="1" part="a_mood"/><lit-tag v="cond"/></equal></test>
           <let><var n="AUX"/>
-               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^would"/><lit-tag v="vaux.actv.pres"/><lit v="$}$ "/></concat>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^would"/><lit-tag v="vaux.pri"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
@@ -276,7 +280,7 @@
         <when>
           <test><equal><clip pos="1" part="a_mood"/><lit-tag v="pot"/></equal></test>
           <let><var n="AUX"/>
-               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^may"/><lit-tag v="vaux.actv.pres"/><lit v="$}$ "/></concat>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^may"/><lit-tag v="vaux.pri"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>
@@ -304,7 +308,7 @@
             <lit v="have"/>
             <lit-tag v="V.HAB"/>
             <lit v="{^have"/>
-            <lit-tag v="vblex.actv.pres"/>
+            <lit-tag v="vblex.pri"/>
             <lit v="$}"/>
           </chunk>
           <var n="NOT"/>
@@ -352,7 +356,7 @@
             <lit v="have"/>
             <lit-tag v="V.HAB"/>
             <lit v="{^have"/>
-            <lit-tag v="vblex.actv.pres"/>
+            <lit-tag v="vblex.pri"/>
             <lit v="$}"/>
           </chunk>
           <var n="NOT"/>
@@ -400,7 +404,7 @@
             <lit v="have"/>
             <lit-tag v="V.HAB"/>
             <lit v="{^have"/>
-            <lit-tag v="vblex.actv.pres"/>
+            <lit-tag v="vblex.pri"/>
             <lit v="$}"/>
           </chunk>
           <var n="NOT"/>
@@ -463,6 +467,44 @@
         </out>
       </action>
     </rule>
+ 
+    <rule comment="REGLA: PERS SV">
+      <pattern>
+        <pattern-item n="PERS"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <call-macro n="insert-aux1">
+          <with-param pos="1"/>
+        </call-macro> 
+        <choose>
+          <when>
+            <test>
+              <not><equal><clip pos="1" part="a_prs"/><clip pos="2" part="a_prs"/></equal></not></test>
+              <call-macro n="insert-prs1">
+                <with-param pos="1"/>
+              </call-macro> 
+          </when>
+        </choose>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <var n="PRS"/>
+          <var n="AUX"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+        <let><var n="PRS"/><lit v=""/></let>
+      </action>
+    </rule>
+
     
     <rule comment="REGLA: SV">
       <pattern>
@@ -484,6 +526,7 @@
             <clip pos="1" part="chcontent"/>
           </chunk>
         </out>
+        <let><var n="PRS"/><lit v=""/></let>
       </action>
     </rule>
   </section-rules>
