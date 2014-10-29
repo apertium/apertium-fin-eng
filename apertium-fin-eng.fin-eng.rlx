@@ -797,6 +797,7 @@ REMOVE Prop + Pl ;  # FMT
 REMOVE Imprt IF (NOT 1* ("!")) (NOT 1 (",")) ; # FMT
 SELECT CC IF (0 ("mutta")) ; # FMT
 SELECT Pron IF (0 ("he")) ; # FMT
+SELECT A IF (0C A OR (v→a)) ;  # FMT
 
 ### TODO: 
 # CLAUSE BOUNDARY CONSTRAINTS

@@ -6409,7 +6409,6 @@
   <rule weight="1.0"><match lemma="keko" tags="n.*"><select lemma="bit" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kehittymätön" tags="adj.*"><select lemma="backward" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="käytetty" tags="adj.*"><select lemma="used" tags="adj.*"/></match></rule>
-  <rule weight="1.0"><match lemma="kaveri" tags="n.*"><select lemma="crony" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kauppapaikka" tags="n.*"><select lemma="venue" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kaula" tags="n.*"><select lemma="neck" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kauimpana" tags="adv.*"><select lemma="furthest" tags="adv"/></match></rule>
@@ -16267,7 +16266,6 @@
   <rule weight="1.0"><match lemma="käyttäytyminen" tags="n"><select lemma="deal" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="käytännöllisyys" tags="n.*"><select lemma="pragmatism" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="käynnistyä" tags="vblex.*"><select lemma="campaign" tags="vblex.*"/></match></rule>
-  <rule weight="1.0"><match lemma="kaveri" tags="n.*"><select lemma="going" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kaventaa" tags="vblex.*"><select lemma="reduce" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="kava" tags="n.*"><select lemma="poet" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="kaupunginosa" tags="n.*"><select lemma="urban" tags="n.*"/></match></rule>
@@ -16646,6 +16644,9 @@
   <rule weight="1.0"><match lemma="puu" tags="n.*"><select lemma="tree" tags="n.*"/></match></rule>
 
   <rule weight="1.0"><match lemma="kesäinen" tags="adj.*"><select lemma="summer" tags="adj.*"/></match></rule>
+
+  <rule weight="1.0"><match lemma="kaveri" tags="n.*"><select lemma="lad" tags="n.*"/></match></rule>
+  <rule weight="1.0"><match lemma="sopiva" tags="adj.*"><select lemma="appropriate" tags="adj.*"/></match></rule>
 
   <!-- Manual rules with context -->
 
