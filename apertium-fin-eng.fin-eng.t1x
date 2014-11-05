@@ -91,6 +91,7 @@
       <cat-item tags="num.*"/>
     </def-cat>
     <def-cat n="adj">
+      <cat-item tags="adj"/> <!-- ens viikolla -->
       <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="verb-mood">
