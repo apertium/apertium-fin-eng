@@ -27,6 +27,7 @@ DELIMITERS = "<$\.>" "<$!>" "<$?>" "<$END-OF-SENTENCE>" "<$ENDDOC>" "<$ENDDOCHEA
 
 # ("<$\.>" "<$!>" "<$?>") # "<$\:>"
 
+SUBREADINGS = LTR ; 
 
 # ============= #
 # Tags and sets #

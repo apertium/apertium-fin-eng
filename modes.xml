@@ -82,7 +82,7 @@
       <program name="hfst-proc -e -w">
         <file name="fin-eng.automorf.hfst"/>
       </program>
-      <program name="cg-conv -a"/>
+      <program name="cg-conv -l -a"/>
       <program name="vislcg3 --trace --grammar">
         <file name="fin-eng.rlx.bin"/>
       </program>
