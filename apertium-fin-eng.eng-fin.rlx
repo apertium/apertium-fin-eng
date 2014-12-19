@@ -160,7 +160,7 @@ SELECT N IF (-1 ("Baltic"i));
 
 SELECT N IF (-1 ("Asian"i));
 
-SELECT N IF (-1 A);
+SELECT N IF (NOT 0 Adv) (-1 A);
 
 SELECT Adv IF (-1 V)(0 ("forward"i));
 
@@ -244,7 +244,7 @@ REMOVE Pr IF (0 Pr OR CC) (-1 SENT);
 
 SELECT V-FIN + $$PERSON (-1C Subj + $$PERSON);
 
-SELECT Inf IF (-2 V-FIN) (-1 Adv) (0 V-FIN OR Inf);
+; SELECT Inf IF (-2 V-FIN) (-1 Adv) (0 V-FIN OR Inf);
 
 SELECT Det + Pos IF (0 Det OR Pron) (1 N);
 
@@ -281,6 +281,13 @@ REMOVE Pron IF (0 Det OR Pron) (1 NUM) ;
 SELECT Year IF (-1 ("in") OR ("after") OR ("since") OR ("of") OR ("throughout")) (NOT 1 N);
 
 SELECT Year IF (-1 Seasons OR Months);
+
+SELECT Preadv IF (1 Adv) ;
+
+SELECT A IF (1 A);
+
+
+
  
 AFTER-SECTIONS 
 
