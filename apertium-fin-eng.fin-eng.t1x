@@ -1033,6 +1033,16 @@
         <call-macro n="mood-handler1"> 
           <with-param pos="1"/>
         </call-macro>
+        <choose>
+          <when>
+            <test><and> 
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pri"/></equal>
+                <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+            </and></test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+          </when>
+        </choose>
         <out> 
           <chunk name="cop" case="caseFirstWord">
             <tags>
