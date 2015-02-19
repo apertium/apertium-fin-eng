@@ -1025,6 +1025,26 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: stray neg">
+      <pattern>
+        <pattern-item n="vbneg"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="neg" case="caseFirstWord">
+            <tags>
+                <tag><lit-tag v="SV.NEG"/></tag>
+                <tag><clip pos="1" part="moodtense" side="sl"/></tag>
+            </tags>
+            <lu>
+                <lit v="not"/>
+                <lit-tag v="adv"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+  </rule>
+
     <rule comment="REGLA: vbolla">
       <pattern>
          <pattern-item n="vbolla"/>
