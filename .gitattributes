@@ -35,6 +35,8 @@ dev/testvoc.sh -text
 /eng-fin.prob -text svneol=unset#unset
 /fin-eng.prob -text svneol=unset#unset
 /modes.xml -text
+texts/newsdev2015-enfi.en.text -text
+texts/newsdev2015-enfi.fi.text -text
 texts/rautatie.text -text
 texts/story.fin-eng.google.txt -text
 texts/tarina.eng.text -text
