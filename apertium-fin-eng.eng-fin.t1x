@@ -100,6 +100,9 @@
       <attr-item tags="vblex"/>
       <attr-item tags="vblex.actv"/>
       <attr-item tags="vblex.pass"/>
+      <attr-item tags="vbhaver"/>
+      <attr-item tags="vbhaver.actv"/>
+      <attr-item tags="vbhaver.pass"/>
     </def-attr>
     <def-attr n="a_tens">
       <attr-item tags="pri"/>
