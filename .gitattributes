@@ -37,6 +37,8 @@ dev/testvoc.sh -text
 /modes.xml -text
 texts/newsdev2015-enfi.en.text -text
 texts/newsdev2015-enfi.fi.text -text
+texts/newstest2015-enfi.en.text -text
+texts/newstest2015-enfi.fi.text -text
 texts/rautatie.text -text
 texts/story.fin-eng.google.txt -text
 texts/tarina.eng.text -text
