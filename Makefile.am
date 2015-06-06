@@ -33,8 +33,6 @@ TARGETS_COMMON=$(TARGETS_MONOLING) $(TARGETS_TRANSFER)
 # This include defines goals for install-modes, .deps/.d and .mode files:
 @ap_include@
 
-## fin transducer
-
 # currently we copy stuff from another dir
 $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
 	cp -v -f $< $@
@@ -48,15 +46,12 @@ $(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 $(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
 	cp -v -f $< $@
 
-## eng transducer
+$(PREFIX2).automorf.bin: $(AP_SRC2)/$(LANG2).automorf.bin
+	cp -v -f $< $@
 
-$(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix $(BASENAME).$(LANG2).acx
-	apertium-validate-dictionary $<
-	lt-comp rl $< $@ $(BASENAME).$(LANG2).acx
+$(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
+	cp -v -f $< $@
 
-$(PREFIX2).automorf.bin: $(BASENAME).$(LANG2).dix $(BASENAME).$(LANG2).acx
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@ $(BASENAME).$(LANG2).acx
 
 ## Debugging transducers (for testvoc)
 

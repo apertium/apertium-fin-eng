@@ -43,6 +43,7 @@
     </def-cat>
     <def-cat n="noun">
       <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj"/>

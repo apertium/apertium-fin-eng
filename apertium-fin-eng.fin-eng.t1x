@@ -38,6 +38,7 @@
     </def-cat>
     <def-cat n="adv">
         <cat-item tags="adv"/>
+        <cat-item tags="part"/>
     </def-cat>
     <def-cat n="cnjcoo">
         <cat-item tags="cnjcoo"/>
@@ -85,6 +86,7 @@
         <cat-item tags="vblex.neg.*.*.*"/>
     </def-cat>
     <def-cat n="post">
+      <cat-item tags="pr"/>
       <cat-item tags="post"/>
     </def-cat>
     <def-cat n="num">
@@ -176,6 +178,7 @@
     </def-attr>
     <def-attr n="a_adv">
         <attr-item tags="adv"/>
+        <attr-item tags="part"/>
         <attr-item tags="adv.itg"/>
     </def-attr>
     <def-attr n="a_nom">
