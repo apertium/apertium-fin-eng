@@ -164,8 +164,8 @@
     </def-attr>
     <def-attr n="moodtense">
       <attr-item tags="past"/>
-      <attr-item tags="pri"/>
       <attr-item tags="pres"/>
+      <attr-item tags="pri"/>
       <attr-item tags="cond"/>
       <attr-item tags="imp"/>
       <attr-item tags="pot"/>
@@ -310,13 +310,13 @@
           <choose>
             <when>
               <test><or> 
-                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pres"/></equal>
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pri"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="cond"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="imp"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pot"/></equal>
         </or></test>
 
-              <let><clip pos="1" side="tl" part="moodtense"/><lit-tag v="pri"/></let>
+              <let><clip pos="1" side="tl" part="moodtense"/><lit-tag v="pres"/></let>
             </when>
         </choose>
     </def-macro>
@@ -1021,7 +1021,7 @@
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_verb"/>
-              <lit-tag v="pri"/>
+              <lit-tag v="pres"/>
             </lu>
           </chunk>
         </out>
@@ -1059,7 +1059,7 @@
         <choose>
           <when>
             <test><and> 
-                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pri"/></equal>
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pres"/></equal>
                 <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
             </and></test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>

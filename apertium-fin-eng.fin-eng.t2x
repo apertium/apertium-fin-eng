@@ -268,19 +268,19 @@
         <when>
           <test><equal><clip pos="1" part="a_mood"/><lit-tag v="cond"/></equal></test>
           <let><var n="AUX"/>
-               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^would"/><lit-tag v="vaux.pri"/><lit v="$}$ "/></concat>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^would"/><lit-tag v="vaux.pres"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_mood"/><lit-tag v="imp"/></equal></test>
           <let><var n="AUX"/>
-               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^should"/><lit-tag v="vaux.pri"/><lit v="$}$ "/></concat>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^should"/><lit-tag v="vaux.pres"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_mood"/><lit-tag v="pot"/></equal></test>
           <let><var n="AUX"/>
-               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^may"/><lit-tag v="vaux.pri"/><lit v="$}$ "/></concat>
+               <concat><lit v="^mood"/><lit-tag v="MOOD"/><lit v="{^may"/><lit-tag v="vaux.pres"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>
@@ -308,7 +308,7 @@
             <lit v="have"/>
             <lit-tag v="V.HAB"/>
             <lit v="{^have"/>
-            <lit-tag v="vblex.pri"/>
+            <lit-tag v="vblex.pres"/>
             <lit v="$}"/>
           </chunk>
           <var n="NOT"/>
@@ -356,7 +356,7 @@
             <lit v="have"/>
             <lit-tag v="V.HAB"/>
             <lit v="{^have"/>
-            <lit-tag v="vblex.pri"/>
+            <lit-tag v="vblex.pres"/>
             <lit v="$}"/>
           </chunk>
           <var n="NOT"/>
@@ -404,7 +404,7 @@
             <lit v="have"/>
             <lit-tag v="V.HAB"/>
             <lit v="{^have"/>
-            <lit-tag v="vblex.pri"/>
+            <lit-tag v="vblex.pres"/>
             <lit v="$}"/>
           </chunk>
           <var n="NOT"/>
