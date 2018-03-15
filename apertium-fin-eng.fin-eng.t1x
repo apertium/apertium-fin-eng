@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
-<!-- 
+<!--
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License.
@@ -29,7 +29,7 @@
       <cat-item lemma="olla" tags="*.*.*.conneg"/>
       <cat-item lemma="olla" tags="*.*.*.conneg.*"/>
     </def-cat>
-    <def-cat n="conneg_nottable"> 
+    <def-cat n="conneg_nottable">
       <cat-item lemma="voida" tags="*.*.*.conneg"/>
       <cat-item lemma="voida" tags="*.*.*.conneg.*"/>
     </def-cat>
@@ -43,6 +43,12 @@
     <def-cat n="cnjcoo">
         <cat-item tags="cnjcoo"/>
         <cat-item tags="cnjcoo.*"/>
+    </def-cat>
+    <def-cat n="cnjsub">
+        <cat-item tags="cnjsub"/>
+        <cat-item tags="cnjsub.*"/>
+        <cat-item tags="cnjadv"/>
+        <cat-item tags="cnjadv.*"/>
     </def-cat>
     <def-cat n="necessive">
         <cat-item lemma="täytyä" tags="vaux.*"/>
@@ -120,10 +126,24 @@
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
+      <cat-item tags="sent.*"/>
+    </def-cat>
+    <def-cat n="clbpunct">
+      <cat-item tags="guio"/>
+      <cat-item tags="guio.*"/>
+      <cat-item tags="cm"/>
+      <cat-item tags="cm.*"/>
     </def-cat>
 
+    <def-cat n="verb">
+      <cat-item tags="vblex.*"/>
+      <cat-item tags="vaux.*"/>
+    </def-cat>
     <def-cat n="verb-pprs">
         <cat-item tags="vblex.*.pprs.*"/>
+    </def-cat>
+    <def-cat n="verb-pp">
+        <cat-item tags="vblex.*.pp.*"/>
     </def-cat>
     <def-cat n="verb-past">
         <cat-item tags="vblex.*.past.*"/>
@@ -152,12 +172,16 @@
       <attr-item tags="vaux"/>
       <attr-item tags="vaux.actv"/>
       <attr-item tags="vaux.pasv"/>
+      <attr-item tags="vbser"/>
+      <attr-item tags="vbser.actv"/>
+      <attr-item tags="vbser.pasv"/>
     </def-attr>
     <def-attr n="a_vb">
       <attr-item tags="vblex"/>
       <attr-item tags="vaux"/>
+      <attr-item tags="vbser"/>
     </def-attr>
-    <def-attr n="person">
+    <def-attr n="a_person">
       <attr-item tags="p1"/>
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
@@ -181,8 +205,28 @@
         <attr-item tags="part"/>
         <attr-item tags="adv.itg"/>
     </def-attr>
+    <def-attr n="a_supernominal">
+      <attr-item tags="n"/>
+      <attr-item tags="vblex.subs"/>
+      <attr-item tags="np"/>
+      <attr-item tags="np.ant"/>
+      <attr-item tags="np.ant.f"/>
+      <attr-item tags="np.ant.m"/>
+      <attr-item tags="prn"/>
+      <attr-item tags="prn.subj.p2.mf"/>
+      <attr-item tags="prn.subj.p1.mf"/>
+      <attr-item tags="prn.obj.p1.mf"/>
+      <attr-item tags="prn.obj.p2.mf"/>
+      <attr-item tags="prn.subj.p3.m"/>
+      <attr-item tags="prn.subj.p3.mf"/>
+      <attr-item tags="prn.obj.p3.m"/>
+      <attr-item tags="prn.obj.p3.mf"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
+      <attr-item tags="prn"/>
+      <attr-item tags="prn.subj.p3.m"/>
+      <attr-item tags="prn.obj.p3.m"/>
       <attr-item tags="vblex.subs"/>
       <attr-item tags="np"/>
       <attr-item tags="np.ant"/>
@@ -196,11 +240,16 @@
     <def-attr n="a_prn">
       <attr-item tags="prn.pers"/>
     </def-attr>
+    <def-attr n="a_prnpers">
+      <attr-item tags="subj"/>
+      <attr-item tags="obj"/>
+    </def-attr>
     <def-attr n="a_num">
       <attr-item tags="num"/>
     </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
+      <attr-item tags="sp"/>
       <attr-item tags="pl"/>
     </def-attr>
     <def-attr n="a_pers">
@@ -238,7 +287,10 @@
         <attr-item tags="px3pl"/>
         <attr-item tags="px3sp"/>
     </def-attr>
-
+    <def-attr n="a_post">
+      <attr-item tags="post"/>
+      <attr-item tags="pr"/>
+    </def-attr>
     <def-attr n="synfunc">
       <attr-item tags="CLB"/>
       <attr-item tags="@\+FAUXV"/>
@@ -298,33 +350,62 @@
     <def-var n="number"/>
     <def-var n="sntype"/>
     <def-var n="current_verb"/>
+    <def-var n="screeve"/>
+    <def-var n="person"/>
   </section-def-vars>
   <section-def-macros>
- 
+
     <def-macro n="proc-synlabel1" npar="1">
           <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
+        </def-macro>
+
+    <def-macro n="person-handler1" npar="1">
+        <choose>
+          <when>
+            <test>
+              <or>
+                <equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+                <not><and>
+                   <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
+                   <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
+                </and></not>
+              </or>
+            </test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
+          </when>
+        </choose>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
     </def-macro>
 
     <def-macro n="mood-handler1" npar="1">
           <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
           <choose>
             <when>
-              <test><or> 
+              <test><or>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pri"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="cond"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="imp"/></equal>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pot"/></equal>
-        </or></test>
-
-              <let><clip pos="1" side="tl" part="moodtense"/><lit-tag v="pres"/></let>
-            </when>
+              </or></test>
+              <let><var n="screeve"/><lit-tag v="pres"/></let>
+              </when>
+              <when>
+                <test>
+                  <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="past"/></equal>
+                </test>
+                <let><var n="screeve"/><lit-tag v="past"/></let>
+              </when>
+              <otherwise>
+                <let><var n="screeve"/><lit-tag v="inf"/></let>
+              </otherwise>
         </choose>
     </def-macro>
 
     <def-macro n="case-handler1" npar="1">
           <let><clip pos="1" side="tl" part="synfunc"/><lit v=""/></let>
           <choose>
-             
+
             <when>
               <test>
                 <and>
@@ -344,10 +425,10 @@
                 <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ess"/></equal>
         </or></and></test>
 
-              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="acc"/></let>
+        <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="acc"/></let>
               <let><var n="sntype"/><lit-tag v="SN"/></let>
             </when>
-            
+
             <when>
               <test><or> <!-- Nom/Acc and locative cases -->
                 <!--<equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="acc"/></equal>-->
@@ -373,10 +454,21 @@
                  <equal><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></equal>
                  <not><equal><clip pos="1" side="tl" part="a_prn"/><lit-tag v="prn.pers"/></equal></not>
               </and></test>
-              <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v=""/></let>
+              <let><clip pos="1" side="tl" part="a_cas"/><lit v=""/></let>
               <let><var n="sntype"/><lit-tag v="SN.GEN"/></let>
             </when>
-        </choose>
+          </choose>
+          <choose>
+            <when>
+              <test>
+                <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="nom"/></equal>
+              </test>
+              <let><clip pos="1" side="tl" part="a_prnpers"/><lit-tag v="subj"/></let>
+            </when>
+            <otherwise>
+              <let><clip pos="1" side="tl" part="a_prnpers"/><lit-tag v="obj"/></let>
+            </otherwise>
+          </choose>
     </def-macro>
 
 
@@ -392,10 +484,10 @@
         <pattern-item n="adv-misc"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -406,7 +498,7 @@
             </tags>
             <lu>
                 <clip pos="1" side="tl" part="lem"/>
-                <clip pos="1" side="tl" part="a_adv"/> 
+                <clip pos="1" side="tl" part="a_adv"/>
             </lu>
           </chunk>
         </out>
@@ -418,22 +510,27 @@
         <pattern-item n="pron-pers"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="pron" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN.pers"/></tag>
-              <tag><clip pos="1" side="sl" part="a_pers"/></tag>
-              <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
-              <tag><clip pos="1" side="sl" part="a_cas"/></tag>
+              <tag><clip pos="1" side="sl" part="a_pers"/></tag> <!-- p123 -->
+              <tag><clip pos="1" side="sl" part="a_prnpers"/></tag> <!-- subj/obj -->
+              <tag><clip pos="1" side="sl" part="a_nbr"/></tag> <!-- sg/pl -->
+              <tag><clip pos="1" side="sl" part="a_cas"/></tag> <!-- nom -->
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/> <!-- you -->
+              <clip pos="1" side="tl" part="a_prn"/> <!-- prn.pers -->
+              <clip pos="1" side="tl" part="a_prnpers"/> <!-- subj -->
+              <clip pos="1" side="tl" part="a_pers"/> <!-- p123 -->
+              <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
             </lu>
           </chunk>
         </out>
@@ -448,10 +545,10 @@
         <pattern-item n="pron-misc"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -483,10 +580,10 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -513,7 +610,7 @@
         <pattern-item n="adj"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -539,10 +636,10 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="4"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="4"/>
         </call-macro>
         <out>
@@ -585,10 +682,10 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="2"/>
         </call-macro>
         <out>
@@ -623,10 +720,10 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="2"/>
         </call-macro>
         <out>
@@ -660,10 +757,10 @@
          <pattern-item n="conneg"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="1"/>
         </call-macro>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="2"/>
         </call-macro>
         <choose>
@@ -673,16 +770,16 @@
                 <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                   <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
                 </and></not>
               </or>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
-     
-        <out> 
+
+        <out>
           <chunk name="notted" case="caseFirstWord">
             <tags>
                 <tag><lit-tag v="SV"/></tag>
@@ -693,14 +790,14 @@
           </lu>
           <b pos="1"/> <!-- space character between words -->
           <lu>
-            <clip pos="3" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="3" side="tl" part="lem"/> <!-- know -->
             <clip pos="3" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <clip pos="3" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -719,6 +816,27 @@
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="a_vb"/>
               <lit-tag v="ger"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: verb-pp">
+      <pattern>
+        <pattern-item n="verb-pp"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
+        <out>
+          <chunk name="ger" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_vb"/>
+              <lit-tag v="pp"/>
             </lu>
           </chunk>
         </out>
@@ -776,7 +894,7 @@
       <pattern>
         <pattern-item n="just-inf"/>
       </pattern>
-      <action>
+       <action>
         <out>
           <chunk name="to-do" case="caseFirstWord">
             <tags>
@@ -803,13 +921,13 @@
          <pattern-item n="just-inf"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="3"/>
         </call-macro>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="2"/>
         </call-macro>
-      
+
         <choose>
           <when>
             <test>
@@ -817,26 +935,26 @@
                 <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                   <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
                 </and></not>
               </or>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
-     
-        <out> 
+
+        <out>
           <chunk name="notted" case="caseFirstWord">
             <tags>
                 <tag><lit-tag v="SV"/></tag>
                 <tag><clip pos="2" side="sl" part="moodtense"/></tag>
             </tags>
           <lu>
-            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="2" side="tl" part="lem"/> <!-- know -->
             <clip pos="2" side="tl" part="a_vb"/> <!-- vblex -->
-            <clip pos="2" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           <b pos="1"/> <!-- space character between words -->
@@ -849,7 +967,7 @@
               <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -859,7 +977,7 @@
          <pattern-item n="cop-conneg"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="2"/>
         </call-macro>
         <choose>
@@ -869,26 +987,26 @@
                 <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                   <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
                 </and></not>
               </or>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
-     
-        <out> 
+
+        <out>
           <chunk name="neg-cop" case="caseFirstWord">
             <tags>
                 <tag><lit-tag v="SV.COP"/></tag>
-                <tag><clip pos="2" side="sl" part="moodtense"/></tag>
+                <tag><var n="moodtense"/></tag>
             </tags>
           <lu>
-            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="2" side="tl" part="lem"/> <!-- know -->
             <clip pos="2" side="tl" part="a_vb"/> <!-- vblex -->
-            <clip pos="2" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           <b pos="1"/> <!-- space character between words -->
@@ -897,7 +1015,7 @@
             <lit-tag v="adv"/> <!-- adv -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -909,7 +1027,7 @@
          <pattern-item n="conneg_nottable"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="3"/>
         </call-macro>
         <choose>
@@ -918,21 +1036,21 @@
               <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
-     
-        <out> 
+
+        <out>
           <chunk name="notted" case="caseFirstWord">
             <tags>
                 <tag><lit-tag v="SV"/></tag>
-                <tag><clip pos="3" side="sl" part="moodtense"/></tag>
+                <tag><var n="screeve"/></tag>
             </tags>
           <lu>
-            <clip pos="3" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="3" side="tl" part="lem"/> <!-- know -->
             <clip pos="3" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <clip pos="3" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="3" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="3" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           <b pos="1"/> <!-- space character between words -->
@@ -941,7 +1059,7 @@
             <lit-tag v="adv"/> <!-- adv -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -952,7 +1070,7 @@
          <pattern-item n="conneg_nottable"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="2"/>
         </call-macro>
 
@@ -963,26 +1081,26 @@
                 <equal><clip pos="2" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                   <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
                 </and></not>
               </or>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
-     
-        <out> 
+
+        <out>
           <chunk name="notted" case="caseFirstWord">
             <tags>
                 <tag><lit-tag v="SV"/></tag>
-                <tag><clip pos="2" side="sl" part="moodtense"/></tag>
+                <tag><var n="screeve"/></tag>
             </tags>
           <lu>
-            <clip pos="2" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="2" side="tl" part="lem"/> <!-- know -->
             <clip pos="2" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <clip pos="2" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           <b pos="1"/> <!-- space character between words -->
@@ -991,7 +1109,7 @@
             <lit-tag v="adv"/> <!-- adv -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -1008,7 +1126,7 @@
             </tags>
             <lu>
                 <lit v="do"/>
-                <lit-tag v="vblex.actv.pres"/>
+                <lit-tag v="vblex.pres"/>
                 <clip pos="1" side="tl" part="a_pers"/>
                 <clip pos="1" side="tl" part="a_nbr"/>
             </lu>
@@ -1053,34 +1171,34 @@
          <pattern-item n="vbolla"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="1"/>
         </call-macro>
         <choose>
           <when>
-            <test><and> 
+            <test><and>
                 <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="pres"/></equal>
                 <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
             </and></test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
-        <out> 
+        <out>
           <chunk name="cop" case="caseFirstWord">
             <tags>
                 <tag><lit-tag v="SV.COP"/></tag>
-                <tag><clip pos="1" part="moodtense" side="sl"/></tag>
+                <tag><var n="screeve"/></tag>
             </tags>
           <lu>
-            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="lem"/> <!-- know -->
             <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -1091,23 +1209,23 @@
       </pattern>
       <action>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
-        <out> 
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
+        <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><clip pos="1" side="sl" part="person"/></tag>
+              <tag><clip pos="1" side="sl" part="a_person"/></tag>
               <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
             </tags>
           <lu>
-            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="lem"/> <!-- know -->
             <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <clip pos="1" side="tl" part="moodtense"/> <!-- past -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- past -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -1116,7 +1234,7 @@
          <pattern-item n="verb-pres-impers"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="1"/>
         </call-macro>
         <choose>
@@ -1127,38 +1245,38 @@
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
                    <or>
-                     <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p1"/></equal>
-                     <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                     <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p1"/></equal>
+                     <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
                    </or>
                 </and></not>
               </or>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
-     
-        <out> 
+
+        <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><clip pos="1" side="sl" part="person"/></tag>
+              <tag><clip pos="1" side="sl" part="a_person"/></tag>
               <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
             </tags>
           <lu>
             <lit v="be"/><lit-tag v="vbser"/>
-            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
+            <var n="screeve"/> <!-- pres -->
             <lit-tag v="p3.sg"/>
           </lu>
           <b/>
           <lu>
-            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="lem"/> <!-- know -->
             <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
             <lit-tag v="pp"/>
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -1168,7 +1286,7 @@
          <pattern-item n="verb-pres"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="1"/>
         </call-macro>
         <choose>
@@ -1178,32 +1296,32 @@
                 <equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                   <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
                 </and></not>
               </or>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_voice"/><lit v=""/></let>
-     
-        <out> 
+
+        <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><clip pos="1" side="sl" part="person"/></tag>
+              <tag><clip pos="1" side="sl" part="a_person"/></tag>
               <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
             </tags>
           <lu>
-            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="lem"/> <!-- know -->
             <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -1212,7 +1330,7 @@
          <pattern-item n="verb-mood"/>
       </pattern>
       <action>
-        <call-macro n="mood-handler1"> 
+        <call-macro n="mood-handler1">
           <with-param pos="1"/>
         </call-macro>
         <choose>
@@ -1222,32 +1340,32 @@
                 <equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
-                   <equal><clip pos="1" side="tl" part="person"/><lit-tag v="p3"/></equal>
+                   <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
                 </and></not>
               </or>
             </test>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
         </choose>
-     
-        <out> 
+
+        <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><clip pos="1" side="sl" part="person"/></tag>
+              <tag><clip pos="1" side="sl" part="a_person"/></tag>
               <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
-              <tag><clip pos="1" side="sl" part="moodtense"/></tag>
+              <tag><var n="screeve"/></tag>
             </tags>
           <lu>
-            <clip pos="1" side="tl" part="lem"/> <!-- know --> 
+            <clip pos="1" side="tl" part="lem"/> <!-- know -->
             <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <clip pos="1" side="tl" part="moodtense"/> <!-- pres -->
-            <clip pos="1" side="tl" part="person"/> <!-- p3 --> 
+            <var n="screeve"/> <!-- pres -->
+            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
             <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           </chunk>
-        </out>      
+        </out>
       </action>
     </rule>
 
@@ -1278,7 +1396,7 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="2"/>
         </call-macro>
         <choose>
@@ -1319,7 +1437,7 @@
           <pattern-item n="possessional"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="2"/>
         </call-macro>
         <choose>
@@ -1358,16 +1476,18 @@
         <pattern-item n="post"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
           <chunk name="post" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="POST"/></tag>
+              <tag><clip pos="1" side="tl" part="a_post"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_post"/>
             </lu>
           </chunk>
         </out>
@@ -1379,7 +1499,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -1401,7 +1521,7 @@
         <pattern-item n="necessive"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -1421,14 +1541,14 @@
         </out>
       </action>
     </rule>
-    
+
     <rule comment="REGLA: gen owner">
       <pattern>
         <pattern-item n="gen-subj"/>
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <call-macro n="case-handler1"> 
+        <call-macro n="case-handler1">
           <with-param pos="2"/>
         </call-macro>
         <out>
@@ -1438,10 +1558,9 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="a_supernominal"/>
               <clip pos="1" side="tl" part="a_nbr"/>
-          </lu>
-          <lu>
+              <lit v="+"/>
               <lit v="'s"/>
               <lit-tag v="gen"/>
             </lu>
@@ -1459,7 +1578,7 @@
         <pattern-item n="cnjcoo"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>
@@ -1477,13 +1596,83 @@
       </action>
     </rule>
 
- 
+    <rule comment="REGLA: cnjsub">
+      <pattern>
+        <pattern-item n="cnjsub"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-synlabel1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="cs" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="CS"/></tag>
+            </tags>
+            <lu>
+                <clip pos="1" side="tl" part="lem"/>
+                <clip pos="1" side="tl" part="a_cnj"/>
+            </lu>
+            </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="verb fallback">
+      <pattern>
+         <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <call-macro n="mood-handler1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="person-handler1">
+          <with-param pos="1"/>
+        </call-macro>
+
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><var n="person"/></tag>
+            </tags>
+          <lu>
+            <clip pos="1" side="tl" part="lem"/> <!-- know -->
+            <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
+            <var n="screeve"/> <!-- pres -->
+            <var n="person"/>
+          </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="clb symbols">
+      <pattern>
+        <pattern-item n="clbpunct"/>
+      </pattern>
+      <action>
+        <call-macro n="proc-synlabel1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="sent" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SENT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
       </pattern>
       <action>
-        <call-macro n="proc-synlabel1"> 
+        <call-macro n="proc-synlabel1">
           <with-param pos="1"/>
         </call-macro>
         <out>

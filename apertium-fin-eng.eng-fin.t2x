@@ -77,8 +77,12 @@
           <let><var n="prepcase"/><lit-tag v="ill"/></let>
         </when>
         <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="to"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="all"/></let>
+        </when>
+        <when>
           <test><equal><clip pos="1" part="lem"/><lit v="at"/></equal></test>
-          <let><var n="prepcase"/><lit-tag v="ill"/></let>
+          <let><var n="prepcase"/><lit-tag v="ine"/></let>
         </when>
         <when>
           <test><equal><clip pos="1" part="lem"/><lit v="on"/></equal></test>
@@ -87,6 +91,10 @@
         <when>
           <test><equal><clip pos="1" part="lem"/><lit v="from"/></equal></test>
           <let><var n="prepcase"/><lit-tag v="abl"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="without"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="abe"/></let>
         </when>
         <when>
           <test><equal><clip pos="1" part="lem"/><lit v="with"/></equal></test>
@@ -98,7 +106,19 @@
         <otherwise>
           <let><var n="prepcase"/><lit-tag v="gen"/></let>
           <let><var n="POST"/>
-            <concat><lit v=" ^post"/><lit-tag v="POST"/><lit v="{^"/><clip pos="1" part="lem"/><lit-tag v="post"/><lit v="$}$"/></concat>
+              <concat>
+                  <!-- XXX: it's next to impossible to create a white space
+                       into a variable in this format -->
+                  <b pos="1"/>
+                  <lit v=" "/>
+                  <chunk>
+                      <b pos="1"/>
+                      <lit v=" "/>
+                      <clip pos="1" part="lem"/>
+                      <clip pos="1" part="tags"/>
+                      <clip pos="1" part="chcontent"/>
+                  </chunk>
+              </concat>
           </let>
         </otherwise>
       </choose>
@@ -124,7 +144,7 @@
             <clip pos="2" part="lem"/>
             <clip pos="2" part="tags"/>
             <clip pos="2" part="chcontent"/>
-          </chunk>
+        </chunk>
           <var n="POST"/>
         </out>
       </action>

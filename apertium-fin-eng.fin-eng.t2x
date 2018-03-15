@@ -180,43 +180,43 @@
         <when>
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px1sg"/></equal></test>
           <let><var n="POSS"/>
-               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^I"/><lit-tag v="prn.pers.p1.mf.sg.gen"/><lit v="$}$ "/></concat>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^my"/><lit-tag v="det.pos.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px2sg"/></equal></test>
           <let><var n="POSS"/>
-               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sp.gen"/><lit v="$}$ "/></concat>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^your"/><lit-tag v="det.pos.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px3sg"/></equal></test>
           <let><var n="POSS"/>
-               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.sg.gen"/><lit v="$}$ "/></concat>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^their"/><lit-tag v="det.pos.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px1pl"/></equal></test>
           <let><var n="POSS"/>
-               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^we"/><lit-tag v="prn.pers.p1.mg.pl.gen"/><lit v="$}$ "/></concat>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^our"/><lit-tag v="det.pos.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px2pl"/></equal></test>
           <let><var n="POSS"/>
-               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sp.gen"/><lit v="$}$ "/></concat>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^your"/><lit-tag v="det.pos.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px3pl"/></equal></test>
           <let><var n="POSS"/>
-               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.gen"/><lit v="$}$ "/></concat>
+               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^their"/><lit-tag v="det.pos.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_poss"/><lit-tag v="px3sp"/></equal></test>
           <let><var n="POSS"/>
-               <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl.gen"/><lit v="$}$ "/></concat>
+            <concat><lit v="^poss"/><lit-tag v="POSS"/><lit v="{^they"/><lit-tag v="det.pos.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>
@@ -230,31 +230,31 @@
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p1.sg"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^I"/><lit-tag v="prn.pers.p1.mf.sg"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^prpers"/><lit-tag v="prn.subj.p1.mf.sg"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p2.sg"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sp"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^prpers"/><lit-tag v="prn.subj.p2.mf.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p1.pl"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^we"/><lit-tag v="prn.pers.p1.mf.pl"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^prpers"/><lit-tag v="prn.subj.p1.mf.pl"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p2.pl"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^you"/><lit-tag v="prn.pers.p2.mf.sp"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^prpers"/><lit-tag v="prn.subj.p2.mf.sp"/><lit v="$}$ "/></concat>
           </let>
         </when>
         <when>
           <test><equal><clip pos="1" part="a_prs"/><lit-tag v="p3.pl"/></equal></test>
           <let><var n="PRS"/>
-               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^they"/><lit-tag v="prn.pers.p3.mf.pl"/><lit v="$}$ "/></concat>
+               <concat><lit v="^prs"/><lit-tag v="PRS"/><lit v="{^prpers"/><lit-tag v="prn.subj.p3.mf.pl"/><lit v="$}$ "/></concat>
           </let>
         </when>
       </choose>

@@ -21,7 +21,7 @@ PREFIX2=$(LANG2)-$(LANG1)
 BASENAME=$(PACKAGE_NAME)
 
 TARGETS_MONOLING=$(PREFIX1).automorf.hfst $(PREFIX1).autogen.bin \
-				 $(PREFIX2).automorf.bin $(PREFIX2).autogen.hfst 
+				 $(PREFIX2).automorf.bin $(PREFIX2).autogen.hfst
 TARGETS_TRANSFER=$(PREFIX2).t1x.bin $(PREFIX1).t1x.bin  \
 				 $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
 				 $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
@@ -67,16 +67,16 @@ $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	lt-comp lr $< $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
-	apertium-validate-dictionary $< 
+	apertium-validate-dictionary $<
 	lt-comp rl $< $@
 
-## Disambiguation rules 
+## Disambiguation rules
 
-$(PREFIX1).rlx.bin: $(BASENAME).$(PREFIX1).rlx $(CGCOMP)
-	$(CGCOMP) $< $@
+$(PREFIX1).rlx.bin: $(AP_SRC1)/$(LANG1).rlx.bin
+	cp -v $< $@
 
-$(PREFIX2).rlx.bin: $(BASENAME).$(PREFIX2).rlx $(CGCOMP)
-	$(CGCOMP) $< $@
+$(PREFIX2).rlx.bin: $(AP_SRC2)/$(LANG2).rlx.bin
+	cp -v $< $@
 
 
 ## Lexical selection rules
@@ -121,7 +121,7 @@ $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
 #	lt-comp lr $< $@
 #
 #$(PREFIX2).autopgen.bin: $(BASENAME).post-$(LANG2).dix
-#	apertium-validate-dictionary $< 
+#	apertium-validate-dictionary $<
 #	lt-comp lr $< $@
 
 ## Debug
@@ -200,5 +200,5 @@ install-data-local: install-modes
 ## Cleanup
 
 CLEANFILES = $(TARGETS_COMMON)
-clean-local: 
+clean-local:
 	-rm -rf .deps modes
