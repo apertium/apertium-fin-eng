@@ -58,6 +58,20 @@ $(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
 	hfst-lexc --format foma .deps/$(LANG2).LR-debug.lexc -o .deps/$(LANG2).LR-debug.lexc.hfst
 	hfst-compose-intersect -1 .deps/$(LANG2).LR-debug.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
 
+# This include defines goals for install-modes, .deps/.d and .mode files:
+
+modes/.d: modes.xml
+	if ! test -d modes ; then \
+		$(MKDIR_P) modes/ ;\
+	fi
+	apertium-validate-modes $(srcdir)/modes.xml
+	apertium-gen-modes $(srcdir)/modes.xml
+	mv -v *.mode modes/
+	touch $@
+
+modes/fin-eng.mode: modes/.d
+modes/eng-fin.mode: modes/.d
+
 ## Bilingual dictionaries
 
 $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
@@ -219,225 +233,225 @@ tix2html.xslt:
 dix2stats.xslt:
 	wget https://raw.githubusercontent.com/flammie/apevis-xslt/master/$@
 
-$(BASENAME).$(PREFIX1).dix.html: $(BASENAME).$(PREFIX1).dix bidix2html.xslt
+docs/$(BASENAME).$(PREFIX1).dix.html: $(BASENAME).$(PREFIX1).dix bidix2html.xslt
 	$(SAXON) -s:$< bidix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
 
-$(BASENAME).$(PREFIX1).dix-a.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-a.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=a  > $@
 
-$(BASENAME).$(PREFIX1).dix-b.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-b.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=b  > $@
 
-$(BASENAME).$(PREFIX1).dix-c.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-c.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=c  > $@
 
-$(BASENAME).$(PREFIX1).dix-d.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-d.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=d  > $@
 
-$(BASENAME).$(PREFIX1).dix-e.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-e.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=e  > $@
 
-$(BASENAME).$(PREFIX1).dix-f.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-f.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=f  > $@
 
-$(BASENAME).$(PREFIX1).dix-g.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-g.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=g  > $@
 
-$(BASENAME).$(PREFIX1).dix-h.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-h.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=h  > $@
 
-$(BASENAME).$(PREFIX1).dix-i.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-i.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=i  > $@
 
-$(BASENAME).$(PREFIX1).dix-j.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-j.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=j  > $@
 
-$(BASENAME).$(PREFIX1).dix-k.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-k.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=k  > $@
 
-$(BASENAME).$(PREFIX1).dix-l.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-l.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=l  > $@
 
-$(BASENAME).$(PREFIX1).dix-m.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-m.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=m  > $@
 
-$(BASENAME).$(PREFIX1).dix-n.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-n.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=n  > $@
 
-$(BASENAME).$(PREFIX1).dix-o.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-o.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=o  > $@
 
-$(BASENAME).$(PREFIX1).dix-p.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-p.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=p  > $@
 
-$(BASENAME).$(PREFIX1).dix-q.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-q.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=q  > $@
 
-$(BASENAME).$(PREFIX1).dix-r.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-r.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=r  > $@
 
-$(BASENAME).$(PREFIX1).dix-s.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-s.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=s  > $@
 
-$(BASENAME).$(PREFIX1).dix-t.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-t.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=t  > $@
 
-$(BASENAME).$(PREFIX1).dix-u.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-u.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=u  > $@
 
-$(BASENAME).$(PREFIX1).dix-v.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-v.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=v  > $@
 
-$(BASENAME).$(PREFIX1).dix-w.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-w.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=w  > $@
 
-$(BASENAME).$(PREFIX1).dix-x.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-x.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=x  > $@
 
-$(BASENAME).$(PREFIX1).dix-y.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-y.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=y  > $@
 
-$(BASENAME).$(PREFIX1).dix-z.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-z.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=z  > $@
 
-$(BASENAME).$(PREFIX1).dix-ä.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-ä.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=ä  > $@
 
-$(BASENAME).$(PREFIX1).dix-ö.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-ö.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=ö  > $@
 
-$(BASENAME).$(PREFIX1).dix-š.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX1).dix-š.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) letter=š  > $@
 
-$(BASENAME).$(PREFIX2).dix.html: $(BASENAME).$(PREFIX1).dix bidix2html.xslt
+docs/$(BASENAME).$(PREFIX2).dix.html: $(BASENAME).$(PREFIX1).dix bidix2html.xslt
 	$(SAXON) -s:$< bidix2html.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  invert=true > $@
 
-$(BASENAME).$(PREFIX2).dix-a.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-a.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=a  > $@
 
-$(BASENAME).$(PREFIX2).dix-b.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-b.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=b  > $@
 
-$(BASENAME).$(PREFIX2).dix-c.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-c.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=c  > $@
 
-$(BASENAME).$(PREFIX2).dix-d.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-d.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=d  > $@
 
-$(BASENAME).$(PREFIX2).dix-e.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-e.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=e  > $@
 
-$(BASENAME).$(PREFIX2).dix-f.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-f.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=f  > $@
 
-$(BASENAME).$(PREFIX2).dix-g.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-g.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=g  > $@
 
-$(BASENAME).$(PREFIX2).dix-h.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-h.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=h  > $@
 
-$(BASENAME).$(PREFIX2).dix-i.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-i.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=i  > $@
 
-$(BASENAME).$(PREFIX2).dix-j.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-j.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=j  > $@
 
-$(BASENAME).$(PREFIX2).dix-k.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-k.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=k  > $@
 
-$(BASENAME).$(PREFIX2).dix-l.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-l.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=l  > $@
 
-$(BASENAME).$(PREFIX2).dix-m.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-m.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=m  > $@
 
-$(BASENAME).$(PREFIX2).dix-n.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-n.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=n  > $@
 
-$(BASENAME).$(PREFIX2).dix-o.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-o.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=o  > $@
 
-$(BASENAME).$(PREFIX2).dix-p.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-p.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=p  > $@
 
-$(BASENAME).$(PREFIX2).dix-q.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-q.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=q  > $@
 
-$(BASENAME).$(PREFIX2).dix-r.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-r.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=r  > $@
 
-$(BASENAME).$(PREFIX2).dix-s.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-s.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=s  > $@
 
-$(BASENAME).$(PREFIX2).dix-t.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-t.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=t  > $@
 
-$(BASENAME).$(PREFIX2).dix-u.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-u.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=u  > $@
 
-$(BASENAME).$(PREFIX2).dix-v.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-v.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=v  > $@
 
-$(BASENAME).$(PREFIX2).dix-w.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-w.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=w  > $@
 
-$(BASENAME).$(PREFIX2).dix-x.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-x.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=x  > $@
 
-$(BASENAME).$(PREFIX2).dix-y.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-y.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=y  > $@
 
-$(BASENAME).$(PREFIX2).dix-z.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
+docs/$(BASENAME).$(PREFIX2).dix-z.html: $(BASENAME).$(PREFIX1).dix bidix2html-split.xslt
 	$(SAXON) -s:$< bidix2html-split.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2) invert=true letter=z  > $@
 
-$(BASENAME).$(PREFIX1).t1x.html: $(BASENAME).$(PREFIX1).t1x tix2html.xslt
+docs/$(BASENAME).$(PREFIX1).t1x.html: $(BASENAME).$(PREFIX1).t1x tix2html.xslt
 	$(SAXON) -s:$< tix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
 
-$(BASENAME).$(PREFIX2).t1x.html: $(BASENAME).$(PREFIX2).t1x tix2html.xslt
+docs/$(BASENAME).$(PREFIX2).t1x.html: $(BASENAME).$(PREFIX2).t1x tix2html.xslt
 	$(SAXON) -s:$< tix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
 
 
 
-$(BASENAME).$(PREFIX1).t2x.html: $(BASENAME).$(PREFIX1).t2x tix2html.xslt
+docs/$(BASENAME).$(PREFIX1).t2x.html: $(BASENAME).$(PREFIX1).t2x tix2html.xslt
 	$(SAXON) -s:$< tix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
 
-$(BASENAME).$(PREFIX2).t2x.html: $(BASENAME).$(PREFIX2).t2x tix2html.xslt
+docs/$(BASENAME).$(PREFIX2).t2x.html: $(BASENAME).$(PREFIX2).t2x tix2html.xslt
 	$(SAXON) -s:$< tix2html.xslt  from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
 
-$(BASENAME).$(PREFIX1).t3x.html: $(BASENAME).$(PREFIX1).t3x tix2html.xslt
+docs/$(BASENAME).$(PREFIX1).t3x.html: $(BASENAME).$(PREFIX1).t3x tix2html.xslt
 	$(SAXON) -s:$< tix2html.xslt  from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
 
-$(BASENAME).$(PREFIX2).t3x.html: $(BASENAME).$(PREFIX2).t3x tix2html.xslt
+docs/$(BASENAME).$(PREFIX2).t3x.html: $(BASENAME).$(PREFIX2).t3x tix2html.xslt
 	$(SAXON) -s:$< tix2html.xslt  from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
 
-stats-$(BASENAME).$(PREFIX1).dix.html: $(BASENAME).$(PREFIX1).dix dix2stats.xslt
+docs/stats-$(BASENAME).$(PREFIX1).dix.html: $(BASENAME).$(PREFIX1).dix dix2stats.xslt
 	$(SAXON) -s:$< dix2stats.xslt > $@
 
-stats-$(BASENAME).$(PREFIX1).t1x.html: $(BASENAME).$(PREFIX1).t1x dix2stats.xslt
+docs/stats-$(BASENAME).$(PREFIX1).t1x.html: $(BASENAME).$(PREFIX1).t1x dix2stats.xslt
 	$(SAXON) -s:$< dix2stats.xslt > $@
 
-stats-$(BASENAME).$(PREFIX2).t1x.html: $(BASENAME).$(PREFIX2).t1x dix2stats.xslt
+docs/stats-$(BASENAME).$(PREFIX2).t1x.html: $(BASENAME).$(PREFIX2).t1x dix2stats.xslt
 	$(SAXON) -s:$< dix2stats.xslt > $@
 
-stats-$(BASENAME).$(PREFIX1).t2x.html: $(BASENAME).$(PREFIX1).t2x dix2stats.xslt
+docs/stats-$(BASENAME).$(PREFIX1).t2x.html: $(BASENAME).$(PREFIX1).t2x dix2stats.xslt
 	$(SAXON) -s:$< dix2stats.xslt > $@
 
-stats-$(BASENAME).$(PREFIX2).t2x.html: $(BASENAME).$(PREFIX2).t2x dix2stats.xslt
+docs/stats-$(BASENAME).$(PREFIX2).t2x.html: $(BASENAME).$(PREFIX2).t2x dix2stats.xslt
 	$(SAXON) -s:$< dix2stats.xslt > $@
 
-stats-$(BASENAME).$(PREFIX1).t3x.html: $(BASENAME).$(PREFIX1).t3x dix2stats.xslt
+docs/stats-$(BASENAME).$(PREFIX1).t3x.html: $(BASENAME).$(PREFIX1).t3x dix2stats.xslt
 	$(SAXON) -s:$< dix2stats.xslt > $@
 
-stats-$(BASENAME).$(PREFIX2).t3x.html: $(BASENAME).$(PREFIX2).t3x dix2stats.xslt
+docs/stats-$(BASENAME).$(PREFIX2).t3x.html: $(BASENAME).$(PREFIX2).t3x dix2stats.xslt
 	$(SAXON) -s:$< dix2stats.xslt > $@
 
-statistics.html: stats-$(BASENAME).$(PREFIX1).dix.html \
-				 stats-$(BASENAME).$(PREFIX1).t1x.html \
-				 stats-$(BASENAME).$(PREFIX2).t1x.html \
-				 stats-$(BASENAME).$(PREFIX1).t2x.html \
-				 stats-$(BASENAME).$(PREFIX2).t2x.html \
-				 stats-$(BASENAME).$(PREFIX1).t3x.html \
-				 stats-$(BASENAME).$(PREFIX2).t3x.html
+docs/statistics.html: docs/stats-$(BASENAME).$(PREFIX1).dix.html \
+				 docs/stats-$(BASENAME).$(PREFIX1).t1x.html \
+				 docs/stats-$(BASENAME).$(PREFIX2).t1x.html \
+				 docs/stats-$(BASENAME).$(PREFIX1).t2x.html \
+				 docs/stats-$(BASENAME).$(PREFIX2).t2x.html \
+				 docs/stats-$(BASENAME).$(PREFIX1).t3x.html \
+				 docs/stats-$(BASENAME).$(PREFIX2).t3x.html
 	$(AWK) '/DOCTYPE/,/<\/h1>/ {print;}' < \
 		stats-$(BASENAME).$(PREFIX1).dix.html > $@
 	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
