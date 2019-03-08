@@ -1031,7 +1031,6 @@
   <rule weight="1.0"><match lemma="lista" tags="n.*"><select lemma="list" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="elinikäinen" tags="adj.*"><select lemma="lifelong" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="siirto" tags="n.*"><select lemma="transfer" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="lupa" tags="n.*"><select lemma="authorisation" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="ilmapiiri" tags="n.*"><select lemma="climate" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="lopputulos" tags="n.*"><select lemma="outcome" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="luotettava" tags="adj.*"><select lemma="reliable" tags="adj.*"/></match></rule>
@@ -16655,6 +16654,9 @@
   <!-- }}}
        {{{ Manual rules with context -->
 
+  <rule>
+    <match weight="10" lemma="lupa" tags="n.sg.ine"><select lemma="promise" tags="n.*"/></match>
+  </rule>
   <rule>
     <match lemma="soittaa" tags="vblex.*"><select lemma="play" tags="vblex.*"/></match>
     <match/>
@@ -52262,7 +52264,6 @@
 <rule weight="0.9"><match lemma="selvennys" tags="n.*"><select lemma="clarification" tags="n.*"/></match></rule><!-- 1 -->
 <rule weight="0.9"><match lemma="edellä" tags="adv.*"><select lemma="first" tags="adv.*"/></match></rule><!-- 17 -->
 <rule weight="0.9"><match lemma="puolustaja" tags="n.*"><select lemma="back" tags="n.*"/></match></rule><!-- 43 -->
-<rule weight="0.9"><match lemma="lupa" tags="n.*"><select lemma="authority" tags="n.*"/></match></rule><!-- 14 -->
 <rule weight="0.9"><match lemma="hylätä" tags="vblex.*"><select lemma="dismiss" tags="vblex.*"/></match></rule><!-- 1 -->
 <rule weight="0.9"><match lemma="jäädyke" tags="n.*"><select lemma="ice" tags="n.*"/></match></rule><!-- 1 -->
 <rule weight="0.9"><match lemma="vakaumus" tags="n.*"><select lemma="commitment" tags="n.*"/></match></rule><!-- 4 -->
