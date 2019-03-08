@@ -1,0 +1,3633 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>
+         apertium-fin-eng :
+         Apertium-fin-eng bilingual rules and resources
+         
+      </title>
+      <meta name="generator" content="apevis-xslt">
+      <meta property="og:title" content="&#xA;            apertium-fin-eng">
+      <meta property="og:locale" content="en">
+      <meta name="description" content="Finnish–English&#xA;            dictionary for rule-based machine translation&#xA;          ">
+      <link rel="canonical" href="%0A            https://apertium.github.io/apertium-fin-eng/%0A          ">
+      <meta property="og:url" content="&#xA;            https://apertium.github.io/apertium-fin-eng/&#xA;          ">
+      <meta property="og:site_name" content="&#xA;            apertium-fin-eng"><script type="application/ld+json">
+          {"headline":"Apertium-fin-eng",
+          "@type":"WebSite",
+          "url":"http://apertium.github.io/apertium-fin-eng/",
+          "name":"apertium-fin-eng",
+          "description":"Apertium bilingual data for Finnish–English machine translation",
+          "@context":"http://schema.org"}
+        </script><link rel="stylesheet" href="/apertium-fin-eng/assets/css/style.css?v=0553eb4429e442aa5eeaa159606840983213fbbe"><script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script><script src="/apertium-fin-deu/assets/js/respond.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div id="header" class="col-sm-12">
+               <h4><a class="brand" href="/apertium-fin-eng/">apertium-fin-eng</a><small>Finnish–English
+                     rules for machine translation
+                     </small></h4>
+            </div>
+         </div>
+         <div class="row">
+            <div id="navigation" class="col-sm-2">
+               <nav>
+                  <ul class="nav nav-list">
+                     <li><a href="/apertium-fin-eng">
+                           Home
+                           </a></li>
+                     <li><a class="external" href="//github.com/apertium/apertium-fin-eng/#readme">
+                           README
+                           </a></li>
+                     <li><a href="/apertium-fin-engstatistics.html">
+                           Statistics
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.dix.html">Finnish–English
+                           dictionary
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.t1x.html">Finnish–English
+                           chunking rules (t1x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.t2x.html">Finnish–English
+                           re-ordering rules (t2x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.t3x.html">Finnish–English
+                           t3x rules
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.dix.html">English–Finnish
+                           dictionary
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.t1x.html">English–Finnish
+                           chunking rules (t1x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.t2x.html">English–Finnish
+                           re-ordering rules (t2x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.t3x.html">English–Finnish
+                           t3x rules
+                           </a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div id="content" class="col-sm-10">
+               <h1 id="rules">
+                  Apertium-fin-eng:
+                  Finnish–English
+                  machine translation rules
+                  
+               </h1>
+               <p style="font-variant: italic">
+                  This is a visualisation of an apertium transfer system
+                  
+               </p>
+               
+               <h2>Categories (parts of chunks)</h2>
+               <p>
+                  These are the categories Apertium is using in order to chunk, re-order
+                  and transfer lexemes.
+                  
+               </p>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Category</th>
+                        <th>Items</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     
+                     
+                     <tr>
+                        <td>neg-verb</td>
+                        <td>
+                           <ul> 
+                              
+                              <li>ei<code>&lt;vblex.neg.*&gt;</code></li>
+                              
+                              <li>ei<code>&lt;vblex.neg.actv.p3.sg.@\+FAUXV&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     
+                     <tr>
+                        <td>conneg</td>
+                        <td>
+                           <ul> 
+                              
+                              <li><code>&lt;vblex.*.*.conneg&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.*.*.conneg.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>cop-conneg</td>
+                        <td>
+                           <ul>
+                              
+                              <li>olla<code>&lt;*.*.*.conneg&gt;</code></li>
+                              
+                              <li>olla<code>&lt;*.*.*.conneg.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>conneg_nottable</td>
+                        <td>
+                           <ul>
+                              
+                              <li>voida<code>&lt;*.*.*.conneg&gt;</code></li>
+                              
+                              <li>voida<code>&lt;*.*.*.conneg.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>adneg</td>
+                        <td>
+                           <ul>
+                              
+                              <li>koskaan<code>&lt;adv&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>adv</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;adv&gt;</code></li>
+                              
+                              <li><code>&lt;part&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>cnjcoo</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;cnjcoo&gt;</code></li>
+                              
+                              <li><code>&lt;cnjcoo.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>cnjsub</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;cnjsub&gt;</code></li>
+                              
+                              <li><code>&lt;cnjsub.*&gt;</code></li>
+                              
+                              <li><code>&lt;cnjadv&gt;</code></li>
+                              
+                              <li><code>&lt;cnjadv.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>necessive</td>
+                        <td>
+                           <ul>
+                              
+                              <li>täytyä<code>&lt;vaux.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>gen-subj</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;*.*.gen&gt;</code></li>
+                              
+                              <li><code>&lt;*.*.*.*.*.gen&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>adv-misc</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;adv.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>pron-misc</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;prn.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>pron-pers</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;prn.pers.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>habitive</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;n.*.ade&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.v→a.pos.*.ade&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>possessional</td>
+                        <td>
+                           <ul>
+                              
+                              <li>olla<code>&lt;vblex.actv.*.p3.sg&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>sint-pers</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*.*.p1.*&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.*.*.p2.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>infma-ade</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.actv.infma.ade&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>infma-ine</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.actv.infma.ine&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>just-inf</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.actv.infa.sg&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.actv.infa.lat&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.actv.infma.ill&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>vbneg</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.neg.*.*.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>post</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;pr&gt;</code></li>
+                              
+                              <li><code>&lt;post&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>num</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;num.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>adj</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;adj&gt;</code></li> 
+                              
+                              <li><code>&lt;adj.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>verb-mood</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*.cond.*&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.*.imp.*&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.*.pot.*&gt;</code></li>
+                              
+                              <li><code>&lt;vaux.*.cond.*&gt;</code></li>
+                              
+                              <li><code>&lt;vaux.*.imp.*&gt;</code></li>
+                              
+                              <li><code>&lt;vaux.*.pot.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>cm</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;cm&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>nom-cmp</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;n.*.*.cmp&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>nom</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;n.*&gt;</code></li>
+                              
+                              <li><code>&lt;n.*.*&gt;</code></li>
+                              
+                              <li><code>&lt;n.*.*.*&gt;</code></li>
+                              
+                              <li><code>&lt;np.*&gt;</code></li>
+                              
+                              <li><code>&lt;np.*.*&gt;</code></li>
+                              
+                              <li><code>&lt;np.*.*.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>sent</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;sent&gt;</code></li>
+                              
+                              <li><code>&lt;sent.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>clbpunct</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;guio&gt;</code></li>
+                              
+                              <li><code>&lt;guio.*&gt;</code></li>
+                              
+                              <li><code>&lt;cm&gt;</code></li>
+                              
+                              <li><code>&lt;cm.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     
+                     <tr>
+                        <td>verb</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*&gt;</code></li>
+                              
+                              <li><code>&lt;vaux.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>verb-pprs</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*.pprs.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>verb-pp</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*.pp.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>verb-past</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*.past.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>verb-pres-impers</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*.pres.impers&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.*.pri.impers&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>verb-pres</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex.*.pres.*&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.*.pri.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>vbolla</td>
+                        <td>
+                           <ul>
+                              
+                              <li>olla<code>&lt;vblex.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                  </tbody>
+               </table>
+               
+               <h2>Attributes</h2>
+               <p>
+                  These are the morphological analysis value (tag) sets that can be
+                  processed in the transfer.
+                  
+               </p>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Attribute set name</th>
+                        <th>Tags</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     
+                     <tr>
+                        <td>a_voice</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;actv&gt;</code></li>
+                              
+                              <li><code>&lt;pasv&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_verb</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.actv&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.pasv&gt;</code></li>
+                              
+                              <li><code>&lt;vaux&gt;</code></li>
+                              
+                              <li><code>&lt;vaux.actv&gt;</code></li>
+                              
+                              <li><code>&lt;vaux.pasv&gt;</code></li>
+                              
+                              <li><code>&lt;vbser&gt;</code></li>
+                              
+                              <li><code>&lt;vbser.actv&gt;</code></li>
+                              
+                              <li><code>&lt;vbser.pasv&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_vb</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;vblex&gt;</code></li>
+                              
+                              <li><code>&lt;vaux&gt;</code></li>
+                              
+                              <li><code>&lt;vbser&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_person</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;p1&gt;</code></li>
+                              
+                              <li><code>&lt;p2&gt;</code></li>
+                              
+                              <li><code>&lt;p3&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>moodtense</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;past&gt;</code></li>
+                              
+                              <li><code>&lt;pres&gt;</code></li>
+                              
+                              <li><code>&lt;pri&gt;</code></li>
+                              
+                              <li><code>&lt;cond&gt;</code></li>
+                              
+                              <li><code>&lt;imp&gt;</code></li>
+                              
+                              <li><code>&lt;pot&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_cnj</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;cnjcoo&gt;</code></li>
+                              
+                              <li><code>&lt;cnjsub&gt;</code></li>
+                              
+                              <li><code>&lt;cnjadv&gt;</code></li>
+                              
+                              <li><code>&lt;adv&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_adv</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;adv&gt;</code></li>
+                              
+                              <li><code>&lt;part&gt;</code></li>
+                              
+                              <li><code>&lt;adv.itg&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_supernominal</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;n&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.subs&gt;</code></li>
+                              
+                              <li><code>&lt;np&gt;</code></li>
+                              
+                              <li><code>&lt;np.ant&gt;</code></li>
+                              
+                              <li><code>&lt;np.ant.f&gt;</code></li>
+                              
+                              <li><code>&lt;np.ant.m&gt;</code></li>
+                              
+                              <li><code>&lt;prn&gt;</code></li>
+                              
+                              <li><code>&lt;prn.subj.p2.mf&gt;</code></li>
+                              
+                              <li><code>&lt;prn.subj.p1.mf&gt;</code></li>
+                              
+                              <li><code>&lt;prn.obj.p1.mf&gt;</code></li>
+                              
+                              <li><code>&lt;prn.obj.p2.mf&gt;</code></li>
+                              
+                              <li><code>&lt;prn.subj.p3.m&gt;</code></li>
+                              
+                              <li><code>&lt;prn.subj.p3.mf&gt;</code></li>
+                              
+                              <li><code>&lt;prn.obj.p3.m&gt;</code></li>
+                              
+                              <li><code>&lt;prn.obj.p3.mf&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_nom</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;n&gt;</code></li>
+                              
+                              <li><code>&lt;prn&gt;</code></li>
+                              
+                              <li><code>&lt;prn.subj.p3.m&gt;</code></li>
+                              
+                              <li><code>&lt;prn.obj.p3.m&gt;</code></li>
+                              
+                              <li><code>&lt;vblex.subs&gt;</code></li>
+                              
+                              <li><code>&lt;np&gt;</code></li>
+                              
+                              <li><code>&lt;np.ant&gt;</code></li>
+                              
+                              <li><code>&lt;np.ant.f&gt;</code></li>
+                              
+                              <li><code>&lt;np.ant.m&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_adj</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;adj&gt;</code></li>
+                              
+                              <li><code>&lt;adj.sint&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_prn</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;prn.pers&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_prnpers</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;subj&gt;</code></li>
+                              
+                              <li><code>&lt;obj&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_num</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;num&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_nbr</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;sg&gt;</code></li>
+                              
+                              <li><code>&lt;sp&gt;</code></li>
+                              
+                              <li><code>&lt;pl&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_pers</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;p1&gt;</code></li>
+                              
+                              <li><code>&lt;p2&gt;</code></li>
+                              
+                              <li><code>&lt;p3&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_gen</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;m&gt;</code></li>
+                              
+                              <li><code>&lt;nt&gt;</code></li>
+                              
+                              <li><code>&lt;f&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_cas</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;abl&gt;</code></li>
+                              
+                              <li><code>&lt;acc&gt;</code></li>
+                              
+                              <li><code>&lt;ade&gt;</code></li>
+                              
+                              <li><code>&lt;ela&gt;</code></li>
+                              
+                              <li><code>&lt;gen&gt;</code></li>
+                              
+                              <li><code>&lt;all&gt;</code></li>
+                              
+                              <li><code>&lt;ill&gt;</code></li>
+                              
+                              <li><code>&lt;ine&gt;</code></li>
+                              
+                              <li><code>&lt;ins&gt;</code></li>
+                              
+                              <li><code>&lt;nom&gt;</code></li>
+                              
+                              <li><code>&lt;abe&gt;</code></li>
+                              
+                              <li><code>&lt;com&gt;</code></li>
+                              
+                              <li><code>&lt;ess&gt;</code></li>
+                              
+                              <li><code>&lt;par&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_poss</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;px1sg&gt;</code></li>
+                              
+                              <li><code>&lt;px2sg&gt;</code></li>
+                              
+                              <li><code>&lt;px3sg&gt;</code></li>
+                              
+                              <li><code>&lt;px1pl&gt;</code></li>
+                              
+                              <li><code>&lt;px2pl&gt;</code></li>
+                              
+                              <li><code>&lt;px3pl&gt;</code></li>
+                              
+                              <li><code>&lt;px3sp&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_post</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;post&gt;</code></li>
+                              
+                              <li><code>&lt;pr&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>synfunc</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;CLB&gt;</code></li>
+                              
+                              <li><code>&lt;@\+FAUXV&gt;</code></li>
+                              
+                              <li><code>&lt;@\+FMAINV&gt;</code></li>
+                              
+                              <li><code>&lt;@-FADVL&gt;</code></li>
+                              
+                              <li><code>&lt;@-FAUXV&gt;</code></li>
+                              
+                              <li><code>&lt;@-FMAINV&gt;</code></li>
+                              
+                              <li><code>&lt;@-FOBJ→&gt;</code></li>
+                              
+                              <li><code>&lt;@-FSUBJ→&gt;</code></li>
+                              
+                              <li><code>&lt;@-F←OBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@ADVL&gt;</code></li>
+                              
+                              <li><code>&lt;@ADVL←&gt;</code></li>
+                              
+                              <li><code>&lt;@ADVL→&gt;</code></li>
+                              
+                              <li><code>&lt;@COMP-CS←&gt;</code></li>
+                              
+                              <li><code>&lt;@HAB&gt;</code></li>
+                              
+                              <li><code>&lt;@CNP&gt;</code></li>
+                              
+                              <li><code>&lt;@CVP&gt;</code></li>
+                              
+                              <li><code>&lt;@HNOUN&gt;</code></li>
+                              
+                              <li><code>&lt;@INTERJ&gt;</code></li>
+                              
+                              <li><code>&lt;@NEC-S&gt;</code></li>
+                              
+                              <li><code>&lt;@NF-S&gt;</code></li>
+                              
+                              <li><code>&lt;@Num←&gt;</code></li>
+                              
+                              <li><code>&lt;@N←&gt;</code></li>
+                              
+                              <li><code>&lt;@OBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@OBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@OBJ→&gt;</code></li>
+                              
+                              <li><code>&lt;@OPRED&gt;</code></li>
+                              
+                              <li><code>&lt;@OPRED→&gt;</code></li>
+                              
+                              <li><code>&lt;@PC&gt;</code></li>
+                              
+                              <li><code>&lt;@PCLE&gt;</code></li>
+                              
+                              <li><code>&lt;@Pron←&gt;</code></li>
+                              
+                              <li><code>&lt;@P←&gt;</code></li>
+                              
+                              <li><code>&lt;@P→&gt;</code></li>
+                              
+                              <li><code>&lt;@SPRED&gt;</code></li>
+                              
+                              <li><code>&lt;@SPRED←OBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@SPRED→&gt;</code></li>
+                              
+                              <li><code>&lt;@SUBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@SUBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@SUBJ→&gt;</code></li>
+                              
+                              <li><code>&lt;@←ADVL&gt;</code></li>
+                              
+                              <li><code>&lt;@←OBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@←OPRED&gt;</code></li>
+                              
+                              <li><code>&lt;@←P&gt;</code></li>
+                              
+                              <li><code>&lt;@←SPRED&gt;</code></li>
+                              
+                              <li><code>&lt;@←SUBJ&gt;</code></li>
+                              
+                              <li><code>&lt;@→A&gt;</code></li>
+                              
+                              <li><code>&lt;@→ADVL&gt;</code></li>
+                              
+                              <li><code>&lt;@→N&gt;</code></li>
+                              
+                              <li><code>&lt;@→Num&gt;</code></li>
+                              
+                              <li><code>&lt;@→P&gt;</code></li>
+                              
+                              <li><code>&lt;@→Pron&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     
+                     
+                  </tbody>
+               </table>
+               
+               
+               
+               
+               
+               
+               
+               
+               <h2>Macros</h2>
+               <p>Macros are helper functions in apertium transfer files.</p>
+               
+               
+               <h3>proc-synlabel1</h3>
+               <div>Parametres: 1</div><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>tl[1]['synfunc']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               <h3>person-handler1</h3>
+               <div>Parametres: 1</div><code>
+                  <ol>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[1]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     <li>
+                        let <em>tl[1]['a_voice']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               <h3>mood-handler1</h3>
+               <div>Parametres: 1</div><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>tl[1]['synfunc']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    <li><em>sl[1]['moodtense']</em> ≟ &lt;pri&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['moodtense']</em> ≟ &lt;cond&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['moodtense']</em> ≟ &lt;imp&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['moodtense']</em> ≟ &lt;pot&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>screeve</em> ≔ &lt;pres&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    
+                                    <li><em>sl[1]['moodtense']</em> ≟ &lt;past&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>screeve</em> ≔ &lt;past&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>else:
+                              <ol>
+                                 
+                                 <li>
+                                    let 
+                                    $<em>screeve</em> ≔ &lt;inf&gt;
+                                 </li>
+                                 
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               <h3>case-handler1</h3>
+               <div>Parametres: 1</div><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>tl[1]['synfunc']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[1]['a_prn']</em> ≟ &lt;prn.pers&gt;
+                                    </li>
+                                     
+                                    
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ine&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ela&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ill&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;par&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ade&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;abl&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;all&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;abe&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ins&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;com&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ess&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_cas']</em> ≔ &lt;acc&gt;
+                                 </li>
+                                 <li>
+                                    let 
+                                    $<em>sntype</em> ≔ &lt;SN&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol> 
+                                    
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;nom&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ine&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ela&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ill&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;par&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ade&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;abl&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;all&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;abe&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ins&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;com&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;ess&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_cas']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let 
+                                    $<em>sntype</em> ≔ &lt;SN&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    
+                                    <li><em>tl[1]['a_cas']</em> ≟ &lt;gen&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_prn']</em> ≟ &lt;prn.pers&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_cas']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let 
+                                    $<em>sntype</em> ≔ &lt;SN.GEN&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    <li><em>sl[1]['a_cas']</em> ≟ &lt;nom&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_prnpers']</em> ≔ &lt;subj&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>else:
+                              <ol>
+                                 
+                                 <li>
+                                    let <em>tl[1]['a_prnpers']</em> ≔ &lt;obj&gt;
+                                 </li>
+                                 
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               <h2>Rules</h2>
+               <p>The actual rules concerning stuff.</p>
+               
+               
+               
+               
+               
+               
+               <h3>REGLA: adv-misc</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>adv-misc</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_adv']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>adv
+                                 &lt;SN&gt;
+                                 <em>sl[1]['a_cas']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: pron-pers</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>pron-pers</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em> 
+                                    <em>tl[1]['a_prn']</em> 
+                                    <em>tl[1]['a_prnpers']</em> 
+                                    <em>tl[1]['a_pers']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                              </ol>]<sub>pron
+                                 &lt;SN.pers&gt;
+                                 <em>sl[1]['a_pers']</em> 
+                                 <em>sl[1]['a_prnpers']</em> 
+                                 <em>sl[1]['a_nbr']</em> 
+                                 <em>sl[1]['a_cas']</em> 
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               
+               
+               <h3>REGLA: pron-misc</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>pron-misc</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['whole']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>pron
+                                 &lt;SN&gt;
+                                 <em>sl[1]['a_cas']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               <h3>REGLA: NOM</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>nom</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lemh']</em>
+                                    <em>tl[1]['a_nom']</em>
+                                    <em>tl[1]['a_nbr']</em>
+                                    <em>tl[1]['a_cas']</em>
+                                    <em>tl[1]['lemq']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>n
+                                 
+                                 $<em>sntype</em>
+                                 <em>sl[1]['a_cas']</em>
+                                 <em>sl[1]['a_poss']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: adj</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>adj</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lemh']</em>
+                                    <em>tl[1]['a_adj']</em>
+                                    <em>tl[1]['lemq']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>j
+                                 &lt;SA&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: adj cm adj nom</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>adj</li>
+                  
+                  <li>cm</li>
+                  
+                  <li>adj</li>
+                  
+                  <li>nom</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $4
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $4
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lemh']</em>
+                                    <em>tl[1]['a_adj']</em>
+                                    <em>tl[1]['lemq']</em>
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[2]['whole']</em>
+                                    
+                                 </li>
+                                 <li><sub>b2</sub><br></li>
+                                 <li>
+                                    <em>tl[3]['lemh']</em>
+                                    <em>tl[3]['a_adj']</em>
+                                    <em>tl[3]['lemq']</em>
+                                    
+                                 </li>
+                                 <li><sub>b3</sub><br></li>
+                                 <li>
+                                    <em>tl[4]['lemh']</em>
+                                    <em>tl[4]['a_nom']</em>
+                                    <em>tl[4]['a_nbr']</em>
+                                    <em>tl[4]['a_cas']</em>
+                                    <em>tl[4]['lemq']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>j_j_n
+                                 
+                                 $<em>sntype</em>
+                                 <em>sl[4]['a_cas']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: nom-cmp nom</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>nom-cmp</li>
+                  
+                  <li>nom</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lemh']</em>
+                                    <em>tl[1]['a_nom']</em>
+                                    <em>tl[1]['a_nbr']</em>
+                                    <em>tl[1]['a_cas']</em>
+                                    <em>tl[1]['lemq']</em>
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[2]['lemh']</em>
+                                    <em>tl[2]['a_nom']</em>
+                                    <em>tl[2]['a_nbr']</em>
+                                    <em>tl[2]['a_cas']</em>
+                                    <em>tl[2]['lemq']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>n_n
+                                 
+                                 $<em>sntype</em>
+                                 <em>sl[2]['a_cas']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: adj nom</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>adj</li>
+                  
+                  <li>nom</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lemh']</em>
+                                    <em>tl[1]['a_adj']</em>
+                                    <em>tl[1]['lemq']</em>
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[2]['lemh']</em>
+                                    <em>tl[2]['a_nom']</em>
+                                    <em>tl[2]['a_nbr']</em>
+                                    <em>tl[2]['a_cas']</em>
+                                    <em>tl[2]['lemq']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>j_n
+                                 
+                                 $<em>sntype</em>
+                                 <em>sl[2]['a_cas']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: neg-verb nega conneg</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>neg-verb</li>
+                  
+                  <li>adneg</li>
+                  
+                  <li>conneg</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>proc-synlabel1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[2]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[2]['whole']</em>
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[3]['lem']</em> 
+                                    <em>tl[3]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                              </ol>]<sub>notted
+                                 &lt;SV&gt;
+                                 <em>sl[1]['moodtense']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: verb-pprs</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>verb-pprs</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>tl[1]['a_voice']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_vb']</em>
+                                    &lt;ger&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>ger
+                                 &lt;SN&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: verb-pp</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>verb-pp</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>tl[1]['a_voice']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_vb']</em>
+                                    &lt;pp&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>ger
+                                 &lt;SN&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: infma-ade</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>infma-ade</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>tl[1]['a_voice']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    
+                                    "by"
+                                    
+                                    &lt;pr&gt;
+                                    
+                                 </li>
+                                 <li><sub>b</sub><br></li>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_vb']</em>
+                                    &lt;ger&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>ger
+                                 &lt;SN&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               <h3>REGLA: infma-ine</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>infma-ine</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_vb']</em>
+                                    &lt;ger&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>ger
+                                 &lt;SN&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: just inf</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>just-inf</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    
+                                    "to"
+                                    
+                                    &lt;pr&gt;
+                                    
+                                 </li>
+                                 <li><sub>b</sub><br></li>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    &lt;vblex.inf&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>to-do
+                                 &lt;SV&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: neg-verb conneg just-inf</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>neg-verb</li>
+                  
+                  <li>conneg_nottable</li>
+                  
+                  <li>just-inf</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $3
+                        )
+                     </li>
+                     
+                     <li>mood-handler1(
+                        $2
+                        )
+                     </li>
+                     
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[2]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[2]['lem']</em> 
+                                    <em>tl[2]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    
+                                    "not"
+                                     
+                                    &lt;adv&gt; 
+                                    
+                                 </li>
+                                 <li><sub>b2</sub><br></li>
+                                 <li>
+                                    <em>tl[3]['whole']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>notted
+                                 &lt;SV&gt;
+                                 <em>sl[2]['moodtense']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: neg-verb cop-conneg</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>neg-verb</li>
+                  
+                  <li>cop-conneg</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[2]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[2]['lem']</em> 
+                                    <em>tl[2]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    
+                                    "not"
+                                     
+                                    &lt;adv&gt; 
+                                    
+                                 </li>
+                              </ol>]<sub>neg-cop
+                                 &lt;SV.COP&gt;
+                                 
+                                 $<em>moodtense</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               <h3>REGLA: neg-verb nega conneg</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>neg-verb</li>
+                  
+                  <li>adneg</li>
+                  
+                  <li>conneg_nottable</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $3
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    <li><em>tl[2]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[3]['lem']</em> 
+                                    <em>tl[3]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[3]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    
+                                    "not"
+                                     
+                                    &lt;adv&gt; 
+                                    
+                                 </li>
+                              </ol>]<sub>notted
+                                 &lt;SV&gt;
+                                 
+                                 $<em>screeve</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               <h3>REGLA: neg-verb conneg</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>neg-verb</li>
+                  
+                  <li>conneg_nottable</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $2
+                        )
+                     </li>
+                     
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[2]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[2]['lem']</em> 
+                                    <em>tl[2]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    
+                                    "not"
+                                     
+                                    &lt;adv&gt; 
+                                    
+                                 </li>
+                              </ol>]<sub>notted
+                                 &lt;SV&gt;
+                                 
+                                 $<em>screeve</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: neg conneg</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>vbneg</li>
+                  
+                  <li>conneg</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    
+                                    "do"
+                                    
+                                    &lt;vblex.pres&gt;
+                                    <em>tl[1]['a_pers']</em>
+                                    <em>tl[1]['a_nbr']</em>
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    
+                                    "not"
+                                    
+                                    &lt;adv&gt;
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[2]['lem']</em>
+                                    <em>tl[2]['a_verb']</em>
+                                    &lt;pres&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>negation
+                                 &lt;SN&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: stray neg</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>vbneg</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    
+                                    "not"
+                                    
+                                    &lt;adv&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>neg
+                                 &lt;SV.NEG&gt;
+                                 <em>sl[1]['moodtense']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: vbolla</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>vbolla</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    <li><em>sl[1]['moodtense']</em> ≟ &lt;pres&gt;
+                                    </li>
+                                    
+                                    <li><em>sl[1]['a_nbr']</em> ≟ &lt;pl&gt;
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em> 
+                                    <em>tl[1]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                              </ol>]<sub>cop
+                                 &lt;SV.COP&gt;
+                                 
+                                 $<em>screeve</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               <h3>REGLA: verb-past</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>verb-past</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>tl[1]['a_nbr']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>
+                        let <em>tl[1]['a_person']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em> 
+                                    <em>tl[1]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                              </ol>]<sub>v
+                                 &lt;SV&gt;
+                                 <em>sl[1]['a_person']</em>
+                                 <em>sl[1]['a_nbr']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: verb-pres-impers</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>verb-pres-impers</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[1]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p1&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     <li>
+                        let <em>tl[1]['a_voice']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    
+                                    "be"
+                                    &lt;vbser&gt;
+                                    
+                                    $<em>screeve</em> 
+                                    &lt;p3.sg&gt;
+                                    
+                                 </li>
+                                 <li><sub>b</sub><br></li>
+                                 <li>
+                                    <em>tl[1]['lem']</em> 
+                                    <em>tl[1]['a_vb']</em> 
+                                    &lt;pp&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>v
+                                 &lt;SV&gt;
+                                 <em>sl[1]['a_person']</em>
+                                 <em>sl[1]['a_nbr']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               <h3>REGLA: verb-pres</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>verb-pres</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[1]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     <li>
+                        let <em>tl[1]['a_voice']</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em> 
+                                    <em>tl[1]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                              </ol>]<sub>v
+                                 &lt;SV&gt;
+                                 <em>sl[1]['a_person']</em>
+                                 <em>sl[1]['a_nbr']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: moody verb</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>verb-mood</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    
+                                    <li><em>tl[1]['a_verb']</em> ≟ &lt;vaux.actv&gt;
+                                    </li>
+                                    
+                                    
+                                    <li><em>tl[1]['a_nbr']</em> ≟ &lt;sg&gt;
+                                    </li>
+                                    
+                                    <li><em>tl[1]['a_person']</em> ≟ &lt;p3&gt;
+                                    </li>
+                                    
+                                    
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_person']</em> ≔ 
+                                    ""
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em> 
+                                    <em>tl[1]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    <em>tl[1]['a_person']</em> 
+                                    <em>tl[1]['a_nbr']</em> 
+                                    
+                                 </li>
+                              </ol>]<sub>v
+                                 &lt;SV&gt;
+                                 <em>sl[1]['a_person']</em>
+                                 <em>sl[1]['a_nbr']</em>
+                                 
+                                 $<em>screeve</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: num</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>num</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_num']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>num
+                                 &lt;NUM&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               
+               <h3>REGLA: num nom</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>num</li>
+                  
+                  <li>nom</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    
+                                    <li><em>tl[1]['lem']</em> ≟ 
+                                       "one"
+                                       
+                                    </li>
+                                    
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[2]['a_nbr']</em> ≔ &lt;pl&gt;
+                                 </li>
+                                 <li>
+                                    let <em>tl[1]['a_nbr']</em> ≔ &lt;pl&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_num']</em>
+                                    <em>tl[1]['a_nbr']</em>
+                                    
+                                 </li>
+                                 <li><sub>b0</sub><br></li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[2]['lem']</em>
+                                    <em>tl[2]['a_nom']</em>
+                                    <em>tl[2]['a_nbr']</em>
+                                    <em>tl[2]['a_cas']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>num
+                                 &lt;NUM&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: habitive stuff</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>habitive</li>
+                  
+                  <li>possessional</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    <li><em>tl[1]['a_nom']</em> ≟ &lt;n&gt;
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['tags']</em> ≔ &lt;n&gt;
+                                    <em>tl[1]['a_nbr']</em>&lt;gen&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>tl[1]['a_verb']</em> ≟ &lt;vblex&gt;
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let <em>tl[1]['tags']</em> ≔ &lt;vblex.subs&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lemh']</em>
+                                    <em>tl[1]['tags']</em>
+                                    <em>tl[1]['lemq']</em>
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[2]['whole']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>verb phrase
+                                 &lt;SV&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               <h3>REGLA: POST</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>post</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_post']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>post
+                                 &lt;POST&gt;
+                                 <em>tl[1]['a_post']</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: ADV</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>adv</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['whole']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>adv
+                                 &lt;ADV&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: Necessrary</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>gen-subj</li>
+                  
+                  <li>necessive</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['whole']</em>
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    
+                                    "must"
+                                    
+                                    &lt;vaux&gt;
+                                    
+                                 </li>
+                              </ol>]<sub>NECESSIVE
+                                 &lt;NP-NEC&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: gen owner</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>gen-subj</li>
+                  
+                  <li>nom</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>case-handler1(
+                        $2
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_supernominal']</em>
+                                    <em>tl[1]['a_nbr']</em>
+                                    
+                                    "+"
+                                    
+                                    
+                                    "'s"
+                                    
+                                    &lt;gen&gt;
+                                    
+                                 </li>
+                                 <li><sub>b1</sub><br></li>
+                                 <li>
+                                    <em>tl[2]['whole']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>REALGEN
+                                 &lt;NP-GEN&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: cnjcoo</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>cnjcoo</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_cnj']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>cc
+                                 &lt;CC&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: cnjsub</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>cnjsub</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em>
+                                    <em>tl[1]['a_cnj']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>cs
+                                 &lt;CS&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               <h3>verb fallback</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>verb</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>mood-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>person-handler1(
+                        $1
+                        )
+                     </li>
+                     
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['lem']</em> 
+                                    <em>tl[1]['a_vb']</em> 
+                                    
+                                    $<em>screeve</em> 
+                                    
+                                    $<em>person</em>
+                                    
+                                 </li>
+                              </ol>]<sub>v
+                                 &lt;SV&gt;
+                                 
+                                 $<em>person</em>
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>clb symbols</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>clbpunct</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['whole']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>sent
+                                 &lt;SENT&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: SENT</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>sent</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>proc-synlabel1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol>
+                                 <li>
+                                    <em>tl[1]['whole']</em>
+                                    
+                                 </li>
+                              </ol>]<sub>sent
+                                 &lt;SENT&gt;
+                                 </sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               
+               
+            </div>
+         </div>
+         <div class="row">
+            <div id="footer" class="col-sm-12">
+               Documentation for <a href="//github.com/apertium/apertium-fin-eng/">
+                  apertium-fin-eng
+                  Generated with <a href="https://github.com/flammie/apevis-xslt">Flammie’s
+                     apevis-xslt</a>.
+                  </a></div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>
+         apertium-fin-eng :
+         Apertium-fin-eng bilingual rules and resources
+         
+      </title>
+      <meta name="generator" content="apevis-xslt">
+      <meta property="og:title" content="&#xA;            apertium-fin-eng">
+      <meta property="og:locale" content="en">
+      <meta name="description" content="Finnish–English&#xA;            dictionary for rule-based machine translation&#xA;          ">
+      <link rel="canonical" href="%0A            https://apertium.github.io/apertium-fin-eng/%0A          ">
+      <meta property="og:url" content="&#xA;            https://apertium.github.io/apertium-fin-eng/&#xA;          ">
+      <meta property="og:site_name" content="&#xA;            apertium-fin-eng"><script type="application/ld+json">
+          {"headline":"Apertium-fin-eng",
+          "@type":"WebSite",
+          "url":"http://apertium.github.io/apertium-fin-eng/",
+          "name":"apertium-fin-eng",
+          "description":"Apertium bilingual data for Finnish–English machine translation",
+          "@context":"http://schema.org"}
+        </script><link rel="stylesheet" href="/apertium-fin-eng/assets/css/style.css?v=0553eb4429e442aa5eeaa159606840983213fbbe"><script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script><script src="/apertium-fin-deu/assets/js/respond.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div id="header" class="col-sm-12">
+               <h4><a class="brand" href="/apertium-fin-eng/">apertium-fin-eng</a><small>Finnish–English
+                     rules for machine translation
+                     </small></h4>
+            </div>
+         </div>
+         <div class="row">
+            <div id="navigation" class="col-sm-2">
+               <nav>
+                  <ul class="nav nav-list">
+                     <li><a href="/apertium-fin-eng">
+                           Home
+                           </a></li>
+                     <li><a class="external" href="//github.com/apertium/apertium-fin-eng/#readme">
+                           README
+                           </a></li>
+                     <li><a href="/apertium-fin-engstatistics.html">
+                           Statistics
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.dix.html">Finnish–English
+                           dictionary
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.t1x.html">Finnish–English
+                           chunking rules (t1x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.t2x.html">Finnish–English
+                           re-ordering rules (t2x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.fin-eng.t3x.html">Finnish–English
+                           t3x rules
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.dix.html">English–Finnish
+                           dictionary
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.t1x.html">English–Finnish
+                           chunking rules (t1x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.t2x.html">English–Finnish
+                           re-ordering rules (t2x)
+                           </a></li>
+                     <li><a href="/apertium-fin-eng.eng-fin.t3x.html">English–Finnish
+                           t3x rules
+                           </a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div id="content" class="col-sm-10">
+               <h1 id="rules">
+                  Apertium-fin-eng:
+                  Finnish–English
+                  machine translation rules
+                  
+               </h1>
+               <p style="font-variant: italic">
+                  This is a visualisation of an apertium transfer system
+                  
+               </p>
+               
+               <h2>Categories (parts of chunks)</h2>
+               <p>
+                  These are the categories Apertium is using in order to chunk, re-order
+                  and transfer lexemes.
+                  
+               </p>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Category</th>
+                        <th>Items</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     
+                     <tr>
+                        <td>NP</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;NP&gt;</code></li>
+                              
+                              <li><code>&lt;NP.*&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>PREP</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;PR&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>SENT</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;SENT&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                  </tbody>
+               </table>
+               
+               <h2>Attributes</h2>
+               <p>
+                  These are the morphological analysis value (tag) sets that can be
+                  processed in the transfer.
+                  
+               </p>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Attribute set name</th>
+                        <th>Tags</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     
+                     <tr>
+                        <td>a_adp</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;pr&gt;</code></li>
+                              
+                              <li><code>&lt;post&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_nbr</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;sg&gt;</code></li>
+                              
+                              <li><code>&lt;pl&gt;</code></li>
+                              
+                              <li><code>&lt;sp&gt;</code></li>
+                              
+                              <li><code>&lt;ND&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                     <tr>
+                        <td>a_cas</td>
+                        <td>
+                           <ul>
+                              
+                              <li><code>&lt;nom&gt;</code></li>
+                              
+                              <li><code>&lt;acc&gt;</code></li>
+                              
+                              <li><code>&lt;ine&gt;</code></li>
+                              
+                              <li><code>&lt;gen&gt;</code></li>
+                              
+                              <li><code>&lt;ins&gt;</code></li>
+                              
+                              <li><code>&lt;loc&gt;</code></li>
+                              
+                              <li><code>&lt;abl&gt;</code></li>
+                              
+                              <li><code>&lt;CD&gt;</code></li>
+                              
+                           </ul>
+                        </td>
+                     </tr>
+                     
+                  </tbody>
+               </table>
+               
+               
+               
+               
+               
+               
+               <h2>Macros</h2>
+               <p>Macros are helper functions in apertium transfer files.</p>
+               
+               <h3>prep1</h3>
+               <div>Parametres: 1</div><code>
+                  <ol>
+                     
+                     <li>
+                        let 
+                        $<em>prepcase</em> ≔ &lt;nom&gt;
+                     </li>
+                     
+                     <li>
+                        let 
+                        $<em>POST</em> ≔ 
+                        ""
+                        
+                     </li>
+                     
+                     <li>
+                        <ol>
+                           
+                           <li>if 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "in"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;ine&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "of"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;ela&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "into"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;ill&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "to"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;all&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "at"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;ine&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "on"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;ade&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "from"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;abl&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "without"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;abe&gt;
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>elseif 
+                              <li>
+                                 <ol>
+                                    <li><em>[1]['lem']</em> ≟ 
+                                       "with"
+                                       
+                                    </li>
+                                 </ol>
+                              </li> then:
+                              <ol>
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;gen&gt;
+                                 </li>
+                                 <li>
+                                    let 
+                                    $<em>POST</em> ≔ 
+                                    " ^post"
+                                    &lt;POST&gt;
+                                    "{^kanssa"
+                                    &lt;post&gt;
+                                    "$}$"
+                                    
+                                 </li>
+                              </ol>
+                           </li>
+                           
+                           <li>else:
+                              <ol>
+                                 
+                                 <li>
+                                    let 
+                                    $<em>prepcase</em> ≔ &lt;gen&gt;
+                                 </li>
+                                 
+                                 <li>
+                                    let 
+                                    $<em>POST</em> ≔ 
+                                    
+                                    
+                                    <li><sub>b1</sub><br></li>
+                                    
+                                    " "
+                                    
+                                    
+                                    <li>
+                                       [
+                                       <ol>
+                                          <li><sub>b1</sub><br></li>
+                                       </ol>]<sub></sub></li>
+                                    
+                                 </li>
+                                 
+                              </ol>
+                           </li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               <h2>Rules</h2>
+               <p>The actual rules concerning stuff.</p>
+               
+               
+               <h3>Sääntö: PR NP</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>PREP</li>
+                  
+                  <li>NP</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>prep1(
+                        $1
+                        )
+                     </li>
+                     
+                     <li>
+                        let <em>[2]['a_cas']</em> ≔ 
+                        $<em>prepcase</em></li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol></ol>]<sub></sub></li>
+                           
+                           $<em>POST</em>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+               <h3>REGLA: SN</h3>
+               
+               <h4>Matching pattern:</h4>
+               <ol>
+                  
+                  <li>NP</li>
+                  
+               </ol>
+               
+               <h4>Action:</h4><code>
+                  <ol>
+                     
+                     <li>
+                        let <em>[1]['a_cas']</em> ≔ &lt;nom&gt;
+                     </li>
+                     
+                     <li>Output: 
+                        <ol>
+                           
+                           <li>
+                              [
+                              <ol></ol>]<sub></sub></li>
+                           
+                        </ol>
+                     </li>
+                     
+                  </ol></code>
+               
+               
+               
+            </div>
+         </div>
+         <div class="row">
+            <div id="footer" class="col-sm-12">
+               Documentation for <a href="//github.com/apertium/apertium-fin-eng/">
+                  apertium-fin-eng
+                  Generated with <a href="https://github.com/flammie/apevis-xslt">Flammie’s
+                     apevis-xslt</a>.
+                  </a></div>
+         </div>
+      </div>
+   </body>
+</html>
