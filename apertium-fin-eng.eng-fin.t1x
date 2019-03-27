@@ -53,6 +53,7 @@
   <def-cat n="notadv">
       <cat-item lemma="no" tags="adv"/>
       <cat-item lemma="not" tags="adv"/>
+      <cat-item lemma="n't" tags="adv"/>
     </def-cat>
     <def-cat n="doverb">
       <cat-item tags="vbdo.*"/>
@@ -367,7 +368,7 @@
             <lu>
               <clip pos="4" side="tl" part="lem"/>
               <clip pos="4" side="tl" part="a_verb"/> <!-- vblex.actv -->
-              <lit-tag v="actv.infa.lat"/>
+              <lit-tag v="actv.infa.sg.lat"/>
             </lu>
           </chunk>
         </out>
@@ -436,9 +437,8 @@
             </lu>
             <b pos="1"/>
             <lu>
-              <clip pos="2" side="tl" part="lem"/> <!-- do -->
-              <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
-              <lit-tag v="actv"/>
+              <lit v="olla"/>
+              <lit-tag v="vaux.actv"/>
               <var n="tense"/> <!-- pri -->
               <lit-tag v="p3.sg"/>
             </lu>
@@ -492,6 +492,7 @@
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <lit-tag v="infa"/> <!-- infa -->
+              <lit-tag v="sg"/> <!-- sg -->
               <lit-tag v="lat"/> <!-- lat -->
             </lu>
           </chunk>
@@ -606,6 +607,7 @@
               <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="infa"/> <!-- infa -->
               <lit-tag v="sg"/> <!-- sg -->
+              <lit-tag v="lat"/> <!-- sg -->
             </lu>
           </chunk>
         </out>
@@ -625,7 +627,7 @@
             <lu>
               <clip pos="1" side="tl" part="lem"/> <!-- tehdä -->
               <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
-              <lit-tag v="infma"/> <!-- infa -->
+              <lit-tag v="infma"/> <!-- infma -->
               <lit-tag v="sg"/> <!-- sg -->
               <lit-tag v="ine"/> <!-- ine or ill FIXME -->
             </lu>
