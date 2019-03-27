@@ -18,6 +18,11 @@
 <transfer default="chunk">
   <!-- {{{ cats -->
   <section-def-cats>
+    <def-cat n="nominal">
+      <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
+      <cat-item tags="prn.*"/>
+    </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
       <cat-item tags="np.*"/>
@@ -28,6 +33,9 @@
     <def-cat n="num">
       <cat-item tags="num.*"/>
       <cat-item tags="num"/>
+    </def-cat>
+    <def-cat n="have">
+      <cat-item tags="vbhaver.*"/>
     </def-cat>
     <def-cat n="fverb">
       <cat-item tags="vaux.*"/>
@@ -308,7 +316,7 @@
             <lu>
               <clip pos="4" side="tl" part="lem"/>
               <clip pos="4" side="tl" part="a_verb"/> <!-- vblex.actv -->
-              <lit-tag v="actv.infa.lat"/>
+              <lit-tag v="actv.infa.sg.lat"/>
             </lu>
           </chunk>
         </out>
@@ -403,6 +411,41 @@
       </action>
   </rule>
 
+    <rule comment="nominal have → adessive copula">
+      <pattern>
+          <pattern-item n="nominal"/> <!-- cat, he -->
+          <pattern-item n="have"/> <!-- have -->
+      </pattern>
+      <action>
+          <call-macro n="tensemangle1">
+              <with-param pos="2"/>
+          </call-macro>
+          <call-macro n="personmangle1">
+              <with-param pos="1"/>
+          </call-macro>
+        <out>
+          <chunk name="subjverb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VP.HAVE"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- cat -->
+              <clip pos="1" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="1" side="tl" part="a_num"/> <!-- sg -->
+              <lit-tag v="ade"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/> <!-- do -->
+              <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv"/>
+              <var n="tense"/> <!-- pri -->
+              <lit-tag v="p3.sg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="SäÄntö: PRN-PRS V">
       <pattern>
           <pattern-item n="prnprs"/> <!-- I, you, he, she, it, we, they -->
