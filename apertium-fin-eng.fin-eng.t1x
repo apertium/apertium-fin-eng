@@ -17,8 +17,7 @@
   <section-def-cats>
 
     <def-cat n="neg-verb"> <!-- ei vblex.neg.p3.sg -->
-      <cat-item lemma="ei" tags="vblex.neg.*"/>
-      <cat-item lemma="ei" tags="vblex.neg.actv.p3.sg.@\+FAUXV"/>
+      <cat-item lemma="ei" tags="vaux.neg.*"/>
     </def-cat>
 
     <def-cat n="conneg"> <!-- tietää vblex.actv.pres.conneg -->
@@ -157,7 +156,7 @@
         <cat-item tags="vblex.*.pri.*"/>
     </def-cat>
     <def-cat n="vbolla">
-        <cat-item lemma="olla" tags="vblex.*"/>
+        <cat-item lemma="olla" tags="vaux.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -167,18 +166,14 @@
     </def-attr>
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
-      <attr-item tags="vblex.actv"/>
-      <attr-item tags="vblex.pasv"/>
       <attr-item tags="vaux"/>
-      <attr-item tags="vaux.actv"/>
-      <attr-item tags="vaux.pasv"/>
       <attr-item tags="vbser"/>
-      <attr-item tags="vbser.actv"/>
-      <attr-item tags="vbser.pasv"/>
+      <attr-item tags="vbmod"/>
     </def-attr>
     <def-attr n="a_vb">
       <attr-item tags="vblex"/>
       <attr-item tags="vaux"/>
+      <attr-item tags="vbmod"/>
       <attr-item tags="vbser"/>
     </def-attr>
     <def-attr n="a_person">
@@ -193,6 +188,11 @@
       <attr-item tags="cond"/>
       <attr-item tags="imp"/>
       <attr-item tags="pot"/>
+    </def-attr>
+    <def-attr n="a_num">
+        <attr-item tags="num"/>
+        <attr-item tags="num.card"/>
+        <attr-item tags="num.ord"/>
     </def-attr>
     <def-attr n="a_cnj">
         <attr-item tags="cnjcoo"/>
@@ -209,6 +209,9 @@
       <attr-item tags="n"/>
       <attr-item tags="vblex.subs"/>
       <attr-item tags="np"/>
+      <attr-item tags="np.al"/>
+      <attr-item tags="np.cog"/>
+      <attr-item tags="np.top"/>
       <attr-item tags="np.ant"/>
       <attr-item tags="np.ant.f"/>
       <attr-item tags="np.ant.m"/>
@@ -229,6 +232,9 @@
       <attr-item tags="prn.obj.p3.m"/>
       <attr-item tags="vblex.subs"/>
       <attr-item tags="np"/>
+      <attr-item tags="np.al"/>
+      <attr-item tags="np.cog"/>
+      <attr-item tags="np.top"/>
       <attr-item tags="np.ant"/>
       <attr-item tags="np.ant.f"/>
       <attr-item tags="np.ant.m"/>
@@ -243,9 +249,6 @@
     <def-attr n="a_prnpers">
       <attr-item tags="subj"/>
       <attr-item tags="obj"/>
-    </def-attr>
-    <def-attr n="a_num">
-      <attr-item tags="num"/>
     </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
@@ -698,7 +701,6 @@
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_nom"/>
               <clip pos="1" side="tl" part="a_nbr"/>
-              <clip pos="1" side="tl" part="a_cas"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
             <b pos="1"/>
@@ -706,7 +708,6 @@
               <clip pos="2" side="tl" part="lemh"/>
               <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="a_nbr"/>
-              <clip pos="2" side="tl" part="a_cas"/>
               <clip pos="2" side="tl" part="lemq"/>
             </lu>
           </chunk>
@@ -1139,7 +1140,7 @@
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_verb"/>
-              <lit-tag v="pres"/>
+              <lit-tag v="inf"/>
             </lu>
           </chunk>
         </out>
@@ -1535,7 +1536,7 @@
           <b pos="1"/>
             <lu>
                 <lit v="must"/>
-                <lit-tag v="vaux"/>
+                <lit-tag v="vbmod.pres"/>
             </lu>
           </chunk>
         </out>
@@ -1617,6 +1618,25 @@
         </out>
       </action>
     </rule>
+    <rule comment="negverb fallback">
+      <pattern>
+         <pattern-item n="neg-verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG"/></tag>
+            </tags>
+            <lu>
+              <lit v="no"/>
+              <lit-tag v="adv"/>
+          </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="verb fallback">
       <pattern>
          <pattern-item n="verb"/>
@@ -1667,7 +1687,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: SENT">
+    <rule comment="generic nop rule">
       <pattern>
         <pattern-item n="sent"/>
       </pattern>
