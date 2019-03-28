@@ -90,6 +90,13 @@
     <def-cat n="prnprs">
       <cat-item lemma="prpers" tags="prn.*"/>
     </def-cat>
+    <def-cat n="prnprs-3">
+      <cat-item lemma="prpers" tags="prn.subj.p3.*"/>
+    </def-cat>
+    <def-cat n="prnprs-non3">
+      <cat-item lemma="prpers" tags="prn.subj.p1.*"/>
+      <cat-item lemma="prpers" tags="prn.subj.p2.*"/>
+    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
@@ -230,6 +237,10 @@
             <when>
                 <test><equal><clip pos="1" side="sl" part="a_tens"/><lit-tag v="cni"/></equal></test>
                 <let><var n="tense"/><lit-tag v="pri"/></let>
+              </when>
+            <when>
+                <test><equal><clip pos="1" side="sl" part="a_tens"/><lit-tag v="past"/></equal></test>
+                <let><var n="tense"/><lit-tag v="past"/></let>
               </when>
               <otherwise>
                 <let><var n="tense"/><lit-tag v="pri"/></let>
@@ -446,9 +457,9 @@
         </out>
       </action>
     </rule>
-    <rule comment="SäÄntö: PRN-PRS V">
+    <rule comment="personal pronoun verb: pro-drop non-3sg, use personal form">
       <pattern>
-          <pattern-item n="prnprs"/> <!-- I, you, he, she, it, we, they -->
+          <pattern-item n="prnprs-non3"/> <!-- I, you, we, they -->
           <pattern-item n="fverb"/> <!-- do -->
       </pattern>
       <action>
@@ -463,6 +474,39 @@
             <tags>
               <tag><lit-tag v="VP"/></tag>
             </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/> <!-- do -->
+              <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv"/>
+              <var n="tense"/> <!-- pri -->
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="personal pronoun verb p3: no droppings, use personal form">
+      <pattern>
+          <pattern-item n="prnprs-3"/> <!-- I, you, we, they -->
+          <pattern-item n="fverb"/> <!-- do -->
+      </pattern>
+      <action>
+          <call-macro n="tensemangle1">
+              <with-param pos="2"/>
+          </call-macro>
+          <call-macro n="personmangle1">
+              <with-param pos="1"/>
+          </call-macro>
+        <out>
+          <chunk name="subjverb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/> <!-- do -->
+            </lu>
+            <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- do -->
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
@@ -494,35 +538,6 @@
               <lit-tag v="infa"/> <!-- infa -->
               <lit-tag v="sg"/> <!-- sg -->
               <lit-tag v="lat"/> <!-- lat -->
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="SäÄntö:  V">
-      <pattern>
-          <pattern-item n="fverb"/> <!-- do -->
-      </pattern>
-      <action>
-          <call-macro n="tensemangle1">
-              <with-param pos="1"/>
-          </call-macro>
-          <call-macro n="personmangle1">
-              <with-param pos="1"/>
-          </call-macro>
-        <out>
-          <chunk name="unkv" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="V"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/> <!-- do -->
-              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex -->
-              <lit-tag v="actv"/>
-              <var n="tense"/> <!-- pri -->
-              <var n="pers"/>
-              <var n="persnum"/>
             </lu>
           </chunk>
         </out>
@@ -591,6 +606,65 @@
 
     <!-- }}}
          {{{ single words, falls back -->
+
+    <rule comment="stray have: add spaces just in case because 've is analysed as have">
+      <pattern>
+          <pattern-item n="have"/> <!-- have -->
+      </pattern>
+      <action>
+          <call-macro n="tensemangle1">
+              <with-param pos="1"/>
+          </call-macro>
+          <call-macro n="personmangle1">
+              <with-param pos="1"/>
+          </call-macro>
+        <out>
+          <chunk name="have" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V.HAVE"/></tag>
+            </tags>
+            <b pos="0"/>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- do -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex -->
+              <lit-tag v="actv"/>
+              <var n="tense"/> <!-- pri -->
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="SäÄntö:  V">
+      <pattern>
+          <pattern-item n="fverb"/> <!-- do -->
+      </pattern>
+      <action>
+          <call-macro n="tensemangle1">
+              <with-param pos="1"/>
+          </call-macro>
+          <call-macro n="personmangle1">
+              <with-param pos="1"/>
+          </call-macro>
+        <out>
+          <chunk name="unkv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- do -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex -->
+              <lit-tag v="actv"/>
+              <var n="tense"/> <!-- pri -->
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="SäÄntö: V-inf">
       <pattern>
