@@ -16647,9 +16647,11 @@
   <rule weight="1.0"><match lemma="kesäinen" tags="adj.*"><select lemma="summer" tags="adj.*"/></match></rule>
 
   <rule weight="1.0"><match lemma="kaveri" tags="n.*"><select lemma="lad" tags="n.*"/></match></rule>
+  <rule weight="1.0"><match lemma="katos" tags="n.*"><select lemma="canopy" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="sopiva" tags="adj.*"><select lemma="appropriate" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="hei" tags="ij"><select lemma="hi" tags="ij"/></match></rule>
   <rule weight="1.0"><match lemma="nuori" tags="adj.*"><select lemma="young" tags="adj.*"/></match></rule>
+  <rule weight="1.0"><match lemma="haluta" tags="vblex.*"><select lemma="want" tags="vblex.*"/></match></rule>
 
   <!-- }}}
        {{{ Manual rules with context -->

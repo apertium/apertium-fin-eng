@@ -39,6 +39,10 @@
         <cat-item tags="adv"/>
         <cat-item tags="part"/>
     </def-cat>
+    <def-cat n="quant">
+      <cat-item lemma="jokainen" tags="prn.*"/>
+      <cat-item lemma="tämä" tags="prn.*"/>
+    </def-cat>
     <def-cat n="cnjcoo">
         <cat-item tags="cnjcoo"/>
         <cat-item tags="cnjcoo.*"/>
@@ -122,6 +126,11 @@
       <cat-item tags="np.*"/>
       <cat-item tags="np.*.*"/>
       <cat-item tags="np.*.*.*"/>
+    </def-cat>
+    <def-cat n="nominal">
+      <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
+      <cat-item tags="prn.*"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
@@ -479,6 +488,46 @@
   <section-rules>
 
 
+    <rule comment="quantifier nominal: quantifer of nominals">
+      <pattern>
+        <pattern-item n="quant"/>
+        <pattern-item n="nominal"/>
+      </pattern>
+      <action>
+        <call-macro n="case-handler1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="proc-synlabel1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="case-handler1">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="pron" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="sl" part="a_cas"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="0"/>
+            <lu>
+              <lit v="of"/>
+              <lit-tag v="pr"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <!-- single word fall-backs -->
 
 
 
@@ -1209,6 +1258,9 @@
          <pattern-item n="verb-past"/>
       </pattern>
       <action>
+        <call-macro n="mood-handler1">
+          <with-param pos="1"/>
+        </call-macro>
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
             <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
         <out>
@@ -1217,13 +1269,12 @@
               <tag><lit-tag v="SV"/></tag>
               <tag><clip pos="1" side="sl" part="a_person"/></tag>
               <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
+              <tag><var n="screeve"/></tag>
             </tags>
           <lu>
             <clip pos="1" side="tl" part="lem"/> <!-- know -->
             <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
             <var n="screeve"/> <!-- past -->
-            <clip pos="1" side="tl" part="a_person"/> <!-- p3 -->
-            <clip pos="1" side="tl" part="a_nbr"/> <!-- sg -->
           </lu>
           </chunk>
         </out>
@@ -1654,11 +1705,12 @@
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><var n="person"/></tag>
+              <tag><var n="screeve"/></tag>
             </tags>
           <lu>
             <clip pos="1" side="tl" part="lem"/> <!-- know -->
             <clip pos="1" side="tl" part="a_vb"/> <!-- vblex.actv -->
-            <var n="screeve"/> <!-- pres -->
+            <var n="screeve"/> <!-- pres or past -->
             <var n="person"/>
           </lu>
           </chunk>

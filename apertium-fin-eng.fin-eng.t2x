@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
-<!-- 
+<!--
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License.
@@ -106,6 +106,7 @@
     <def-var n="POSS"/>
     <def-var n="PRS"/>
     <def-var n="NOT"/>
+    <def-var n="DET"/>
     <def-var n="AUX"/>
   </section-def-vars>
   <section-def-macros>
@@ -169,6 +170,26 @@
                <concat><lit v="^prep"/><lit-tag v="PREP"/><lit v="{^alongside"/><lit-tag v="pr"/><lit v="$}$ "/></concat>
           </let>
         </when>
+      </choose>
+    </def-macro>
+    <def-macro n="insert-det1" npar="1">
+      <choose>
+        <when>
+          <test><and>
+              <equal><var n="POSS"/><lit v=""/></equal>
+              <not><equal><var n="PREP"/><lit v=""/></equal></not>
+          </and></test>
+          <let><var n="DET"/>
+            <concat>
+              <lit v="^det"/><lit-tag v="DET"/><lit v="{^the"/><lit-tag v="det.def.sp"/><lit v="$}$ "/>
+            </concat>
+          </let>
+        </when>
+        <otherwise>
+          <let>
+            <var n="DET"/><lit v=""/>
+          </let>
+        </otherwise>
       </choose>
     </def-macro>
     <def-macro n="insert-poss1" npar="1">
@@ -452,13 +473,17 @@
       <action>
         <call-macro n="insert-prep1">
           <with-param pos="1"/>
-        </call-macro> 
+        </call-macro>
         <call-macro n="insert-poss1">
           <with-param pos="1"/>
-        </call-macro> 
+        </call-macro>
+        <call-macro n="insert-det1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <var n="PREP"/>
           <var n="POSS"/>
+          <var n="DET"/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
@@ -467,7 +492,7 @@
         </out>
       </action>
     </rule>
- 
+
     <rule comment="REGLA: PERS SV">
       <pattern>
         <pattern-item n="PERS"/>
@@ -476,14 +501,14 @@
       <action>
         <call-macro n="insert-aux1">
           <with-param pos="1"/>
-        </call-macro> 
+        </call-macro>
         <choose>
           <when>
             <test>
               <not><equal><clip pos="1" part="a_prs"/><clip pos="2" part="a_prs"/></equal></not></test>
               <call-macro n="insert-prs1">
                 <with-param pos="1"/>
-              </call-macro> 
+              </call-macro>
           </when>
         </choose>
         <out>
@@ -505,7 +530,7 @@
       </action>
     </rule>
 
-    
+
     <rule comment="REGLA: SV">
       <pattern>
         <pattern-item n="SV"/>
@@ -513,10 +538,10 @@
       <action>
         <call-macro n="insert-prs1">
           <with-param pos="1"/>
-        </call-macro> 
+        </call-macro>
         <call-macro n="insert-aux1">
           <with-param pos="1"/>
-        </call-macro> 
+        </call-macro>
         <out>
           <var n="PRS"/>
           <var n="AUX"/>
