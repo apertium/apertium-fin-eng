@@ -15,6 +15,10 @@
 <!-- -*- nxml -*- -->
 <interchunk>
   <section-def-cats>
+    <def-cat n="AP">
+      <cat-item tags="AP"/>
+      <cat-item tags="AP.*"/>
+    </def-cat>
     <def-cat n="NP">
       <cat-item tags="NP"/>
       <cat-item tags="NP.*"/>
@@ -77,6 +81,18 @@
           <let><var n="prepcase"/><lit-tag v="ill"/></let>
         </when>
         <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="as a"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="ess"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="as"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="ess"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" part="lem"/><lit v="for"/></equal></test>
+          <let><var n="prepcase"/><lit-tag v="all"/></let>
+        </when>
+        <when>
           <test><equal><clip pos="1" part="lem"/><lit v="to"/></equal></test>
           <let><var n="prepcase"/><lit-tag v="all"/></let>
         </when>
@@ -126,6 +142,40 @@
   </section-def-macros>
   <section-rules>
 
+    <rule comment="Sääntö: PR AP NP">
+      <pattern>
+        <pattern-item n="PREP"/>
+        <pattern-item n="AP"/>
+        <pattern-item n="NP"/>
+      </pattern>
+      <action>
+        <call-macro n="prep1">
+          <with-param pos="1"/>
+        </call-macro>
+        <let>
+          <clip pos="2" part="a_cas"/>
+          <var n="prepcase"/>
+        </let>
+        <let>
+          <clip pos="3" part="a_cas"/>
+          <var n="prepcase"/>
+        </let>
+        <out>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <var n="POST"/>
+        </out>
+      </action>
+    </rule>
     <rule comment="Sääntö: PR NP">
       <pattern>
         <pattern-item n="PREP"/>

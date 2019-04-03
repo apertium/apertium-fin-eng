@@ -78,17 +78,10 @@
       <cat-item tags="vbmod.*"/>
   </def-cat>
     <def-cat n="notverb">
-      <cat-item lemma="do" tags="vblex.*"/> <!-- XXX -->
-      <cat-item tags="vbdo.*"/>
       <cat-item tags="vaux.*"/>
       <cat-item tags="vbmod.*"/>
       <cat-item tags="vbser.*"/>
   </def-cat>
-  <def-cat n="notadv">
-      <cat-item lemma="no" tags="adv"/>
-      <cat-item lemma="not" tags="adv"/>
-      <cat-item lemma="n't" tags="adv"/>
-    </def-cat>
     <def-cat n="isverb">
       <cat-item tags="vbser.*"/>
       <cat-item lemma="be" tags="vaux.*"/>
@@ -173,7 +166,7 @@
       <cat-item tags="pr"/>
       <cat-item tags="post"/>
     </def-cat>
-    <def-cat n="not">
+    <def-cat n="notadv">
       <cat-item lemma="not" tags="adv"/>
       <cat-item lemma="n't" tags="adv"/>
       <cat-item lemma="not" tags="adv.*"/>
@@ -295,26 +288,106 @@
     <def-var n="persnum"/>
     <def-var n="comparison"/>
     <def-var n="tense"/>
+    <def-var n="possession"/>
+    <def-var n="conneg"/>
   </section-def-vars>
   <!-- {{{ macros -->
   <section-def-macros>
-      <def-macro n="compare" npar="1">
-                <let><var n="comparison"/><lit-tag v="pos"/></let>
-          <choose>
-              <when>
-                <test><equal><clip pos="1" side="sl" part="a_comp"/><lit-tag v="comp"/></equal></test>
-                <let><clip pos="1" side="tl" part="a_comp"/><lit-tag v="comp"/></let>
-                <let><var n="comparison"/><lit-tag v="com"/></let>
-            </when>
-              <when>
-                <test><equal><clip pos="1" side="sl" part="a_comp"/><lit-tag v="sup"/></equal></test>
-                <let><clip pos="1" side="tl" part="a_comp"/><lit-tag v="sup"/></let>
-                <let><var n="comparison"/><lit-tag v="sup"/></let>
-            </when>
-            <otherwise>
-                <let><var n="comparison"/><lit-tag v="pos"/></let>
-            </otherwise>
-        </choose>
+    <def-macro n="compare" npar="1">
+      <let><var n="comparison"/><lit-tag v="pos"/></let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_comp"/><lit-tag v="comp"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_comp"/><lit-tag v="comp"/></let>
+          <let><var n="comparison"/><lit-tag v="com"/></let>
+        </when>
+        <when>
+          <test><equal><clip pos="1" side="sl" part="a_comp"/><lit-tag v="sup"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_comp"/><lit-tag v="sup"/></let>
+          <let><var n="comparison"/><lit-tag v="sup"/></let>
+        </when>
+        <otherwise>
+          <let><var n="comparison"/><lit-tag v="pos"/></let>
+        </otherwise>
+      </choose>
+    </def-macro>
+    <def-macro n="possmangler1" npar="1">
+      <let><var n="possession"/><lit-tag v="pxsp3"/></let>
+      <choose>
+        <when>
+          <test><and>
+              <equal><clip pos="1" side="sl" part="a_num"/><lit-tag v="sg"/></equal>
+              <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1"/></equal>
+          </and></test>
+          <let><var n="possession"/><lit-tag v="pxsg1"/></let>
+        </when>
+        <when>
+          <test><and>
+              <equal><clip pos="1" side="sl" part="a_num"/><lit-tag v="sg"/></equal>
+              <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2"/></equal>
+          </and></test>
+          <let><var n="possession"/><lit-tag v="pxsg2"/></let>
+        </when>
+        <when>
+          <test>
+            <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p3"/></equal>
+          </test>
+          <let><var n="possession"/><lit-tag v="pxsp3"/></let>
+        </when>
+        <when>
+          <test><and>
+              <equal><clip pos="1" side="sl" part="a_num"/><lit-tag v="pl"/></equal>
+              <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p2"/></equal>
+          </and></test>
+          <let><var n="possession"/><lit-tag v="pxpl2"/></let>
+        </when>
+        <when>
+          <test><and>
+              <equal><clip pos="1" side="sl" part="a_num"/><lit-tag v="pl"/></equal>
+              <equal><clip pos="1" side="sl" part="a_pers"/><lit-tag v="p1"/></equal>
+          </and></test>
+          <let><var n="possession"/><lit-tag v="pxpl1"/></let>
+        </when>
+        <when>
+          <test>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="my"/></equal>
+          </test>
+          <let><var n="possession"/><lit-tag v="pxsg1"/></let>
+        </when>
+        <when>
+          <test>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="your"/></equal>
+          </test>
+          <let><var n="possession"/><lit-tag v="pxsg2"/></let>
+        </when>
+        <when>
+          <test>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="his"/></equal>
+          </test>
+          <let><var n="possession"/><lit-tag v="pxsp3"/></let>
+        </when>
+        <when>
+          <test>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="her"/></equal>
+          </test>
+          <let><var n="possession"/><lit-tag v="pxsp3"/></let>
+        </when>
+        <when>
+          <test>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="our"/></equal>
+          </test>
+          <let><var n="possession"/><lit-tag v="pxpl1"/></let>
+        </when>
+        <when>
+          <test>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="their"/></equal>
+          </test>
+          <let><var n="possession"/><lit-tag v="pxsp3"/></let>
+        </when>
+        <otherwise>
+          <let><var n="possession"/><lit-tag v="pxsp3"/></let>
+        </otherwise>
+      </choose>
     </def-macro>
 
       <def-macro n="test" npar="1">
@@ -324,6 +397,7 @@
           </let>
     </def-macro>
     <def-macro n="tensemangle1" npar="1">
+      <let><var n="conneg"/><lit-tag v="conneg"/></let>
         <choose>
             <when>
                 <test><equal><clip pos="1" side="sl" part="a_tens"/><lit-tag v="pres"/></equal></test>
@@ -336,6 +410,9 @@
             <when>
                 <test><equal><clip pos="1" side="sl" part="a_tens"/><lit-tag v="past"/></equal></test>
                 <let><var n="tense"/><lit-tag v="past"/></let>
+                <let><var n="conneg"/><concat>
+                    <lit-tag v="sg.conneg"/>
+                </concat></let>
               </when>
               <otherwise>
                 <let><var n="tense"/><lit-tag v="pri"/></let>
@@ -364,6 +441,17 @@
           <otherwise>
             <let><var n="persnum"/><lit-tag v="sg"/></let>
           </otherwise>
+        </choose>
+      </def-macro>
+      <def-macro n="artmangle1" npar="1">
+        <choose>
+          <when>
+            <test><or>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="the"/></equal>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="a"/></equal>
+            </or></test>
+            <let><clip pos="1" side="tl" part="whole"/><lit v=""/></let>
+          </when>
         </choose>
       </def-macro>
       <def-macro n="numbermangle1" npar="1">
@@ -453,7 +541,7 @@
       <pattern>
           <pattern-item n="prnprs-3"/> <!-- I, you, he, she, it, we, they -->
           <pattern-item n="modverb"/> <!-- can / ... -->
-          <pattern-item n="not"/> <!-- not / n't -->
+          <pattern-item n="notadv"/> <!-- not / n't -->
           <pattern-item n="infverb"/> <!-- play / eat / help ... -->
       </pattern>
       <action>
@@ -466,7 +554,9 @@
         <out>
           <chunk name="subjverb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VP"/></tag>
+              <tag><lit-tag v="VP.NEG"/></tag>
+              <tag><var n="pers"/></tag>
+              <tag><var n="persnum"/></tag>
             </tags>
             <lu>
               <clip pos="1" part="whole" side="tl"/>
@@ -484,7 +574,7 @@
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <var n="tense"/> <!-- pri -->
-              <lit-tag v="conneg"/>
+              <var n="conneg"/>
             </lu>
               <b pos="3"/>
             <lu>
@@ -500,7 +590,7 @@
       <pattern>
           <pattern-item n="prnprs-non3"/> <!-- I, you, he, she, it, we, they -->
           <pattern-item n="modverb"/> <!-- can / ... -->
-          <pattern-item n="not"/> <!-- not / n't -->
+          <pattern-item n="notadv"/> <!-- not / n't -->
           <pattern-item n="infverb"/> <!-- play / eat / help ... -->
       </pattern>
       <action>
@@ -513,7 +603,9 @@
         <out>
           <chunk name="subjverb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VP"/></tag>
+              <tag><lit-tag v="VP.NEG"/></tag>
+              <tag><var n="pers"/></tag>
+              <tag><var n="persnum"/></tag>
             </tags>
             <lu>
               <lit v="ei"/> <!-- pos=3 ~ not -->
@@ -527,7 +619,7 @@
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <var n="tense"/> <!-- pri -->
-              <lit-tag v="conneg"/>
+              <var n="conneg"/>
             </lu>
               <b pos="3"/>
             <lu>
@@ -540,11 +632,11 @@
       </action>
     </rule>
 
-    <rule comment="SäÄntö: 3SG-stuff VAUX NOT V">
+    <rule comment="3SG-stuff VAUX NOT V -> stuff ei voi">
       <pattern>
           <pattern-item n="sg3stuff"/> <!-- dog / Mary / ...  -->
           <pattern-item n="notverb"/> <!-- do / can / ... -->
-          <pattern-item n="not"/> <!-- not / n't -->
+          <pattern-item n="notadv"/> <!-- not / n't -->
           <pattern-item n="infverb"/> <!-- play / eat / help ... -->
       </pattern>
       <action>
@@ -557,7 +649,7 @@
         <out>
           <chunk name="subjverb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VP"/></tag>
+              <tag><lit-tag v="VP.NEG"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -578,7 +670,7 @@
               <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <var n="tense"/> <!-- pri -->
-              <lit-tag v="conneg"/>
+              <var n="conneg"/>
             </lu>
               <b pos="3"/>
             <lu>
@@ -594,7 +686,7 @@
     <rule comment="is not -> ei ole">
       <pattern>
           <pattern-item n="isverb"/> <!-- do  -->
-          <pattern-item n="not"/> <!-- not / n't -->
+          <pattern-item n="notadv"/> <!-- not / n't -->
       </pattern>
       <action>
         <call-macro n="tensemangle1">
@@ -606,7 +698,9 @@
         <out>
           <chunk name="subjverb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VP"/></tag>
+              <tag><lit-tag v="VP.NEG"/></tag>
+              <tag><var n="pers"/></tag>
+              <tag><var n="persnum"/></tag>
             </tags>
             <lu>
               <lit v="ei"/> <!-- pos=3 ~ not -->
@@ -620,18 +714,98 @@
               <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <var n="tense"/> <!-- pri -->
-              <lit-tag v="conneg"/>
+              <var n="conneg"/>
             </lu>
           </chunk>
         </out>
       </action>
     </rule>
 
-    <rule comment="SäÄntö: DO NOT V">
+    <rule comment="PRNPRS-3 DO NOT V -> EI V">
+      <pattern>
+          <pattern-item n="prnprs-3"/> <!-- I, you, we  -->
+          <pattern-item n="doverb"/> <!-- do  -->
+          <pattern-item n="notadv"/> <!-- not / n't -->
+          <pattern-item n="infverb"/> <!-- play / eat / help ... -->
+      </pattern>
+      <action>
+        <call-macro n="tensemangle1">
+          <with-param pos="2"/> <!-- tense in do -->
+        </call-macro>
+        <call-macro n="personmangle1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="subjverb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VP.NEG"/></tag>
+              <tag><var n="pers"/></tag>
+              <tag><var n="persnum"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <lit v="ei"/> <!-- pos=3 ~ not -->
+              <lit-tag v="vblex.neg.actv"/>
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+              <b pos="2"/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv"/>
+              <var n="tense"/> <!-- pri -->
+              <var n="conneg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+  </rule>
+    <rule comment="PRNPRS-3 DO NOT V -> EI V">
+      <pattern>
+          <pattern-item n="prnprs-non3"/> <!-- I, you, we  -->
+          <pattern-item n="doverb"/> <!-- do  -->
+          <pattern-item n="notadv"/> <!-- not / n't -->
+          <pattern-item n="infverb"/> <!-- play / eat / help ... -->
+      </pattern>
+      <action>
+        <call-macro n="tensemangle1">
+          <with-param pos="2"/> <!-- tense in do -->
+        </call-macro>
+        <call-macro n="personmangle1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="subjverb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VP.NEG"/></tag>
+            </tags>
+            <lu>
+              <lit v="ei"/> <!-- pos=3 ~ not -->
+              <lit-tag v="vblex.neg.actv"/>
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+              <b pos="2"/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv"/>
+              <var n="tense"/> <!-- pri -->
+              <var n="conneg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+  </rule>
+    <rule comment="DO NOT V -> EI V">
       <pattern>
           <pattern-item n="doverb"/> <!-- do  -->
-          <pattern-item n="not"/> <!-- not / n't -->
-          <pattern-item n="fverb"/> <!-- play / eat / help ... -->
+          <pattern-item n="notadv"/> <!-- not / n't -->
+          <pattern-item n="infverb"/> <!-- play / eat / help ... -->
       </pattern>
       <action>
         <call-macro n="tensemangle1">
@@ -644,6 +818,8 @@
           <chunk name="subjverb" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="VP"/></tag>
+              <tag><var n="pers"/></tag>
+              <tag><var n="persnum"/></tag>
             </tags>
             <lu>
               <lit v="ei"/> <!-- pos=3 ~ not -->
@@ -657,13 +833,129 @@
               <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
               <lit-tag v="actv"/>
               <var n="tense"/> <!-- pri -->
-              <lit-tag v="conneg"/>
+              <var n="conneg"/>
             </lu>
           </chunk>
         </out>
       </action>
   </rule>
 
+  <rule comment="prnprs have not pcp -> ei+prs ole pcp">
+    <pattern>
+      <pattern-item n="prnprs"/>
+      <pattern-item n="have"/>
+      <pattern-item n="notadv"/>
+      <pattern-item n="pcp"/> <!-- do -->
+    </pattern>
+      <action>
+        <call-macro n="personmangle1">
+          <with-param pos="1"/> <!-- tense in have -->
+        </call-macro>
+        <call-macro n="tensemangle1">
+          <with-param pos="2"/> <!-- tense in have -->
+        </call-macro>
+        <out>
+          <chunk name="pcp" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V.NEG.PTCP"/></tag>
+            </tags>
+            <lu>
+              <lit v="ei"/>
+              <lit-tag v="vblex.neg.actv"/>
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <lit v="olla"/>
+              <lit-tag v="vaux.actv.pri.conneg"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="4" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv.pp.pos"/>
+              <clip pos="1" side="tl" part="a_num"/>
+              <lit-tag v="nom"/> <!-- infma -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+  <rule comment="have not pcp -> ei ole pcp">
+    <pattern>
+      <pattern-item n="have"/>
+      <pattern-item n="notadv"/>
+      <pattern-item n="pcp"/> <!-- do -->
+    </pattern>
+      <action>
+        <call-macro n="personmangle1">
+          <with-param pos="1"/> <!-- tense in have -->
+        </call-macro>
+        <call-macro n="tensemangle1">
+          <with-param pos="1"/> <!-- tense in have -->
+        </call-macro>
+        <out>
+          <chunk name="pcp" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V.NEG.PTCP"/></tag>
+            </tags>
+            <lu>
+              <lit v="ei"/>
+              <lit-tag v="vblex.neg.actv"/>
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <lit v="olla"/>
+              <lit-tag v="vaux.actv.pri.conneg"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="3" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv.pp.pos.sg.nom"/> <!-- infma -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+  <rule comment="have pcp -> on pcp">
+    <pattern>
+      <pattern-item n="have"/>
+      <pattern-item n="pcp"/> <!-- do -->
+    </pattern>
+      <action>
+        <call-macro n="personmangle1">
+          <with-param pos="1"/> <!-- tense in have -->
+        </call-macro>
+        <call-macro n="tensemangle1">
+          <with-param pos="1"/> <!-- tense in have -->
+        </call-macro>
+        <out>
+          <chunk name="pcp" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="V.PTCP"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv"/> <!-- actv -->
+              <var n="tense"/> <!-- pri -->
+              <var n="pers"/>
+              <var n="persnum"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="2" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv.pp.pos.sg.nom"/> <!-- infma -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="nominal have → adessive copula">
       <pattern>
           <pattern-item n="nominal"/> <!-- cat, he -->
@@ -785,7 +1077,7 @@
       </action>
     </rule>
 
-    <rule comment="SäÄntö: det a n">
+    <rule comment="det a n -> spread number">
       <pattern>
           <pattern-item n="det"/> <!-- a, the -->
           <pattern-item n="adj"/> <!-- little -->
@@ -820,6 +1112,39 @@
         </out>
       </action>
     </rule>
+    <rule comment="a n -> spread number">
+      <pattern>
+          <pattern-item n="adj"/> <!-- little -->
+          <pattern-item n="noun"/> <!-- boy -->
+      </pattern>
+      <action>
+        <call-macro n="comparison">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="np" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="CD"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- little -->
+              <clip pos="1" side="tl" part="a_adj"/> <!-- adj -->
+              <var n="comparison"/>
+              <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="2"/>
+            </lu>
+              <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/> <!-- boy -->
+              <clip pos="2" side="tl" part="a_nom"/> <!-- n, np -->
+              <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="2"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="SäÄntö: poss n">
       <pattern>
@@ -827,6 +1152,9 @@
           <pattern-item n="noun"/> <!-- boy -->
       </pattern>
       <action>
+        <call-macro n="possmangler1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="np" case="caseFirstWord">
             <tags>
@@ -845,7 +1173,7 @@
               <clip pos="2" side="tl" part="a_nom"/> <!-- n -->
               <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
-              <lit-tag v="pxsp3"/>
+              <var n="possession"/>
             </lu>
           </chunk>
         </out>
@@ -857,6 +1185,9 @@
           <pattern-item n="noun"/> <!-- boy -->
       </pattern>
       <action>
+        <call-macro n="artmangle1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="np" case="caseFirstWord">
             <tags>
