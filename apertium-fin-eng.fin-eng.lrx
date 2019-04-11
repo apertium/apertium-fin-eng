@@ -16637,6 +16637,7 @@
 
   <rule weight="1.0"><match lemma="herätyskello" tags="n.*"><select lemma="alarm" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="muuten" tags="adv.*"><select lemma="by the way" tags="adv.*"/></match></rule>
+  <rule weight="1.0"><match lemma="siellä" tags="adv"><select lemma="there" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="huolellisesti" tags="adv"><select lemma="carefully" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="katsoa" tags="vblex.*"><select lemma="look" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="aina" tags="adv"><select lemma="always" tags="adv"/></match></rule>
@@ -16648,6 +16649,7 @@
 
   <rule weight="1.0"><match lemma="kaveri" tags="n.*"><select lemma="lad" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="katos" tags="n.*"><select lemma="canopy" tags="n.*"/></match></rule>
+  <rule weight="1.0"><match lemma="partiolainen" tags="n.*"><select lemma="scout" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="sopiva" tags="adj.*"><select lemma="appropriate" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="hei" tags="ij"><select lemma="hi" tags="ij"/></match></rule>
   <rule weight="1.0"><match lemma="nuori" tags="adj.*"><select lemma="young" tags="adj.*"/></match></rule>
