@@ -18,6 +18,7 @@
 
     <def-cat n="neg-verb"> <!-- ei vblex.neg.p3.sg -->
       <cat-item lemma="ei" tags="vaux.neg.*"/>
+      <cat-item lemma="ei" tags="vblex.neg.*"/>
     </def-cat>
 
     <def-cat n="conneg"> <!-- tietää vblex.actv.pres.conneg -->
