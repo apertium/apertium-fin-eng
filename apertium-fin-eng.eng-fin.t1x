@@ -210,9 +210,10 @@
   <!-- }}}
        {{{ attrs -->
   <section-def-attrs>
-    <def-attr n="a_nom">
+    <def-attr n="nominaltype">
       <attr-item tags="prn"/>
       <attr-item tags="n"/>
+      <attr-item tags="n.abbr"/>
       <attr-item tags="np.ant.m"/>
       <attr-item tags="np.ant.f"/>
       <attr-item tags="np.cog"/>
@@ -290,6 +291,7 @@
     <def-var n="tense"/>
     <def-var n="possession"/>
     <def-var n="conneg"/>
+    <def-var n="determiner"/>
   </section-def-vars>
   <!-- {{{ macros -->
   <section-def-macros>
@@ -449,9 +451,17 @@
             <test><or>
               <equal><clip pos="1" side="sl" part="lem"/><lit v="the"/></equal>
               <equal><clip pos="1" side="sl" part="lem"/><lit v="a"/></equal>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="The"/></equal>
+              <equal><clip pos="1" side="sl" part="lem"/><lit v="A"/></equal>
             </or></test>
-            <let><clip pos="1" side="tl" part="whole"/><lit v=""/></let>
+            <let><var n="determiner"/><lit v=""/></let>
           </when>
+          <otherwise>
+            <let><var n="determiner"/>
+              <concat><clip pos="1" side="tl" part="whole"/>
+              <lit-tag v="2"/></concat>
+            </let>
+          </otherwise>
         </choose>
       </def-macro>
       <def-macro n="numbermangle1" npar="1">
@@ -478,7 +488,7 @@
 
     <rule comment="on day month year -> day+ess month+par year ">
       <pattern>
-          <pattern-item n="on"/> 
+          <pattern-item n="on"/>
           <pattern-item n="day"/>
           <pattern-item n="month"/>
           <pattern-item n="year"/>
@@ -497,7 +507,7 @@
             <b/>
             <lu>
               <clip pos="3" side="tl" part="lem"/> <!-- do -->
-              <clip pos="3" side="tl" part="a_nom"/> <!-- vblex.actv -->
+              <clip pos="3" side="tl" part="nominaltype"/> <!-- vblex.actv -->
               <lit-tag v="sg.par"/>
             </lu>
             <b/>
@@ -512,7 +522,7 @@
     </rule>
     <rule comment="will be pcp -> ">
       <pattern>
-          <pattern-item n="will"/> 
+          <pattern-item n="will"/>
           <pattern-item n="be"/>
           <pattern-item n="fverb"/> <!-- play / eat / help ... -->
       </pattern>
@@ -653,7 +663,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="nominaltype"/>
               <clip pos="1" side="tl" part="a_num"/>
               <lit-tag v="nom"/>
             </lu>
@@ -975,7 +985,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/> <!-- cat -->
-              <clip pos="1" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="1" side="tl" part="nominaltype"/> <!-- n -->
               <clip pos="1" side="tl" part="a_num"/> <!-- sg -->
               <lit-tag v="ade"/>
             </lu>
@@ -1077,6 +1087,46 @@
       </action>
     </rule>
 
+    <rule comment="num a n -> spread par">
+      <pattern>
+          <pattern-item n="num"/> <!-- little -->
+          <pattern-item n="adj"/> <!-- little -->
+          <pattern-item n="noun"/> <!-- boy -->
+      </pattern>
+      <action>
+        <call-macro n="comparison">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="np" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="CD"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- 1 -->
+              <clip pos="1" side="tl" part="a_numtype"/> <!-- num.card -->
+              <lit-tag v="sg.nom"/> <!-- so far (was: 2) -->
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/> <!-- little -->
+              <clip pos="2" side="tl" part="a_adj"/> <!-- adj -->
+              <var n="comparison"/>
+              <clip pos="3" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="par"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/> <!-- boy -->
+              <clip pos="3" side="tl" part="nominaltype"/> <!-- n, np -->
+              <clip pos="3" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="par"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="det a n -> spread number">
       <pattern>
           <pattern-item n="det"/> <!-- a, the -->
@@ -1104,7 +1154,7 @@
               <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="3" side="tl" part="a_nom"/> <!-- n, np -->
+              <clip pos="3" side="tl" part="nominaltype"/> <!-- n, np -->
               <clip pos="3" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
             </lu>
@@ -1137,7 +1187,7 @@
               <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="2" side="tl" part="a_nom"/> <!-- n, np -->
+              <clip pos="2" side="tl" part="nominaltype"/> <!-- n, np -->
               <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
             </lu>
@@ -1146,6 +1196,34 @@
       </action>
     </rule>
 
+    <rule comment="num: add sg par">
+      <pattern>
+          <pattern-item n="num"/> <!-- 1, one-->
+          <pattern-item n="noun"/> <!-- sttuff -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="NP" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NP"/></tag>
+              <tag><lit-tag v="CD"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- 1 -->
+              <clip pos="1" side="tl" part="a_numtype"/> <!-- num.card -->
+              <lit-tag v="sg.nom"/> <!-- so far (was: 2) -->
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/> <!-- boy -->
+              <clip pos="2" side="tl" part="nominaltype"/> <!-- n -->
+              <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
+              <lit-tag v="par"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="SäÄntö: poss n">
       <pattern>
           <pattern-item n="poss"/> <!-- her -->
@@ -1170,7 +1248,7 @@
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="2" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="2" side="tl" part="nominaltype"/> <!-- n -->
               <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
               <var n="possession"/>
@@ -1195,15 +1273,12 @@
               <tag><lit-tag v="CD"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/> <!-- the -->
-              <clip pos="1" side="tl" part="a_det"/> <!-- det -->
-              <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
-              <lit-tag v="2"/>
+              <var n="determiner"/>
             </lu>
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="2" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="2" side="tl" part="nominaltype"/> <!-- n -->
               <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
             </lu>
@@ -1380,21 +1455,21 @@
           <pattern-item n="gen"/> <!-- 's -->
       </pattern>
       <action>
+        <call-macro n="artmangle1">
+            <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="np" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="NP.GEN"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/> <!-- the -->
-              <clip pos="1" side="tl" part="a_det"/> <!-- det -->
-              <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
-              <lit-tag v="gen"/>
+              <var n="determiner"/>
             </lu>
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="2" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="2" side="tl" part="nominaltype"/> <!-- n -->
               <clip pos="2" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="gen"/>
             </lu>
@@ -1415,7 +1490,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="1" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="1" side="tl" part="nominaltype"/> <!-- n -->
               <clip pos="1" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="gen"/>
             </lu>
@@ -1437,7 +1512,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="1" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="1" side="tl" part="nominaltype"/> <!-- n -->
               <clip pos="1" side="tl" part="a_num"/> <!-- sg, pl -->
               <lit-tag v="2"/>
             </lu>
@@ -1453,9 +1528,9 @@
           <pattern-item n="adj"/> <!-- little -->
       </pattern>
       <action>
-          <call-macro n="comparison">
-              <with-param pos="1"/>
-          </call-macro>
+        <call-macro n="comparison">
+            <with-param pos="1"/>
+        </call-macro>
         <out>
             <chunk name="ap" case="caseFirstWord">
                 <tags>
@@ -1490,7 +1565,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/> <!-- boy -->
-              <clip pos="1" side="tl" part="a_nom"/> <!-- n -->
+              <clip pos="1" side="tl" part="nominaltype"/> <!-- n -->
               <var n="number"/> <!-- sg, pl -->
               <lit-tag v="2"/>
             </lu>
@@ -1525,6 +1600,9 @@
         <pattern-item n="det"/>
       </pattern>
       <action>
+        <call-macro n="artmangle1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="unkdet" case="caseFirstWord">
             <tags>
@@ -1532,13 +1610,35 @@
             </tags>
             <!-- meh -->
             <lu>
-              <lit v=""/>
+              <var n="determiner"/>
             </lu>
           </chunk>
         </out>
       </action>
     </rule>
 
+    <rule comment="stray inf to infa, what cna you do">
+      <pattern>
+          <pattern-item n="infverb"/> <!-- do -->
+      </pattern>
+      <action>
+        <out>
+          <chunk name="verb" case="caseFirstWord">
+              <tags>
+              <tag><lit-tag v="V-INF"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/> <!-- tehdä -->
+              <clip pos="1" side="tl" part="a_verb"/> <!-- vblex.actv -->
+              <lit-tag v="actv"/>
+              <lit-tag v="infa"/> <!-- infa -->
+              <lit-tag v="sg"/> <!-- sg -->
+              <lit-tag v="lat"/> <!-- lat -->
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="Säätö: stray negation">
       <pattern>
         <pattern-item n="notadv"/>
