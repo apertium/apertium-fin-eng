@@ -5,4 +5,5 @@ if test $# != 2 ; then
 fi
 sed -e 's/$/§/g' < $2 | apertium -d . $1 | tr -s '#@*§' '    ' |\
     sed -e 's:/[^,.:? -]*::' |\
-    sed -e 's/<[^>]*>//g'
+    sed -e 's/<[^>]*>//g' |\
+    sed -e 's/( /(/g'
