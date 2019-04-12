@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
+<!--
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License.
@@ -86,7 +86,7 @@
         </when>
         <when>
           <test><equal><clip pos="1" part="lem"/><lit v="as"/></equal></test>
-          <let><var n="prepcase"/><lit-tag v="ess"/></let>
+          <let><var n="prepcase"/><lit-tag v="tra"/></let>
         </when>
         <when>
           <test><equal><clip pos="1" part="lem"/><lit v="for"/></equal></test>

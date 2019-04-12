@@ -1234,6 +1234,14 @@
             <let><clip pos="1" side="tl" part="a_nbr"/><lit v=""/></let>
             <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
           </when>
+          <when>
+            <test><and>
+                <equal><clip pos="1" side="sl" part="moodtense"/><lit-tag v="past"/></equal>
+                <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="sg"/></equal>
+            </and></test>
+            <let><clip pos="1" side="tl" part="a_nbr"/><lit v="sg"/></let>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v="p3"/></let>
+          </when>
         </choose>
         <out>
           <chunk name="cop" case="caseFirstWord">
@@ -1347,6 +1355,7 @@
             <test>
               <or>
                 <equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vaux.actv"/></equal>
+                <equal><clip pos="1" side="tl" part="a_verb"/><lit-tag v="vbmod.actv"/></equal>
                 <not><and>
                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></equal>
                    <equal><clip pos="1" side="tl" part="a_person"/><lit-tag v="p3"/></equal>
