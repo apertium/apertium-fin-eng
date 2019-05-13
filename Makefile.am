@@ -102,28 +102,28 @@ $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 ## Structural transfer rules
 
 $(PREFIX1).t1x.bin: $(BASENAME).$(PREFIX1).t1x
-	apertium-validate-transfer $(BASENAME).$(PREFIX1).t1x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t1x $@
+	apertium-validate-transfer $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX1).t2x.bin: $(BASENAME).$(PREFIX1).t2x
-	apertium-validate-interchunk $(BASENAME).$(PREFIX1).t2x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t2x $@
+	apertium-validate-interchunk $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX1).t3x.bin: $(BASENAME).$(PREFIX1).t3x
-	apertium-validate-postchunk $(BASENAME).$(PREFIX1).t3x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t3x $@
+	apertium-validate-postchunk $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX2).t1x.bin: $(BASENAME).$(PREFIX2).t1x
-	apertium-validate-transfer $(BASENAME).$(PREFIX2).t1x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t1x $@
+	apertium-validate-transfer $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX2).t2x.bin: $(BASENAME).$(PREFIX2).t2x
-	apertium-validate-interchunk $(BASENAME).$(PREFIX2).t2x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t2x $@
+	apertium-validate-interchunk $<
+	apertium-preprocess-transfer $< $@
 
 $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
-	apertium-validate-postchunk $(BASENAME).$(PREFIX2).t3x
-	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t3x $@
+	apertium-validate-postchunk $<
+	apertium-preprocess-transfer $< $@
 
 
 ## Postgeneration dictionaries
@@ -143,14 +143,15 @@ debug: .deps/$(LANG1).LR-debug.hfst .deps/$(LANG2).LR-debug.hfst
 ## Distribution
 
 EXTRA_DIST=$(PREFIX1).prob $(PREFIX2).prob \
+		   $(BASENAME).$(PREFIX1).dix \
 		   $(BASENAME).$(PREFIX1).t1x \
 		   $(BASENAME).$(PREFIX1).t2x \
 		   $(BASENAME).$(PREFIX1).t3x \
 		   $(BASENAME).$(PREFIX2).t1x \
 		   $(BASENAME).$(PREFIX2).t2x \
 		   $(BASENAME).$(PREFIX2).t3x \
-		   $(BASENAME).$(LANG2).dix \
-		   $(BASENAME).$(LANG2).acx \
+		   $(BASENAME).$(PREFIX1).lrx \
+		   $(BASENAME).$(PREFIX2).lrx \
 		   modes.xml
 
 ## Installation
@@ -170,12 +171,10 @@ pkgconfigdir = $(datarootdir)/pkgconfig
 pkgconfig_DATA = apertium-fin-eng.pc
 
 
-# All modes are created by the same goal,
-# listing several will just give problems with make -j2
-noinst_DATA=modes/$(PREFIX1).mode modes/$(PREFIX2).mode
+apertium_modesdir=$(prefix)/share/apertium/$(BASENAME)/
 
+apertium_modes_DATA=modes/$(PREFIX1).mode modes/$(PREFIX2).mode
 
-install-data-local: install-modes
 
 ## Testing
 
