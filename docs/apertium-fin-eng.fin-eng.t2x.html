@@ -25,1397 +25,1433 @@
         </script><link rel="stylesheet" href="/apertium-fin-eng/assets/css/style.css?v=0553eb4429e442aa5eeaa159606840983213fbbe"><script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script><script src="/apertium-fin-deu/assets/js/respond.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
    </head>
    <body>
-      <div class="container">
-         <div class="row">
-            <div id="header" class="col-sm-12">
-               <h4><a class="brand" href="/apertium-fin-eng/">apertium-fin-eng</a><small>Finnish–English
-                     rules for machine translation
-                     </small></h4>
-            </div>
-         </div>
-         <div class="row">
-            <div id="navigation" class="col-sm-2">
-               <nav>
-                  <ul class="nav nav-list">
-                     <li><a href="/apertium-fin-eng">
-                           Home
-                           </a></li>
-                     <li><a class="external" href="//github.com/apertium/apertium-fin-eng/#readme">
-                           README
-                           </a></li>
-                     <li><a href="/apertium-fin-engstatistics.html">
-                           Statistics
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.fin-eng.dix.html">Finnish–English
-                           dictionary
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.fin-eng.t1x.html">Finnish–English
-                           chunking rules (t1x)
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.fin-eng.t2x.html">Finnish–English
-                           re-ordering rules (t2x)
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.fin-eng.t3x.html">Finnish–English
-                           t3x rules
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.eng-fin.dix.html">English–Finnish
-                           dictionary
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.eng-fin.t1x.html">English–Finnish
-                           chunking rules (t1x)
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.eng-fin.t2x.html">English–Finnish
-                           re-ordering rules (t2x)
-                           </a></li>
-                     <li><a href="/apertium-fin-eng.eng-fin.t3x.html">English–Finnish
-                           t3x rules
-                           </a></li>
-                  </ul>
-               </nav>
-            </div>
-            <div id="content" class="col-sm-10">
-               <h1 id="rules">
-                  Apertium-fin-eng:
-                  Finnish–English
-                  machine translation rules
-                  
-               </h1>
-               <p style="font-variant: italic">
-                  This is a visualisation of an apertium transfer system
+      <div id="header">
+         <nav>
+            <li class="fork"><a href="https://github.com/apertium/apertium-fin-eng">
+                  View On GitHub
+                  </a></li>
+         </nav>
+      </div>
+      <div class="wrapper">
+         <section>
+            <div id="title">
+               <h1>apertium-fin-eng</h1>
+               <p>Finnish–English
+                  dictionary for rule-based machine translation
                   
                </p>
+               <hr><span class="credits left">
+                  Project maintained by 
+                  <a href="https://github.com/apertium">apertium</a></span><span class="credits right">
+                  Hosted on GitHub Pages – Theme by
+                  <a href="https://twitter.com/michigangraham">mattgraham</a></span></div>
+            <h1 id="rules">
+               Apertium-fin-eng:
+               Finnish–English
+               machine translation rules
                
+            </h1>
+            <p style="font-variant: italic">
+               This is a visualisation of some rules in apertium transfer.
                
-               <h2>Categories (parts of chunks)</h2>
-               <p>
-                  These are the categories Apertium is using in order to chunk, re-order
-                  and transfer lexemes.
+            </p>
+            
+            
+            <h2>Categories (parts of chunks)</h2>
+            <p>
+               These are the categories Apertium is using in order to chunk, re-order
+               and transfer lexemes.
+               
+            </p>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Category</th>
+                     <th>Items</th>
+                  </tr>
+               </thead>
+               <tbody>
                   
-               </p>
-               <table>
-                  <thead>
-                     <tr>
-                        <th>Category</th>
-                        <th>Items</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     
-                     <tr>
-                        <td>SN-GEN</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SN.GEN&gt;</code></li>
-                              
-                              <li><code>&lt;SN.GEN.*&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>SN-ADE</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SN.ade&gt;</code></li>
-                              
-                              <li><code>&lt;SN.*.ade&gt;</code></li>
-                              
-                              <li><code>&lt;SN.ade.*&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>SN-NOM-PAR</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SN.nom&gt;</code></li>
-                              
-                              <li><code>&lt;SN.nom.*&gt;</code></li>
-                              
-                              <li><code>&lt;SN.par&gt;</code></li>
-                              
-                              <li><code>&lt;SN.par.*&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>PERS</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SN.pers.*&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>SN</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SN&gt;</code></li>
-                              
-                              <li><code>&lt;SN.*&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>SV</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SV&gt;</code></li>
-                              
-                              <li><code>&lt;SV.*&gt;</code></li>
-                              
-                              <li><code>&lt;SV.*.*&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>V-COP</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SV.COP&gt;</code></li>
-                              
-                              <li><code>&lt;SV.COP.*&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>ADV</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;ADV&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>POST</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;POST&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>SENT</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;SENT&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                  </tbody>
-               </table>
-               
-               <h2>Attributes</h2>
-               <p>
-                  These are the morphological analysis value (tag) sets that can be
-                  processed in the transfer.
+                  <tr>
+                     <td>SN-GEN</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SN.GEN&gt;</code></li>
+                           
+                           <li><code>&lt;SN.GEN.*&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
                   
-               </p>
-               <table>
-                  <thead>
-                     <tr>
-                        <th>Attribute set name</th>
-                        <th>Tags</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     
-                     <tr>
-                        <td>a_nbr</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;sg&gt;</code></li>
-                              
-                              <li><code>&lt;pl&gt;</code></li>
-                              
-                              <li><code>&lt;sp&gt;</code></li>
-                              
-                              <li><code>&lt;ND&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>a_cas</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;nom&gt;</code></li>
-                              
-                              <li><code>&lt;acc&gt;</code></li>
-                              
-                              <li><code>&lt;ine&gt;</code></li>
-                              
-                              <li><code>&lt;ela&gt;</code></li>
-                              
-                              <li><code>&lt;ill&gt;</code></li>
-                              
-                              <li><code>&lt;ade&gt;</code></li>
-                              
-                              <li><code>&lt;abl&gt;</code></li>
-                              
-                              <li><code>&lt;all&gt;</code></li>
-                              
-                              <li><code>&lt;abe&gt;</code></li>
-                              
-                              <li><code>&lt;ins&gt;</code></li>
-                              
-                              <li><code>&lt;com&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>a_poss</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;px1sg&gt;</code></li>
-                              
-                              <li><code>&lt;px2sg&gt;</code></li>
-                              
-                              <li><code>&lt;px3sg&gt;</code></li>
-                              
-                              <li><code>&lt;px1pl&gt;</code></li>
-                              
-                              <li><code>&lt;px2pl&gt;</code></li>
-                              
-                              <li><code>&lt;px3pl&gt;</code></li>
-                              
-                              <li><code>&lt;px3ps&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>a_prs</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;p1.sg&gt;</code></li>
-                              
-                              <li><code>&lt;p2.sg&gt;</code></li>
-                              
-                              <li><code>&lt;p3.sg&gt;</code></li>
-                              
-                              <li><code>&lt;p1.pl&gt;</code></li>
-                              
-                              <li><code>&lt;p2.pl&gt;</code></li>
-                              
-                              <li><code>&lt;p3.pl&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                     <tr>
-                        <td>a_mood</td>
-                        <td>
-                           <ul>
-                              
-                              <li><code>&lt;cond&gt;</code></li>
-                              
-                              <li><code>&lt;pot&gt;</code></li>
-                              
-                              <li><code>&lt;imp&gt;</code></li>
-                              
-                           </ul>
-                        </td>
-                     </tr>
-                     
-                  </tbody>
-               </table>
+                  <tr>
+                     <td>SN-ADE</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SN.ade&gt;</code></li>
+                           
+                           <li><code>&lt;SN.*.ade&gt;</code></li>
+                           
+                           <li><code>&lt;SN.ade.*&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>SN-NOM-PAR</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SN.nom&gt;</code></li>
+                           
+                           <li><code>&lt;SN.nom.*&gt;</code></li>
+                           
+                           <li><code>&lt;SN.par&gt;</code></li>
+                           
+                           <li><code>&lt;SN.par.*&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>PERS</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SN.pers.*&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>SN</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SN&gt;</code></li>
+                           
+                           <li><code>&lt;SN.*&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>SV</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SV&gt;</code></li>
+                           
+                           <li><code>&lt;SV.*&gt;</code></li>
+                           
+                           <li><code>&lt;SV.*.*&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>V-COP</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SV.COP&gt;</code></li>
+                           
+                           <li><code>&lt;SV.COP.*&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>ADV</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;ADV&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>POST</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;POST&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>SENT</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;SENT&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+               </tbody>
+            </table>
+            
+            <h2>Attributes</h2>
+            <p>
+               These are the morphological analysis value (tag) sets that can be
+               processed in the transfer.
                
-               
-               
-               
-               
-               
-               
-               
-               
-               <h2>Macros</h2>
-               <p>Macros are helper functions in apertium transfer files.</p>
-               
-               <h3>insert-prep1</h3>
-               <div>Parametres: 1</div><code>
-                  <ol>
-                     
-                     <li>
-                        let 
-                        $<em>PREP</em> ≔ 
-                        ""
-                        
-                     </li>
-                     
-                     <li>
-                        <ol>
+            </p>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Attribute set name</th>
+                     <th>Tags</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  
+                  <tr>
+                     <td>a_nbr</td>
+                     <td>
+                        <ul>
                            
-                           <li>if 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;ine&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^in"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;sg&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;ela&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^from"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;pl&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;ill&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^to"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;sp&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;ade&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^in"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;ND&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;abl&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^from"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>a_cas</td>
+                     <td>
+                        <ul>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;all&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^to"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;nom&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;abe&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^without"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;acc&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;ins&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^with"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;ine&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_cas']</em> ≟ &lt;com&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PREP</em> ≔ 
-                                    "^prep"
-                                    &lt;PREP&gt;
-                                    "{^alongside"
-                                    &lt;pr&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;ela&gt;</code></li>
                            
-                        </ol>
-                     </li>
-                     
-                  </ol></code>
-               
-               <h3>insert-poss1</h3>
-               <div>Parametres: 1</div><code>
-                  <ol>
-                     
-                     <li>
-                        let 
-                        $<em>POSS</em> ≔ 
-                        ""
-                        
-                     </li>
-                     
-                     <li>
-                        <ol>
+                           <li><code>&lt;ill&gt;</code></li>
                            
-                           <li>if 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_poss']</em> ≟ &lt;px1sg&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>POSS</em> ≔ 
-                                    "^poss"
-                                    &lt;POSS&gt;
-                                    "{^my"
-                                    &lt;det.pos.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;ade&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_poss']</em> ≟ &lt;px2sg&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>POSS</em> ≔ 
-                                    "^poss"
-                                    &lt;POSS&gt;
-                                    "{^your"
-                                    &lt;det.pos.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;abl&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_poss']</em> ≟ &lt;px3sg&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>POSS</em> ≔ 
-                                    "^poss"
-                                    &lt;POSS&gt;
-                                    "{^their"
-                                    &lt;det.pos.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;all&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_poss']</em> ≟ &lt;px1pl&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>POSS</em> ≔ 
-                                    "^poss"
-                                    &lt;POSS&gt;
-                                    "{^our"
-                                    &lt;det.pos.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;abe&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_poss']</em> ≟ &lt;px2pl&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>POSS</em> ≔ 
-                                    "^poss"
-                                    &lt;POSS&gt;
-                                    "{^your"
-                                    &lt;det.pos.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;ins&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_poss']</em> ≟ &lt;px3pl&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>POSS</em> ≔ 
-                                    "^poss"
-                                    &lt;POSS&gt;
-                                    "{^their"
-                                    &lt;det.pos.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;com&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_poss']</em> ≟ &lt;px3sp&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>POSS</em> ≔ 
-                                    "^poss"
-                                    &lt;POSS&gt;
-                                    "{^they"
-                                    &lt;det.pos.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>a_poss</td>
+                     <td>
+                        <ul>
                            
-                        </ol>
-                     </li>
-                     
-                  </ol></code>
-               
-               <h3>insert-prs1</h3>
-               <div>Parametres: 1</div><code>
-                  <ol>
-                     
-                     <li>
-                        let 
-                        $<em>PRS</em> ≔ 
-                        ""
-                        
-                     </li>
-                     
-                     <li>
-                        <ol>
+                           <li><code>&lt;px1sg&gt;</code></li>
                            
-                           <li>if 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_prs']</em> ≟ &lt;p1.sg&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PRS</em> ≔ 
-                                    "^prs"
-                                    &lt;PRS&gt;
-                                    "{^prpers"
-                                    &lt;prn.subj.p1.mf.sg&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;px2sg&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_prs']</em> ≟ &lt;p2.sg&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PRS</em> ≔ 
-                                    "^prs"
-                                    &lt;PRS&gt;
-                                    "{^prpers"
-                                    &lt;prn.subj.p2.mf.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;px3sg&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_prs']</em> ≟ &lt;p1.pl&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PRS</em> ≔ 
-                                    "^prs"
-                                    &lt;PRS&gt;
-                                    "{^prpers"
-                                    &lt;prn.subj.p1.mf.pl&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;px1pl&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_prs']</em> ≟ &lt;p2.pl&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PRS</em> ≔ 
-                                    "^prs"
-                                    &lt;PRS&gt;
-                                    "{^prpers"
-                                    &lt;prn.subj.p2.mf.sp&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;px2pl&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_prs']</em> ≟ &lt;p3.pl&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>PRS</em> ≔ 
-                                    "^prs"
-                                    &lt;PRS&gt;
-                                    "{^prpers"
-                                    &lt;prn.subj.p3.mf.pl&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;px3pl&gt;</code></li>
                            
-                        </ol>
-                     </li>
-                     
-                  </ol></code>
-               
-               <h3>insert-aux1</h3>
-               <div>Parametres: 1</div><code>
-                  <ol>
-                     
-                     <li>
-                        let 
-                        $<em>AUX</em> ≔ 
-                        ""
-                        
-                     </li>
-                     
-                     <li>
-                        <ol>
+                           <li><code>&lt;px3ps&gt;</code></li>
                            
-                           <li>if 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_mood']</em> ≟ &lt;cond&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>AUX</em> ≔ 
-                                    "^mood"
-                                    &lt;MOOD&gt;
-                                    "{^would"
-                                    &lt;vaux.pres&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>a_prs</td>
+                     <td>
+                        <ul>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_mood']</em> ≟ &lt;imp&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>AUX</em> ≔ 
-                                    "^mood"
-                                    &lt;MOOD&gt;
-                                    "{^should"
-                                    &lt;vaux.pres&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;p1.sg&gt;</code></li>
                            
-                           <li>elseif 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['a_mood']</em> ≟ &lt;pot&gt;
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol>
-                                 <li>
-                                    let 
-                                    $<em>AUX</em> ≔ 
-                                    "^mood"
-                                    &lt;MOOD&gt;
-                                    "{^may"
-                                    &lt;vaux.pres&gt;
-                                    "$}$ "
-                                    
-                                 </li>
-                              </ol>
-                           </li>
+                           <li><code>&lt;p2.sg&gt;</code></li>
                            
-                        </ol>
-                     </li>
-                     
-                  </ol></code>
-               
-               
-               <h2>Rules</h2>
-               <p>The actual rules concerning stuff.</p>
-               
-               
-               <h3>REGLA: V-COP ADV SN-ADE SN-NOM-PAR</h3>
-               
-               <h4>Matching pattern:</h4>
+                           <li><code>&lt;p3.sg&gt;</code></li>
+                           
+                           <li><code>&lt;p1.pl&gt;</code></li>
+                           
+                           <li><code>&lt;p2.pl&gt;</code></li>
+                           
+                           <li><code>&lt;p3.pl&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                     <td>a_mood</td>
+                     <td>
+                        <ul>
+                           
+                           <li><code>&lt;cond&gt;</code></li>
+                           
+                           <li><code>&lt;pot&gt;</code></li>
+                           
+                           <li><code>&lt;imp&gt;</code></li>
+                           
+                        </ul>
+                     </td>
+                  </tr>
+                  
+               </tbody>
+            </table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <h2>Macros</h2>
+            <p>Macros are helper functions in apertium transfer files.</p>
+            
+            <h3>insert-prep1</h3>
+            <div>Parametres: 1</div><code>
                <ol>
                   
-                  <li>V-COP</li>
-                  
-                  <li>ADV</li>
-                  
-                  <li>SN-ADE</li>
-                  
-                  <li>SN-NOM-PAR</li>
-                  
-               </ol>
-               
-               <h4>Action:</h4><code>
-                  <ol>
+                  <li>
+                     let 
+                     $<em>PREP</em> ≔ 
+                     ""
                      
-                     <li>
-                        <ol>
-                           <li>if 
-                              <li>
-                                 <ol>
-                                    <li><em>[1]['lem']</em> ≟ 
-                                       "neg-cop"
-                                       
-                                    </li>
-                                 </ol>
-                              </li> then:
+                  </li>
+                  
+                  <li>
+                     <ol>
+                        
+                        <li>if 
+                           <li>
                               <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;ine&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^in"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;ela&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^from"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;ill&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^to"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;ade&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^in"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;abl&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^from"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;all&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^to"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;abe&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^without"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;ins&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^with"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_cas']</em> ≟ &lt;com&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PREP</em> ≔ 
+                                 "^prep"
+                                 &lt;PREP&gt;
+                                 "{^alongside"
+                                 &lt;pr&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                     </ol>
+                  </li>
+                  
+               </ol></code>
+            
+            <h3>insert-det1</h3>
+            <div>Parametres: 1</div><code>
+               <ol>
+                  
+                  <li>
+                     <ol>
+                        
+                        <li>if 
+                           <li>
+                              <ol>
+                                 
                                  <li>
-                                    let 
-                                    $<em>NOT</em> ≔             
-                                    " ^not"
+                                    $<em>POSS</em> ≟ 
+                                    ""
                                     
-                                    &lt;ADV.NEG&gt;
+                                 </li>
+                                 
+                                 <li>
+                                    $<em>PREP</em> ≟ 
+                                    ""
                                     
-                                    "{^not"
-                                    
-                                    &lt;adv&gt;
-                                    
-                                    "$}$"
-                                    
+                                 </li>
+                                 
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>DET</em> ≔ 
+                                 
+                                 "^det"
+                                 &lt;DET&gt;
+                                 "{^the"
+                                 &lt;det.def.sp&gt;
+                                 "$}$ "
+                                 
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>else:
+                           <ol>
+                              
+                              <li>
+                                 let 
+                                 $<em>DET</em> ≔ 
+                                 ""
+                                 
+                              </li>
+                              
+                           </ol>
+                        </li>
+                        
+                     </ol>
+                  </li>
+                  
+               </ol></code>
+            
+            <h3>insert-poss1</h3>
+            <div>Parametres: 1</div><code>
+               <ol>
+                  
+                  <li>
+                     let 
+                     $<em>POSS</em> ≔ 
+                     ""
+                     
+                  </li>
+                  
+                  <li>
+                     <ol>
+                        
+                        <li>if 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_poss']</em> ≟ &lt;px1sg&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>POSS</em> ≔ 
+                                 "^poss"
+                                 &lt;POSS&gt;
+                                 "{^my"
+                                 &lt;det.pos.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_poss']</em> ≟ &lt;px2sg&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>POSS</em> ≔ 
+                                 "^poss"
+                                 &lt;POSS&gt;
+                                 "{^your"
+                                 &lt;det.pos.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_poss']</em> ≟ &lt;px3sg&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>POSS</em> ≔ 
+                                 "^poss"
+                                 &lt;POSS&gt;
+                                 "{^their"
+                                 &lt;det.pos.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_poss']</em> ≟ &lt;px1pl&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>POSS</em> ≔ 
+                                 "^poss"
+                                 &lt;POSS&gt;
+                                 "{^our"
+                                 &lt;det.pos.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_poss']</em> ≟ &lt;px2pl&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>POSS</em> ≔ 
+                                 "^poss"
+                                 &lt;POSS&gt;
+                                 "{^your"
+                                 &lt;det.pos.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_poss']</em> ≟ &lt;px3pl&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>POSS</em> ≔ 
+                                 "^poss"
+                                 &lt;POSS&gt;
+                                 "{^their"
+                                 &lt;det.pos.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_poss']</em> ≟ &lt;px3sp&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>POSS</em> ≔ 
+                                 "^poss"
+                                 &lt;POSS&gt;
+                                 "{^they"
+                                 &lt;det.pos.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                     </ol>
+                  </li>
+                  
+               </ol></code>
+            
+            <h3>insert-prs1</h3>
+            <div>Parametres: 1</div><code>
+               <ol>
+                  
+                  <li>
+                     let 
+                     $<em>PRS</em> ≔ 
+                     ""
+                     
+                  </li>
+                  
+                  <li>
+                     <ol>
+                        
+                        <li>if 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_prs']</em> ≟ &lt;p1.sg&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PRS</em> ≔ 
+                                 "^prs"
+                                 &lt;PRS&gt;
+                                 "{^prpers"
+                                 &lt;prn.subj.p1.mf.sg&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_prs']</em> ≟ &lt;p2.sg&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PRS</em> ≔ 
+                                 "^prs"
+                                 &lt;PRS&gt;
+                                 "{^prpers"
+                                 &lt;prn.subj.p2.mf.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_prs']</em> ≟ &lt;p1.pl&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PRS</em> ≔ 
+                                 "^prs"
+                                 &lt;PRS&gt;
+                                 "{^prpers"
+                                 &lt;prn.subj.p1.mf.pl&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_prs']</em> ≟ &lt;p2.pl&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PRS</em> ≔ 
+                                 "^prs"
+                                 &lt;PRS&gt;
+                                 "{^prpers"
+                                 &lt;prn.subj.p2.mf.sp&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_prs']</em> ≟ &lt;p3.pl&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>PRS</em> ≔ 
+                                 "^prs"
+                                 &lt;PRS&gt;
+                                 "{^prpers"
+                                 &lt;prn.subj.p3.mf.pl&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                     </ol>
+                  </li>
+                  
+               </ol></code>
+            
+            <h3>insert-aux1</h3>
+            <div>Parametres: 1</div><code>
+               <ol>
+                  
+                  <li>
+                     let 
+                     $<em>AUX</em> ≔ 
+                     ""
+                     
+                  </li>
+                  
+                  <li>
+                     <ol>
+                        
+                        <li>if 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_mood']</em> ≟ &lt;cond&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>AUX</em> ≔ 
+                                 "^mood"
+                                 &lt;MOOD&gt;
+                                 "{^would"
+                                 &lt;vaux.pres&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_mood']</em> ≟ &lt;imp&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>AUX</em> ≔ 
+                                 "^mood"
+                                 &lt;MOOD&gt;
+                                 "{^should"
+                                 &lt;vaux.pres&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                        <li>elseif 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['a_mood']</em> ≟ &lt;pot&gt;
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>AUX</em> ≔ 
+                                 "^mood"
+                                 &lt;MOOD&gt;
+                                 "{^may"
+                                 &lt;vaux.pres&gt;
+                                 "$}$ "
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                        
+                     </ol>
+                  </li>
+                  
+               </ol></code>
+            
+            
+            <h2>Rules</h2>
+            <p>The actual rules concerning stuff.</p>
+            
+            
+            <h3>REGLA: V-COP ADV SN-ADE SN-NOM-PAR</h3>
+            
+            <h4>Matching pattern:</h4>
+            <ol>
+               
+               <li>V-COP</li>
+               
+               <li>ADV</li>
+               
+               <li>SN-ADE</li>
+               
+               <li>SN-NOM-PAR</li>
+               
+            </ol>
+            
+            <h4>Action:</h4><code>
+               <ol>
+                  
+                  <li>
+                     <ol>
+                        <li>if 
+                           <li>
+                              <ol>
+                                 <li><em>[1]['lem']</em> ≟ 
+                                    "neg-cop"
                                     
                                  </li>
                               </ol>
-                           </li>
-                        </ol>
-                     </li>
-                     
-                     <li>Output: 
-                        <ol>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           $<em>NOT</em>
-                           
-                           <li><sub>b1</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           <li><sub>b2</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           <li><sub>b3</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                        </ol>
-                     </li>
-                     
-                     <li>
-                        let 
-                        $<em>NOT</em> ≔ 
-                        ""
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>NOT</em> ≔             
+                                 " ^not"
+                                 
+                                 &lt;ADV.NEG&gt;
+                                 
+                                 "{^not"
+                                 
+                                 &lt;adv&gt;
+                                 
+                                 "$}$"
+                                 
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </li>
+                  
+                  <li>Output: 
+                     <ol>
                         
-                     </li>
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        $<em>NOT</em>
+                        
+                        <li><sub>b1</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        <li><sub>b2</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        <li><sub>b3</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                     </ol>
+                  </li>
+                  
+                  <li>
+                     let 
+                     $<em>NOT</em> ≔ 
+                     ""
                      
-                  </ol></code>
+                  </li>
+                  
+               </ol></code>
+            
+            
+            
+            
+            <h3>REGLA: V-COP SN-ADE SN-NOM-PAR</h3>
+            
+            <h4>Matching pattern:</h4>
+            <ol>
                
+               <li>V-COP</li>
                
+               <li>SN-ADE</li>
                
+               <li>SN-NOM-PAR</li>
                
-               <h3>REGLA: V-COP SN-ADE SN-NOM-PAR</h3>
-               
-               <h4>Matching pattern:</h4>
+            </ol>
+            
+            <h4>Action:</h4><code>
                <ol>
                   
-                  <li>V-COP</li>
-                  
-                  <li>SN-ADE</li>
-                  
-                  <li>SN-NOM-PAR</li>
-                  
-               </ol>
-               
-               <h4>Action:</h4><code>
-                  <ol>
-                     
-                     <li>
-                        <ol>
-                           <li>if 
-                              <li>
-                                 <ol>
-                                    <li><em>[2]['lem']</em> ≟ 
-                                       "neg-cop"
-                                       
-                                    </li>
-                                 </ol>
-                              </li> then:
+                  <li>
+                     <ol>
+                        <li>if 
+                           <li>
                               <ol>
-                                 <li>
-                                    let 
-                                    $<em>NOT</em> ≔             
-                                    " ^not"
-                                    
-                                    &lt;ADV.NEG&gt;
-                                    
-                                    "{^not"
-                                    
-                                    &lt;adv&gt;
-                                    
-                                    "$}$"
-                                    
+                                 <li><em>[2]['lem']</em> ≟ 
+                                    "neg-cop"
                                     
                                  </li>
                               </ol>
-                           </li>
-                        </ol>
-                     </li>
-                     
-                     
-                     <li>Output: 
-                        <ol>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           $<em>NOT</em>
-                           
-                           <li><sub>b1</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           <li><sub>b2</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                        </ol>
-                     </li>
-                     
-                     <li>
-                        let 
-                        $<em>NOT</em> ≔ 
-                        ""
+                           </li> then:
+                           <ol>
+                              <li>
+                                 let 
+                                 $<em>NOT</em> ≔             
+                                 " ^not"
+                                 
+                                 &lt;ADV.NEG&gt;
+                                 
+                                 "{^not"
+                                 
+                                 &lt;adv&gt;
+                                 
+                                 "$}$"
+                                 
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </li>
+                  
+                  
+                  <li>Output: 
+                     <ol>
                         
-                     </li>
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        $<em>NOT</em>
+                        
+                        <li><sub>b1</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        <li><sub>b2</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                     </ol>
+                  </li>
+                  
+                  <li>
+                     let 
+                     $<em>NOT</em> ≔ 
+                     ""
                      
-                  </ol></code>
+                  </li>
+                  
+               </ol></code>
+            
+            
+            
+            
+            <h3>REGLA: SN-ADE V-COP SN-NOM-PAR</h3>
+            
+            <h4>Matching pattern:</h4>
+            <ol>
                
+               <li>SN-ADE</li>
                
+               <li>V-COP</li>
                
+               <li>SN-NOM-PAR</li>
                
-               <h3>REGLA: SN-ADE V-COP SN-NOM-PAR</h3>
-               
-               <h4>Matching pattern:</h4>
+            </ol>
+            
+            <h4>Action:</h4><code>
                <ol>
                   
-                  <li>SN-ADE</li>
-                  
-                  <li>V-COP</li>
-                  
-                  <li>SN-NOM-PAR</li>
-                  
-               </ol>
-               
-               <h4>Action:</h4><code>
-                  <ol>
-                     
-                     <li>
-                        <ol>
-                           <li>if 
-                              <li>
-                                 <ol>
-                                    <li><em>[2]['lem']</em> ≟ 
-                                       "neg-cop"
-                                       
-                                    </li>
-                                 </ol>
-                              </li> then:
+                  <li>
+                     <ol>
+                        <li>if 
+                           <li>
                               <ol>
-                                 <li>
-                                    let 
-                                    $<em>NOT</em> ≔             
-                                    " ^not"
-                                    
-                                    &lt;ADV.NEG&gt;
-                                    
-                                    "{^not"
-                                    
-                                    &lt;adv&gt;
-                                    
-                                    "$}$"
-                                    
+                                 <li><em>[2]['lem']</em> ≟ 
+                                    "neg-cop"
                                     
                                  </li>
                               </ol>
-                           </li>
-                        </ol>
-                     </li>
-                     
-                     
-                     <li>Output: 
-                        <ol>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           <li><sub>b1</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           $<em>NOT</em>
-                           
-                           <li><sub>b2</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                        </ol>
-                     </li>
-                     
-                     <li>
-                        let 
-                        $<em>NOT</em> ≔ 
-                        ""
-                        
-                     </li>
-                     
-                  </ol></code>
-               
-               
-               
-               
-               <h3>REGLA: SN-GEN POST</h3>
-               
-               <h4>Matching pattern:</h4>
-               <ol>
-                  
-                  <li>SN-GEN</li>
-                  
-                  <li>POST</li>
-                  
-               </ol>
-               
-               <h4>Action:</h4><code>
-                  <ol>
-                     
-                     <li>Output: 
-                        <ol>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           <li><sub>b1</sub><br></li>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                        </ol>
-                     </li>
-                     
-                  </ol></code>
-               
-               
-               
-               
-               <h3>REGLA: SN</h3>
-               
-               <h4>Matching pattern:</h4>
-               <ol>
-                  
-                  <li>SN</li>
-                  
-               </ol>
-               
-               <h4>Action:</h4><code>
-                  <ol>
-                     
-                     <li>insert-prep1(
-                        $1
-                        )
-                     </li> 
-                     
-                     <li>insert-poss1(
-                        $1
-                        )
-                     </li> 
-                     
-                     <li>Output: 
-                        <ol>
-                           
-                           $<em>PREP</em>
-                           
-                           $<em>POSS</em>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                        </ol>
-                     </li>
-                     
-                  </ol></code>
-               
-               
-               
-               <h3>REGLA: PERS SV</h3>
-               
-               <h4>Matching pattern:</h4>
-               <ol>
-                  
-                  <li>PERS</li>
-                  
-                  <li>SV</li>
-                  
-               </ol>
-               
-               <h4>Action:</h4><code>
-                  <ol>
-                     
-                     <li>insert-aux1(
-                        $1
-                        )
-                     </li> 
-                     
-                     <li>
-                        <ol>
-                           
-                           <li>if 
+                           </li> then:
+                           <ol>
                               <li>
-                                 <ol>
-                                    
-                                    <li><em>[1]['a_prs']</em><em>[2]['a_prs']</em> ≟ 
-                                    </li>
-                                 </ol>
-                              </li> then:
-                              <ol></ol>
-                           </li>
-                           
-                        </ol>
-                     </li>
-                     
-                     <li>Output: 
-                        <ol>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                           <li><sub>b1</sub><br></li>
-                           
-                           $<em>PRS</em>
-                           
-                           $<em>AUX</em>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                        </ol>
-                     </li>
-                     
-                     <li>
-                        let 
-                        $<em>PRS</em> ≔ 
-                        ""
+                                 let 
+                                 $<em>NOT</em> ≔             
+                                 " ^not"
+                                 
+                                 &lt;ADV.NEG&gt;
+                                 
+                                 "{^not"
+                                 
+                                 &lt;adv&gt;
+                                 
+                                 "$}$"
+                                 
+                                 
+                              </li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </li>
+                  
+                  
+                  <li>Output: 
+                     <ol>
                         
-                     </li>
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        <li><sub>b1</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        $<em>NOT</em>
+                        
+                        <li><sub>b2</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                     </ol>
+                  </li>
+                  
+                  <li>
+                     let 
+                     $<em>NOT</em> ≔ 
+                     ""
                      
-                  </ol></code>
+                  </li>
+                  
+               </ol></code>
+            
+            
+            
+            
+            <h3>REGLA: SN-GEN POST</h3>
+            
+            <h4>Matching pattern:</h4>
+            <ol>
                
+               <li>SN-GEN</li>
                
+               <li>POST</li>
                
-               
-               <h3>REGLA: SV</h3>
-               
-               <h4>Matching pattern:</h4>
+            </ol>
+            
+            <h4>Action:</h4><code>
                <ol>
                   
-                  <li>SV</li>
-                  
-               </ol>
-               
-               <h4>Action:</h4><code>
-                  <ol>
-                     
-                     <li>insert-prs1(
-                        $1
-                        )
-                     </li> 
-                     
-                     <li>insert-aux1(
-                        $1
-                        )
-                     </li> 
-                     
-                     <li>Output: 
-                        <ol>
-                           
-                           $<em>PRS</em>
-                           
-                           $<em>AUX</em>
-                           
-                           <li>
-                              [
-                              <ol></ol>]<sub></sub></li>
-                           
-                        </ol>
-                     </li>
-                     
-                     <li>
-                        let 
-                        $<em>PRS</em> ≔ 
-                        ""
+                  <li>Output: 
+                     <ol>
                         
-                     </li>
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        <li><sub>b1</sub><br></li>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                     </ol>
+                  </li>
+                  
+               </ol></code>
+            
+            
+            
+            
+            <h3>REGLA: SN</h3>
+            
+            <h4>Matching pattern:</h4>
+            <ol>
+               
+               <li>SN</li>
+               
+            </ol>
+            
+            <h4>Action:</h4><code>
+               <ol>
+                  
+                  <li>insert-prep1(
+                     $1
+                     )
+                  </li>
+                  
+                  <li>insert-poss1(
+                     $1
+                     )
+                  </li>
+                  
+                  <li>insert-det1(
+                     $1
+                     )
+                  </li>
+                  
+                  <li>Output: 
+                     <ol>
+                        
+                        $<em>PREP</em>
+                        
+                        $<em>POSS</em>
+                        
+                        $<em>DET</em>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                     </ol>
+                  </li>
+                  
+               </ol></code>
+            
+            
+            
+            <h3>REGLA: PERS SV</h3>
+            
+            <h4>Matching pattern:</h4>
+            <ol>
+               
+               <li>PERS</li>
+               
+               <li>SV</li>
+               
+            </ol>
+            
+            <h4>Action:</h4><code>
+               <ol>
+                  
+                  <li>insert-aux1(
+                     $1
+                     )
+                  </li>
+                  
+                  <li>
+                     <ol>
+                        
+                        <li>if 
+                           <li>
+                              <ol>
+                                 
+                                 <li><em>[1]['a_prs']</em><em>[2]['a_prs']</em> ≟ 
+                                 </li>
+                              </ol>
+                           </li> then:
+                           <ol></ol>
+                        </li>
+                        
+                     </ol>
+                  </li>
+                  
+                  <li>Output: 
+                     <ol>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                        <li><sub>b1</sub><br></li>
+                        
+                        $<em>PRS</em>
+                        
+                        $<em>AUX</em>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                     </ol>
+                  </li>
+                  
+                  <li>
+                     let 
+                     $<em>PRS</em> ≔ 
+                     ""
                      
-                  </ol></code>
+                  </li>
+                  
+               </ol></code>
+            
+            
+            
+            
+            <h3>REGLA: SV</h3>
+            
+            <h4>Matching pattern:</h4>
+            <ol>
                
+               <li>SV</li>
                
-               
-            </div>
-         </div>
-         <div class="row">
-            <div id="footer" class="col-sm-12">
-               Documentation for <a href="//github.com/apertium/apertium-fin-eng/">
-                  apertium-fin-eng
-                  Generated with <a href="https://github.com/flammie/apevis-xslt">Flammie’s
-                     apevis-xslt</a>.
-                  </a></div>
+            </ol>
+            
+            <h4>Action:</h4><code>
+               <ol>
+                  
+                  <li>insert-prs1(
+                     $1
+                     )
+                  </li>
+                  
+                  <li>insert-aux1(
+                     $1
+                     )
+                  </li>
+                  
+                  <li>Output: 
+                     <ol>
+                        
+                        $<em>PRS</em>
+                        
+                        $<em>AUX</em>
+                        
+                        <li>
+                           [
+                           <ol></ol>]<sub></sub></li>
+                        
+                     </ol>
+                  </li>
+                  
+                  <li>
+                     let 
+                     $<em>PRS</em> ≔ 
+                     ""
+                     
+                  </li>
+                  
+               </ol></code>
+            
+            
+            
+         </section>
+         <div id="footer">
+            Documentation for <a href="//github.com/apertium/apertium-fin-eng/">
+               apertium-fin-eng</a>
+            Generated with <a href="https://github.com/flammie/apevis-xslt">Flammie’s
+               apevis-xslt</a>.
+            
          </div>
       </div>
    </body>
