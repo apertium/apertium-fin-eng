@@ -1,14 +1,11 @@
-dist: trusty
+dist: bionic
 before_install:
     - wget http://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
-    - sudo apt-get install hfst apertium lttoolbox apertium-dev apertium-eng lttoolbox-dev libhfst-dev cg3 apertium-lex-tools
-    - wget https://github.com/flammie/apertium-fin/archive/master.zip
-    - unzip master.zip
-    - pushd apertium-fin-master && ./autogen.sh && ./configure && make && sudo make install && popd
+    - sudo apt-get install hfst apertium-dev apertium-eng apertium-fin libhfst-dev cg3-dev apertium-lex-tools
 script:
-    - ./autogen.sh
+    - autoreconf -fvi
     - ./configure
-    - make
+    - make -j2
     - make check
 notifications:
     irc:

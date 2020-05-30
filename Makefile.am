@@ -1,8 +1,6 @@
-## Process this file with automake to produce Makefile.in
-
 ## This program is free software: you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
-## the Free Software Foundation, either version 3 of the License.
+## the Free Software Foundation, version 3 of the License.
 
 ## This program is distributed in the hope that it will be useful,
 ## but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -12,7 +10,6 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-VERSION=$(PACKAGE_VERSION)
 LANG1=fin
 LANG2=eng
 PREFIX1=$(LANG1)-$(LANG2)
@@ -30,6 +27,7 @@ TARGETS_TRANSFER=$(PREFIX2).t1x.bin $(PREFIX1).t1x.bin  \
 				 $(PREFIX1).autolex.bin $(PREFIX2).autolex.bin
 TARGETS_COMMON=$(TARGETS_MONOLING) $(TARGETS_TRANSFER)
 
+@ap_include@
 
 # currently we copy stuff from another dir
 $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
@@ -57,20 +55,6 @@ $(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
 	cat $< | grep -v 'Dir/RL' | grep -v 'Use/Circ' > .deps/$(LANG2).LR-debug.lexc
 	hfst-lexc --format foma .deps/$(LANG2).LR-debug.lexc -o .deps/$(LANG2).LR-debug.lexc.hfst
 	hfst-compose-intersect -1 .deps/$(LANG2).LR-debug.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-# This include defines goals for install-modes, .deps/.d and .mode files:
-
-modes/.d: modes.xml
-	if ! test -d modes ; then \
-		$(MKDIR_P) modes/ ;\
-	fi
-	apertium-validate-modes $(srcdir)/modes.xml
-	apertium-gen-modes $(srcdir)/modes.xml
-	mv -v *.mode modes/
-	touch $@
-
-modes/fin-eng.mode: modes/.d
-modes/eng-fin.mode: modes/.d
 
 ## Bilingual dictionaries
 
@@ -170,11 +154,7 @@ apertium_fin_eng_DATA=$(TARGETS_COMMON) \
 pkgconfigdir = $(datarootdir)/pkgconfig
 pkgconfig_DATA = apertium-fin-eng.pc
 
-
-apertium_modesdir=$(prefix)/share/apertium/$(BASENAME)/
-
-apertium_modes_DATA=modes/$(PREFIX1).mode modes/$(PREFIX2).mode
-
+install-data-local: install-modes
 
 ## Testing
 

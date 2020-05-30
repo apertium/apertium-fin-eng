@@ -1,8 +1,6 @@
-## Process this file with autoconfigure to produce configure scripts
-
 ## This program is free software: you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
-## the Free Software Foundation, either version 3 of the License.
+## the Free Software Foundation, version 3 of the License.
 
 ## This program is distributed in the hope that it will be useful,
 ## but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -105,5 +103,6 @@ AP_CHECK_LING([2], [apertium-eng])
 AC_PATH_PROGS([SAXON], [saxon9-transform], [false])
 AM_CONDITIONAL([CAN_SAXON], [test x$SAXON != xfalse])
 
-AC_OUTPUT([Makefile apertium-fin-eng.pc t/config.sh])
+AP_MKINCLUDE
 
+AC_OUTPUT([Makefile apertium-fin-eng.pc t/config.sh])
