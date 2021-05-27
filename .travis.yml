@@ -10,7 +10,7 @@ script:
 notifications:
     irc:
         channels:
-            - "chat.freenode.net#omorfi"
-            - "chat.freenode.net#apertium"
+            - "irc.oftc.net#omorfi"
+            - "irc.oftc.net#apertium"
         on_failure: change
         on_success: never

@@ -10,7 +10,7 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-AC_INIT([apertium-fin-eng], [0.1.0], [flammie@iki.fi], [apertium-fin-eng], [http://wiki.apertium.org/wiki/apertium-fin-eng])
+AC_INIT([apertium-fin-eng], [0.1.0], [flammie@iki.fi], [apertium-fin-eng], [https://wiki.apertium.org/wiki/apertium-fin-eng])
 AM_INIT_AUTOMAKE([-Wall -Werror -Wno-portability foreign])
 
 AC_PROG_LN_S
@@ -95,7 +95,7 @@ AS_IF([test x$ac_cv_path_PKG_CONFIG = xno],
 AC_PATH_PROG([NIST_BLEU13A], [mteval-v13a.pl], [false])
 AC_PATH_PROG([WRAP_XML], [wrap-xml.prompsit-version.sh], [false])
 
-m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertium.m4 in ACLOCAL_PATH? See: http://wiki.apertium.org/wiki/Installation_troubleshooting])])
+m4_ifdef([AP_CHECK_LING],[],[AC_MSG_ERROR([AP_CHECK_LING not defined, is apertium.m4 in ACLOCAL_PATH? See: https://wiki.apertium.org/wiki/Installation_troubleshooting])])
 
 AP_CHECK_LING([1], [apertium-fin])
 AP_CHECK_LING([2], [apertium-eng])
