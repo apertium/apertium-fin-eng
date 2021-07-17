@@ -453,3 +453,5 @@ docs/statistics.html: docs/stats-$(BASENAME).$(PREFIX1).dix.html \
 
 endif
 
+test: all
+	apertium-regtest test

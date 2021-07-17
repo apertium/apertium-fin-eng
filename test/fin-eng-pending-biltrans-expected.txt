@@ -1,0 +1,6 @@
+[6ZN-naZwosOe#0] ^James<np><ant><m><sg><gen>/James<np><ant><m><sg><gen>$ ^kissa<n><sg><nom>/cat<n><sg><nom>/feline<n><sg><nom>/calico cat<n><sg><nom>/domestic cat<n><sg><nom>/tortoiseshell<n><sg><nom>$^.<punct>/.<sent>$
+[/6ZN-naZwosOe]
+[B32NKNpCG1eQ#0] ^poika<n><sg><gen>/son<n><sg><gen>/lad<n><sg><gen>/boy<n><sg><gen>/young<n><sg><gen>/male child<n><sg><gen>$ ^kissa<n><sg><nom>/cat<n><sg><nom>/feline<n><sg><nom>/calico cat<n><sg><nom>/domestic cat<n><sg><nom>/tortoiseshell<n><sg><nom>$^.<punct>/.<sent>$
+[/B32NKNpCG1eQ]
+[tVpIT283O1MA#0] ^Jack<np><ant><m><sg><gen>/Jack<np><ant><m><sg><gen>$ ^kissa<n><sg><nom>/cat<n><sg><nom>/feline<n><sg><nom>/calico cat<n><sg><nom>/domestic cat<n><sg><nom>/tortoiseshell<n><sg><nom>$^.<punct>/.<sent>$
+[/tVpIT283O1MA]

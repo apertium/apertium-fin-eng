@@ -1,0 +1,6 @@
+[ORRadfIkOsze#0] ^James<np><cog><sg>$^'<apos>$ ^cat<n><sg>$^.<sent>$
+[/ORRadfIkOsze]
+[Vh7yUz8pClGC#0] ^boy<n><sg>$^'s<gen>$ ^cat<n><sg>$^.<sent>$
+[/Vh7yUz8pClGC]
+[fzncrADA7B50#0] ^Jack<n><sg>$^'s<gen>$ ^cat<n><sg>$^.<sent>$
+[/fzncrADA7B50]

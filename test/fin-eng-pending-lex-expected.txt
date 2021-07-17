@@ -1,0 +1,6 @@
+[6ZN-naZwosOe#0] ^James<np><ant><m><sg><gen>/James<np><ant><m><sg><gen>$ ^kissa<n><sg><nom>/cat<n><sg><nom>$^.<punct>/.<sent>$
+[/6ZN-naZwosOe]
+[B32NKNpCG1eQ#0] ^poika<n><sg><gen>/boy<n><sg><gen>$ ^kissa<n><sg><nom>/cat<n><sg><nom>$^.<punct>/.<sent>$
+[/B32NKNpCG1eQ]
+[tVpIT283O1MA#0] ^Jack<np><ant><m><sg><gen>/Jack<np><ant><m><sg><gen>$ ^kissa<n><sg><nom>/cat<n><sg><nom>$^.<punct>/.<sent>$
+[/tVpIT283O1MA]

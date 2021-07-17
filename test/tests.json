@@ -1,0 +1,14 @@
+{
+    "eng-fin-pending": {
+        "input": "eng-fin-pending-input.txt",
+        "mode": "eng-fin"
+    },
+    "fin-eng-pending": {
+        "input": "fin-eng-pending-input.txt",
+        "mode": "fin-eng"
+    },
+    "fin-eng-regression": {
+        "input": "fin-eng-regression-input.txt",
+        "mode": "fin-eng"
+    }
+}

@@ -1,0 +1,6 @@
+[ORRadfIkOsze#0] ^James/James<np><cog><sg>/James<np><ant><m><sg>$^'/'<apos>/'s<gen>$ ^cat/cat<n><sg>$^./.<sent>$
+[/ORRadfIkOsze]
+[Vh7yUz8pClGC#0] ^boy/boy<n><sg>$^'s/'s<gen>/be<vbser><pres><p3><sg>/have<vbhaver><pres><p3><sg>$ ^cat/cat<n><sg>$^./.<sent>$
+[/Vh7yUz8pClGC]
+[fzncrADA7B50#0] ^Jack/jack<n><sg>/jack<vblex><inf>/jack<vblex><pres>/jack<vblex><imp>/Jack<np><ant><m><sg>$^'s/'s<gen>/be<vbser><pres><p3><sg>/have<vbhaver><pres><p3><sg>$ ^cat/cat<n><sg>$^./.<sent>$
+[/fzncrADA7B50]

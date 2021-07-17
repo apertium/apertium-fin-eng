@@ -18,3 +18,5 @@
 /config.in
 /config
 /*.prob
+/*.hfst
+/test/*-output.txt

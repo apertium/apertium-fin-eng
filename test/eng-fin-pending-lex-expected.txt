@@ -1,0 +1,6 @@
+[ORRadfIkOsze#0] ^James<np><cog><sg>/James<np><cog><sg>$^'<apos>/'<punct>$ ^cat<n><sg>/kolli<n><sg>/kissa<n><sg>/narttu<n><sg>/juoruakka<n><sg>/kissaeläin<n><sg>/katerpillari<n><sg>$^.<sent>/.<punct>$
+[/ORRadfIkOsze]
+[Vh7yUz8pClGC#0] ^boy<n><sg>/poika<n><sg>$^'s<gen>/olla<vaux>$ ^cat<n><sg>/kolli<n><sg>/kissa<n><sg>/narttu<n><sg>/juoruakka<n><sg>/kissaeläin<n><sg>/katerpillari<n><sg>$^.<sent>/.<punct>$
+[/Vh7yUz8pClGC]
+[fzncrADA7B50#0] ^Jack<n><sg>/Jack<n><sg>/Jätkä<n><sg>/Talja<n><sg>/Pallo<n><sg>/Solttu<n><sg>/Tunkki<n><sg>/Aasiori<n><sg>/Sotilas<n><sg>/merimies<n><sg>/Sotamies<n><sg>/Tukkijätkä<n><sg>/Keulalippu<n><sg>/Maalipallo<n><sg>/Pistorasia<n><sg>/Jakkihedelmä<n><sg>/Metsätyömies<n><sg>$^'s<gen>/olla<vaux>$ ^cat<n><sg>/kolli<n><sg>/kissa<n><sg>/narttu<n><sg>/juoruakka<n><sg>/kissaeläin<n><sg>/katerpillari<n><sg>$^.<sent>/.<punct>$
+[/fzncrADA7B50]

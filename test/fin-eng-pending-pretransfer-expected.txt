@@ -1,0 +1,6 @@
+[6ZN-naZwosOe#0] ^James<np><ant><m><sg><gen>$ ^kissa<n><sg><nom>$^.<punct>$
+[/6ZN-naZwosOe]
+[B32NKNpCG1eQ#0] ^poika<n><sg><gen>$ ^kissa<n><sg><nom>$^.<punct>$
+[/B32NKNpCG1eQ]
+[tVpIT283O1MA#0] ^Jack<np><ant><m><sg><gen>$ ^kissa<n><sg><nom>$^.<punct>$
+[/tVpIT283O1MA]

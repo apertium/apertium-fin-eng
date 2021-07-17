@@ -1,0 +1,6 @@
+[ORRadfIkOsze#0] ^James<np><cog><sg><nom>$^'<punct>$ ^kolli<n><sg><nom>$^.<punct>$
+[/ORRadfIkOsze]
+[Vh7yUz8pClGC#0] ^poika<n><sg><gen>$ ^kolli<n><sg><nom>$^.<punct>$
+[/Vh7yUz8pClGC]
+[fzncrADA7B50#0] ^Jack<n><sg><gen>$ ^kolli<n><sg><nom>$^.<punct>$
+[/fzncrADA7B50]

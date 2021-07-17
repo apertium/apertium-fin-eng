@@ -105,4 +105,4 @@ AM_CONDITIONAL([CAN_SAXON], [test x$SAXON != xfalse])
 
 AP_MKINCLUDE
 
-AC_OUTPUT([Makefile apertium-fin-eng.pc t/config.sh])
+AC_OUTPUT([Makefile apertium-fin-eng.pc])

@@ -1,0 +1,6 @@
+[ORRadfIkOsze#0] ^np<NP><nom>{^James<np><cog><sg><2>$}$^default<default>{^'<punct>$}$ ^np<NP><nom>{^kolli<n><sg><2>$}$^sent<SENT>{^.<punct>$}$
+[/ORRadfIkOsze]
+[Vh7yUz8pClGC#0] ^np<NP><nom>{^poika<n><sg><gen>$}$ ^np<NP><nom>{^kolli<n><sg><2>$}$^sent<SENT>{^.<punct>$}$
+[/Vh7yUz8pClGC]
+[fzncrADA7B50#0] ^np<NP><nom>{^Jack<n><sg><gen>$}$ ^np<NP><nom>{^kolli<n><sg><2>$}$^sent<SENT>{^.<punct>$}$
+[/fzncrADA7B50]
