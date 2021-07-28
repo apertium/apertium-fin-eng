@@ -1,4 +1,4 @@
-[6ZN-naZwosOe#0] ^JAMES<np><ant><m><sg>+'S<gen>$ ^CAT<n><sg>$^.<sent>$
+[6ZN-naZwosOe#0] ^James<np><ant><m><sg>+'s<gen>$ ^cat<n><sg>$^.<sent>$
 [/6ZN-naZwosOe]
 [B32NKNpCG1eQ#0] ^BOY<n><sg>+'S<gen>$ ^CAT<n><sg>$^.<sent>$
 [/B32NKNpCG1eQ]

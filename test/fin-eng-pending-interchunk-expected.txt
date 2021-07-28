@@ -1,4 +1,4 @@
-[6ZN-naZwosOe#0] ^REALGEN<NP-GEN>{^James<np><ant><m><sg>+'s<gen>$ ^cat<n><sg>$}$^default<default>{^.<sent>$}$
+[6ZN-naZwosOe#0] ^rEALGEN<NP-GEN>{^James<np><ant><m><sg>+'s<gen>$ ^cat<n><sg>$}$^default<default>{^.<sent>$}$
 [/6ZN-naZwosOe]
 [B32NKNpCG1eQ#0] ^REALGEN<NP-GEN>{^boy<n><sg>+'s<gen>$ ^cat<n><sg>$}$^default<default>{^.<sent>$}$
 [/B32NKNpCG1eQ]
