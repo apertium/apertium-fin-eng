@@ -10,7 +10,7 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-AC_INIT([apertium-fin-eng], [0.1.0], [flammie@iki.fi], [apertium-fin-eng], [https://wiki.apertium.org/wiki/apertium-fin-eng])
+AC_INIT([apertium-fin-eng],[0.1.0],[flammie@iki.fi],[apertium-fin-eng],[https://wiki.apertium.org/wiki/apertium-fin-eng])
 AM_INIT_AUTOMAKE([-Wall -Werror -Wno-portability foreign])
 
 AC_PROG_LN_S
@@ -86,6 +86,11 @@ then
   AC_MSG_ERROR([You don't have lrx-proc installed.])
 fi
 
+PKG_CHECK_MODULES(APERTIUM_RECURSIVE, apertium-recursive >= 0.0.1)
+
+AC_PATH_PROGS(ZCAT, [gzcat zcat], [false])
+AS_IF([test x$ZCAT = xfalse], [AC_MSG_ERROR([You don't have zcat nor gzcat installed])])
+
 AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
 AS_IF([test x$ac_cv_path_PKG_CONFIG = x],
       [AC_MSG_ERROR([You do not have pkg-config installed.])])
@@ -108,4 +113,5 @@ PKG_CHECK_MODULES(REGTEST, apertium-regtest >= 0.0.1, [],
 
 AP_MKINCLUDE
 
-AC_OUTPUT([Makefile apertium-fin-eng.pc])
+AC_CONFIG_FILES([Makefile apertium-fin-eng.pc])
+AC_OUTPUT
