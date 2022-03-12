@@ -2,42 +2,120 @@
 !! ATTRIBUTE CATEGORIES
 !!!!!!!!!!!!!!!
 
-number = (ND sg) sg pl sp ND;
-gender = (GD m) m f mf GD;
-det_type = def ind dem itg;
-tense = pres past fut ifi pri fti;
+number = sg pl sp ;
+gender =  m f mf nt ;
+det_type = def ind dem itg pos;
+tense = pres past pri cond pot imp;
+person = p1 p2 p3 ;
+inf = inf infa infe infma;
+npclass = ant top al ;
+prnclass = pers itg ind pos dem ;
+sint = sint ;
+ject = subj obj ;
+participle = pp pprs ;
+advtype = itg ;
+case = nom acc dat gen ine ela ill ade abl all abe com ins ;
 
 !!!!!!!!!!!!!!!
 !! OUTPUT PATTERNS
 !!!!!!!!!!!!!!!
 
-n: _.gender.number;
-adj: _.gender.number;
-det_default: _.det_type;
-det_def: _.det_type.number;
+n: _.number;  !! house.n.sg
+adj: _.sint;  !! warm.adj.sint
+det: _.det_type.number ;       !! the.det.ind.sg
+vblex: _.inf.participle.tense.person.number; !! walk.vblex.pres.p3.sg
+vbser: _.inf.tense.person.number; !! be.vbser.pres.p3.sg
+vbmod: _.inf.tense.person.number; !! can.vbmod.pres.p3.sg
+vaux: _.inf.tense.person.number;  !! ?
+np: _.npclass.gender.number;      !! Jack.np.ant.m.sg
+prn: _.prnclass.ject.person.gender.number; !! prpers.prn.subj.p2.mf.sp
+adv: _.advtype;
+post: _;
+pr: _;
 
-NP: _.number;
+VP: _;                            !! verb phrase
+NP: _;                     !! noun phrase
+V: _;
+N: _;
+A: _;
+DET: _;
+NEG: _;
+PRN: _;
+ADV: _;
 
 !!!!!!!!!!!!!!!
 !! TAG-REWRITE RULES
 !!!!!!!!!!!!!!!
 
-tense > tense : ifi past, pri pres, fti fut;
+tense > tense : pri pres, cond pres, pot pres, imp pres;
+inf > inf : infa inf, infe inf, infma inf;
 
 !!!!!!!!!!!!!!!
 !! MACROS
 !!!!!!!!!!!!!!!
 
-det: (if (1.det_type = def or 1.det_type = ind)
-         1(det_def)
-      else
-         1(det_default));
 
 !!!!!!!!!!!!!!!
 !! REDUCTION RULES
 !!!!!!!!!!!!!!!
 
-NP -> n.$number adj { 2[gender=1.gender, number=1.number] _ 1 } ;
+NEG -> ei@vaux { no@adv } |
+       ei-@n  { no@adv } ;
+VP -> ei@vaux vblex { do@vaux.pres.p3.sg _ not@adv _ 2 } |
+      ei@vaux vaux { 2[person = "", number = ""] _ not@adv } ; 
+NP -> N post { 2 _ of@pr _ 1 } ;
+
+A -> adj { 1 } ;
+N -> n { (if (1.case/sl = ine) [in@pr _]
+          else-if (1.case/sl = ela) [from@pr _]
+          else-if (1.case/sl = ill) [into@pr _] 
+          else-if (1.case/sl = ade) [on@pr _ ]
+          else-if (1.case/sl = abl) [from@pr _]
+          else-if (1.case/sl = all) [onto@pr _]
+          else-if (1.case/sl = abe) [without@pr _]
+          else-if (1.case/sl = ins) [with@pr _])
+          1
+          (if (1.case/sl = gen) 's@gen) } |
+     np { 1 } ;
+V -> vblex { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
+                            p3
+                         else ""),
+               number = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres) 
+                            sg 
+                        else "")]
+           }  |
+    vbmod { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
+                            p3
+                        else ""),
+               number = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
+                            sg
+                        else "")]
+           } |
+    vbser { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres) 
+                            p3 
+                        else-if (1.person = p1 and 1.number = sg and 1.tense>tense = pres)
+                            p1 
+                        else ""),
+              number = (if (1.number = sg and 1.person = p1 and 1.tense>tense = pres)
+                            sg
+                        else-if (1.number = sg and 1.person = p3 and 1.tense>tense = pres)
+                            sg
+                        else "")] 
+          } |
+    vaux { 1[person = (if ((1.person = p3) and (1.number = sg) and (1.tense>tense = pres)) 
+                            p3 
+                        else-if (1.person = p1 and 1.number = sg and 1.tense>tense = pres)
+                            p1 
+                        else ""),
+              number = (if (1.number = sg and 1.person = p1 and 1.tense>tense = pres) 
+                            sg
+                        else-if (1.number = sg and 1.person = p3 and 1.tense>tense = pres)
+                            sg
+                        else "")] 
+          };
+DET -> det { 1 } ;
+PRN -> prn { 1 } ;
+ADV -> adv { 1 } ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Apertium-recursive
