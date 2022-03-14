@@ -2,42 +2,80 @@
 !! ATTRIBUTE CATEGORIES
 !!!!!!!!!!!!!!!
 
-number = (ND sg) sg pl sp ND;
-gender = (GD m) m f mf GD;
+number = (ND sp) sg pl sp ;
+gender = (GD mf) m f mf GD;
 det_type = def ind dem itg;
-tense = pres past fut ifi pri fti;
+tense = pres past fut ifi pri fti imp pot ;
+voice = actv pasv ;
+person = p1 p2 p3 ;
+npclass = top ant al cog ;
+comp = pst cmp sup ;
+numtype = card ord ;
+inf = inf infa infe infma ;
+prntype = dem itg pers ;
+case = nom gen acc dat ine ela ill ade abl all abe ins com lat ;
 
 !!!!!!!!!!!!!!!
 !! OUTPUT PATTERNS
 !!!!!!!!!!!!!!!
 
-n: _.gender.number;
+n: _.number.case;
 adj: _.gender.number;
-det_default: _.det_type;
-det_def: _.det_type.number;
+vblex: _.voice.inf.tense.person.number.case;
+vbser: _.voice.inf.tense.person.number.case;
+vaux: _.voice.inf.tense.person.number.case;
+vbmod: _.voice.inf.tense.person.number.case;
+vbdo: _.voice.inf.tense.person.number.case;
+np: _.npclass.gender.number.case;
+det: _.number.case;
+adj: _.comp.number.case;
+num: _.numtype.number.case;
+prn: _.number.case;
 
 NP: _.number;
+
+V: _;
+N: _;
+DET: _;
+A: _;
+NUM: _;
+PRN: _;
+NEG: _;
 
 !!!!!!!!!!!!!!!
 !! TAG-REWRITE RULES
 !!!!!!!!!!!!!!!
 
-tense > tense : ifi past, pri pres, fti fut;
-
+tense > tense : pres pri;
+inf > inf : inf infa ;
 !!!!!!!!!!!!!!!
 !! MACROS
 !!!!!!!!!!!!!!!
 
-det: (if (1.det_type = def or 1.det_type = ind)
-         1(det_def)
-      else
-         1(det_default));
 
 !!!!!!!!!!!!!!!
 !! REDUCTION RULES
 !!!!!!!!!!!!!!!
 
-NP -> n.$number adj { 2[gender=1.gender, number=1.number] _ 1 } ;
+NEG -> no@adv { ei@vaux.neg.actv.p3.sg } ;
+V -> vblex.inf { 1[voice=actv,person="",number=sg,case=lat] } |
+     vbser.inf { 1[voice=actv,person="",number=sg,case=lat] } |
+     vblex { 1[voice=actv,person=p3,number=sg] } |
+     vbser { 1[voice=actv,number=sg,person=p3] } |
+     vaux { 1[voice=actv,number=sg,person=p3] } |
+     vbmod { 1[voice=actv,number=sg,person=p3] } |
+     vbser { 1[voice=actv,number=sg,person=p3] } |
+     vbdo { 1[voice=actv,number=sg,person=p3]  } ;
+NP -> the@det N { 2 } |
+      a@det N { 2 } ;
+N -> n { 1[case=nom] } |
+     np { 1[case=nom] } ;
+DET -> det { 1[case=nom] } ;
+A -> adj { 1[case=nom,
+             comp=(if (1.comp="") pst else 1.comp),
+             number=(if (1.number=sp) sg else 1.number)] };
+NUM -> num { 1[case=nom] } ;
+PRN -> prn { 1[case=nom] } ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Apertium-recursive
