@@ -16658,8 +16658,8 @@
   <!-- }}}
        {{{ Manual rules with context -->
 
-  <rule>
-    <match weight="10" lemma="lupa" tags="n.sg.ine"><select lemma="promise" tags="n.*"/></match>
+  <rule weight="10">
+    <match lemma="lupa" tags="n.sg.ine"><select lemma="promise" tags="n.*"/></match>
   </rule>
   <rule>
     <match lemma="soittaa" tags="vblex.*"><select lemma="play" tags="vblex.*"/></match>
