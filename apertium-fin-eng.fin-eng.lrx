@@ -16,6 +16,7 @@
   <rules>
 
     <!-- {{{ old automatic lexical rules 1 -->
+
   <rule weight="1.0"><match lemma="iso" tags="adj.*"><select lemma="big" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="vanha" tags="adj.*"><select lemma="old" tags="adj.*"/></match></rule>
 
@@ -14126,7 +14127,6 @@
   <rule weight="1.0"><match lemma="pyrkiä" tags="vblex.*"><select lemma="be" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="elintarvike" tags="n.*"><select lemma="food" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="etiopia" tags="np.*"><select lemma="ethiopia" tags="np.*"/></match></rule>
-  <rule weight="1.0"><match lemma="saada" tags="vblex.*"><select lemma="let" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="bruttokansantuote" tags="n.*"><select lemma="gdp" tags="n.acr.*"/></match></rule>
   <rule weight="1.0"><match lemma="tähän" tags="adv.*"><select lemma="there" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="kertomus" tags="n.*"><select lemma="report" tags="n.*"/></match></rule>
@@ -50166,7 +50166,6 @@
 <rule weight="0.9"><match lemma="pitkä" tags="adj.*"><select lemma="far" tags="adj.*"/></match></rule><!-- 1 -->
 <rule weight="0.9"><match lemma="turhuus" tags="n.*"><select lemma="nonsense" tags="n.*"/></match></rule><!-- 1 -->
 <rule weight="0.9"><match lemma="viranomaiset" tags="n.*"><select lemma="government" tags="n.*"/></match></rule><!-- 2 -->
-<rule weight="0.9"><match lemma="prosentti" tags="n.*"><select lemma="point" tags="n.*"/></match></rule><!-- 7 -->
 <rule weight="0.9"><match lemma="toistaiseksi" tags="adv.*"><select lemma="yet" tags="adv.*"/></match></rule><!-- 2 -->
 <rule weight="0.9"><match lemma="info" tags="n.*"><select lemma="information" tags="n.*"/></match></rule><!-- 8 -->
 <rule weight="0.9"><match lemma="nuo" tags="prn.*"><select lemma="that" tags="prn.*"/></match></rule><!-- 11 -->
