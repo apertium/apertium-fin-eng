@@ -7,8 +7,8 @@ gender =  m f mf nt ;
 det_type = def ind dem itg pos;
 tense = pres past pri cond pot imp;
 person = p1 p2 p3 ;
-inf = inf infa infe infma;
-npclass = ant top al ;
+inf = inf infa infe infma ger;
+npclass = ant top al cog ;
 prnclass = pers itg ind pos dem ;
 sint = sint ;
 ject = subj obj ;
@@ -23,13 +23,16 @@ case = nom acc dat gen ine ela ill ade abl all abe com ins ;
 n: _.number;  !! house.n.sg
 adj: _.sint;  !! warm.adj.sint
 det: _.det_type.number ;       !! the.det.ind.sg
-vblex: _.inf.participle.tense.person.number; !! walk.vblex.pres.p3.sg
+vblex_fin: _.tense.person.number; !! walk.vblex.pres.p3.sg
+vblex_inf: _.inf; !! walk.inf
+vblex_pp: _.participle; !! walk.pp
 vbser: _.inf.tense.person.number; !! be.vbser.pres.p3.sg
 vbmod: _.inf.tense.person.number; !! can.vbmod.pres.p3.sg
 vaux: _.inf.tense.person.number;  !! ?
 np: _.npclass.gender.number;      !! Jack.np.ant.m.sg
 prn: _.prnclass.ject.person.gender.number; !! prpers.prn.subj.p2.mf.sp
 adv: _.advtype;
+num: _.number; !! one.sg two.pl :-(
 post: _;
 pr: _;
 
@@ -42,22 +45,28 @@ DET: _;
 NEG: _;
 PRN: _;
 ADV: _;
+NUM: _;
 
 !!!!!!!!!!!!!!!
 !! TAG-REWRITE RULES
 !!!!!!!!!!!!!!!
 
 tense > tense : pri pres, cond pres, pot pres, imp pres;
-inf > inf : infa inf, infe inf, infma inf;
+inf > inf : infa inf, infe inf, infma ger;
 
 !!!!!!!!!!!!!!!
 !! MACROS
 !!!!!!!!!!!!!!!
 
+vblex: (if (1.inf = infa) 1(vblex_inf)
+        if (1.inf = infma) 1(vblex_inf)
+        elif (1.participle = pp) 1(vblex_pp)
+        elif (1.participle = pprs) 1(vblex_pp)
+        else 1(vblex_fin)) ;
 
 !!!!!!!!!!!!!!!
 !! REDUCTION RULES
-!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!! 
 
 NEG -> ei@vaux { no@adv } |
        ei-@n  { no@adv } ;
@@ -67,13 +76,13 @@ NP -> N post { 2 _ of@pr _ 1 } ;
 
 A -> adj { 1 } ;
 N -> n { (if (1.case/sl = ine) [in@pr _]
-          else-if (1.case/sl = ela) [from@pr _]
-          else-if (1.case/sl = ill) [into@pr _] 
-          else-if (1.case/sl = ade) [on@pr _ ]
-          else-if (1.case/sl = abl) [from@pr _]
-          else-if (1.case/sl = all) [onto@pr _]
-          else-if (1.case/sl = abe) [without@pr _]
-          else-if (1.case/sl = ins) [with@pr _])
+          elif (1.case/sl = ela) [from@pr _]
+          elif (1.case/sl = ill) [into@pr _] 
+          elif (1.case/sl = ade) [on@pr _ ]
+          elif (1.case/sl = abl) [from@pr _]
+          elif (1.case/sl = all) [onto@pr _]
+          elif (1.case/sl = abe) [without@pr _]
+          elif (1.case/sl = ins) [with@pr _])
           1
           (if (1.case/sl = gen) 's@gen) } |
      np { 1 } ;
@@ -116,6 +125,7 @@ V -> vblex { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense =
 DET -> det { 1 } ;
 PRN -> prn { 1 } ;
 ADV -> adv { 1 } ;
+NUM -> num { 1[number = (if (1.lem/sl = "yksi") sg else pl)] } ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Apertium-recursive
