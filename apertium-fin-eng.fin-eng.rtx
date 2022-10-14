@@ -5,14 +5,15 @@
 number = sg pl sp ;
 gender =  m f mf nt ;
 det_type = def ind dem itg pos;
-tense = pres past pri cond pot imp;
+def = def ind ;
+tense = pres past pri cni pot imp;
 person = p1 p2 p3 ;
-inf = inf infa infe infma ger;
+inf = inf infa infe infma ger infminen;
 npclass = ant top al cog ;
 prnclass = pers itg ind pos dem ;
 sint = sint ;
 ject = subj obj ;
-participle = pp pprs ;
+participle = pp pprs agent ;
 advtype = itg ;
 case = nom acc dat gen ine ela ill ade abl all abe com ins ;
 
@@ -26,22 +27,37 @@ det: _.det_type.number ;       !! the.det.ind.sg
 vblex_fin: _.tense.person.number; !! walk.vblex.pres.p3.sg
 vblex_inf: _.inf; !! walk.inf
 vblex_pp: _.participle; !! walk.pp
-vbser: _.inf.tense.person.number; !! be.vbser.pres.p3.sg
-vbmod: _.inf.tense.person.number; !! can.vbmod.pres.p3.sg
-vaux: _.inf.tense.person.number;  !! ?
+vbser_fin: _.tense.person.number; !! be.vbser.pres.p3.sg
+vbser_inf: _.inf; !! be.inf
+vbser_pp: _.participle; !! be.pp
+vbmod_fin: _.tense.person.number; !! can.vbmod.pres.p3.sg
+vbmod_inf: _.inf; !! walk.in
+vbmod_pp: _.participle; !! walk.pp
+vaux_fin: _.tense.person.number;  !! ?
+vaux_inf: _.inf; !! walk.inf
+vaux_pp: _.participle; !! walk.pp
+vbhaver: _.tense.person.number;
 np: _.npclass.gender.number;      !! Jack.np.ant.m.sg
 prn: _.prnclass.ject.person.gender.number; !! prpers.prn.subj.p2.mf.sp
 adv: _.advtype;
 num: _.number; !! one.sg two.pl :-(
 post: _;
 pr: _;
+cnjcoo: _;
+punct: _;
 
+S: _;                   !! "sentence"
 VP: _;                            !! verb phrase
-NP: _;                     !! noun phrase
-V: _;
-N: _;
-A: _;
-DET: _;
+NP: _.case.number;                     !! noun phrase
+DP: _.case.number;                !! phrase wihtout determiner thing
+PP: _;      !! prepositiional phrase
+NUMP: _;
+
+V: _.person.number;
+N: _.case.number;
+PROP: _.case.number;
+A: _.case.number;
+DET: _.case.number;
 NEG: _;
 PRN: _;
 ADV: _;
@@ -51,56 +67,163 @@ NUM: _;
 !! TAG-REWRITE RULES
 !!!!!!!!!!!!!!!
 
-tense > tense : pri pres, cond pres, pot pres, imp pres;
-inf > inf : infa inf, infe inf, infma ger;
+tense > tense : pri pres;
+inf > inf : infa inf, infe inf, infma ger, infminen ger;
+participle > participle : agent pprs ;
 
 !!!!!!!!!!!!!!!
 !! MACROS
 !!!!!!!!!!!!!!!
 
+!! maybe
+maybe_pr: (if (1.case = ine) [in@pr _]
+           elif (1.case/sl = ela) [from@pr _]
+           elif (1.case/sl = ill) [into@pr _] 
+           elif (1.case/sl = ade) [on@pr _ ]
+           elif (1.case/sl = abl) [from@pr _]
+           elif (1.case/sl = all) [onto@pr _]
+           elif (1.case/sl = abe) [without@pr _]
+           elif (1.case/sl = ins) [with@pr _]
+           else []) ;
+maybe_art: (if (1.case = par and 1.number = sg) [a@det.ind.sg _]
+            elif (1.case = gen and 1.number= sg) [the@det.def.sp _]
+            elif (1.number = pl) []
+            elif (1.case = nom and 1.number = sg)
+                (if (1.def = def) [the@det.def.sp _]
+                 else [a@det.ind.sg _])
+            else [the@det.def.sp _] ) ;
+pro_undrop: (if (1.person = p1 and 1.number = sg)
+                 [prpers@prn.subj.p1.mf.sg _]
+             elif (1.person = p2 and 1.number = sg)
+                   [prpers@prn.subj.p2.mf.sp _]
+             elif (1.person = p3 and 1.number = sg)
+                   [prpers@prn.subj.p3.mf.pl _]
+             elif (1.person = p1 and 1.number = pl)
+                   [prpers@prn.subj.p1.mf.pl _]
+             elif (1.person = p2 and 1.number = pl)
+                   [prpers@prn.subj.p2.mf.sp _]
+             elif (1.person = p3 and 1.number = pl)
+                   [prpers@prn.subj.p3.mf.pl _]
+             else []) ;
+!! split pos into subs
 vblex: (if (1.inf = infa) 1(vblex_inf)
-        if (1.inf = infma) 1(vblex_inf)
+        elif (1.inf = infma) 1(vblex_inf)
+        elif (1.inf = infminen) 1(vblex_inf)
         elif (1.participle = pp) 1(vblex_pp)
         elif (1.participle = pprs) 1(vblex_pp)
+        elif (1.tense = cni) [shall@vbmod.past _ 1(vblex_inf)[inf=inf]]
         else 1(vblex_fin)) ;
+vbser: (if (1.inf = infa) 1(vbser_inf)
+        elif (1.inf = infma) 1(vbser_inf)
+        elif (1.inf = infminen) 1(vbser_inf)
+        elif (1.participle = pp) 1(vbser_pp)
+        elif (1.participle = pprs) 1(vbser_pp)
+        elif (1.tense = cni) [shall@vbmod.past _ 1(vbser_inf)[inf=inf]]
+        else 1(vbser_fin)) ;
+vbmod: (if (1.inf = infa) 1(vbmod_inf)
+        elif (1.inf = infma) 1(vbmod_inf)
+        elif (1.inf = infminen) 1(vbmod_inf)
+        elif (1.participle = pp) 1(vbmod_pp)
+        elif (1.participle = pprs) 1(vbmod_pp)
+        elif (1.tense = cni) [shall@vbmod.past _ 1(vbmod_inf)[inf=inf]]
+        else 1(vbmod_fin)) ;
+vaux: (if (1.inf = infa) 1(vaux_inf)
+        elif (1.inf = infma) 1(vaux_inf)
+        elif (1.inf = infminen) 1(vaux_inf)
+        elif (1.participle = pp) 1(vaux_pp)
+        elif (1.participle = pprs) 1(vaux_pp)
+        elif (1.tense = cni) [shall@vbmod.past _ 1(vaux_inf)[inf=inf]]
+        else 1(vaux_fin)) ;
 
 !!!!!!!!!!!!!!!
 !! REDUCTION RULES
 !!!!!!!!!!!!!!! 
 
+S -> VP NP { 1 _ 
+             *(maybe_pr)[case=2.case]
+             *(maybe_art)[case=2.case,number=2.number,def=def]
+             2 } |
+     NP { ! stray NP
+          *(maybe_pr)[case=1.case]
+          *(maybe_art)[case=1.case,number=1.number,def=ind]
+          1 
+        } |
+     DP { ! stray DP
+          *(maybe_pr)[case=1.case]
+          1 
+        } ;
+VP -> !possessive stuff
+      n.*.sg.ade olla@vblex.* { 
+        *(maybe_art)[case=1.case,number=1.number,def=def]
+        1 _ have@vbhaver.pres.p3.sg } |
+      np.*.sg.ade olla@vblex.* {
+        1 _ have@vbhaver.pres.p3.sg } |
+      prn.*.sg.ade olla@vblex.* {
+        1 _ have@vbhaver.pres.p3.sg } |
+      prn.*.sg.ade olla@vaux.* {
+        1 _ have@vbhaver.pres.p3.sg } |
+      np.*.sg.ade ei@vaux.* olla@vblex.* {
+        1 _ do@vaux.pres.p3.sg _ not@adv _ have@vbhaver.inf } |
+      olla@vaux.* ko@qst np.*.sg.ade {
+        do@vaux.pres.p3.sg _ 3 _ have@vbhaver.inf } |
+      olla@vaux.* ko@qst adv np.*.sg.ade {
+        do@vaux.pres.p3.sg _ 4 _ 3 _ have@vbhaver.inf } |
+      ! negations
+      ei@vaux vblex { do@vaux.pres.p3.sg _ not@adv _ 2 } |
+      ei@vaux vaux { 2[person = "", number = ""] _ not@adv } |
+      ! normal verb phrases
+      NP V { 
+        *(maybe_pr)[case=1.case]
+        *(maybe_art)[case=1.case,number=1.number,def=def]
+        1 _ 2 } |
+      DP V {
+        *(maybe_pr)[case=1.case]
+        1 _ 2 } |
+      PRN V {
+        *(maybe_pr)[case=1.case]
+        1 _ 2 } |
+      V ko@qst {
+        do@vbdo.pres _
+        *(pro_undrop)[person=1.person,number=1.number]
+        1 } |
+      V {
+        *(pro_undrop)[person=1.person,number=1.number]
+        1 } ;
+NP -> N ja@cnjcoo N ?(1.case = 3.case) [$number=pl,$case=1.case]
+                    { 1 _ 2 _ 3 } |
+      PROP ja@cnjcoo PROP ?(1.case = 3.case) [$number=pl,$case=1.case]
+                    { 1 _ 2 _ 3 } |
+      A ,@punct A %N ?(1.case=3.case and 3.case=4.case) { 1 2 _ 3 _ 4 } |
+      A %N ?(1.case=2.case) { 1 _ 2 } |
+      %N { 1 } ;
+DP -> %PROP { 1 } |
+      DET %N ?(1.case=2.case) { 1 _ 2 } ;
+PP -> NP.*.gen post { 2 _ the@det.def.sp _ 1 } ;
+NUMP -> num.*.sg.nom n.sg.par { 1 _ 2[number=pl] } ;
+
 NEG -> ei@vaux { no@adv } |
        ei-@n  { no@adv } ;
-VP -> ei@vaux vblex { do@vaux.pres.p3.sg _ not@adv _ 2 } |
-      ei@vaux vaux { 2[person = "", number = ""] _ not@adv } ; 
-NP -> N post { 2 _ of@pr _ 1 } ;
-
-A -> adj { 1 } ;
-N -> n { (if (1.case/sl = ine) [in@pr _]
-          elif (1.case/sl = ela) [from@pr _]
-          elif (1.case/sl = ill) [into@pr _] 
-          elif (1.case/sl = ade) [on@pr _ ]
-          elif (1.case/sl = abl) [from@pr _]
-          elif (1.case/sl = all) [onto@pr _]
-          elif (1.case/sl = abe) [without@pr _]
-          elif (1.case/sl = ins) [with@pr _])
-          1
-          (if (1.case/sl = gen) 's@gen) } |
-     np { 1 } ;
-V -> vblex { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
+A -> %adj { 1 } ;
+N -> %n { 1 } ;
+PROP -> %np { 1 } ;
+V -> %vblex {
+            1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
                             p3
                          else ""),
                number = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres) 
                             sg 
                         else "")]
            }  |
-    vbmod { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
+    %vbmod {
+            1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
                             p3
                         else ""),
                number = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
                             sg
                         else "")]
            } |
-    vbser { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres) 
+    %vbser {
+            1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres) 
                             p3 
                         else-if (1.person = p1 and 1.number = sg and 1.tense>tense = pres)
                             p1 
@@ -111,7 +234,8 @@ V -> vblex { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense =
                             sg
                         else "")] 
           } |
-    vaux { 1[person = (if ((1.person = p3) and (1.number = sg) and (1.tense>tense = pres)) 
+    %vaux {
+            1[person = (if ((1.person = p3) and (1.number = sg) and (1.tense>tense = pres)) 
                             p3 
                         else-if (1.person = p1 and 1.number = sg and 1.tense>tense = pres)
                             p1 
@@ -122,7 +246,7 @@ V -> vblex { 1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense =
                             sg
                         else "")] 
           };
-DET -> det { 1 } ;
+DET -> %det { 1 } ;
 PRN -> prn { 1 } ;
 ADV -> adv { 1 } ;
 NUM -> num { 1[number = (if (1.lem/sl = "yksi") sg else pl)] } ;
