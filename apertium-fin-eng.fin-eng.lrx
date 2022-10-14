@@ -1659,7 +1659,6 @@
   <rule weight="1.0"><match lemma="vasemmisto" tags="n.*"><select lemma="left" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="luetella" tags="vblex.*"><select lemma="list" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="lahjonta" tags="n.*"><select lemma="corruption" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="etsiä" tags="vblex.*"><select lemma="be" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="ensisijaisesti" tags="adv"><select lemma="primarily" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="äärimmäinen" tags="adj.*"><select lemma="extreme" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="yhdistelmä" tags="n.*"><select lemma="combination" tags="n.*"/></match></rule>
@@ -14564,7 +14563,6 @@
   <rule weight="1.0"><match lemma="kafkamainen" tags="adj.*"><select lemma="kafkaesque" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="istuntosali" tags="n.*"><select lemma="chamber" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="groznyi" tags="np.*"><select lemma="grozny" tags="np.*"/></match></rule>
-  <rule weight="1.0"><match lemma="etsiä" tags="vblex.*"><select lemma="look" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="elintarvikelisäaine" tags="n.*"><select lemma="additive" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="ehdoton" tags="adj.*"><select lemma="absolute" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="valitsija" tags="n.*"><select lemma="constituent" tags="n.*"/></match></rule>
