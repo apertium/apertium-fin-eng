@@ -1,0 +1,24 @@
+authors:
+  - family-names: Pirinen
+    given-names: Flammie A
+    orcid: "https://orcid.org/0000-0003-1207-5395"
+cff-version: 1.2.0
+date-released: "2019-03-09"
+keywords:
+  - Finnish
+  - English
+  - MT
+  - dictionary
+message: If you use this software, please cite it using these metadata.
+repository-code: "https://github.com/apertium/apertium-fin-eng"
+title: Apertium Finnish–English
+version: 0.1.0
+preferred-citation:
+  authors:
+    - family-names: Pirinen
+      given-names: Flammie A
+  title: "Apertium-fin-eng--rule-based shallow machine translation for WMT 2019 shared task"
+  type: article
+license: GPL-3.0
+url: https://apertium.github.io/apertium-fin-eng/
+
