@@ -25,9 +25,9 @@
       <program name="lt-proc $1">
         <file name="fin-eng.autogen.bin"/>
       </program>
-      <!-- <program name="lt-proc -p">
+      <program name="lt-proc -p">
         <file name="fin-eng.autopgen.bin"/>
-      </program>-->
+      </program>
     </pipeline>
   </mode>
 

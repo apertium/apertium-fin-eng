@@ -17,8 +17,12 @@ PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=$(PACKAGE_NAME)
 
-TARGETS_MONOLING=$(PREFIX1).automorf.hfst $(PREFIX1).autogen.bin \
-				 $(PREFIX2).automorf.bin $(PREFIX2).autogen.hfst
+TARGETS_MONOLING=$(PREFIX1).automorf.hfst \
+				 $(PREFIX1).automorf-untrimmed.hfst \
+				 $(PREFIX1).autogen.bin \
+				 $(PREFIX1).autopgen.bin \
+				 $(PREFIX2).automorf.bin \
+				 $(PREFIX2).autogen.hfst
 TARGETS_TRANSFER=$(PREFIX2).rtx.bin $(PREFIX1).rtx.bin  \
 				 $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
 				 $(PREFIX1).rlx.bin $(PREFIX2).rlx.bin \
@@ -28,6 +32,9 @@ TARGETS_COMMON=$(TARGETS_MONOLING) $(TARGETS_TRANSFER)
 @ap_include@
 
 # currently we copy stuff from another dir
+$(PREFIX1).automorf-untrimmed.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
+	cp -v -f $< $@
+
 $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
 	cp -v -f $< $@
 
@@ -45,6 +52,10 @@ $(PREFIX2).automorf.bin: $(AP_SRC2)/$(LANG2).automorf.bin
 
 $(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
 	cp -v -f $< $@
+
+$(PREFIX1).autopgen.bin: $(AP_SRC2)/$(LANG2).autopgen.bin
+	cp -v -f $< $@
+
 
 
 ## Debugging transducers (for testvoc)
