@@ -13,6 +13,7 @@ npclass = ant top al cog ;
 prnclass = pers itg ind pos dem ;
 sint = sint ;
 ject = subj obj ;
+voice = actv pasv ;
 participle = pp pprs agent ;
 advtype = itg ;
 case = nom acc dat gen ine ela ill ade abl all abe com ins ;
@@ -51,7 +52,7 @@ VP: _;                            !! verb phrase
 NP: _.case.number;                     !! noun phrase
 DP: _.case.number;                !! phrase wihtout determiner thing
 PP: _;      !! prepositiional phrase
-NUMP: _;
+NUMP: _.case.number;
 
 V: _.person.number;
 N: _.case.number;
@@ -59,7 +60,7 @@ PROP: _.case.number;
 A: _.case.number;
 DET: _.case.number;
 NEG: _;
-PRN: _;
+PRN: _.case.number;
 ADV: _;
 NUM: _;
 
@@ -151,6 +152,11 @@ S -> VP NP { 1 _
      DP { ! stray DP
           *(maybe_pr)[case=1.case]
           1 
+        } | !stray nump
+     NUMP { 
+          *(maybe_pr)[case=1.case]
+          *(maybe_art)[case=1.case,number=1.number,def=ind]
+          1
         } ;
 VP -> !possessive stuff
       n.*.sg.ade olla@vblex.* { 
@@ -162,6 +168,8 @@ VP -> !possessive stuff
         1 _ have@vbhaver.pres.p3.sg } |
       prn.*.sg.ade olla@vaux.* {
         1 _ have@vbhaver.pres.p3.sg } |
+      prn.*.pl.ade olla@vaux.* {
+        1 _ have@vbhaver.pres } |
       np.*.sg.ade ei@vaux.* olla@vblex.* {
         1 _ do@vaux.pres.p3.sg _ not@adv _ have@vbhaver.inf } |
       olla@vaux.* ko@qst np.*.sg.ade {
@@ -189,24 +197,34 @@ VP -> !possessive stuff
       V {
         *(pro_undrop)[person=1.person,number=1.number]
         1 } ;
-NP -> N ja@cnjcoo N ?(1.case = 3.case) [$number=pl,$case=1.case]
+NP -> A N ja@cnjcoo N ?(1.case = 2.case and 2.case = 4.case)
+                    [$number=pl,$case=1.case]
+                    { 1 _ 2 _ 3 _ 4 } |
+      N ja@cnjcoo N ?(1.case = 3.case) [$number=pl,$case=1.case]
                     { 1 _ 2 _ 3 } |
       PROP ja@cnjcoo PROP ?(1.case = 3.case) [$number=pl,$case=1.case]
                     { 1 _ 2 _ 3 } |
       A ,@punct A %N ?(1.case=3.case and 3.case=4.case) { 1 2 _ 3 _ 4 } |
+      vblex.*.pp.* %N ?(1.case = 2.case) { 1 _ 2 } |
       A %N ?(1.case=2.case) { 1 _ 2 } |
+      N.*.gen %N { 1 's@gen _ 2 } |
       %N { 1 } ;
 DP -> %PROP { 1 } |
       DET %N ?(1.case=2.case) { 1 _ 2 } ;
 PP -> NP.*.gen post { 2 _ the@det.def.sp _ 1 } ;
-NUMP -> num.*.sg.nom n.sg.par { 1 _ 2[number=pl] } ;
+NUMP -> num.*.sg.gen n.*.sg.gen %n { ! 4 metres something
+            1 _ 2 _ 3
+        } |
+        num.*.sg.nom n.sg.par [$case=nom,$number=pl]  { 1 _ 2[number=pl] } ;
 
 NEG -> ei@vaux { no@adv } |
        ei-@n  { no@adv } ;
 A -> %adj { 1 } ;
-N -> %n { 1 } ;
+N -> n.*.cmp %n { 1 _ 2 } |
+     %n { 1 } ;
 PROP -> %np { 1 } ;
-V -> %vblex {
+V -> %vblex.pasv.*.impers { be@vbser.[1.tense].p3.sg _ 1(vblex_pp)[participle=pp] } |
+     %vblex {
             1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
                             p3
                          else ""),
@@ -247,7 +265,7 @@ V -> %vblex {
                         else "")] 
           };
 DET -> %det { 1 } ;
-PRN -> prn { 1 } ;
+PRN -> %prn { 1 } ;
 ADV -> adv { 1 } ;
 NUM -> num { 1[number = (if (1.lem/sl = "yksi") sg else pl)] } ;
 
