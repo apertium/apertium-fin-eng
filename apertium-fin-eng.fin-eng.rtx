@@ -265,7 +265,8 @@ V -> %vblex.pasv.*.impers { be@vbser.[1.tense].p3.sg _ 1(vblex_pp)[participle=pp
                         else "")] 
           };
 DET -> %det { 1 } ;
-PRN -> %prn { 1 } ;
+PRN -> %prn.pers { 1[prnclass=""] } |
+        %prn { 1 } ;
 ADV -> adv { 1 } ;
 NUM -> num { 1[number = (if (1.lem/sl = "yksi") sg else pl)] } ;
 
