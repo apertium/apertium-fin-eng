@@ -4,7 +4,7 @@
 
 number = sg pl sp ;
 gender =  m f mf nt ;
-det_type = def ind dem itg pos;
+det_type = def ind dem itg pos qnt;
 def = def ind ;
 tense = pres past pri cni pot imp;
 person = p1 p2 p3 ;
@@ -17,6 +17,7 @@ voice = actv pasv ;
 participle = pp pprs agent ;
 advtype = itg ;
 case = nom acc dat gen ine ela ill ade abl all abe com ins ;
+advcases = ine ela ill ade abl all com ins ;
 
 !!!!!!!!!!!!!!!
 !! OUTPUT PATTERNS
@@ -53,6 +54,7 @@ NP: _.case.number;                     !! noun phrase
 DP: _.case.number;                !! phrase wihtout determiner thing
 PP: _;      !! prepositiional phrase
 NUMP: _.case.number;
+ADVL: _;
 
 V: _.person.number;
 N: _.case.number;
@@ -98,13 +100,13 @@ pro_undrop: (if (1.person = p1 and 1.number = sg)
              elif (1.person = p2 and 1.number = sg)
                    [prpers@prn.subj.p2.mf.sp _]
              elif (1.person = p3 and 1.number = sg)
-                   [prpers@prn.subj.p3.mf.pl _]
+                   []
              elif (1.person = p1 and 1.number = pl)
                    [prpers@prn.subj.p1.mf.pl _]
              elif (1.person = p2 and 1.number = pl)
                    [prpers@prn.subj.p2.mf.sp _]
              elif (1.person = p3 and 1.number = pl)
-                   [prpers@prn.subj.p3.mf.pl _]
+                   []
              else []) ;
 !! split pos into subs
 vblex: (if (1.inf = infa) 1(vblex_inf)
@@ -144,6 +146,7 @@ S -> VP NP { 1 _
              *(maybe_pr)[case=2.case]
              *(maybe_art)[case=2.case,number=2.number,def=def]
              2 } |
+     VP ADVL { 1 _ 2 } |
      NP { ! stray NP
           *(maybe_pr)[case=1.case]
           *(maybe_art)[case=1.case,number=1.number,def=ind]
@@ -157,7 +160,15 @@ S -> VP NP { 1 _
           *(maybe_pr)[case=1.case]
           *(maybe_art)[case=1.case,number=1.number,def=ind]
           1
-        } ;
+        } |
+     ADVL { 1 } ;
+
+ADVL -> NP ?(case in advcases) { 
+            *(maybe_pr)[case=1.case]
+            *(maybe_art)[case=1.case,number=1.number,def=ind]
+            1
+            } |
+        ADV { 1 } ;
 VP -> !possessive stuff
       n.*.sg.ade olla@vblex.* { 
         *(maybe_art)[case=1.case,number=1.number,def=def]
@@ -179,6 +190,11 @@ VP -> !possessive stuff
       ! negations
       ei@vaux vblex { do@vaux.pres.p3.sg _ not@adv _ 2 } |
       ei@vaux vaux { 2[person = "", number = ""] _ not@adv } |
+      ! perfect 
+      olla@vaux vblex.actv.pp { 1[lem=have,pos_tag=vbhaver,number="",
+                tense=(if (1.tense = pri) pres 
+                       elif (1.tense = past) past 
+                       else pres)] _ 2(vblex_pp) } |
       ! normal verb phrases
       NP V { 
         *(maybe_pr)[case=1.case]
@@ -211,7 +227,9 @@ NP -> A N ja@cnjcoo N ?(1.case = 2.case and 2.case = 4.case)
       %N { 1 } ;
 DP -> %PROP { 1 } |
       DET %N ?(1.case=2.case) { 1 _ 2 } ;
-PP -> NP.*.gen post { 2 _ the@det.def.sp _ 1 } ;
+PP -> NP.*.gen post { 2 _ the@det.def.sp _ 1 } |
+      PRN.*.gen post { 2 _ 1 } |
+      DET.*.gen post { 2 _ 1 } ;  ! that darned possessive structure
 NUMP -> num.*.sg.gen n.*.sg.gen %n { ! 4 metres something
             1 _ 2 _ 3
         } |
@@ -224,6 +242,8 @@ N -> n.*.cmp %n { 1 _ 2 } |
      %n { 1 } ;
 PROP -> %np { 1 } ;
 V -> %vblex.pasv.*.impers { be@vbser.[1.tense].p3.sg _ 1(vblex_pp)[participle=pp] } |
+     %vblex.*.infa { to@pr _ 1(vblex_inf) } |
+     %vblex.agent { 1(vblex_pp) } | ! XXX
      %vblex {
             1[person = (if (1.person = p3 and 1.number = sg and 1.tense>tense = pres)
                             p3
@@ -264,11 +284,16 @@ V -> %vblex.pasv.*.impers { be@vbser.[1.tense].p3.sg _ 1(vblex_pp)[participle=pp
                             sg
                         else "")] 
           };
-DET -> %det { 1 } ;
+DET -> %det { 1 } |
+       %prn.pers.*.gen { 1(det) } ;
 PRN -> %prn.pers { 1[prnclass=""] } |
         %prn { 1 } ;
-ADV -> adv { 1 } ;
-NUM -> num { 1[number = (if (1.lem/sl = "yksi") sg else pl)] } ;
+ADV -> adv { 1 } |
+    ! idioms
+    hyvänen@adj aika@adv { good@adj.sint _ heaven@n.pl } ;
+NUM -> num { 1[number = (if (1.lem/sl = "yksi") sg else pl)] } | 
+    ! idioms and stuff
+    pari@num { 1(n) } ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Apertium-recursive

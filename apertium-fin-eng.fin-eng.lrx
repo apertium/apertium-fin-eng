@@ -1480,7 +1480,6 @@
   <rule weight="1.0"><match lemma="hakea" tags="vblex.*"><select lemma="apply" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="evätä" tags="vblex.*"><select lemma="deny" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="vaihtaa" tags="vblex.*"><select lemma="exchange" tags="vblex.*"/></match></rule>
-  <rule weight="1.0"><match lemma="nousta" tags="vblex.*"><select lemma="be" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="epämääräinen" tags="adj.*"><select lemma="vague" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="synergia" tags="n.*"><select lemma="synergy" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="suosia" tags="vblex.*"><select lemma="favour" tags="vblex.*"/></match></rule>
@@ -14826,7 +14825,6 @@
   <rule weight="1.0"><match lemma="oikeutetusti" tags="adv"><select lemma="rightly" tags="adv"/></match></rule>
   <rule weight="1.0"><match lemma="odotettu" tags="adj.*"><select lemma="expected" tags="adj.*"/></match></rule>
   <rule weight="1.0"><match lemma="nukketeatteri" tags="n.*"><select lemma="punch" tags="n.*"/></match></rule>
-  <rule weight="1.0"><match lemma="nousta" tags="vblex.*"><select lemma="stand" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="nopeuttaa" tags="vblex.*"><select lemma="accelerate" tags="vblex.*"/></match></rule>
   <rule weight="1.0"><match lemma="natsismi" tags="n.*"><select lemma="nazism" tags="n.*"/></match></rule>
   <rule weight="1.0"><match lemma="näkyä" tags="vblex.*"><select lemma="be" tags="vblex.*"/></match></rule>
@@ -52773,7 +52771,6 @@
 <rule weight="0.9"><match lemma="eritellä" tags="vblex.*"><select lemma="specify" tags="vblex.*"/></match></rule><!-- 1 -->
 <rule weight="0.9"><match lemma="huitaista" tags="vblex.*"><select lemma="kill" tags="vblex.*"/></match></rule><!-- 1 -->
 <rule weight="0.9"><match lemma="harha-askel" tags="n.*"><select lemma="slip" tags="n.*"/></match></rule><!-- 1 -->
-<rule weight="0.9"><match lemma="nousta" tags="vblex.*"><select lemma="enter" tags="vblex.*"/></match></rule><!-- 3 -->
 <rule weight="0.9"><match lemma="oikeutus" tags="n.*"><select lemma="empowerment" tags="n.*"/></match></rule><!-- 2 -->
 <rule weight="0.9"><match lemma="matkata" tags="vblex.*"><select lemma="track" tags="n.*"/></match></rule><!-- 12 -->
 <rule weight="0.9"><match lemma="dumppaus" tags="n.*"><select lemma="dumping" tags="n.*"/></match></rule><!-- 5 -->
